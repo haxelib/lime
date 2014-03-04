@@ -22,7 +22,6 @@ import javax.microedition.khronos.egl.EGLConfig;
 import javax.microedition.khronos.egl.EGLContext;
 import javax.microedition.khronos.egl.EGLDisplay;
 import javax.microedition.khronos.opengles.GL10;
-import java.util.Date;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -36,15 +35,28 @@ class MainView extends GLSurfaceView {
 	static final int etTouchTap = 18;
 	static final int resTerminate = -1;
 	
+	boolean isPollImminent;
 	Activity mActivity;
 	static MainView mRefreshView;
 	Timer mTimer = new Timer ();
 	int mTimerID = 0;
+	TimerTask pendingTimer;
+	Runnable pollMe;
+	boolean renderPending = false;
 	
 	
 	public MainView (Context context, Activity inActivity) {
 		
 		super (context);
+		
+		isPollImminent = false;
+		final MainView me = this;
+		
+		pollMe = new Runnable () {
+			
+			@Override public void run () { me.onPoll (); }
+			
+		};
 		
 		int eglVersion = 1;
 		
@@ -196,6 +208,7 @@ class MainView extends GLSurfaceView {
 	}
 	
 	
+	// Haxe Thread
 	public void HandleResult (int inCode) {
 		
 		if (inCode == resTerminate) {
@@ -206,39 +219,38 @@ class MainView extends GLSurfaceView {
 		}
 		
 		double wake = Lime.getNextWake ();
-		final MainView me = this;
+		int delayMS = (int)(wake * 1000);
 		
-		if (wake <= 0) {
+		if (renderPending && delayMS < 5) {
 			
-			queueEvent (new Runnable () {
-				
-				public void run () {
-					
-					me.onPoll ();
-					
-				}
-				
-			});
+			delayMS = 5;
+			
+		}
+		
+		if (delayMS <= 1) {
+			
+			queuePoll ();
 			
 		} else {
 			
-			final int tid = ++mTimerID;
-			Date end = new Date ();
-			end.setTime (end.getTime () + (int)(wake * 1000));
-			
-			mTimer.schedule (new TimerTask () {
+			if (pendingTimer != null) {
 				
-				public void run () {
+				pendingTimer.cancel ();
+				
+			}
+			
+			final MainView me = this;
+			pendingTimer = new TimerTask () {
+				
+				@Override public void run () { 
 					
-					if (tid == me.mTimerID) {
-						
-						me.queuePoll ();
-						
-					}
+					me.queuePoll ();
 					
 				}
 				
-			}, end);
+			};
+			
+			mTimer.schedule (pendingTimer, delayMS);
 			
 		}
 		
@@ -303,34 +315,18 @@ class MainView extends GLSurfaceView {
 				
 				if (range != null) {
 					
-					final float flat = range.getFlat ();
 					final float value = event.getAxisValue (axis);
 					
-					if (Math.abs (value) > flat) {
+					queueEvent (new Runnable () {
 						
-						queueEvent (new Runnable () {
+						public void run () {
 							
-							public void run () {
-								
-								me.HandleResult (Lime.onJoyMotion (deviceId, axis, ((value - range.getMin ()) / (range.getRange ())) * 65535 - 32768));
-								
-							}
+							me.HandleResult (Lime.onJoyMotion (deviceId, axis, ((value - range.getMin ()) / (range.getRange ())) * 65535 - 32768));
 							
-						});
+						}
 						
-					} else {
+					});
 						
-						queueEvent (new Runnable () {
-							
-							public void run () {
-								
-								me.HandleResult (Lime.onJoyMotion (deviceId, axis, 0));
-								
-							}
-							
-						});
-						
-					}
 				}
 				
 			}
@@ -370,7 +366,8 @@ class MainView extends GLSurfaceView {
 			
 		}::end::
 		
-		final int keyCode = translateKey (inKeyCode, event);
+		final int keyCode = translateKeyCode (inKeyCode, event);
+		final int charCode = translateCharCode (inKeyCode, event);
 		
 		if (keyCode != 0) {
 			
@@ -378,7 +375,7 @@ class MainView extends GLSurfaceView {
 				
 				public void run () {
 					
-					me.HandleResult (Lime.onKeyChange (keyCode, true));
+					me.HandleResult (Lime.onKeyChange (keyCode, charCode, true));
 					
 				}
 				
@@ -388,7 +385,7 @@ class MainView extends GLSurfaceView {
 			
 		}
 		
-		return super.onKeyDown(inKeyCode, event);
+		return super.onKeyDown (inKeyCode, event);
 		
 	}
 	
@@ -419,7 +416,8 @@ class MainView extends GLSurfaceView {
 			
 		}::end::
 		
-		final int keyCode = translateKey (inKeyCode, event);
+		final int keyCode = translateKeyCode (inKeyCode, event);
+		final int charCode = translateCharCode (inKeyCode, event);
 		
 		if (keyCode != 0) {
 			
@@ -427,7 +425,7 @@ class MainView extends GLSurfaceView {
 				
 				public void run () {
 					
-					me.HandleResult (Lime.onKeyChange (keyCode, false));
+					me.HandleResult (Lime.onKeyChange (keyCode, charCode, false));
 					
 				}
 				
@@ -437,13 +435,15 @@ class MainView extends GLSurfaceView {
 			
 		}
 		
-		return super.onKeyDown(inKeyCode, event);
+		return super.onKeyDown (inKeyCode, event);
 		
 	}
 	
 	
+	// Haxe Thread
 	void onPoll () {
 		
+		isPollImminent = false;
 		HandleResult (Lime.onPoll ());
 		
 	}
@@ -520,19 +520,15 @@ class MainView extends GLSurfaceView {
 	}
 	
 	
+	// GUI/Timer Thread
 	void queuePoll () {
 		
-		final MainView me = this;
-		
-		queueEvent (new Runnable () {
+		if (!isPollImminent) {
 			
-			public void run () {
-				
-				me.onPoll ();
-				
-			}
+			isPollImminent = true;
+			queueEvent (pollMe);
 			
-		});
+		}
 		
 	}
 	
@@ -540,6 +536,7 @@ class MainView extends GLSurfaceView {
 	
 	static public void renderNow () { //Called directly from C++
 		
+		mRefreshView.renderPending = true;
 		mRefreshView.requestRender ();
 		
 	}
@@ -560,15 +557,7 @@ class MainView extends GLSurfaceView {
 	}
 	
 	
-	public int translateKey(int inCode, KeyEvent event) {
-		
-		switch (inCode) {
-			
-			case KeyEvent.KEYCODE_BACK: return 27; /* Fake Escape */
-			case KeyEvent.KEYCODE_MENU: return 0x01000012; /* Fake MENU */
-			case KeyEvent.KEYCODE_DEL: return 8;
-			
-		}
+	public int translateCharCode (int inCode, KeyEvent event) {
 		
 		int result = event.getUnicodeChar (event.getMetaState ());
 		
@@ -579,7 +568,98 @@ class MainView extends GLSurfaceView {
 			
 		}
 		
+		switch (inCode) {
+			
+			case 66:
+			case 160: return 13; // enter
+			case 111: return 27; // escape
+			case 67: return 8; // backspace
+			case 61: return 9; // tab
+			case 62: return 32; // space
+			case 112: return 127; // delete
+			
+		}
+		
 		return result;
+		
+	}
+	
+	
+	public int translateKeyCode (int inCode, KeyEvent event) {
+		
+		switch (inCode) {
+			
+			case KeyEvent.KEYCODE_BACK: return 27; /* Fake Escape */
+			case KeyEvent.KEYCODE_MENU: return 0x01000012; /* Fake MENU */
+			case KeyEvent.KEYCODE_DEL: return 8;
+			
+		}
+		
+		if (inCode >= 7 && inCode <= 16) {
+			
+			return inCode + 41; // 1-9
+		
+		} else if (inCode >= 29 && inCode <= 54) {
+			
+			return inCode + 36; // a-z
+			
+		} else if (inCode >= 131 && inCode <= 142) {
+			
+			return inCode - 19; // F1-F12
+			
+		} else if (inCode >= 144 && inCode <= 153) {
+			
+			return inCode - 96; // 1-9
+			
+		}
+		
+		switch (inCode) {
+			
+			case 66:
+			case 160: return 13; // enter
+			case 111: return 27; // escape
+			case 67: return 8; // backspace
+			case 61: return 9; // tab
+			case 62: return 32; // space
+			case 69:
+			case 156: return 189; // -_
+			case 70:
+			case 161: return 187; // +=
+			case 71: return 219; // [{
+			case 72: return 221; // ]}
+			case 73: return 220; // \|
+			case 74: return 186; // ;:
+			case 75: return 222; // '"
+			case 68: return 192; // `~
+			case 55:
+			case 159: return 188; // ,<
+			case 56:
+			case 158: return 190; // .>
+			case 76: return 191; // /?
+			case 115: return 20; // caps lock
+			case 116: return 145; // scroll lock
+			case 121: return 19; // pause/break
+			case 124: return 45; // insert
+			case 122: return 36; // home
+			case 92: return 34; // page down
+			case 93: return 33; // page up
+			case 112: return 46; // delete
+			case 123: return 35; // end
+			case 22: return 39; // right arrow
+			case 21: return 37; // left arrow
+			case 20: return 40; // down arrow
+			case 19: return 38; // up arrow
+			case 143: return 144; // num lock
+			case 113:
+			case 114: return 17; // ctrl
+			case 59:
+			case 60: return 16; // shift
+			case 57:
+			case 58: return 18; // alt
+			
+		}
+		
+		return inCode;
 		
 	}
 	
@@ -601,6 +681,7 @@ class MainView extends GLSurfaceView {
 		
 		public void onDrawFrame (GL10 gl) {
 			
+			mMainView.renderPending = false;
 			mMainView.HandleResult (Lime.onRender ());
 			Sound.checkSoundCompletion ();
 			

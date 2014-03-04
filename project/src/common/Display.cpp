@@ -1223,7 +1223,7 @@ void DisplayObjectContainer::Render( const RenderTarget &inTarget, const RenderS
                bitmap->IncRef();
 
                if (bg && obj->IsBitmapRender(inTarget.IsHardware()))
-                  bitmap->Clear(obj->opaqueBackground | 0xff000000,0);
+                  bitmap->Clear(obj->opaqueBackground | 0xff000000);
                else
                   bitmap->Zero();
                // debug ...
@@ -1494,7 +1494,8 @@ public:
       mSurface = inStage->GetPrimarySurface();
       mToFlip = inStage;
       mTarget = mSurface->BeginRender( Rect(mSurface->Width(),mSurface->Height()),false );
-      mSurface->Clear(inRGB | 0xff000000 );
+
+      mSurface->Clear( (inRGB | 0xff000000) & inStage->getBackgroundMask() );
    }
    int Width() const { return mSurface->Width(); }
    int Height() const { return mSurface->Height(); }

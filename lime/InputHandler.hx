@@ -53,7 +53,9 @@ class InputHandler {
 
     @:noCompletion public function startup() {
 
-        lib._debug(':: lime :: \t InputHandler Initialized.');
+        #if debug
+            lib._debug(':: lime :: \t InputHandler Initialized.');
+        #end //debug
 
         touches_active = new Map<Int, Dynamic>();
         keys_down = new Map();
@@ -68,7 +70,9 @@ class InputHandler {
 
     @:noCompletion public function shutdown() {
         
-        lib._debug(':: lime :: \t InputHandler shut down.');
+        #if debug
+            lib._debug(':: lime :: \t InputHandler shut down.');
+        #end //debug
 
     } //shutdown
 
@@ -115,12 +119,14 @@ class InputHandler {
             lib.host.onchar({
                 raw : _event,
                 code : _event.code,
-                char : _event.char,
+                char : _event.code,
                 value : _event.value,
                 flags : _event.flags,
                 key : lime.helpers.Keys.toKeyValue(_event)
             });
         }
+
+        _event.char = _event.code;
 
         lime_onkeydown( _event );
         
@@ -128,7 +134,7 @@ class InputHandler {
 
     
     @:noCompletion public function lime_onkeydown(_event:Dynamic) {
-            
+
         if(lib.host.onkeydown != null && !keys_down.exists(_event.value)) {
 
             var _keyvalue = lime.helpers.Keys.toKeyValue(_event);
@@ -139,6 +145,13 @@ class InputHandler {
             key_value_pressed.set(_keyvalue, false);
                 //flag it as down, because keyup removes it
             key_value_down.set(_keyvalue, true);
+
+                //some characters can come directly, not via the onchar,
+                //but we want end user to only require one check,
+                //if(event.char != 0) { //printable key } else { //other keys }
+            if(_event.char == null) {
+                _event.char = 0;
+            }
 
             lib.host.onkeydown({
                 raw : _event,
@@ -259,7 +272,13 @@ class InputHandler {
         last_mouse_x = _event.x;
         last_mouse_y = _event.y;
 
-        // trace("mouse moved, delta : " + deltaX + ' ' + deltaY);
+            //locked cursor gives us the delta directly from sdl
+        #if lime_native
+            if(lib.window.cursor_locked) {
+                deltaX = _event.deltaX;
+                deltaY = _event.deltaY;
+            }
+        #end //lime_native
 
         if(lib.host.onmousemove != null) {
 
@@ -577,6 +596,18 @@ class InputHandler {
             lib.host.ongamepadhat(_event);
         }
     } //lime_gamepadhat
+  
+    public function lime_gamepaddeviceadded(_event:Dynamic) {
+        if(lib.host.ongamepaddeviceadded != null) {
+            lib.host.ongamepaddeviceadded(_event);
+        }
+    } //lime_gamepaddeviceadded
+
+    public function lime_gamepaddeviceremoved(_event:Dynamic) {
+        if(lib.host.ongamepaddeviceremoved != null) {
+            lib.host.ongamepaddeviceremoved(_event);
+        }
+    } //lime_gamepaddeviceremoved
 
     private static var efLeftDown = 0x0001;
     private static var efShiftDown = 0x0002;

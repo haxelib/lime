@@ -46,8 +46,10 @@ static int _id_type;
 static int _id_x;
 static int _id_y;
 static int _id_z;
-static int _id_sx;
-static int _id_sy;
+static int _id_scaleX;
+static int _id_scaleY;
+static int _id_deltaX;
+static int _id_deltaY;
 static int _id_width;
 static int _id_height;
 static int _id_length;
@@ -137,8 +139,10 @@ extern "C" void InitIDs()
    _id_x = val_id("x");
    _id_y = val_id("y");
    _id_z = val_id("z");
-   _id_sx = val_id("sx");
-   _id_sy = val_id("sy");
+   _id_scaleX = val_id("scaleX");
+   _id_scaleY = val_id("scaleY");
+   _id_deltaX = val_id("deltaX");
+   _id_deltaY = val_id("deltaY");
    _id_width = val_id("width");
    _id_height = val_id("height");
    _id_length = val_id("length");
@@ -877,7 +881,7 @@ value lime_capabilities_get_screen_resolutions () {
    
 
    //Only really makes sense on PC platforms
-   #if defined( HX_WINDOWS ) || defined( HX_MACOS )
+   #if defined( HX_WINDOWS ) || defined( HX_MACOS ) || defined( HX_LINUX )
    
       
       QuickVec<int>* res = CapabilitiesGetScreenResolutions();
@@ -900,6 +904,37 @@ value lime_capabilities_get_screen_resolutions () {
 }
 
 DEFINE_PRIM( lime_capabilities_get_screen_resolutions, 0 );
+
+
+value lime_capabilities_get_screen_modes () {
+
+
+   //Only really makes sense on PC platforms
+   #if defined( HX_WINDOWS ) || defined( HX_MACOS ) || defined( HX_LINUX )
+
+
+      QuickVec<ScreenMode>* modes = CapabilitiesGetScreenModes();
+
+      value result = alloc_array( modes->size() * 4 );
+
+      for(int i=0;i<modes->size();i++) {
+         ScreenMode mode = (*modes)[ i ];
+         val_array_set_i(result,i * 4 + 0,alloc_int( mode.width ) );
+         val_array_set_i(result,i * 4 + 1,alloc_int( mode.height ) );
+         val_array_set_i(result,i * 4 + 2,alloc_int( mode.refreshRate ) );
+         val_array_set_i(result,i * 4 + 3,alloc_int( (int)mode.format ) );
+      }
+    
+      return result;
+    
+    #endif
+  
+    return alloc_null();
+  
+  
+}
+
+DEFINE_PRIM( lime_capabilities_get_screen_modes, 0 );
 
 
 value lime_capabilities_get_pixel_aspect_ratio () {
@@ -1180,8 +1215,10 @@ void external_handler( lime::Event &ioEvent, void *inUserData )
    alloc_field(o,_id_flags,alloc_int(ioEvent.flags));
    alloc_field(o,_id_code,alloc_int(ioEvent.code));
    alloc_field(o,_id_result,alloc_int(ioEvent.result));
-   alloc_field(o,_id_sx,alloc_float(ioEvent.sx));
-   alloc_field(o,_id_sy,alloc_float(ioEvent.sy));
+   alloc_field(o,_id_scaleX,alloc_float(ioEvent.scaleX));
+   alloc_field(o,_id_scaleY,alloc_float(ioEvent.scaleY));
+   alloc_field(o,_id_deltaX,alloc_float(ioEvent.deltaX));
+   alloc_field(o,_id_deltaY,alloc_float(ioEvent.deltaY));
    val_call1(handler->get(), o);
    ioEvent.result = (EventResult)val_int( val_field(o,_id_result) );
 }
@@ -1230,6 +1267,52 @@ value lime_stage_resize_window(value inStage, value inWidth, value inHeight)
    return alloc_null();
 }
 DEFINE_PRIM(lime_stage_resize_window,3);
+
+
+value lime_stage_set_resolution(value inStage, value inWidth, value inHeight)
+{
+   #if (defined(HX_WINDOWS) || defined(HX_MACOS) || defined(HX_LINUX))
+   Stage *stage;
+   if (AbstractToObject(inStage,stage))
+   {
+      stage->SetResolution(val_int(inWidth), val_int(inHeight));
+   }
+   #endif
+   return alloc_null();
+}
+DEFINE_PRIM(lime_stage_set_resolution,3);
+
+
+value lime_stage_set_screenmode(value inStage, value inWidth, value inHeight, value inRefresh, value inFormat)
+{printf("lime_stage_set_screenmode");
+   #if (defined(HX_WINDOWS) || defined(HX_MACOS) || defined(HX_LINUX))
+   Stage *stage;
+   if (AbstractToObject(inStage,stage)){
+      ScreenMode mode;
+      mode.width = val_int(inWidth);
+      mode.height = val_int(inHeight);
+      mode.refreshRate = val_int(inRefresh);
+      mode.format = (ScreenFormat)val_int(inFormat);
+      stage->SetScreenMode(mode);
+   }
+   #endif
+   return alloc_null();
+}
+DEFINE_PRIM(lime_stage_set_screenmode,5);
+
+
+value lime_stage_set_fullscreen(value inStage, value inFull)
+{
+   #if (defined(HX_WINDOWS) || defined(HX_MACOS) || defined(HX_LINUX))
+   Stage *stage;
+   if (AbstractToObject(inStage,stage))
+   {
+      stage->setDisplayState(val_bool(inFull) ? sdsFullscreenInteractive : sdsNormal);
+   }
+   #endif
+   return alloc_null();
+}
+DEFINE_PRIM(lime_stage_set_fullscreen,2);
 
 
 value lime_stage_get_focus_id(value inValue)
@@ -2289,7 +2372,7 @@ DEFINE_PRIM_MULT(lime_gfx_draw_round_rect);
 value lime_gfx_draw_triangles(value *arg, int args )
 {
 
-   enum { aGfx, aVertices, aIndices, aUVData, aCull, aColours, aBlend, aViewport };
+   enum { aGfx, aVertices, aIndices, aUVData, aCull, aColours, aBlend };
    
    Graphics *gfx;
    if (AbstractToObject(arg[aGfx],gfx))
@@ -2298,15 +2381,13 @@ value lime_gfx_draw_triangles(value *arg, int args )
       QuickVec<int> indices;
       QuickVec<float> uvt;
       QuickVec<int> colours;
-      QuickVec<float,4> viewport;
       
       FillArrayDouble(vertices,arg[aVertices]);
       FillArrayInt(indices,arg[aIndices]);
       FillArrayDouble(uvt,arg[aUVData]);
       FillArrayInt(colours, arg[aColours]);
-      FillArrayDoubleN<float,4>(viewport, arg[aViewport] );
       
-      gfx->drawTriangles(vertices, indices, uvt, val_int(arg[aCull]), colours, val_int( arg[ aBlend ] ), viewport );
+      gfx->drawTriangles(vertices, indices, uvt, val_int(arg[aCull]), colours, val_int( arg[ aBlend ] ) );
    }
    
    return alloc_null();
@@ -2345,7 +2426,7 @@ value lime_gfx_draw_datum(value inGfx,value inDatum)
 }
 DEFINE_PRIM(lime_gfx_draw_datum,2);
 
-value lime_gfx_draw_tiles(value inGfx,value inSheet, value inXYIDs,value inFlags)
+value lime_gfx_draw_tiles(value inGfx,value inSheet, value inXYIDs,value inFlags,value inDataSize)
 {
    Graphics *gfx;
    Tilesheet *sheet;
@@ -2404,7 +2485,9 @@ value lime_gfx_draw_tiles(value inGfx,value inSheet, value inXYIDs,value inFlags
       if (flags & TILE_ALPHA)
          components++;
 
-      int n = val_array_size(inXYIDs)/components;
+      int n = val_int(inDataSize);
+      if (n < 0) n = val_array_size(inXYIDs);
+      n /= components;
       double *vals = val_array_double(inXYIDs);
       float *fvals = val_array_float(inXYIDs);
       int max = sheet->Tiles();
@@ -2525,7 +2608,7 @@ value lime_gfx_draw_tiles(value inGfx,value inSheet, value inXYIDs,value inFlags
    }
    return alloc_null();
 }
-DEFINE_PRIM(lime_gfx_draw_tiles,4);
+DEFINE_PRIM(lime_gfx_draw_tiles,5);
 
 
 static bool sNekoLutInit = false;
@@ -3038,6 +3121,30 @@ value lime_bitmap_data_height(value inHandle)
 }
 DEFINE_PRIM(lime_bitmap_data_height,1);
 
+value lime_bitmap_data_get_prem_alpha(value inHandle)
+{
+   Surface *surface;
+   if (AbstractToObject(inHandle,surface))
+      return alloc_bool(surface->GetFlags() & SURF_FLAGS_USE_PREMULTIPLIED_ALPHA);
+   return alloc_null();
+}
+DEFINE_PRIM(lime_bitmap_data_get_prem_alpha,1);
+
+value lime_bitmap_data_set_prem_alpha(value inHandle,value inVal)
+{
+   Surface *surface;
+   if (AbstractToObject(inHandle,surface))
+   {
+      bool use = val_bool(inVal) && (surface->Format()<pfAlpha);
+      if (use)
+         surface->SetFlags( surface->GetFlags() | SURF_FLAGS_USE_PREMULTIPLIED_ALPHA );
+      else
+         surface->SetFlags( surface->GetFlags() & ~SURF_FLAGS_USE_PREMULTIPLIED_ALPHA );
+   }
+   return alloc_null();
+}
+DEFINE_PRIM(lime_bitmap_data_set_prem_alpha,2);
+
 value lime_bitmap_data_clear(value inHandle,value inRGB)
 {
    Surface *surface;
@@ -3127,10 +3234,11 @@ value lime_bitmap_data_from_bytes(value inRGBBytes, value inAlphaBytes)
       return alloc_null();
 
    Surface *surface = Surface::LoadFromBytes(bytes.data,bytes.length);
-   surface->SetAllowTrans(true);
+   
    
    if (surface)
    {
+      surface->SetAllowTrans(true);	
       if (!val_is_null(inAlphaBytes))
       {
          ByteData alphabytes;
@@ -3588,25 +3696,6 @@ value lime_bitmap_data_multiply_alpha(value inSurface)
    return alloc_null();
 }
 DEFINE_PRIM(lime_bitmap_data_multiply_alpha,1);
-
-
-value lime_bitmap_data_set_alpha_mode(value inHandle, value inAlphaMode)
-{
-   Surface *surface;
-   if (AbstractToObject(inHandle,surface))
-   {
-      if ( val_int( inAlphaMode ) == 0 ) 
-         surface->setAlphaMode( amUnknown );
-      else if ( val_int( inAlphaMode ) == 1 ) 
-         surface->setAlphaMode( amPremultiplied );
-      else if ( val_int( inAlphaMode ) == 2 ) 
-         surface->setAlphaMode( amStraight );
-      else if ( val_int( inAlphaMode ) == 4 ) 
-         surface->setAlphaMode( amIgnore );
-   }
-   return alloc_null();
-}
-DEFINE_PRIM(lime_bitmap_data_set_alpha_mode,2);
 
 
 value lime_render_surface_to_surface(value* arg, int nargs)
