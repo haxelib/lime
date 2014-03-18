@@ -170,6 +170,7 @@
 		<file name="src/platform/android/AndroidFrame.cpp"/>
 		<file name="src/platform/android/JNI.cpp"/>
 		<file name="src/platform/android/System.cpp"/>
+		<file name="src/platform/android/AndroidS3D.cpp"/>
 		<file name="src/sound/openal/OpenALSound.cpp" if="openal"/>
 		<compilerflag value="-DAL_LIBTYPE_STATIC" if="openal"/>
 		
@@ -280,6 +281,7 @@
 		<compilerflag value="-DGLFW_OGL" if="glfw"/>
 		<compilerflag value="-DLIME_CURL_SSL" if="ssl" unless="nocurl"/>
 		<compilerflag value="-DLIME_FORCE_GLES1" if="LIME_FORCE_GLES1"/>
+		<compilerflag value="-DLIME_PREMULTIPLIED_ALPHA" if="LIME_PREMULTIPLIED_ALPHA"/>
 		<compilerflag value="-Wno-conversion" if="linux"/>
 
 		<!-- <file name="src/common/Surface.cpp"/> -->
@@ -331,6 +333,8 @@
 		<file name="src/renderer/software/SolidRender.cpp"/>
 		<file name="src/renderer/software/TileRenderer.cpp"/>
 		<file name="src/renderer/software/TriangleRender.cpp"/>
+
+		<file name="src/common/empty/S3D.cpp" unless="android"/>
 	</files>
 	
 	<files id="opengl">
@@ -353,11 +357,13 @@
 		<compilerflag value="-DGLFW_OGL" if="glfw"/>
 		<compilerflag value="-DLIME_CURL_SSL" if="ssl" unless="nocurl"/>
 		<compilerflag value="-DLIME_FORCE_GLES1" if="LIME_FORCE_GLES1"/>
+		<compilerflag value="-DLIME_PREMULTIPLIED_ALPHA" if="LIME_PREMULTIPLIED_ALPHA"/>
 		<compilerflag value="-Wno-conversion" if="linux"/>
 		
 		<file name="src/renderer/opengl/OpenGLInit.cpp"/>
 		<file name="src/renderer/opengl/OpenGLContext.cpp"/>
 		<!-- <file name="src/renderer/opengl/OpenGL2Context.cpp"/> -->
+		<file name="src/renderer/opengl/OpenGLS3D.cpp" if="android" />
 		<file name="src/renderer/opengl/OpenGLTexture.cpp"/>
 		<file name="src/renderer/opengl/OpenGLProgram.cpp"/>
 		<file name="src/renderer/opengl/OpenGLShaders.cpp"/>

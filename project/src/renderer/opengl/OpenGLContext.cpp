@@ -1,4 +1,6 @@
 #include "renderer/opengl/OpenGLContext.h"
+#include "renderer/common/S3D.h"
+#include "renderer/common/S3DEye.h"
 
 
 int sgDrawCount = 0;
@@ -55,6 +57,10 @@ namespace lime {
 		e.mTexOffset = sizeof (float) * 2;
 		e.mStride = sizeof (float) * 4;
 		
+		#ifdef ANDROID
+		mS3D.Init ();
+		#endif
+
 	}
 	
 	
@@ -65,7 +71,7 @@ namespace lime {
 			delete mProg[i];
 			
 		}
-		
+
 	}
 	
 	
@@ -186,15 +192,30 @@ namespace lime {
 	
 	void OpenGLContext::CombineModelView (const Matrix &inModelView) {
 		
+		#ifdef ANDROID
+		float eyeOffset = mS3D.GetEyeOffset ();
+		#else
+		float eyeOffset = 0;
+		#endif
+
 		mTrans[0][0] = inModelView.m00 * mScaleX;
 		mTrans[0][1] = inModelView.m01 * mScaleX;
 		mTrans[0][2] = 0;
-		mTrans[0][3] = inModelView.mtx * mScaleX + mOffsetX;
-		
+		mTrans[0][3] = (inModelView.mtx + eyeOffset) * mScaleX + mOffsetX;
+
 		mTrans[1][0] = inModelView.m10 * mScaleY;
 		mTrans[1][1] = inModelView.m11 * mScaleY;
 		mTrans[1][2] = 0;
 		mTrans[1][3] = inModelView.mty * mScaleY + mOffsetY;
+
+		mTrans[2][0] = 0;
+		mTrans[2][1] = 0;
+		mTrans[2][2] = -1;
+		mTrans[2][3] = inModelView.mtz;
+		
+		#ifdef ANDROID
+		mS3D.FocusEye (mTrans);
+		#endif
 		
 	}
 	
@@ -391,7 +412,11 @@ namespace lime {
 			}
 			
 			int progId = 0;
+			#ifdef LIME_PREMULTIPLIED_ALPHA
+			bool premAlpha = true;
+			#else
 			bool premAlpha = false;
+			#endif
 			
 			if ((element.mFlags & DRAW_HAS_TEX) && element.mSurface) {
 				
@@ -686,8 +711,34 @@ namespace lime {
 		#ifdef ANDROID
 		//__android_log_print(ANDROID_LOG_ERROR, "Lime", "SetWindowSize %d %d", inWidth, inHeight);
 		#endif
+
+		if (mWidth > mHeight) {
+			S3D::SetOrientation (S3D_ORIENTATION_VERTICAL);
+		} else {
+			S3D::SetOrientation (S3D_ORIENTATION_HORIZONTAL);
+		}
+		
+		#ifdef ANDROID
+		mS3D.Resize (inWidth, inHeight);
+		#endif
 		
 	}
 	
+	void OpenGLContext::EndS3DRender() {
+
+		setOrtho (0, mWidth, 0, mHeight);
+		#ifdef ANDROID
+		mS3D.EndS3DRender (mWidth, mHeight, mTrans);
+		#endif
+		
+	}
+	
+	void OpenGLContext::SetS3DEye(int eye) {
+		
+		#ifdef ANDROID
+		mS3D.SetS3DEye (eye);
+		#endif
+
+	}
 		
 }
