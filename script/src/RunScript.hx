@@ -19,6 +19,7 @@ import helpers.PlatformHelper;
 class RunScript {
 	
 	
+	private static var buildLib = "hxcpp";
 	private static var isLinux:Bool;
 	private static var isMac:Bool;
 	private static var isWindows:Bool;
@@ -120,10 +121,10 @@ class RunScript {
 				var directories = [ PathHelper.combine (path, "obj") ];
 				var files = [ PathHelper.combine (path, "all_objs"), PathHelper.combine (path, "vc100.pdb"), PathHelper.combine (path, "vc110.pdb") ];
 				
-				if (PathHelper.getHaxelib (new Haxelib ("lime-wiiu")) != "") {
+				if (PathHelper.getHaxelib (new Haxelib ("openfl-wiiu")) != "") {
 					
-					directories.push (PathHelper.combine (PathHelper.getHaxelib (new Haxelib ("lime-wiiu")), "project/obj"));
-					directories.push (PathHelper.combine (PathHelper.getHaxelib (new Haxelib ("lime-wiiu")), "project/all_objs"));
+					directories.push (PathHelper.combine (PathHelper.getHaxelib (new Haxelib ("openfl-wiiu")), "project/obj"));
+					directories.push (PathHelper.combine (PathHelper.getHaxelib (new Haxelib ("openfl-wiiu")), "project/all_objs"));
 					
 				}
 				
@@ -225,9 +226,12 @@ class RunScript {
 			
 		}
 		
+		var buildSharedLibs = (path == PathHelper.combine (limeDirectory, "project"));
+		var sharedLibsPath = PathHelper.combine (PathHelper.getHaxelib (new Haxelib ("nme-dev"), buildSharedLibs), "project");
+		
 		if (target == "wiiu" && path == PathHelper.combine (limeDirectory, "project")) {
 			
-			path = PathHelper.combine (PathHelper.getHaxelib (new Haxelib ("lime-wiiu"), true), "project");
+			path = PathHelper.combine (PathHelper.getHaxelib (new Haxelib ("openfl-wiiu"), true), "project");
 			
 		}
 		
@@ -247,20 +251,27 @@ class RunScript {
 				
 				//mkdir (PathHelper.combine (path, "../ndll/Android"));
 				
+				if (buildSharedLibs) {
+					
+					runCommand (sharedLibsPath, "neko", [ "build.n", "android-armv5" ].concat (defines));
+					runCommand (sharedLibsPath, "neko", [ "build.n", "android-armv7" ].concat (defines));
+					
+				}
+				
 				if (!flags.exists ("debug")) {
 					
-					runCommand (path, "haxelib", [ "run", "hxlibc", buildFile, "-Dandroid" ].concat (defines));
+					runCommand (path, "haxelib", [ "run", buildLib, buildFile, "-Dandroid" ].concat (defines));
 					synchronizeNDLL ("Android/liblime.so");
-					runCommand (path, "haxelib", [ "run", "hxlibc", buildFile, "-Dandroid", "-DHXCPP_ARMV7", "-DHXCPP_ARM7" ].concat (defines));
+					runCommand (path, "haxelib", [ "run", buildLib, buildFile, "-Dandroid", "-DHXCPP_ARMV7", "-DHXCPP_ARM7" ].concat (defines));
 					synchronizeNDLL ("Android/liblime-v7.so");
 					
 				}
 				
 				if (!flags.exists ("release")) {
 					
-					runCommand (path, "haxelib", [ "run", "hxlibc", buildFile, "-Dandroid", "-Dfulldebug" ].concat (defines));
+					runCommand (path, "haxelib", [ "run", buildLib, buildFile, "-Dandroid", "-Ddebug", "-Dfulldebug" ].concat (defines));
 					synchronizeNDLL ("Android/liblime-debug.so");
-					runCommand (path, "haxelib", [ "run", "hxlibc", buildFile, "-Dandroid", "-DHXCPP_ARMV7", "-DHXCPP_ARM7", "-Dfulldebug" ].concat (defines));
+					runCommand (path, "haxelib", [ "run", buildLib, buildFile, "-Dandroid", "-DHXCPP_ARMV7", "-DHXCPP_ARM7", "-Ddebug", "-Dfulldebug" ].concat (defines));
 					synchronizeNDLL ("Android/liblime-debug-v7.so");
 					
 				}
@@ -269,62 +280,80 @@ class RunScript {
 				
 				//mkdir (nmeDirectory + "/ndll/BlackBerry");
 				
+				if (buildSharedLibs) {
+					
+					runCommand (sharedLibsPath, "neko", [ "build.n", "blackberry" ].concat (defines));
+					
+				}
+				
 				if (!flags.exists ("debug")) {
 					
-					runCommand (path, "haxelib", [ "run", "hxlibc", buildFile, "-Dblackberry" ].concat (defines));
+					runCommand (path, "haxelib", [ "run", buildLib, buildFile, "-Dblackberry" ].concat (defines));
 					synchronizeNDLL ("BlackBerry/lime.so");
-					runCommand (path, "haxelib", [ "run", "hxlibc", buildFile, "-Dblackberry", "-Dsimulator" ].concat (defines));
+					runCommand (path, "haxelib", [ "run", buildLib, buildFile, "-Dblackberry", "-Dsimulator" ].concat (defines));
 					synchronizeNDLL ("BlackBerry/lime-x86.so");
 					
 				}
 				
 				if (!flags.exists ("release")) {
 					
-					runCommand (path, "haxelib", [ "run", "hxlibc", buildFile, "-Dblackberry", "-Dfulldebug" ].concat (defines));
+					runCommand (path, "haxelib", [ "run", buildLib, buildFile, "-Dblackberry", "-Ddebug", "-Dfulldebug" ].concat (defines));
 					synchronizeNDLL ("BlackBerry/lime-debug.so");
-					runCommand (path, "haxelib", [ "run", "hxlibc", buildFile, "-Dblackberry", "-Dsimulator", "-Dfulldebug" ].concat (defines));
+					runCommand (path, "haxelib", [ "run", buildLib, buildFile, "-Dblackberry", "-Dsimulator", "-Ddebug", "-Dfulldebug" ].concat (defines));
 					synchronizeNDLL ("BlackBerry/lime-debug-x86.so");
 					
 				}
 			
 			case "emscripten":
 				
+				if (buildSharedLibs) {
+					
+					runCommand (sharedLibsPath, "neko", [ "build.n", "emscripten" ].concat (defines));
+					
+				}
+				
 				if (!flags.exists ("debug")) {
 					
-					runCommand (path, "haxelib", [ "run", "hxlibc", buildFile, "-Demscripten" ].concat (defines));
+					runCommand (path, "haxelib", [ "run", buildLib, buildFile, "-Demscripten" ].concat (defines));
 					synchronizeNDLL ("Emscripten/lime.a");
 					
 				}
 				
 				if (!flags.exists ("release")) {
 					
-					runCommand (path, "haxelib", [ "run", "hxlibc", buildFile, "-Demscripten", "-Dfulldebug" ].concat (defines));
+					runCommand (path, "haxelib", [ "run", buildLib, buildFile, "-Demscripten", "-Ddebug", "-Dfulldebug" ].concat (defines));
 					synchronizeNDLL ("Emscripten/lime-debug.a");
 					
 				}
 			
 			case "ios":
 				
+				if (buildSharedLibs) {
+					
+					runCommand (sharedLibsPath, "neko", [ "build.n", "ios", "-DHXCPP_CPP11" ].concat (defines));
+					
+				}
+				
 				//mkdir (nmeDirectory + "/ndll/iPhone");
 				
 				if (!flags.exists ("debug")) {
 					
-					runCommand (path, "haxelib", [ "run", "hxlibc", buildFile, "-Diphoneos" ].concat (defines));
+					runCommand (path, "haxelib", [ "run", buildLib, buildFile, "-Diphoneos", "-DHXCPP_CPP11" ].concat (defines));
 					synchronizeNDLL ("iPhone/liblime.iphoneos.a");
-					runCommand (path, "haxelib", [ "run", "hxlibc", buildFile, "-Diphoneos", "-DHXCPP_ARMV7" ].concat (defines));
+					runCommand (path, "haxelib", [ "run", buildLib, buildFile, "-Diphoneos", "-DHXCPP_CPP11", "-DHXCPP_ARMV7" ].concat (defines));
 					synchronizeNDLL ("iPhone/liblime.iphoneos-v7.a");
-					runCommand (path, "haxelib", [ "run", "hxlibc", buildFile, "-Diphonesim" ].concat (defines));
+					runCommand (path, "haxelib", [ "run", buildLib, buildFile, "-Diphonesim", "-DHXCPP_CPP11" ].concat (defines));
 					synchronizeNDLL ("iPhone/liblime.iphonesim.a");
 					
 				}
 				
 				if (!flags.exists ("release")) {
 					
-					runCommand (path, "haxelib", [ "run", "hxlibc", buildFile, "-Diphoneos", "-Dfulldebug" ].concat (defines));
+					runCommand (path, "haxelib", [ "run", buildLib, buildFile, "-Diphoneos", "-DHXCPP_CPP11", "-Ddebug", "-Dfulldebug" ].concat (defines));
 					synchronizeNDLL ("iPhone/liblime-debug.iphoneos.a");
-					runCommand (path, "haxelib", [ "run", "hxlibc", buildFile, "-Diphoneos", "-DHXCPP_ARMV7", "-Dfulldebug" ].concat (defines));
+					runCommand (path, "haxelib", [ "run", buildLib, buildFile, "-Diphoneos", "-DHXCPP_CPP11", "-DHXCPP_ARMV7", "-Ddebug", "-Dfulldebug" ].concat (defines));
 					synchronizeNDLL ("iPhone/liblime-debug.iphoneos-v7.a");
-					runCommand (path, "haxelib", [ "run", "hxlibc", buildFile, "-Diphonesim", "-Dfulldebug" ].concat (defines));
+					runCommand (path, "haxelib", [ "run", buildLib, buildFile, "-Diphonesim", "-DHXCPP_CPP11", "-Ddebug", "-Dfulldebug" ].concat (defines));
 					synchronizeNDLL ("iPhone/liblime-debug.iphonesim.a");
 					
 				}
@@ -333,20 +362,27 @@ class RunScript {
 				
 				if (!flags.exists ("rpi")) {
 					
+					if (buildSharedLibs) {
+						
+						if (isRunning64 ()) runCommand (sharedLibsPath, "neko", [ "build.n", "linux-m64" ].concat (defines));
+						runCommand (sharedLibsPath, "neko", [ "build.n", "linux-m32" ].concat (defines));
+						
+					}
+					
 					if (!flags.exists ("32") && isRunning64 ()) {
 						
 						//mkdir (nmeDirectory + "/ndll/Linux64");
 						
 						if (!flags.exists ("debug")) {
 							
-							runCommand (path, "haxelib", [ "run", "hxlibc", buildFile, "-DHXCPP_M64" ].concat (defines));
+							runCommand (path, "haxelib", [ "run", buildLib, buildFile, "-Dlinux", "-DHXCPP_M64" ].concat (defines));
 							synchronizeNDLL ("Linux64/lime.ndll");
 							
 						}
 						
 						if (!flags.exists ("release")) {
 							
-							runCommand (path, "haxelib", [ "run", "hxlibc", buildFile, "-DHXCPP_M64", "-Dfulldebug" ].concat (defines));
+							runCommand (path, "haxelib", [ "run", buildLib, buildFile, "-Dlinux", "-DHXCPP_M64", "-Ddebug", "-Dfulldebug" ].concat (defines));
 							synchronizeNDLL ("Linux64/lime-debug.ndll");
 							
 						}
@@ -359,14 +395,14 @@ class RunScript {
 						
 						if (!flags.exists ("debug")) {
 							
-							runCommand (path, "haxelib", [ "run", "hxlibc", buildFile ].concat (defines));
+							runCommand (path, "haxelib", [ "run", buildLib, buildFile, "-Dlinux" ].concat (defines));
 							synchronizeNDLL ("Linux/lime.ndll");
 							
 						}
 						
 						if (!flags.exists ("release")) {
 							
-							runCommand (path, "haxelib", [ "run", "hxlibc", buildFile, "-Dfulldebug" ].concat (defines));
+							runCommand (path, "haxelib", [ "run", buildLib, buildFile, "-Dlinux", "-Ddebug", "-Dfulldebug" ].concat (defines));
 							synchronizeNDLL ("Linux/lime-debug.ndll");
 							
 						}
@@ -377,16 +413,22 @@ class RunScript {
 					
 					//mkdir (nmeDirectory + "/ndll/RPi");
 					
+					if (buildSharedLibs) {
+						
+						runCommand (sharedLibsPath, "neko", [ "build.n", "rpi" ].concat (defines));
+						
+					}
+					
 					if (!flags.exists ("debug")) {
 						
-						runCommand (path, "haxelib", [ "run", "hxlibc", buildFile, "-Drpi" ].concat (defines));
+						runCommand (path, "haxelib", [ "run", buildLib, buildFile, "-Dlinux", "-Drpi" ].concat (defines));
 						synchronizeNDLL ("RPi/lime.ndll");
 						
 					}
 					
 					if (!flags.exists ("release")) {
 						
-						runCommand (path, "haxelib", [ "run", "hxlibc", buildFile, "-Drpi", "-Dfulldebug" ].concat (defines));
+						runCommand (path, "haxelib", [ "run", buildLib, buildFile, "-Dlinux", "-Drpi", "-Ddebug", "-Dfulldebug" ].concat (defines));
 						synchronizeNDLL ("RPi/lime-debug.ndll");
 						
 					}
@@ -397,18 +439,24 @@ class RunScript {
 				
 				//mkdir (nmeDirectory + "/ndll/Mac");
 				
+				if (buildSharedLibs) {
+					
+					runCommand (sharedLibsPath, "neko", [ "build.n", "mac" ].concat (defines));
+					
+				}
+				
 				if (!flags.exists ("64")) {
 					
 					if (!flags.exists ("debug")) {
 						
-						runCommand (path, "haxelib", [ "run", "hxlibc", buildFile ].concat (defines));
+						runCommand (path, "haxelib", [ "run", buildLib, buildFile, "-Dmac" ].concat (defines));
 						synchronizeNDLL ("Mac/lime.ndll");
 						
 					}
 					
 					if (!flags.exists ("release")) {
 						
-						runCommand (path, "haxelib", [ "run", "hxlibc", buildFile, "-Dfulldebug" ].concat (defines));
+						runCommand (path, "haxelib", [ "run", buildLib, buildFile, "-Dmac", "-Ddebug", "-Dfulldebug" ].concat (defines));
 						synchronizeNDLL ("Mac/lime-debug.ndll");
 						
 					}
@@ -419,14 +467,14 @@ class RunScript {
 					
 					if (!flags.exists ("debug")) {
 						
-						runCommand (path, "haxelib", [ "run", "hxlibc", buildFile, "-DHXCPP_M64" ].concat (defines));
+						runCommand (path, "haxelib", [ "run", buildLib, buildFile, "-Dmac", "-DHXCPP_M64" ].concat (defines));
 						synchronizeNDLL ("Mac64/lime.ndll");
 						
 					}
 					
 					if (!flags.exists ("release")) {
 						
-						runCommand (path, "haxelib", [ "run", "hxlibc", buildFile, "-DHXCPP_M64", "-Dfulldebug" ].concat (defines));
+						runCommand (path, "haxelib", [ "run", buildLib, buildFile, "-Dmac", "-DHXCPP_M64", "-Ddebug", "-Dfulldebug" ].concat (defines));
 						synchronizeNDLL ("Mac64/lime-debug.ndll");
 						
 					}
@@ -435,17 +483,23 @@ class RunScript {
 			
 			case "tizen":
 				
+				if (buildSharedLibs) {
+					
+					runCommand (sharedLibsPath, "neko", [ "build.n", "tizen" ].concat (defines));
+					
+				}
+				
 				if (!flags.exists ("debug")) {
 					
-					runCommand (path, "haxelib", [ "run", "hxlibc", buildFile, "-Dtizen" ].concat (defines));
-					runCommand (path, "haxelib", [ "run", "hxlibc", buildFile, "-Dtizen", "-Dsimulator" ].concat (defines));
+					runCommand (path, "haxelib", [ "run", buildLib, buildFile, "-Dtizen" ].concat (defines));
+					runCommand (path, "haxelib", [ "run", buildLib, buildFile, "-Dtizen", "-Dsimulator" ].concat (defines));
 					
 				}
 				
 				if (!flags.exists ("release")) {
 					
-					runCommand (path, "haxelib", [ "run", "hxlibc", buildFile, "-Dtizen", "-Dfulldebug" ].concat (defines));
-					runCommand (path, "haxelib", [ "run", "hxlibc", buildFile, "-Dtizen", "-Dsimulator", "-Dfulldebug" ].concat (defines));
+					runCommand (path, "haxelib", [ "run", buildLib, buildFile, "-Dtizen", "-Ddebug", "-Dfulldebug" ].concat (defines));
+					runCommand (path, "haxelib", [ "run", buildLib, buildFile, "-Dtizen", "-Dsimulator", "-Ddebug", "-Dfulldebug" ].concat (defines));
 					
 				}
 			
@@ -453,16 +507,22 @@ class RunScript {
 				
 				//mkdir (nmeDirectory + "/ndll/webOS");
 				
+				if (buildSharedLibs) {
+					
+					runCommand (sharedLibsPath, "neko", [ "build.n", "webos" ].concat (defines));
+					
+				}
+				
 				if (!flags.exists ("debug")) {
 					
-					runCommand (path, "haxelib", [ "run", "hxlibc", buildFile, "-Dwebos" ].concat (defines));
+					runCommand (path, "haxelib", [ "run", buildLib, buildFile, "-Dwebos" ].concat (defines));
 					synchronizeNDLL ("webOS/lime.so");
 					
 				}
 				
 				if (!flags.exists ("release")) {
 					
-					runCommand (path, "haxelib", [ "run", "hxlibc", buildFile, "-Dwebos", "-Dfulldebug" ].concat (defines));
+					runCommand (path, "haxelib", [ "run", buildLib, buildFile, "-Dwebos", "-Ddebug", "-Dfulldebug" ].concat (defines));
 					synchronizeNDLL ("webOS/lime-debug.so");
 					
 				}
@@ -470,6 +530,12 @@ class RunScript {
 			case "windows":
 				
 				//mkdir (nmeDirectory + "/ndll/Windows");
+				
+				if (buildSharedLibs) {
+					
+					runCommand (sharedLibsPath, "neko", [ "build.n", "windows" ].concat (defines));
+					
+				}
 				
 				//if (!flags.exists ("winrt")) {
 					
@@ -481,14 +547,14 @@ class RunScript {
 					
 					if (!flags.exists ("debug")) {
 						
-						runCommand (path, "haxelib", [ "run", "hxlibc", buildFile ].concat (defines));
+						runCommand (path, "haxelib", [ "run", buildLib, buildFile, "-Dwindows" ].concat (defines));
 						synchronizeNDLL ("Windows/lime.ndll");
 						
 					}
 					
 					if (!flags.exists ("release")) {
 						
-						runCommand (path, "haxelib", [ "run", "hxlibc", buildFile, "-Dfulldebug" ].concat (defines));
+						runCommand (path, "haxelib", [ "run", buildLib, buildFile, "-Dwindows", "-Ddebug", "-Dfulldebug" ].concat (defines));
 						synchronizeNDLL ("Windows/lime-debug.ndll");
 						
 					}
@@ -529,15 +595,21 @@ class RunScript {
 			
 			case "wiiu":
 				
+				if (buildSharedLibs) {
+					
+					//runCommand (sharedLibsPath, "neko", [ "build.n", "wiiu" ].concat (defines));
+					
+				}
+				
 				if (!flags.exists ("debug")) {
 					
-					runCommand (path, "haxelib", [ "run", "hxlibc", buildFile, "-Dnintendo", "-Dwiiu", "-Dtoolchain=wiiu", "-I" + PathHelper.getHaxelib (new Haxelib ("lime-wiiu")) + "/toolchain" ].concat (defines));
+					runCommand (path, "haxelib", [ "run", buildLib, buildFile, "-Dnintendo", "-Dwiiu", "-Dtoolchain=wiiu", "-I" + PathHelper.getHaxelib (new Haxelib ("openfl-wiiu")) ].concat (defines));
 					
 				}
 				
 				if (!flags.exists ("release")) {
 					
-					runCommand (path, "haxelib", [ "run", "hxlibc", buildFile, "-Dnintendo", "-Dwiiu", "-Dfulldebug", "-Dtoolchain=wiiu", "-I" + PathHelper.getHaxelib (new Haxelib ("lime-wiiu")) + "/toolchain" ].concat (defines));
+					runCommand (path, "haxelib", [ "run", buildLib, buildFile, "-Dnintendo", "-Dwiiu", "-Ddebug", "-Dfulldebug", "-Dtoolchain=wiiu", "-I" + PathHelper.getHaxelib (new Haxelib ("openfl-wiiu")) ].concat (defines));
 					
 				}
 			
@@ -989,7 +1061,23 @@ class RunScript {
 					
 				} else if (StringTools.startsWith (arg, "-")) {
 					
-					flags.set (arg.substr (1), "");
+					switch (arg) {
+						
+						case "-v", "-verbose":
+							
+							flags.set ("verbose", "");
+							defines.push ("-verbose");
+						
+						case "-d", "-debug":
+							
+							flags.set ("debug", "");
+						
+						default:
+							
+							flags.set (arg.substr (1), "");
+						
+					}
+					
 					ignoreLength++;
 					
 				}
@@ -1044,6 +1132,8 @@ class RunScript {
 					
 				} else {
 					
+					var haxelib = PathHelper.getHaxelib (new Haxelib (path));
+					
 					if (FileSystem.isDirectory (path)) {
 						
 						path = PathHelper.combine (path, "project");
@@ -1051,6 +1141,12 @@ class RunScript {
 					} else {
 						
 						path = PathHelper.combine (Path.directory (path), "project");
+						
+					}
+					
+					if (!FileSystem.exists (path) && haxelib != null) {
+						
+						path = PathHelper.combine (haxelib, "project");
 						
 					}
 					
@@ -1106,6 +1202,10 @@ class RunScript {
 					case "-d", "-debug":
 						
 						flags.set ("debug", "");
+					
+					case "-v", "-verbose":
+						
+						flags.set ("verbose", "");
 					
 					default:
 						
@@ -1368,13 +1468,13 @@ class RunScript {
 				
 				case "installer":
 					
-					var hxlibcPath = PathHelper.getHaxelib (new Haxelib ("hxlibc"));
+					var hxlibcPath = PathHelper.getHaxelib (new Haxelib (buildLib));
 					var nmePath = PathHelper.getHaxelib (new Haxelib ("lime"));
 					var swfPath = PathHelper.getHaxelib (new Haxelib ("swf"));
 					var actuatePath = PathHelper.getHaxelib (new Haxelib ("actuate"));
 					var svgPath = PathHelper.getHaxelib (new Haxelib ("svg"));
 					
-					var hxlibcVersion = getVersion ("hxlibc", true);
+					var hxlibcVersion = getVersion (buildLib, true);
 					var nmeVersion = getVersion ("lime", true);
 					var swfVersion = getVersion ("swf", true);
 					var actuateVersion = getVersion ("actuate", true);
@@ -1402,7 +1502,7 @@ class RunScript {
 						recursiveCopy (actuatePath, nmeDirectory + tempPath + "/resources/actuate/usr/lib/haxe/lib/actuate/" + actuateVersion, [ ".git", ".svn" ]);
 						recursiveCopy (svgPath, nmeDirectory + tempPath + "/resources/svg/usr/lib/haxe/lib/svg/" + svgVersion, [ ".git", ".svn" ]);
 						
-						File.saveContent (nmeDirectory + tempPath + "/resources/hxlibc/usr/lib/haxe/lib/hxlibc/.current", getVersion ("hxlibc"));
+						File.saveContent (nmeDirectory + tempPath + "/resources/hxlibc/usr/lib/haxe/lib/hxlibc/.current", getVersion (buildLib));
 						File.saveContent (nmeDirectory + tempPath + "/resources/nme/usr/lib/haxe/lib/nme/.current", getVersion ("lime"));
 						File.saveContent (nmeDirectory + tempPath + "/resources/swf/usr/lib/haxe/lib/swf/.current", getVersion ("swf"));
 						File.saveContent (nmeDirectory + tempPath + "/resources/actuate/usr/lib/haxe/lib/actuate/.current", getVersion ("actuate"));
@@ -1432,13 +1532,13 @@ class RunScript {
 						recursiveCopy (actuatePath, nmeDirectory + tempPath + "/resources/actuate/" + actuateVersion, [ ".git", ".svn" ]);
 						recursiveCopy (svgPath, nmeDirectory + tempPath + "/resources/svg/" + svgVersion, [ ".git", ".svn" ]);
 						
-						File.saveContent (nmeDirectory + tempPath + "/resources/hxlibc/.current", getVersion ("hxlibc"));
+						File.saveContent (nmeDirectory + tempPath + "/resources/hxlibc/.current", getVersion (buildLib));
 						File.saveContent (nmeDirectory + tempPath + "/resources/nme/.current", getVersion ("lime"));
 						File.saveContent (nmeDirectory + tempPath + "/resources/swf/.current", getVersion ("swf"));
 						File.saveContent (nmeDirectory + tempPath + "/resources/actuate/.current", getVersion ("actuate"));
 						File.saveContent (nmeDirectory + tempPath + "/resources/svg/.current", getVersion ("svg"));
 						
-						var args = [ "/DVERSION=" + getVersion ("lime"), "/DVERSION_FOLDER=" + nmeVersion, "/DHAXE_VERSION=2.10", "/DNEKO_VERSION=1.8.2", "/DHXLIBC_VERSION=" + getVersion ("hxlibc"), "/DACTUATE_VERSION=" + getVersion ("actuate"), "/DSWF_VERSION=" + getVersion ("swf"), "/DSVG_VERSION=" + getVersion ("svg") ];
+						var args = [ "/DVERSION=" + getVersion ("lime"), "/DVERSION_FOLDER=" + nmeVersion, "/DHAXE_VERSION=2.10", "/DNEKO_VERSION=1.8.2", "/DHXLIBC_VERSION=" + getVersion (buildLib), "/DACTUATE_VERSION=" + getVersion ("actuate"), "/DSWF_VERSION=" + getVersion ("swf"), "/DSVG_VERSION=" + getVersion ("svg") ];
 						args.push ("/DOUTPUT_PATH=../NME-" + getVersion ("lime") + "-Windows.exe");
 						args.push ("Installer.nsi");
 						

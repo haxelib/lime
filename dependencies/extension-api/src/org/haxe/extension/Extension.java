@@ -18,6 +18,7 @@ public class Extension {
 	public static Activity mainActivity;
 	public static Context mainContext;
 	public static View mainView;
+	public static String packageName;
 	
 	
 	/**
@@ -46,6 +47,29 @@ public class Extension {
 	 * Perform any final cleanup before an activity is destroyed.
 	 */
 	public void onDestroy () {
+		
+		
+		
+	}
+	
+	
+	/**
+	 * Called when the overall system is running low on memory, 
+	 * and actively running processes should trim their memory usage.
+	 * This is a backwards compatibility method as it is called at the same time as 
+	 * onTrimMemory(TRIM_MEMORY_COMPLETE).
+	 */
+	public void onLowMemory () {
+		
+		
+		
+	}
+	
+	
+	/**
+	 * Called when the a new Intent is received
+	 */
+	public void onNewIntent (Intent intent) {
 		
 		
 		
@@ -102,6 +126,19 @@ public class Extension {
 	 * another activity has been resumed and is covering this one. 
 	 */
 	public void onStop () {
+		
+		
+		
+	}
+	
+	
+	/**
+	 * Called when the operating system has determined that it is a
+	 * good time for a process to trim unneeded memory from its process.
+	 * 
+	 * See http://developer.android.com/reference/android/content/ComponentCallbacks2.html for the level explanation.
+	 */
+	public void onTrimMemory (int level) {
 		
 		
 		

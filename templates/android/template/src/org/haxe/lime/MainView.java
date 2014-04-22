@@ -344,7 +344,7 @@ class MainView extends GLSurfaceView {
 		
 		final MainView me = this;
 		
-		::if (ANDROID_TARGET_SDK_VERSION > 11)::if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB_MR1 && (event.isGamepadButton (inKeyCode) || (inKeyCode >= 19 && inKeyCode <= 22))) {
+		::if (ANDROID_TARGET_SDK_VERSION > 11)::if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB_MR1 && (event.isGamepadButton (inKeyCode) || (inKeyCode >= 19 && inKeyCode <=22))) {
 			
 			if (event.getRepeatCount () == 0) {
 				
@@ -362,7 +362,11 @@ class MainView extends GLSurfaceView {
 				
 			}
 			
-			return true;
+			if (inKeyCode < 19 || inKeyCode > 22) {
+				
+				return true;
+				
+			}
 			
 		}::end::
 		
@@ -394,7 +398,7 @@ class MainView extends GLSurfaceView {
 		
 		final MainView me = this;
 		
-		::if (ANDROID_TARGET_SDK_VERSION > 11)::if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB_MR1 && (event.isGamepadButton (inKeyCode) || (inKeyCode >= 19 && inKeyCode <= 22))) {
+		::if (ANDROID_TARGET_SDK_VERSION > 11)::if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB_MR1 && (event.isGamepadButton (inKeyCode) || (inKeyCode >= 19 && inKeyCode <=22))) {
 			
 			if (event.getRepeatCount () == 0) {
 				
@@ -412,7 +416,11 @@ class MainView extends GLSurfaceView {
 				
 			}
 			
-			return true;
+			if (inKeyCode < 19 || inKeyCode > 22) {
+				
+				return true;
+				
+			}
 			
 		}::end::
 		
@@ -589,6 +597,7 @@ class MainView extends GLSurfaceView {
 		
 		switch (inCode) {
 			
+			case KeyEvent.KEYCODE_DPAD_CENTER: return 13; // Enter
 			case KeyEvent.KEYCODE_BACK: return 27; /* Fake Escape */
 			case KeyEvent.KEYCODE_MENU: return 0x01000012; /* Fake MENU */
 			case KeyEvent.KEYCODE_DEL: return 8;
@@ -596,7 +605,7 @@ class MainView extends GLSurfaceView {
 			// These will be ignored by the app and passed to the default handler
 			case KeyEvent.KEYCODE_VOLUME_UP:
 			case KeyEvent.KEYCODE_VOLUME_DOWN:
-			case KeyEvent.KEYCODE_VOLUME_MUTE: 
+			::if (ANDROID_TARGET_SDK_VERSION > 10)::case KeyEvent.KEYCODE_VOLUME_MUTE:::end:: 
 				return 0;
 			
 		}
@@ -697,14 +706,31 @@ class MainView extends GLSurfaceView {
 		
 		public void onSurfaceChanged (GL10 gl, int width, int height) {
 			
+			::if (DEBUG)::
+			Log.v("VIEW","onSurfaceChanged " + width +"," + height);
+			Log.v("VIEW", "Thread = " + java.lang.Thread.currentThread ().getId ());
+			::end::
+			
 			mMainView.HandleResult (Lime.onResize (width, height));
+			
+			/*if (GameActivity.activity != null) {
+				
+				GameActivity.activity.onResizeAsync(width,height);
+				
+			}*/
 			
 		}
 		
 		
 		public void onSurfaceCreated (GL10 gl, EGLConfig config) {
 			
-			
+			mMainView.isPollImminent = false;
+			mMainView.renderPending = false;
+			::if (DEBUG)::
+			Log.v("VIEW","onSurfaceCreated");
+			Log.v("VIEW", "Thread = " + java.lang.Thread.currentThread ().getId ());
+			::end::
+			mMainView.HandleResult (Lime.onContextLost ());
 			
 		}
 		

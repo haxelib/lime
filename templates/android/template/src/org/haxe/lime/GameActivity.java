@@ -95,7 +95,6 @@ public class GameActivity extends Activity implements SensorEventListener {
 		Extension.mainContext = this;
 		
 		_sound = new Sound (getApplication ());
-		//getResources().getAssets();
 		
 		requestWindowFeature (Window.FEATURE_NO_TITLE);
 		
@@ -109,36 +108,14 @@ public class GameActivity extends Activity implements SensorEventListener {
 		metrics = new DisplayMetrics ();
 		getWindowManager ().getDefaultDisplay ().getMetrics (metrics);
 		
-		// Pre-load these, so the C++ knows where to find them
+		::foreach ndlls::
+		System.loadLibrary ("::name::");
+		::end::
+		HXCPP.run ("ApplicationMain");
 		
-		//if (mMainView == null) {
-			
-			Log.d ("lime", "mMainView is NULL");
-			
-			::foreach ndlls::
-			System.loadLibrary ("::name::");::end::
-			HXCPP.run ("ApplicationMain");
-			
-			//mMainView = new MainView (getApplication (), this);
-			
-		/*} else {
-			
-			ViewGroup parent = (ViewGroup)mMainView.getParent ();
-			
-			if (parent != null) {
-				
-				parent.removeView (mMainView);
-				
-			}
-			
-			mMainView.onResume ();
-			
-		}
-		
-		mView = mMainView;*/
 		mView = new MainView (getApplication (), this);
 		setContentView (mView);
-
+		
 		Extension.mainView = mView;
 		
 		sensorManager = (SensorManager)activity.getSystemService (Context.SENSOR_SERVICE);
@@ -150,9 +127,11 @@ public class GameActivity extends Activity implements SensorEventListener {
 			
 		}
 		
+		Extension.packageName = getApplicationContext ().getPackageName ();
+		
 		if (extensions == null) {
 			
-			extensions = new ArrayList<Extension>();
+			extensions = new ArrayList<Extension> ();
 			::if (ANDROID_EXTENSIONS != null)::::foreach ANDROID_EXTENSIONS::
 			extensions.add (new ::__current__:: ());::end::::end::
 			
@@ -452,6 +431,32 @@ public class GameActivity extends Activity implements SensorEventListener {
 	}
 	
 	
+	@Override public void onLowMemory () {
+		
+		super.onLowMemory ();
+		
+		for (Extension extension : extensions) {
+			
+			extension.onLowMemory ();
+			
+		}
+		
+	}
+	
+	
+	@Override protected void onNewIntent (final Intent intent) {
+		
+		for (Extension extension : extensions) {
+			
+			extension.onNewIntent (intent);
+			
+		}
+		
+		super.onNewIntent (intent);
+		
+	}
+	
+	
 	@Override protected void onPause () {
 		
 		doPause ();
@@ -543,6 +548,19 @@ public class GameActivity extends Activity implements SensorEventListener {
 		for (Extension extension : extensions) {
 			
 			extension.onStop ();
+			
+		}
+		
+	}
+	
+	
+	@Override public void onTrimMemory (int level) {
+		
+		super.onTrimMemory (level);
+		
+		for (Extension extension : extensions) {
+			
+			extension.onTrimMemory (level);
 			
 		}
 		
