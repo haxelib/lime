@@ -313,7 +313,7 @@ public class GameActivity extends Activity implements SensorEventListener {
 	
 	static public String getSpecialDir (int inWhich) {
 		
-		Log.v ("GameActivity", "Get special Dir " + inWhich);
+		//Log.v ("GameActivity", "Get special Dir " + inWhich);
 		File path = null;
 		
 		switch (inWhich) {
@@ -554,6 +554,7 @@ public class GameActivity extends Activity implements SensorEventListener {
 	}
 	
 	
+	::if (ANDROID_TARGET_SDK_VERSION >= 14)::
 	@Override public void onTrimMemory (int level) {
 		
 		super.onTrimMemory (level);
@@ -565,6 +566,7 @@ public class GameActivity extends Activity implements SensorEventListener {
 		}
 		
 	}
+	::end::
 	
 	
 	public static void popView () {

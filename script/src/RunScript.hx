@@ -227,7 +227,15 @@ class RunScript {
 		}
 		
 		var buildSharedLibs = (path == PathHelper.combine (limeDirectory, "project"));
-		var sharedLibsPath = PathHelper.combine (PathHelper.getHaxelib (new Haxelib ("nme-dev"), buildSharedLibs), "project");
+		var sharedLibsPath = "";
+
+			//only request the path from shared libs if it's required, 
+			//anything that doesn't use nme-dev would trip up on this otherwise
+		if (buildSharedLibs) {
+			
+			sharedLibsPath = PathHelper.combine (PathHelper.getHaxelib (new Haxelib ("nme-dev"), buildSharedLibs), "project");
+
+		}
 		
 		if (target == "wiiu" && path == PathHelper.combine (limeDirectory, "project")) {
 			
@@ -1001,8 +1009,6 @@ class RunScript {
 	
 	public static function main () {
 		
-		limeDirectory = PathHelper.getHaxelib (new Haxelib ("lime"), true);
-		
 		if (new EReg ("window", "i").match (Sys.systemName ())) {
 			
 			isLinux = false;
@@ -1054,9 +1060,25 @@ class RunScript {
 			
 			for (arg in args) {
 				
+				var equals = arg.indexOf ("=");
+				
 				if (StringTools.startsWith (arg, "-D")) {
 					
 					defines.push (arg);
+					ignoreLength++;
+					
+				} else if (equals > -1 && StringTools.startsWith (arg, "--")) {
+					
+					var argValue = arg.substr (equals + 1);
+					var field = arg.substr (2, equals - 2);
+					
+					if (StringTools.startsWith (field, "haxelib-")) {
+						
+						var name = field.substr (8);
+						PathHelper.haxelibOverrides.set (name, PathHelper.tryFullPath (argValue));
+						
+					}
+					
 					ignoreLength++;
 					
 				} else if (StringTools.startsWith (arg, "-")) {
@@ -1083,6 +1105,8 @@ class RunScript {
 				}
 				
 			}
+			
+			limeDirectory = PathHelper.getHaxelib (new Haxelib ("lime"), true);
 			
 			var path = "";
 			
@@ -1173,6 +1197,8 @@ class RunScript {
 			}
 			
 		} else {
+			
+			limeDirectory = PathHelper.getHaxelib (new Haxelib ("lime"), true);
 			
 			if (command == "setup") {
 				
