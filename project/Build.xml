@@ -1,9 +1,0 @@
-<xml>
-	
-	<set name="lime" value="1" />
-	
-	<set name="NME_PATH" value="${haxelib:nme}" unless="NME_PATH" />
-	
-	<include name="${NME_PATH}/project/Build.xml"/>
-	
-</xml>
