@@ -67,10 +67,9 @@ class FlashPlatform extends PlatformTarget {
 				
 			}
 			
-			hxml = StringTools.replace (hxml, "\n", " ");
 			hxml = StringTools.trim (hxml);
 			
-			var args = hxml.split (" ");
+			var args = new EReg ("\\s+", "g").split (hxml);
 			var strip;
 			
 			while ((strip = args.indexOf ("-swf-header")) > -1) {
@@ -78,6 +77,23 @@ class FlashPlatform extends PlatformTarget {
 				args.splice (strip, 2);
 				
 			}
+			
+			/*var index = 1;
+			
+			while (index < args.length) {
+				
+				if (!StringTools.startsWith (args[index - 1], "-") && !StringTools.startsWith (args[index], "-")) {
+					
+					args[index - 1] += " " + args[index];
+					args.splice (index, 1);
+					
+				} else {
+					
+					index++;
+					
+				}
+				
+			}*/
 			
 			if (PlatformHelper.hostPlatform != Platform.WINDOWS) {
 				

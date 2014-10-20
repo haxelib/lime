@@ -425,7 +425,10 @@ class HXProject {
 		
 		if (project != null) {
 			
-			processHaxelibs (project, userDefines);
+			var defines = StringMapHelper.copy (userDefines);
+			StringMapHelper.copyKeys (project.defines, defines);
+			
+			processHaxelibs (project, defines);
 			
 		}
 		
@@ -904,6 +907,16 @@ class HXProject {
 				context.assets.push (embeddedAsset);
 				
 			}
+			
+		}
+		
+		context.libraries = new Array <Dynamic> ();
+		
+		for (library in libraries) {
+			
+			var embeddedLibrary:Dynamic = { };
+			ObjectHelper.copyFields (library, embeddedLibrary);
+			context.libraries.push (embeddedLibrary);
 			
 		}
 		

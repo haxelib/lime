@@ -621,6 +621,20 @@ class ProjectXMLParser extends HXProject {
 	
 	private function parseAssetsElementDirectory (path:String, targetPath:String, include:String, exclude:String, type:AssetType, embed:Null<Bool>, glyphs:String, recursive:Bool):Void {
 		
+		if (StringTools.endsWith (path, ".bundle")) {
+			
+			var includePath = findIncludeFile (path);
+			
+			if (includePath != null && includePath != "" && FileSystem.exists (includePath) && !FileSystem.isDirectory (includePath)) {
+				
+				var includeProject = new ProjectXMLParser (includePath, defines);
+				merge (includeProject);
+				return;
+				
+			}
+			
+		}
+		
 		var files = FileSystem.readDirectory (path);
 		
 		if (targetPath != "") {
@@ -1176,6 +1190,8 @@ class ProjectXMLParser extends HXProject {
 							var name = "";
 							var type = null;
 							var embed:Null<Bool> = null;
+							var preload = false;
+							var generate = false;
 							
 							if (element.has.name) {
 								
@@ -1201,7 +1217,19 @@ class ProjectXMLParser extends HXProject {
 								
 							}
 							
-							libraries.push (new Library (path, name, type, embed));
+							if (element.has.preload) {
+								
+								preload = (substitute (element.att.preload) == "true");
+								
+							}
+							
+							if (element.has.generate) {
+								
+								generate = (substitute (element.att.generate) == "true");
+								
+							}
+							
+							libraries.push (new Library (path, name, type, embed, preload, generate));
 							
 						}
 					
