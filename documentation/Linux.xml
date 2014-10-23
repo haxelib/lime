@@ -3835,11 +3835,11 @@
 	<c path="lime.utils.ByteArray"/>
 	<c path="lime.audio.AudioBuffer"/>
 </f></fromBytes>
-		<fromFile public="1" set="method" line="69" static="1"><f a="path">
+		<fromFile public="1" set="method" line="72" static="1"><f a="path">
 	<c path="String"/>
 	<c path="lime.audio.AudioBuffer"/>
 </f></fromFile>
-		<fromURL public="1" set="method" line="90" static="1"><f a="url:handler">
+		<fromURL public="1" set="method" line="96" static="1"><f a="url:handler">
 	<c path="String"/>
 	<f a="">
 		<c path="lime.audio.AudioBuffer"/>
@@ -3847,7 +3847,7 @@
 	</f>
 	<x path="Void"/>
 </f></fromURL>
-		<lime_audio_load line="98" static="1"><d/></lime_audio_load>
+		<lime_audio_load line="104" static="1"><d/></lime_audio_load>
 		<bitsPerSample public="1"><x path="Int"/></bitsPerSample>
 		<channels public="1"><x path="Int"/></channels>
 		<data public="1"><c path="lime.utils.ByteArray"/></data>
