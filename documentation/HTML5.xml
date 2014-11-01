@@ -5732,42 +5732,37 @@
 </f></willTrigger>
 		<new public="1" set="method" line="62"><f a=""><x path="Void"/></f></new>
 	</class>
-	<class path="lime.graphics.GlyphRect" params="" file="/home/joshua/TeamCity/buildAgent/work/a3370b35bd8128d3/lime/lime/graphics/Font.hx" module="lime.graphics.Font">
-		<x public="1"><x path="Float"/></x>
-		<y public="1"><x path="Float"/></y>
-		<width public="1"><x path="Float"/></width>
-		<height public="1"><x path="Float"/></height>
-		<xOffset public="1"><x path="Int"/></xOffset>
-		<yOffset public="1"><x path="Int"/></yOffset>
-		<new public="1" set="method" line="21"><f a="x:y:width:height:?xOffset:?yOffset" v="::::0:0">
-	<x path="Float"/>
-	<x path="Float"/>
-	<x path="Float"/>
-	<x path="Float"/>
-	<x path="Int"/>
-	<x path="Int"/>
-	<x path="Void"/>
-</f></new>
-	</class>
 	<class path="lime.graphics.Font" params="" file="/home/joshua/TeamCity/buildAgent/work/a3370b35bd8128d3/lime/lime/graphics/Font.hx">
-		<lime_font_load line="295" static="1"><f a="">
+		<fromBytes public="1" set="method" line="227" static="1"><f a="bytes">
+	<c path="lime.utils.ByteArray"/>
+	<c path="lime.graphics.Font"/>
+</f></fromBytes>
+		<fromFile public="1" set="method" line="236" static="1"><f a="path">
+	<c path="String"/>
+	<c path="lime.graphics.Font"/>
+</f></fromFile>
+		<lime_font_get_family_name line="301" static="1"><f a="">
+	<d/>
+	<c path="String"/>
+</f></lime_font_get_family_name>
+		<lime_font_load line="302" static="1"><f a="">
 	<c path="String"/>
 	<unknown/>
 </f></lime_font_load>
-		<lime_font_load_glyphs line="296" static="1"><f a="::">
+		<lime_font_load_glyphs line="303" static="1"><f a="::">
 	<d/>
 	<x path="Int"/>
 	<c path="String"/>
 	<unknown/>
 </f></lime_font_load_glyphs>
-		<lime_font_load_range line="297" static="1"><f a=":::">
+		<lime_font_load_range line="304" static="1"><f a=":::">
 	<d/>
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Int"/>
 	<unknown/>
 </f></lime_font_load_range>
-		<lime_font_create_image line="298" static="1"><f a="">
+		<lime_font_create_image line="305" static="1"><f a="">
 	<d/>
 	<a>
 		<image set="null"><a>
@@ -5779,33 +5774,70 @@
 		<glyphs set="null"><unknown/></glyphs>
 	</a>
 </f></lime_font_create_image>
-		<lime_font_outline_decompose line="299" static="1"><f a=":">
+		<lime_font_outline_decompose line="306" static="1"><f a=":">
 	<d/>
 	<x path="Int"/>
 	<t path="lime.graphics.NativeFontData"/>
 </f></lime_font_outline_decompose>
+		<fontName public="1" set="null"><c path="String"/></fontName>
 		<image public="1"><c path="lime.graphics.Image"/></image>
-		<glyphs public="1"><c path="haxe.ds.IntMap"><c path="haxe.ds.IntMap"><c path="lime.graphics.GlyphRect"/></c></c></glyphs>
-		<handle public="1"><d/></handle>
-		<fontFace public="1" set="null"><c path="String"/></fontFace>
-		<createImage public="1" set="method" line="67"><f a=""><c path="lime.graphics.ImageBuffer"/></f></createImage>
-		<decompose public="1" set="method" line="243"><f a=""><t path="lime.graphics.NativeFontData"/></f></decompose>
-		<loadRange public="1" set="method" line="258"><f a="size:start:end">
+		<glyphs public="1"><x path="Map">
+	<x path="Int"/>
+	<x path="Map">
+		<x path="Int"/>
+		<c path="lime.graphics.GlyphRect"/>
+	</x>
+</x></glyphs>
+		<__fontPath>
+			<c path="String"/>
+			<meta><m n=":noCompletion"/></meta>
+		</__fontPath>
+		<__handle>
+			<d/>
+			<meta><m n=":noCompletion"/></meta>
+		</__handle>
+		<createImage public="1" set="method" line="36"><f a=""><c path="lime.graphics.ImageBuffer"/></f></createImage>
+		<decompose public="1" set="method" line="212"><f a=""><t path="lime.graphics.NativeFontData"/></f></decompose>
+		<loadRange public="1" set="method" line="245"><f a="size:start:end">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Void"/>
 </f></loadRange>
-		<loadGlyphs public="1" set="method" line="273"><f a="size:?glyphs" v=":null">
+		<loadGlyphs public="1" set="method" line="260"><f a="size:?glyphs" v=":null">
 	<x path="Int"/>
 	<c path="String"/>
 	<x path="Void"/>
 </f></loadGlyphs>
-		<new public="1" set="method" line="54"><f a="fontFace">
+		<__fromFile set="method" line="281">
+			<f a="path">
+				<c path="String"/>
+				<x path="Void"/>
+			</f>
+			<meta><m n=":noCompletion"/></meta>
+		</__fromFile>
+		<new public="1" set="method" line="28"><f a="?fontName" v="null">
 	<c path="String"/>
 	<x path="Void"/>
 </f></new>
 		<meta><m n=":autoBuild"><e>'???'</e></m></meta>
+	</class>
+	<class path="lime.graphics.GlyphRect" params="" file="/home/joshua/TeamCity/buildAgent/work/a3370b35bd8128d3/lime/lime/graphics/Font.hx" module="lime.graphics.Font">
+		<x public="1"><x path="Float"/></x>
+		<y public="1"><x path="Float"/></y>
+		<width public="1"><x path="Float"/></width>
+		<height public="1"><x path="Float"/></height>
+		<xOffset public="1"><x path="Int"/></xOffset>
+		<yOffset public="1"><x path="Int"/></yOffset>
+		<new public="1" set="method" line="324"><f a="x:y:width:height:?xOffset:?yOffset" v="::::0:0">
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Int"/>
+	<x path="Int"/>
+	<x path="Void"/>
+</f></new>
 	</class>
 	<typedef path="lime.graphics.NativeFontData" params="" file="/home/joshua/TeamCity/buildAgent/work/a3370b35bd8128d3/lime/lime/graphics/Font.hx" module="lime.graphics.Font"><a>
 	<style_name><c path="String"/></style_name>
