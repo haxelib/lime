@@ -2832,8 +2832,8 @@
 	<class path="lime.app._Application.UpdateEventInfo" params="" file="/home/joshua/TeamCity/buildAgent/work/a3370b35bd8128d3/lime/lime/app/Application.hx" private="1" module="lime.app.Application">
 		<deltaTime public="1"><x path="Int"/></deltaTime>
 		<type public="1"><x path="lime.app._Application.UpdateEventType"/></type>
-		<clone public="1" set="method" line="407"><f a=""><c path="lime.app._Application.UpdateEventInfo"/></f></clone>
-		<new public="1" set="method" line="399"><f a="?type:?deltaTime" v="null:0">
+		<clone public="1" set="method" line="454"><f a=""><c path="lime.app._Application.UpdateEventInfo"/></f></clone>
+		<new public="1" set="method" line="446"><f a="?type:?deltaTime" v="null:0">
 	<x path="lime.app._Application.UpdateEventType"/>
 	<x path="Int"/>
 	<x path="Void"/>
@@ -2859,15 +2859,15 @@
 	<x path="Bool"/>
 	<d/>
 </f></load>
-		<sysName set="method" line="240" static="1"><f a=""><c path="String"/></f></sysName>
-		<tryLoad set="method" line="256" static="1"><f a="name:library:func:args">
+		<sysName set="method" line="242" static="1"><f a=""><c path="String"/></f></sysName>
+		<tryLoad set="method" line="258" static="1"><f a="name:library:func:args">
 	<c path="String"/>
 	<c path="String"/>
 	<c path="String"/>
 	<x path="Int"/>
 	<d/>
 </f></tryLoad>
-		<loaderTrace set="method" line="291" static="1"><f a="message">
+		<loaderTrace set="method" line="295" static="1"><f a="message">
 	<c path="String"/>
 	<x path="Void"/>
 </f></loaderTrace>
@@ -2975,20 +2975,28 @@
 		<__initialized static="1"><x path="Bool"/></__initialized>
 		<__instance static="1"><c path="lime.app.Application"/></__instance>
 		<__registered static="1"><x path="Bool"/></__registered>
-		<__dispatch set="method" line="348" static="1">
+		<__dispatch set="method" line="393" static="1">
 			<f a=""><x path="Void"/></f>
 			<meta><m n=":noCompletion"/></meta>
 		</__dispatch>
-		<lime_application_create line="382" static="1"><f a="">
+		<lime_application_create line="427" static="1"><f a="">
 	<unknown/>
 	<unknown/>
 </f></lime_application_create>
-		<lime_application_exec line="383" static="1"><f a="">
+		<lime_application_init line="428" static="1"><f a="">
+	<d/>
+	<unknown/>
+</f></lime_application_init>
+		<lime_application_update line="429" static="1"><f a="">
+	<d/>
+	<x path="Bool"/>
+</f></lime_application_update>
+		<lime_application_quit line="430" static="1"><f a="">
 	<d/>
 	<x path="Int"/>
-</f></lime_application_exec>
-		<lime_application_get_ticks line="384" static="1"><unknown/></lime_application_get_ticks>
-		<lime_update_event_manager_register line="385" static="1"><f a=":">
+</f></lime_application_quit>
+		<lime_application_get_ticks line="431" static="1"><unknown/></lime_application_get_ticks>
+		<lime_update_event_manager_register line="432" static="1"><f a=":">
 	<f a=""><x path="Void"/></f>
 	<c path="lime.app._Application.UpdateEventInfo"/>
 	<unknown/>
@@ -3026,7 +3034,11 @@
 	 * platforms, it will return immediately
 	 * @return An exit code, 0 if there was no error</haxe_doc>
 		</exec>
-		<init public="1" set="method" line="195">
+		<__cleanup set="method" line="227">
+			<f a=""><x path="Void"/></f>
+			<meta><m n=":noCompletion"/></meta>
+		</__cleanup>
+		<init public="1" set="method" line="240">
 			<f a="context">
 				<e path="lime.graphics.RenderContext"/>
 				<x path="Void"/>
@@ -3036,7 +3048,7 @@
 	 * render context
 	 * @param	context The current render context</haxe_doc>
 		</init>
-		<onKeyDown public="1" set="method" line="207">
+		<onKeyDown public="1" set="method" line="252">
 			<f a="keyCode:modifier">
 				<x path="Int"/>
 				<x path="Int"/>
@@ -3046,7 +3058,7 @@
 	 * @param	keyCode	The code of the key that was pressed
 	 * @param	modifier	The modifier of the key that was pressed</haxe_doc>
 		</onKeyDown>
-		<onKeyUp public="1" set="method" line="215">
+		<onKeyUp public="1" set="method" line="260">
 			<f a="keyCode:modifier">
 				<x path="Int"/>
 				<x path="Int"/>
@@ -3056,7 +3068,7 @@
 	 * @param	keyCode	The code of the key that was released
 	 * @param	modifier	The modifier of the key that was released</haxe_doc>
 		</onKeyUp>
-		<onMouseDown public="1" set="method" line="224">
+		<onMouseDown public="1" set="method" line="269">
 			<f a="x:y:button">
 				<x path="Float"/>
 				<x path="Float"/>
@@ -3068,7 +3080,7 @@
 	 * @param	y	The current y coordinate of the mouse
 	 * @param	button	The ID of the mouse button that was pressed</haxe_doc>
 		</onMouseDown>
-		<onMouseMove public="1" set="method" line="233">
+		<onMouseMove public="1" set="method" line="278">
 			<f a="x:y:button">
 				<x path="Float"/>
 				<x path="Float"/>
@@ -3080,7 +3092,7 @@
 	 * @param	y	The current y coordinate of the mouse
 	 * @param	button	The ID of the mouse button that was pressed</haxe_doc>
 		</onMouseMove>
-		<onMouseUp public="1" set="method" line="242">
+		<onMouseUp public="1" set="method" line="287">
 			<f a="x:y:button">
 				<x path="Float"/>
 				<x path="Float"/>
@@ -3092,7 +3104,7 @@
 	 * @param	y	The current y coordinate of the mouse
 	 * @param	button	The ID of the button that was released</haxe_doc>
 		</onMouseUp>
-		<onMouseWheel public="1" set="method" line="250">
+		<onMouseWheel public="1" set="method" line="295">
 			<f a="deltaX:deltaY">
 				<x path="Float"/>
 				<x path="Float"/>
@@ -3102,7 +3114,7 @@
 	 * @param	deltaX	The amount of horizontal scrolling (if applicable)
 	 * @param	deltaY	The amount of vertical scrolling (if applicable)</haxe_doc>
 		</onMouseWheel>
-		<onTouchEnd public="1" set="method" line="259">
+		<onTouchEnd public="1" set="method" line="304">
 			<f a="x:y:id">
 				<x path="Float"/>
 				<x path="Float"/>
@@ -3114,7 +3126,7 @@
 	 * @param	y	The current y coordinate of the touch point
 	 * @param	id	The ID of the touch point</haxe_doc>
 		</onTouchEnd>
-		<onTouchMove public="1" set="method" line="268">
+		<onTouchMove public="1" set="method" line="313">
 			<f a="x:y:id">
 				<x path="Float"/>
 				<x path="Float"/>
@@ -3126,7 +3138,7 @@
 	 * @param	y	The current y coordinate of the touch point
 	 * @param	id	The ID of the touch point</haxe_doc>
 		</onTouchMove>
-		<onTouchStart public="1" set="method" line="277">
+		<onTouchStart public="1" set="method" line="322">
 			<f a="x:y:id">
 				<x path="Float"/>
 				<x path="Float"/>
@@ -3138,27 +3150,27 @@
 	 * @param	y	The current y coordinate of the touch point
 	 * @param	id	The ID of the touch point</haxe_doc>
 		</onTouchStart>
-		<onWindowActivate public="1" set="method" line="283">
+		<onWindowActivate public="1" set="method" line="328">
 			<f a=""><x path="Void"/></f>
 			<haxe_doc>* Called when a window activate event is fired</haxe_doc>
 		</onWindowActivate>
-		<onWindowClose public="1" set="method" line="289">
+		<onWindowClose public="1" set="method" line="334">
 			<f a=""><x path="Void"/></f>
 			<haxe_doc>* Called when a window close event is fired</haxe_doc>
 		</onWindowClose>
-		<onWindowDeactivate public="1" set="method" line="295">
+		<onWindowDeactivate public="1" set="method" line="340">
 			<f a=""><x path="Void"/></f>
 			<haxe_doc>* Called when a window deactivate event is fired</haxe_doc>
 		</onWindowDeactivate>
-		<onWindowFocusIn public="1" set="method" line="301">
+		<onWindowFocusIn public="1" set="method" line="346">
 			<f a=""><x path="Void"/></f>
 			<haxe_doc>* Called when a window focus in event is fired</haxe_doc>
 		</onWindowFocusIn>
-		<onWindowFocusOut public="1" set="method" line="307">
+		<onWindowFocusOut public="1" set="method" line="352">
 			<f a=""><x path="Void"/></f>
 			<haxe_doc>* Called when a window focus out event is fired</haxe_doc>
 		</onWindowFocusOut>
-		<onWindowMove public="1" set="method" line="315">
+		<onWindowMove public="1" set="method" line="360">
 			<f a="x:y">
 				<x path="Float"/>
 				<x path="Float"/>
@@ -3168,7 +3180,7 @@
 	 * @param	x	The x position of the window
 	 * @param	y	The y position of the window</haxe_doc>
 		</onWindowMove>
-		<onWindowResize public="1" set="method" line="323">
+		<onWindowResize public="1" set="method" line="368">
 			<f a="width:height">
 				<x path="Int"/>
 				<x path="Int"/>
@@ -3178,7 +3190,7 @@
 	 * @param	width	The width of the window
 	 * @param	height	The height of the window</haxe_doc>
 		</onWindowResize>
-		<render public="1" set="method" line="330">
+		<render public="1" set="method" line="375">
 			<f a="context">
 				<e path="lime.graphics.RenderContext"/>
 				<x path="Void"/>
@@ -3186,7 +3198,7 @@
 			<haxe_doc>* Called when a render event is fired
 	 * @param	context	The current render context</haxe_doc>
 		</render>
-		<update public="1" set="method" line="341">
+		<update public="1" set="method" line="386">
 			<f a="deltaTime">
 				<x path="Int"/>
 				<x path="Void"/>
@@ -3194,14 +3206,14 @@
 			<haxe_doc>* Called when an update event is fired
 	 * @param	deltaTime	The amount of time in milliseconds that has elapsed since the last update</haxe_doc>
 		</update>
-		<__triggerFrame set="method" line="360">
+		<__triggerFrame set="method" line="405">
 			<f a="?_" v="null">
 				<unknown/>
 				<x path="Void"/>
 			</f>
 			<meta><m n=":noCompletion"/></meta>
 		</__triggerFrame>
-		<get_window get="inline" set="null" line="374">
+		<get_window get="inline" set="null" line="419">
 			<f a=""><c path="lime.ui.Window"/></f>
 			<meta><m n=":noCompletion"/></meta>
 		</get_window>
@@ -3215,7 +3227,7 @@
 		<this><x path="Int"/></this>
 		<meta><m n=":enum"/></meta>
 		<impl><class path="lime.app._Application.UpdateEventType_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/a3370b35bd8128d3/lime/lime/app/Application.hx" private="1" module="lime.app.Application">
-	<UPDATE public="1" get="inline" set="null" line="419" static="1">
+	<UPDATE public="1" get="inline" set="null" line="466" static="1">
 		<x path="lime.app._Application.UpdateEventType"/>
 		<meta>
 			<m n=":enum"/>
@@ -3226,7 +3238,7 @@
 </class></impl>
 	</abstract>
 	<class path="lime.app._Application.UpdateEventType_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/a3370b35bd8128d3/lime/lime/app/Application.hx" private="1" module="lime.app.Application">
-		<UPDATE public="1" get="inline" set="null" line="419" static="1">
+		<UPDATE public="1" get="inline" set="null" line="466" static="1">
 			<x path="lime.app._Application.UpdateEventType"/>
 			<meta>
 				<m n=":enum"/>
@@ -4306,7 +4318,7 @@
 	<x path="Int"/>
 	<x path="Void"/>
 </f></bufferData>
-		<buffer3f public="1" set="method" line="84" static="1"><f a="buffer:param:value1:value2:value3">
+		<buffer3f public="1" set="method" line="86" static="1"><f a="buffer:param:value1:value2:value3">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Float"/>
@@ -4314,7 +4326,7 @@
 	<x path="Float"/>
 	<x path="Void"/>
 </f></buffer3f>
-		<buffer3i public="1" set="method" line="93" static="1"><f a="buffer:param:value1:value2:value3">
+		<buffer3i public="1" set="method" line="95" static="1"><f a="buffer:param:value1:value2:value3">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Int"/>
@@ -4322,266 +4334,266 @@
 	<x path="Int"/>
 	<x path="Void"/>
 </f></buffer3i>
-		<bufferf public="1" set="method" line="102" static="1"><f a="buffer:param:value">
+		<bufferf public="1" set="method" line="104" static="1"><f a="buffer:param:value">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Float"/>
 	<x path="Void"/>
 </f></bufferf>
-		<bufferfv public="1" set="method" line="111" static="1"><f a="buffer:param:values">
+		<bufferfv public="1" set="method" line="113" static="1"><f a="buffer:param:values">
 	<x path="Int"/>
 	<x path="Int"/>
 	<c path="Array"><x path="Float"/></c>
 	<x path="Void"/>
 </f></bufferfv>
-		<bufferi public="1" set="method" line="120" static="1"><f a="buffer:param:value">
+		<bufferi public="1" set="method" line="122" static="1"><f a="buffer:param:value">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Void"/>
 </f></bufferi>
-		<bufferiv public="1" set="method" line="129" static="1"><f a="buffer:param:values">
+		<bufferiv public="1" set="method" line="131" static="1"><f a="buffer:param:values">
 	<x path="Int"/>
 	<x path="Int"/>
 	<c path="Array"><x path="Int"/></c>
 	<x path="Void"/>
 </f></bufferiv>
-		<deleteBuffer public="1" set="method" line="138" static="1"><f a="buffer">
+		<deleteBuffer public="1" set="method" line="140" static="1"><f a="buffer">
 	<x path="Int"/>
 	<x path="Void"/>
 </f></deleteBuffer>
-		<deleteBuffers public="1" set="method" line="147" static="1"><f a="buffers">
+		<deleteBuffers public="1" set="method" line="149" static="1"><f a="buffers">
 	<c path="Array"><x path="Int"/></c>
 	<x path="Void"/>
 </f></deleteBuffers>
-		<deleteSource public="1" set="method" line="156" static="1"><f a="source">
+		<deleteSource public="1" set="method" line="158" static="1"><f a="source">
 	<x path="Int"/>
 	<x path="Void"/>
 </f></deleteSource>
-		<deleteSources public="1" set="method" line="165" static="1"><f a="sources">
+		<deleteSources public="1" set="method" line="167" static="1"><f a="sources">
 	<c path="Array"><x path="Int"/></c>
 	<x path="Void"/>
 </f></deleteSources>
-		<disable public="1" set="method" line="174" static="1"><f a="capability">
+		<disable public="1" set="method" line="176" static="1"><f a="capability">
 	<x path="Int"/>
 	<x path="Void"/>
 </f></disable>
-		<distanceModel public="1" set="method" line="183" static="1"><f a="distanceModel">
+		<distanceModel public="1" set="method" line="185" static="1"><f a="distanceModel">
 	<x path="Int"/>
 	<x path="Void"/>
 </f></distanceModel>
-		<dopplerFactor public="1" set="method" line="192" static="1"><f a="value">
+		<dopplerFactor public="1" set="method" line="194" static="1"><f a="value">
 	<x path="Float"/>
 	<x path="Void"/>
 </f></dopplerFactor>
-		<dopplerVelocity public="1" set="method" line="201" static="1"><f a="value">
+		<dopplerVelocity public="1" set="method" line="203" static="1"><f a="value">
 	<x path="Float"/>
 	<x path="Void"/>
 </f></dopplerVelocity>
-		<enable public="1" set="method" line="210" static="1"><f a="capability">
+		<enable public="1" set="method" line="212" static="1"><f a="capability">
 	<x path="Int"/>
 	<x path="Void"/>
 </f></enable>
-		<genSource public="1" set="method" line="219" static="1"><f a=""><x path="Int"/></f></genSource>
-		<genSources public="1" set="method" line="230" static="1"><f a="n">
+		<genSource public="1" set="method" line="221" static="1"><f a=""><x path="Int"/></f></genSource>
+		<genSources public="1" set="method" line="232" static="1"><f a="n">
 	<x path="Int"/>
 	<c path="Array"><x path="Int"/></c>
 </f></genSources>
-		<genBuffer public="1" set="method" line="241" static="1"><f a=""><x path="Int"/></f></genBuffer>
-		<genBuffers public="1" set="method" line="252" static="1"><f a="n">
+		<genBuffer public="1" set="method" line="243" static="1"><f a=""><x path="Int"/></f></genBuffer>
+		<genBuffers public="1" set="method" line="254" static="1"><f a="n">
 	<x path="Int"/>
 	<c path="Array"><x path="Int"/></c>
 </f></genBuffers>
-		<getBoolean public="1" set="method" line="263" static="1"><f a="param">
+		<getBoolean public="1" set="method" line="265" static="1"><f a="param">
 	<x path="Int"/>
 	<x path="Bool"/>
 </f></getBoolean>
-		<getBooleanv public="1" set="method" line="274" static="1"><f a="param:?count" v=":1">
+		<getBooleanv public="1" set="method" line="276" static="1"><f a="param:?count" v=":1">
 	<x path="Int"/>
 	<x path="Int"/>
 	<c path="Array"><x path="Bool"/></c>
 </f></getBooleanv>
-		<getBuffer3f public="1" set="method" line="285" static="1"><f a="buffer:param">
+		<getBuffer3f public="1" set="method" line="287" static="1"><f a="buffer:param">
 	<x path="Int"/>
 	<x path="Int"/>
 	<c path="Array"><x path="Float"/></c>
 </f></getBuffer3f>
-		<getBuffer3i public="1" set="method" line="296" static="1"><f a="buffer:param">
+		<getBuffer3i public="1" set="method" line="298" static="1"><f a="buffer:param">
 	<x path="Int"/>
 	<x path="Int"/>
 	<c path="Array"><x path="Int"/></c>
 </f></getBuffer3i>
-		<getBufferf public="1" set="method" line="307" static="1"><f a="buffer:param">
+		<getBufferf public="1" set="method" line="309" static="1"><f a="buffer:param">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Float"/>
 </f></getBufferf>
-		<getBufferfv public="1" set="method" line="318" static="1"><f a="buffer:param:?count" v="::1">
+		<getBufferfv public="1" set="method" line="320" static="1"><f a="buffer:param:?count" v="::1">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Int"/>
 	<c path="Array"><x path="Float"/></c>
 </f></getBufferfv>
-		<getBufferi public="1" set="method" line="329" static="1"><f a="buffer:param">
+		<getBufferi public="1" set="method" line="331" static="1"><f a="buffer:param">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Int"/>
 </f></getBufferi>
-		<getBufferiv public="1" set="method" line="340" static="1"><f a="buffer:param:?count" v="::1">
+		<getBufferiv public="1" set="method" line="342" static="1"><f a="buffer:param:?count" v="::1">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Int"/>
 	<c path="Array"><x path="Int"/></c>
 </f></getBufferiv>
-		<getDouble public="1" set="method" line="351" static="1"><f a="param">
+		<getDouble public="1" set="method" line="353" static="1"><f a="param">
 	<x path="Int"/>
 	<x path="Float"/>
 </f></getDouble>
-		<getDoublev public="1" set="method" line="362" static="1"><f a="param:?count" v=":1">
+		<getDoublev public="1" set="method" line="364" static="1"><f a="param:?count" v=":1">
 	<x path="Int"/>
 	<x path="Int"/>
 	<c path="Array"><x path="Float"/></c>
 </f></getDoublev>
-		<getEnumValue public="1" set="method" line="373" static="1"><f a="ename">
+		<getEnumValue public="1" set="method" line="375" static="1"><f a="ename">
 	<c path="String"/>
 	<x path="Int"/>
 </f></getEnumValue>
-		<getError public="1" set="method" line="384" static="1"><f a=""><x path="Int"/></f></getError>
-		<getErrorString public="1" set="method" line="395" static="1"><f a=""><c path="String"/></f></getErrorString>
-		<getFloat public="1" set="method" line="411" static="1"><f a="param">
+		<getError public="1" set="method" line="386" static="1"><f a=""><x path="Int"/></f></getError>
+		<getErrorString public="1" set="method" line="397" static="1"><f a=""><c path="String"/></f></getErrorString>
+		<getFloat public="1" set="method" line="413" static="1"><f a="param">
 	<x path="Int"/>
 	<x path="Float"/>
 </f></getFloat>
-		<getFloatv public="1" set="method" line="422" static="1"><f a="param:?count" v=":1">
+		<getFloatv public="1" set="method" line="424" static="1"><f a="param:?count" v=":1">
 	<x path="Int"/>
 	<x path="Int"/>
 	<c path="Array"><x path="Float"/></c>
 </f></getFloatv>
-		<getInteger public="1" set="method" line="433" static="1"><f a="param">
+		<getInteger public="1" set="method" line="435" static="1"><f a="param">
 	<x path="Int"/>
 	<x path="Int"/>
 </f></getInteger>
-		<getIntegerv public="1" set="method" line="444" static="1"><f a="param:?count" v=":1">
+		<getIntegerv public="1" set="method" line="446" static="1"><f a="param:?count" v=":1">
 	<x path="Int"/>
 	<x path="Int"/>
 	<c path="Array"><x path="Int"/></c>
 </f></getIntegerv>
-		<getListener3f public="1" set="method" line="455" static="1"><f a="param">
+		<getListener3f public="1" set="method" line="457" static="1"><f a="param">
 	<x path="Int"/>
 	<c path="Array"><x path="Float"/></c>
 </f></getListener3f>
-		<getListener3i public="1" set="method" line="466" static="1"><f a="param">
+		<getListener3i public="1" set="method" line="468" static="1"><f a="param">
 	<x path="Int"/>
 	<c path="Array"><x path="Int"/></c>
 </f></getListener3i>
-		<getListenerf public="1" set="method" line="477" static="1"><f a="param">
+		<getListenerf public="1" set="method" line="479" static="1"><f a="param">
 	<x path="Int"/>
 	<x path="Float"/>
 </f></getListenerf>
-		<getListenerfv public="1" set="method" line="488" static="1"><f a="param:?count" v=":1">
+		<getListenerfv public="1" set="method" line="490" static="1"><f a="param:?count" v=":1">
 	<x path="Int"/>
 	<x path="Int"/>
 	<c path="Array"><x path="Float"/></c>
 </f></getListenerfv>
-		<getListeneri public="1" set="method" line="499" static="1"><f a="param">
+		<getListeneri public="1" set="method" line="501" static="1"><f a="param">
 	<x path="Int"/>
 	<x path="Int"/>
 </f></getListeneri>
-		<getListeneriv public="1" set="method" line="510" static="1"><f a="param:?count" v=":1">
+		<getListeneriv public="1" set="method" line="512" static="1"><f a="param:?count" v=":1">
 	<x path="Int"/>
 	<x path="Int"/>
 	<c path="Array"><x path="Int"/></c>
 </f></getListeneriv>
-		<getProcAddress public="1" set="method" line="521" static="1"><f a="fname">
+		<getProcAddress public="1" set="method" line="523" static="1"><f a="fname">
 	<c path="String"/>
 	<d/>
 </f></getProcAddress>
-		<getSource3f public="1" set="method" line="528" static="1"><f a="source:param">
+		<getSource3f public="1" set="method" line="530" static="1"><f a="source:param">
 	<x path="Int"/>
 	<x path="Int"/>
 	<c path="Array"><x path="Float"/></c>
 </f></getSource3f>
-		<getSourcef public="1" set="method" line="539" static="1"><f a="source:param">
+		<getSourcef public="1" set="method" line="541" static="1"><f a="source:param">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Float"/>
 </f></getSourcef>
-		<getSource3i public="1" set="method" line="550" static="1"><f a="source:param">
+		<getSource3i public="1" set="method" line="552" static="1"><f a="source:param">
 	<x path="Int"/>
 	<x path="Int"/>
 	<c path="Array"><x path="Int"/></c>
 </f></getSource3i>
-		<getSourcefv public="1" set="method" line="561" static="1"><f a="source:param">
+		<getSourcefv public="1" set="method" line="563" static="1"><f a="source:param">
 	<x path="Int"/>
 	<x path="Int"/>
 	<c path="Array"><x path="Float"/></c>
 </f></getSourcefv>
-		<getSourcei public="1" set="method" line="572" static="1"><f a="source:param">
+		<getSourcei public="1" set="method" line="574" static="1"><f a="source:param">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Int"/>
 </f></getSourcei>
-		<getSourceiv public="1" set="method" line="583" static="1"><f a="source:param:?count" v="::1">
+		<getSourceiv public="1" set="method" line="585" static="1"><f a="source:param:?count" v="::1">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Int"/>
 	<c path="Array"><x path="Int"/></c>
 </f></getSourceiv>
-		<getString public="1" set="method" line="594" static="1"><f a="param">
+		<getString public="1" set="method" line="596" static="1"><f a="param">
 	<x path="Int"/>
 	<c path="String"/>
 </f></getString>
-		<isBuffer public="1" set="method" line="605" static="1"><f a="buffer">
+		<isBuffer public="1" set="method" line="607" static="1"><f a="buffer">
 	<x path="Int"/>
 	<x path="Bool"/>
 </f></isBuffer>
-		<isEnabled public="1" set="method" line="616" static="1"><f a="capability">
+		<isEnabled public="1" set="method" line="618" static="1"><f a="capability">
 	<x path="Int"/>
 	<x path="Bool"/>
 </f></isEnabled>
-		<isExtensionPresent public="1" set="method" line="627" static="1"><f a="extname">
+		<isExtensionPresent public="1" set="method" line="629" static="1"><f a="extname">
 	<c path="String"/>
 	<x path="Bool"/>
 </f></isExtensionPresent>
-		<isSource public="1" set="method" line="638" static="1"><f a="source">
+		<isSource public="1" set="method" line="640" static="1"><f a="source">
 	<x path="Int"/>
 	<x path="Bool"/>
 </f></isSource>
-		<listener3f public="1" set="method" line="649" static="1"><f a="param:value1:value2:value3">
+		<listener3f public="1" set="method" line="651" static="1"><f a="param:value1:value2:value3">
 	<x path="Int"/>
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Void"/>
 </f></listener3f>
-		<listener3i public="1" set="method" line="658" static="1"><f a="param:value1:value2:value3">
+		<listener3i public="1" set="method" line="660" static="1"><f a="param:value1:value2:value3">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Void"/>
 </f></listener3i>
-		<listenerf public="1" set="method" line="667" static="1"><f a="param:value">
+		<listenerf public="1" set="method" line="669" static="1"><f a="param:value">
 	<x path="Int"/>
 	<x path="Float"/>
 	<x path="Void"/>
 </f></listenerf>
-		<listenerfv public="1" set="method" line="676" static="1"><f a="param:values">
+		<listenerfv public="1" set="method" line="678" static="1"><f a="param:values">
 	<x path="Int"/>
 	<c path="Array"><x path="Float"/></c>
 	<x path="Void"/>
 </f></listenerfv>
-		<listeneri public="1" set="method" line="685" static="1"><f a="param:value">
+		<listeneri public="1" set="method" line="687" static="1"><f a="param:value">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Void"/>
 </f></listeneri>
-		<listeneriv public="1" set="method" line="694" static="1"><f a="param:values">
+		<listeneriv public="1" set="method" line="696" static="1"><f a="param:values">
 	<x path="Int"/>
 	<c path="Array"><x path="Int"/></c>
 	<x path="Void"/>
 </f></listeneriv>
-		<source3f public="1" set="method" line="703" static="1"><f a="source:param:value1:value2:value3">
+		<source3f public="1" set="method" line="705" static="1"><f a="source:param:value1:value2:value3">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Float"/>
@@ -4589,7 +4601,7 @@
 	<x path="Float"/>
 	<x path="Void"/>
 </f></source3f>
-		<source3i public="1" set="method" line="712" static="1"><f a="source:param:value1:value2:value3">
+		<source3i public="1" set="method" line="714" static="1"><f a="source:param:value1:value2:value3">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Int"/>
@@ -4597,83 +4609,83 @@
 	<x path="Int"/>
 	<x path="Void"/>
 </f></source3i>
-		<sourcef public="1" set="method" line="721" static="1"><f a="source:param:value">
+		<sourcef public="1" set="method" line="723" static="1"><f a="source:param:value">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Float"/>
 	<x path="Void"/>
 </f></sourcef>
-		<sourcefv public="1" set="method" line="730" static="1"><f a="source:param:values">
+		<sourcefv public="1" set="method" line="732" static="1"><f a="source:param:values">
 	<x path="Int"/>
 	<x path="Int"/>
 	<c path="Array"><x path="Float"/></c>
 	<x path="Void"/>
 </f></sourcefv>
-		<sourcei public="1" set="method" line="739" static="1"><f a="source:param:value">
+		<sourcei public="1" set="method" line="741" static="1"><f a="source:param:value">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Void"/>
 </f></sourcei>
-		<sourceiv public="1" set="method" line="748" static="1"><f a="source:param:values">
+		<sourceiv public="1" set="method" line="750" static="1"><f a="source:param:values">
 	<x path="Int"/>
 	<x path="Int"/>
 	<c path="Array"><x path="Int"/></c>
 	<x path="Void"/>
 </f></sourceiv>
-		<sourcePlay public="1" set="method" line="757" static="1"><f a="source">
+		<sourcePlay public="1" set="method" line="759" static="1"><f a="source">
 	<x path="Int"/>
 	<x path="Void"/>
 </f></sourcePlay>
-		<sourcePlayv public="1" set="method" line="766" static="1"><f a="sources">
+		<sourcePlayv public="1" set="method" line="768" static="1"><f a="sources">
 	<c path="Array"><x path="Int"/></c>
 	<x path="Void"/>
 </f></sourcePlayv>
-		<sourceStop public="1" set="method" line="775" static="1"><f a="source">
+		<sourceStop public="1" set="method" line="777" static="1"><f a="source">
 	<x path="Int"/>
 	<x path="Void"/>
 </f></sourceStop>
-		<sourceStopv public="1" set="method" line="784" static="1"><f a="sources">
+		<sourceStopv public="1" set="method" line="786" static="1"><f a="sources">
 	<c path="Array"><x path="Int"/></c>
 	<x path="Void"/>
 </f></sourceStopv>
-		<sourceRewind public="1" set="method" line="793" static="1"><f a="source">
+		<sourceRewind public="1" set="method" line="795" static="1"><f a="source">
 	<x path="Int"/>
 	<x path="Void"/>
 </f></sourceRewind>
-		<sourceRewindv public="1" set="method" line="802" static="1"><f a="sources">
+		<sourceRewindv public="1" set="method" line="804" static="1"><f a="sources">
 	<c path="Array"><x path="Int"/></c>
 	<x path="Void"/>
 </f></sourceRewindv>
-		<sourcePause public="1" set="method" line="811" static="1"><f a="source">
+		<sourcePause public="1" set="method" line="813" static="1"><f a="source">
 	<x path="Int"/>
 	<x path="Void"/>
 </f></sourcePause>
-		<sourcePausev public="1" set="method" line="820" static="1"><f a="sources">
+		<sourcePausev public="1" set="method" line="822" static="1"><f a="sources">
 	<c path="Array"><x path="Int"/></c>
 	<x path="Void"/>
 </f></sourcePausev>
-		<sourceQueueBuffer public="1" set="method" line="829" static="1"><f a="source:buffer">
+		<sourceQueueBuffer public="1" set="method" line="831" static="1"><f a="source:buffer">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Void"/>
 </f></sourceQueueBuffer>
-		<sourceQueueBuffers public="1" set="method" line="838" static="1"><f a="source:nb:buffers">
+		<sourceQueueBuffers public="1" set="method" line="840" static="1"><f a="source:nb:buffers">
 	<x path="Int"/>
 	<x path="Int"/>
 	<c path="Array"><x path="Int"/></c>
 	<x path="Void"/>
 </f></sourceQueueBuffers>
-		<sourceUnqueueBuffer public="1" set="method" line="847" static="1"><f a="source">
+		<sourceUnqueueBuffer public="1" set="method" line="849" static="1"><f a="source">
 	<x path="Int"/>
 	<x path="Int"/>
 </f></sourceUnqueueBuffer>
-		<sourceUnqueueBuffers public="1" set="method" line="859" static="1"><f a="source:nb">
+		<sourceUnqueueBuffers public="1" set="method" line="861" static="1"><f a="source:nb">
 	<x path="Int"/>
 	<x path="Int"/>
 	<c path="Array"><x path="Int"/></c>
 </f></sourceUnqueueBuffers>
-		<speedOfSound public="1" set="method" line="870" static="1"><f a="value">
+		<speedOfSound public="1" set="method" line="872" static="1"><f a="value">
 	<x path="Float"/>
 	<x path="Void"/>
 </f></speedOfSound>
@@ -6868,9 +6880,9 @@
 		<new public="1" set="method" line="365"><f a=""><x path="Void"/></f></new>
 	</class>
 	<class path="lime.graphics.Image" params="" file="/home/joshua/TeamCity/buildAgent/work/a3370b35bd8128d3/lime/lime/graphics/Image.hx">
-		<__base64Chars line="49" static="1"><c path="String"/></__base64Chars>
+		<__base64Chars line="50" static="1"><c path="String"/></__base64Chars>
 		<__base64Encoder static="1"><c path="haxe.crypto.BaseCode"/></__base64Encoder>
-		<fromBase64 public="1" set="method" line="394" static="1"><f a="base64:type:onload">
+		<fromBase64 public="1" set="method" line="410" static="1"><f a="base64:type:onload">
 	<c path="String"/>
 	<c path="String"/>
 	<f a="">
@@ -6879,11 +6891,11 @@
 	</f>
 	<c path="lime.graphics.Image"/>
 </f></fromBase64>
-		<fromBitmapData public="1" set="method" line="403" static="1"><f a="bitmapData">
+		<fromBitmapData public="1" set="method" line="419" static="1"><f a="bitmapData">
 	<d/>
 	<c path="lime.graphics.Image"/>
 </f></fromBitmapData>
-		<fromBytes public="1" set="method" line="412" static="1"><f a="bytes:?onload" v=":null">
+		<fromBytes public="1" set="method" line="428" static="1"><f a="bytes:?onload" v=":null">
 	<c path="lime.utils.ByteArray"/>
 	<f a="">
 		<c path="lime.graphics.Image"/>
@@ -6891,11 +6903,11 @@
 	</f>
 	<c path="lime.graphics.Image"/>
 </f></fromBytes>
-		<fromCanvas public="1" set="method" line="421" static="1"><f a="canvas">
+		<fromCanvas public="1" set="method" line="437" static="1"><f a="canvas">
 	<d/>
 	<c path="lime.graphics.Image"/>
 </f></fromCanvas>
-		<fromFile public="1" set="method" line="430" static="1"><f a="path:?onload:?onerror" v=":null:null">
+		<fromFile public="1" set="method" line="446" static="1"><f a="path:?onload:?onerror" v=":null:null">
 	<c path="String"/>
 	<f a="">
 		<c path="lime.graphics.Image"/>
@@ -6904,27 +6916,33 @@
 	<f a=""><x path="Void"/></f>
 	<c path="lime.graphics.Image"/>
 </f></fromFile>
-		<fromImageElement public="1" set="method" line="439" static="1"><f a="image">
+		<fromImageElement public="1" set="method" line="455" static="1"><f a="image">
 	<d/>
 	<c path="lime.graphics.Image"/>
 </f></fromImageElement>
-		<__base64Encode set="method" line="668" static="1"><f a="bytes">
+		<__base64Encode set="method" line="684" static="1"><f a="bytes">
 	<c path="lime.utils.ByteArray"/>
 	<c path="String"/>
 </f></__base64Encode>
-		<__isJPG set="method" line="939" static="1"><f a="bytes">
+		<__isJPG set="method" line="963" static="1"><f a="bytes">
 	<c path="lime.utils.ByteArray"/>
 	<x path="Bool"/>
 </f></__isJPG>
-		<__isPNG set="method" line="947" static="1"><f a="bytes">
+		<__isPNG set="method" line="971" static="1"><f a="bytes">
 	<c path="lime.utils.ByteArray"/>
 	<x path="Bool"/>
 </f></__isPNG>
-		<__isGIF set="method" line="954" static="1"><f a="bytes">
+		<__isGIF set="method" line="978" static="1"><f a="bytes">
 	<c path="lime.utils.ByteArray"/>
 	<x path="Bool"/>
 </f></__isGIF>
-		<lime_image_load line="1157" static="1"><d/></lime_image_load>
+		<lime_image_encode line="1181" static="1"><f a="::">
+	<c path="lime.graphics.ImageBuffer"/>
+	<x path="Int"/>
+	<x path="Int"/>
+	<c path="lime.utils.ByteArray"/>
+</f></lime_image_encode>
+		<lime_image_load line="1182" static="1"><d/></lime_image_load>
 		<buffer public="1"><c path="lime.graphics.ImageBuffer"/></buffer>
 		<data public="1" get="accessor" set="accessor"><c path="lime.utils.UInt8Array"/></data>
 		<dirty public="1"><x path="Bool"/></dirty>
@@ -6938,13 +6956,13 @@
 		<transparent public="1" get="accessor" set="accessor"><x path="Bool"/></transparent>
 		<type public="1"><e path="lime.graphics.ImageType"/></type>
 		<width public="1"><x path="Int"/></width>
-		<clone public="1" set="method" line="147"><f a=""><c path="lime.graphics.Image"/></f></clone>
-		<colorTransform public="1" set="method" line="159"><f a="rect:colorMatrix">
+		<clone public="1" set="method" line="148"><f a=""><c path="lime.graphics.Image"/></f></clone>
+		<colorTransform public="1" set="method" line="160"><f a="rect:colorMatrix">
 	<c path="lime.math.Rectangle"/>
 	<x path="lime.math.ColorMatrix"/>
 	<x path="Void"/>
 </f></colorTransform>
-		<copyChannel public="1" set="method" line="190"><f a="sourceImage:sourceRect:destPoint:sourceChannel:destChannel">
+		<copyChannel public="1" set="method" line="191"><f a="sourceImage:sourceRect:destPoint:sourceChannel:destChannel">
 	<c path="lime.graphics.Image"/>
 	<c path="lime.math.Rectangle"/>
 	<c path="lime.math.Vector2"/>
@@ -6952,7 +6970,7 @@
 	<e path="lime.graphics.ImageChannel"/>
 	<x path="Void"/>
 </f></copyChannel>
-		<copyPixels public="1" set="method" line="242"><f a="sourceImage:sourceRect:destPoint:?alphaImage:?alphaPoint:?mergeAlpha" v=":::null:null:false">
+		<copyPixels public="1" set="method" line="243"><f a="sourceImage:sourceRect:destPoint:?alphaImage:?alphaPoint:?mergeAlpha" v=":::null:null:false">
 	<c path="lime.graphics.Image"/>
 	<c path="lime.math.Rectangle"/>
 	<c path="lime.math.Vector2"/>
@@ -6961,62 +6979,63 @@
 	<x path="Bool"/>
 	<x path="Void"/>
 </f></copyPixels>
-		<encode public="1" set="method" line="285"><f a="?format" v="'png'">
+		<encode public="1" set="method" line="286"><f a="?format:?quality" v="'png':90">
 	<c path="String"/>
+	<x path="Int"/>
 	<c path="lime.utils.ByteArray"/>
 </f></encode>
-		<fillRect public="1" set="method" line="334"><f a="rect:color">
+		<fillRect public="1" set="method" line="350"><f a="rect:color">
 	<c path="lime.math.Rectangle"/>
 	<x path="Int"/>
 	<x path="Void"/>
 </f></fillRect>
-		<floodFill public="1" set="method" line="365"><f a="x:y:color">
+		<floodFill public="1" set="method" line="381"><f a="x:y:color">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Void"/>
 </f></floodFill>
-		<getPixel public="1" set="method" line="448"><f a="x:y">
+		<getPixel public="1" set="method" line="464"><f a="x:y">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Int"/>
 </f></getPixel>
-		<getPixel32 public="1" set="method" line="479"><f a="x:y">
+		<getPixel32 public="1" set="method" line="495"><f a="x:y">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Int"/>
 </f></getPixel32>
-		<getPixels public="1" set="method" line="510"><f a="rect">
+		<getPixels public="1" set="method" line="526"><f a="rect">
 	<c path="lime.math.Rectangle"/>
 	<c path="lime.utils.ByteArray"/>
 </f></getPixels>
-		<resize public="1" set="method" line="542"><f a="newWidth:newHeight">
+		<resize public="1" set="method" line="558"><f a="newWidth:newHeight">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Void"/>
 </f></resize>
-		<setPixel public="1" set="method" line="579"><f a="x:y:color">
+		<setPixel public="1" set="method" line="595"><f a="x:y:color">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Void"/>
 </f></setPixel>
-		<setPixel32 public="1" set="method" line="608"><f a="x:y:color">
+		<setPixel32 public="1" set="method" line="624"><f a="x:y:color">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Void"/>
 </f></setPixel32>
-		<setPixels public="1" set="method" line="637"><f a="rect:byteArray">
+		<setPixels public="1" set="method" line="653"><f a="rect:byteArray">
 	<c path="lime.math.Rectangle"/>
 	<c path="lime.utils.ByteArray"/>
 	<x path="Void"/>
 </f></setPixels>
-		<__clipRect set="method" line="693"><f a="r">
+		<__clipRect set="method" line="709"><f a="r">
 	<c path="lime.math.Rectangle"/>
 	<c path="lime.math.Rectangle"/>
 </f></__clipRect>
-		<__fromBase64 set="method" line="736"><f a="base64:type:?onload" v="::null">
+		<__fromBase64 set="method" line="752"><f a="base64:type:?onload" v="::null">
 	<c path="String"/>
 	<c path="String"/>
 	<f a="">
@@ -7025,7 +7044,7 @@
 	</f>
 	<x path="Void"/>
 </f></__fromBase64>
-		<__fromBytes set="method" line="766"><f a="bytes:onload">
+		<__fromBytes set="method" line="782"><f a="bytes:onload">
 	<c path="lime.utils.ByteArray"/>
 	<f a="">
 		<c path="lime.graphics.Image"/>
@@ -7033,7 +7052,7 @@
 	</f>
 	<x path="Void"/>
 </f></__fromBytes>
-		<__fromFile set="method" line="817"><f a="path:onload:onerror">
+		<__fromFile set="method" line="833"><f a="path:onload:onerror">
 	<c path="String"/>
 	<f a="">
 		<c path="lime.graphics.Image"/>
@@ -7042,37 +7061,37 @@
 	<f a=""><x path="Void"/></f>
 	<x path="Void"/>
 </f></__fromFile>
-		<__fromImageBuffer set="method" line="916"><f a="buffer">
+		<__fromImageBuffer set="method" line="940"><f a="buffer">
 	<c path="lime.graphics.ImageBuffer"/>
 	<x path="Void"/>
 </f></__fromImageBuffer>
-		<get_data set="method" line="977"><f a=""><c path="lime.utils.UInt8Array"/></f></get_data>
-		<set_data set="method" line="996"><f a="value">
+		<get_data set="method" line="1001"><f a=""><c path="lime.utils.UInt8Array"/></f></get_data>
+		<set_data set="method" line="1020"><f a="value">
 	<c path="lime.utils.UInt8Array"/>
 	<c path="lime.utils.UInt8Array"/>
 </f></set_data>
-		<get_powerOfTwo set="method" line="1003"><f a=""><x path="Bool"/></f></get_powerOfTwo>
-		<set_powerOfTwo set="method" line="1010"><f a="value">
+		<get_powerOfTwo set="method" line="1027"><f a=""><x path="Bool"/></f></get_powerOfTwo>
+		<set_powerOfTwo set="method" line="1034"><f a="value">
 	<x path="Bool"/>
 	<x path="Bool"/>
 </f></set_powerOfTwo>
-		<get_premultiplied set="method" line="1060"><f a=""><x path="Bool"/></f></get_premultiplied>
-		<set_premultiplied set="method" line="1067"><f a="value">
+		<get_premultiplied set="method" line="1084"><f a=""><x path="Bool"/></f></get_premultiplied>
+		<set_premultiplied set="method" line="1091"><f a="value">
 	<x path="Bool"/>
 	<x path="Bool"/>
 </f></set_premultiplied>
-		<get_rect public="1" set="method" line="1112"><f a=""><c path="lime.math.Rectangle"/></f></get_rect>
-		<get_src public="1" set="method" line="1119"><f a=""><d/></f></get_src>
-		<set_src set="method" line="1126"><f a="value">
+		<get_rect public="1" set="method" line="1136"><f a=""><c path="lime.math.Rectangle"/></f></get_rect>
+		<get_src public="1" set="method" line="1143"><f a=""><d/></f></get_src>
+		<set_src set="method" line="1150"><f a="value">
 	<d/>
 	<d/>
 </f></set_src>
-		<get_transparent set="method" line="1133"><f a=""><x path="Bool"/></f></get_transparent>
-		<set_transparent set="method" line="1140"><f a="value">
+		<get_transparent set="method" line="1157"><f a=""><x path="Bool"/></f></get_transparent>
+		<set_transparent set="method" line="1164"><f a="value">
 	<x path="Bool"/>
 	<x path="Bool"/>
 </f></set_transparent>
-		<new public="1" set="method" line="67"><f a="?buffer:?offsetX:?offsetY:?width:?height:?color:?type" v="null:0:0:0:0:null:null">
+		<new public="1" set="method" line="68"><f a="?buffer:?offsetX:?offsetY:?width:?height:?color:?type" v="null:0:0:0:0:null:null">
 	<c path="lime.graphics.ImageBuffer"/>
 	<x path="Int"/>
 	<x path="Int"/>
@@ -7597,47 +7616,47 @@
 	<x path="Int"/>
 	<x path="Void"/>
 </f></bufferData>
-		<bufferSubData public="1" get="inline" set="null" line="518" static="1"><f a="target:offset:data">
+		<bufferSubData public="1" get="inline" set="null" line="520" static="1"><f a="target:offset:data">
 	<x path="Int"/>
 	<x path="Int"/>
 	<c path="lime.utils.ArrayBufferView"/>
 	<x path="Void"/>
 </f></bufferSubData>
-		<checkFramebufferStatus public="1" get="inline" set="null" line="529" static="1"><f a="target">
+		<checkFramebufferStatus public="1" get="inline" set="null" line="533" static="1"><f a="target">
 	<x path="Int"/>
 	<x path="Int"/>
 </f></checkFramebufferStatus>
-		<clear public="1" get="inline" set="null" line="542" static="1"><f a="mask">
+		<clear public="1" get="inline" set="null" line="546" static="1"><f a="mask">
 	<x path="Int"/>
 	<x path="Void"/>
 </f></clear>
-		<clearColor public="1" get="inline" set="null" line="553" static="1"><f a="red:green:blue:alpha">
+		<clearColor public="1" get="inline" set="null" line="557" static="1"><f a="red:green:blue:alpha">
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Void"/>
 </f></clearColor>
-		<clearDepth public="1" get="inline" set="null" line="564" static="1"><f a="depth">
+		<clearDepth public="1" get="inline" set="null" line="568" static="1"><f a="depth">
 	<x path="Float"/>
 	<x path="Void"/>
 </f></clearDepth>
-		<clearStencil public="1" get="inline" set="null" line="575" static="1"><f a="s">
+		<clearStencil public="1" get="inline" set="null" line="579" static="1"><f a="s">
 	<x path="Int"/>
 	<x path="Void"/>
 </f></clearStencil>
-		<colorMask public="1" get="inline" set="null" line="586" static="1"><f a="red:green:blue:alpha">
+		<colorMask public="1" get="inline" set="null" line="590" static="1"><f a="red:green:blue:alpha">
 	<x path="Bool"/>
 	<x path="Bool"/>
 	<x path="Bool"/>
 	<x path="Bool"/>
 	<x path="Void"/>
 </f></colorMask>
-		<compileShader public="1" get="inline" set="null" line="597" static="1"><f a="shader">
+		<compileShader public="1" get="inline" set="null" line="601" static="1"><f a="shader">
 	<c path="lime.graphics.opengl.GLShader"/>
 	<x path="Void"/>
 </f></compileShader>
-		<compressedTexImage2D public="1" get="inline" set="null" line="608" static="1"><f a="target:level:internalformat:width:height:border:data">
+		<compressedTexImage2D public="1" get="inline" set="null" line="612" static="1"><f a="target:level:internalformat:width:height:border:data">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Int"/>
@@ -7647,7 +7666,7 @@
 	<c path="lime.utils.ArrayBufferView"/>
 	<x path="Void"/>
 </f></compressedTexImage2D>
-		<compressedTexSubImage2D public="1" get="inline" set="null" line="619" static="1"><f a="target:level:xoffset:yoffset:width:height:format:data">
+		<compressedTexSubImage2D public="1" get="inline" set="null" line="625" static="1"><f a="target:level:xoffset:yoffset:width:height:format:data">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Int"/>
@@ -7658,7 +7677,7 @@
 	<c path="lime.utils.ArrayBufferView"/>
 	<x path="Void"/>
 </f></compressedTexSubImage2D>
-		<copyTexImage2D public="1" get="inline" set="null" line="630" static="1"><f a="target:level:internalformat:x:y:width:height:border">
+		<copyTexImage2D public="1" get="inline" set="null" line="638" static="1"><f a="target:level:internalformat:x:y:width:height:border">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Int"/>
@@ -7669,7 +7688,7 @@
 	<x path="Int"/>
 	<x path="Void"/>
 </f></copyTexImage2D>
-		<copyTexSubImage2D public="1" get="inline" set="null" line="641" static="1"><f a="target:level:xoffset:yoffset:x:y:width:height">
+		<copyTexSubImage2D public="1" get="inline" set="null" line="649" static="1"><f a="target:level:xoffset:yoffset:x:y:width:height">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Int"/>
@@ -7680,100 +7699,100 @@
 	<x path="Int"/>
 	<x path="Void"/>
 </f></copyTexSubImage2D>
-		<createBuffer public="1" get="inline" set="null" line="652" static="1"><f a=""><c path="lime.graphics.opengl.GLBuffer"/></f></createBuffer>
-		<createFramebuffer public="1" get="inline" set="null" line="665" static="1"><f a=""><c path="lime.graphics.opengl.GLFramebuffer"/></f></createFramebuffer>
-		<createProgram public="1" get="inline" set="null" line="678" static="1"><f a=""><c path="lime.graphics.opengl.GLProgram"/></f></createProgram>
-		<createRenderbuffer public="1" get="inline" set="null" line="691" static="1"><f a=""><c path="lime.graphics.opengl.GLRenderbuffer"/></f></createRenderbuffer>
-		<createShader public="1" get="inline" set="null" line="704" static="1"><f a="type">
+		<createBuffer public="1" get="inline" set="null" line="660" static="1"><f a=""><c path="lime.graphics.opengl.GLBuffer"/></f></createBuffer>
+		<createFramebuffer public="1" get="inline" set="null" line="673" static="1"><f a=""><c path="lime.graphics.opengl.GLFramebuffer"/></f></createFramebuffer>
+		<createProgram public="1" get="inline" set="null" line="686" static="1"><f a=""><c path="lime.graphics.opengl.GLProgram"/></f></createProgram>
+		<createRenderbuffer public="1" get="inline" set="null" line="699" static="1"><f a=""><c path="lime.graphics.opengl.GLRenderbuffer"/></f></createRenderbuffer>
+		<createShader public="1" get="inline" set="null" line="712" static="1"><f a="type">
 	<x path="Int"/>
 	<c path="lime.graphics.opengl.GLShader"/>
 </f></createShader>
-		<createTexture public="1" get="inline" set="null" line="717" static="1"><f a=""><c path="lime.graphics.opengl.GLTexture"/></f></createTexture>
-		<cullFace public="1" get="inline" set="null" line="730" static="1"><f a="mode">
+		<createTexture public="1" get="inline" set="null" line="725" static="1"><f a=""><c path="lime.graphics.opengl.GLTexture"/></f></createTexture>
+		<cullFace public="1" get="inline" set="null" line="738" static="1"><f a="mode">
 	<x path="Int"/>
 	<x path="Void"/>
 </f></cullFace>
-		<deleteBuffer public="1" get="inline" set="null" line="741" static="1"><f a="buffer">
+		<deleteBuffer public="1" get="inline" set="null" line="749" static="1"><f a="buffer">
 	<c path="lime.graphics.opengl.GLBuffer"/>
 	<x path="Void"/>
 </f></deleteBuffer>
-		<deleteFramebuffer public="1" get="inline" set="null" line="753" static="1"><f a="framebuffer">
+		<deleteFramebuffer public="1" get="inline" set="null" line="761" static="1"><f a="framebuffer">
 	<c path="lime.graphics.opengl.GLFramebuffer"/>
 	<x path="Void"/>
 </f></deleteFramebuffer>
-		<deleteProgram public="1" get="inline" set="null" line="765" static="1"><f a="program">
+		<deleteProgram public="1" get="inline" set="null" line="773" static="1"><f a="program">
 	<c path="lime.graphics.opengl.GLProgram"/>
 	<x path="Void"/>
 </f></deleteProgram>
-		<deleteRenderbuffer public="1" get="inline" set="null" line="777" static="1"><f a="renderbuffer">
+		<deleteRenderbuffer public="1" get="inline" set="null" line="785" static="1"><f a="renderbuffer">
 	<c path="lime.graphics.opengl.GLRenderbuffer"/>
 	<x path="Void"/>
 </f></deleteRenderbuffer>
-		<deleteShader public="1" get="inline" set="null" line="789" static="1"><f a="shader">
+		<deleteShader public="1" get="inline" set="null" line="797" static="1"><f a="shader">
 	<c path="lime.graphics.opengl.GLShader"/>
 	<x path="Void"/>
 </f></deleteShader>
-		<deleteTexture public="1" get="inline" set="null" line="801" static="1"><f a="texture">
+		<deleteTexture public="1" get="inline" set="null" line="809" static="1"><f a="texture">
 	<c path="lime.graphics.opengl.GLTexture"/>
 	<x path="Void"/>
 </f></deleteTexture>
-		<depthFunc public="1" get="inline" set="null" line="813" static="1"><f a="func">
+		<depthFunc public="1" get="inline" set="null" line="821" static="1"><f a="func">
 	<x path="Int"/>
 	<x path="Void"/>
 </f></depthFunc>
-		<depthMask public="1" get="inline" set="null" line="824" static="1"><f a="flag">
+		<depthMask public="1" get="inline" set="null" line="832" static="1"><f a="flag">
 	<x path="Bool"/>
 	<x path="Void"/>
 </f></depthMask>
-		<depthRange public="1" get="inline" set="null" line="835" static="1"><f a="zNear:zFar">
+		<depthRange public="1" get="inline" set="null" line="843" static="1"><f a="zNear:zFar">
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Void"/>
 </f></depthRange>
-		<detachShader public="1" get="inline" set="null" line="846" static="1"><f a="program:shader">
+		<detachShader public="1" get="inline" set="null" line="854" static="1"><f a="program:shader">
 	<c path="lime.graphics.opengl.GLProgram"/>
 	<c path="lime.graphics.opengl.GLShader"/>
 	<x path="Void"/>
 </f></detachShader>
-		<disable public="1" get="inline" set="null" line="857" static="1"><f a="cap">
+		<disable public="1" get="inline" set="null" line="865" static="1"><f a="cap">
 	<x path="Int"/>
 	<x path="Void"/>
 </f></disable>
-		<disableVertexAttribArray public="1" get="inline" set="null" line="868" static="1"><f a="index">
+		<disableVertexAttribArray public="1" get="inline" set="null" line="876" static="1"><f a="index">
 	<x path="Int"/>
 	<x path="Void"/>
 </f></disableVertexAttribArray>
-		<drawArrays public="1" get="inline" set="null" line="879" static="1"><f a="mode:first:count">
+		<drawArrays public="1" get="inline" set="null" line="887" static="1"><f a="mode:first:count">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Void"/>
 </f></drawArrays>
-		<drawElements public="1" get="inline" set="null" line="890" static="1"><f a="mode:count:type:offset">
+		<drawElements public="1" get="inline" set="null" line="898" static="1"><f a="mode:count:type:offset">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Void"/>
 </f></drawElements>
-		<enable public="1" get="inline" set="null" line="901" static="1"><f a="cap">
+		<enable public="1" get="inline" set="null" line="909" static="1"><f a="cap">
 	<x path="Int"/>
 	<x path="Void"/>
 </f></enable>
-		<enableVertexAttribArray public="1" get="inline" set="null" line="912" static="1"><f a="index">
+		<enableVertexAttribArray public="1" get="inline" set="null" line="920" static="1"><f a="index">
 	<x path="Int"/>
 	<x path="Void"/>
 </f></enableVertexAttribArray>
-		<finish public="1" get="inline" set="null" line="923" static="1"><f a=""><x path="Void"/></f></finish>
-		<flush public="1" get="inline" set="null" line="934" static="1"><f a=""><x path="Void"/></f></flush>
-		<framebufferRenderbuffer public="1" get="inline" set="null" line="945" static="1"><f a="target:attachment:renderbuffertarget:renderbuffer">
+		<finish public="1" get="inline" set="null" line="931" static="1"><f a=""><x path="Void"/></f></finish>
+		<flush public="1" get="inline" set="null" line="942" static="1"><f a=""><x path="Void"/></f></flush>
+		<framebufferRenderbuffer public="1" get="inline" set="null" line="953" static="1"><f a="target:attachment:renderbuffertarget:renderbuffer">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Int"/>
 	<c path="lime.graphics.opengl.GLRenderbuffer"/>
 	<x path="Void"/>
 </f></framebufferRenderbuffer>
-		<framebufferTexture2D public="1" get="inline" set="null" line="956" static="1"><f a="target:attachment:textarget:texture:level">
+		<framebufferTexture2D public="1" get="inline" set="null" line="964" static="1"><f a="target:attachment:textarget:texture:level">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Int"/>
@@ -7781,164 +7800,164 @@
 	<x path="Int"/>
 	<x path="Void"/>
 </f></framebufferTexture2D>
-		<frontFace public="1" get="inline" set="null" line="967" static="1"><f a="mode">
+		<frontFace public="1" get="inline" set="null" line="975" static="1"><f a="mode">
 	<x path="Int"/>
 	<x path="Void"/>
 </f></frontFace>
-		<generateMipmap public="1" get="inline" set="null" line="978" static="1"><f a="target">
+		<generateMipmap public="1" get="inline" set="null" line="986" static="1"><f a="target">
 	<x path="Int"/>
 	<x path="Void"/>
 </f></generateMipmap>
-		<getActiveAttrib public="1" get="inline" set="null" line="989" static="1"><f a="program:index">
+		<getActiveAttrib public="1" get="inline" set="null" line="997" static="1"><f a="program:index">
 	<c path="lime.graphics.opengl.GLProgram"/>
 	<x path="Int"/>
 	<t path="lime.graphics.opengl.GLActiveInfo"/>
 </f></getActiveAttrib>
-		<getActiveUniform public="1" get="inline" set="null" line="1002" static="1"><f a="program:index">
+		<getActiveUniform public="1" get="inline" set="null" line="1010" static="1"><f a="program:index">
 	<c path="lime.graphics.opengl.GLProgram"/>
 	<x path="Int"/>
 	<t path="lime.graphics.opengl.GLActiveInfo"/>
 </f></getActiveUniform>
-		<getAttachedShaders public="1" get="inline" set="null" line="1015" static="1"><f a="program">
+		<getAttachedShaders public="1" get="inline" set="null" line="1023" static="1"><f a="program">
 	<c path="lime.graphics.opengl.GLProgram"/>
 	<c path="Array"><c path="lime.graphics.opengl.GLShader"/></c>
 </f></getAttachedShaders>
-		<getAttribLocation public="1" get="inline" set="null" line="1028" static="1"><f a="program:name">
+		<getAttribLocation public="1" get="inline" set="null" line="1036" static="1"><f a="program:name">
 	<c path="lime.graphics.opengl.GLProgram"/>
 	<c path="String"/>
 	<x path="Int"/>
 </f></getAttribLocation>
-		<getBufferParameter public="1" get="inline" set="null" line="1041" static="1"><f a="target:pname">
+		<getBufferParameter public="1" get="inline" set="null" line="1049" static="1"><f a="target:pname">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Int"/>
 </f></getBufferParameter>
-		<getContextAttributes public="1" get="inline" set="null" line="1054" static="1"><f a=""><t path="lime.graphics.opengl.GLContextAttributes"/></f></getContextAttributes>
-		<getError public="1" get="inline" set="null" line="1070" static="1"><f a=""><x path="Int"/></f></getError>
-		<getExtension public="1" get="inline" set="null" line="1083" static="1"><f a="name">
+		<getContextAttributes public="1" get="inline" set="null" line="1062" static="1"><f a=""><t path="lime.graphics.opengl.GLContextAttributes"/></f></getContextAttributes>
+		<getError public="1" get="inline" set="null" line="1078" static="1"><f a=""><x path="Int"/></f></getError>
+		<getExtension public="1" get="inline" set="null" line="1091" static="1"><f a="name">
 	<c path="String"/>
 	<d/>
 </f></getExtension>
-		<getFramebufferAttachmentParameter public="1" get="inline" set="null" line="1098" static="1"><f a="target:attachment:pname">
+		<getFramebufferAttachmentParameter public="1" get="inline" set="null" line="1106" static="1"><f a="target:attachment:pname">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Int"/>
 </f></getFramebufferAttachmentParameter>
-		<getParameter public="1" get="inline" set="null" line="1111" static="1"><f a="pname">
+		<getParameter public="1" get="inline" set="null" line="1119" static="1"><f a="pname">
 	<x path="Int"/>
 	<d/>
 </f></getParameter>
-		<getProgramInfoLog public="1" get="inline" set="null" line="1124" static="1"><f a="program">
+		<getProgramInfoLog public="1" get="inline" set="null" line="1132" static="1"><f a="program">
 	<c path="lime.graphics.opengl.GLProgram"/>
 	<c path="String"/>
 </f></getProgramInfoLog>
-		<getProgramParameter public="1" get="inline" set="null" line="1137" static="1"><f a="program:pname">
+		<getProgramParameter public="1" get="inline" set="null" line="1145" static="1"><f a="program:pname">
 	<c path="lime.graphics.opengl.GLProgram"/>
 	<x path="Int"/>
 	<x path="Int"/>
 </f></getProgramParameter>
-		<getRenderbufferParameter public="1" get="inline" set="null" line="1150" static="1"><f a="target:pname">
+		<getRenderbufferParameter public="1" get="inline" set="null" line="1158" static="1"><f a="target:pname">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Int"/>
 </f></getRenderbufferParameter>
-		<getShaderInfoLog public="1" get="inline" set="null" line="1163" static="1"><f a="shader">
+		<getShaderInfoLog public="1" get="inline" set="null" line="1171" static="1"><f a="shader">
 	<c path="lime.graphics.opengl.GLShader"/>
 	<c path="String"/>
 </f></getShaderInfoLog>
-		<getShaderParameter public="1" get="inline" set="null" line="1176" static="1"><f a="shader:pname">
+		<getShaderParameter public="1" get="inline" set="null" line="1184" static="1"><f a="shader:pname">
 	<c path="lime.graphics.opengl.GLShader"/>
 	<x path="Int"/>
 	<x path="Int"/>
 </f></getShaderParameter>
-		<getShaderPrecisionFormat public="1" get="inline" set="null" line="1189" static="1"><f a="shadertype:precisiontype">
+		<getShaderPrecisionFormat public="1" get="inline" set="null" line="1197" static="1"><f a="shadertype:precisiontype">
 	<x path="Int"/>
 	<x path="Int"/>
 	<t path="lime.graphics.opengl.GLShaderPrecisionFormat"/>
 </f></getShaderPrecisionFormat>
-		<getShaderSource public="1" get="inline" set="null" line="1202" static="1"><f a="shader">
+		<getShaderSource public="1" get="inline" set="null" line="1210" static="1"><f a="shader">
 	<c path="lime.graphics.opengl.GLShader"/>
 	<c path="String"/>
 </f></getShaderSource>
-		<getSupportedExtensions public="1" get="inline" set="null" line="1215" static="1"><f a=""><c path="Array"><c path="String"/></c></f></getSupportedExtensions>
-		<getTexParameter public="1" get="inline" set="null" line="1230" static="1"><f a="target:pname">
+		<getSupportedExtensions public="1" get="inline" set="null" line="1223" static="1"><f a=""><c path="Array"><c path="String"/></c></f></getSupportedExtensions>
+		<getTexParameter public="1" get="inline" set="null" line="1238" static="1"><f a="target:pname">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Int"/>
 </f></getTexParameter>
-		<getUniform public="1" get="inline" set="null" line="1243" static="1"><f a="program:location">
+		<getUniform public="1" get="inline" set="null" line="1251" static="1"><f a="program:location">
 	<c path="lime.graphics.opengl.GLProgram"/>
 	<t path="lime.graphics.opengl.GLUniformLocation"/>
 	<d/>
 </f></getUniform>
-		<getUniformLocation public="1" get="inline" set="null" line="1256" static="1"><f a="program:name">
+		<getUniformLocation public="1" get="inline" set="null" line="1264" static="1"><f a="program:name">
 	<c path="lime.graphics.opengl.GLProgram"/>
 	<c path="String"/>
 	<t path="lime.graphics.opengl.GLUniformLocation"/>
 </f></getUniformLocation>
-		<getVertexAttrib public="1" get="inline" set="null" line="1269" static="1"><f a="index:pname">
+		<getVertexAttrib public="1" get="inline" set="null" line="1277" static="1"><f a="index:pname">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Int"/>
 </f></getVertexAttrib>
-		<getVertexAttribOffset public="1" get="inline" set="null" line="1282" static="1"><f a="index:pname">
+		<getVertexAttribOffset public="1" get="inline" set="null" line="1290" static="1"><f a="index:pname">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Int"/>
 </f></getVertexAttribOffset>
-		<hint public="1" get="inline" set="null" line="1295" static="1"><f a="target:mode">
+		<hint public="1" get="inline" set="null" line="1303" static="1"><f a="target:mode">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Void"/>
 </f></hint>
-		<isBuffer public="1" get="inline" set="null" line="1306" static="1"><f a="buffer">
+		<isBuffer public="1" get="inline" set="null" line="1314" static="1"><f a="buffer">
 	<c path="lime.graphics.opengl.GLBuffer"/>
 	<x path="Bool"/>
 </f></isBuffer>
-		<isEnabled public="1" get="inline" set="null" line="1323" static="1"><f a="cap">
+		<isEnabled public="1" get="inline" set="null" line="1331" static="1"><f a="cap">
 	<x path="Int"/>
 	<x path="Bool"/>
 </f></isEnabled>
-		<isFramebuffer public="1" get="inline" set="null" line="1336" static="1"><f a="framebuffer">
+		<isFramebuffer public="1" get="inline" set="null" line="1344" static="1"><f a="framebuffer">
 	<c path="lime.graphics.opengl.GLFramebuffer"/>
 	<x path="Bool"/>
 </f></isFramebuffer>
-		<isProgram public="1" get="inline" set="null" line="1349" static="1"><f a="program">
+		<isProgram public="1" get="inline" set="null" line="1357" static="1"><f a="program">
 	<c path="lime.graphics.opengl.GLProgram"/>
 	<x path="Bool"/>
 </f></isProgram>
-		<isRenderbuffer public="1" get="inline" set="null" line="1362" static="1"><f a="renderbuffer">
+		<isRenderbuffer public="1" get="inline" set="null" line="1370" static="1"><f a="renderbuffer">
 	<c path="lime.graphics.opengl.GLRenderbuffer"/>
 	<x path="Bool"/>
 </f></isRenderbuffer>
-		<isShader public="1" get="inline" set="null" line="1375" static="1"><f a="shader">
+		<isShader public="1" get="inline" set="null" line="1383" static="1"><f a="shader">
 	<c path="lime.graphics.opengl.GLShader"/>
 	<x path="Bool"/>
 </f></isShader>
-		<isTexture public="1" get="inline" set="null" line="1388" static="1"><f a="texture">
+		<isTexture public="1" get="inline" set="null" line="1396" static="1"><f a="texture">
 	<c path="lime.graphics.opengl.GLTexture"/>
 	<x path="Bool"/>
 </f></isTexture>
-		<lineWidth public="1" get="inline" set="null" line="1401" static="1"><f a="width">
+		<lineWidth public="1" get="inline" set="null" line="1409" static="1"><f a="width">
 	<x path="Float"/>
 	<x path="Void"/>
 </f></lineWidth>
-		<linkProgram public="1" get="inline" set="null" line="1412" static="1"><f a="program">
+		<linkProgram public="1" get="inline" set="null" line="1420" static="1"><f a="program">
 	<c path="lime.graphics.opengl.GLProgram"/>
 	<x path="Void"/>
 </f></linkProgram>
-		<pixelStorei public="1" get="inline" set="null" line="1423" static="1"><f a="pname:param">
+		<pixelStorei public="1" get="inline" set="null" line="1431" static="1"><f a="pname:param">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Void"/>
 </f></pixelStorei>
-		<polygonOffset public="1" get="inline" set="null" line="1434" static="1"><f a="factor:units">
+		<polygonOffset public="1" get="inline" set="null" line="1442" static="1"><f a="factor:units">
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Void"/>
 </f></polygonOffset>
-		<readPixels public="1" get="inline" set="null" line="1445" static="1"><f a="x:y:width:height:format:type:pixels">
+		<readPixels public="1" get="inline" set="null" line="1453" static="1"><f a="x:y:width:height:format:type:pixels">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Int"/>
@@ -7948,66 +7967,66 @@
 	<c path="lime.utils.ArrayBufferView"/>
 	<x path="Void"/>
 </f></readPixels>
-		<renderbufferStorage public="1" get="inline" set="null" line="1456" static="1"><f a="target:internalformat:width:height">
+		<renderbufferStorage public="1" get="inline" set="null" line="1466" static="1"><f a="target:internalformat:width:height">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Void"/>
 </f></renderbufferStorage>
-		<sampleCoverage public="1" get="inline" set="null" line="1467" static="1"><f a="value:invert">
+		<sampleCoverage public="1" get="inline" set="null" line="1477" static="1"><f a="value:invert">
 	<x path="Float"/>
 	<x path="Bool"/>
 	<x path="Void"/>
 </f></sampleCoverage>
-		<scissor public="1" get="inline" set="null" line="1478" static="1"><f a="x:y:width:height">
+		<scissor public="1" get="inline" set="null" line="1488" static="1"><f a="x:y:width:height">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Void"/>
 </f></scissor>
-		<shaderSource public="1" get="inline" set="null" line="1489" static="1"><f a="shader:source">
+		<shaderSource public="1" get="inline" set="null" line="1499" static="1"><f a="shader:source">
 	<c path="lime.graphics.opengl.GLShader"/>
 	<c path="String"/>
 	<x path="Void"/>
 </f></shaderSource>
-		<stencilFunc public="1" get="inline" set="null" line="1500" static="1"><f a="func:ref:mask">
+		<stencilFunc public="1" get="inline" set="null" line="1510" static="1"><f a="func:ref:mask">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Void"/>
 </f></stencilFunc>
-		<stencilFuncSeparate public="1" get="inline" set="null" line="1511" static="1"><f a="face:func:ref:mask">
+		<stencilFuncSeparate public="1" get="inline" set="null" line="1521" static="1"><f a="face:func:ref:mask">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Void"/>
 </f></stencilFuncSeparate>
-		<stencilMask public="1" get="inline" set="null" line="1522" static="1"><f a="mask">
+		<stencilMask public="1" get="inline" set="null" line="1532" static="1"><f a="mask">
 	<x path="Int"/>
 	<x path="Void"/>
 </f></stencilMask>
-		<stencilMaskSeparate public="1" get="inline" set="null" line="1533" static="1"><f a="face:mask">
+		<stencilMaskSeparate public="1" get="inline" set="null" line="1543" static="1"><f a="face:mask">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Void"/>
 </f></stencilMaskSeparate>
-		<stencilOp public="1" get="inline" set="null" line="1544" static="1"><f a="fail:zfail:zpass">
+		<stencilOp public="1" get="inline" set="null" line="1554" static="1"><f a="fail:zfail:zpass">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Void"/>
 </f></stencilOp>
-		<stencilOpSeparate public="1" get="inline" set="null" line="1555" static="1"><f a="face:fail:zfail:zpass">
+		<stencilOpSeparate public="1" get="inline" set="null" line="1565" static="1"><f a="face:fail:zfail:zpass">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Void"/>
 </f></stencilOpSeparate>
-		<texImage2D public="1" get="inline" set="null" line="1566" static="1"><f a="target:level:internalformat:width:height:border:format:type:pixels">
+		<texImage2D public="1" get="inline" set="null" line="1576" static="1"><f a="target:level:internalformat:width:height:border:format:type:pixels">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Int"/>
@@ -8019,19 +8038,19 @@
 	<c path="lime.utils.ArrayBufferView"/>
 	<x path="Void"/>
 </f></texImage2D>
-		<texParameterf public="1" get="inline" set="null" line="1577" static="1"><f a="target:pname:param">
+		<texParameterf public="1" get="inline" set="null" line="1589" static="1"><f a="target:pname:param">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Float"/>
 	<x path="Void"/>
 </f></texParameterf>
-		<texParameteri public="1" get="inline" set="null" line="1588" static="1"><f a="target:pname:param">
+		<texParameteri public="1" get="inline" set="null" line="1600" static="1"><f a="target:pname:param">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Void"/>
 </f></texParameteri>
-		<texSubImage2D public="1" get="inline" set="null" line="1599" static="1"><f a="target:level:xoffset:yoffset:width:height:format:type:pixels">
+		<texSubImage2D public="1" get="inline" set="null" line="1611" static="1"><f a="target:level:xoffset:yoffset:width:height:format:type:pixels">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Int"/>
@@ -8043,73 +8062,73 @@
 	<c path="lime.utils.ArrayBufferView"/>
 	<x path="Void"/>
 </f></texSubImage2D>
-		<uniform1f public="1" get="inline" set="null" line="1610" static="1"><f a="location:x">
+		<uniform1f public="1" get="inline" set="null" line="1624" static="1"><f a="location:x">
 	<t path="lime.graphics.opengl.GLUniformLocation"/>
 	<x path="Float"/>
 	<x path="Void"/>
 </f></uniform1f>
-		<uniform1fv public="1" get="inline" set="null" line="1621" static="1"><f a="location:x">
+		<uniform1fv public="1" get="inline" set="null" line="1635" static="1"><f a="location:x">
 	<t path="lime.graphics.opengl.GLUniformLocation"/>
 	<c path="lime.utils.Float32Array"/>
 	<x path="Void"/>
 </f></uniform1fv>
-		<uniform1i public="1" get="inline" set="null" line="1632" static="1"><f a="location:x">
+		<uniform1i public="1" get="inline" set="null" line="1648" static="1"><f a="location:x">
 	<t path="lime.graphics.opengl.GLUniformLocation"/>
 	<x path="Int"/>
 	<x path="Void"/>
 </f></uniform1i>
-		<uniform1iv public="1" get="inline" set="null" line="1643" static="1"><f a="location:v">
+		<uniform1iv public="1" get="inline" set="null" line="1659" static="1"><f a="location:v">
 	<t path="lime.graphics.opengl.GLUniformLocation"/>
 	<c path="lime.utils.Int32Array"/>
 	<x path="Void"/>
 </f></uniform1iv>
-		<uniform2f public="1" get="inline" set="null" line="1654" static="1"><f a="location:x:y">
+		<uniform2f public="1" get="inline" set="null" line="1672" static="1"><f a="location:x:y">
 	<t path="lime.graphics.opengl.GLUniformLocation"/>
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Void"/>
 </f></uniform2f>
-		<uniform2fv public="1" get="inline" set="null" line="1665" static="1"><f a="location:v">
+		<uniform2fv public="1" get="inline" set="null" line="1683" static="1"><f a="location:v">
 	<t path="lime.graphics.opengl.GLUniformLocation"/>
 	<c path="lime.utils.Float32Array"/>
 	<x path="Void"/>
 </f></uniform2fv>
-		<uniform2i public="1" get="inline" set="null" line="1676" static="1"><f a="location:x:y">
+		<uniform2i public="1" get="inline" set="null" line="1696" static="1"><f a="location:x:y">
 	<t path="lime.graphics.opengl.GLUniformLocation"/>
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Void"/>
 </f></uniform2i>
-		<uniform2iv public="1" get="inline" set="null" line="1687" static="1"><f a="location:v">
+		<uniform2iv public="1" get="inline" set="null" line="1707" static="1"><f a="location:v">
 	<t path="lime.graphics.opengl.GLUniformLocation"/>
 	<c path="lime.utils.Int32Array"/>
 	<x path="Void"/>
 </f></uniform2iv>
-		<uniform3f public="1" get="inline" set="null" line="1698" static="1"><f a="location:x:y:z">
+		<uniform3f public="1" get="inline" set="null" line="1720" static="1"><f a="location:x:y:z">
 	<t path="lime.graphics.opengl.GLUniformLocation"/>
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Void"/>
 </f></uniform3f>
-		<uniform3fv public="1" get="inline" set="null" line="1709" static="1"><f a="location:v">
+		<uniform3fv public="1" get="inline" set="null" line="1731" static="1"><f a="location:v">
 	<t path="lime.graphics.opengl.GLUniformLocation"/>
 	<c path="lime.utils.Float32Array"/>
 	<x path="Void"/>
 </f></uniform3fv>
-		<uniform3i public="1" get="inline" set="null" line="1720" static="1"><f a="location:x:y:z">
+		<uniform3i public="1" get="inline" set="null" line="1744" static="1"><f a="location:x:y:z">
 	<t path="lime.graphics.opengl.GLUniformLocation"/>
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Void"/>
 </f></uniform3i>
-		<uniform3iv public="1" get="inline" set="null" line="1731" static="1"><f a="location:v">
+		<uniform3iv public="1" get="inline" set="null" line="1755" static="1"><f a="location:v">
 	<t path="lime.graphics.opengl.GLUniformLocation"/>
 	<c path="lime.utils.Int32Array"/>
 	<x path="Void"/>
 </f></uniform3iv>
-		<uniform4f public="1" get="inline" set="null" line="1742" static="1"><f a="location:x:y:z:w">
+		<uniform4f public="1" get="inline" set="null" line="1768" static="1"><f a="location:x:y:z:w">
 	<t path="lime.graphics.opengl.GLUniformLocation"/>
 	<x path="Float"/>
 	<x path="Float"/>
@@ -8117,12 +8136,12 @@
 	<x path="Float"/>
 	<x path="Void"/>
 </f></uniform4f>
-		<uniform4fv public="1" get="inline" set="null" line="1753" static="1"><f a="location:v">
+		<uniform4fv public="1" get="inline" set="null" line="1779" static="1"><f a="location:v">
 	<t path="lime.graphics.opengl.GLUniformLocation"/>
 	<c path="lime.utils.Float32Array"/>
 	<x path="Void"/>
 </f></uniform4fv>
-		<uniform4i public="1" get="inline" set="null" line="1764" static="1"><f a="location:x:y:z:w">
+		<uniform4i public="1" get="inline" set="null" line="1792" static="1"><f a="location:x:y:z:w">
 	<t path="lime.graphics.opengl.GLUniformLocation"/>
 	<x path="Int"/>
 	<x path="Int"/>
@@ -8130,71 +8149,71 @@
 	<x path="Int"/>
 	<x path="Void"/>
 </f></uniform4i>
-		<uniform4iv public="1" get="inline" set="null" line="1775" static="1"><f a="location:v">
+		<uniform4iv public="1" get="inline" set="null" line="1803" static="1"><f a="location:v">
 	<t path="lime.graphics.opengl.GLUniformLocation"/>
 	<c path="lime.utils.Int32Array"/>
 	<x path="Void"/>
 </f></uniform4iv>
-		<uniformMatrix2fv public="1" get="inline" set="null" line="1786" static="1"><f a="location:transpose:v">
+		<uniformMatrix2fv public="1" get="inline" set="null" line="1816" static="1"><f a="location:transpose:v">
 	<t path="lime.graphics.opengl.GLUniformLocation"/>
 	<x path="Bool"/>
 	<c path="lime.utils.Float32Array"/>
 	<x path="Void"/>
 </f></uniformMatrix2fv>
-		<uniformMatrix3fv public="1" get="inline" set="null" line="1797" static="1"><f a="location:transpose:v">
+		<uniformMatrix3fv public="1" get="inline" set="null" line="1829" static="1"><f a="location:transpose:v">
 	<t path="lime.graphics.opengl.GLUniformLocation"/>
 	<x path="Bool"/>
 	<c path="lime.utils.Float32Array"/>
 	<x path="Void"/>
 </f></uniformMatrix3fv>
-		<uniformMatrix4fv public="1" get="inline" set="null" line="1808" static="1"><f a="location:transpose:v">
+		<uniformMatrix4fv public="1" get="inline" set="null" line="1842" static="1"><f a="location:transpose:v">
 	<t path="lime.graphics.opengl.GLUniformLocation"/>
 	<x path="Bool"/>
 	<c path="lime.utils.Float32Array"/>
 	<x path="Void"/>
 </f></uniformMatrix4fv>
-		<useProgram public="1" get="inline" set="null" line="1826" static="1"><f a="program">
+		<useProgram public="1" get="inline" set="null" line="1862" static="1"><f a="program">
 	<c path="lime.graphics.opengl.GLProgram"/>
 	<x path="Void"/>
 </f></useProgram>
-		<validateProgram public="1" get="inline" set="null" line="1837" static="1"><f a="program">
+		<validateProgram public="1" get="inline" set="null" line="1873" static="1"><f a="program">
 	<c path="lime.graphics.opengl.GLProgram"/>
 	<x path="Void"/>
 </f></validateProgram>
-		<vertexAttrib1f public="1" get="inline" set="null" line="1848" static="1"><f a="indx:x">
+		<vertexAttrib1f public="1" get="inline" set="null" line="1884" static="1"><f a="indx:x">
 	<x path="Int"/>
 	<x path="Float"/>
 	<x path="Void"/>
 </f></vertexAttrib1f>
-		<vertexAttrib1fv public="1" get="inline" set="null" line="1859" static="1"><f a="indx:values">
+		<vertexAttrib1fv public="1" get="inline" set="null" line="1895" static="1"><f a="indx:values">
 	<x path="Int"/>
 	<c path="lime.utils.Float32Array"/>
 	<x path="Void"/>
 </f></vertexAttrib1fv>
-		<vertexAttrib2f public="1" get="inline" set="null" line="1870" static="1"><f a="indx:x:y">
+		<vertexAttrib2f public="1" get="inline" set="null" line="1908" static="1"><f a="indx:x:y">
 	<x path="Int"/>
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Void"/>
 </f></vertexAttrib2f>
-		<vertexAttrib2fv public="1" get="inline" set="null" line="1881" static="1"><f a="indx:values">
+		<vertexAttrib2fv public="1" get="inline" set="null" line="1919" static="1"><f a="indx:values">
 	<x path="Int"/>
 	<c path="lime.utils.Float32Array"/>
 	<x path="Void"/>
 </f></vertexAttrib2fv>
-		<vertexAttrib3f public="1" get="inline" set="null" line="1892" static="1"><f a="indx:x:y:z">
+		<vertexAttrib3f public="1" get="inline" set="null" line="1932" static="1"><f a="indx:x:y:z">
 	<x path="Int"/>
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Void"/>
 </f></vertexAttrib3f>
-		<vertexAttrib3fv public="1" get="inline" set="null" line="1903" static="1"><f a="indx:values">
+		<vertexAttrib3fv public="1" get="inline" set="null" line="1943" static="1"><f a="indx:values">
 	<x path="Int"/>
 	<c path="lime.utils.Float32Array"/>
 	<x path="Void"/>
 </f></vertexAttrib3fv>
-		<vertexAttrib4f public="1" get="inline" set="null" line="1914" static="1"><f a="indx:x:y:z:w">
+		<vertexAttrib4f public="1" get="inline" set="null" line="1956" static="1"><f a="indx:x:y:z:w">
 	<x path="Int"/>
 	<x path="Float"/>
 	<x path="Float"/>
@@ -8202,12 +8221,12 @@
 	<x path="Float"/>
 	<x path="Void"/>
 </f></vertexAttrib4f>
-		<vertexAttrib4fv public="1" get="inline" set="null" line="1925" static="1"><f a="indx:values">
+		<vertexAttrib4fv public="1" get="inline" set="null" line="1967" static="1"><f a="indx:values">
 	<x path="Int"/>
 	<c path="lime.utils.Float32Array"/>
 	<x path="Void"/>
 </f></vertexAttrib4fv>
-		<vertexAttribPointer public="1" get="inline" set="null" line="1936" static="1"><f a="indx:size:type:normalized:stride:offset">
+		<vertexAttribPointer public="1" get="inline" set="null" line="1980" static="1"><f a="indx:size:type:normalized:stride:offset">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Int"/>
@@ -8216,14 +8235,14 @@
 	<x path="Int"/>
 	<x path="Void"/>
 </f></vertexAttribPointer>
-		<viewport public="1" get="inline" set="null" line="1947" static="1"><f a="x:y:width:height">
+		<viewport public="1" get="inline" set="null" line="1991" static="1"><f a="x:y:width:height">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Void"/>
 </f></viewport>
-		<get_version set="method" line="1958" static="1"><f a=""><x path="Int"/></f></get_version>
+		<get_version set="method" line="2002" static="1"><f a=""><x path="Int"/></f></get_version>
 		<meta><m n=":allow"><e>'???'</e></m></meta>
 	</class>
 	<typedef path="lime.graphics.opengl.GLActiveInfo" params="" file="/home/joshua/TeamCity/buildAgent/work/a3370b35bd8128d3/lime/lime/graphics/opengl/GLActiveInfo.hx"><a>
@@ -8472,67 +8491,67 @@
 	<x path="Int"/>
 	<x path="Void"/>
 </f></fillRect>
-		<floodFill public="1" set="method" line="259" static="1"><f a="image:x:y:color">
+		<floodFill public="1" set="method" line="286" static="1"><f a="image:x:y:color">
 	<c path="lime.graphics.Image"/>
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Void"/>
 </f></floodFill>
-		<getPixel public="1" set="method" line="326" static="1"><f a="image:x:y">
+		<getPixel public="1" set="method" line="353" static="1"><f a="image:x:y">
 	<c path="lime.graphics.Image"/>
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Int"/>
 </f></getPixel>
-		<getPixel32 public="1" set="method" line="346" static="1"><f a="image:x:y">
+		<getPixel32 public="1" set="method" line="373" static="1"><f a="image:x:y">
 	<c path="lime.graphics.Image"/>
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Int"/>
 </f></getPixel32>
-		<getPixels public="1" set="method" line="366" static="1"><f a="image:rect">
+		<getPixels public="1" set="method" line="393" static="1"><f a="image:rect">
 	<c path="lime.graphics.Image"/>
 	<c path="lime.math.Rectangle"/>
 	<c path="lime.utils.ByteArray"/>
 </f></getPixels>
-		<multiplyAlpha public="1" set="method" line="409" static="1"><f a="image">
+		<multiplyAlpha public="1" set="method" line="436" static="1"><f a="image">
 	<c path="lime.graphics.Image"/>
 	<x path="Void"/>
 </f></multiplyAlpha>
-		<resize public="1" set="method" line="434" static="1"><f a="image:newWidth:newHeight">
+		<resize public="1" set="method" line="461" static="1"><f a="image:newWidth:newHeight">
 	<c path="lime.graphics.Image"/>
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Void"/>
 </f></resize>
-		<resizeBuffer public="1" set="method" line="497" static="1"><f a="image:newWidth:newHeight">
+		<resizeBuffer public="1" set="method" line="524" static="1"><f a="image:newWidth:newHeight">
 	<c path="lime.graphics.Image"/>
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Void"/>
 </f></resizeBuffer>
-		<setPixel public="1" set="method" line="527" static="1"><f a="image:x:y:color">
+		<setPixel public="1" set="method" line="554" static="1"><f a="image:x:y:color">
 	<c path="lime.graphics.Image"/>
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Void"/>
 </f></setPixel>
-		<setPixel32 public="1" set="method" line="542" static="1"><f a="image:x:y:color">
+		<setPixel32 public="1" set="method" line="569" static="1"><f a="image:x:y:color">
 	<c path="lime.graphics.Image"/>
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Void"/>
 </f></setPixel32>
-		<setPixels public="1" set="method" line="570" static="1"><f a="image:rect:byteArray">
+		<setPixels public="1" set="method" line="597" static="1"><f a="image:rect:byteArray">
 	<c path="lime.graphics.Image"/>
 	<c path="lime.math.Rectangle"/>
 	<c path="lime.utils.ByteArray"/>
 	<x path="Void"/>
 </f></setPixels>
-		<unmultiplyAlpha public="1" set="method" line="600" static="1"><f a="image">
+		<unmultiplyAlpha public="1" set="method" line="627" static="1"><f a="image">
 	<c path="lime.graphics.Image"/>
 	<x path="Void"/>
 </f></unmultiplyAlpha>
@@ -19419,28 +19438,28 @@
 		<extends path="haxe.io.Bytes"/>
 		<implements path="lime.utils.IMemoryRange"/>
 		<implements path="lime.utils.IDataInput"/>
-		<fromBytes public="1" set="method" line="242" static="1"><f a="bytes">
+		<fromBytes public="1" set="method" line="277" static="1"><f a="bytes">
 	<c path="haxe.io.Bytes"/>
 	<c path="lime.utils.ByteArray"/>
 </f></fromBytes>
-		<readFile public="1" set="method" line="351" static="1"><f a="path">
+		<readFile public="1" set="method" line="386" static="1"><f a="path">
 	<c path="String"/>
 	<c path="lime.utils.ByteArray"/>
 </f></readFile>
-		<lime_byte_array_overwrite_file line="1100" static="1"><f a=":">
+		<lime_byte_array_overwrite_file line="1135" static="1"><f a=":">
 	<c path="String"/>
 	<c path="lime.utils.ByteArray"/>
 	<unknown/>
 </f></lime_byte_array_overwrite_file>
-		<lime_byte_array_read_file line="1101" static="1"><f a="">
+		<lime_byte_array_read_file line="1136" static="1"><f a="">
 	<c path="String"/>
 	<c path="lime.utils.ByteArray"/>
 </f></lime_byte_array_read_file>
-		<lime_lzma_decode line="1102" static="1"><f a="">
+		<lime_lzma_decode line="1137" static="1"><f a="">
 	<t path="haxe.io.BytesData"/>
 	<t path="haxe.io.BytesData"/>
 </f></lime_lzma_decode>
-		<lime_lzma_encode line="1103" static="1"><f a="">
+		<lime_lzma_encode line="1138" static="1"><f a="">
 	<t path="haxe.io.BytesData"/>
 	<t path="haxe.io.BytesData"/>
 </f></lime_lzma_encode>
@@ -19452,132 +19471,132 @@
 		<littleEndian><x path="Bool"/></littleEndian>
 		<bigEndian public="1" get="accessor" set="accessor"><x path="Bool"/></bigEndian>
 		<byteLength public="1" get="accessor" set="null"><x path="Int"/></byteLength>
-		<asString public="1" set="method" line="111"><f a=""><c path="String"/></f></asString>
-		<checkData public="1" set="method" line="120"><f a="length">
+		<asString public="1" set="method" line="146"><f a=""><c path="String"/></f></asString>
+		<checkData public="1" set="method" line="155"><f a="length">
 	<x path="Int"/>
 	<x path="Void"/>
 </f></checkData>
-		<clear public="1" set="method" line="132"><f a=""><x path="Void"/></f></clear>
-		<compress public="1" set="method" line="140"><f a="?algorithm" v="null">
+		<clear public="1" set="method" line="167"><f a=""><x path="Void"/></f></clear>
+		<compress public="1" set="method" line="175"><f a="?algorithm" v="null">
 	<e path="lime.utils.CompressionAlgorithm"/>
 	<x path="Void"/>
 </f></compress>
-		<deflate public="1" set="method" line="190"><f a=""><x path="Void"/></f></deflate>
-		<ensureElem set="method" line="198"><f a="size:updateLength">
+		<deflate public="1" set="method" line="225"><f a=""><x path="Void"/></f></deflate>
+		<ensureElem set="method" line="233"><f a="size:updateLength">
 	<x path="Int"/>
 	<x path="Bool"/>
 	<x path="Void"/>
 </f></ensureElem>
-		<getLength public="1" set="method" line="252"><f a=""><x path="Int"/></f></getLength>
-		<getByteBuffer public="1" set="method" line="253"><f a=""><c path="lime.utils.ByteArray"/></f></getByteBuffer>
-		<getStart public="1" set="method" line="254"><f a=""><x path="Int"/></f></getStart>
-		<inflate public="1" set="method" line="258"><f a=""><x path="Void"/></f></inflate>
-		<readBoolean public="1" get="inline" set="null" line="265"><f a=""><x path="Bool"/></f></readBoolean>
-		<readByte public="1" get="inline" set="null" line="276"><f a=""><x path="Int"/></f></readByte>
-		<readBytes public="1" set="method" line="289"><f a="bytes:?offset:?length" v=":0:0">
+		<getLength public="1" set="method" line="287"><f a=""><x path="Int"/></f></getLength>
+		<getByteBuffer public="1" set="method" line="288"><f a=""><c path="lime.utils.ByteArray"/></f></getByteBuffer>
+		<getStart public="1" set="method" line="289"><f a=""><x path="Int"/></f></getStart>
+		<inflate public="1" set="method" line="293"><f a=""><x path="Void"/></f></inflate>
+		<readBoolean public="1" get="inline" set="null" line="300"><f a=""><x path="Bool"/></f></readBoolean>
+		<readByte public="1" get="inline" set="null" line="311"><f a=""><x path="Int"/></f></readByte>
+		<readBytes public="1" set="method" line="324"><f a="bytes:?offset:?length" v=":0:0">
 	<c path="lime.utils.ByteArray"/>
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Void"/>
 </f></readBytes>
-		<readDouble public="1" set="method" line="336"><f a=""><x path="Float"/></f></readDouble>
-		<readFloat public="1" set="method" line="364"><f a=""><x path="Float"/></f></readFloat>
-		<readInt public="1" set="method" line="379"><f a=""><x path="Int"/></f></readInt>
-		<readMultiByte public="1" get="inline" set="null" line="396"><f a="length:charSet">
+		<readDouble public="1" set="method" line="371"><f a=""><x path="Float"/></f></readDouble>
+		<readFloat public="1" set="method" line="399"><f a=""><x path="Float"/></f></readFloat>
+		<readInt public="1" set="method" line="414"><f a=""><x path="Int"/></f></readInt>
+		<readMultiByte public="1" get="inline" set="null" line="431"><f a="length:charSet">
 	<x path="Int"/>
 	<c path="String"/>
 	<c path="String"/>
 </f></readMultiByte>
-		<readShort public="1" set="method" line="403"><f a=""><x path="Int"/></f></readShort>
-		<readUnsignedByte public="1" get="inline" set="null" line="419"><f a=""><x path="Int"/></f></readUnsignedByte>
-		<readUnsignedInt public="1" set="method" line="431"><f a=""><x path="Int"/></f></readUnsignedInt>
-		<readUnsignedShort public="1" set="method" line="448"><f a=""><x path="Int"/></f></readUnsignedShort>
-		<readUTF public="1" set="method" line="463"><f a=""><c path="String"/></f></readUTF>
-		<readUTFBytes public="1" set="method" line="471"><f a="len">
+		<readShort public="1" set="method" line="438"><f a=""><x path="Int"/></f></readShort>
+		<readUnsignedByte public="1" get="inline" set="null" line="454"><f a=""><x path="Int"/></f></readUnsignedByte>
+		<readUnsignedInt public="1" set="method" line="466"><f a=""><x path="Int"/></f></readUnsignedInt>
+		<readUnsignedShort public="1" set="method" line="483"><f a=""><x path="Int"/></f></readUnsignedShort>
+		<readUTF public="1" set="method" line="498"><f a=""><c path="String"/></f></readUTF>
+		<readUTFBytes public="1" set="method" line="506"><f a="len">
 	<x path="Int"/>
 	<c path="String"/>
 </f></readUTFBytes>
-		<setLength public="1" set="method" line="537"><f a="length">
+		<setLength public="1" set="method" line="572"><f a="length">
 	<x path="Int"/>
 	<x path="Void"/>
 </f></setLength>
-		<slice public="1" set="method" line="548"><f a="begin:?inEnd" v=":null">
+		<slice public="1" set="method" line="583"><f a="begin:?inEnd" v=":null">
 	<x path="Int"/>
 	<x path="Int"/>
 	<c path="lime.utils.ByteArray"/>
 </f></slice>
-		<ThrowEOFi set="method" line="584"><f a=""><x path="Int"/></f></ThrowEOFi>
-		<toString public="1" set="method" line="593" override="1"><f a=""><c path="String"/></f></toString>
-		<uncompress public="1" set="method" line="604"><f a="?algorithm" v="null">
+		<ThrowEOFi set="method" line="619"><f a=""><x path="Int"/></f></ThrowEOFi>
+		<toString public="1" set="method" line="628" override="1"><f a=""><c path="String"/></f></toString>
+		<uncompress public="1" set="method" line="639"><f a="?algorithm" v="null">
 	<e path="lime.utils.CompressionAlgorithm"/>
 	<x path="Void"/>
 </f></uncompress>
-		<write_uncheck get="inline" set="null" line="662"><f a="byte">
+		<write_uncheck get="inline" set="null" line="697"><f a="byte">
 	<x path="Int"/>
 	<x path="Void"/>
 </f></write_uncheck>
-		<writeBoolean public="1" get="inline" set="null" line="673"><f a="value">
+		<writeBoolean public="1" get="inline" set="null" line="708"><f a="value">
 	<x path="Bool"/>
 	<x path="Void"/>
 </f></writeBoolean>
-		<writeByte public="1" set="method" line="680"><f a="value">
+		<writeByte public="1" set="method" line="715"><f a="value">
 	<x path="Int"/>
 	<x path="Void"/>
 </f></writeByte>
-		<writeBytes public="1" set="method" line="699"><f a="bytes:?offset:?length" v=":0:0">
+		<writeBytes public="1" set="method" line="734"><f a="bytes:?offset:?length" v=":0:0">
 	<c path="haxe.io.Bytes"/>
 	<x path="UInt"/>
 	<x path="UInt"/>
 	<x path="Void"/>
 </f></writeBytes>
-		<writeDouble public="1" set="method" line="719"><f a="x">
+		<writeDouble public="1" set="method" line="754"><f a="x">
 	<x path="Float"/>
 	<x path="Void"/>
 </f></writeDouble>
-		<writeFile public="1" set="method" line="734"><f a="path">
+		<writeFile public="1" set="method" line="769"><f a="path">
 	<c path="String"/>
 	<x path="Void"/>
 </f></writeFile>
-		<writeFloat public="1" set="method" line="747"><f a="x">
+		<writeFloat public="1" set="method" line="782"><f a="x">
 	<x path="Float"/>
 	<x path="Void"/>
 </f></writeFloat>
-		<writeInt public="1" set="method" line="762"><f a="value">
+		<writeInt public="1" set="method" line="797"><f a="value">
 	<x path="Int"/>
 	<x path="Void"/>
 </f></writeInt>
-		<writeShort public="1" set="method" line="791"><f a="value">
+		<writeShort public="1" set="method" line="826"><f a="value">
 	<x path="Int"/>
 	<x path="Void"/>
 </f></writeShort>
-		<writeUnsignedInt public="1" set="method" line="817"><f a="value">
+		<writeUnsignedInt public="1" set="method" line="852"><f a="value">
 	<x path="Int"/>
 	<x path="Void"/>
 </f></writeUnsignedInt>
-		<writeUnsignedShort public="1" set="method" line="830"><f a="value">
+		<writeUnsignedShort public="1" set="method" line="865"><f a="value">
 	<x path="Int"/>
 	<x path="Void"/>
 </f></writeUnsignedShort>
-		<writeUTF public="1" set="method" line="843"><f a="value">
+		<writeUTF public="1" set="method" line="878"><f a="value">
 	<c path="String"/>
 	<x path="Void"/>
 </f></writeUTF>
-		<writeUTFBytes public="1" set="method" line="861"><f a="value">
+		<writeUTFBytes public="1" set="method" line="896"><f a="value">
 	<c path="String"/>
 	<x path="Void"/>
 </f></writeUTFBytes>
-		<__fromBytes get="inline" set="null" line="906"><f a="bytes">
+		<__fromBytes get="inline" set="null" line="941"><f a="bytes">
 	<c path="haxe.io.Bytes"/>
 	<x path="Void"/>
 </f></__fromBytes>
-		<__get public="1" get="inline" set="null" line="923">
+		<__get public="1" get="inline" set="null" line="958">
 			<f a="pos">
 				<x path="Int"/>
 				<x path="Int"/>
 			</f>
 			<meta><m n=":keep"/></meta>
 		</__get>
-		<__set public="1" get="inline" set="null" line="1018">
+		<__set public="1" get="inline" set="null" line="1053">
 			<f a="pos:v">
 				<x path="Int"/>
 				<x path="Int"/>
@@ -19585,23 +19604,23 @@
 			</f>
 			<meta><m n=":keep"/></meta>
 		</__set>
-		<get_bigEndian get="inline" set="null" line="1042"><f a=""><x path="Bool"/></f></get_bigEndian>
-		<set_bigEndian get="inline" set="null" line="1043"><f a="value">
+		<get_bigEndian get="inline" set="null" line="1077"><f a=""><x path="Bool"/></f></get_bigEndian>
+		<set_bigEndian get="inline" set="null" line="1078"><f a="value">
 	<x path="Bool"/>
 	<x path="Bool"/>
 </f></set_bigEndian>
-		<get_bytesAvailable get="inline" set="null" line="1047"><f a=""><x path="Int"/></f></get_bytesAvailable>
-		<get_byteLength set="method" line="1055"><f a=""><x path="Int"/></f></get_byteLength>
-		<get_endian get="inline" set="null" line="1063"><f a=""><c path="String"/></f></get_endian>
-		<set_endian get="inline" set="null" line="1070"><f a="endian">
+		<get_bytesAvailable get="inline" set="null" line="1082"><f a=""><x path="Int"/></f></get_bytesAvailable>
+		<get_byteLength set="method" line="1090"><f a=""><x path="Int"/></f></get_byteLength>
+		<get_endian get="inline" set="null" line="1098"><f a=""><c path="String"/></f></get_endian>
+		<set_endian get="inline" set="null" line="1105"><f a="endian">
 	<c path="String"/>
 	<c path="String"/>
 </f></set_endian>
-		<set_length get="inline" set="null" line="1078"><f a="value">
+		<set_length get="inline" set="null" line="1113"><f a="value">
 	<x path="Int"/>
 	<x path="Int"/>
 </f></set_length>
-		<new public="1" set="method" line="80"><f a="?size" v="0">
+		<new public="1" set="method" line="115"><f a="?size" v="0">
 	<x path="Int"/>
 	<x path="Void"/>
 </f></new>

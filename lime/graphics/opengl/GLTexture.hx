@@ -1,4 +1,4 @@
-package lime.graphics.opengl; #if !js
+package lime.graphics.opengl; #if (!js || !html5)
 
 
 class GLTexture extends GLObject {
