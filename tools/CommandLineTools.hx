@@ -632,7 +632,7 @@ class CommandLineTools {
 					
 					for (samplePath in project.samplePaths) {
 						
-						if (FileSystem.exists (PathHelper.combine (samplePath, sampleName))) {
+						if (FileSystem.exists (PathHelper.combine (samplePath, projectName))) {
 							
 							sampleExists = true;
 							
@@ -941,13 +941,18 @@ class CommandLineTools {
 			
 			project.meta.buildNumber = Std.string (version);
 			
-			try {
+			if (increment) {
 				
-			   var output = File.write (versionFile, false);
-			   output.writeString (Std.string (version));
-			   output.close ();
+				try {
+					
+					var output = File.write (versionFile, false);
+					output.writeString (Std.string (version));
+					output.close ();
+					
+				} catch (e:Dynamic) {}
 				
-			} catch (e:Dynamic) {}
+			}
+			
 			
 		}
 		
@@ -1120,13 +1125,21 @@ class CommandLineTools {
 		
 		var config = getHXCPPConfig ();
 		
-		if (PlatformHelper.hostPlatform == Platform.WINDOWS) {
+		if (config != null) {
 			
-			if (config != null && config.environment.exists ("JAVA_HOME")) {
+			for (define in config.defines.keys ()) {
 				
-				Sys.putEnv ("JAVA_HOME", config.environment.get ("JAVA_HOME"));
+				if (define == define.toUpperCase ()) {
+					
+					Sys.putEnv (define, config.defines.get (define));
+					
+				}
 				
 			}
+			
+		}
+		
+		if (PlatformHelper.hostPlatform == Platform.WINDOWS) {
 			
 			if (Sys.getEnv ("JAVA_HOME") != null) {
 				
@@ -1271,7 +1284,7 @@ class CommandLineTools {
 			
 			case ANDROID, IOS, BLACKBERRY:
 				
-				getBuildNumber (project);
+				getBuildNumber (project, (project.command == "build" || project.command == "test"));
 				
 			default:
 			
@@ -1546,6 +1559,10 @@ class CommandLineTools {
 						
 						argument = "-verbose";
 						LogHelper.verbose = true;
+						
+					} else if (argument == "-dryrun") {
+						
+						ProcessHelper.dryRun = true;
 						
 					} else if (argument == "-notrace") {
 						

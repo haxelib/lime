@@ -2789,26 +2789,26 @@
 			</x>
 			<meta><m n=":noCompletion"/></meta>
 		</__moduleNames>
-		<findHaxeLib set="method" line="84" static="1"><f a="library">
+		<findHaxeLib set="method" line="86" static="1"><f a="library">
 	<c path="String"/>
 	<c path="String"/>
 </f></findHaxeLib>
-		<load public="1" set="method" line="129" static="1"><f a="library:method:?args:?lazy" v="::0:false">
+		<load public="1" set="method" line="131" static="1"><f a="library:method:?args:?lazy" v="::0:false">
 	<c path="String"/>
 	<c path="String"/>
 	<x path="Int"/>
 	<x path="Bool"/>
 	<d/>
 </f></load>
-		<sysName set="method" line="242" static="1"><f a=""><c path="String"/></f></sysName>
-		<tryLoad set="method" line="258" static="1"><f a="name:library:func:args">
+		<sysName set="method" line="244" static="1"><f a=""><c path="String"/></f></sysName>
+		<tryLoad set="method" line="260" static="1"><f a="name:library:func:args">
 	<c path="String"/>
 	<c path="String"/>
 	<c path="String"/>
 	<x path="Int"/>
 	<d/>
 </f></tryLoad>
-		<loaderTrace set="method" line="295" static="1"><f a="message">
+		<loaderTrace set="method" line="297" static="1"><f a="message">
 	<c path="String"/>
 	<x path="Void"/>
 </f></loaderTrace>
@@ -6797,25 +6797,25 @@
 	<c path="lime.utils.ByteArray"/>
 	<c path="String"/>
 </f></__base64Encode>
-		<__isJPG set="method" line="963" static="1"><f a="bytes">
+		<__isJPG set="method" line="966" static="1"><f a="bytes">
 	<c path="lime.utils.ByteArray"/>
 	<x path="Bool"/>
 </f></__isJPG>
-		<__isPNG set="method" line="971" static="1"><f a="bytes">
+		<__isPNG set="method" line="974" static="1"><f a="bytes">
 	<c path="lime.utils.ByteArray"/>
 	<x path="Bool"/>
 </f></__isPNG>
-		<__isGIF set="method" line="978" static="1"><f a="bytes">
+		<__isGIF set="method" line="981" static="1"><f a="bytes">
 	<c path="lime.utils.ByteArray"/>
 	<x path="Bool"/>
 </f></__isGIF>
-		<lime_image_encode line="1181" static="1"><f a="::">
+		<lime_image_encode line="1184" static="1"><f a="::">
 	<c path="lime.graphics.ImageBuffer"/>
 	<x path="Int"/>
 	<x path="Int"/>
 	<c path="lime.utils.ByteArray"/>
 </f></lime_image_encode>
-		<lime_image_load line="1182" static="1"><d/></lime_image_load>
+		<lime_image_load line="1185" static="1"><d/></lime_image_load>
 		<buffer public="1"><c path="lime.graphics.ImageBuffer"/></buffer>
 		<data public="1" get="accessor" set="accessor"><c path="lime.utils.UInt8Array"/></data>
 		<dirty public="1"><x path="Bool"/></dirty>
@@ -6934,33 +6934,33 @@
 	<f a=""><x path="Void"/></f>
 	<x path="Void"/>
 </f></__fromFile>
-		<__fromImageBuffer set="method" line="940"><f a="buffer">
+		<__fromImageBuffer set="method" line="943"><f a="buffer">
 	<c path="lime.graphics.ImageBuffer"/>
 	<x path="Void"/>
 </f></__fromImageBuffer>
-		<get_data set="method" line="1001"><f a=""><c path="lime.utils.UInt8Array"/></f></get_data>
-		<set_data set="method" line="1020"><f a="value">
+		<get_data set="method" line="1004"><f a=""><c path="lime.utils.UInt8Array"/></f></get_data>
+		<set_data set="method" line="1023"><f a="value">
 	<c path="lime.utils.UInt8Array"/>
 	<c path="lime.utils.UInt8Array"/>
 </f></set_data>
-		<get_powerOfTwo set="method" line="1027"><f a=""><x path="Bool"/></f></get_powerOfTwo>
-		<set_powerOfTwo set="method" line="1034"><f a="value">
+		<get_powerOfTwo set="method" line="1030"><f a=""><x path="Bool"/></f></get_powerOfTwo>
+		<set_powerOfTwo set="method" line="1037"><f a="value">
 	<x path="Bool"/>
 	<x path="Bool"/>
 </f></set_powerOfTwo>
-		<get_premultiplied set="method" line="1084"><f a=""><x path="Bool"/></f></get_premultiplied>
-		<set_premultiplied set="method" line="1091"><f a="value">
+		<get_premultiplied set="method" line="1087"><f a=""><x path="Bool"/></f></get_premultiplied>
+		<set_premultiplied set="method" line="1094"><f a="value">
 	<x path="Bool"/>
 	<x path="Bool"/>
 </f></set_premultiplied>
-		<get_rect public="1" set="method" line="1136"><f a=""><c path="lime.math.Rectangle"/></f></get_rect>
-		<get_src public="1" set="method" line="1143"><f a=""><d/></f></get_src>
-		<set_src set="method" line="1150"><f a="value">
+		<get_rect public="1" set="method" line="1139"><f a=""><c path="lime.math.Rectangle"/></f></get_rect>
+		<get_src public="1" set="method" line="1146"><f a=""><d/></f></get_src>
+		<set_src set="method" line="1153"><f a="value">
 	<d/>
 	<d/>
 </f></set_src>
-		<get_transparent set="method" line="1157"><f a=""><x path="Bool"/></f></get_transparent>
-		<set_transparent set="method" line="1164"><f a="value">
+		<get_transparent set="method" line="1160"><f a=""><x path="Bool"/></f></get_transparent>
+		<set_transparent set="method" line="1167"><f a="value">
 	<x path="Bool"/>
 	<x path="Bool"/>
 </f></set_transparent>
@@ -18752,11 +18752,11 @@
 		<eventInfo static="1"><c path="lime.ui._TouchEventManager.TouchEventInfo"/></eventInfo>
 		<create public="1" set="method" line="28" static="1"><f a=""><x path="Void"/></f></create>
 		<handleEvent set="method" line="39" static="1"><f a=""><x path="Void"/></f></handleEvent>
-		<registerWindow set="method" line="128" static="1"><f a="window">
+		<registerWindow set="method" line="112" static="1"><f a="window">
 	<c path="lime.ui.Window"/>
 	<x path="Void"/>
 </f></registerWindow>
-		<lime_touch_event_manager_register line="151" static="1"><f a=":">
+		<lime_touch_event_manager_register line="135" static="1"><f a=":">
 	<f a=""><x path="Void"/></f>
 	<c path="lime.ui._TouchEventManager.TouchEventInfo"/>
 	<unknown/>
@@ -18768,8 +18768,8 @@
 		<type public="1"><x path="lime.ui._TouchEventManager.TouchEventType"/></type>
 		<x public="1"><x path="Float"/></x>
 		<y public="1"><x path="Float"/></y>
-		<clone public="1" set="method" line="177"><f a=""><c path="lime.ui._TouchEventManager.TouchEventInfo"/></f></clone>
-		<new public="1" set="method" line="167"><f a="?type:?x:?y:?id" v="null:0:0:0">
+		<clone public="1" set="method" line="161"><f a=""><c path="lime.ui._TouchEventManager.TouchEventInfo"/></f></clone>
+		<new public="1" set="method" line="151"><f a="?type:?x:?y:?id" v="null:0:0:0">
 	<x path="lime.ui._TouchEventManager.TouchEventType"/>
 	<x path="Float"/>
 	<x path="Float"/>
@@ -18781,21 +18781,21 @@
 		<this><x path="Int"/></this>
 		<meta><m n=":enum"/></meta>
 		<impl><class path="lime.ui._TouchEventManager.TouchEventType_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/a3370b35bd8128d3/lime/lime/ui/TouchEventManager.hx" private="1" module="lime.ui.TouchEventManager">
-	<TOUCH_START public="1" get="inline" set="null" line="189" static="1">
+	<TOUCH_START public="1" get="inline" set="null" line="173" static="1">
 		<x path="lime.ui._TouchEventManager.TouchEventType"/>
 		<meta>
 			<m n=":enum"/>
 			<m n=":impl"/>
 		</meta>
 	</TOUCH_START>
-	<TOUCH_END public="1" get="inline" set="null" line="190" static="1">
+	<TOUCH_END public="1" get="inline" set="null" line="174" static="1">
 		<x path="lime.ui._TouchEventManager.TouchEventType"/>
 		<meta>
 			<m n=":enum"/>
 			<m n=":impl"/>
 		</meta>
 	</TOUCH_END>
-	<TOUCH_MOVE public="1" get="inline" set="null" line="191" static="1">
+	<TOUCH_MOVE public="1" get="inline" set="null" line="175" static="1">
 		<x path="lime.ui._TouchEventManager.TouchEventType"/>
 		<meta>
 			<m n=":enum"/>
@@ -18806,21 +18806,21 @@
 </class></impl>
 	</abstract>
 	<class path="lime.ui._TouchEventManager.TouchEventType_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/a3370b35bd8128d3/lime/lime/ui/TouchEventManager.hx" private="1" module="lime.ui.TouchEventManager">
-		<TOUCH_START public="1" get="inline" set="null" line="189" static="1">
+		<TOUCH_START public="1" get="inline" set="null" line="173" static="1">
 			<x path="lime.ui._TouchEventManager.TouchEventType"/>
 			<meta>
 				<m n=":enum"/>
 				<m n=":impl"/>
 			</meta>
 		</TOUCH_START>
-		<TOUCH_END public="1" get="inline" set="null" line="190" static="1">
+		<TOUCH_END public="1" get="inline" set="null" line="174" static="1">
 			<x path="lime.ui._TouchEventManager.TouchEventType"/>
 			<meta>
 				<m n=":enum"/>
 				<m n=":impl"/>
 			</meta>
 		</TOUCH_END>
-		<TOUCH_MOVE public="1" get="inline" set="null" line="191" static="1">
+		<TOUCH_MOVE public="1" get="inline" set="null" line="175" static="1">
 			<x path="lime.ui._TouchEventManager.TouchEventType"/>
 			<meta>
 				<m n=":enum"/>
