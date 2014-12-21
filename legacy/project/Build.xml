@@ -377,6 +377,7 @@
 				<vflag name="-framework" value="IOKit" />
 				<vflag name="-framework" value="Foundation" />
 				<vflag name="-framework" value="CoreAudio" />
+				<vflag name="-framework" value="CoreVideo" />
 				<vflag name="-framework" value="Carbon" />
 				<vflag name="-framework" value="AudioToolbox" />
 				<vflag name="-framework" value="AudioUnit" />
@@ -388,7 +389,6 @@
 				<vflag name="-framework" value="OpenAL"/>
 				<vflag name="-framework" value="AVFoundation" if="LEGACY_CAMERA" />
 				<vflag name="-framework" value="CoreMedia" if="LEGACY_CAMERA" />
-				<vflag name="-framework" value="CoreVideo" if="LEGACY_CAMERA" />
 				<lib name="-liconv" />
 				
 			</section>
@@ -411,8 +411,9 @@
 			
 			<section if="android">
 				
-				<lib name="-L../ndll/Android" if="LEGACY_OPENAL" />
-				<lib name="-lopenal" if="LEGACY_OPENAL" />
+				<lib name="-L../legacy/ndll/Android" if="LEGACY_OPENAL" />
+				<lib name="-lopenal" if="LEGACY_OPENAL" unless="HXCPP_X86"/>
+				<lib name="-lopenal-x86" if="LEGACY_OPENAL HXCPP_X86" />
 				<lib name="-ldl" />
 				<lib name="-landroid" />
 				<lib name="-lGLESv2" />

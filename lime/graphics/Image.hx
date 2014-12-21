@@ -252,6 +252,7 @@ class Image {
 			
 			case CANVAS:
 				
+				ImageCanvasUtil.convertToCanvas (this);
 				ImageCanvasUtil.copyPixels (this, sourceImage, sourceRect, destPoint, alphaImage, alphaPoint, mergeAlpha);
 			
 			case DATA:
@@ -291,11 +292,13 @@ class Image {
 			
 			case "png":
 				
-				#if (sys && (!disable_cffi || !format))
+				#if java
+				
+				#elseif (sys && (!disable_cffi || !format))
 				
 				return lime_image_encode (buffer, 0, quality);
 				
-				#else
+				#elseif !js
 				
 				try {
 					
@@ -330,7 +333,9 @@ class Image {
 			
 			case "jpg", "jpeg":
 				
-				#if (sys && (!disable_cffi || !format))
+				#if java
+				
+				#elseif (sys && (!disable_cffi || !format))
 				
 				return lime_image_encode (buffer, 1, quality);
 				
@@ -868,11 +873,11 @@ class Image {
 		// (issue #1019768)
 		if (image.complete) { }
 		
-		#elseif (cpp || neko || nodejs)
+		#elseif (cpp || neko || nodejs || java)
 		
 		var buffer = null;
 		
-		#if (sys && (!disable_cffi || !format))
+		#if (sys && (!disable_cffi || !format) && !java)
 		
 		var data = lime_image_load (path);
 		if (data != null) {
@@ -966,7 +971,7 @@ class Image {
 	private static function __isJPG (bytes:ByteArray) {
 		
 		bytes.position = 0;
-		return bytes.readByte () == 0xFF && bytes.readByte () == 0xD8;
+		return bytes.readUnsignedByte () == 0xFF && bytes.readUnsignedByte () == 0xD8;
 		
 	}
 	
@@ -974,7 +979,7 @@ class Image {
 	private static function __isPNG (bytes:ByteArray) {
 		
 		bytes.position = 0;
-		return (bytes.readByte () == 0x89 && bytes.readByte () == 0x50 && bytes.readByte () == 0x4E && bytes.readByte () == 0x47 && bytes.readByte () == 0x0D && bytes.readByte () == 0x0A && bytes.readByte () == 0x1A && bytes.readByte () == 0x0A);
+		return (bytes.readUnsignedByte () == 0x89 && bytes.readUnsignedByte () == 0x50 && bytes.readUnsignedByte () == 0x4E && bytes.readUnsignedByte () == 0x47 && bytes.readUnsignedByte () == 0x0D && bytes.readUnsignedByte () == 0x0A && bytes.readUnsignedByte () == 0x1A && bytes.readUnsignedByte () == 0x0A);
 		
 	}
 	
@@ -982,10 +987,10 @@ class Image {
 		
 		bytes.position = 0;
 		
-		if (bytes.readByte () == 0x47 && bytes.readByte () == 0x49 && bytes.readByte () == 0x46 && bytes.readByte () == 38) {
+		if (bytes.readUnsignedByte () == 0x47 && bytes.readUnsignedByte () == 0x49 && bytes.readUnsignedByte () == 0x46 && bytes.readUnsignedByte () == 0x38) {
 			
-			var b = bytes.readByte ();
-			return ((b == 7 || b == 9) && bytes.readByte () == 0x61);
+			var b = bytes.readUnsignedByte ();
+			return ((b == 0x37 || b == 0x39) && bytes.readUnsignedByte () == 0x61);
 			
 		}
 		
