@@ -18,13 +18,17 @@
 	<haxelib name="nodejs" if="nodejs" />
 	<haxelib name="format" if="java" />
 	
+	<target name="wiiu" handler="lime-wiiu" />
+	<haxelib name="lime-wiiu" if="wiiu" />
+	
+	<target name="console-pc" handler="lime-console-pc" />
+	<haxelib name="lime-console-pc" if="console-pc" />
+	
 	<section unless="display || lime-legacy">
 		
 		<ndll name="std" haxelib="hxcpp" if="cpp" />
 		<ndll name="regexp" haxelib="hxcpp" if="cpp" />
 		<ndll name="zlib" haxelib="hxcpp" if="cpp" />
-		
-		<ndll name="openal" register="false" if="android" />
 		
 		<ndll name="lime" if="included" />
 		
@@ -43,12 +47,6 @@
 		
 		<!-- <include haxelib="aether" unless="openfl" />
 		<haxelib name="aether" if="setup" /> -->
-		
-		<target name="wiiu" handler="lime-wiiu" />
-		<haxelib name="lime-wiiu" if="wiiu" />
-		
-		<target name="console-pc" handler="lime-console-pc" />
-		<haxelib name="lime-console-pc" if="console-pc" />
 		
 		<haxedef name="lime-curl" unless="lime-console || emscripten" />
 		<haxedef name="lime-opengl" unless="lime-console" />

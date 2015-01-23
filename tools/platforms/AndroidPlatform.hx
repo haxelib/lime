@@ -257,7 +257,7 @@ class AndroidPlatform extends PlatformTarget {
 						//asset.flatName += ((extension != "") ? "." + extension : "");
 						
 						//asset.resourceName = asset.flatName;
-						targetPath = destination + "/assets/" + asset.resourceName;
+						targetPath = PathHelper.combine (destination + "/assets/", asset.resourceName);
 						
 						//asset.resourceName = asset.id;
 						//targetPath = destination + "/res/raw/" + asset.flatName + "." + Path.extension (asset.targetPath);
@@ -300,7 +300,7 @@ class AndroidPlatform extends PlatformTarget {
 		
 		for (dependency in project.dependencies) {
 			
-			if (dependency.path != "" && FileSystem.isDirectory (dependency.path) && FileSystem.exists (PathHelper.combine (dependency.path, "project.properties"))) {
+			if (dependency.path != "" && FileSystem.exists (dependency.path) && FileSystem.isDirectory (dependency.path) && FileSystem.exists (PathHelper.combine (dependency.path, "project.properties"))) {
 				
 				var name = dependency.name;
 				if (name == "") name = "project" + index;
@@ -376,8 +376,9 @@ class AndroidPlatform extends PlatformTarget {
 			
 			if (asset.type == AssetType.TEMPLATE) {
 				
-				PathHelper.mkdir (Path.directory (destination + asset.targetPath));
-				FileHelper.copyAsset (asset, destination + asset.targetPath, context);
+				var targetPath = PathHelper.combine (destination, asset.targetPath);
+				PathHelper.mkdir (Path.directory (targetPath));
+				FileHelper.copyAsset (asset, targetPath, context);
 				
 			}
 			
