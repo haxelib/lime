@@ -2,6 +2,12 @@ package lime.system;
 #if !macro
 
 
+#if flash
+import flash.Lib;
+#elseif (html5 || disable_cffi)
+import haxe.Timer;
+#end
+
 #if (js && html5)
 import js.html.HtmlElement;
 import js.Browser;
@@ -19,6 +25,9 @@ class System {
 	
 	
 	@:noCompletion private static var __moduleNames:Map<String, String> = null;
+	#if (!flash && (html5 || disable_cffi))
+	@:noCompletion private static var __startTime:Float = Timer.stamp ();
+	#end
 	
 	#if neko
 	private static var __loadedNekoAPI:Bool;
@@ -29,7 +38,7 @@ class System {
 	
 	#if (js && html5)
 	@:keep @:expose("lime.embed")
-	public static function embed (element:Dynamic, width:Null<Int> = null, height:Null<Int> = null, background:String = null) {
+	public static function embed (element:Dynamic, width:Null<Int> = null, height:Null<Int> = null, background:String = null, assetsPrefix:String = null) {
 		
 		var htmlElement:HtmlElement = null;
 		
@@ -82,6 +91,7 @@ class System {
 		ApplicationMain.config.element = htmlElement;
 		ApplicationMain.config.width = width;
 		ApplicationMain.config.height = height;
+		ApplicationMain.config.assetsPrefix = assetsPrefix;
 		ApplicationMain.create ();
 		#end
 		
@@ -130,6 +140,19 @@ class System {
 		#end
 		
 		return "";
+		
+	}
+	
+	
+	public static function getTimer ():Int {
+		
+		#if flash
+		return flash.Lib.getTimer ();
+		#elseif (html5 || disable_cffi)
+		return Std.int ((Timer.stamp () - __startTime) * 1000);
+		#else
+		return lime_system_gettimer ();
+		#end
 		
 	}
 	
@@ -365,6 +388,18 @@ class System {
 		
 	}
 	
+	#end
+	
+	
+	
+	
+	// Native Methods
+	
+	
+	
+	
+	#if (cpp || neko || nodejs)
+	private static var lime_system_gettimer = System.load ("lime", "lime_system_gettimer", 0);
 	#end
 	
 	

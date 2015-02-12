@@ -9,10 +9,10 @@ import haxe.Serializer;
 import haxe.Unserializer;
 import haxe.io.Path;
 import haxe.rtti.Meta;
-import helpers.*;
+import lime.tools.helpers.*;
 import lime.system.System;
-import platforms.*;
-import project.*;
+import lime.tools.platforms.*;
+import lime.project.*;
 import sys.io.File;
 import sys.io.Process;
 import sys.FileSystem;
@@ -1147,19 +1147,35 @@ class CommandLineTools {
 				
 				if (define == define.toUpperCase ()) {
 					
+					var value = config.defines.get (define);
+					
 					switch (define) {
 						
-						case "ANT_HOME", "JAVA_HOME":
+						case "ANT_HOME":
 							
-							if (FileSystem.exists (config.defines.get (define))) {
+							if (value == "/usr") {
 								
-								Sys.putEnv (define, config.defines.get (define));
+								value = "/usr/share/ant";
+								
+							}
+							
+							if (FileSystem.exists (value)) {
+								
+								Sys.putEnv (define, value);
+								
+							}
+							
+						case "JAVA_HOME":
+							
+							if (FileSystem.exists (value)) {
+								
+								Sys.putEnv (define, value);
 								
 							}
 						
 						default:
 							
-							Sys.putEnv (define, config.defines.get (define));
+							Sys.putEnv (define, value);
 						
 					}
 					
