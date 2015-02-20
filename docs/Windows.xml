@@ -2602,7 +2602,7 @@
 	http://haxe.org/doc/cross/template</haxe_doc>
 		<meta><m n=":keep"/></meta>
 	</class>
-	<class path="haxe.Timer" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/haxe/Timer.hx">
+	<class path="haxe.Timer" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/haxe/Timer.hx">
 		<sRunningTimers line="211" static="1"><c path="Array"><c path="haxe.Timer"/></c></sRunningTimers>
 		<delay public="1" set="method" line="228" static="1"><f a="f:time">
 	<f a=""><x path="Void"/></f>
@@ -2876,13 +2876,13 @@
 		</make>
 		<meta><m n=":keep"/></meta>
 	</class>
-	<enum path="haxe.crypto.HashMethod" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/haxe/crypto/Hmac.hx" module="haxe.crypto.Hmac">
+	<enum path="haxe.crypto.HashMethod" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/haxe/crypto/Hmac.hx" module="haxe.crypto.Hmac">
 		<MD5/>
 		<SHA1/>
 		<SHA256/>
 		<meta><m n=":flatEnum"/></meta>
 	</enum>
-	<class path="haxe.crypto.Hmac" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/haxe/crypto/Hmac.hx">
+	<class path="haxe.crypto.Hmac" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/haxe/crypto/Hmac.hx">
 		<method><e path="haxe.crypto.HashMethod"/></method>
 		<blockSize><x path="Int"/></blockSize>
 		<length><x path="Int"/></length>
@@ -3041,7 +3041,7 @@
 		<new set="method" line="55"><f a=""><x path="Void"/></f></new>
 		<meta><m n=":keep"/></meta>
 	</class>
-	<class path="haxe.crypto.Sha256" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/haxe/crypto/Sha256.hx">
+	<class path="haxe.crypto.Sha256" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/haxe/crypto/Sha256.hx">
 		<encode public="1" set="method" line="26" static="1"><f a="s">
 	<c path="String"/>
 	<c path="String"/>
@@ -4182,7 +4182,7 @@
 </f></new>
 		<meta><m n=":keep"/></meta>
 	</class>
-	<class path="lime.AssetCache" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/Assets.hx" module="lime.Assets">
+	<class path="lime.AssetCache" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/Assets.hx" module="lime.Assets">
 		<audio public="1"><x path="Map">
 	<c path="String"/>
 	<c path="lime.audio.AudioBuffer"/>
@@ -4202,7 +4202,7 @@
 </f></clear>
 		<new public="1" set="method" line="1155"><f a=""><x path="Void"/></f></new>
 	</class>
-	<class path="lime.Assets" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/Assets.hx">
+	<class path="lime.Assets" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/Assets.hx">
 		<cache public="1" line="34" static="1"><c path="lime.AssetCache"/></cache>
 		<libraries public="1" set="null" line="35" static="1"><x path="Map">
 	<c path="String"/>
@@ -4359,7 +4359,7 @@
 </f></library_onEvent>
 		<meta><m n=":access"><e>'???'</e></m></meta>
 	</class>
-	<class path="lime.AssetLibrary" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/Assets.hx" module="lime.Assets">
+	<class path="lime.AssetLibrary" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/Assets.hx" module="lime.Assets">
 		<eventCallback public="1"><d/></eventCallback>
 		<exists public="1" set="method" line="984"><f a="id:type">
 	<c path="String"/>
@@ -4448,10 +4448,10 @@
 </f></loadText>
 		<new public="1" set="method" line="977"><f a=""><x path="Void"/></f></new>
 	</class>
-	<abstract path="lime.AssetType" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/Assets.hx" module="lime.Assets">
+	<abstract path="lime.AssetType" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/Assets.hx" module="lime.Assets">
 		<this><c path="String"/></this>
 		<meta><m n=":enum"/></meta>
-		<impl><class path="lime._Assets.AssetType_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/Assets.hx" private="1" module="lime.Assets">
+		<impl><class path="lime._Assets.AssetType_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/Assets.hx" private="1" module="lime.Assets">
 	<BINARY public="1" get="inline" set="null" line="1220" static="1">
 		<x path="lime.AssetType"/>
 		<meta>
@@ -4504,7 +4504,7 @@
 	<meta><m n=":enum"/></meta>
 </class></impl>
 	</abstract>
-	<class path="lime._Assets.AssetType_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/Assets.hx" private="1" module="lime.Assets">
+	<class path="lime._Assets.AssetType_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/Assets.hx" private="1" module="lime.Assets">
 		<BINARY public="1" get="inline" set="null" line="1220" static="1">
 			<x path="lime.AssetType"/>
 			<meta>
@@ -4651,7 +4651,7 @@
 </f></new>
 		<meta><m n=":keep"/></meta>
 	</class>
-	<class path="lime.system.System" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/system/System.hx">
+	<class path="lime.system.System" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/system/System.hx">
 		<disableCFFI public="1" static="1"><x path="Bool"/></disableCFFI>
 		<__moduleNames line="27" static="1">
 			<x path="Map">
@@ -4686,7 +4686,7 @@
 </f></loaderTrace>
 		<lime_system_gettimer line="402" static="1"><f a=""><x path="Int"/></f></lime_system_gettimer>
 	</class>
-	<class path="lime._backend.native.NativeApplication" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/_backend/native/NativeApplication.hx">
+	<class path="lime._backend.native.NativeApplication" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/_backend/native/NativeApplication.hx">
 		<lime_application_create line="300" static="1"><f a="">
 	<unknown/>
 	<unknown/>
@@ -4759,7 +4759,7 @@
 			<m n=":access"><e>'???'</e></m>
 		</meta>
 	</class>
-	<class path="lime._backend.native._NativeApplication.KeyEventInfo" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/_backend/native/NativeApplication.hx" private="1" module="lime._backend.native.NativeApplication">
+	<class path="lime._backend.native._NativeApplication.KeyEventInfo" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/_backend/native/NativeApplication.hx" private="1" module="lime._backend.native.NativeApplication">
 		<keyCode public="1"><x path="Int"/></keyCode>
 		<modifier public="1"><x path="Int"/></modifier>
 		<type public="1"><x path="lime._backend.native._NativeApplication.KeyEventType"/></type>
@@ -4771,10 +4771,10 @@
 	<x path="Void"/>
 </f></new>
 	</class>
-	<abstract path="lime._backend.native._NativeApplication.KeyEventType" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/_backend/native/NativeApplication.hx" private="1" module="lime._backend.native.NativeApplication">
+	<abstract path="lime._backend.native._NativeApplication.KeyEventType" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/_backend/native/NativeApplication.hx" private="1" module="lime._backend.native.NativeApplication">
 		<this><x path="Int"/></this>
 		<meta><m n=":enum"/></meta>
-		<impl><class path="lime._backend.native._NativeApplication.KeyEventType_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/_backend/native/NativeApplication.hx" private="1" module="lime._backend.native.NativeApplication">
+		<impl><class path="lime._backend.native._NativeApplication.KeyEventType_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/_backend/native/NativeApplication.hx" private="1" module="lime._backend.native.NativeApplication">
 	<KEY_DOWN public="1" get="inline" set="null" line="346" static="1">
 		<x path="lime._backend.native._NativeApplication.KeyEventType"/>
 		<meta>
@@ -4792,7 +4792,7 @@
 	<meta><m n=":enum"/></meta>
 </class></impl>
 	</abstract>
-	<class path="lime._backend.native._NativeApplication.KeyEventType_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/_backend/native/NativeApplication.hx" private="1" module="lime._backend.native.NativeApplication">
+	<class path="lime._backend.native._NativeApplication.KeyEventType_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/_backend/native/NativeApplication.hx" private="1" module="lime._backend.native.NativeApplication">
 		<KEY_DOWN public="1" get="inline" set="null" line="346" static="1">
 			<x path="lime._backend.native._NativeApplication.KeyEventType"/>
 			<meta>
@@ -4809,7 +4809,7 @@
 		</KEY_UP>
 		<meta><m n=":enum"/></meta>
 	</class>
-	<class path="lime._backend.native._NativeApplication.MouseEventInfo" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/_backend/native/NativeApplication.hx" private="1" module="lime._backend.native.NativeApplication">
+	<class path="lime._backend.native._NativeApplication.MouseEventInfo" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/_backend/native/NativeApplication.hx" private="1" module="lime._backend.native.NativeApplication">
 		<button public="1"><x path="Int"/></button>
 		<type public="1"><x path="lime._backend.native._NativeApplication.MouseEventType"/></type>
 		<x public="1"><x path="Float"/></x>
@@ -4823,10 +4823,10 @@
 	<x path="Void"/>
 </f></new>
 	</class>
-	<abstract path="lime._backend.native._NativeApplication.MouseEventType" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/_backend/native/NativeApplication.hx" private="1" module="lime._backend.native.NativeApplication">
+	<abstract path="lime._backend.native._NativeApplication.MouseEventType" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/_backend/native/NativeApplication.hx" private="1" module="lime._backend.native.NativeApplication">
 		<this><x path="Int"/></this>
 		<meta><m n=":enum"/></meta>
-		<impl><class path="lime._backend.native._NativeApplication.MouseEventType_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/_backend/native/NativeApplication.hx" private="1" module="lime._backend.native.NativeApplication">
+		<impl><class path="lime._backend.native._NativeApplication.MouseEventType_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/_backend/native/NativeApplication.hx" private="1" module="lime._backend.native.NativeApplication">
 	<MOUSE_DOWN public="1" get="inline" set="null" line="384" static="1">
 		<x path="lime._backend.native._NativeApplication.MouseEventType"/>
 		<meta>
@@ -4858,7 +4858,7 @@
 	<meta><m n=":enum"/></meta>
 </class></impl>
 	</abstract>
-	<class path="lime._backend.native._NativeApplication.MouseEventType_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/_backend/native/NativeApplication.hx" private="1" module="lime._backend.native.NativeApplication">
+	<class path="lime._backend.native._NativeApplication.MouseEventType_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/_backend/native/NativeApplication.hx" private="1" module="lime._backend.native.NativeApplication">
 		<MOUSE_DOWN public="1" get="inline" set="null" line="384" static="1">
 			<x path="lime._backend.native._NativeApplication.MouseEventType"/>
 			<meta>
@@ -4889,7 +4889,7 @@
 		</MOUSE_WHEEL>
 		<meta><m n=":enum"/></meta>
 	</class>
-	<class path="lime._backend.native._NativeApplication.RenderEventInfo" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/_backend/native/NativeApplication.hx" private="1" module="lime._backend.native.NativeApplication">
+	<class path="lime._backend.native._NativeApplication.RenderEventInfo" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/_backend/native/NativeApplication.hx" private="1" module="lime._backend.native.NativeApplication">
 		<context public="1"><e path="lime.graphics.RenderContext"/></context>
 		<type public="1"><x path="lime._backend.native._NativeApplication.RenderEventType"/></type>
 		<clone public="1" set="method" line="407"><f a=""><c path="lime._backend.native._NativeApplication.RenderEventInfo"/></f></clone>
@@ -4899,10 +4899,10 @@
 	<x path="Void"/>
 </f></new>
 	</class>
-	<abstract path="lime._backend.native._NativeApplication.RenderEventType" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/_backend/native/NativeApplication.hx" private="1" module="lime._backend.native.NativeApplication">
+	<abstract path="lime._backend.native._NativeApplication.RenderEventType" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/_backend/native/NativeApplication.hx" private="1" module="lime._backend.native.NativeApplication">
 		<this><x path="Int"/></this>
 		<meta><m n=":enum"/></meta>
-		<impl><class path="lime._backend.native._NativeApplication.RenderEventType_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/_backend/native/NativeApplication.hx" private="1" module="lime._backend.native.NativeApplication">
+		<impl><class path="lime._backend.native._NativeApplication.RenderEventType_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/_backend/native/NativeApplication.hx" private="1" module="lime._backend.native.NativeApplication">
 	<RENDER public="1" get="inline" set="null" line="419" static="1">
 		<x path="lime._backend.native._NativeApplication.RenderEventType"/>
 		<meta>
@@ -4927,7 +4927,7 @@
 	<meta><m n=":enum"/></meta>
 </class></impl>
 	</abstract>
-	<class path="lime._backend.native._NativeApplication.RenderEventType_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/_backend/native/NativeApplication.hx" private="1" module="lime._backend.native.NativeApplication">
+	<class path="lime._backend.native._NativeApplication.RenderEventType_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/_backend/native/NativeApplication.hx" private="1" module="lime._backend.native.NativeApplication">
 		<RENDER public="1" get="inline" set="null" line="419" static="1">
 			<x path="lime._backend.native._NativeApplication.RenderEventType"/>
 			<meta>
@@ -4951,7 +4951,7 @@
 		</RENDER_CONTEXT_RESTORED>
 		<meta><m n=":enum"/></meta>
 	</class>
-	<class path="lime._backend.native._NativeApplication.TouchEventInfo" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/_backend/native/NativeApplication.hx" private="1" module="lime._backend.native.NativeApplication">
+	<class path="lime._backend.native._NativeApplication.TouchEventInfo" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/_backend/native/NativeApplication.hx" private="1" module="lime._backend.native.NativeApplication">
 		<id public="1"><x path="Int"/></id>
 		<type public="1"><x path="lime._backend.native._NativeApplication.TouchEventType"/></type>
 		<x public="1"><x path="Float"/></x>
@@ -4965,10 +4965,10 @@
 	<x path="Void"/>
 </f></new>
 	</class>
-	<abstract path="lime._backend.native._NativeApplication.TouchEventType" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/_backend/native/NativeApplication.hx" private="1" module="lime._backend.native.NativeApplication">
+	<abstract path="lime._backend.native._NativeApplication.TouchEventType" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/_backend/native/NativeApplication.hx" private="1" module="lime._backend.native.NativeApplication">
 		<this><x path="Int"/></this>
 		<meta><m n=":enum"/></meta>
-		<impl><class path="lime._backend.native._NativeApplication.TouchEventType_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/_backend/native/NativeApplication.hx" private="1" module="lime._backend.native.NativeApplication">
+		<impl><class path="lime._backend.native._NativeApplication.TouchEventType_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/_backend/native/NativeApplication.hx" private="1" module="lime._backend.native.NativeApplication">
 	<TOUCH_START public="1" get="inline" set="null" line="457" static="1">
 		<x path="lime._backend.native._NativeApplication.TouchEventType"/>
 		<meta>
@@ -4993,7 +4993,7 @@
 	<meta><m n=":enum"/></meta>
 </class></impl>
 	</abstract>
-	<class path="lime._backend.native._NativeApplication.TouchEventType_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/_backend/native/NativeApplication.hx" private="1" module="lime._backend.native.NativeApplication">
+	<class path="lime._backend.native._NativeApplication.TouchEventType_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/_backend/native/NativeApplication.hx" private="1" module="lime._backend.native.NativeApplication">
 		<TOUCH_START public="1" get="inline" set="null" line="457" static="1">
 			<x path="lime._backend.native._NativeApplication.TouchEventType"/>
 			<meta>
@@ -5017,7 +5017,7 @@
 		</TOUCH_MOVE>
 		<meta><m n=":enum"/></meta>
 	</class>
-	<class path="lime._backend.native._NativeApplication.UpdateEventInfo" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/_backend/native/NativeApplication.hx" private="1" module="lime._backend.native.NativeApplication">
+	<class path="lime._backend.native._NativeApplication.UpdateEventInfo" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/_backend/native/NativeApplication.hx" private="1" module="lime._backend.native.NativeApplication">
 		<deltaTime public="1"><x path="Int"/></deltaTime>
 		<type public="1"><x path="lime._backend.native._NativeApplication.UpdateEventType"/></type>
 		<clone public="1" set="method" line="479"><f a=""><c path="lime._backend.native._NativeApplication.UpdateEventInfo"/></f></clone>
@@ -5027,10 +5027,10 @@
 	<x path="Void"/>
 </f></new>
 	</class>
-	<abstract path="lime._backend.native._NativeApplication.UpdateEventType" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/_backend/native/NativeApplication.hx" private="1" module="lime._backend.native.NativeApplication">
+	<abstract path="lime._backend.native._NativeApplication.UpdateEventType" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/_backend/native/NativeApplication.hx" private="1" module="lime._backend.native.NativeApplication">
 		<this><x path="Int"/></this>
 		<meta><m n=":enum"/></meta>
-		<impl><class path="lime._backend.native._NativeApplication.UpdateEventType_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/_backend/native/NativeApplication.hx" private="1" module="lime._backend.native.NativeApplication">
+		<impl><class path="lime._backend.native._NativeApplication.UpdateEventType_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/_backend/native/NativeApplication.hx" private="1" module="lime._backend.native.NativeApplication">
 	<UPDATE public="1" get="inline" set="null" line="491" static="1">
 		<x path="lime._backend.native._NativeApplication.UpdateEventType"/>
 		<meta>
@@ -5041,7 +5041,7 @@
 	<meta><m n=":enum"/></meta>
 </class></impl>
 	</abstract>
-	<class path="lime._backend.native._NativeApplication.UpdateEventType_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/_backend/native/NativeApplication.hx" private="1" module="lime._backend.native.NativeApplication">
+	<class path="lime._backend.native._NativeApplication.UpdateEventType_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/_backend/native/NativeApplication.hx" private="1" module="lime._backend.native.NativeApplication">
 		<UPDATE public="1" get="inline" set="null" line="491" static="1">
 			<x path="lime._backend.native._NativeApplication.UpdateEventType"/>
 			<meta>
@@ -5051,7 +5051,7 @@
 		</UPDATE>
 		<meta><m n=":enum"/></meta>
 	</class>
-	<class path="lime._backend.native._NativeApplication.WindowEventInfo" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/_backend/native/NativeApplication.hx" private="1" module="lime._backend.native.NativeApplication">
+	<class path="lime._backend.native._NativeApplication.WindowEventInfo" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/_backend/native/NativeApplication.hx" private="1" module="lime._backend.native.NativeApplication">
 		<height public="1"><x path="Int"/></height>
 		<type public="1"><x path="lime._backend.native._NativeApplication.WindowEventType"/></type>
 		<width public="1"><x path="Int"/></width>
@@ -5067,10 +5067,10 @@
 	<x path="Void"/>
 </f></new>
 	</class>
-	<abstract path="lime._backend.native._NativeApplication.WindowEventType" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/_backend/native/NativeApplication.hx" private="1" module="lime._backend.native.NativeApplication">
+	<abstract path="lime._backend.native._NativeApplication.WindowEventType" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/_backend/native/NativeApplication.hx" private="1" module="lime._backend.native.NativeApplication">
 		<this><x path="Int"/></this>
 		<meta><m n=":enum"/></meta>
-		<impl><class path="lime._backend.native._NativeApplication.WindowEventType_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/_backend/native/NativeApplication.hx" private="1" module="lime._backend.native.NativeApplication">
+		<impl><class path="lime._backend.native._NativeApplication.WindowEventType_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/_backend/native/NativeApplication.hx" private="1" module="lime._backend.native.NativeApplication">
 	<WINDOW_ACTIVATE public="1" get="inline" set="null" line="529" static="1">
 		<x path="lime._backend.native._NativeApplication.WindowEventType"/>
 		<meta>
@@ -5123,7 +5123,7 @@
 	<meta><m n=":enum"/></meta>
 </class></impl>
 	</abstract>
-	<class path="lime._backend.native._NativeApplication.WindowEventType_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/_backend/native/NativeApplication.hx" private="1" module="lime._backend.native.NativeApplication">
+	<class path="lime._backend.native._NativeApplication.WindowEventType_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/_backend/native/NativeApplication.hx" private="1" module="lime._backend.native.NativeApplication">
 		<WINDOW_ACTIVATE public="1" get="inline" set="null" line="529" static="1">
 			<x path="lime._backend.native._NativeApplication.WindowEventType"/>
 			<meta>
@@ -5175,7 +5175,7 @@
 		</WINDOW_RESIZE>
 		<meta><m n=":enum"/></meta>
 	</class>
-	<class path="lime._backend.native.NativeMouse" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/_backend/native/NativeMouse.hx">
+	<class path="lime._backend.native.NativeMouse" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/_backend/native/NativeMouse.hx">
 		<__cursor static="1"><e path="lime.ui.MouseCursor"/></__cursor>
 		<__hidden static="1"><x path="Bool"/></__hidden>
 		<hide public="1" set="method" line="15" static="1"><f a=""><x path="Void"/></f></hide>
@@ -5192,10 +5192,10 @@
 </f></lime_mouse_set_cursor>
 		<lime_mouse_show line="101" static="1"><f a=""><unknown/></f></lime_mouse_show>
 	</class>
-	<abstract path="lime._backend.native._NativeMouse.MouseCursorType" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/_backend/native/NativeMouse.hx" private="1" module="lime._backend.native.NativeMouse">
+	<abstract path="lime._backend.native._NativeMouse.MouseCursorType" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/_backend/native/NativeMouse.hx" private="1" module="lime._backend.native.NativeMouse">
 		<this><x path="Int"/></this>
 		<meta><m n=":enum"/></meta>
-		<impl><class path="lime._backend.native._NativeMouse.MouseCursorType_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/_backend/native/NativeMouse.hx" private="1" module="lime._backend.native.NativeMouse">
+		<impl><class path="lime._backend.native._NativeMouse.MouseCursorType_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/_backend/native/NativeMouse.hx" private="1" module="lime._backend.native.NativeMouse">
 	<ARROW public="1" get="inline" set="null" line="109" static="1">
 		<x path="lime._backend.native._NativeMouse.MouseCursorType"/>
 		<meta>
@@ -5283,7 +5283,7 @@
 	<meta><m n=":enum"/></meta>
 </class></impl>
 	</abstract>
-	<class path="lime._backend.native._NativeMouse.MouseCursorType_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/_backend/native/NativeMouse.hx" private="1" module="lime._backend.native.NativeMouse">
+	<class path="lime._backend.native._NativeMouse.MouseCursorType_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/_backend/native/NativeMouse.hx" private="1" module="lime._backend.native.NativeMouse">
 		<ARROW public="1" get="inline" set="null" line="109" static="1">
 			<x path="lime._backend.native._NativeMouse.MouseCursorType"/>
 			<meta>
@@ -5370,7 +5370,7 @@
 		</WAIT_ARROW>
 		<meta><m n=":enum"/></meta>
 	</class>
-	<class path="lime._backend.native.NativeRenderer" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/_backend/native/NativeRenderer.hx">
+	<class path="lime._backend.native.NativeRenderer" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/_backend/native/NativeRenderer.hx">
 		<lime_renderer_create line="68" static="1"><f a="">
 	<d/>
 	<unknown/>
@@ -5391,7 +5391,7 @@
 </f></new>
 		<meta><m n=":access"><e>'???'</e></m></meta>
 	</class>
-	<class path="lime._backend.native.NativeWindow" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/_backend/native/NativeWindow.hx">
+	<class path="lime._backend.native.NativeWindow" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/_backend/native/NativeWindow.hx">
 		<lime_window_close line="101" static="1"><f a="">
 	<d/>
 	<unknown/>
@@ -5448,10 +5448,10 @@
 </f></new>
 		<meta><m n=":access"><e>'???'</e></m></meta>
 	</class>
-	<abstract path="lime._backend.native._NativeWindow.WindowFlags" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/_backend/native/NativeWindow.hx" private="1" module="lime._backend.native.NativeWindow">
+	<abstract path="lime._backend.native._NativeWindow.WindowFlags" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/_backend/native/NativeWindow.hx" private="1" module="lime._backend.native.NativeWindow">
 		<this><x path="Int"/></this>
 		<meta><m n=":enum"/></meta>
-		<impl><class path="lime._backend.native._NativeWindow.WindowFlags_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/_backend/native/NativeWindow.hx" private="1" module="lime._backend.native.NativeWindow">
+		<impl><class path="lime._backend.native._NativeWindow.WindowFlags_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/_backend/native/NativeWindow.hx" private="1" module="lime._backend.native.NativeWindow">
 	<WINDOW_FLAG_FULLSCREEN public="1" get="inline" set="null" line="113" static="1">
 		<x path="lime._backend.native._NativeWindow.WindowFlags"/>
 		<meta>
@@ -5532,7 +5532,7 @@
 	<meta><m n=":enum"/></meta>
 </class></impl>
 	</abstract>
-	<class path="lime._backend.native._NativeWindow.WindowFlags_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/_backend/native/NativeWindow.hx" private="1" module="lime._backend.native.NativeWindow">
+	<class path="lime._backend.native._NativeWindow.WindowFlags_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/_backend/native/NativeWindow.hx" private="1" module="lime._backend.native.NativeWindow">
 		<WINDOW_FLAG_FULLSCREEN public="1" get="inline" set="null" line="113" static="1">
 			<x path="lime._backend.native._NativeWindow.WindowFlags"/>
 			<meta>
@@ -5612,8 +5612,8 @@
 		</WINDOW_FLAG_STENCIL_BUFFER>
 		<meta><m n=":enum"/></meta>
 	</class>
-	<class path="lime.app.Module" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/app/Module.hx"><new public="1" set="method" line="7"><f a=""><x path="Void"/></f></new></class>
-	<class path="lime.app.Application" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/app/Application.hx">
+	<class path="lime.app.Module" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/app/Module.hx"><new public="1" set="method" line="7"><f a=""><x path="Void"/></f></new></class>
+	<class path="lime.app.Application" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/app/Application.hx">
 		<extends path="lime.app.Module"/>
 		<current public="1" set="null" static="1"><c path="lime.app.Application"/></current>
 		<config public="1" set="null"><t path="lime.app.Config"/></config>
@@ -5877,11 +5877,11 @@
  * to override "on" functions in the class in order to handle standard events
  * that are relevant.</haxe_doc>
 	</class>
-	<typedef path="lime.app._Application.ApplicationBackend" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/app/Application.hx" private="1" module="lime.app.Application">
+	<typedef path="lime.app._Application.ApplicationBackend" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/app/Application.hx" private="1" module="lime.app.Application">
 		<c path="lime._backend.native.NativeApplication"/>
 		<meta><m n=":noCompletion"/></meta>
 	</typedef>
-	<typedef path="lime.app.Config" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/app/Config.hx"><a>
+	<typedef path="lime.app.Config" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/app/Config.hx"><a>
 	<width>
 		<t path="Null"><x path="Int"/></t>
 		<meta><m n=":optional"/></meta>
@@ -5935,7 +5935,7 @@
 		<meta><m n=":optional"/></meta>
 	</antialiasing>
 </a></typedef>
-	<class path="lime.app.Event" params="T" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/app/Event.hx">
+	<class path="lime.app.Event" params="T" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/app/Event.hx">
 		<listeners public="1">
 			<c path="Array"><c path="lime.app.Event.T"/></c>
 			<meta><m n=":noCompletion"/></meta>
@@ -5957,27 +5957,27 @@
 </f></remove>
 		<new public="1" set="method" line="17"><f a=""><x path="Void"/></f></new>
 	</class>
-	<class path="lime.app.Preloader" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/app/Preloader.hx">
+	<class path="lime.app.Preloader" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/app/Preloader.hx">
 		<complete public="1"><x path="Bool"/></complete>
 		<onComplete public="1"><d/></onComplete>
 		<create public="1" set="method" line="45"><f a="config">
 	<t path="lime.app.Config"/>
 	<x path="Void"/>
 </f></create>
-		<load public="1" set="method" line="70"><f a="urls:types">
+		<load public="1" set="method" line="67"><f a="urls:types">
 	<c path="Array"><c path="String"/></c>
 	<c path="Array"><x path="lime.AssetType"/></c>
 	<x path="Void"/>
 </f></load>
-		<start set="method" line="205"><f a=""><x path="Void"/></f></start>
-		<update set="method" line="224"><f a="loaded:total">
+		<start set="method" line="221"><f a=""><x path="Void"/></f></start>
+		<update set="method" line="240"><f a="loaded:total">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Void"/>
 </f></update>
 		<new public="1" set="method" line="34"><f a=""><x path="Void"/></f></new>
 	</class>
-	<class path="lime.audio.ALAudioContext" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/audio/ALAudioContext.hx">
+	<class path="lime.audio.ALAudioContext" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/audio/ALAudioContext.hx">
 		<NONE public="1"><x path="Int"/></NONE>
 		<FALSE public="1"><x path="Int"/></FALSE>
 		<TRUE public="1"><x path="Int"/></TRUE>
@@ -6421,7 +6421,7 @@
 </f></speedOfSound>
 		<new public="1" set="method" line="75"><f a=""><x path="Void"/></f></new>
 	</class>
-	<class path="lime.audio.ALCAudioContext" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/audio/ALCAudioContext.hx">
+	<class path="lime.audio.ALCAudioContext" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/audio/ALCAudioContext.hx">
 		<FALSE public="1"><x path="Int"/></FALSE>
 		<TRUE public="1"><x path="Int"/></TRUE>
 		<FREQUENCY public="1"><x path="Int"/></FREQUENCY>
@@ -6498,7 +6498,7 @@
 </f></suspendContext>
 		<new public="1" set="method" line="35"><f a=""><x path="Void"/></f></new>
 	</class>
-	<class path="lime.audio.AudioBuffer" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/audio/AudioBuffer.hx">
+	<class path="lime.audio.AudioBuffer" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/audio/AudioBuffer.hx">
 		<fromBytes public="1" set="method" line="48" static="1"><f a="bytes">
 	<c path="lime.utils.ByteArray"/>
 	<c path="lime.audio.AudioBuffer"/>
@@ -6525,7 +6525,7 @@
 		<dispose public="1" set="method" line="41"><f a=""><x path="Void"/></f></dispose>
 		<new public="1" set="method" line="34"><f a=""><x path="Void"/></f></new>
 	</class>
-	<enum path="lime.audio.AudioContext" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/audio/AudioContext.hx">
+	<enum path="lime.audio.AudioContext" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/audio/AudioContext.hx">
 		<OPENAL a="alc:al">
 			<c path="lime.audio.ALCAudioContext"/>
 			<c path="lime.audio.ALAudioContext"/>
@@ -6535,7 +6535,7 @@
 		<FLASH a="context"><c path="lime.audio.FlashAudioContext"/></FLASH>
 		<CUSTOM a="data"><d/></CUSTOM>
 	</enum>
-	<class path="lime.audio.AudioManager" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/audio/AudioManager.hx">
+	<class path="lime.audio.AudioManager" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/audio/AudioManager.hx">
 		<context public="1" static="1"><e path="lime.audio.AudioContext"/></context>
 		<init public="1" set="method" line="20" static="1"><f a="?context" v="null">
 	<e path="lime.audio.AudioContext"/>
@@ -6545,7 +6545,7 @@
 		<shutdown public="1" set="method" line="84" static="1"><f a=""><x path="Void"/></f></shutdown>
 		<suspend public="1" set="method" line="112" static="1"><f a=""><x path="Void"/></f></suspend>
 	</class>
-	<class path="lime.audio.AudioSource" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/audio/AudioSource.hx">
+	<class path="lime.audio.AudioSource" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/audio/AudioSource.hx">
 		<onComplete public="1"><c path="lime.app.Event"><f a=""><x path="Void"/></f></c></onComplete>
 		<buffer public="1"><c path="lime.audio.AudioBuffer"/></buffer>
 		<gain public="1" get="accessor" set="accessor"><x path="Float"/></gain>
@@ -6571,7 +6571,7 @@
 	<x path="Void"/>
 </f></new>
 	</class>
-	<class path="lime.audio.FlashAudioContext" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/audio/FlashAudioContext.hx">
+	<class path="lime.audio.FlashAudioContext" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/audio/FlashAudioContext.hx">
 		<createBuffer public="1" set="method" line="19"><f a="?stream:?context" v="null:null">
 	<d/>
 	<d/>
@@ -6646,7 +6646,7 @@
 </f></play>
 		<new public="1" set="method" line="12"><f a=""><x path="Void"/></f></new>
 	</class>
-	<class path="lime.audio.HTML5AudioContext" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/audio/HTML5AudioContext.hx">
+	<class path="lime.audio.HTML5AudioContext" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/audio/HTML5AudioContext.hx">
 		<HAVE_CURRENT_DATA public="1"><x path="Int"/></HAVE_CURRENT_DATA>
 		<HAVE_ENOUGH_DATA public="1"><x path="Int"/></HAVE_ENOUGH_DATA>
 		<HAVE_FUTURE_DATA public="1"><x path="Int"/></HAVE_FUTURE_DATA>
@@ -6834,7 +6834,7 @@
 </f></setVolume>
 		<new public="1" set="method" line="23"><f a=""><x path="Void"/></f></new>
 	</class>
-	<class path="lime.audio.WebAudioContext" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/audio/WebAudioContext.hx">
+	<class path="lime.audio.WebAudioContext" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/audio/WebAudioContext.hx">
 		<activeSourceCount public="1" set="null"><x path="Int"/></activeSourceCount>
 		<currentTime public="1" set="null"><x path="Float"/></currentTime>
 		<destination public="1" set="null"><d/></destination>
@@ -6903,7 +6903,7 @@
 		<startRendering public="1" set="method" line="41"><f a=""><x path="Void"/></f></startRendering>
 		<new public="1" set="method" line="15"><f a=""><x path="Void"/></f></new>
 	</class>
-	<class path="lime.audio.openal.AL" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/audio/openal/AL.hx">
+	<class path="lime.audio.openal.AL" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/audio/openal/AL.hx">
 		<NONE public="1" get="inline" set="null" line="11" static="1"><x path="Int"/></NONE>
 		<FALSE public="1" get="inline" set="null" line="12" static="1"><x path="Int"/></FALSE>
 		<TRUE public="1" get="inline" set="null" line="13" static="1"><x path="Int"/></TRUE>
@@ -7346,7 +7346,7 @@
 	<x path="Void"/>
 </f></speedOfSound>
 	</class>
-	<class path="lime.audio.openal.ALC" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/audio/openal/ALC.hx">
+	<class path="lime.audio.openal.ALC" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/audio/openal/ALC.hx">
 		<FALSE public="1" get="inline" set="null" line="10" static="1"><x path="Int"/></FALSE>
 		<TRUE public="1" get="inline" set="null" line="11" static="1"><x path="Int"/></TRUE>
 		<FREQUENCY public="1" get="inline" set="null" line="12" static="1"><x path="Int"/></FREQUENCY>
@@ -7422,7 +7422,7 @@
 	<x path="Void"/>
 </f></suspendContext>
 	</class>
-	<abstract path="lime.audio.openal.ALContext" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/audio/openal/ALContext.hx">
+	<abstract path="lime.audio.openal.ALContext" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/audio/openal/ALContext.hx">
 		<from><icast><t path="Null"><x path="Float"/></t></icast></from>
 		<this><t path="Null"><x path="Float"/></t></this>
 		<to><icast><t path="Null"><x path="Float"/></t></icast></to>
@@ -7430,7 +7430,7 @@
 			<m n=":allow"><e>'???'</e></m>
 			<m n=":allow"><e>'???'</e></m>
 		</meta>
-		<impl><class path="lime.audio.openal._ALContext.ALContext_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/audio/openal/ALContext.hx" private="1" module="lime.audio.openal.ALContext">
+		<impl><class path="lime.audio.openal._ALContext.ALContext_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/audio/openal/ALContext.hx" private="1" module="lime.audio.openal.ALContext">
 	<_new set="method" line="11" static="1">
 		<f a="handle">
 			<x path="Float"/>
@@ -7444,7 +7444,7 @@
 	</meta>
 </class></impl>
 	</abstract>
-	<class path="lime.audio.openal._ALContext.ALContext_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/audio/openal/ALContext.hx" private="1" module="lime.audio.openal.ALContext">
+	<class path="lime.audio.openal._ALContext.ALContext_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/audio/openal/ALContext.hx" private="1" module="lime.audio.openal.ALContext">
 		<_new set="method" line="11" static="1">
 			<f a="handle">
 				<x path="Float"/>
@@ -7457,7 +7457,7 @@
 			<m n=":allow"><e>'???'</e></m>
 		</meta>
 	</class>
-	<abstract path="lime.audio.openal.ALDevice" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/audio/openal/ALDevice.hx">
+	<abstract path="lime.audio.openal.ALDevice" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/audio/openal/ALDevice.hx">
 		<from><icast><t path="Null"><x path="Float"/></t></icast></from>
 		<this><t path="Null"><x path="Float"/></t></this>
 		<to><icast><t path="Null"><x path="Float"/></t></icast></to>
@@ -7465,7 +7465,7 @@
 			<m n=":allow"><e>'???'</e></m>
 			<m n=":allow"><e>'???'</e></m>
 		</meta>
-		<impl><class path="lime.audio.openal._ALDevice.ALDevice_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/audio/openal/ALDevice.hx" private="1" module="lime.audio.openal.ALDevice">
+		<impl><class path="lime.audio.openal._ALDevice.ALDevice_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/audio/openal/ALDevice.hx" private="1" module="lime.audio.openal.ALDevice">
 	<_new set="method" line="11" static="1">
 		<f a="handle">
 			<x path="Float"/>
@@ -7479,7 +7479,7 @@
 	</meta>
 </class></impl>
 	</abstract>
-	<class path="lime.audio.openal._ALDevice.ALDevice_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/audio/openal/ALDevice.hx" private="1" module="lime.audio.openal.ALDevice">
+	<class path="lime.audio.openal._ALDevice.ALDevice_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/audio/openal/ALDevice.hx" private="1" module="lime.audio.openal.ALDevice">
 		<_new set="method" line="11" static="1">
 			<f a="handle">
 				<x path="Float"/>
@@ -7492,7 +7492,7 @@
 			<m n=":allow"><e>'???'</e></m>
 		</meta>
 	</class>
-	<class path="lime.graphics.CanvasRenderContext" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/graphics/CanvasRenderContext.hx">
+	<class path="lime.graphics.CanvasRenderContext" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/graphics/CanvasRenderContext.hx">
 		<backingStorePixelRatio public="1" set="null"><x path="Float"/></backingStorePixelRatio>
 		<canvas public="1"><d/></canvas>
 		<fillStyle public="1"><d/></fillStyle>
@@ -7892,7 +7892,7 @@
 </f></translate>
 		<new public="1" set="method" line="32"><f a=""><x path="Void"/></f></new>
 	</class>
-	<class path="lime.graphics.ConsoleRenderContext" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/graphics/ConsoleRenderContext.hx">
+	<class path="lime.graphics.ConsoleRenderContext" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/graphics/ConsoleRenderContext.hx">
 		<clear public="1" set="method" line="81"><f a=""><x path="Void"/></f></clear>
 		<clearColor public="1" set="method" line="82"><f a="r:g:b:a">
 	<x path="Float"/>
@@ -7911,7 +7911,7 @@
 </f></clearStencil>
 		<new public="1" set="method" line="74"><f a=""><x path="Void"/></f></new>
 	</class>
-	<class path="lime.graphics.DOMRenderContext" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/graphics/DOMRenderContext.hx">
+	<class path="lime.graphics.DOMRenderContext" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/graphics/DOMRenderContext.hx">
 		<accessKey public="1"><c path="String"/></accessKey>
 		<align public="1"><c path="String"/></align>
 		<attributes public="1" set="null"><d/></attributes>
@@ -8220,7 +8220,7 @@
 </f></setAttributeNodeNS>
 		<new public="1" set="method" line="117"><f a=""><x path="Void"/></f></new>
 	</class>
-	<class path="lime.graphics.FlashRenderContext" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/graphics/FlashRenderContext.hx">
+	<class path="lime.graphics.FlashRenderContext" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/graphics/FlashRenderContext.hx">
 		<accessibilityImplementation public="1"><d/></accessibilityImplementation>
 		<accessibilityProperties public="1"><d/></accessibilityProperties>
 		<alpha public="1"><x path="Float"/></alpha>
@@ -8419,7 +8419,7 @@
 </f></willTrigger>
 		<new public="1" set="method" line="62"><f a=""><x path="Void"/></f></new>
 	</class>
-	<class path="lime.graphics.Font" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/graphics/Font.hx">
+	<class path="lime.graphics.Font" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/graphics/Font.hx">
 		<fromBytes public="1" set="method" line="229" static="1"><f a="bytes">
 	<c path="lime.utils.ByteArray"/>
 	<c path="lime.graphics.Font"/>
@@ -8509,7 +8509,7 @@
 </f></new>
 		<meta><m n=":autoBuild"><e>'???'</e></m></meta>
 	</class>
-	<class path="lime.graphics.GlyphRect" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/graphics/Font.hx" module="lime.graphics.Font">
+	<class path="lime.graphics.GlyphRect" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/graphics/Font.hx" module="lime.graphics.Font">
 		<x public="1"><x path="Float"/></x>
 		<y public="1"><x path="Float"/></y>
 		<width public="1"><x path="Float"/></width>
@@ -8526,7 +8526,7 @@
 	<x path="Void"/>
 </f></new>
 	</class>
-	<typedef path="lime.graphics.NativeFontData" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/graphics/Font.hx" module="lime.graphics.Font"><a>
+	<typedef path="lime.graphics.NativeFontData" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/graphics/Font.hx" module="lime.graphics.Font"><a>
 	<style_name><c path="String"/></style_name>
 	<num_glyphs><x path="Int"/></num_glyphs>
 	<kerning><c path="Array"><t path="lime.graphics.NativeKerningData"/></c></kerning>
@@ -8542,7 +8542,7 @@
 	<descend><x path="Int"/></descend>
 	<ascend><x path="Int"/></ascend>
 </a></typedef>
-	<typedef path="lime.graphics.NativeGlyphData" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/graphics/Font.hx" module="lime.graphics.Font"><a>
+	<typedef path="lime.graphics.NativeGlyphData" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/graphics/Font.hx" module="lime.graphics.Font"><a>
 	<points><c path="Array"><x path="Int"/></c></points>
 	<min_y><x path="Int"/></min_y>
 	<min_x><x path="Int"/></min_x>
@@ -8551,13 +8551,13 @@
 	<char_code><x path="Int"/></char_code>
 	<advance><x path="Int"/></advance>
 </a></typedef>
-	<typedef path="lime.graphics.NativeKerningData" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/graphics/Font.hx" module="lime.graphics.Font"><a>
+	<typedef path="lime.graphics.NativeKerningData" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/graphics/Font.hx" module="lime.graphics.Font"><a>
 	<y><x path="Int"/></y>
 	<x><x path="Int"/></x>
 	<right_glyph><x path="Int"/></right_glyph>
 	<left_glyph><x path="Int"/></left_glyph>
 </a></typedef>
-	<class path="lime.graphics.GLRenderContext" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/graphics/GLRenderContext.hx">
+	<class path="lime.graphics.GLRenderContext" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/graphics/GLRenderContext.hx">
 		<DEPTH_BUFFER_BIT public="1"><x path="Int"/></DEPTH_BUFFER_BIT>
 		<STENCIL_BUFFER_BIT public="1"><x path="Int"/></STENCIL_BUFFER_BIT>
 		<COLOR_BUFFER_BIT public="1"><x path="Int"/></COLOR_BUFFER_BIT>
@@ -9555,7 +9555,7 @@
 		<get_version set="method" line="1331"><f a=""><x path="Int"/></f></get_version>
 		<new public="1" set="method" line="365"><f a=""><x path="Void"/></f></new>
 	</class>
-	<class path="lime.graphics.Image" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/graphics/Image.hx">
+	<class path="lime.graphics.Image" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/graphics/Image.hx">
 		<__base64Chars line="53" static="1"><c path="String"/></__base64Chars>
 		<__base64Encoder static="1"><c path="haxe.crypto.BaseCode"/></__base64Encoder>
 		<fromBase64 public="1" set="method" line="379" static="1"><f a="base64:type:onload">
@@ -9796,14 +9796,14 @@
 			<m n=":access"><e>'???'</e></m>
 		</meta>
 	</class>
-	<enum path="lime.graphics.ImageChannel" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/graphics/Image.hx" module="lime.graphics.Image">
+	<enum path="lime.graphics.ImageChannel" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/graphics/Image.hx" module="lime.graphics.Image">
 		<RED/>
 		<GREEN/>
 		<BLUE/>
 		<ALPHA/>
 		<meta><m n=":flatEnum"/></meta>
 	</enum>
-	<class path="lime.graphics.ImageBuffer" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/graphics/ImageBuffer.hx">
+	<class path="lime.graphics.ImageBuffer" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/graphics/ImageBuffer.hx">
 		<bitsPerPixel public="1"><x path="Int"/></bitsPerPixel>
 		<data public="1"><c path="lime.utils.UInt8Array"/></data>
 		<height public="1"><x path="Int"/></height>
@@ -9850,14 +9850,14 @@
 </f></new>
 		<meta><m n=":allow"><e>'???'</e></m></meta>
 	</class>
-	<enum path="lime.graphics.ImageType" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/graphics/ImageType.hx">
+	<enum path="lime.graphics.ImageType" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/graphics/ImageType.hx">
 		<CANVAS/>
 		<DATA/>
 		<FLASH/>
 		<CUSTOM/>
 		<meta><m n=":flatEnum"/></meta>
 	</enum>
-	<enum path="lime.graphics.RenderContext" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/graphics/RenderContext.hx">
+	<enum path="lime.graphics.RenderContext" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/graphics/RenderContext.hx">
 		<OPENGL a="gl"><c path="lime.graphics.GLRenderContext"/></OPENGL>
 		<CANVAS a="context"><c path="lime.graphics.CanvasRenderContext"/></CANVAS>
 		<DOM a="element"><c path="lime.graphics.DOMRenderContext"/></DOM>
@@ -9865,7 +9865,7 @@
 		<CONSOLE a="context"><c path="lime.graphics.ConsoleRenderContext"/></CONSOLE>
 		<CUSTOM a="data"><d/></CUSTOM>
 	</enum>
-	<class path="lime.graphics.Renderer" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/graphics/Renderer.hx">
+	<class path="lime.graphics.Renderer" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/graphics/Renderer.hx">
 		<context public="1"><e path="lime.graphics.RenderContext"/></context>
 		<onRenderContextLost public="1"><c path="lime.app.Event"><f a=""><x path="Void"/></f></c></onRenderContextLost>
 		<onRenderContextRestored public="1"><c path="lime.app.Event"><f a="">
@@ -9889,22 +9889,22 @@
 	<x path="Void"/>
 </f></new>
 	</class>
-	<typedef path="lime.graphics._Renderer.RendererBackend" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/graphics/Renderer.hx" private="1" module="lime.graphics.Renderer">
+	<typedef path="lime.graphics._Renderer.RendererBackend" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/graphics/Renderer.hx" private="1" module="lime.graphics.Renderer">
 		<c path="lime._backend.native.NativeRenderer"/>
 		<meta><m n=":noCompletion"/></meta>
 	</typedef>
-	<class path="lime.graphics.format.BMP" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/graphics/format/BMP.hx"><encode public="1" set="method" line="12" static="1"><f a="image:?type" v=":null">
+	<class path="lime.graphics.format.BMP" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/graphics/format/BMP.hx"><encode public="1" set="method" line="12" static="1"><f a="image:?type" v=":null">
 	<c path="lime.graphics.Image"/>
 	<e path="lime.graphics.format.BMPType"/>
 	<c path="lime.utils.ByteArray"/>
 </f></encode></class>
-	<enum path="lime.graphics.format.BMPType" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/graphics/format/BMP.hx" module="lime.graphics.format.BMP">
+	<enum path="lime.graphics.format.BMPType" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/graphics/format/BMP.hx" module="lime.graphics.format.BMP">
 		<RGB/>
 		<BITFIELD/>
 		<ICO/>
 		<meta><m n=":flatEnum"/></meta>
 	</enum>
-	<class path="lime.graphics.format.JPEG" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/graphics/format/JPEG.hx">
+	<class path="lime.graphics.format.JPEG" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/graphics/format/JPEG.hx">
 		<encode public="1" set="method" line="12" static="1"><f a="image:quality">
 	<c path="lime.graphics.Image"/>
 	<x path="Int"/>
@@ -9917,7 +9917,7 @@
 	<c path="lime.utils.ByteArray"/>
 </f></lime_image_encode>
 	</class>
-	<class path="lime.graphics.format.PNG" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/graphics/format/PNG.hx">
+	<class path="lime.graphics.format.PNG" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/graphics/format/PNG.hx">
 		<encode public="1" set="method" line="20" static="1"><f a="image">
 	<c path="lime.graphics.Image"/>
 	<c path="lime.utils.ByteArray"/>
@@ -9929,7 +9929,7 @@
 	<c path="lime.utils.ByteArray"/>
 </f></lime_image_encode>
 	</class>
-	<class path="lime.graphics.opengl.GL" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/graphics/opengl/GL.hx">
+	<class path="lime.graphics.opengl.GL" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/graphics/opengl/GL.hx">
 		<DEPTH_BUFFER_BIT public="1" get="inline" set="null" line="29" static="1"><x path="Int"/></DEPTH_BUFFER_BIT>
 		<STENCIL_BUFFER_BIT public="1" get="inline" set="null" line="30" static="1"><x path="Int"/></STENCIL_BUFFER_BIT>
 		<COLOR_BUFFER_BIT public="1" get="inline" set="null" line="31" static="1"><x path="Int"/></COLOR_BUFFER_BIT>
@@ -10927,12 +10927,12 @@
 		<get_version set="method" line="2195" static="1"><f a=""><x path="Int"/></f></get_version>
 		<meta><m n=":allow"><e>'???'</e></m></meta>
 	</class>
-	<typedef path="lime.graphics.opengl.GLActiveInfo" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/graphics/opengl/GLActiveInfo.hx"><a>
+	<typedef path="lime.graphics.opengl.GLActiveInfo" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/graphics/opengl/GLActiveInfo.hx"><a>
 	<type><x path="Int"/></type>
 	<size><x path="Int"/></size>
 	<name><c path="String"/></name>
 </a></typedef>
-	<class path="lime.graphics.opengl.GLObject" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/graphics/opengl/GLObject.hx">
+	<class path="lime.graphics.opengl.GLObject" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/graphics/opengl/GLObject.hx">
 		<id public="1" set="null">
 			<d/>
 			<haxe_doc>The native GL handle/id. read only</haxe_doc>
@@ -10959,7 +10959,7 @@
 	<x path="Void"/>
 </f></new>
 	</class>
-	<class path="lime.graphics.opengl.GLBuffer" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/graphics/opengl/GLBuffer.hx">
+	<class path="lime.graphics.opengl.GLBuffer" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/graphics/opengl/GLBuffer.hx">
 		<extends path="lime.graphics.opengl.GLObject"/>
 		<getType set="method" line="7" override="1"><f a=""><c path="String"/></f></getType>
 		<new public="1" set="method" line="4"><f a="version:id">
@@ -10968,7 +10968,7 @@
 	<x path="Void"/>
 </f></new>
 	</class>
-	<typedef path="lime.graphics.opengl.GLContextAttributes" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/graphics/opengl/GLContextAttributes.hx"><a>
+	<typedef path="lime.graphics.opengl.GLContextAttributes" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/graphics/opengl/GLContextAttributes.hx"><a>
 	<stencil><x path="Bool"/></stencil>
 	<preserveDrawingBuffer><x path="Bool"/></preserveDrawingBuffer>
 	<premultipliedAlpha><x path="Bool"/></premultipliedAlpha>
@@ -10976,7 +10976,7 @@
 	<antialias><x path="Bool"/></antialias>
 	<alpha><x path="Bool"/></alpha>
 </a></typedef>
-	<class path="lime.graphics.opengl.GLFramebuffer" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/graphics/opengl/GLFramebuffer.hx">
+	<class path="lime.graphics.opengl.GLFramebuffer" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/graphics/opengl/GLFramebuffer.hx">
 		<extends path="lime.graphics.opengl.GLObject"/>
 		<getType set="method" line="7" override="1"><f a=""><c path="String"/></f></getType>
 		<new public="1" set="method" line="4"><f a="version:id">
@@ -10985,7 +10985,7 @@
 	<x path="Void"/>
 </f></new>
 	</class>
-	<class path="lime.graphics.opengl.GLProgram" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/graphics/opengl/GLProgram.hx">
+	<class path="lime.graphics.opengl.GLProgram" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/graphics/opengl/GLProgram.hx">
 		<extends path="lime.graphics.opengl.GLObject"/>
 		<shaders public="1"><c path="Array"><c path="lime.graphics.opengl.GLShader"/></c></shaders>
 		<attach public="1" set="method" line="18"><f a="shader">
@@ -11000,7 +11000,7 @@
 	<x path="Void"/>
 </f></new>
 	</class>
-	<class path="lime.graphics.opengl.GLRenderbuffer" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/graphics/opengl/GLRenderbuffer.hx">
+	<class path="lime.graphics.opengl.GLRenderbuffer" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/graphics/opengl/GLRenderbuffer.hx">
 		<extends path="lime.graphics.opengl.GLObject"/>
 		<getType set="method" line="7" override="1"><f a=""><c path="String"/></f></getType>
 		<new public="1" set="method" line="4"><f a="version:id">
@@ -11009,21 +11009,22 @@
 	<x path="Void"/>
 </f></new>
 	</class>
-	<class path="lime.graphics.opengl.GLShader" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/graphics/opengl/GLShader.hx">
+	<class path="lime.graphics.opengl.GLShader" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/graphics/opengl/GLShader.hx">
 		<extends path="lime.graphics.opengl.GLObject"/>
 		<getType set="method" line="7" override="1"><f a=""><c path="String"/></f></getType>
+		<isValid public="1" set="method" line="14" override="1"><f a=""><x path="Bool"/></f></isValid>
 		<new public="1" set="method" line="4"><f a="version:id">
 	<x path="Int"/>
 	<d/>
 	<x path="Void"/>
 </f></new>
 	</class>
-	<typedef path="lime.graphics.opengl.GLShaderPrecisionFormat" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/graphics/opengl/GLShaderPrecisionFormat.hx"><a>
+	<typedef path="lime.graphics.opengl.GLShaderPrecisionFormat" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/graphics/opengl/GLShaderPrecisionFormat.hx"><a>
 	<rangeMin><x path="Int"/></rangeMin>
 	<rangeMax><x path="Int"/></rangeMax>
 	<precision><x path="Int"/></precision>
 </a></typedef>
-	<class path="lime.graphics.opengl.GLTexture" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/graphics/opengl/GLTexture.hx">
+	<class path="lime.graphics.opengl.GLTexture" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/graphics/opengl/GLTexture.hx">
 		<extends path="lime.graphics.opengl.GLObject"/>
 		<getType set="method" line="7" override="1"><f a=""><c path="String"/></f></getType>
 		<new public="1" set="method" line="4"><f a="version:id">
@@ -11032,8 +11033,8 @@
 	<x path="Void"/>
 </f></new>
 	</class>
-	<typedef path="lime.graphics.opengl.GLUniformLocation" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/graphics/opengl/GLUniformLocation.hx"><x path="Int"/></typedef>
-	<class path="lime.graphics.utils.ImageCanvasUtil" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/graphics/utils/ImageCanvasUtil.hx">
+	<typedef path="lime.graphics.opengl.GLUniformLocation" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/graphics/opengl/GLUniformLocation.hx"><x path="Int"/></typedef>
+	<class path="lime.graphics.utils.ImageCanvasUtil" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/graphics/utils/ImageCanvasUtil.hx">
 		<colorTransform public="1" set="method" line="23" static="1"><f a="image:rect:colorMatrix">
 	<c path="lime.graphics.Image"/>
 	<c path="lime.math.Rectangle"/>
@@ -11150,7 +11151,7 @@
 </f></sync>
 		<meta><m n=":access"><e>'???'</e></m></meta>
 	</class>
-	<class path="lime.graphics.utils.ImageDataUtil" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/graphics/utils/ImageDataUtil.hx">
+	<class path="lime.graphics.utils.ImageDataUtil" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/graphics/utils/ImageDataUtil.hx">
 		<__alpha16 static="1"><x path="haxe.ds.Vector"><x path="Int"/></x></__alpha16>
 		<__clamp static="1"><x path="haxe.ds.Vector"><x path="Int"/></x></__clamp>
 		<colorTransform public="1" set="method" line="48" static="1"><f a="image:rect:colorMatrix">
@@ -11260,11 +11261,11 @@
 	<x path="Void"/>
 </f></unmultiplyAlpha>
 	</class>
-	<abstract path="lime.math.ColorMatrix" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/math/ColorMatrix.hx">
+	<abstract path="lime.math.ColorMatrix" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/math/ColorMatrix.hx">
 		<from><icast><c path="lime.utils.Float32Array"/></icast></from>
 		<this><c path="lime.utils.Float32Array"/></this>
 		<to><icast><c path="lime.utils.Float32Array"/></icast></to>
-		<impl><class path="lime.math._ColorMatrix.ColorMatrix_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/math/ColorMatrix.hx" private="1" module="lime.math.ColorMatrix">
+		<impl><class path="lime.math._ColorMatrix.ColorMatrix_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/math/ColorMatrix.hx" private="1" module="lime.math.ColorMatrix">
 	<__identity line="14" static="1"><c path="Array"><x path="Float"/></c></__identity>
 	<alphaMultiplier public="1" get="accessor" set="accessor" static="1">
 		<x path="Float"/>
@@ -11506,7 +11507,7 @@
 	</set>
 </class></impl>
 	</abstract>
-	<class path="lime.math._ColorMatrix.ColorMatrix_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/math/ColorMatrix.hx" private="1" module="lime.math.ColorMatrix">
+	<class path="lime.math._ColorMatrix.ColorMatrix_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/math/ColorMatrix.hx" private="1" module="lime.math.ColorMatrix">
 		<__identity line="14" static="1"><c path="Array"><x path="Float"/></c></__identity>
 		<alphaMultiplier public="1" get="accessor" set="accessor" static="1">
 			<x path="Float"/>
@@ -11747,7 +11748,7 @@
 			</meta>
 		</set>
 	</class>
-	<class path="lime.math.Matrix3" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/math/Matrix3.hx">
+	<class path="lime.math.Matrix3" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/math/Matrix3.hx">
 		<__identity line="14" static="1"><c path="lime.math.Matrix3"/></__identity>
 		<a public="1"><x path="Float"/></a>
 		<b public="1"><x path="Float"/></b>
@@ -11882,11 +11883,11 @@
 	<x path="Void"/>
 </f></new>
 	</class>
-	<abstract path="lime.math.Matrix4" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/math/Matrix4.hx">
+	<abstract path="lime.math.Matrix4" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/math/Matrix4.hx">
 		<from><icast><c path="lime.utils.Float32Array"/></icast></from>
 		<this><c path="lime.utils.Float32Array"/></this>
 		<to><icast><c path="lime.utils.Float32Array"/></icast></to>
-		<impl><class path="lime.math._Matrix4.Matrix4_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/math/Matrix4.hx" private="1" module="lime.math.Matrix4">
+		<impl><class path="lime.math._Matrix4.Matrix4_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/math/Matrix4.hx" private="1" module="lime.math.Matrix4">
 	<__identity line="10" static="1"><c path="Array"><x path="Float"/></c></__identity>
 	<determinant public="1" get="accessor" set="null" static="1">
 		<x path="Float"/>
@@ -12209,7 +12210,7 @@
 	</set>
 </class></impl>
 	</abstract>
-	<class path="lime.math._Matrix4.Matrix4_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/math/Matrix4.hx" private="1" module="lime.math.Matrix4">
+	<class path="lime.math._Matrix4.Matrix4_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/math/Matrix4.hx" private="1" module="lime.math.Matrix4">
 		<__identity line="10" static="1"><c path="Array"><x path="Float"/></c></__identity>
 		<determinant public="1" get="accessor" set="null" static="1">
 			<x path="Float"/>
@@ -12531,7 +12532,7 @@
 			</meta>
 		</set>
 	</class>
-	<class path="lime.math.Rectangle" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/math/Rectangle.hx">
+	<class path="lime.math.Rectangle" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/math/Rectangle.hx">
 		<bottom public="1" get="accessor" set="accessor"><x path="Float"/></bottom>
 		<bottomRight public="1" get="accessor" set="accessor"><c path="lime.math.Vector2"/></bottomRight>
 		<height public="1"><x path="Float"/></height>
@@ -12666,7 +12667,7 @@
 	<x path="Void"/>
 </f></new>
 	</class>
-	<class path="lime.math.Vector2" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/math/Vector2.hx">
+	<class path="lime.math.Vector2" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/math/Vector2.hx">
 		<distance public="1" set="method" line="39" static="1"><f a="pt1:pt2">
 	<c path="lime.math.Vector2"/>
 	<c path="lime.math.Vector2"/>
@@ -12721,7 +12722,7 @@
 	<x path="Void"/>
 </f></new>
 	</class>
-	<class path="lime.math.Vector4" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/math/Vector4.hx">
+	<class path="lime.math.Vector4" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/math/Vector4.hx">
 		<X_AXIS public="1" get="accessor" set="null" static="1"><c path="lime.math.Vector4"/></X_AXIS>
 		<Y_AXIS public="1" get="accessor" set="null" static="1"><c path="lime.math.Vector4"/></Y_AXIS>
 		<Z_AXIS public="1" get="accessor" set="null" static="1"><c path="lime.math.Vector4"/></Z_AXIS>
@@ -12808,7 +12809,7 @@
 	<x path="Void"/>
 </f></new>
 	</class>
-	<class path="lime.net.URIParser" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/net/URIParser.hx">
+	<class path="lime.net.URIParser" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/net/URIParser.hx">
 		<URI_REGEX public="1" line="6" static="1"><c path="EReg"/></URI_REGEX>
 		<QUERY_REGEX public="1" line="7" static="1"><c path="EReg"/></QUERY_REGEX>
 		<parseQuery public="1" set="method" line="56" static="1"><f a="query">
@@ -12835,11 +12836,11 @@
 	<x path="Void"/>
 </f></new>
 	</class>
-	<typedef path="lime.net.KVPair" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/net/URIParser.hx" module="lime.net.URIParser"><a>
+	<typedef path="lime.net.KVPair" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/net/URIParser.hx" module="lime.net.URIParser"><a>
 	<v><c path="String"/></v>
 	<k><c path="String"/></k>
 </a></typedef>
-	<class path="lime.net.URLLoader" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/net/URLLoader.hx">
+	<class path="lime.net.URLLoader" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/net/URLLoader.hx">
 		<bytesLoaded public="1"><x path="Int"/></bytesLoaded>
 		<bytesTotal public="1"><x path="Int"/></bytesTotal>
 		<data public="1"><d/></data>
@@ -12896,14 +12897,14 @@
 	<x path="Void"/>
 </f></new>
 	</class>
-	<typedef path="lime.net.XMLHttpRequestProgressEvent" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/net/URLLoader.hx" module="lime.net.URLLoader"><d/></typedef>
-	<enum path="lime.net.URLLoaderDataFormat" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/net/URLLoaderDataFormat.hx">
+	<typedef path="lime.net.XMLHttpRequestProgressEvent" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/net/URLLoader.hx" module="lime.net.URLLoader"><d/></typedef>
+	<enum path="lime.net.URLLoaderDataFormat" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/net/URLLoaderDataFormat.hx">
 		<BINARY/>
 		<TEXT/>
 		<VARIABLES/>
 		<meta><m n=":flatEnum"/></meta>
 	</enum>
-	<class path="lime.net.URLRequest" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/net/URLRequest.hx">
+	<class path="lime.net.URLRequest" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/net/URLRequest.hx">
 		<contentType public="1"><c path="String"/></contentType>
 		<data public="1"><d/></data>
 		<method public="1"><x path="lime.net.URLRequestMethod"/></method>
@@ -12916,7 +12917,7 @@
 	<x path="Void"/>
 </f></new>
 	</class>
-	<class path="lime.net.URLRequestHeader" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/net/URLRequestHeader.hx">
+	<class path="lime.net.URLRequestHeader" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/net/URLRequestHeader.hx">
 		<name public="1"><c path="String"/></name>
 		<value public="1"><c path="String"/></value>
 		<new public="1" set="method" line="11"><f a="?name:?value" v="'':''">
@@ -12925,10 +12926,10 @@
 	<x path="Void"/>
 </f></new>
 	</class>
-	<abstract path="lime.net.URLRequestMethod" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/net/URLRequestMethod.hx">
+	<abstract path="lime.net.URLRequestMethod" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/net/URLRequestMethod.hx">
 		<this><c path="String"/></this>
 		<meta><m n=":enum"/></meta>
-		<impl><class path="lime.net._URLRequestMethod.URLRequestMethod_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/net/URLRequestMethod.hx" private="1" module="lime.net.URLRequestMethod">
+		<impl><class path="lime.net._URLRequestMethod.URLRequestMethod_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/net/URLRequestMethod.hx" private="1" module="lime.net.URLRequestMethod">
 	<DELETE public="1" get="inline" set="null" line="6" static="1">
 		<x path="lime.net.URLRequestMethod"/>
 		<meta>
@@ -12974,7 +12975,7 @@
 	<meta><m n=":enum"/></meta>
 </class></impl>
 	</abstract>
-	<class path="lime.net._URLRequestMethod.URLRequestMethod_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/net/URLRequestMethod.hx" private="1" module="lime.net.URLRequestMethod">
+	<class path="lime.net._URLRequestMethod.URLRequestMethod_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/net/URLRequestMethod.hx" private="1" module="lime.net.URLRequestMethod">
 		<DELETE public="1" get="inline" set="null" line="6" static="1">
 			<x path="lime.net.URLRequestMethod"/>
 			<meta>
@@ -13019,7 +13020,7 @@
 		</PUT>
 		<meta><m n=":enum"/></meta>
 	</class>
-	<class path="lime.net.URLVariables" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/net/URLVariables.hx">
+	<class path="lime.net.URLVariables" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/net/URLVariables.hx">
 		<decode public="1" set="method" line="18"><f a="inVars">
 	<c path="String"/>
 	<x path="Void"/>
@@ -13031,11 +13032,11 @@
 </f></new>
 		<haxe_dynamic><d/></haxe_dynamic>
 	</class>
-	<abstract path="lime.net.curl.CURL" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/net/curl/CURL.hx">
+	<abstract path="lime.net.curl.CURL" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/net/curl/CURL.hx">
 		<from><icast><x path="Int"/></icast></from>
 		<this><x path="Int"/></this>
 		<to><icast><x path="Int"/></icast></to>
-		<impl><class path="lime.net.curl._CURL.CURL_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/net/curl/CURL.hx" private="1" module="lime.net.curl.CURL">
+		<impl><class path="lime.net.curl._CURL.CURL_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/net/curl/CURL.hx" private="1" module="lime.net.curl.CURL">
 	<GLOBAL_SSL public="1" get="inline" set="null" line="10" static="1"><x path="Int"/></GLOBAL_SSL>
 	<GLOBAL_WIN32 public="1" get="inline" set="null" line="11" static="1"><x path="Int"/></GLOBAL_WIN32>
 	<GLOBAL_ALL public="1" get="inline" set="null" line="12" static="1"><x path="Int"/></GLOBAL_ALL>
@@ -13067,7 +13068,7 @@
 	</intGt>
 </class></impl>
 	</abstract>
-	<class path="lime.net.curl._CURL.CURL_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/net/curl/CURL.hx" private="1" module="lime.net.curl.CURL">
+	<class path="lime.net.curl._CURL.CURL_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/net/curl/CURL.hx" private="1" module="lime.net.curl.CURL">
 		<GLOBAL_SSL public="1" get="inline" set="null" line="10" static="1"><x path="Int"/></GLOBAL_SSL>
 		<GLOBAL_WIN32 public="1" get="inline" set="null" line="11" static="1"><x path="Int"/></GLOBAL_WIN32>
 		<GLOBAL_ALL public="1" get="inline" set="null" line="12" static="1"><x path="Int"/></GLOBAL_ALL>
@@ -13098,10 +13099,10 @@
 			<meta><m n=":op"><e><![CDATA[A>B]]></e></m></meta>
 		</intGt>
 	</class>
-	<abstract path="lime.net.curl.CURLCode" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/net/curl/CURLCode.hx">
+	<abstract path="lime.net.curl.CURLCode" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/net/curl/CURLCode.hx">
 		<this><x path="Int"/></this>
 		<meta><m n=":enum"/></meta>
-		<impl><class path="lime.net.curl._CURLCode.CURLCode_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/net/curl/CURLCode.hx" private="1" module="lime.net.curl.CURLCode">
+		<impl><class path="lime.net.curl._CURLCode.CURLCode_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/net/curl/CURLCode.hx" private="1" module="lime.net.curl.CURLCode">
 	<OK public="1" get="inline" set="null" line="6" static="1">
 		<x path="lime.net.curl.CURLCode"/>
 		<meta>
@@ -13665,7 +13666,7 @@
 	<meta><m n=":enum"/></meta>
 </class></impl>
 	</abstract>
-	<class path="lime.net.curl._CURLCode.CURLCode_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/net/curl/CURLCode.hx" private="1" module="lime.net.curl.CURLCode">
+	<class path="lime.net.curl._CURLCode.CURLCode_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/net/curl/CURLCode.hx" private="1" module="lime.net.curl.CURLCode">
 		<OK public="1" get="inline" set="null" line="6" static="1">
 			<x path="lime.net.curl.CURLCode"/>
 			<meta>
@@ -14228,7 +14229,7 @@
 		</NO_CONNECTION_AVAILABLE>
 		<meta><m n=":enum"/></meta>
 	</class>
-	<class path="lime.net.curl.CURLEasy" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/net/curl/CURLEasy.hx">
+	<class path="lime.net.curl.CURLEasy" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/net/curl/CURLEasy.hx">
 		<cleanup public="1" set="method" line="11" static="1"><f a="handle">
 	<x path="lime.net.curl.CURL"/>
 	<x path="Void"/>
@@ -14280,10 +14281,10 @@
 	<c path="String"/>
 </f></unescape>
 	</class>
-	<abstract path="lime.net.curl.CURLInfo" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/net/curl/CURLInfo.hx">
+	<abstract path="lime.net.curl.CURLInfo" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/net/curl/CURLInfo.hx">
 		<this><x path="Int"/></this>
 		<meta><m n=":enum"/></meta>
-		<impl><class path="lime.net.curl._CURLInfo.CURLInfo_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/net/curl/CURLInfo.hx" private="1" module="lime.net.curl.CURLInfo">
+		<impl><class path="lime.net.curl._CURLInfo.CURLInfo_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/net/curl/CURLInfo.hx" private="1" module="lime.net.curl.CURLInfo">
 	<NONE public="1" get="inline" set="null" line="6" static="1">
 		<x path="lime.net.curl.CURLInfo"/>
 		<meta>
@@ -14595,7 +14596,7 @@
 	<meta><m n=":enum"/></meta>
 </class></impl>
 	</abstract>
-	<class path="lime.net.curl._CURLInfo.CURLInfo_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/net/curl/CURLInfo.hx" private="1" module="lime.net.curl.CURLInfo">
+	<class path="lime.net.curl._CURLInfo.CURLInfo_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/net/curl/CURLInfo.hx" private="1" module="lime.net.curl.CURLInfo">
 		<NONE public="1" get="inline" set="null" line="6" static="1">
 			<x path="lime.net.curl.CURLInfo"/>
 			<meta>
@@ -14906,10 +14907,10 @@
 		</TLS_SESSION>
 		<meta><m n=":enum"/></meta>
 	</class>
-	<abstract path="lime.net.curl.CURLOption" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/net/curl/CURLOption.hx">
+	<abstract path="lime.net.curl.CURLOption" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/net/curl/CURLOption.hx">
 		<this><x path="Int"/></this>
 		<meta><m n=":enum"/></meta>
-		<impl><class path="lime.net.curl._CURLOption.CURLOption_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/net/curl/CURLOption.hx" private="1" module="lime.net.curl.CURLOption">
+		<impl><class path="lime.net.curl._CURLOption.CURLOption_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/net/curl/CURLOption.hx" private="1" module="lime.net.curl.CURLOption">
 	<URL public="1" get="inline" set="null" line="8" static="1">
 		<x path="lime.net.curl.CURLOption"/>
 		<meta>
@@ -16369,7 +16370,7 @@
 	<meta><m n=":enum"/></meta>
 </class></impl>
 	</abstract>
-	<class path="lime.net.curl._CURLOption.CURLOption_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/net/curl/CURLOption.hx" private="1" module="lime.net.curl.CURLOption">
+	<class path="lime.net.curl._CURLOption.CURLOption_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/net/curl/CURLOption.hx" private="1" module="lime.net.curl.CURLOption">
 		<URL public="1" get="inline" set="null" line="8" static="1">
 			<x path="lime.net.curl.CURLOption"/>
 			<meta>
@@ -17828,10 +17829,10 @@
 		</LOGIN_OPTIONS>
 		<meta><m n=":enum"/></meta>
 	</class>
-	<abstract path="lime.net.curl.CURLVersion" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/net/curl/CURLVersion.hx">
+	<abstract path="lime.net.curl.CURLVersion" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/net/curl/CURLVersion.hx">
 		<this><x path="Int"/></this>
 		<meta><m n=":enum"/></meta>
-		<impl><class path="lime.net.curl._CURLVersion.CURLVersion_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/net/curl/CURLVersion.hx" private="1" module="lime.net.curl.CURLVersion">
+		<impl><class path="lime.net.curl._CURLVersion.CURLVersion_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/net/curl/CURLVersion.hx" private="1" module="lime.net.curl.CURLVersion">
 	<FIRST public="1" get="inline" set="null" line="6" static="1">
 		<x path="lime.net.curl.CURLVersion"/>
 		<meta>
@@ -17863,7 +17864,7 @@
 	<meta><m n=":enum"/></meta>
 </class></impl>
 	</abstract>
-	<class path="lime.net.curl._CURLVersion.CURLVersion_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/net/curl/CURLVersion.hx" private="1" module="lime.net.curl.CURLVersion">
+	<class path="lime.net.curl._CURLVersion.CURLVersion_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/net/curl/CURLVersion.hx" private="1" module="lime.net.curl.CURLVersion">
 		<FIRST public="1" get="inline" set="null" line="6" static="1">
 			<x path="lime.net.curl.CURLVersion"/>
 			<meta>
@@ -17894,7 +17895,7 @@
 		</FOURTH>
 		<meta><m n=":enum"/></meta>
 	</class>
-	<class path="lime.net.oauth.OAuthClient" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/net/oauth/OAuthClient.hx">
+	<class path="lime.net.oauth.OAuthClient" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/net/oauth/OAuthClient.hx">
 		<version public="1"><x path="lime.net.oauth.OAuthVersion"/></version>
 		<consumer public="1"><c path="lime.net.oauth.OAuthConsumer"/></consumer>
 		<createRequest public="1" set="method" line="23"><f a="method:url">
@@ -17909,7 +17910,7 @@
 	<x path="Void"/>
 </f></new>
 	</class>
-	<class path="lime.net.oauth.OAuthConsumer" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/net/oauth/OAuthConsumer.hx">
+	<class path="lime.net.oauth.OAuthConsumer" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/net/oauth/OAuthConsumer.hx">
 		<key public="1"><c path="String"/></key>
 		<secret public="1"><c path="String"/></secret>
 		<new public="1" set="method" line="11"><f a="key:secret">
@@ -17918,7 +17919,7 @@
 	<x path="Void"/>
 </f></new>
 	</class>
-	<class path="lime.net.oauth.OAuthRequest" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/net/oauth/OAuthRequest.hx">
+	<class path="lime.net.oauth.OAuthRequest" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/net/oauth/OAuthRequest.hx">
 		<version public="1"><x path="lime.net.oauth.OAuthVersion"/></version>
 		<parameters public="1"><x path="Map">
 	<c path="String"/>
@@ -17961,14 +17962,14 @@
 	<x path="Void"/>
 </f></new>
 	</class>
-	<typedef path="lime.net.oauth.KVPair" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/net/oauth/OAuthRequest.hx" module="lime.net.oauth.OAuthRequest"><a>
+	<typedef path="lime.net.oauth.KVPair" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/net/oauth/OAuthRequest.hx" module="lime.net.oauth.OAuthRequest"><a>
 	<v><c path="String"/></v>
 	<k><c path="String"/></k>
 </a></typedef>
-	<abstract path="lime.net.oauth.OAuthSignatureMethod" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/net/oauth/OAuthSignatureMethod.hx">
+	<abstract path="lime.net.oauth.OAuthSignatureMethod" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/net/oauth/OAuthSignatureMethod.hx">
 		<this><c path="String"/></this>
 		<meta><m n=":enum"/></meta>
-		<impl><class path="lime.net.oauth._OAuthSignatureMethod.OAuthSignatureMethod_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/net/oauth/OAuthSignatureMethod.hx" private="1" module="lime.net.oauth.OAuthSignatureMethod">
+		<impl><class path="lime.net.oauth._OAuthSignatureMethod.OAuthSignatureMethod_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/net/oauth/OAuthSignatureMethod.hx" private="1" module="lime.net.oauth.OAuthSignatureMethod">
 	<HMAC_SHA1 public="1" get="inline" set="null" line="7" static="1">
 		<x path="lime.net.oauth.OAuthSignatureMethod"/>
 		<meta>
@@ -17979,7 +17980,7 @@
 	<meta><m n=":enum"/></meta>
 </class></impl>
 	</abstract>
-	<class path="lime.net.oauth._OAuthSignatureMethod.OAuthSignatureMethod_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/net/oauth/OAuthSignatureMethod.hx" private="1" module="lime.net.oauth.OAuthSignatureMethod">
+	<class path="lime.net.oauth._OAuthSignatureMethod.OAuthSignatureMethod_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/net/oauth/OAuthSignatureMethod.hx" private="1" module="lime.net.oauth.OAuthSignatureMethod">
 		<HMAC_SHA1 public="1" get="inline" set="null" line="7" static="1">
 			<x path="lime.net.oauth.OAuthSignatureMethod"/>
 			<meta>
@@ -17989,7 +17990,7 @@
 		</HMAC_SHA1>
 		<meta><m n=":enum"/></meta>
 	</class>
-	<class path="lime.net.oauth.RequestToken" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/net/oauth/OAuthToken.hx" module="lime.net.oauth.OAuthToken">
+	<class path="lime.net.oauth.RequestToken" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/net/oauth/OAuthToken.hx" module="lime.net.oauth.OAuthToken">
 		<token public="1" set="null"><c path="String"/></token>
 		<secret public="1" set="null"><c path="String"/></secret>
 		<new public="1" set="method" line="9"><f a="token:secret">
@@ -17998,14 +17999,14 @@
 	<x path="Void"/>
 </f></new>
 	</class>
-	<class path="lime.net.oauth.AccessToken" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/net/oauth/OAuthToken.hx" module="lime.net.oauth.OAuthToken">
+	<class path="lime.net.oauth.AccessToken" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/net/oauth/OAuthToken.hx" module="lime.net.oauth.OAuthToken">
 		<token public="1" set="null"><c path="String"/></token>
 		<new public="1" set="method" line="22"><f a="token">
 	<c path="String"/>
 	<x path="Void"/>
 </f></new>
 	</class>
-	<class path="lime.net.oauth.OAuth1AccessToken" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/net/oauth/OAuthToken.hx" module="lime.net.oauth.OAuthToken">
+	<class path="lime.net.oauth.OAuth1AccessToken" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/net/oauth/OAuthToken.hx" module="lime.net.oauth.OAuthToken">
 		<extends path="lime.net.oauth.AccessToken"/>
 		<secret public="1" set="null"><c path="String"/></secret>
 		<new public="1" set="method" line="34"><f a="token:?secret" v=":null">
@@ -18014,7 +18015,7 @@
 	<x path="Void"/>
 </f></new>
 	</class>
-	<class path="lime.net.oauth.OAuth2AccessToken" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/net/oauth/OAuthToken.hx" module="lime.net.oauth.OAuthToken">
+	<class path="lime.net.oauth.OAuth2AccessToken" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/net/oauth/OAuthToken.hx" module="lime.net.oauth.OAuthToken">
 		<extends path="lime.net.oauth.AccessToken"/>
 		<expires public="1" set="null"><x path="Int"/></expires>
 		<new public="1" set="method" line="47"><f a="token:?expires" v=":null">
@@ -18023,17 +18024,17 @@
 	<x path="Void"/>
 </f></new>
 	</class>
-	<class path="lime.net.oauth.RefreshToken" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/net/oauth/OAuthToken.hx" module="lime.net.oauth.OAuthToken">
+	<class path="lime.net.oauth.RefreshToken" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/net/oauth/OAuthToken.hx" module="lime.net.oauth.OAuthToken">
 		<token public="1" set="null"><c path="String"/></token>
 		<new public="1" set="method" line="60"><f a="token">
 	<c path="String"/>
 	<x path="Void"/>
 </f></new>
 	</class>
-	<abstract path="lime.net.oauth.OAuthVersion" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/net/oauth/OAuthVersion.hx">
+	<abstract path="lime.net.oauth.OAuthVersion" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/net/oauth/OAuthVersion.hx">
 		<this><c path="String"/></this>
 		<meta><m n=":enum"/></meta>
-		<impl><class path="lime.net.oauth._OAuthVersion.OAuthVersion_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/net/oauth/OAuthVersion.hx" private="1" module="lime.net.oauth.OAuthVersion">
+		<impl><class path="lime.net.oauth._OAuthVersion.OAuthVersion_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/net/oauth/OAuthVersion.hx" private="1" module="lime.net.oauth.OAuthVersion">
 	<V1 public="1" get="inline" set="null" line="6" static="1">
 		<x path="lime.net.oauth.OAuthVersion"/>
 		<meta>
@@ -18051,7 +18052,7 @@
 	<meta><m n=":enum"/></meta>
 </class></impl>
 	</abstract>
-	<class path="lime.net.oauth._OAuthVersion.OAuthVersion_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/net/oauth/OAuthVersion.hx" private="1" module="lime.net.oauth.OAuthVersion">
+	<class path="lime.net.oauth._OAuthVersion.OAuthVersion_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/net/oauth/OAuthVersion.hx" private="1" module="lime.net.oauth.OAuthVersion">
 		<V1 public="1" get="inline" set="null" line="6" static="1">
 			<x path="lime.net.oauth.OAuthVersion"/>
 			<meta>
@@ -18068,7 +18069,7 @@
 		</V2>
 		<meta><m n=":enum"/></meta>
 	</class>
-	<typedef path="lime.project.ApplicationData" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/project/ApplicationData.hx"><a>
+	<typedef path="lime.project.ApplicationData" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/project/ApplicationData.hx"><a>
 	<url>
 		<c path="String"/>
 		<meta><m n=":optional"/></meta>
@@ -18098,7 +18099,7 @@
 		<meta><m n=":optional"/></meta>
 	</file>
 </a></typedef>
-	<enum path="lime.project.Architecture" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/project/Architecture.hx">
+	<enum path="lime.project.Architecture" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/project/Architecture.hx">
 		<ARMV5/>
 		<ARMV6/>
 		<ARMV7/>
@@ -18108,7 +18109,7 @@
 		<X64/>
 		<meta><m n=":flatEnum"/></meta>
 	</enum>
-	<class path="lime.project.Asset" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/project/Asset.hx">
+	<class path="lime.project.Asset" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/project/Asset.hx">
 		<data public="1"><d/></data>
 		<embed public="1"><t path="Null"><x path="Bool"/></t></embed>
 		<encoding public="1"><e path="lime.project.AssetEncoding"/></encoding>
@@ -18130,12 +18131,12 @@
 	<x path="Void"/>
 </f></new>
 	</class>
-	<enum path="lime.project.AssetEncoding" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/project/AssetEncoding.hx">
+	<enum path="lime.project.AssetEncoding" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/project/AssetEncoding.hx">
 		<NONE/>
 		<BASE64/>
 		<meta><m n=":flatEnum"/></meta>
 	</enum>
-	<enum path="lime.project.AssetType" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/project/AssetType.hx">
+	<enum path="lime.project.AssetType" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/project/AssetType.hx">
 		<BINARY/>
 		<FONT/>
 		<IMAGE/>
@@ -18146,9 +18147,10 @@
 		<TEXT/>
 		<meta><m n=":flatEnum"/></meta>
 	</enum>
-	<enum path="lime.project.Command" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/project/Command.hx">
+	<enum path="lime.project.Command" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/project/Command.hx">
 		<BUILD/>
 		<CLEAN/>
+		<DEPLOY/>
 		<DISPLAY/>
 		<UPDATE/>
 		<RUN/>
@@ -18158,11 +18160,11 @@
 		<REBUILD/>
 		<meta><m n=":flatEnum"/></meta>
 	</enum>
-	<abstract path="lime.project.ConfigData" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/project/ConfigData.hx">
+	<abstract path="lime.project.ConfigData" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/project/ConfigData.hx">
 		<from><icast><d/></icast></from>
 		<this><d/></this>
 		<to><icast><d/></icast></to>
-		<impl><class path="lime.project._ConfigData.ConfigData_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/project/ConfigData.hx" private="1" module="lime.project.ConfigData">
+		<impl><class path="lime.project._ConfigData.ConfigData_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/project/ConfigData.hx" private="1" module="lime.project.ConfigData">
 	<_new public="1" set="method" line="12" static="1">
 		<f a=""><d/></f>
 		<meta><m n=":impl"/></meta>
@@ -18345,7 +18347,7 @@
 	</setNode>
 </class></impl>
 	</abstract>
-	<class path="lime.project._ConfigData.ConfigData_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/project/ConfigData.hx" private="1" module="lime.project.ConfigData">
+	<class path="lime.project._ConfigData.ConfigData_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/project/ConfigData.hx" private="1" module="lime.project.ConfigData">
 		<_new public="1" set="method" line="12" static="1">
 			<f a=""><d/></f>
 			<meta><m n=":impl"/></meta>
@@ -18527,7 +18529,7 @@
 			<meta><m n=":impl"/></meta>
 		</setNode>
 	</class>
-	<class path="lime.project.Dependency" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/project/Dependency.hx">
+	<class path="lime.project.Dependency" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/project/Dependency.hx">
 		<name public="1"><c path="String"/></name>
 		<path public="1"><c path="String"/></path>
 		<clone public="1" set="method" line="19"><f a=""><c path="lime.project.Dependency"/></f></clone>
@@ -18537,7 +18539,7 @@
 	<x path="Void"/>
 </f></new>
 	</class>
-	<class path="lime.project.HXProject" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/project/HXProject.hx">
+	<class path="lime.project.HXProject" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/project/HXProject.hx">
 		<_command public="1" static="1"><c path="String"/></_command>
 		<_debug public="1" static="1"><x path="Bool"/></_debug>
 		<_target public="1" static="1"><x path="lime.project.Platform"/></_target>
@@ -18693,7 +18695,7 @@
 		<new public="1" set="method" line="107"><f a=""><x path="Void"/></f></new>
 		<meta><m n=":access"><e>'???'</e></m></meta>
 	</class>
-	<class path="lime.project.Haxelib" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/project/Haxelib.hx">
+	<class path="lime.project.Haxelib" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/project/Haxelib.hx">
 		<name public="1"><c path="String"/></name>
 		<version public="1"><c path="String"/></version>
 		<clone public="1" set="method" line="19"><f a=""><c path="lime.project.Haxelib"/></f></clone>
@@ -18703,7 +18705,7 @@
 	<x path="Void"/>
 </f></new>
 	</class>
-	<class path="lime.project.Icon" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/project/Icon.hx">
+	<class path="lime.project.Icon" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/project/Icon.hx">
 		<height public="1"><x path="Int"/></height>
 		<path public="1"><c path="String"/></path>
 		<size public="1"><x path="Int"/></size>
@@ -18715,7 +18717,7 @@
 	<x path="Void"/>
 </f></new>
 	</class>
-	<class path="lime.project.Keystore" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/project/Keystore.hx">
+	<class path="lime.project.Keystore" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/project/Keystore.hx">
 		<alias public="1"><c path="String"/></alias>
 		<aliasPassword public="1"><c path="String"/></aliasPassword>
 		<identity public="1"><c path="String"/></identity>
@@ -18736,7 +18738,7 @@
 	<x path="Void"/>
 </f></new>
 	</class>
-	<class path="lime.project.Library" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/project/Library.hx">
+	<class path="lime.project.Library" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/project/Library.hx">
 		<embed public="1"><t path="Null"><x path="Bool"/></t></embed>
 		<generate public="1"><x path="Bool"/></generate>
 		<name public="1"><c path="String"/></name>
@@ -18754,7 +18756,7 @@
 	<x path="Void"/>
 </f></new>
 	</class>
-	<typedef path="lime.project.MetaData" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/project/MetaData.hx"><a>
+	<typedef path="lime.project.MetaData" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/project/MetaData.hx"><a>
 	<version>
 		<c path="String"/>
 		<meta><m n=":optional"/></meta>
@@ -18788,7 +18790,7 @@
 		<meta><m n=":optional"/></meta>
 	</buildNumber>
 </a></typedef>
-	<class path="lime.project.NDLL" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/project/NDLL.hx">
+	<class path="lime.project.NDLL" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/project/NDLL.hx">
 		<extensionPath public="1"><c path="String"/></extensionPath>
 		<haxelib public="1"><c path="lime.project.Haxelib"/></haxelib>
 		<name public="1"><c path="String"/></name>
@@ -18805,23 +18807,23 @@
 	<x path="Void"/>
 </f></new>
 	</class>
-	<enum path="lime.project.NDLLType" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/project/NDLLType.hx">
+	<enum path="lime.project.NDLLType" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/project/NDLLType.hx">
 		<AUTO/>
 		<DYNAMIC/>
 		<STATIC/>
 		<meta><m n=":flatEnum"/></meta>
 	</enum>
-	<enum path="lime.project.Orientation" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/project/Orientation.hx">
+	<enum path="lime.project.Orientation" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/project/Orientation.hx">
 		<PORTRAIT/>
 		<LANDSCAPE/>
 		<ALL/>
 		<AUTO/>
 		<meta><m n=":flatEnum"/></meta>
 	</enum>
-	<abstract path="lime.project.Platform" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/project/Platform.hx">
+	<abstract path="lime.project.Platform" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/project/Platform.hx">
 		<this><c path="String"/></this>
 		<meta><m n=":enum"/></meta>
-		<impl><class path="lime.project._Platform.Platform_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/project/Platform.hx" private="1" module="lime.project.Platform">
+		<impl><class path="lime.project._Platform.Platform_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/project/Platform.hx" private="1" module="lime.project.Platform">
 	<ANDROID public="1" get="inline" set="null" line="6" static="1">
 		<x path="lime.project.Platform"/>
 		<meta>
@@ -18916,7 +18918,7 @@
 	<meta><m n=":enum"/></meta>
 </class></impl>
 	</abstract>
-	<class path="lime.project._Platform.Platform_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/project/Platform.hx" private="1" module="lime.project.Platform">
+	<class path="lime.project._Platform.Platform_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/project/Platform.hx" private="1" module="lime.project.Platform">
 		<ANDROID public="1" get="inline" set="null" line="6" static="1">
 			<x path="lime.project.Platform"/>
 			<meta>
@@ -19010,7 +19012,7 @@
 		</CUSTOM>
 		<meta><m n=":enum"/></meta>
 	</class>
-	<class path="lime.project.PlatformTarget" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/project/PlatformTarget.hx">
+	<class path="lime.project.PlatformTarget" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/project/PlatformTarget.hx">
 		<additionalArguments public="1"><c path="Array"><c path="String"/></c></additionalArguments>
 		<command public="1"><c path="String"/></command>
 		<project public="1"><c path="lime.project.HXProject"/></project>
@@ -19024,39 +19026,43 @@
 	<c path="Array"><c path="String"/></c>
 	<x path="Void"/>
 </f></execute>
-		<build public="1" set="method" line="116">
+		<build public="1" set="method" line="123">
 			<f a=""><x path="Void"/></f>
 			<meta><m n="ignore"/></meta>
 		</build>
-		<clean public="1" set="method" line="117">
+		<clean public="1" set="method" line="124">
 			<f a=""><x path="Void"/></f>
 			<meta><m n="ignore"/></meta>
 		</clean>
-		<display public="1" set="method" line="118">
+		<deploy public="1" set="method" line="125">
+			<f a=""><x path="Void"/></f>
+			<meta><m n="ignore"/></meta>
+		</deploy>
+		<display public="1" set="method" line="126">
 			<f a=""><x path="Void"/></f>
 			<meta><m n="ignore"/></meta>
 		</display>
-		<install public="1" set="method" line="119">
+		<install public="1" set="method" line="127">
 			<f a=""><x path="Void"/></f>
 			<meta><m n="ignore"/></meta>
 		</install>
-		<rebuild public="1" set="method" line="120">
+		<rebuild public="1" set="method" line="128">
 			<f a=""><x path="Void"/></f>
 			<meta><m n="ignore"/></meta>
 		</rebuild>
-		<run public="1" set="method" line="121">
+		<run public="1" set="method" line="129">
 			<f a=""><x path="Void"/></f>
 			<meta><m n="ignore"/></meta>
 		</run>
-		<trace public="1" set="method" line="122">
+		<trace public="1" set="method" line="130">
 			<f a=""><x path="Void"/></f>
 			<meta><m n="ignore"/></meta>
 		</trace>
-		<uninstall public="1" set="method" line="123">
+		<uninstall public="1" set="method" line="131">
 			<f a=""><x path="Void"/></f>
 			<meta><m n="ignore"/></meta>
 		</uninstall>
-		<update public="1" set="method" line="124">
+		<update public="1" set="method" line="132">
 			<f a=""><x path="Void"/></f>
 			<meta><m n="ignore"/></meta>
 		</update>
@@ -19070,14 +19076,14 @@
 	<x path="Void"/>
 </f></new>
 	</class>
-	<enum path="lime.project.PlatformType" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/project/PlatformType.hx">
+	<enum path="lime.project.PlatformType" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/project/PlatformType.hx">
 		<DESKTOP/>
 		<MOBILE/>
 		<WEB/>
 		<CONSOLE/>
 		<meta><m n=":flatEnum"/></meta>
 	</enum>
-	<class path="lime.project.ProjectXMLParser" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/project/ProjectXMLParser.hx">
+	<class path="lime.project.ProjectXMLParser" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/project/ProjectXMLParser.hx">
 		<extends path="lime.project.HXProject"/>
 		<varMatch line="25" static="1"><c path="EReg"/></varMatch>
 		<includePaths public="1"><c path="Array"><c path="String"/></c></includePaths>
@@ -19130,16 +19136,16 @@
 	<c path="String"/>
 	<x path="Void"/>
 </f></parseXML>
-		<parseWindowElement set="method" line="1558"><f a="element">
+		<parseWindowElement set="method" line="1562"><f a="element">
 	<c path="haxe.xml.Fast"/>
 	<x path="Void"/>
 </f></parseWindowElement>
-		<process public="1" set="method" line="1638"><f a="projectFile:useExtensionPath">
+		<process public="1" set="method" line="1642"><f a="projectFile:useExtensionPath">
 	<c path="String"/>
 	<x path="Bool"/>
 	<x path="Void"/>
 </f></process>
-		<substitute set="method" line="1659"><f a="string">
+		<substitute set="method" line="1663"><f a="string">
 	<c path="String"/>
 	<c path="String"/>
 </f></substitute>
@@ -19154,7 +19160,7 @@
 	<x path="Void"/>
 </f></new>
 	</class>
-	<class path="lime.project.SplashScreen" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/project/SplashScreen.hx">
+	<class path="lime.project.SplashScreen" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/project/SplashScreen.hx">
 		<height public="1"><x path="Int"/></height>
 		<path public="1"><c path="String"/></path>
 		<width public="1"><x path="Int"/></width>
@@ -19166,7 +19172,7 @@
 	<x path="Void"/>
 </f></new>
 	</class>
-	<typedef path="lime.project.WindowData" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/project/WindowData.hx"><a>
+	<typedef path="lime.project.WindowData" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/project/WindowData.hx"><a>
 	<y>
 		<t path="Null"><x path="Float"/></t>
 		<meta><m n=":optional"/></meta>
@@ -19244,8 +19250,8 @@
 		<meta><m n=":optional"/></meta>
 	</allowShaders>
 </a></typedef>
-	<class path="lime.tools.helpers.AIRHelper" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/tools/helpers/AIRHelper.hx"/>
-	<class path="lime.tools.helpers.AndroidHelper" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/tools/helpers/AndroidHelper.hx">
+	<class path="lime.tools.helpers.AIRHelper" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/tools/helpers/AIRHelper.hx"/>
+	<class path="lime.tools.helpers.AndroidHelper" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/tools/helpers/AndroidHelper.hx">
 		<adbName static="1"><c path="String"/></adbName>
 		<adbPath static="1"><c path="String"/></adbPath>
 		<androidName static="1"><c path="String"/></androidName>
@@ -19294,7 +19300,7 @@
 	<x path="Void"/>
 </f></uninstall>
 	</class>
-	<class path="lime.tools.helpers.AntHelper" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/tools/helpers/AntHelper.hx">
+	<class path="lime.tools.helpers.AntHelper" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/tools/helpers/AntHelper.hx">
 		<ant static="1"><c path="String"/></ant>
 		<initialize public="1" set="method" line="10" static="1"><f a="defines">
 	<x path="Map">
@@ -19309,7 +19315,7 @@
 	<x path="Void"/>
 </f></run>
 	</class>
-	<class path="lime.tools.helpers.ArrayHelper" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/tools/helpers/ArrayHelper.hx">
+	<class path="lime.tools.helpers.ArrayHelper" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/tools/helpers/ArrayHelper.hx">
 		<addUnique public="1" params="T" set="method" line="7" static="1"><f a="array:value">
 	<c path="Array"><c path="addUnique.T"/></c>
 	<c path="addUnique.T"/>
@@ -19328,19 +19334,19 @@
 	<x path="Bool"/>
 </f></containsValue>
 	</class>
-	<class path="lime.tools.helpers.AssetHelper" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/tools/helpers/AssetHelper.hx">
+	<class path="lime.tools.helpers.AssetHelper" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/tools/helpers/AssetHelper.hx">
 		<createManifest public="1" set="method" line="16" static="1"><f a="project:?targetPath" v=":''">
 	<c path="lime.project.HXProject"/>
 	<c path="String"/>
 	<c path="String"/>
 </f></createManifest>
-		<processLibraries public="1" set="method" line="51" static="1"><f a="project:?targetDirectory" v=":null">
+		<processLibraries public="1" set="method" line="50" static="1"><f a="project:?targetDirectory" v=":null">
 	<c path="lime.project.HXProject"/>
 	<c path="String"/>
 	<x path="Void"/>
 </f></processLibraries>
 	</class>
-	<class path="lime.tools.helpers.BlackBerryHelper" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/tools/helpers/BlackBerryHelper.hx">
+	<class path="lime.tools.helpers.BlackBerryHelper" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/tools/helpers/BlackBerryHelper.hx">
 		<binDirectory static="1"><c path="String"/></binDirectory>
 		<defines static="1"><x path="Map">
 	<c path="String"/>
@@ -19391,11 +19397,11 @@
 	<x path="Void"/>
 </f></trace>
 	</class>
-	<typedef path="lime.tools.helpers.BlackBerryDebugToken" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/tools/helpers/BlackBerryHelper.hx" module="lime.tools.helpers.BlackBerryHelper"><a>
+	<typedef path="lime.tools.helpers.BlackBerryDebugToken" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/tools/helpers/BlackBerryHelper.hx" module="lime.tools.helpers.BlackBerryHelper"><a>
 	<deviceIDs><c path="Array"><c path="String"/></c></deviceIDs>
 	<authorID><c path="String"/></authorID>
 </a></typedef>
-	<class path="lime.tools.helpers.CLIHelper" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/tools/helpers/CLIHelper.hx">
+	<class path="lime.tools.helpers.CLIHelper" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/tools/helpers/CLIHelper.hx">
 		<ask public="1" set="method" line="10" static="1"><f a="question:?options" v=":null">
 	<c path="String"/>
 	<c path="Array"><c path="String"/></c>
@@ -19415,13 +19421,13 @@
 </f></progress>
 		<readLine public="1" get="inline" set="null" line="93" static="1"><f a=""><c path="String"/></f></readLine>
 	</class>
-	<enum path="lime.tools.helpers.Answer" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/tools/helpers/CLIHelper.hx" module="lime.tools.helpers.CLIHelper">
+	<enum path="lime.tools.helpers.Answer" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/tools/helpers/CLIHelper.hx" module="lime.tools.helpers.CLIHelper">
 		<YES/>
 		<NO/>
 		<ALWAYS/>
 		<CUSTOM a="answer"><c path="String"/></CUSTOM>
 	</enum>
-	<class path="lime.tools.helpers.CPPHelper" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/tools/helpers/CPPHelper.hx">
+	<class path="lime.tools.helpers.CPPHelper" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/tools/helpers/CPPHelper.hx">
 		<rebuiltLibraries line="16" static="1"><x path="Map">
 	<c path="String"/>
 	<x path="Bool"/>
@@ -19452,7 +19458,7 @@
 	<x path="Void"/>
 </f></rebuildSingle>
 	</class>
-	<class path="lime.tools.helpers.CompatibilityHelper" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/tools/helpers/CompatibilityHelper.hx">
+	<class path="lime.tools.helpers.CompatibilityHelper" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/tools/helpers/CompatibilityHelper.hx">
 		<patchAssetLibrary public="1" set="method" line="13" static="1"><f a="project:haxelib:targetPath:context">
 	<c path="lime.project.HXProject"/>
 	<c path="lime.project.Haxelib"/>
@@ -19467,8 +19473,18 @@
 	<x path="Void"/>
 </f></patchProject>
 	</class>
-	<class path="lime.tools.helpers.CordovaHelper" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/tools/helpers/CordovaHelper.hx"/>
-	<class path="lime.tools.helpers.FileHelper" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/tools/helpers/FileHelper.hx">
+	<class path="lime.tools.helpers.CordovaHelper" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/tools/helpers/CordovaHelper.hx"/>
+	<class path="lime.tools.helpers.DeploymentHelper" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/tools/helpers/DeploymentHelper.hx"><deploy public="1" set="method" line="10" static="1"><f a="project:targetFlags:targetDirectory:targetName">
+	<c path="lime.project.HXProject"/>
+	<x path="Map">
+		<c path="String"/>
+		<c path="String"/>
+	</x>
+	<c path="String"/>
+	<c path="String"/>
+	<x path="Void"/>
+</f></deploy></class>
+	<class path="lime.tools.helpers.FileHelper" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/tools/helpers/FileHelper.hx">
 		<binaryExtensions line="28" static="1"><c path="Array"><c path="String"/></c></binaryExtensions>
 		<textExtensions line="29" static="1"><c path="Array"><c path="String"/></c></textExtensions>
 		<copyAsset public="1" set="method" line="32" static="1"><f a="asset:destination:?context" v="::null">
@@ -19550,50 +19566,50 @@
 	<x path="Bool"/>
 </f></isText>
 	</class>
-	<class path="lime.tools.helpers.FlashHelper" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/tools/helpers/FlashHelper.hx">
+	<class path="lime.tools.helpers.FlashHelper" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/tools/helpers/FlashHelper.hx">
 		<swfAssetID line="31" static="1"><x path="Int"/></swfAssetID>
-		<compileSWC set="method" line="539" static="1"><f a="project:assets:id">
+		<compileSWC set="method" line="540" static="1"><f a="project:assets:id">
 	<c path="lime.project.HXProject"/>
 	<c path="Array"><c path="lime.project.Asset"/></c>
 	<x path="Int"/>
 	<x path="Void"/>
 </f></compileSWC>
-		<embedAssets public="1" set="method" line="684" static="1"><f a="project">
+		<embedAssets public="1" set="method" line="685" static="1"><f a="project">
 	<c path="lime.project.HXProject"/>
 	<x path="Bool"/>
 </f></embedAssets>
-		<nextAssetID set="method" line="843" static="1"><f a=""><x path="Int"/></f></nextAssetID>
-		<run public="1" set="method" line="850" static="1"><f a="project:workingDirectory:targetPath">
+		<nextAssetID set="method" line="844" static="1"><f a=""><x path="Int"/></f></nextAssetID>
+		<run public="1" set="method" line="851" static="1"><f a="project:workingDirectory:targetPath">
 	<c path="lime.project.HXProject"/>
 	<c path="String"/>
 	<c path="String"/>
 	<x path="Void"/>
 </f></run>
 	</class>
-	<class path="lime.tools.helpers.HTML5Helper" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/tools/helpers/HTML5Helper.hx">
-		<generateFontData public="1" set="method" line="27" static="1"><f a="project:font">
+	<class path="lime.tools.helpers.HTML5Helper" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/tools/helpers/HTML5Helper.hx">
+		<generateFontData public="1" set="method" line="28" static="1"><f a="project:font">
 	<c path="lime.project.HXProject"/>
 	<c path="lime.project.Asset"/>
 	<c path="String"/>
 </f></generateFontData>
-		<generateWebfonts public="1" set="method" line="43" static="1"><f a="project:font">
+		<generateWebfonts public="1" set="method" line="44" static="1"><f a="project:font">
 	<c path="lime.project.HXProject"/>
 	<c path="lime.project.Asset"/>
 	<x path="Void"/>
 </f></generateWebfonts>
-		<launch public="1" set="method" line="89" static="1"><f a="project:path:?port" v="::3000">
+		<launch public="1" set="method" line="90" static="1"><f a="project:path:?port" v="::3000">
 	<c path="lime.project.HXProject"/>
 	<c path="String"/>
 	<x path="Int"/>
 	<x path="Void"/>
 </f></launch>
-		<minify public="1" set="method" line="154" static="1"><f a="project:sourceFile">
+		<minify public="1" set="method" line="155" static="1"><f a="project:sourceFile">
 	<c path="lime.project.HXProject"/>
 	<c path="String"/>
 	<x path="Bool"/>
 </f></minify>
 	</class>
-	<class path="lime.tools.helpers.IOSHelper" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/tools/helpers/IOSHelper.hx">
+	<class path="lime.tools.helpers.IOSHelper" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/tools/helpers/IOSHelper.hx">
 		<initialized line="16" static="1"><x path="Bool"/></initialized>
 		<build public="1" set="method" line="19" static="1"><f a="project:workingDirectory:?additionalArguments" v="::null">
 	<c path="lime.project.HXProject"/>
@@ -19628,7 +19644,7 @@
 	<x path="Void"/>
 </f></sign>
 	</class>
-	<class path="lime.tools.helpers.IconHelper" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/tools/helpers/IconHelper.hx">
+	<class path="lime.tools.helpers.IconHelper" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/tools/helpers/IconHelper.hx">
 		<canUseCache set="method" line="29" static="1"><f a="targetPath:icons">
 	<c path="String"/>
 	<c path="Array"><c path="lime.project.Icon"/></c>
@@ -19683,7 +19699,7 @@
 	<c path="haxe.io.Bytes"/>
 </f></packBits>
 	</class>
-	<class path="lime.tools.helpers.ImageHelper" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/tools/helpers/ImageHelper.hx">
+	<class path="lime.tools.helpers.ImageHelper" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/tools/helpers/ImageHelper.hx">
 		<rasterizeSVG public="1" set="method" line="17" static="1"><f a="path:width:height:?backgroundColor" v=":::null">
 	<c path="String"/>
 	<x path="Int"/>
@@ -19698,13 +19714,13 @@
 	<c path="lime.graphics.Image"/>
 </f></resizeImage>
 	</class>
-	<class path="lime.tools.helpers.JavaHelper" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/tools/helpers/JavaHelper.hx"><copyLibraries public="1" set="method" line="10" static="1"><f a="templatePaths:platformName:targetPath">
+	<class path="lime.tools.helpers.JavaHelper" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/tools/helpers/JavaHelper.hx"><copyLibraries public="1" set="method" line="10" static="1"><f a="templatePaths:platformName:targetPath">
 	<c path="Array"><c path="String"/></c>
 	<c path="String"/>
 	<c path="String"/>
 	<x path="Void"/>
 </f></copyLibraries></class>
-	<class path="lime.tools.helpers.LogHelper" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/tools/helpers/LogHelper.hx">
+	<class path="lime.tools.helpers.LogHelper" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/tools/helpers/LogHelper.hx">
 		<accentColor public="1" line="19" static="1"><c path="String"/></accentColor>
 		<enableColor public="1" line="20" static="1"><x path="Bool"/></enableColor>
 		<mute public="1" line="21" static="1"><x path="Bool"/></mute>
@@ -19746,7 +19762,7 @@
 	<x path="Void"/>
 </f></warn>
 	</class>
-	<class path="lime.tools.helpers.NekoHelper" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/tools/helpers/NekoHelper.hx">
+	<class path="lime.tools.helpers.NekoHelper" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/tools/helpers/NekoHelper.hx">
 		<copyLibraries public="1" set="method" line="11" static="1"><f a="templatePaths:platformName:targetPath">
 	<c path="Array"><c path="String"/></c>
 	<c path="String"/>
@@ -19769,13 +19785,13 @@
 	<x path="Void"/>
 </f></createWindowsExecutable>
 	</class>
-	<class path="lime.tools.helpers.NodeJSHelper" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/tools/helpers/NodeJSHelper.hx"><run public="1" set="method" line="14" static="1"><f a="project:modulePath:?args" v="::null">
+	<class path="lime.tools.helpers.NodeJSHelper" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/tools/helpers/NodeJSHelper.hx"><run public="1" set="method" line="14" static="1"><f a="project:modulePath:?args" v="::null">
 	<c path="lime.project.HXProject"/>
 	<c path="String"/>
 	<c path="Array"><c path="String"/></c>
 	<x path="Void"/>
 </f></run></class>
-	<class path="lime.tools.helpers.ObjectHelper" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/tools/helpers/ObjectHelper.hx">
+	<class path="lime.tools.helpers.ObjectHelper" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/tools/helpers/ObjectHelper.hx">
 		<copyFields public="1" params="T" set="method" line="11" static="1"><f a="source:destination">
 	<c path="copyFields.T"/>
 	<c path="copyFields.T"/>
@@ -19798,7 +19814,7 @@
 </f></deepCopy>
 		<meta><m n=":generic"/></meta>
 	</class>
-	<class path="lime.tools.helpers.PathHelper" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/tools/helpers/PathHelper.hx">
+	<class path="lime.tools.helpers.PathHelper" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/tools/helpers/PathHelper.hx">
 		<haxelibOverrides public="1" line="18" static="1"><x path="Map">
 	<c path="String"/>
 	<c path="String"/>
@@ -19838,7 +19854,7 @@
 	<x path="Bool"/>
 	<c path="String"/>
 </f></getHaxelib>
-		<getLibraryPath public="1" set="method" line="291" static="1"><f a="ndll:directoryName:?namePrefix:?nameSuffix:?allowDebug" v="::'':'.ndll':false">
+		<getLibraryPath public="1" set="method" line="299" static="1"><f a="ndll:directoryName:?namePrefix:?nameSuffix:?allowDebug" v="::'':'.ndll':false">
 	<c path="lime.project.NDLL"/>
 	<c path="String"/>
 	<c path="String"/>
@@ -19846,64 +19862,64 @@
 	<x path="Bool"/>
 	<c path="String"/>
 </f></getLibraryPath>
-		<getTemporaryFile public="1" set="method" line="314" static="1"><f a="?extension" v="''">
+		<getTemporaryFile public="1" set="method" line="322" static="1"><f a="?extension" v="''">
 	<c path="String"/>
 	<c path="String"/>
 </f></getTemporaryFile>
-		<getTemporaryDirectory public="1" set="method" line="347" static="1"><f a=""><c path="String"/></f></getTemporaryDirectory>
-		<isAbsolute public="1" set="method" line="356" static="1"><f a="path">
+		<getTemporaryDirectory public="1" set="method" line="355" static="1"><f a=""><c path="String"/></f></getTemporaryDirectory>
+		<isAbsolute public="1" set="method" line="364" static="1"><f a="path">
 	<c path="String"/>
 	<x path="Bool"/>
 </f></isAbsolute>
-		<isRelative public="1" set="method" line="369" static="1"><f a="path">
+		<isRelative public="1" set="method" line="377" static="1"><f a="path">
 	<c path="String"/>
 	<x path="Bool"/>
 </f></isRelative>
-		<mkdir public="1" set="method" line="376" static="1"><f a="directory">
+		<mkdir public="1" set="method" line="384" static="1"><f a="directory">
 	<c path="String"/>
 	<x path="Void"/>
 </f></mkdir>
-		<readDirectory public="1" set="method" line="431" static="1"><f a="directory:?ignore:?paths" v=":null:null">
+		<readDirectory public="1" set="method" line="439" static="1"><f a="directory:?ignore:?paths" v=":null:null">
 	<c path="String"/>
 	<c path="Array"><c path="String"/></c>
 	<c path="Array"><c path="String"/></c>
 	<c path="Array"><c path="String"/></c>
 </f></readDirectory>
-		<relocatePath public="1" set="method" line="504" static="1"><f a="path:targetDirectory">
+		<relocatePath public="1" set="method" line="512" static="1"><f a="path:targetDirectory">
 	<c path="String"/>
 	<c path="String"/>
 	<c path="String"/>
 </f></relocatePath>
-		<relocatePaths public="1" set="method" line="557" static="1"><f a="paths:targetDirectory">
+		<relocatePaths public="1" set="method" line="565" static="1"><f a="paths:targetDirectory">
 	<c path="Array"><c path="String"/></c>
 	<c path="String"/>
 	<c path="Array"><c path="String"/></c>
 </f></relocatePaths>
-		<removeDirectory public="1" set="method" line="572" static="1"><f a="directory">
+		<removeDirectory public="1" set="method" line="580" static="1"><f a="directory">
 	<c path="String"/>
 	<x path="Void"/>
 </f></removeDirectory>
-		<safeFileName public="1" set="method" line="621" static="1"><f a="name">
+		<safeFileName public="1" set="method" line="629" static="1"><f a="name">
 	<c path="String"/>
 	<c path="String"/>
 </f></safeFileName>
-		<searchForLibrary set="method" line="629" static="1"><f a="ndll:directoryName:filename">
+		<searchForLibrary set="method" line="637" static="1"><f a="ndll:directoryName:filename">
 	<c path="lime.project.NDLL"/>
 	<c path="String"/>
 	<c path="String"/>
 	<c path="String"/>
 </f></searchForLibrary>
-		<standardize public="1" set="method" line="702" static="1"><f a="path:?trailingSlash" v=":false">
+		<standardize public="1" set="method" line="710" static="1"><f a="path:?trailingSlash" v=":false">
 	<c path="String"/>
 	<x path="Bool"/>
 	<c path="String"/>
 </f></standardize>
-		<tryFullPath public="1" set="method" line="723" static="1"><f a="path">
+		<tryFullPath public="1" set="method" line="731" static="1"><f a="path">
 	<c path="String"/>
 	<c path="String"/>
 </f></tryFullPath>
 	</class>
-	<class path="lime.tools.helpers.PlatformHelper" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/tools/helpers/PlatformHelper.hx">
+	<class path="lime.tools.helpers.PlatformHelper" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/tools/helpers/PlatformHelper.hx">
 		<hostArchitecture public="1" get="accessor" set="null" static="1"><e path="lime.project.Architecture"/></hostArchitecture>
 		<hostPlatform public="1" get="accessor" set="null" static="1"><x path="lime.project.Platform"/></hostPlatform>
 		<_hostArchitecture static="1"><e path="lime.project.Architecture"/></_hostArchitecture>
@@ -19911,7 +19927,7 @@
 		<get_hostArchitecture set="method" line="19" static="1"><f a=""><e path="lime.project.Architecture"/></f></get_hostArchitecture>
 		<get_hostPlatform set="method" line="72" static="1"><f a=""><x path="lime.project.Platform"/></f></get_hostPlatform>
 	</class>
-	<class path="lime.tools.helpers.ProcessHelper" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/tools/helpers/ProcessHelper.hx">
+	<class path="lime.tools.helpers.ProcessHelper" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/tools/helpers/ProcessHelper.hx">
 		<dryRun public="1" line="15" static="1"><x path="Bool"/></dryRun>
 		<processorCores public="1" get="accessor" set="null" static="1"><x path="Int"/></processorCores>
 		<_processorCores line="18" static="1"><x path="Int"/></_processorCores>
@@ -19960,7 +19976,7 @@
 </f></_runProcess>
 		<get_processorCores public="1" set="method" line="433" static="1"><f a=""><x path="Int"/></f></get_processorCores>
 	</class>
-	<class path="lime.tools.helpers.StringHelper" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/tools/helpers/StringHelper.hx">
+	<class path="lime.tools.helpers.StringHelper" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/tools/helpers/StringHelper.hx">
 		<seedNumber line="14" static="1"><x path="Int"/></seedNumber>
 		<base64Chars line="15" static="1"><c path="String"/></base64Chars>
 		<base64Encoder static="1"><c path="haxe.crypto.BaseCode"/></base64Encoder>
@@ -20010,7 +20026,7 @@
 	<c path="String"/>
 </f></underline>
 	</class>
-	<class path="lime.tools.helpers.StringMapHelper" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/tools/helpers/StringMapHelper.hx">
+	<class path="lime.tools.helpers.StringMapHelper" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/tools/helpers/StringMapHelper.hx">
 		<copy public="1" params="T" set="method" line="10" static="1"><f a="source">
 	<c path="haxe.ds.StringMap"><c path="copy.T"/></c>
 	<c path="haxe.ds.StringMap"><c path="copy.T"/></c>
@@ -20026,7 +20042,7 @@
 	<x path="Void"/>
 </f></copyUniqueKeys>
 	</class>
-	<class path="lime.tools.helpers.TizenHelper" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/tools/helpers/TizenHelper.hx">
+	<class path="lime.tools.helpers.TizenHelper" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/tools/helpers/TizenHelper.hx">
 		<cacheID line="19" static="1"><c path="String"/></cacheID>
 		<cacheUUID line="20" static="1"><c path="String"/></cacheUUID>
 		<createPackage public="1" set="method" line="23" static="1"><f a="project:workingDirectory:targetPath">
@@ -20066,7 +20082,7 @@
 	<x path="Void"/>
 </f></trace>
 	</class>
-	<class path="lime.tools.helpers.WebOSHelper" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/tools/helpers/WebOSHelper.hx">
+	<class path="lime.tools.helpers.WebOSHelper" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/tools/helpers/WebOSHelper.hx">
 		<createPackage public="1" set="method" line="13" static="1"><f a="project:workingDirectory:targetPath">
 	<c path="lime.project.HXProject"/>
 	<c path="String"/>
@@ -20095,65 +20111,38 @@
 	<x path="Void"/>
 </f></trace>
 	</class>
-	<class path="lime.tools.helpers.ZipHelper" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/tools/helpers/ZipHelper.hx">
+	<class path="lime.tools.helpers.ZipHelper" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/tools/helpers/ZipHelper.hx">
 		<compress public="1" set="method" line="14" static="1"><f a="path:?targetPath" v=":''">
 	<c path="String"/>
 	<c path="String"/>
 	<x path="Void"/>
 </f></compress>
-		<readDirectory set="method" line="66" static="1"><f a="basePath:path:files">
+		<readDirectory set="method" line="75" static="1"><f a="basePath:path:files">
 	<c path="String"/>
 	<c path="String"/>
 	<c path="Array"><d/></c>
 	<x path="Void"/>
 </f></readDirectory>
-		<readFile set="method" line="90" static="1"><f a="basePath:path:files">
+		<readFile set="method" line="99" static="1"><f a="basePath:path:files">
 	<c path="String"/>
 	<c path="String"/>
 	<c path="Array"><d/></c>
 	<x path="Void"/>
 </f></readFile>
 	</class>
-	<class path="lime.tools.platforms.AndroidPlatform" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/tools/platforms/AndroidPlatform.hx">
+	<class path="lime.tools.platforms.AndroidPlatform" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/tools/platforms/AndroidPlatform.hx">
 		<extends path="lime.project.PlatformTarget"/>
 		<deviceID><c path="String"/></deviceID>
-		<build public="1" set="method" line="58" override="1"><f a=""><x path="Void"/></f></build>
-		<clean public="1" set="method" line="155" override="1"><f a=""><x path="Void"/></f></clean>
-		<display public="1" set="method" line="166" override="1"><f a=""><x path="Void"/></f></display>
-		<install public="1" set="method" line="179" override="1"><f a=""><x path="Void"/></f></install>
-		<rebuild public="1" set="method" line="194" override="1"><f a=""><x path="Void"/></f></rebuild>
-		<run public="1" set="method" line="211" override="1"><f a=""><x path="Void"/></f></run>
-		<trace public="1" set="method" line="218" override="1"><f a=""><x path="Void"/></f></trace>
-		<uninstall public="1" set="method" line="225" override="1"><f a=""><x path="Void"/></f></uninstall>
-		<update public="1" set="method" line="232" override="1"><f a=""><x path="Void"/></f></update>
-		<new public="1" set="method" line="29"><f a="command:_project:targetFlags">
-	<c path="String"/>
-	<c path="lime.project.HXProject"/>
-	<x path="Map">
-		<c path="String"/>
-		<c path="String"/>
-	</x>
-	<x path="Void"/>
-</f></new>
-	</class>
-	<class path="lime.tools.platforms.BlackBerryPlatform" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/tools/platforms/BlackBerryPlatform.hx">
-		<extends path="lime.project.PlatformTarget"/>
-		<outputFile><c path="String"/></outputFile>
-		<build public="1" set="method" line="63" override="1"><f a=""><x path="Void"/></f></build>
-		<clean public="1" set="method" line="155" override="1"><f a=""><x path="Void"/></f></clean>
-		<display public="1" set="method" line="166" override="1"><f a=""><x path="Void"/></f></display>
-		<rebuild public="1" set="method" line="204" override="1"><f a=""><x path="Void"/></f></rebuild>
+		<build public="1" set="method" line="59" override="1"><f a=""><x path="Void"/></f></build>
+		<clean public="1" set="method" line="156" override="1"><f a=""><x path="Void"/></f></clean>
+		<deploy public="1" set="method" line="167" override="1"><f a=""><x path="Void"/></f></deploy>
+		<display public="1" set="method" line="174" override="1"><f a=""><x path="Void"/></f></display>
+		<install public="1" set="method" line="187" override="1"><f a=""><x path="Void"/></f></install>
+		<rebuild public="1" set="method" line="202" override="1"><f a=""><x path="Void"/></f></rebuild>
 		<run public="1" set="method" line="219" override="1"><f a=""><x path="Void"/></f></run>
-		<trace public="1" set="method" line="234" override="1"><f a=""><x path="Void"/></f></trace>
-		<update public="1" set="method" line="249" override="1"><f a=""><x path="Void"/></f></update>
-		<install public="1" set="method" line="373" override="1">
-			<f a=""><x path="Void"/></f>
-			<meta><m n="ignore"/></meta>
-		</install>
-		<uninstall public="1" set="method" line="374" override="1">
-			<f a=""><x path="Void"/></f>
-			<meta><m n="ignore"/></meta>
-		</uninstall>
+		<trace public="1" set="method" line="226" override="1"><f a=""><x path="Void"/></f></trace>
+		<uninstall public="1" set="method" line="233" override="1"><f a=""><x path="Void"/></f></uninstall>
+		<update public="1" set="method" line="240" override="1"><f a=""><x path="Void"/></f></update>
 		<new public="1" set="method" line="30"><f a="command:_project:targetFlags">
 	<c path="String"/>
 	<c path="lime.project.HXProject"/>
@@ -20164,251 +20153,26 @@
 	<x path="Void"/>
 </f></new>
 	</class>
-	<class path="lime.tools.platforms.EmscriptenPlatform" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/tools/platforms/EmscriptenPlatform.hx">
+	<class path="lime.tools.platforms.BlackBerryPlatform" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/tools/platforms/BlackBerryPlatform.hx">
 		<extends path="lime.project.PlatformTarget"/>
 		<outputFile><c path="String"/></outputFile>
-		<build public="1" set="method" line="38" override="1"><f a=""><x path="Void"/></f></build>
-		<clean public="1" set="method" line="171" override="1"><f a=""><x path="Void"/></f></clean>
-		<display public="1" set="method" line="182" override="1"><f a=""><x path="Void"/></f></display>
-		<rebuild public="1" set="method" line="208" override="1"><f a=""><x path="Void"/></f></rebuild>
-		<run public="1" set="method" line="215" override="1"><f a=""><x path="Void"/></f></run>
-		<update public="1" set="method" line="222" override="1"><f a=""><x path="Void"/></f></update>
-		<install public="1" set="method" line="299" override="1">
-			<f a=""><x path="Void"/></f>
-			<meta><m n="ignore"/></meta>
-		</install>
-		<trace public="1" set="method" line="300" override="1">
-			<f a=""><x path="Void"/></f>
-			<meta><m n="ignore"/></meta>
-		</trace>
-		<uninstall public="1" set="method" line="301" override="1">
-			<f a=""><x path="Void"/></f>
-			<meta><m n="ignore"/></meta>
-		</uninstall>
-		<new public="1" set="method" line="28"><f a="command:_project:targetFlags">
-	<c path="String"/>
-	<c path="lime.project.HXProject"/>
-	<x path="Map">
-		<c path="String"/>
-		<c path="String"/>
-	</x>
-	<x path="Void"/>
-</f></new>
-	</class>
-	<class path="lime.tools.platforms.HTML5Platform" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/tools/platforms/HTML5Platform.hx">
-		<extends path="lime.project.PlatformTarget"/>
-		<outputFile><c path="String"/></outputFile>
-		<build public="1" set="method" line="34" override="1"><f a=""><x path="Void"/></f></build>
-		<clean public="1" set="method" line="70" override="1"><f a=""><x path="Void"/></f></clean>
-		<display public="1" set="method" line="81" override="1"><f a=""><x path="Void"/></f></display>
-		<initialize set="method" line="107"><f a="command:project">
-	<c path="String"/>
-	<c path="lime.project.HXProject"/>
-	<x path="Void"/>
-</f></initialize>
-		<run public="1" set="method" line="115" override="1"><f a=""><x path="Void"/></f></run>
-		<update public="1" set="method" line="122" override="1"><f a=""><x path="Void"/></f></update>
-		<install public="1" set="method" line="268" override="1">
-			<f a=""><x path="Void"/></f>
-			<meta><m n="ignore"/></meta>
-		</install>
-		<rebuild public="1" set="method" line="269" override="1">
-			<f a=""><x path="Void"/></f>
-			<meta><m n="ignore"/></meta>
-		</rebuild>
-		<trace public="1" set="method" line="270" override="1">
-			<f a=""><x path="Void"/></f>
-			<meta><m n="ignore"/></meta>
-		</trace>
-		<uninstall public="1" set="method" line="271" override="1">
-			<f a=""><x path="Void"/></f>
-			<meta><m n="ignore"/></meta>
-		</uninstall>
-		<new public="1" set="method" line="25"><f a="command:_project:targetFlags">
-	<c path="String"/>
-	<c path="lime.project.HXProject"/>
-	<x path="Map">
-		<c path="String"/>
-		<c path="String"/>
-	</x>
-	<x path="Void"/>
-</f></new>
-	</class>
-	<class path="lime.tools.platforms.FirefoxPlatform" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/tools/platforms/FirefoxPlatform.hx">
-		<extends path="lime.tools.platforms.HTML5Platform"/>
-		<clean public="1" set="method" line="23" override="1"><f a=""><x path="Void"/></f></clean>
-		<initialize set="method" line="34" override="1"><f a="command:project">
-	<c path="String"/>
-	<c path="lime.project.HXProject"/>
-	<x path="Void"/>
-</f></initialize>
-		<run public="1" set="method" line="42" override="1"><f a=""><x path="Void"/></f></run>
-		<update public="1" set="method" line="49" override="1"><f a=""><x path="Void"/></f></update>
-		<install public="1" set="method" line="73" override="1">
-			<f a=""><x path="Void"/></f>
-			<meta><m n="ignore"/></meta>
-		</install>
-		<rebuild public="1" set="method" line="74" override="1">
-			<f a=""><x path="Void"/></f>
-			<meta><m n="ignore"/></meta>
-		</rebuild>
-		<trace public="1" set="method" line="75" override="1">
-			<f a=""><x path="Void"/></f>
-			<meta><m n="ignore"/></meta>
-		</trace>
-		<uninstall public="1" set="method" line="76" override="1">
-			<f a=""><x path="Void"/></f>
-			<meta><m n="ignore"/></meta>
-		</uninstall>
-		<new public="1" set="method" line="16"><f a="command:_project:targetFlags">
-	<c path="String"/>
-	<c path="lime.project.HXProject"/>
-	<x path="Map">
-		<c path="String"/>
-		<c path="String"/>
-	</x>
-	<x path="Void"/>
-</f></new>
-	</class>
-	<class path="lime.tools.platforms.FlashPlatform" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/tools/platforms/FlashPlatform.hx">
-		<extends path="lime.project.PlatformTarget"/>
-		<embedded><x path="Bool"/></embedded>
-		<build public="1" set="method" line="37" override="1"><f a=""><x path="Void"/></f></build>
-		<clean public="1" set="method" line="128" override="1"><f a=""><x path="Void"/></f></clean>
-		<display public="1" set="method" line="141" override="1"><f a=""><x path="Void"/></f></display>
-		<generateContext set="method" line="166"><f a=""><d/></f></generateContext>
-		<run public="1" set="method" line="201" override="1"><f a=""><x path="Void"/></f></run>
-		<update public="1" set="method" line="225" override="1"><f a=""><x path="Void"/></f></update>
-		<install public="1" set="method" line="298" override="1">
-			<f a=""><x path="Void"/></f>
-			<meta><m n="ignore"/></meta>
-		</install>
-		<rebuild public="1" set="method" line="299" override="1">
-			<f a=""><x path="Void"/></f>
-			<meta><m n="ignore"/></meta>
-		</rebuild>
-		<trace public="1" set="method" line="300" override="1">
-			<f a=""><x path="Void"/></f>
-			<meta><m n="ignore"/></meta>
-		</trace>
-		<uninstall public="1" set="method" line="301" override="1">
-			<f a=""><x path="Void"/></f>
-			<meta><m n="ignore"/></meta>
-		</uninstall>
-		<new public="1" set="method" line="28"><f a="command:_project:targetFlags">
-	<c path="String"/>
-	<c path="lime.project.HXProject"/>
-	<x path="Map">
-		<c path="String"/>
-		<c path="String"/>
-	</x>
-	<x path="Void"/>
-</f></new>
-	</class>
-	<class path="lime.tools.platforms.IOSPlatform" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/tools/platforms/IOSPlatform.hx">
-		<extends path="lime.project.PlatformTarget"/>
-		<build public="1" set="method" line="44" override="1"><f a=""><x path="Void"/></f></build>
-		<clean public="1" set="method" line="58" override="1"><f a=""><x path="Void"/></f></clean>
-		<display public="1" set="method" line="69" override="1"><f a=""><x path="Void"/></f></display>
-		<generateContext set="method" line="78"><f a=""><d/></f></generateContext>
-		<rebuild public="1" set="method" line="313" override="1"><f a=""><x path="Void"/></f></rebuild>
-		<run public="1" set="method" line="336" override="1"><f a=""><x path="Void"/></f></run>
-		<update public="1" set="method" line="343" override="1"><f a=""><x path="Void"/></f></update>
-		<install public="1" set="method" line="591" override="1">
-			<f a=""><x path="Void"/></f>
-			<meta><m n="ignore"/></meta>
-		</install>
-		<trace public="1" set="method" line="592" override="1">
-			<f a=""><x path="Void"/></f>
-			<meta><m n="ignore"/></meta>
-		</trace>
-		<uninstall public="1" set="method" line="593" override="1">
-			<f a=""><x path="Void"/></f>
-			<meta><m n="ignore"/></meta>
-		</uninstall>
-		<new public="1" set="method" line="35"><f a="command:_project:targetFlags">
-	<c path="String"/>
-	<c path="lime.project.HXProject"/>
-	<x path="Map">
-		<c path="String"/>
-		<c path="String"/>
-	</x>
-	<x path="Void"/>
-</f></new>
-	</class>
-	<typedef path="lime.tools.platforms._IOSPlatform.IconSize" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/tools/platforms/IOSPlatform.hx" private="1" module="lime.tools.platforms.IOSPlatform"><a>
-	<size><x path="Int"/></size>
-	<name><c path="String"/></name>
-</a></typedef>
-	<typedef path="lime.tools.platforms._IOSPlatform.SplashSize" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/tools/platforms/IOSPlatform.hx" private="1" module="lime.tools.platforms.IOSPlatform"><a>
-	<w><x path="Int"/></w>
-	<name><c path="String"/></name>
-	<h><x path="Int"/></h>
-</a></typedef>
-	<class path="lime.tools.platforms.LinuxPlatform" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/tools/platforms/LinuxPlatform.hx">
-		<extends path="lime.project.PlatformTarget"/>
-		<applicationDirectory><c path="String"/></applicationDirectory>
-		<executablePath><c path="String"/></executablePath>
-		<is64><x path="Bool"/></is64>
-		<isRaspberryPi><x path="Bool"/></isRaspberryPi>
-		<targetType><c path="String"/></targetType>
-		<build public="1" set="method" line="91" override="1"><f a=""><x path="Void"/></f></build>
-		<clean public="1" set="method" line="180" override="1"><f a=""><x path="Void"/></f></clean>
-		<display public="1" set="method" line="191" override="1"><f a=""><x path="Void"/></f></display>
-		<generateContext set="method" line="212"><f a=""><d/></f></generateContext>
-		<rebuild public="1" set="method" line="235" override="1"><f a=""><x path="Void"/></f></rebuild>
-		<run public="1" set="method" line="264" override="1"><f a=""><x path="Void"/></f></run>
-		<update public="1" set="method" line="282" override="1"><f a=""><x path="Void"/></f></update>
-		<install public="1" set="method" line="363" override="1">
-			<f a=""><x path="Void"/></f>
-			<meta><m n="ignore"/></meta>
-		</install>
-		<trace public="1" set="method" line="364" override="1">
-			<f a=""><x path="Void"/></f>
-			<meta><m n="ignore"/></meta>
-		</trace>
-		<uninstall public="1" set="method" line="365" override="1">
-			<f a=""><x path="Void"/></f>
-			<meta><m n="ignore"/></meta>
-		</uninstall>
-		<new public="1" set="method" line="34"><f a="command:_project:targetFlags">
-	<c path="String"/>
-	<c path="lime.project.HXProject"/>
-	<x path="Map">
-		<c path="String"/>
-		<c path="String"/>
-	</x>
-	<x path="Void"/>
-</f></new>
-	</class>
-	<class path="lime.tools.platforms.MacPlatform" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/tools/platforms/MacPlatform.hx">
-		<extends path="lime.project.PlatformTarget"/>
-		<applicationDirectory><c path="String"/></applicationDirectory>
-		<contentDirectory><c path="String"/></contentDirectory>
-		<executableDirectory><c path="String"/></executableDirectory>
-		<executablePath><c path="String"/></executablePath>
-		<is64><x path="Bool"/></is64>
-		<targetType><c path="String"/></targetType>
-		<build public="1" set="method" line="78" override="1"><f a=""><x path="Void"/></f></build>
-		<clean public="1" set="method" line="169" override="1"><f a=""><x path="Void"/></f></clean>
-		<display public="1" set="method" line="180" override="1"><f a=""><x path="Void"/></f></display>
-		<generateContext set="method" line="201"><f a=""><d/></f></generateContext>
-		<rebuild public="1" set="method" line="214" override="1"><f a=""><x path="Void"/></f></rebuild>
-		<run public="1" set="method" line="235" override="1"><f a=""><x path="Void"/></f></run>
+		<build public="1" set="method" line="64" override="1"><f a=""><x path="Void"/></f></build>
+		<clean public="1" set="method" line="156" override="1"><f a=""><x path="Void"/></f></clean>
+		<deploy public="1" set="method" line="167" override="1"><f a=""><x path="Void"/></f></deploy>
+		<display public="1" set="method" line="174" override="1"><f a=""><x path="Void"/></f></display>
+		<rebuild public="1" set="method" line="212" override="1"><f a=""><x path="Void"/></f></rebuild>
+		<run public="1" set="method" line="227" override="1"><f a=""><x path="Void"/></f></run>
+		<trace public="1" set="method" line="242" override="1"><f a=""><x path="Void"/></f></trace>
 		<update public="1" set="method" line="257" override="1"><f a=""><x path="Void"/></f></update>
-		<install public="1" set="method" line="332" override="1">
+		<install public="1" set="method" line="381" override="1">
 			<f a=""><x path="Void"/></f>
 			<meta><m n="ignore"/></meta>
 		</install>
-		<trace public="1" set="method" line="333" override="1">
-			<f a=""><x path="Void"/></f>
-			<meta><m n="ignore"/></meta>
-		</trace>
-		<uninstall public="1" set="method" line="334" override="1">
+		<uninstall public="1" set="method" line="382" override="1">
 			<f a=""><x path="Void"/></f>
 			<meta><m n="ignore"/></meta>
 		</uninstall>
-		<new public="1" set="method" line="37"><f a="command:_project:targetFlags">
+		<new public="1" set="method" line="31"><f a="command:_project:targetFlags">
 	<c path="String"/>
 	<c path="lime.project.HXProject"/>
 	<x path="Map">
@@ -20418,21 +20182,65 @@
 	<x path="Void"/>
 </f></new>
 	</class>
-	<class path="lime.tools.platforms.TizenPlatform" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/tools/platforms/TizenPlatform.hx">
+	<class path="lime.tools.platforms.EmscriptenPlatform" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/tools/platforms/EmscriptenPlatform.hx">
 		<extends path="lime.project.PlatformTarget"/>
-		<uuid line="23" static="1"><c path="String"/></uuid>
-		<build public="1" set="method" line="35" override="1"><f a=""><x path="Void"/></f></build>
-		<clean public="1" set="method" line="84" override="1"><f a=""><x path="Void"/></f></clean>
-		<display public="1" set="method" line="95" override="1"><f a=""><x path="Void"/></f></display>
-		<rebuild public="1" set="method" line="120" override="1"><f a=""><x path="Void"/></f></rebuild>
-		<run public="1" set="method" line="135" override="1"><f a=""><x path="Void"/></f></run>
-		<trace public="1" set="method" line="143" override="1"><f a=""><x path="Void"/></f></trace>
-		<update public="1" set="method" line="150" override="1"><f a=""><x path="Void"/></f></update>
-		<install public="1" set="method" line="218" override="1">
+		<outputFile><c path="String"/></outputFile>
+		<build public="1" set="method" line="39" override="1"><f a=""><x path="Void"/></f></build>
+		<clean public="1" set="method" line="172" override="1"><f a=""><x path="Void"/></f></clean>
+		<deploy public="1" set="method" line="183" override="1"><f a=""><x path="Void"/></f></deploy>
+		<display public="1" set="method" line="190" override="1"><f a=""><x path="Void"/></f></display>
+		<rebuild public="1" set="method" line="216" override="1"><f a=""><x path="Void"/></f></rebuild>
+		<run public="1" set="method" line="223" override="1"><f a=""><x path="Void"/></f></run>
+		<update public="1" set="method" line="230" override="1"><f a=""><x path="Void"/></f></update>
+		<install public="1" set="method" line="307" override="1">
 			<f a=""><x path="Void"/></f>
 			<meta><m n="ignore"/></meta>
 		</install>
-		<uninstall public="1" set="method" line="219" override="1">
+		<trace public="1" set="method" line="308" override="1">
+			<f a=""><x path="Void"/></f>
+			<meta><m n="ignore"/></meta>
+		</trace>
+		<uninstall public="1" set="method" line="309" override="1">
+			<f a=""><x path="Void"/></f>
+			<meta><m n="ignore"/></meta>
+		</uninstall>
+		<new public="1" set="method" line="29"><f a="command:_project:targetFlags">
+	<c path="String"/>
+	<c path="lime.project.HXProject"/>
+	<x path="Map">
+		<c path="String"/>
+		<c path="String"/>
+	</x>
+	<x path="Void"/>
+</f></new>
+	</class>
+	<class path="lime.tools.platforms.HTML5Platform" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/tools/platforms/HTML5Platform.hx">
+		<extends path="lime.project.PlatformTarget"/>
+		<outputFile><c path="String"/></outputFile>
+		<build public="1" set="method" line="35" override="1"><f a=""><x path="Void"/></f></build>
+		<clean public="1" set="method" line="71" override="1"><f a=""><x path="Void"/></f></clean>
+		<deploy public="1" set="method" line="82" override="1"><f a=""><x path="Void"/></f></deploy>
+		<display public="1" set="method" line="89" override="1"><f a=""><x path="Void"/></f></display>
+		<initialize set="method" line="115"><f a="command:project">
+	<c path="String"/>
+	<c path="lime.project.HXProject"/>
+	<x path="Void"/>
+</f></initialize>
+		<run public="1" set="method" line="123" override="1"><f a=""><x path="Void"/></f></run>
+		<update public="1" set="method" line="130" override="1"><f a=""><x path="Void"/></f></update>
+		<install public="1" set="method" line="276" override="1">
+			<f a=""><x path="Void"/></f>
+			<meta><m n="ignore"/></meta>
+		</install>
+		<rebuild public="1" set="method" line="277" override="1">
+			<f a=""><x path="Void"/></f>
+			<meta><m n="ignore"/></meta>
+		</rebuild>
+		<trace public="1" set="method" line="278" override="1">
+			<f a=""><x path="Void"/></f>
+			<meta><m n="ignore"/></meta>
+		</trace>
+		<uninstall public="1" set="method" line="279" override="1">
 			<f a=""><x path="Void"/></f>
 			<meta><m n="ignore"/></meta>
 		</uninstall>
@@ -20446,21 +20254,34 @@
 	<x path="Void"/>
 </f></new>
 	</class>
-	<class path="lime.tools.platforms.WebOSPlatform" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/tools/platforms/WebOSPlatform.hx">
-		<extends path="lime.project.PlatformTarget"/>
-		<build public="1" set="method" line="32" override="1"><f a=""><x path="Void"/></f></build>
-		<clean public="1" set="method" line="65" override="1"><f a=""><x path="Void"/></f></clean>
-		<display public="1" set="method" line="78" override="1"><f a=""><x path="Void"/></f></display>
-		<install public="1" set="method" line="103" override="1"><f a=""><x path="Void"/></f></install>
-		<rebuild public="1" set="method" line="110" override="1"><f a=""><x path="Void"/></f></rebuild>
-		<run public="1" set="method" line="117" override="1"><f a=""><x path="Void"/></f></run>
-		<trace public="1" set="method" line="124" override="1"><f a=""><x path="Void"/></f></trace>
-		<update public="1" set="method" line="131" override="1"><f a=""><x path="Void"/></f></update>
-		<uninstall public="1" set="method" line="191" override="1">
+	<class path="lime.tools.platforms.FirefoxPlatform" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/tools/platforms/FirefoxPlatform.hx">
+		<extends path="lime.tools.platforms.HTML5Platform"/>
+		<clean public="1" set="method" line="24" override="1"><f a=""><x path="Void"/></f></clean>
+		<deploy public="1" set="method" line="35" override="1"><f a=""><x path="Void"/></f></deploy>
+		<initialize set="method" line="42" override="1"><f a="command:project">
+	<c path="String"/>
+	<c path="lime.project.HXProject"/>
+	<x path="Void"/>
+</f></initialize>
+		<run public="1" set="method" line="50" override="1"><f a=""><x path="Void"/></f></run>
+		<update public="1" set="method" line="57" override="1"><f a=""><x path="Void"/></f></update>
+		<install public="1" set="method" line="81" override="1">
+			<f a=""><x path="Void"/></f>
+			<meta><m n="ignore"/></meta>
+		</install>
+		<rebuild public="1" set="method" line="82" override="1">
+			<f a=""><x path="Void"/></f>
+			<meta><m n="ignore"/></meta>
+		</rebuild>
+		<trace public="1" set="method" line="83" override="1">
+			<f a=""><x path="Void"/></f>
+			<meta><m n="ignore"/></meta>
+		</trace>
+		<uninstall public="1" set="method" line="84" override="1">
 			<f a=""><x path="Void"/></f>
 			<meta><m n="ignore"/></meta>
 		</uninstall>
-		<new public="1" set="method" line="23"><f a="command:_project:targetFlags">
+		<new public="1" set="method" line="17"><f a="command:_project:targetFlags">
 	<c path="String"/>
 	<c path="lime.project.HXProject"/>
 	<x path="Map">
@@ -20470,31 +20291,238 @@
 	<x path="Void"/>
 </f></new>
 	</class>
-	<class path="lime.tools.platforms.WindowsPlatform" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/tools/platforms/WindowsPlatform.hx">
+	<class path="lime.tools.platforms.FlashPlatform" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/tools/platforms/FlashPlatform.hx">
+		<extends path="lime.project.PlatformTarget"/>
+		<embedded><x path="Bool"/></embedded>
+		<build public="1" set="method" line="38" override="1"><f a=""><x path="Void"/></f></build>
+		<clean public="1" set="method" line="129" override="1"><f a=""><x path="Void"/></f></clean>
+		<deploy public="1" set="method" line="142" override="1"><f a=""><x path="Void"/></f></deploy>
+		<display public="1" set="method" line="149" override="1"><f a=""><x path="Void"/></f></display>
+		<generateContext set="method" line="174"><f a=""><d/></f></generateContext>
+		<run public="1" set="method" line="209" override="1"><f a=""><x path="Void"/></f></run>
+		<update public="1" set="method" line="233" override="1"><f a=""><x path="Void"/></f></update>
+		<install public="1" set="method" line="306" override="1">
+			<f a=""><x path="Void"/></f>
+			<meta><m n="ignore"/></meta>
+		</install>
+		<rebuild public="1" set="method" line="307" override="1">
+			<f a=""><x path="Void"/></f>
+			<meta><m n="ignore"/></meta>
+		</rebuild>
+		<trace public="1" set="method" line="308" override="1">
+			<f a=""><x path="Void"/></f>
+			<meta><m n="ignore"/></meta>
+		</trace>
+		<uninstall public="1" set="method" line="309" override="1">
+			<f a=""><x path="Void"/></f>
+			<meta><m n="ignore"/></meta>
+		</uninstall>
+		<new public="1" set="method" line="29"><f a="command:_project:targetFlags">
+	<c path="String"/>
+	<c path="lime.project.HXProject"/>
+	<x path="Map">
+		<c path="String"/>
+		<c path="String"/>
+	</x>
+	<x path="Void"/>
+</f></new>
+	</class>
+	<class path="lime.tools.platforms.IOSPlatform" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/tools/platforms/IOSPlatform.hx">
+		<extends path="lime.project.PlatformTarget"/>
+		<build public="1" set="method" line="45" override="1"><f a=""><x path="Void"/></f></build>
+		<clean public="1" set="method" line="67" override="1"><f a=""><x path="Void"/></f></clean>
+		<deploy public="1" set="method" line="78" override="1"><f a=""><x path="Void"/></f></deploy>
+		<display public="1" set="method" line="85" override="1"><f a=""><x path="Void"/></f></display>
+		<generateContext set="method" line="94"><f a=""><d/></f></generateContext>
+		<rebuild public="1" set="method" line="304" override="1"><f a=""><x path="Void"/></f></rebuild>
+		<run public="1" set="method" line="327" override="1"><f a=""><x path="Void"/></f></run>
+		<update public="1" set="method" line="334" override="1"><f a=""><x path="Void"/></f></update>
+		<install public="1" set="method" line="576" override="1">
+			<f a=""><x path="Void"/></f>
+			<meta><m n="ignore"/></meta>
+		</install>
+		<trace public="1" set="method" line="577" override="1">
+			<f a=""><x path="Void"/></f>
+			<meta><m n="ignore"/></meta>
+		</trace>
+		<uninstall public="1" set="method" line="578" override="1">
+			<f a=""><x path="Void"/></f>
+			<meta><m n="ignore"/></meta>
+		</uninstall>
+		<new public="1" set="method" line="36"><f a="command:_project:targetFlags">
+	<c path="String"/>
+	<c path="lime.project.HXProject"/>
+	<x path="Map">
+		<c path="String"/>
+		<c path="String"/>
+	</x>
+	<x path="Void"/>
+</f></new>
+	</class>
+	<typedef path="lime.tools.platforms._IOSPlatform.IconSize" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/tools/platforms/IOSPlatform.hx" private="1" module="lime.tools.platforms.IOSPlatform"><a>
+	<size><x path="Int"/></size>
+	<name><c path="String"/></name>
+</a></typedef>
+	<typedef path="lime.tools.platforms._IOSPlatform.SplashSize" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/tools/platforms/IOSPlatform.hx" private="1" module="lime.tools.platforms.IOSPlatform"><a>
+	<w><x path="Int"/></w>
+	<name><c path="String"/></name>
+	<h><x path="Int"/></h>
+</a></typedef>
+	<class path="lime.tools.platforms.LinuxPlatform" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/tools/platforms/LinuxPlatform.hx">
+		<extends path="lime.project.PlatformTarget"/>
+		<applicationDirectory><c path="String"/></applicationDirectory>
+		<executablePath><c path="String"/></executablePath>
+		<is64><x path="Bool"/></is64>
+		<isRaspberryPi><x path="Bool"/></isRaspberryPi>
+		<targetType><c path="String"/></targetType>
+		<build public="1" set="method" line="92" override="1"><f a=""><x path="Void"/></f></build>
+		<clean public="1" set="method" line="181" override="1"><f a=""><x path="Void"/></f></clean>
+		<deploy public="1" set="method" line="192" override="1"><f a=""><x path="Void"/></f></deploy>
+		<display public="1" set="method" line="199" override="1"><f a=""><x path="Void"/></f></display>
+		<generateContext set="method" line="220"><f a=""><d/></f></generateContext>
+		<rebuild public="1" set="method" line="243" override="1"><f a=""><x path="Void"/></f></rebuild>
+		<run public="1" set="method" line="272" override="1"><f a=""><x path="Void"/></f></run>
+		<update public="1" set="method" line="290" override="1"><f a=""><x path="Void"/></f></update>
+		<install public="1" set="method" line="371" override="1">
+			<f a=""><x path="Void"/></f>
+			<meta><m n="ignore"/></meta>
+		</install>
+		<trace public="1" set="method" line="372" override="1">
+			<f a=""><x path="Void"/></f>
+			<meta><m n="ignore"/></meta>
+		</trace>
+		<uninstall public="1" set="method" line="373" override="1">
+			<f a=""><x path="Void"/></f>
+			<meta><m n="ignore"/></meta>
+		</uninstall>
+		<new public="1" set="method" line="35"><f a="command:_project:targetFlags">
+	<c path="String"/>
+	<c path="lime.project.HXProject"/>
+	<x path="Map">
+		<c path="String"/>
+		<c path="String"/>
+	</x>
+	<x path="Void"/>
+</f></new>
+	</class>
+	<class path="lime.tools.platforms.MacPlatform" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/tools/platforms/MacPlatform.hx">
+		<extends path="lime.project.PlatformTarget"/>
+		<applicationDirectory><c path="String"/></applicationDirectory>
+		<contentDirectory><c path="String"/></contentDirectory>
+		<executableDirectory><c path="String"/></executableDirectory>
+		<executablePath><c path="String"/></executablePath>
+		<is64><x path="Bool"/></is64>
+		<targetType><c path="String"/></targetType>
+		<build public="1" set="method" line="79" override="1"><f a=""><x path="Void"/></f></build>
+		<clean public="1" set="method" line="170" override="1"><f a=""><x path="Void"/></f></clean>
+		<deploy public="1" set="method" line="181" override="1"><f a=""><x path="Void"/></f></deploy>
+		<display public="1" set="method" line="188" override="1"><f a=""><x path="Void"/></f></display>
+		<generateContext set="method" line="209"><f a=""><d/></f></generateContext>
+		<rebuild public="1" set="method" line="222" override="1"><f a=""><x path="Void"/></f></rebuild>
+		<run public="1" set="method" line="243" override="1"><f a=""><x path="Void"/></f></run>
+		<update public="1" set="method" line="265" override="1"><f a=""><x path="Void"/></f></update>
+		<install public="1" set="method" line="340" override="1">
+			<f a=""><x path="Void"/></f>
+			<meta><m n="ignore"/></meta>
+		</install>
+		<trace public="1" set="method" line="341" override="1">
+			<f a=""><x path="Void"/></f>
+			<meta><m n="ignore"/></meta>
+		</trace>
+		<uninstall public="1" set="method" line="342" override="1">
+			<f a=""><x path="Void"/></f>
+			<meta><m n="ignore"/></meta>
+		</uninstall>
+		<new public="1" set="method" line="38"><f a="command:_project:targetFlags">
+	<c path="String"/>
+	<c path="lime.project.HXProject"/>
+	<x path="Map">
+		<c path="String"/>
+		<c path="String"/>
+	</x>
+	<x path="Void"/>
+</f></new>
+	</class>
+	<class path="lime.tools.platforms.TizenPlatform" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/tools/platforms/TizenPlatform.hx">
+		<extends path="lime.project.PlatformTarget"/>
+		<uuid line="24" static="1"><c path="String"/></uuid>
+		<build public="1" set="method" line="36" override="1"><f a=""><x path="Void"/></f></build>
+		<clean public="1" set="method" line="85" override="1"><f a=""><x path="Void"/></f></clean>
+		<deploy public="1" set="method" line="96" override="1"><f a=""><x path="Void"/></f></deploy>
+		<display public="1" set="method" line="103" override="1"><f a=""><x path="Void"/></f></display>
+		<rebuild public="1" set="method" line="128" override="1"><f a=""><x path="Void"/></f></rebuild>
+		<run public="1" set="method" line="143" override="1"><f a=""><x path="Void"/></f></run>
+		<trace public="1" set="method" line="151" override="1"><f a=""><x path="Void"/></f></trace>
+		<update public="1" set="method" line="158" override="1"><f a=""><x path="Void"/></f></update>
+		<install public="1" set="method" line="226" override="1">
+			<f a=""><x path="Void"/></f>
+			<meta><m n="ignore"/></meta>
+		</install>
+		<uninstall public="1" set="method" line="227" override="1">
+			<f a=""><x path="Void"/></f>
+			<meta><m n="ignore"/></meta>
+		</uninstall>
+		<new public="1" set="method" line="27"><f a="command:_project:targetFlags">
+	<c path="String"/>
+	<c path="lime.project.HXProject"/>
+	<x path="Map">
+		<c path="String"/>
+		<c path="String"/>
+	</x>
+	<x path="Void"/>
+</f></new>
+	</class>
+	<class path="lime.tools.platforms.WebOSPlatform" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/tools/platforms/WebOSPlatform.hx">
+		<extends path="lime.project.PlatformTarget"/>
+		<build public="1" set="method" line="33" override="1"><f a=""><x path="Void"/></f></build>
+		<clean public="1" set="method" line="66" override="1"><f a=""><x path="Void"/></f></clean>
+		<deploy public="1" set="method" line="79" override="1"><f a=""><x path="Void"/></f></deploy>
+		<display public="1" set="method" line="86" override="1"><f a=""><x path="Void"/></f></display>
+		<install public="1" set="method" line="111" override="1"><f a=""><x path="Void"/></f></install>
+		<rebuild public="1" set="method" line="118" override="1"><f a=""><x path="Void"/></f></rebuild>
+		<run public="1" set="method" line="125" override="1"><f a=""><x path="Void"/></f></run>
+		<trace public="1" set="method" line="132" override="1"><f a=""><x path="Void"/></f></trace>
+		<update public="1" set="method" line="139" override="1"><f a=""><x path="Void"/></f></update>
+		<uninstall public="1" set="method" line="199" override="1">
+			<f a=""><x path="Void"/></f>
+			<meta><m n="ignore"/></meta>
+		</uninstall>
+		<new public="1" set="method" line="24"><f a="command:_project:targetFlags">
+	<c path="String"/>
+	<c path="lime.project.HXProject"/>
+	<x path="Map">
+		<c path="String"/>
+		<c path="String"/>
+	</x>
+	<x path="Void"/>
+</f></new>
+	</class>
+	<class path="lime.tools.platforms.WindowsPlatform" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/tools/platforms/WindowsPlatform.hx">
 		<extends path="lime.project.PlatformTarget"/>
 		<applicationDirectory><c path="String"/></applicationDirectory>
 		<executablePath><c path="String"/></executablePath>
 		<targetType><c path="String"/></targetType>
-		<build public="1" set="method" line="57" override="1"><f a=""><x path="Void"/></f></build>
-		<clean public="1" set="method" line="163" override="1"><f a=""><x path="Void"/></f></clean>
-		<display public="1" set="method" line="174" override="1"><f a=""><x path="Void"/></f></display>
-		<generateContext set="method" line="195"><f a=""><d/></f></generateContext>
-		<rebuild public="1" set="method" line="209" override="1"><f a=""><x path="Void"/></f></rebuild>
-		<run public="1" set="method" line="223" override="1"><f a=""><x path="Void"/></f></run>
-		<update public="1" set="method" line="241" override="1"><f a=""><x path="Void"/></f></update>
-		<install public="1" set="method" line="319" override="1">
+		<build public="1" set="method" line="58" override="1"><f a=""><x path="Void"/></f></build>
+		<clean public="1" set="method" line="164" override="1"><f a=""><x path="Void"/></f></clean>
+		<deploy public="1" set="method" line="175" override="1"><f a=""><x path="Void"/></f></deploy>
+		<display public="1" set="method" line="182" override="1"><f a=""><x path="Void"/></f></display>
+		<generateContext set="method" line="203"><f a=""><d/></f></generateContext>
+		<rebuild public="1" set="method" line="217" override="1"><f a=""><x path="Void"/></f></rebuild>
+		<run public="1" set="method" line="231" override="1"><f a=""><x path="Void"/></f></run>
+		<update public="1" set="method" line="249" override="1"><f a=""><x path="Void"/></f></update>
+		<install public="1" set="method" line="327" override="1">
 			<f a=""><x path="Void"/></f>
 			<meta><m n="ignore"/></meta>
 		</install>
-		<trace public="1" set="method" line="320" override="1">
+		<trace public="1" set="method" line="328" override="1">
 			<f a=""><x path="Void"/></f>
 			<meta><m n="ignore"/></meta>
 		</trace>
-		<uninstall public="1" set="method" line="321" override="1">
+		<uninstall public="1" set="method" line="329" override="1">
 			<f a=""><x path="Void"/></f>
 			<meta><m n="ignore"/></meta>
 		</uninstall>
-		<new public="1" set="method" line="32"><f a="command:_project:targetFlags">
+		<new public="1" set="method" line="33"><f a="command:_project:targetFlags">
 	<c path="String"/>
 	<c path="lime.project.HXProject"/>
 	<x path="Map">
@@ -20504,12 +20532,12 @@
 	<x path="Void"/>
 </f></new>
 	</class>
-	<abstract path="lime.ui.KeyCode" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/ui/KeyCode.hx">
+	<abstract path="lime.ui.KeyCode" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/ui/KeyCode.hx">
 		<from><icast><x path="Int"/></icast></from>
 		<this><x path="Int"/></this>
 		<to><icast><x path="Int"/></icast></to>
 		<meta><m n=":enum"/></meta>
-		<impl><class path="lime.ui._KeyCode.KeyCode_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/ui/KeyCode.hx" private="1" module="lime.ui.KeyCode">
+		<impl><class path="lime.ui._KeyCode.KeyCode_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/ui/KeyCode.hx" private="1" module="lime.ui.KeyCode">
 	<UNKNOWN public="1" get="inline" set="null" line="7" static="1">
 		<x path="lime.ui.KeyCode"/>
 		<meta>
@@ -22158,7 +22186,7 @@
 	<meta><m n=":enum"/></meta>
 </class></impl>
 	</abstract>
-	<class path="lime.ui._KeyCode.KeyCode_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/ui/KeyCode.hx" private="1" module="lime.ui.KeyCode">
+	<class path="lime.ui._KeyCode.KeyCode_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/ui/KeyCode.hx" private="1" module="lime.ui.KeyCode">
 		<UNKNOWN public="1" get="inline" set="null" line="7" static="1">
 			<x path="lime.ui.KeyCode"/>
 			<meta>
@@ -23806,7 +23834,7 @@
 		</SLEEP>
 		<meta><m n=":enum"/></meta>
 	</class>
-	<class path="lime.ui.Mouse" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/ui/Mouse.hx">
+	<class path="lime.ui.Mouse" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/ui/Mouse.hx">
 		<cursor public="1" get="accessor" set="accessor" static="1"><e path="lime.ui.MouseCursor"/></cursor>
 		<hide public="1" set="method" line="10" static="1"><f a=""><x path="Void"/></f></hide>
 		<show public="1" set="method" line="17" static="1"><f a=""><x path="Void"/></f></show>
@@ -23816,11 +23844,11 @@
 	<e path="lime.ui.MouseCursor"/>
 </f></set_cursor>
 	</class>
-	<typedef path="lime.ui._Mouse.MouseBackend" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/ui/Mouse.hx" private="1" module="lime.ui.Mouse">
+	<typedef path="lime.ui._Mouse.MouseBackend" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/ui/Mouse.hx" private="1" module="lime.ui.Mouse">
 		<c path="lime._backend.native.NativeMouse"/>
 		<meta><m n=":noCompletion"/></meta>
 	</typedef>
-	<enum path="lime.ui.MouseCursor" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/ui/MouseCursor.hx">
+	<enum path="lime.ui.MouseCursor" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/ui/MouseCursor.hx">
 		<ARROW/>
 		<CROSSHAIR/>
 		<DEFAULT/>
@@ -23836,7 +23864,7 @@
 		<CUSTOM/>
 		<meta><m n=":flatEnum"/></meta>
 	</enum>
-	<class path="lime.ui.Window" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/ui/Window.hx">
+	<class path="lime.ui.Window" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/ui/Window.hx">
 		<currentRenderer public="1"><c path="lime.graphics.Renderer"/></currentRenderer>
 		<config public="1"><t path="lime.app.Config"/></config>
 		<fullscreen public="1"><x path="Bool"/></fullscreen>
@@ -23938,17 +23966,17 @@
 	<x path="Void"/>
 </f></new>
 	</class>
-	<typedef path="lime.ui._Window.WindowBackend" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/ui/Window.hx" private="1" module="lime.ui.Window">
+	<typedef path="lime.ui._Window.WindowBackend" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/ui/Window.hx" private="1" module="lime.ui.Window">
 		<c path="lime._backend.native.NativeWindow"/>
 		<meta><m n=":noCompletion"/></meta>
 	</typedef>
-	<typedef path="lime.utils.ArrayBuffer" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/utils/ArrayBuffer.hx"><c path="lime.utils.ByteArray"/></typedef>
-	<class path="lime.utils.IMemoryRange" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/utils/IMemoryRange.hx" interface="1">
+	<typedef path="lime.utils.ArrayBuffer" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/utils/ArrayBuffer.hx"><c path="lime.utils.ByteArray"/></typedef>
+	<class path="lime.utils.IMemoryRange" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/utils/IMemoryRange.hx" interface="1">
 		<getByteBuffer public="1" set="method"><f a=""><c path="lime.utils.ByteArray"/></f></getByteBuffer>
 		<getStart public="1" set="method"><f a=""><x path="Int"/></f></getStart>
 		<getLength public="1" set="method"><f a=""><x path="Int"/></f></getLength>
 	</class>
-	<class path="lime.utils.ArrayBufferView" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/utils/ArrayBufferView.hx">
+	<class path="lime.utils.ArrayBufferView" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/utils/ArrayBufferView.hx">
 		<implements path="lime.utils.IMemoryRange"/>
 		<buffer public="1" set="null"><c path="lime.utils.ByteArray"/></buffer>
 		<byteOffset public="1" set="null"><x path="Int"/></byteOffset>
@@ -24028,7 +24056,7 @@
 </f></new>
 		<meta><m n=":generic"/></meta>
 	</class>
-	<class path="lime.utils.IDataInput" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/utils/IDataInput.hx" interface="1">
+	<class path="lime.utils.IDataInput" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/utils/IDataInput.hx" interface="1">
 		<bytesAvailable public="1" get="accessor" set="null"><x path="Int"/></bytesAvailable>
 		<endian public="1" get="accessor" set="accessor"><c path="String"/></endian>
 		<readBoolean public="1" set="method"><f a=""><x path="Bool"/></f></readBoolean>
@@ -24058,7 +24086,7 @@
 	<c path="String"/>
 </f></set_endian>
 	</class>
-	<class path="lime.utils.ByteArray" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/utils/ByteArray.hx">
+	<class path="lime.utils.ByteArray" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/utils/ByteArray.hx">
 		<extends path="haxe.io.Bytes"/>
 		<implements path="lime.utils.IMemoryRange"/>
 		<implements path="lime.utils.IDataInput"/>
@@ -24250,14 +24278,14 @@
 </f></new>
 		<meta><m n=":autoBuild"><e>'???'</e></m></meta>
 	</class>
-	<enum path="lime.utils.CompressionAlgorithm" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/utils/CompressionAlgorithm.hx">
+	<enum path="lime.utils.CompressionAlgorithm" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/utils/CompressionAlgorithm.hx">
 		<DEFLATE/>
 		<ZLIB/>
 		<LZMA/>
 		<GZIP/>
 		<meta><m n=":flatEnum"/></meta>
 	</enum>
-	<class path="lime.utils.Float32Array" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/utils/Float32Array.hx">
+	<class path="lime.utils.Float32Array" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/utils/Float32Array.hx">
 		<extends path="lime.utils.ArrayBufferView"/>
 		<BYTES_PER_ELEMENT public="1" get="inline" set="null" line="10" static="1"><x path="Int"/></BYTES_PER_ELEMENT>
 		<length public="1" set="null"><x path="Int"/></length>
@@ -24300,7 +24328,7 @@
 </f></new>
 		<meta><m n=":generic"/></meta>
 	</class>
-	<class path="lime.utils.GLUtils" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/utils/GLUtils.hx">
+	<class path="lime.utils.GLUtils" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/utils/GLUtils.hx">
 		<compileShader public="1" set="method" line="12" static="1"><f a="source:type">
 	<c path="String"/>
 	<x path="Int"/>
@@ -24312,7 +24340,7 @@
 	<c path="lime.graphics.opengl.GLProgram"/>
 </f></createProgram>
 	</class>
-	<class path="lime.utils.Int16Array" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/utils/Int16Array.hx">
+	<class path="lime.utils.Int16Array" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/utils/Int16Array.hx">
 		<extends path="lime.utils.ArrayBufferView"/>
 		<BYTES_PER_ELEMENT public="1" get="inline" set="null" line="10" static="1"><x path="Int"/></BYTES_PER_ELEMENT>
 		<length public="1" set="null"><x path="Int"/></length>
@@ -24355,7 +24383,7 @@
 </f></new>
 		<meta><m n=":generic"/></meta>
 	</class>
-	<class path="lime.utils.Int32Array" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/utils/Int32Array.hx">
+	<class path="lime.utils.Int32Array" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/utils/Int32Array.hx">
 		<extends path="lime.utils.ArrayBufferView"/>
 		<BYTES_PER_ELEMENT public="1" get="inline" set="null" line="10" static="1"><x path="Int"/></BYTES_PER_ELEMENT>
 		<length public="1" set="null"><x path="Int"/></length>
@@ -24398,7 +24426,7 @@
 </f></new>
 		<meta><m n=":generic"/></meta>
 	</class>
-	<class path="lime.utils.Int8Array" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/utils/Int8Array.hx">
+	<class path="lime.utils.Int8Array" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/utils/Int8Array.hx">
 		<extends path="lime.utils.ArrayBufferView"/>
 		<BYTES_PER_ELEMENT public="1" get="inline" set="null" line="10" static="1"><x path="Int"/></BYTES_PER_ELEMENT>
 		<length public="1" set="null"><x path="Int"/></length>
@@ -24441,7 +24469,7 @@
 </f></new>
 		<meta><m n=":generic"/></meta>
 	</class>
-	<class path="lime.utils.UInt16Array" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/utils/UInt16Array.hx">
+	<class path="lime.utils.UInt16Array" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/utils/UInt16Array.hx">
 		<extends path="lime.utils.ArrayBufferView"/>
 		<BYTES_PER_ELEMENT public="1" get="inline" set="null" line="10" static="1"><x path="Int"/></BYTES_PER_ELEMENT>
 		<length public="1" set="null"><x path="Int"/></length>
@@ -24484,7 +24512,7 @@
 </f></new>
 		<meta><m n=":generic"/></meta>
 	</class>
-	<class path="lime.utils.UInt32Array" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/utils/UInt32Array.hx">
+	<class path="lime.utils.UInt32Array" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/utils/UInt32Array.hx">
 		<extends path="lime.utils.ArrayBufferView"/>
 		<BYTES_PER_ELEMENT public="1" get="inline" set="null" line="10" static="1"><x path="Int"/></BYTES_PER_ELEMENT>
 		<length public="1" set="null"><x path="Int"/></length>
@@ -24527,7 +24555,7 @@
 </f></new>
 		<meta><m n=":generic"/></meta>
 	</class>
-	<class path="lime.utils.UInt8Array" params="" file="/home/joshua/TeamCity/buildAgent/work/48ee6c9a8df8d87c/lime/lime/utils/UInt8Array.hx">
+	<class path="lime.utils.UInt8Array" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/utils/UInt8Array.hx">
 		<extends path="lime.utils.ArrayBufferView"/>
 		<BYTES_PER_ELEMENT public="1" get="inline" set="null" line="10" static="1"><x path="Int"/></BYTES_PER_ELEMENT>
 		<length public="1" set="null"><x path="Int"/></length>
@@ -24610,19 +24638,6 @@
 		<kother a="k"><c path="String"/></kother>
 	</enum>
 	<class path="sys.FileSystem" params="" file="/usr/lib/haxe/std/cpp/_std/sys/FileSystem.hx">
-		<rename public="1" set="method" line="37" static="1">
-			<f a="path:newPath">
-				<c path="String"/>
-				<c path="String"/>
-				<x path="Void"/>
-			</f>
-			<haxe_doc>Renames/moves the file or directory specified by `path` to `newPath`.
-
-		If `path` is not a valid file system entry, or if it is not accessible,
-		or if `newPath` is not accessible, an exception is thrown.
-
-		If `path` or `newPath` are null, the result is unspecified.</haxe_doc>
-		</rename>
 		<stat public="1" set="method" line="42" static="1">
 			<f a="path">
 				<c path="String"/>
@@ -24716,11 +24731,6 @@
 	<c path="String"/>
 	<unknown/>
 </f></file_delete>
-		<sys_rename line="95" static="1"><f a=":">
-	<c path="String"/>
-	<c path="String"/>
-	<unknown/>
-</f></sys_rename>
 		<sys_stat line="96" static="1"><f a="">
 	<c path="String"/>
 	<t path="sys.FileStat"/>
