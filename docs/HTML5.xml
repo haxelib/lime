@@ -3791,7 +3791,7 @@
 			<t path="lime.app._Application.ApplicationBackend"/>
 			<meta><m n=":noCompletion"/></meta>
 		</backend>
-		<addRenderer public="1" set="method" line="59">
+		<addRenderer public="1" set="method" line="61">
 			<f a="renderer">
 				<c path="lime.graphics.Renderer"/>
 				<x path="Void"/>
@@ -3800,7 +3800,7 @@
 	 * called automatically by create()
 	 * @param	renderer	A Renderer object to add</haxe_doc>
 		</addRenderer>
-		<addWindow public="1" set="method" line="75">
+		<addWindow public="1" set="method" line="77">
 			<f a="window">
 				<c path="lime.ui.Window"/>
 				<x path="Void"/>
@@ -3809,7 +3809,7 @@
 	 * called automatically by create()
 	 * @param	window	A Window object to add</haxe_doc>
 		</addWindow>
-		<create public="1" set="method" line="107">
+		<create public="1" set="method" line="109">
 			<f a="config">
 				<t path="lime.app.Config"/>
 				<x path="Void"/>
@@ -3819,14 +3819,14 @@
 	 * when building the project using Lime's command-line tools
 	 * @param	config	A Config object</haxe_doc>
 		</create>
-		<exec public="1" set="method" line="120">
+		<exec public="1" set="method" line="122">
 			<f a=""><x path="Int"/></f>
 			<haxe_doc>* Execute the Application. On native platforms, this method
 	 * blocks until the application is finished running. On other 
 	 * platforms, it will return immediately
 	 * @return An exit code, 0 if there was no error</haxe_doc>
 		</exec>
-		<init public="1" set="method" line="135">
+		<init public="1" set="method" line="137">
 			<f a="context">
 				<e path="lime.graphics.RenderContext"/>
 				<x path="Void"/>
@@ -3836,27 +3836,27 @@
 	 * render context
 	 * @param	context The current render context</haxe_doc>
 		</init>
-		<onKeyDown public="1" set="method" line="143">
+		<onKeyDown public="1" set="method" line="145">
 			<f a="keyCode:modifier">
-				<x path="Int"/>
-				<x path="Int"/>
+				<x path="lime.ui.KeyCode"/>
+				<x path="lime.ui.KeyModifier"/>
 				<x path="Void"/>
 			</f>
 			<haxe_doc>* Called when a key down event is fired
 	 * @param	keyCode	The code of the key that was pressed
 	 * @param	modifier	The modifier of the key that was pressed</haxe_doc>
 		</onKeyDown>
-		<onKeyUp public="1" set="method" line="151">
+		<onKeyUp public="1" set="method" line="153">
 			<f a="keyCode:modifier">
-				<x path="Int"/>
-				<x path="Int"/>
+				<x path="lime.ui.KeyCode"/>
+				<x path="lime.ui.KeyModifier"/>
 				<x path="Void"/>
 			</f>
 			<haxe_doc>* Called when a key up event is fired
 	 * @param	keyCode	The code of the key that was released
 	 * @param	modifier	The modifier of the key that was released</haxe_doc>
 		</onKeyUp>
-		<onMouseDown public="1" set="method" line="160">
+		<onMouseDown public="1" set="method" line="162">
 			<f a="x:y:button">
 				<x path="Float"/>
 				<x path="Float"/>
@@ -3868,7 +3868,7 @@
 	 * @param	y	The current y coordinate of the mouse
 	 * @param	button	The ID of the mouse button that was pressed</haxe_doc>
 		</onMouseDown>
-		<onMouseMove public="1" set="method" line="169">
+		<onMouseMove public="1" set="method" line="171">
 			<f a="x:y:button">
 				<x path="Float"/>
 				<x path="Float"/>
@@ -3880,7 +3880,7 @@
 	 * @param	y	The current y coordinate of the mouse
 	 * @param	button	The ID of the mouse button that was pressed</haxe_doc>
 		</onMouseMove>
-		<onMouseUp public="1" set="method" line="178">
+		<onMouseUp public="1" set="method" line="180">
 			<f a="x:y:button">
 				<x path="Float"/>
 				<x path="Float"/>
@@ -3892,7 +3892,7 @@
 	 * @param	y	The current y coordinate of the mouse
 	 * @param	button	The ID of the button that was released</haxe_doc>
 		</onMouseUp>
-		<onMouseWheel public="1" set="method" line="186">
+		<onMouseWheel public="1" set="method" line="188">
 			<f a="deltaX:deltaY">
 				<x path="Float"/>
 				<x path="Float"/>
@@ -3902,11 +3902,11 @@
 	 * @param	deltaX	The amount of horizontal scrolling (if applicable)
 	 * @param	deltaY	The amount of vertical scrolling (if applicable)</haxe_doc>
 		</onMouseWheel>
-		<onRenderContextLost public="1" set="method" line="192">
+		<onRenderContextLost public="1" set="method" line="194">
 			<f a=""><x path="Void"/></f>
 			<haxe_doc>* Called when a render context is lost</haxe_doc>
 		</onRenderContextLost>
-		<onRenderContextRestored public="1" set="method" line="199">
+		<onRenderContextRestored public="1" set="method" line="201">
 			<f a="context">
 				<e path="lime.graphics.RenderContext"/>
 				<x path="Void"/>
@@ -3914,7 +3914,7 @@
 			<haxe_doc>* Called when a render context is restored
 	 * @param	context	The current render context</haxe_doc>
 		</onRenderContextRestored>
-		<onTouchEnd public="1" set="method" line="208">
+		<onTouchEnd public="1" set="method" line="210">
 			<f a="x:y:id">
 				<x path="Float"/>
 				<x path="Float"/>
@@ -3926,7 +3926,7 @@
 	 * @param	y	The current y coordinate of the touch point
 	 * @param	id	The ID of the touch point</haxe_doc>
 		</onTouchEnd>
-		<onTouchMove public="1" set="method" line="217">
+		<onTouchMove public="1" set="method" line="219">
 			<f a="x:y:id">
 				<x path="Float"/>
 				<x path="Float"/>
@@ -3938,7 +3938,7 @@
 	 * @param	y	The current y coordinate of the touch point
 	 * @param	id	The ID of the touch point</haxe_doc>
 		</onTouchMove>
-		<onTouchStart public="1" set="method" line="226">
+		<onTouchStart public="1" set="method" line="228">
 			<f a="x:y:id">
 				<x path="Float"/>
 				<x path="Float"/>
@@ -3950,27 +3950,27 @@
 	 * @param	y	The current y coordinate of the touch point
 	 * @param	id	The ID of the touch point</haxe_doc>
 		</onTouchStart>
-		<onWindowActivate public="1" set="method" line="232">
+		<onWindowActivate public="1" set="method" line="234">
 			<f a=""><x path="Void"/></f>
 			<haxe_doc>* Called when a window activate event is fired</haxe_doc>
 		</onWindowActivate>
-		<onWindowClose public="1" set="method" line="238">
+		<onWindowClose public="1" set="method" line="240">
 			<f a=""><x path="Void"/></f>
 			<haxe_doc>* Called when a window close event is fired</haxe_doc>
 		</onWindowClose>
-		<onWindowDeactivate public="1" set="method" line="244">
+		<onWindowDeactivate public="1" set="method" line="246">
 			<f a=""><x path="Void"/></f>
 			<haxe_doc>* Called when a window deactivate event is fired</haxe_doc>
 		</onWindowDeactivate>
-		<onWindowFocusIn public="1" set="method" line="250">
+		<onWindowFocusIn public="1" set="method" line="252">
 			<f a=""><x path="Void"/></f>
 			<haxe_doc>* Called when a window focus in event is fired</haxe_doc>
 		</onWindowFocusIn>
-		<onWindowFocusOut public="1" set="method" line="256">
+		<onWindowFocusOut public="1" set="method" line="258">
 			<f a=""><x path="Void"/></f>
 			<haxe_doc>* Called when a window focus out event is fired</haxe_doc>
 		</onWindowFocusOut>
-		<onWindowMove public="1" set="method" line="264">
+		<onWindowMove public="1" set="method" line="266">
 			<f a="x:y">
 				<x path="Float"/>
 				<x path="Float"/>
@@ -3980,7 +3980,7 @@
 	 * @param	x	The x position of the window
 	 * @param	y	The y position of the window</haxe_doc>
 		</onWindowMove>
-		<onWindowResize public="1" set="method" line="272">
+		<onWindowResize public="1" set="method" line="274">
 			<f a="width:height">
 				<x path="Int"/>
 				<x path="Int"/>
@@ -3990,7 +3990,7 @@
 	 * @param	width	The width of the window
 	 * @param	height	The height of the window</haxe_doc>
 		</onWindowResize>
-		<removeRenderer public="1" set="method" line="279">
+		<removeRenderer public="1" set="method" line="281">
 			<f a="renderer">
 				<c path="lime.graphics.Renderer"/>
 				<x path="Void"/>
@@ -3998,7 +3998,7 @@
 			<haxe_doc>* Removes a Renderer from the Application
 	 * @param	renderer	A Renderer object to add</haxe_doc>
 		</removeRenderer>
-		<removeWindow public="1" set="method" line="294">
+		<removeWindow public="1" set="method" line="296">
 			<f a="window">
 				<c path="lime.ui.Window"/>
 				<x path="Void"/>
@@ -4006,7 +4006,7 @@
 			<haxe_doc>* Removes a Window from the Application
 	 * @param	window	A Window object to add</haxe_doc>
 		</removeWindow>
-		<render public="1" set="method" line="310">
+		<render public="1" set="method" line="312">
 			<f a="context">
 				<e path="lime.graphics.RenderContext"/>
 				<x path="Void"/>
@@ -4014,7 +4014,7 @@
 			<haxe_doc>* Called when a render event is fired
 	 * @param	context	The current render context</haxe_doc>
 		</render>
-		<update public="1" set="method" line="317">
+		<update public="1" set="method" line="319">
 			<f a="deltaTime">
 				<x path="Int"/>
 				<x path="Void"/>
@@ -4022,15 +4022,15 @@
 			<haxe_doc>* Called when an update event is fired
 	 * @param	deltaTime	The amount of time in milliseconds that has elapsed since the last update</haxe_doc>
 		</update>
-		<get_renderer get="inline" set="null" line="327">
+		<get_renderer get="inline" set="null" line="329">
 			<f a=""><c path="lime.graphics.Renderer"/></f>
 			<meta><m n=":noCompletion"/></meta>
 		</get_renderer>
-		<get_window get="inline" set="null" line="334">
+		<get_window get="inline" set="null" line="336">
 			<f a=""><c path="lime.ui.Window"/></f>
 			<meta><m n=":noCompletion"/></meta>
 		</get_window>
-		<new public="1" set="method" line="35"><f a=""><x path="Void"/></f></new>
+		<new public="1" set="method" line="37"><f a=""><x path="Void"/></f></new>
 		<haxe_doc>* The Application class forms the foundation for most Lime projects.
  * It is common to extend this class in a main class. It is then possible
  * to override "on" functions in the class in order to handle standard events
@@ -19530,6 +19530,275 @@
 		</SLEEP>
 		<meta><m n=":enum"/></meta>
 	</class>
+	<abstract path="lime.ui.KeyModifier" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/ui/KeyModifier.hx">
+		<from><icast><x path="Int"/></icast></from>
+		<this><x path="Int"/></this>
+		<to><icast><x path="Int"/></icast></to>
+		<impl><class path="lime.ui._KeyModifier.KeyModifier_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/ui/KeyModifier.hx" private="1" module="lime.ui.KeyModifier">
+	<NONE public="1" get="inline" set="null" line="7" static="1"><x path="lime.ui.KeyModifier"/></NONE>
+	<LEFT_SHIFT public="1" get="inline" set="null" line="8" static="1"><x path="lime.ui.KeyModifier"/></LEFT_SHIFT>
+	<RIGHT_SHIFT public="1" get="inline" set="null" line="9" static="1"><x path="lime.ui.KeyModifier"/></RIGHT_SHIFT>
+	<LEFT_CTRL public="1" get="inline" set="null" line="10" static="1"><x path="lime.ui.KeyModifier"/></LEFT_CTRL>
+	<RIGHT_CTRL public="1" get="inline" set="null" line="11" static="1"><x path="lime.ui.KeyModifier"/></RIGHT_CTRL>
+	<LEFT_ALT public="1" get="inline" set="null" line="12" static="1"><x path="lime.ui.KeyModifier"/></LEFT_ALT>
+	<RIGHT_ALT public="1" get="inline" set="null" line="13" static="1"><x path="lime.ui.KeyModifier"/></RIGHT_ALT>
+	<LEFT_META public="1" get="inline" set="null" line="14" static="1"><x path="lime.ui.KeyModifier"/></LEFT_META>
+	<RIGHT_META public="1" get="inline" set="null" line="15" static="1"><x path="lime.ui.KeyModifier"/></RIGHT_META>
+	<NUM_LOCK public="1" get="inline" set="null" line="16" static="1"><x path="lime.ui.KeyModifier"/></NUM_LOCK>
+	<CAPS_LOCK public="1" get="inline" set="null" line="17" static="1"><x path="lime.ui.KeyModifier"/></CAPS_LOCK>
+	<MODE public="1" get="inline" set="null" line="18" static="1"><x path="lime.ui.KeyModifier"/></MODE>
+	<CTRL public="1" get="inline" set="null" line="20" static="1"><x path="lime.ui.KeyModifier"/></CTRL>
+	<SHIFT public="1" get="inline" set="null" line="21" static="1"><x path="lime.ui.KeyModifier"/></SHIFT>
+	<ALT public="1" get="inline" set="null" line="22" static="1"><x path="lime.ui.KeyModifier"/></ALT>
+	<META public="1" get="inline" set="null" line="23" static="1"><x path="lime.ui.KeyModifier"/></META>
+	<altKey public="1" get="accessor" set="accessor" static="1">
+		<x path="Bool"/>
+		<meta><m n=":impl"/></meta>
+	</altKey>
+	<capsLock public="1" get="accessor" set="accessor" static="1">
+		<x path="Bool"/>
+		<meta><m n=":impl"/></meta>
+	</capsLock>
+	<ctrlKey public="1" get="accessor" set="accessor" static="1">
+		<x path="Bool"/>
+		<meta><m n=":impl"/></meta>
+	</ctrlKey>
+	<metaKey public="1" get="accessor" set="accessor" static="1">
+		<x path="Bool"/>
+		<meta><m n=":impl"/></meta>
+	</metaKey>
+	<numLock public="1" get="accessor" set="accessor" static="1">
+		<x path="Bool"/>
+		<meta><m n=":impl"/></meta>
+	</numLock>
+	<shiftKey public="1" get="accessor" set="accessor" static="1">
+		<x path="Bool"/>
+		<meta><m n=":impl"/></meta>
+	</shiftKey>
+	<get_altKey set="method" line="33" static="1">
+		<f a="this">
+			<x path="Int"/>
+			<x path="Bool"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</get_altKey>
+	<set_altKey get="inline" set="null" line="40" static="1">
+		<f a="this:value">
+			<x path="Int"/>
+			<x path="Bool"/>
+			<x path="Bool"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</set_altKey>
+	<get_capsLock set="method" line="57" static="1">
+		<f a="this">
+			<x path="Int"/>
+			<x path="Bool"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</get_capsLock>
+	<set_capsLock get="inline" set="null" line="64" static="1">
+		<f a="this:value">
+			<x path="Int"/>
+			<x path="Bool"/>
+			<x path="Bool"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</set_capsLock>
+	<get_ctrlKey set="method" line="81" static="1">
+		<f a="this">
+			<x path="Int"/>
+			<x path="Bool"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</get_ctrlKey>
+	<set_ctrlKey get="inline" set="null" line="88" static="1">
+		<f a="this:value">
+			<x path="Int"/>
+			<x path="Bool"/>
+			<x path="Bool"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</set_ctrlKey>
+	<get_metaKey set="method" line="105" static="1">
+		<f a="this">
+			<x path="Int"/>
+			<x path="Bool"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</get_metaKey>
+	<set_metaKey get="inline" set="null" line="112" static="1">
+		<f a="this:value">
+			<x path="Int"/>
+			<x path="Bool"/>
+			<x path="Bool"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</set_metaKey>
+	<get_numLock set="method" line="129" static="1">
+		<f a="this">
+			<x path="Int"/>
+			<x path="Bool"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</get_numLock>
+	<set_numLock get="inline" set="null" line="136" static="1">
+		<f a="this:value">
+			<x path="Int"/>
+			<x path="Bool"/>
+			<x path="Bool"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</set_numLock>
+	<get_shiftKey set="method" line="153" static="1">
+		<f a="this">
+			<x path="Int"/>
+			<x path="Bool"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</get_shiftKey>
+	<set_shiftKey get="inline" set="null" line="160" static="1">
+		<f a="this:value">
+			<x path="Int"/>
+			<x path="Bool"/>
+			<x path="Bool"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</set_shiftKey>
+</class></impl>
+	</abstract>
+	<class path="lime.ui._KeyModifier.KeyModifier_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/ui/KeyModifier.hx" private="1" module="lime.ui.KeyModifier">
+		<NONE public="1" get="inline" set="null" line="7" static="1"><x path="lime.ui.KeyModifier"/></NONE>
+		<LEFT_SHIFT public="1" get="inline" set="null" line="8" static="1"><x path="lime.ui.KeyModifier"/></LEFT_SHIFT>
+		<RIGHT_SHIFT public="1" get="inline" set="null" line="9" static="1"><x path="lime.ui.KeyModifier"/></RIGHT_SHIFT>
+		<LEFT_CTRL public="1" get="inline" set="null" line="10" static="1"><x path="lime.ui.KeyModifier"/></LEFT_CTRL>
+		<RIGHT_CTRL public="1" get="inline" set="null" line="11" static="1"><x path="lime.ui.KeyModifier"/></RIGHT_CTRL>
+		<LEFT_ALT public="1" get="inline" set="null" line="12" static="1"><x path="lime.ui.KeyModifier"/></LEFT_ALT>
+		<RIGHT_ALT public="1" get="inline" set="null" line="13" static="1"><x path="lime.ui.KeyModifier"/></RIGHT_ALT>
+		<LEFT_META public="1" get="inline" set="null" line="14" static="1"><x path="lime.ui.KeyModifier"/></LEFT_META>
+		<RIGHT_META public="1" get="inline" set="null" line="15" static="1"><x path="lime.ui.KeyModifier"/></RIGHT_META>
+		<NUM_LOCK public="1" get="inline" set="null" line="16" static="1"><x path="lime.ui.KeyModifier"/></NUM_LOCK>
+		<CAPS_LOCK public="1" get="inline" set="null" line="17" static="1"><x path="lime.ui.KeyModifier"/></CAPS_LOCK>
+		<MODE public="1" get="inline" set="null" line="18" static="1"><x path="lime.ui.KeyModifier"/></MODE>
+		<CTRL public="1" get="inline" set="null" line="20" static="1"><x path="lime.ui.KeyModifier"/></CTRL>
+		<SHIFT public="1" get="inline" set="null" line="21" static="1"><x path="lime.ui.KeyModifier"/></SHIFT>
+		<ALT public="1" get="inline" set="null" line="22" static="1"><x path="lime.ui.KeyModifier"/></ALT>
+		<META public="1" get="inline" set="null" line="23" static="1"><x path="lime.ui.KeyModifier"/></META>
+		<altKey public="1" get="accessor" set="accessor" static="1">
+			<x path="Bool"/>
+			<meta><m n=":impl"/></meta>
+		</altKey>
+		<capsLock public="1" get="accessor" set="accessor" static="1">
+			<x path="Bool"/>
+			<meta><m n=":impl"/></meta>
+		</capsLock>
+		<ctrlKey public="1" get="accessor" set="accessor" static="1">
+			<x path="Bool"/>
+			<meta><m n=":impl"/></meta>
+		</ctrlKey>
+		<metaKey public="1" get="accessor" set="accessor" static="1">
+			<x path="Bool"/>
+			<meta><m n=":impl"/></meta>
+		</metaKey>
+		<numLock public="1" get="accessor" set="accessor" static="1">
+			<x path="Bool"/>
+			<meta><m n=":impl"/></meta>
+		</numLock>
+		<shiftKey public="1" get="accessor" set="accessor" static="1">
+			<x path="Bool"/>
+			<meta><m n=":impl"/></meta>
+		</shiftKey>
+		<get_altKey set="method" line="33" static="1">
+			<f a="this">
+				<x path="Int"/>
+				<x path="Bool"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</get_altKey>
+		<set_altKey get="inline" set="null" line="40" static="1">
+			<f a="this:value">
+				<x path="Int"/>
+				<x path="Bool"/>
+				<x path="Bool"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</set_altKey>
+		<get_capsLock set="method" line="57" static="1">
+			<f a="this">
+				<x path="Int"/>
+				<x path="Bool"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</get_capsLock>
+		<set_capsLock get="inline" set="null" line="64" static="1">
+			<f a="this:value">
+				<x path="Int"/>
+				<x path="Bool"/>
+				<x path="Bool"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</set_capsLock>
+		<get_ctrlKey set="method" line="81" static="1">
+			<f a="this">
+				<x path="Int"/>
+				<x path="Bool"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</get_ctrlKey>
+		<set_ctrlKey get="inline" set="null" line="88" static="1">
+			<f a="this:value">
+				<x path="Int"/>
+				<x path="Bool"/>
+				<x path="Bool"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</set_ctrlKey>
+		<get_metaKey set="method" line="105" static="1">
+			<f a="this">
+				<x path="Int"/>
+				<x path="Bool"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</get_metaKey>
+		<set_metaKey get="inline" set="null" line="112" static="1">
+			<f a="this:value">
+				<x path="Int"/>
+				<x path="Bool"/>
+				<x path="Bool"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</set_metaKey>
+		<get_numLock set="method" line="129" static="1">
+			<f a="this">
+				<x path="Int"/>
+				<x path="Bool"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</get_numLock>
+		<set_numLock get="inline" set="null" line="136" static="1">
+			<f a="this:value">
+				<x path="Int"/>
+				<x path="Bool"/>
+				<x path="Bool"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</set_numLock>
+		<get_shiftKey set="method" line="153" static="1">
+			<f a="this">
+				<x path="Int"/>
+				<x path="Bool"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</get_shiftKey>
+		<set_shiftKey get="inline" set="null" line="160" static="1">
+			<f a="this:value">
+				<x path="Int"/>
+				<x path="Bool"/>
+				<x path="Bool"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</set_shiftKey>
+	</class>
 	<class path="lime.ui.Mouse" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/ui/Mouse.hx">
 		<cursor public="1" get="accessor" set="accessor" static="1"><e path="lime.ui.MouseCursor"/></cursor>
 		<hide public="1" set="method" line="10" static="1"><f a=""><x path="Void"/></f></hide>
@@ -19566,13 +19835,13 @@
 		<fullscreen public="1"><x path="Bool"/></fullscreen>
 		<height public="1"><x path="Int"/></height>
 		<onKeyDown public="1"><c path="lime.app.Event"><f a=":">
-	<x path="Int"/>
-	<x path="Int"/>
+	<x path="lime.ui.KeyCode"/>
+	<x path="lime.ui.KeyModifier"/>
 	<x path="Void"/>
 </f></c></onKeyDown>
 		<onKeyUp public="1"><c path="lime.app.Event"><f a=":">
-	<x path="Int"/>
-	<x path="Int"/>
+	<x path="lime.ui.KeyCode"/>
+	<x path="lime.ui.KeyModifier"/>
 	<x path="Void"/>
 </f></c></onKeyUp>
 		<onMouseDown public="1"><c path="lime.app.Event"><f a="::">
