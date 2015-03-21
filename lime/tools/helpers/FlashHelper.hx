@@ -5,13 +5,13 @@ package lime.tools.helpers;
 //import openfl.utils.ByteArray;
 import haxe.io.Bytes;
 import haxe.io.Path;
-import lime.tools.helpers.LogHelper;
-import lime.tools.helpers.ProcessHelper;
-import lime.graphics.Font;
 import lime.project.Asset;
 import lime.project.AssetEncoding;
 import lime.project.AssetType;
 import lime.project.HXProject;
+import lime.text.Font;
+import lime.tools.helpers.LogHelper;
+import lime.tools.helpers.ProcessHelper;
 import sys.io.File;
 import sys.FileSystem;
 import sys.io.FileSeek;
@@ -829,7 +829,7 @@ class FlashHelper {
 		
 		if (assets.length > 0) {
 			
-			project.haxeflags.push ("-swf-lib " + PathHelper.tryFullPath(project.app.path) + "/flash/obj/assets.swf");
+			project.haxeflags.push ("-swf-lib " + project.app.path + "/flash/obj/assets.swf");
 			project.haxedefs.set ("flash-use-stage", "");
 			
 			return true;

@@ -1,6 +1,9 @@
 package lime.system;
-#if !macro
 
+
+#if !macro
+import lime.app.Application;
+#end
 
 #if flash
 import flash.Lib;
@@ -9,7 +12,11 @@ import haxe.Timer;
 #end
 
 #if (js && html5)
+#if (haxe_ver >= "3.2")
+import js.html.Element;
+#else
 import js.html.HtmlElement;
+#end
 import js.Browser;
 #end
 
@@ -21,7 +28,12 @@ import sys.io.Process;
 class System {
 	
 	
+	public static var applicationDirectory (get, null):String;
+	public static var applicationStorageDirectory (get, null):String;
+	public static var desktopDirectory (get, null):String;
 	public static var disableCFFI:Bool;
+	public static var documentsDirectory (get, null):String;
+	public static var userDirectory (get, null):String;
 	
 	
 	@:noCompletion private static var __moduleNames:Map<String, String> = null;
@@ -40,7 +52,7 @@ class System {
 	@:keep @:expose("lime.embed")
 	public static function embed (element:Dynamic, width:Null<Int> = null, height:Null<Int> = null, background:String = null, assetsPrefix:String = null) {
 		
-		var htmlElement:HtmlElement = null;
+		var htmlElement:#if (haxe_ver >= "3.2") Element #else HtmlElement #end = null;
 		
 		if (Std.is (element, String)) {
 			
@@ -151,7 +163,7 @@ class System {
 		#elseif (html5 || disable_cffi)
 		return Std.int ((Timer.stamp () - __startTime) * 1000);
 		#else
-		return lime_system_gettimer ();
+		return lime_system_get_timer ();
 		#end
 		
 	}
@@ -159,7 +171,7 @@ class System {
 	
 	public static function load (library:String, method:String, args:Int = 0, lazy:Bool = false):Dynamic {
 		
-		#if disable_cffi
+		#if (disable_cffi || macro)
 		var disableCFFI = true;
 		#end
 		
@@ -179,7 +191,7 @@ class System {
 			
 		}
 		
-		#if !disable_cffi
+		#if (!disable_cffi && !macro)
 		#if (sys && !html5)
 		
 		#if (iphone || emscripten || android || static_link)
@@ -210,7 +222,7 @@ class System {
 		#elseif nodejs
 		if (__nodeNDLLModule == null) {
 			
-			__nodeNDLLModule = untyped require('bindings')('node_ndll');
+			__nodeNDLLModule = untyped require('ndll');
 			
 		}
 		#end
@@ -302,7 +314,7 @@ class System {
 	
 	private static function tryLoad (name:String, library:String, func:String, args:Int):Dynamic {
 		
-		#if (sys && !html5 || nodejs)
+		#if sys
 		
 		try {
 			
@@ -393,48 +405,109 @@ class System {
 	
 	
 	
+	// Get & Set Methods
+	
+	
+	
+	
+	private static function get_applicationDirectory ():String {
+		
+		#if (cpp || neko || nodejs)
+		return lime_system_get_directory (SystemDirectory.APPLICATION, null, null);
+		#else
+		return null;
+		#end
+		
+	}
+	
+	
+	private static function get_applicationStorageDirectory ():String {
+		
+		var company = "MyCompany";
+		var file = "MyApplication";
+		
+		#if !macro
+		if (Application.current != null && Application.current.config != null) {
+			
+			if (Application.current.config.company != null) {
+				
+				company = Application.current.config.company;
+				
+			}
+			
+			if (Application.current.config.file != null) {
+				
+				file = Application.current.config.file;
+				
+			}
+			
+		}
+		#end
+		
+		#if (cpp || neko || nodejs)
+		return lime_system_get_directory (SystemDirectory.APPLICATION_STORAGE, company, file);
+		#else
+		return null;
+		#end
+		
+	}
+	
+	
+	private static function get_desktopDirectory ():String {
+		
+		#if (cpp || neko || nodejs)
+		return lime_system_get_directory (SystemDirectory.DESKTOP, null, null);
+		#else
+		return null;
+		#end
+		
+	}
+	
+	
+	private static function get_documentsDirectory ():String {
+		
+		#if (cpp || neko || nodejs)
+		return lime_system_get_directory (SystemDirectory.DOCUMENTS, null, null);
+		#else
+		return null;
+		#end
+		
+	}
+	
+	
+	private static function get_userDirectory ():String {
+		
+		#if (cpp || neko || nodejs)
+		return lime_system_get_directory (SystemDirectory.USER, null, null);
+		#else
+		return null;
+		#end
+		
+	}
+	
+	
+	
+	
 	// Native Methods
 	
 	
 	
 	
 	#if (cpp || neko || nodejs)
-	private static var lime_system_gettimer = System.load ("lime", "lime_system_gettimer", 0);
+	private static var lime_system_get_directory = System.load ("lime", "lime_system_get_directory", 3);
+	private static var lime_system_get_timer = System.load ("lime", "lime_system_get_timer", 0);
 	#end
 	
 	
 }
 
 
-#else
-
-
-import haxe.macro.Compiler;
-import haxe.macro.Context;
-import sys.FileSystem;
-
-
-class System {
+@:enum private abstract SystemDirectory(Int) from Int to Int {
 	
-	
-	public static function includeTools () {
-		
-		var paths = Context.getClassPath ();
-		
-		for (path in paths) {
-			
-			if (FileSystem.exists (path + "/tools/CommandLineTools.hx")) {
-				
-				Compiler.addClassPath (path + "/tools");
-				
-			}
-			
-		}
-		
-	}
-	
+	var APPLICATION = 0;
+	var APPLICATION_STORAGE = 1;
+	var DESKTOP = 2;
+	var DOCUMENTS = 3;
+	var USER = 4;
 	
 }
-
-
-#end

@@ -34,7 +34,7 @@ import format.png.Reader;
 import format.png.Tools;
 import format.png.Writer;
 import format.tools.Deflate;
-#if (sys || nodejs)
+#if sys
 import sys.io.File;
 #end
 #end
@@ -45,6 +45,8 @@ import sys.io.File;
 @:access(lime.math.ColorMatrix)
 @:access(lime.math.Rectangle)
 @:access(lime.math.Vector2)
+
+@:autoBuild(lime.Assets.embedImage())
 
 
 class Image {
@@ -66,9 +68,11 @@ class Image {
 	public var transparent (get, set):Bool;
 	public var type:ImageType;
 	public var width:Int;
+	public var x:Float;
+	public var y:Float;
 	
 	
-	public function new (buffer:ImageBuffer = null, offsetX:Int = 0, offsetY:Int = 0, width:Int = 0, height:Int = 0, color:Null<Int> = null, type:ImageType = null) {
+	public function new (buffer:ImageBuffer = null, offsetX:Int = 0, offsetY:Int = 0, width:Int = -1, height:Int = -1, color:Null<Int> = null, type:ImageType = null) {
 		
 		this.offsetX = offsetX;
 		this.offsetY = offsetY;
@@ -149,10 +153,6 @@ class Image {
 	
 	
 	public function clone ():Image {
-		
-		#if (js && html5)
-		ImageCanvasUtil.sync (this);
-		#end
 		
 		var image = new Image (buffer.clone (), offsetX, offsetY, width, height, null, type);
 		return image;
@@ -878,8 +878,8 @@ class Image {
 		#elseif (cpp || neko || nodejs || java)
 			
 			var buffer = null;
-				
-			#if (sys && (!disable_cffi || !format) && !java)
+			
+			if (#if (sys && (!disable_cffi || !format) && !java) true #else false #end && !System.disableCFFI) {
 				
 				var data = lime_image_load (path);
 				if (data != null) {
@@ -892,7 +892,11 @@ class Image {
 					buffer = new ImageBuffer (u8a, data.width, data.height, data.bpp);
 				}
 				
-			#elseif format
+			}
+			
+			#if format
+			
+			else {
 				
 				try {
 					
@@ -924,6 +928,8 @@ class Image {
 					
 				} catch (e:Dynamic) {}
 				
+			}
+			
 			#end
 			
 			if (buffer != null) {
@@ -953,13 +959,13 @@ class Image {
 		
 		if (buffer != null) {
 			
-			if (width == 0) {
+			if (width == -1) {
 				
 				this.width = buffer.width;
 				
 			}
 			
-			if (height == 0) {
+			if (height == -1) {
 				
 				this.height = buffer.height;
 				
@@ -1015,6 +1021,7 @@ class Image {
 			#if (js && html5)
 				
 				ImageCanvasUtil.convertToCanvas (this);
+				ImageCanvasUtil.sync (this);
 				ImageCanvasUtil.createImageData (this);
 				
 			#elseif flash

@@ -56,6 +56,7 @@ class ImageCanvasUtil {
 		if (image.buffer.data == null) {
 			
 			convertToCanvas (image);
+			sync (image);
 			createImageData (image);
 			
 			image.buffer.__srcCanvas = null;
@@ -140,7 +141,7 @@ class ImageCanvasUtil {
 			
 			untyped (buffer.__srcContext).mozImageSmoothingEnabled = false;
 			untyped (buffer.__srcContext).webkitImageSmoothingEnabled = false;
-			buffer.__srcContext.imageSmoothingEnabled = false;
+			untyped (buffer.__srcContext).imageSmoothingEnabled = false;
 			
 		}
 		#end
@@ -252,6 +253,7 @@ class ImageCanvasUtil {
 			
 		} else {
 			
+			sync (image);
 			var sourceCanvas = buffer.__srcCanvas;
 			buffer.__srcCanvas = null;
 			createCanvas (image, newWidth, newHeight);
