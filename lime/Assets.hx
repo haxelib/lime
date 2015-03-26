@@ -1,5 +1,4 @@
 package lime;
-import lime.graphics.ImageBuffer;
 #if !macro
 
 
@@ -18,8 +17,8 @@ import lime.utils.ByteArray;
  * embedded images, fonts, sounds and other resource files.</p>
  * 
  * <p>The contents are populated automatically when an application
- * is compiled using the OpenFL command-line tools, based on the
- * contents of the *.nmml project file.</p>
+ * is compiled using the Lime command-line tools, based on the
+ * contents of the *.xml project file.</p>
  * 
  * <p>For most platforms, the assets are included in the same directory
  * or package as the application, and the paths are handled
@@ -191,7 +190,7 @@ class Assets {
 	 * @param	id		The ID or asset path for the font
 	 * @return		A new Font object
 	 */
-	public static function getFont (id:String, useCache:Bool = true):#if (openfl < "3.0.0") Dynamic #else Font #end {
+	public static function getFont (id:String, useCache:Bool = true):Font {
 		
 		initialize ();
 		
@@ -1003,7 +1002,7 @@ class AssetLibrary {
 	}
 	
 	
-	public function getFont (id:String):#if (openfl < "3.0.0") Dynamic #else Font #end {
+	public function getFont (id:String):Font {
 		
 		return null;
 		
@@ -1091,7 +1090,7 @@ class AssetLibrary {
 	}
 	
 	
-	public function loadFont (id:String, handler:#if (openfl < "3.0.0") Dynamic #else Font #end -> Void):Void {
+	public function loadFont (id:String, handler:Font -> Void):Void {
 		
 		handler (getFont (id));
 		
@@ -1238,6 +1237,7 @@ import haxe.macro.Context;
 import haxe.macro.Expr;
 import haxe.macro.Type;
 import haxe.Serializer;
+import lime.graphics.ImageBuffer;
 import sys.io.File;
 
 
@@ -1397,7 +1397,7 @@ class Assets {
 		if (path != null && path != "") {
 			
 			#if html5
-			Sys.command ("haxelib", [ "run", "openfl", "generate", "-font-hash", sys.FileSystem.fullPath(path) ]);
+			Sys.command ("haxelib", [ "run", "lime", "generate", "-font-hash", sys.FileSystem.fullPath(path) ]);
 			path += ".hash";
 			#end
 			
