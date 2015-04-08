@@ -365,7 +365,7 @@
 		</meta>
 	</class>
 	<class path="cpp.Lib" params="" file="/usr/lib/haxe/std/cpp/Lib.hx">
-		<load public="1" set="method" line="45" static="1">
+		<load public="1" set="method" line="30" static="1">
 			<f a="lib:prim:nargs">
 				<c path="String"/>
 				<c path="String"/>
@@ -375,7 +375,7 @@
 			<meta><m n=":has_untyped"/></meta>
 			<haxe_doc>Load and return a Cpp primitive from a DLL library.</haxe_doc>
 		</load>
-		<loadLazy public="1" set="method" line="72" static="1">
+		<loadLazy public="1" set="method" line="57" static="1">
 			<f a="lib:prim:nargs">
 				<c path="String"/>
 				<c path="String"/>
@@ -1473,6 +1473,7 @@
 		<this><c path="cpp.RawConstPointer"><x path="cpp.Char"/></c></this>
 		<to>
 			<icast><c path="cpp.RawConstPointer"><x path="cpp.Char"/></c></icast>
+			<icast field="toString"><c path="String"/></icast>
 			<icast field="toPointer"><c path="cpp.RawConstPointer"><x path="cpp.Char"/></c></icast>
 		</to>
 		<impl><class path="cpp._ConstCharStar.ConstCharStar_Impl_" params="" file="/usr/lib/haxe/std/cpp/ConstCharStar.hx" private="1" module="cpp.ConstCharStar"><meta><m n=":keep"/></meta></class></impl>
@@ -3616,19 +3617,19 @@
 	<c path="String"/>
 	<x path="Void"/>
 </f></loaderTrace>
-		<get_applicationDirectory set="method" line="429" static="1"><f a=""><c path="String"/></f></get_applicationDirectory>
-		<get_applicationStorageDirectory set="method" line="440" static="1"><f a=""><c path="String"/></f></get_applicationStorageDirectory>
-		<get_desktopDirectory set="method" line="472" static="1"><f a=""><c path="String"/></f></get_desktopDirectory>
-		<get_documentsDirectory set="method" line="483" static="1"><f a=""><c path="String"/></f></get_documentsDirectory>
-		<get_fontsDirectory set="method" line="494" static="1"><f a=""><c path="String"/></f></get_fontsDirectory>
-		<get_userDirectory set="method" line="505" static="1"><f a=""><c path="String"/></f></get_userDirectory>
-		<lime_system_get_directory line="524" static="1"><f a="::">
+		<get_applicationDirectory set="method" line="444" static="1"><f a=""><c path="String"/></f></get_applicationDirectory>
+		<get_applicationStorageDirectory set="method" line="455" static="1"><f a=""><c path="String"/></f></get_applicationStorageDirectory>
+		<get_desktopDirectory set="method" line="487" static="1"><f a=""><c path="String"/></f></get_desktopDirectory>
+		<get_documentsDirectory set="method" line="498" static="1"><f a=""><c path="String"/></f></get_documentsDirectory>
+		<get_fontsDirectory set="method" line="509" static="1"><f a=""><c path="String"/></f></get_fontsDirectory>
+		<get_userDirectory set="method" line="520" static="1"><f a=""><c path="String"/></f></get_userDirectory>
+		<lime_system_get_directory line="539" static="1"><f a="::">
 	<x path="lime.system._System.SystemDirectory"/>
 	<c path="String"/>
 	<c path="String"/>
 	<c path="String"/>
 </f></lime_system_get_directory>
-		<lime_system_get_timer line="525" static="1"><f a=""><x path="Int"/></f></lime_system_get_timer>
+		<lime_system_get_timer line="540" static="1"><f a=""><x path="Int"/></f></lime_system_get_timer>
 		<meta><m n=":directlyUsed"/></meta>
 	</class>
 	<class path="lime._backend.native.NativeApplication" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/_backend/native/NativeApplication.hx">
@@ -17566,42 +17567,42 @@
 		<to><icast><x path="Int"/></icast></to>
 		<meta><m n=":enum"/></meta>
 		<impl><class path="lime.system._System.SystemDirectory_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/system/System.hx" private="1" module="lime.system.System" extern="1">
-	<APPLICATION public="1" get="inline" set="null" line="534" static="1">
+	<APPLICATION public="1" get="inline" set="null" line="549" static="1">
 		<x path="lime.system._System.SystemDirectory"/>
 		<meta>
 			<m n=":enum"/>
 			<m n=":impl"/>
 		</meta>
 	</APPLICATION>
-	<APPLICATION_STORAGE public="1" get="inline" set="null" line="535" static="1">
+	<APPLICATION_STORAGE public="1" get="inline" set="null" line="550" static="1">
 		<x path="lime.system._System.SystemDirectory"/>
 		<meta>
 			<m n=":enum"/>
 			<m n=":impl"/>
 		</meta>
 	</APPLICATION_STORAGE>
-	<DESKTOP public="1" get="inline" set="null" line="536" static="1">
+	<DESKTOP public="1" get="inline" set="null" line="551" static="1">
 		<x path="lime.system._System.SystemDirectory"/>
 		<meta>
 			<m n=":enum"/>
 			<m n=":impl"/>
 		</meta>
 	</DESKTOP>
-	<DOCUMENTS public="1" get="inline" set="null" line="537" static="1">
+	<DOCUMENTS public="1" get="inline" set="null" line="552" static="1">
 		<x path="lime.system._System.SystemDirectory"/>
 		<meta>
 			<m n=":enum"/>
 			<m n=":impl"/>
 		</meta>
 	</DOCUMENTS>
-	<FONTS public="1" get="inline" set="null" line="538" static="1">
+	<FONTS public="1" get="inline" set="null" line="553" static="1">
 		<x path="lime.system._System.SystemDirectory"/>
 		<meta>
 			<m n=":enum"/>
 			<m n=":impl"/>
 		</meta>
 	</FONTS>
-	<USER public="1" get="inline" set="null" line="539" static="1">
+	<USER public="1" get="inline" set="null" line="554" static="1">
 		<x path="lime.system._System.SystemDirectory"/>
 		<meta>
 			<m n=":enum"/>
@@ -17612,42 +17613,42 @@
 </class></impl>
 	</abstract>
 	<class path="lime.system._System.SystemDirectory_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/system/System.hx" private="1" module="lime.system.System" extern="1">
-		<APPLICATION public="1" get="inline" set="null" line="534" static="1">
+		<APPLICATION public="1" get="inline" set="null" line="549" static="1">
 			<x path="lime.system._System.SystemDirectory"/>
 			<meta>
 				<m n=":enum"/>
 				<m n=":impl"/>
 			</meta>
 		</APPLICATION>
-		<APPLICATION_STORAGE public="1" get="inline" set="null" line="535" static="1">
+		<APPLICATION_STORAGE public="1" get="inline" set="null" line="550" static="1">
 			<x path="lime.system._System.SystemDirectory"/>
 			<meta>
 				<m n=":enum"/>
 				<m n=":impl"/>
 			</meta>
 		</APPLICATION_STORAGE>
-		<DESKTOP public="1" get="inline" set="null" line="536" static="1">
+		<DESKTOP public="1" get="inline" set="null" line="551" static="1">
 			<x path="lime.system._System.SystemDirectory"/>
 			<meta>
 				<m n=":enum"/>
 				<m n=":impl"/>
 			</meta>
 		</DESKTOP>
-		<DOCUMENTS public="1" get="inline" set="null" line="537" static="1">
+		<DOCUMENTS public="1" get="inline" set="null" line="552" static="1">
 			<x path="lime.system._System.SystemDirectory"/>
 			<meta>
 				<m n=":enum"/>
 				<m n=":impl"/>
 			</meta>
 		</DOCUMENTS>
-		<FONTS public="1" get="inline" set="null" line="538" static="1">
+		<FONTS public="1" get="inline" set="null" line="553" static="1">
 			<x path="lime.system._System.SystemDirectory"/>
 			<meta>
 				<m n=":enum"/>
 				<m n=":impl"/>
 			</meta>
 		</FONTS>
-		<USER public="1" get="inline" set="null" line="539" static="1">
+		<USER public="1" get="inline" set="null" line="554" static="1">
 			<x path="lime.system._System.SystemDirectory"/>
 			<meta>
 				<m n=":enum"/>
@@ -24400,28 +24401,28 @@
 		<extends path="haxe.io.Bytes"/>
 		<implements path="lime.utils.IMemoryRange"/>
 		<implements path="lime.utils.IDataInput"/>
-		<fromBytes public="1" set="method" line="278" static="1"><f a="bytes">
+		<fromBytes public="1" set="method" line="283" static="1"><f a="bytes">
 	<c path="haxe.io.Bytes"/>
 	<c path="lime.utils.ByteArray"/>
 </f></fromBytes>
-		<readFile public="1" set="method" line="387" static="1"><f a="path">
+		<readFile public="1" set="method" line="392" static="1"><f a="path">
 	<c path="String"/>
 	<c path="lime.utils.ByteArray"/>
 </f></readFile>
-		<lime_byte_array_overwrite_file line="1150" static="1"><f a=":">
+		<lime_byte_array_overwrite_file line="1155" static="1"><f a=":">
 	<c path="String"/>
 	<c path="lime.utils.ByteArray"/>
 	<unknown/>
 </f></lime_byte_array_overwrite_file>
-		<lime_byte_array_read_file line="1151" static="1"><f a="">
+		<lime_byte_array_read_file line="1156" static="1"><f a="">
 	<c path="String"/>
 	<c path="lime.utils.ByteArray"/>
 </f></lime_byte_array_read_file>
-		<lime_lzma_decode line="1152" static="1"><f a="">
+		<lime_lzma_decode line="1157" static="1"><f a="">
 	<t path="haxe.io.BytesData"/>
 	<t path="haxe.io.BytesData"/>
 </f></lime_lzma_decode>
-		<lime_lzma_encode line="1153" static="1"><f a="">
+		<lime_lzma_encode line="1158" static="1"><f a="">
 	<t path="haxe.io.BytesData"/>
 	<t path="haxe.io.BytesData"/>
 </f></lime_lzma_encode>
@@ -24433,18 +24434,18 @@
 		<littleEndian><x path="Bool"/></littleEndian>
 		<bigEndian public="1" get="accessor" set="accessor"><x path="Bool"/></bigEndian>
 		<byteLength public="1" get="accessor" set="null"><x path="Int"/></byteLength>
-		<asString public="1" set="method" line="147"><f a=""><c path="String"/></f></asString>
-		<checkData public="1" set="method" line="156"><f a="length">
+		<asString public="1" set="method" line="152"><f a=""><c path="String"/></f></asString>
+		<checkData public="1" set="method" line="161"><f a="length">
 	<x path="Int"/>
 	<x path="Void"/>
 </f></checkData>
-		<clear public="1" set="method" line="168"><f a=""><x path="Void"/></f></clear>
-		<compress public="1" set="method" line="176"><f a="?algorithm">
+		<clear public="1" set="method" line="173"><f a=""><x path="Void"/></f></clear>
+		<compress public="1" set="method" line="181"><f a="?algorithm">
 	<e path="lime.utils.CompressionAlgorithm"/>
 	<x path="Void"/>
 </f></compress>
-		<deflate public="1" set="method" line="226"><f a=""><x path="Void"/></f></deflate>
-		<ensureElem set="method" line="234">
+		<deflate public="1" set="method" line="231"><f a=""><x path="Void"/></f></deflate>
+		<ensureElem set="method" line="239">
 			<f a="size:updateLength">
 				<x path="Int"/>
 				<x path="Bool"/>
@@ -24452,118 +24453,118 @@
 			</f>
 			<meta><m n=":has_untyped"/></meta>
 		</ensureElem>
-		<getLength public="1" set="method" line="288"><f a=""><x path="Int"/></f></getLength>
-		<getByteBuffer public="1" set="method" line="289"><f a=""><c path="lime.utils.ByteArray"/></f></getByteBuffer>
-		<getStart public="1" set="method" line="290"><f a=""><x path="Int"/></f></getStart>
-		<inflate public="1" set="method" line="294"><f a=""><x path="Void"/></f></inflate>
-		<readBoolean public="1" get="inline" set="null" line="301"><f a=""><x path="Bool"/></f></readBoolean>
-		<readByte public="1" get="inline" set="null" line="312"><f a=""><x path="Int"/></f></readByte>
-		<readBytes public="1" set="method" line="325"><f a="bytes:?offset:?length">
+		<getLength public="1" set="method" line="293"><f a=""><x path="Int"/></f></getLength>
+		<getByteBuffer public="1" set="method" line="294"><f a=""><c path="lime.utils.ByteArray"/></f></getByteBuffer>
+		<getStart public="1" set="method" line="295"><f a=""><x path="Int"/></f></getStart>
+		<inflate public="1" set="method" line="299"><f a=""><x path="Void"/></f></inflate>
+		<readBoolean public="1" get="inline" set="null" line="306"><f a=""><x path="Bool"/></f></readBoolean>
+		<readByte public="1" get="inline" set="null" line="317"><f a=""><x path="Int"/></f></readByte>
+		<readBytes public="1" set="method" line="330"><f a="bytes:?offset:?length">
 	<c path="lime.utils.ByteArray"/>
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Void"/>
 </f></readBytes>
-		<readDouble public="1" set="method" line="372"><f a=""><x path="Float"/></f></readDouble>
-		<readFloat public="1" set="method" line="400"><f a=""><x path="Float"/></f></readFloat>
-		<readInt public="1" set="method" line="415"><f a=""><x path="Int"/></f></readInt>
-		<readMultiByte public="1" get="inline" set="null" line="432"><f a="length:charSet">
+		<readDouble public="1" set="method" line="377"><f a=""><x path="Float"/></f></readDouble>
+		<readFloat public="1" set="method" line="405"><f a=""><x path="Float"/></f></readFloat>
+		<readInt public="1" set="method" line="420"><f a=""><x path="Int"/></f></readInt>
+		<readMultiByte public="1" get="inline" set="null" line="437"><f a="length:charSet">
 	<x path="Int"/>
 	<c path="String"/>
 	<c path="String"/>
 </f></readMultiByte>
-		<readShort public="1" set="method" line="439"><f a=""><x path="Int"/></f></readShort>
-		<readUnsignedByte public="1" get="inline" set="null" line="455"><f a=""><x path="Int"/></f></readUnsignedByte>
-		<readUnsignedInt public="1" set="method" line="467"><f a=""><x path="Int"/></f></readUnsignedInt>
-		<readUnsignedShort public="1" set="method" line="484"><f a=""><x path="Int"/></f></readUnsignedShort>
-		<readUTF public="1" set="method" line="499"><f a=""><c path="String"/></f></readUTF>
-		<readUTFBytes public="1" set="method" line="507">
+		<readShort public="1" set="method" line="444"><f a=""><x path="Int"/></f></readShort>
+		<readUnsignedByte public="1" get="inline" set="null" line="460"><f a=""><x path="Int"/></f></readUnsignedByte>
+		<readUnsignedInt public="1" set="method" line="472"><f a=""><x path="Int"/></f></readUnsignedInt>
+		<readUnsignedShort public="1" set="method" line="489"><f a=""><x path="Int"/></f></readUnsignedShort>
+		<readUTF public="1" set="method" line="504"><f a=""><c path="String"/></f></readUTF>
+		<readUTFBytes public="1" set="method" line="512">
 			<f a="len">
 				<x path="Int"/>
 				<c path="String"/>
 			</f>
 			<meta><m n=":has_untyped"/></meta>
 		</readUTFBytes>
-		<setLength public="1" set="method" line="582"><f a="length">
+		<setLength public="1" set="method" line="587"><f a="length">
 	<x path="Int"/>
 	<x path="Void"/>
 </f></setLength>
-		<slice public="1" set="method" line="593"><f a="begin:?inEnd">
+		<slice public="1" set="method" line="598"><f a="begin:?inEnd">
 	<x path="Int"/>
 	<x path="Int"/>
 	<c path="lime.utils.ByteArray"/>
 </f></slice>
-		<ThrowEOFi set="method" line="629"><f a=""><x path="Int"/></f></ThrowEOFi>
-		<toString public="1" set="method" line="638" override="1"><f a=""><c path="String"/></f></toString>
-		<uncompress public="1" set="method" line="649"><f a="?algorithm">
+		<ThrowEOFi set="method" line="634"><f a=""><x path="Int"/></f></ThrowEOFi>
+		<toString public="1" set="method" line="643" override="1"><f a=""><c path="String"/></f></toString>
+		<uncompress public="1" set="method" line="654"><f a="?algorithm">
 	<e path="lime.utils.CompressionAlgorithm"/>
 	<x path="Void"/>
 </f></uncompress>
-		<write_uncheck get="inline" set="null" line="707">
+		<write_uncheck get="inline" set="null" line="712">
 			<f a="byte">
 				<x path="Int"/>
 				<x path="Void"/>
 			</f>
 			<meta><m n=":has_untyped"/></meta>
 		</write_uncheck>
-		<writeBoolean public="1" get="inline" set="null" line="722"><f a="value">
+		<writeBoolean public="1" get="inline" set="null" line="727"><f a="value">
 	<x path="Bool"/>
 	<x path="Void"/>
 </f></writeBoolean>
-		<writeByte public="1" set="method" line="729">
+		<writeByte public="1" set="method" line="734">
 			<f a="value">
 				<x path="Int"/>
 				<x path="Void"/>
 			</f>
 			<meta><m n=":has_untyped"/></meta>
 		</writeByte>
-		<writeBytes public="1" set="method" line="748"><f a="bytes:?offset:?length">
+		<writeBytes public="1" set="method" line="753"><f a="bytes:?offset:?length">
 	<c path="haxe.io.Bytes"/>
 	<x path="UInt"/>
 	<x path="UInt"/>
 	<x path="Void"/>
 </f></writeBytes>
-		<writeDouble public="1" set="method" line="768"><f a="x">
+		<writeDouble public="1" set="method" line="773"><f a="x">
 	<x path="Float"/>
 	<x path="Void"/>
 </f></writeDouble>
-		<writeFile public="1" set="method" line="783"><f a="path">
+		<writeFile public="1" set="method" line="788"><f a="path">
 	<c path="String"/>
 	<x path="Void"/>
 </f></writeFile>
-		<writeFloat public="1" set="method" line="796"><f a="x">
+		<writeFloat public="1" set="method" line="801"><f a="x">
 	<x path="Float"/>
 	<x path="Void"/>
 </f></writeFloat>
-		<writeInt public="1" set="method" line="811"><f a="value">
+		<writeInt public="1" set="method" line="816"><f a="value">
 	<x path="Int"/>
 	<x path="Void"/>
 </f></writeInt>
-		<writeShort public="1" set="method" line="840"><f a="value">
+		<writeShort public="1" set="method" line="845"><f a="value">
 	<x path="Int"/>
 	<x path="Void"/>
 </f></writeShort>
-		<writeUnsignedInt public="1" set="method" line="866"><f a="value">
+		<writeUnsignedInt public="1" set="method" line="871"><f a="value">
 	<x path="Int"/>
 	<x path="Void"/>
 </f></writeUnsignedInt>
-		<writeUnsignedShort public="1" set="method" line="879"><f a="value">
+		<writeUnsignedShort public="1" set="method" line="884"><f a="value">
 	<x path="Int"/>
 	<x path="Void"/>
 </f></writeUnsignedShort>
-		<writeUTF public="1" set="method" line="892"><f a="value">
+		<writeUTF public="1" set="method" line="897"><f a="value">
 	<c path="String"/>
 	<x path="Void"/>
 </f></writeUTF>
-		<writeUTFBytes public="1" set="method" line="910"><f a="value">
+		<writeUTFBytes public="1" set="method" line="915"><f a="value">
 	<c path="String"/>
 	<x path="Void"/>
 </f></writeUTFBytes>
-		<__fromBytes get="inline" set="null" line="955"><f a="bytes">
+		<__fromBytes get="inline" set="null" line="960"><f a="bytes">
 	<c path="haxe.io.Bytes"/>
 	<x path="Void"/>
 </f></__fromBytes>
-		<__get public="1" get="inline" set="null" line="972">
+		<__get public="1" get="inline" set="null" line="977">
 			<f a="pos">
 				<x path="Int"/>
 				<x path="Int"/>
@@ -24573,7 +24574,7 @@
 				<m n=":keep"/>
 			</meta>
 		</__get>
-		<__set public="1" get="inline" set="null" line="1069">
+		<__set public="1" get="inline" set="null" line="1074">
 			<f a="pos:v">
 				<x path="Int"/>
 				<x path="Int"/>
@@ -24584,23 +24585,23 @@
 				<m n=":keep"/>
 			</meta>
 		</__set>
-		<get_bigEndian get="inline" set="null" line="1093"><f a=""><x path="Bool"/></f></get_bigEndian>
-		<set_bigEndian get="inline" set="null" line="1094"><f a="value">
+		<get_bigEndian get="inline" set="null" line="1098"><f a=""><x path="Bool"/></f></get_bigEndian>
+		<set_bigEndian get="inline" set="null" line="1099"><f a="value">
 	<x path="Bool"/>
 	<x path="Bool"/>
 </f></set_bigEndian>
-		<get_bytesAvailable get="inline" set="null" line="1098"><f a=""><x path="Int"/></f></get_bytesAvailable>
-		<get_byteLength set="method" line="1106"><f a=""><x path="Int"/></f></get_byteLength>
-		<get_endian get="inline" set="null" line="1114"><f a=""><c path="String"/></f></get_endian>
-		<set_endian get="inline" set="null" line="1121"><f a="endian">
+		<get_bytesAvailable get="inline" set="null" line="1103"><f a=""><x path="Int"/></f></get_bytesAvailable>
+		<get_byteLength set="method" line="1111"><f a=""><x path="Int"/></f></get_byteLength>
+		<get_endian get="inline" set="null" line="1119"><f a=""><c path="String"/></f></get_endian>
+		<set_endian get="inline" set="null" line="1126"><f a="endian">
 	<c path="String"/>
 	<c path="String"/>
 </f></set_endian>
-		<set_length get="inline" set="null" line="1129"><f a="value">
+		<set_length get="inline" set="null" line="1134"><f a="value">
 	<x path="Int"/>
 	<x path="Int"/>
 </f></set_length>
-		<new public="1" set="method" line="116"><f a="?size">
+		<new public="1" set="method" line="121"><f a="?size">
 	<x path="Int"/>
 	<x path="Void"/>
 </f></new>
