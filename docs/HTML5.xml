@@ -375,17 +375,6 @@
 			<meta><m n=":has_untyped"/></meta>
 			<haxe_doc>Load and return a Cpp primitive from a DLL library.</haxe_doc>
 		</load>
-		<loadLazy public="1" set="method" line="57" static="1">
-			<f a="lib:prim:nargs">
-				<c path="String"/>
-				<c path="String"/>
-				<x path="Int"/>
-				<d/>
-			</f>
-			<meta><m n=":has_untyped"/></meta>
-			<haxe_doc>Tries to load, and always returns a valid function, but the function may throw
-		if called.</haxe_doc>
-		</loadLazy>
 		<meta>
 			<m n=":keep"/>
 			<m n=":directlyUsed"/>
@@ -3456,31 +3445,31 @@
 	<x path="Bool"/>
 	<d/>
 </f></load>
-		<sysName set="method" line="307" static="1"><f a=""><c path="String"/></f></sysName>
-		<tryLoad set="method" line="331" static="1"><f a="name:library:func:args">
+		<sysName set="method" line="321" static="1"><f a=""><c path="String"/></f></sysName>
+		<tryLoad set="method" line="345" static="1"><f a="name:library:func:args">
 	<c path="String"/>
 	<c path="String"/>
 	<c path="String"/>
 	<x path="Int"/>
 	<d/>
 </f></tryLoad>
-		<loaderTrace set="method" line="368" static="1"><f a="message">
+		<loaderTrace set="method" line="382" static="1"><f a="message">
 	<c path="String"/>
 	<x path="Void"/>
 </f></loaderTrace>
-		<get_applicationDirectory set="method" line="444" static="1"><f a=""><c path="String"/></f></get_applicationDirectory>
-		<get_applicationStorageDirectory set="method" line="455" static="1"><f a=""><c path="String"/></f></get_applicationStorageDirectory>
-		<get_desktopDirectory set="method" line="487" static="1"><f a=""><c path="String"/></f></get_desktopDirectory>
-		<get_documentsDirectory set="method" line="498" static="1"><f a=""><c path="String"/></f></get_documentsDirectory>
-		<get_fontsDirectory set="method" line="509" static="1"><f a=""><c path="String"/></f></get_fontsDirectory>
-		<get_userDirectory set="method" line="520" static="1"><f a=""><c path="String"/></f></get_userDirectory>
-		<lime_system_get_directory line="539" static="1"><f a="::">
+		<get_applicationDirectory set="method" line="458" static="1"><f a=""><c path="String"/></f></get_applicationDirectory>
+		<get_applicationStorageDirectory set="method" line="469" static="1"><f a=""><c path="String"/></f></get_applicationStorageDirectory>
+		<get_desktopDirectory set="method" line="501" static="1"><f a=""><c path="String"/></f></get_desktopDirectory>
+		<get_documentsDirectory set="method" line="512" static="1"><f a=""><c path="String"/></f></get_documentsDirectory>
+		<get_fontsDirectory set="method" line="523" static="1"><f a=""><c path="String"/></f></get_fontsDirectory>
+		<get_userDirectory set="method" line="534" static="1"><f a=""><c path="String"/></f></get_userDirectory>
+		<lime_system_get_directory line="553" static="1"><f a="::">
 	<x path="lime.system._System.SystemDirectory"/>
 	<c path="String"/>
 	<c path="String"/>
 	<c path="String"/>
 </f></lime_system_get_directory>
-		<lime_system_get_timer line="540" static="1"><f a=""><x path="Int"/></f></lime_system_get_timer>
+		<lime_system_get_timer line="554" static="1"><f a=""><x path="Int"/></f></lime_system_get_timer>
 		<meta><m n=":directlyUsed"/></meta>
 	</class>
 	<class path="lime._backend.native.NativeApplication" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/_backend/native/NativeApplication.hx">
@@ -8856,7 +8845,7 @@
 	<class path="lime.graphics.Image" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/graphics/Image.hx">
 		<__base64Chars line="55" static="1"><c path="String"/></__base64Chars>
 		<__base64Encoder static="1"><c path="haxe.crypto.BaseCode"/></__base64Encoder>
-		<fromBase64 public="1" set="method" line="379" static="1"><f a="base64:type:onload">
+		<fromBase64 public="1" set="method" line="381" static="1"><f a="base64:type:onload">
 	<c path="String"/>
 	<c path="String"/>
 	<f a="">
@@ -8865,11 +8854,11 @@
 	</f>
 	<c path="lime.graphics.Image"/>
 </f></fromBase64>
-		<fromBitmapData public="1" set="method" line="388" static="1"><f a="bitmapData">
+		<fromBitmapData public="1" set="method" line="390" static="1"><f a="bitmapData">
 	<d/>
 	<c path="lime.graphics.Image"/>
 </f></fromBitmapData>
-		<fromBytes public="1" set="method" line="397" static="1"><f a="bytes:?onload">
+		<fromBytes public="1" set="method" line="399" static="1"><f a="bytes:?onload">
 	<c path="lime.utils.ByteArray"/>
 	<f a="">
 		<c path="lime.graphics.Image"/>
@@ -8877,11 +8866,11 @@
 	</f>
 	<c path="lime.graphics.Image"/>
 </f></fromBytes>
-		<fromCanvas public="1" set="method" line="406" static="1"><f a="canvas">
+		<fromCanvas public="1" set="method" line="408" static="1"><f a="canvas">
 	<d/>
 	<c path="lime.graphics.Image"/>
 </f></fromCanvas>
-		<fromFile public="1" set="method" line="415" static="1"><f a="path:?onload:?onerror">
+		<fromFile public="1" set="method" line="417" static="1"><f a="path:?onload:?onerror">
 	<c path="String"/>
 	<f a="">
 		<c path="lime.graphics.Image"/>
@@ -8890,33 +8879,33 @@
 	<f a=""><x path="Void"/></f>
 	<c path="lime.graphics.Image"/>
 </f></fromFile>
-		<fromImageElement public="1" set="method" line="424" static="1"><f a="image">
+		<fromImageElement public="1" set="method" line="426" static="1"><f a="image">
 	<d/>
 	<c path="lime.graphics.Image"/>
 </f></fromImageElement>
-		<__base64Encode set="method" line="687" static="1"><f a="bytes">
+		<__base64Encode set="method" line="751" static="1"><f a="bytes">
 	<c path="lime.utils.ByteArray"/>
 	<c path="String"/>
 </f></__base64Encode>
-		<__isJPG set="method" line="979" static="1"><f a="bytes">
+		<__isJPG set="method" line="1043" static="1"><f a="bytes">
 	<c path="lime.utils.ByteArray"/>
 	<x path="Bool"/>
 </f></__isJPG>
-		<__isPNG set="method" line="987" static="1"><f a="bytes">
+		<__isPNG set="method" line="1051" static="1"><f a="bytes">
 	<c path="lime.utils.ByteArray"/>
 	<x path="Bool"/>
 </f></__isPNG>
-		<__isGIF set="method" line="994" static="1"><f a="bytes">
+		<__isGIF set="method" line="1058" static="1"><f a="bytes">
 	<c path="lime.utils.ByteArray"/>
 	<x path="Bool"/>
 </f></__isGIF>
-		<lime_image_encode line="1202" static="1"><f a="::">
+		<lime_image_encode line="1266" static="1"><f a="::">
 	<c path="lime.graphics.ImageBuffer"/>
 	<x path="Int"/>
 	<x path="Int"/>
 	<c path="lime.utils.ByteArray"/>
 </f></lime_image_encode>
-		<lime_image_load line="1203" static="1"><d/></lime_image_load>
+		<lime_image_load line="1267" static="1"><d/></lime_image_load>
 		<buffer public="1"><c path="lime.graphics.ImageBuffer"/></buffer>
 		<data public="1" get="accessor" set="accessor"><c path="lime.utils.UInt8Array"/></data>
 		<dirty public="1"><x path="Bool"/></dirty>
@@ -8960,32 +8949,37 @@
 	<x path="Int"/>
 	<c path="lime.utils.ByteArray"/>
 </f></encode>
-		<fillRect public="1" set="method" line="319"><f a="rect:color">
+		<fillRect public="1" set="method" line="319"><f a="rect:color:?format">
 	<c path="lime.math.Rectangle"/>
 	<x path="Int"/>
+	<e path="lime.graphics.PixelFormat"/>
 	<x path="Void"/>
 </f></fillRect>
-		<floodFill public="1" set="method" line="350"><f a="x:y:color">
+		<floodFill public="1" set="method" line="351"><f a="x:y:color:?format">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Int"/>
+	<e path="lime.graphics.PixelFormat"/>
 	<x path="Void"/>
 </f></floodFill>
-		<getPixel public="1" set="method" line="433"><f a="x:y">
+		<getPixel public="1" set="method" line="435"><f a="x:y:?format">
 	<x path="Int"/>
 	<x path="Int"/>
+	<e path="lime.graphics.PixelFormat"/>
 	<x path="Int"/>
 </f></getPixel>
-		<getPixel32 public="1" set="method" line="464"><f a="x:y">
+		<getPixel32 public="1" set="method" line="476"><f a="x:y:?format">
 	<x path="Int"/>
 	<x path="Int"/>
+	<e path="lime.graphics.PixelFormat"/>
 	<x path="Int"/>
 </f></getPixel32>
-		<getPixels public="1" set="method" line="495"><f a="rect">
+		<getPixels public="1" set="method" line="517"><f a="rect:?format">
 	<c path="lime.math.Rectangle"/>
+	<e path="lime.graphics.PixelFormat"/>
 	<c path="lime.utils.ByteArray"/>
 </f></getPixels>
-		<merge public="1" set="method" line="527"><f a="sourceImage:sourceRect:destPoint:redMultiplier:greenMultiplier:blueMultiplier:alphaMultiplier">
+		<merge public="1" set="method" line="568"><f a="sourceImage:sourceRect:destPoint:redMultiplier:greenMultiplier:blueMultiplier:alphaMultiplier">
 	<c path="lime.graphics.Image"/>
 	<c path="lime.math.Rectangle"/>
 	<c path="lime.math.Vector2"/>
@@ -8995,33 +8989,36 @@
 	<x path="Int"/>
 	<x path="Void"/>
 </f></merge>
-		<resize public="1" set="method" line="561"><f a="newWidth:newHeight">
+		<resize public="1" set="method" line="602"><f a="newWidth:newHeight">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Void"/>
 </f></resize>
-		<setPixel public="1" set="method" line="598"><f a="x:y:color">
+		<setPixel public="1" set="method" line="639"><f a="x:y:color:?format">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Int"/>
+	<e path="lime.graphics.PixelFormat"/>
 	<x path="Void"/>
 </f></setPixel>
-		<setPixel32 public="1" set="method" line="627"><f a="x:y:color">
+		<setPixel32 public="1" set="method" line="669"><f a="x:y:color:?format">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Int"/>
+	<e path="lime.graphics.PixelFormat"/>
 	<x path="Void"/>
 </f></setPixel32>
-		<setPixels public="1" set="method" line="656"><f a="rect:byteArray">
+		<setPixels public="1" set="method" line="699"><f a="rect:byteArray:?format">
 	<c path="lime.math.Rectangle"/>
 	<c path="lime.utils.ByteArray"/>
+	<e path="lime.graphics.PixelFormat"/>
 	<x path="Void"/>
 </f></setPixels>
-		<__clipRect set="method" line="716"><f a="r">
+		<__clipRect set="method" line="780"><f a="r">
 	<c path="lime.math.Rectangle"/>
 	<c path="lime.math.Rectangle"/>
 </f></__clipRect>
-		<__fromBase64 set="method" line="759"><f a="base64:type:?onload">
+		<__fromBase64 set="method" line="823"><f a="base64:type:?onload">
 	<c path="String"/>
 	<c path="String"/>
 	<f a="">
@@ -9030,7 +9027,7 @@
 	</f>
 	<x path="Void"/>
 </f></__fromBase64>
-		<__fromBytes set="method" line="789"><f a="bytes:onload">
+		<__fromBytes set="method" line="853"><f a="bytes:onload">
 	<c path="lime.utils.ByteArray"/>
 	<f a="">
 		<c path="lime.graphics.Image"/>
@@ -9038,7 +9035,7 @@
 	</f>
 	<x path="Void"/>
 </f></__fromBytes>
-		<__fromFile set="method" line="840"><f a="path:onload:onerror">
+		<__fromFile set="method" line="904"><f a="path:onload:onerror">
 	<c path="String"/>
 	<f a="">
 		<c path="lime.graphics.Image"/>
@@ -9047,33 +9044,33 @@
 	<f a=""><x path="Void"/></f>
 	<x path="Void"/>
 </f></__fromFile>
-		<__fromImageBuffer set="method" line="956"><f a="buffer">
+		<__fromImageBuffer set="method" line="1020"><f a="buffer">
 	<c path="lime.graphics.ImageBuffer"/>
 	<x path="Void"/>
 </f></__fromImageBuffer>
-		<get_data set="method" line="1017"><f a=""><c path="lime.utils.UInt8Array"/></f></get_data>
-		<set_data set="method" line="1041"><f a="value">
+		<get_data set="method" line="1081"><f a=""><c path="lime.utils.UInt8Array"/></f></get_data>
+		<set_data set="method" line="1105"><f a="value">
 	<c path="lime.utils.UInt8Array"/>
 	<c path="lime.utils.UInt8Array"/>
 </f></set_data>
-		<get_powerOfTwo set="method" line="1048"><f a=""><x path="Bool"/></f></get_powerOfTwo>
-		<set_powerOfTwo set="method" line="1055"><f a="value">
+		<get_powerOfTwo set="method" line="1112"><f a=""><x path="Bool"/></f></get_powerOfTwo>
+		<set_powerOfTwo set="method" line="1119"><f a="value">
 	<x path="Bool"/>
 	<x path="Bool"/>
 </f></set_powerOfTwo>
-		<get_premultiplied set="method" line="1105"><f a=""><x path="Bool"/></f></get_premultiplied>
-		<set_premultiplied set="method" line="1112"><f a="value">
+		<get_premultiplied set="method" line="1169"><f a=""><x path="Bool"/></f></get_premultiplied>
+		<set_premultiplied set="method" line="1176"><f a="value">
 	<x path="Bool"/>
 	<x path="Bool"/>
 </f></set_premultiplied>
-		<get_rect public="1" set="method" line="1157"><f a=""><c path="lime.math.Rectangle"/></f></get_rect>
-		<get_src public="1" set="method" line="1164"><f a=""><d/></f></get_src>
-		<set_src set="method" line="1171"><f a="value">
+		<get_rect public="1" set="method" line="1221"><f a=""><c path="lime.math.Rectangle"/></f></get_rect>
+		<get_src public="1" set="method" line="1228"><f a=""><d/></f></get_src>
+		<set_src set="method" line="1235"><f a="value">
 	<d/>
 	<d/>
 </f></set_src>
-		<get_transparent set="method" line="1178"><f a=""><x path="Bool"/></f></get_transparent>
-		<set_transparent set="method" line="1185"><f a="value">
+		<get_transparent set="method" line="1242"><f a=""><x path="Bool"/></f></get_transparent>
+		<set_transparent set="method" line="1249"><f a="value">
 	<x path="Bool"/>
 	<x path="Bool"/>
 </f></set_transparent>
@@ -9098,16 +9095,6 @@
 			<m n=":autoBuild"><e>lime.Assets.embedImage()</e></m>
 		</meta>
 	</class>
-	<enum path="lime.graphics.ImageChannel" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/graphics/Image.hx" module="lime.graphics.Image">
-		<RED/>
-		<GREEN/>
-		<BLUE/>
-		<ALPHA/>
-		<meta>
-			<m n=":directlyUsed"/>
-			<m n=":flatEnum"/>
-		</meta>
-	</enum>
 	<class path="lime.graphics.ImageBuffer" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/graphics/ImageBuffer.hx">
 		<bitsPerPixel public="1"><x path="Int"/></bitsPerPixel>
 		<data public="1"><c path="lime.utils.UInt8Array"/></data>
@@ -9140,13 +9127,13 @@
 			<d/>
 			<meta><m n=":noCompletion"/></meta>
 		</__srcImageData>
-		<clone public="1" set="method" line="50"><f a=""><c path="lime.graphics.ImageBuffer"/></f></clone>
-		<get_src set="method" line="111"><f a=""><d/></f></get_src>
-		<set_src set="method" line="131"><f a="value">
+		<clone public="1" set="method" line="52"><f a=""><c path="lime.graphics.ImageBuffer"/></f></clone>
+		<get_src set="method" line="122"><f a=""><d/></f></get_src>
+		<set_src set="method" line="142"><f a="value">
 	<d/>
 	<d/>
 </f></set_src>
-		<new public="1" set="method" line="39"><f a="?data:?width:?height:?bitsPerPixel">
+		<new public="1" set="method" line="41"><f a="?data:?width:?height:?bitsPerPixel">
 	<c path="lime.utils.UInt8Array"/>
 	<x path="Int"/>
 	<x path="Int"/>
@@ -9158,11 +9145,29 @@
 			<m n=":allow"><e>lime.graphics.Image</e></m>
 		</meta>
 	</class>
+	<enum path="lime.graphics.ImageChannel" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/graphics/ImageChannel.hx">
+		<RED/>
+		<GREEN/>
+		<BLUE/>
+		<ALPHA/>
+		<meta>
+			<m n=":directlyUsed"/>
+			<m n=":flatEnum"/>
+		</meta>
+	</enum>
 	<enum path="lime.graphics.ImageType" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/graphics/ImageType.hx">
 		<CANVAS/>
 		<DATA/>
 		<FLASH/>
 		<CUSTOM/>
+		<meta>
+			<m n=":directlyUsed"/>
+			<m n=":flatEnum"/>
+		</meta>
+	</enum>
+	<enum path="lime.graphics.PixelFormat" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/graphics/PixelFormat.hx">
+		<RGBA/>
+		<ARGB/>
 		<meta>
 			<m n=":directlyUsed"/>
 			<m n=":flatEnum"/>
@@ -10356,21 +10361,21 @@
 	</class>
 	<typedef path="lime.graphics.opengl.GLUniformLocation" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/graphics/opengl/GLUniformLocation.hx"><x path="Int"/></typedef>
 	<class path="lime.graphics.utils.ImageCanvasUtil" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/graphics/utils/ImageCanvasUtil.hx">
-		<colorTransform public="1" set="method" line="23" static="1"><f a="image:rect:colorMatrix">
+		<colorTransform public="1" set="method" line="24" static="1"><f a="image:rect:colorMatrix">
 	<c path="lime.graphics.Image"/>
 	<c path="lime.math.Rectangle"/>
 	<x path="lime.math.ColorMatrix"/>
 	<x path="Void"/>
 </f></colorTransform>
-		<convertToCanvas public="1" set="method" line="33" static="1"><f a="image">
+		<convertToCanvas public="1" set="method" line="34" static="1"><f a="image">
 	<c path="lime.graphics.Image"/>
 	<x path="Void"/>
 </f></convertToCanvas>
-		<convertToData public="1" set="method" line="53" static="1"><f a="image">
+		<convertToData public="1" set="method" line="54" static="1"><f a="image">
 	<c path="lime.graphics.Image"/>
 	<x path="Void"/>
 </f></convertToData>
-		<copyChannel public="1" set="method" line="71" static="1"><f a="image:sourceImage:sourceRect:destPoint:sourceChannel:destChannel">
+		<copyChannel public="1" set="method" line="72" static="1"><f a="image:sourceImage:sourceRect:destPoint:sourceChannel:destChannel">
 	<c path="lime.graphics.Image"/>
 	<c path="lime.graphics.Image"/>
 	<c path="lime.math.Rectangle"/>
@@ -10379,7 +10384,7 @@
 	<e path="lime.graphics.ImageChannel"/>
 	<x path="Void"/>
 </f></copyChannel>
-		<copyPixels public="1" set="method" line="83" static="1"><f a="image:sourceImage:sourceRect:destPoint:?alphaImage:?alphaPoint:?mergeAlpha">
+		<copyPixels public="1" set="method" line="84" static="1"><f a="image:sourceImage:sourceRect:destPoint:?alphaImage:?alphaPoint:?mergeAlpha">
 	<c path="lime.graphics.Image"/>
 	<c path="lime.graphics.Image"/>
 	<c path="lime.math.Rectangle"/>
@@ -10389,47 +10394,52 @@
 	<x path="Bool"/>
 	<x path="Void"/>
 </f></copyPixels>
-		<createCanvas public="1" set="method" line="120" static="1"><f a="image:width:height">
+		<createCanvas public="1" set="method" line="121" static="1"><f a="image:width:height">
 	<c path="lime.graphics.Image"/>
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Void"/>
 </f></createCanvas>
-		<createImageData public="1" set="method" line="152" static="1"><f a="image">
+		<createImageData public="1" set="method" line="153" static="1"><f a="image">
 	<c path="lime.graphics.Image"/>
 	<x path="Void"/>
 </f></createImageData>
-		<fillRect public="1" set="method" line="166" static="1"><f a="image:rect:color">
+		<fillRect public="1" set="method" line="167" static="1"><f a="image:rect:color:format">
 	<c path="lime.graphics.Image"/>
 	<c path="lime.math.Rectangle"/>
 	<x path="Int"/>
+	<e path="lime.graphics.PixelFormat"/>
 	<x path="Void"/>
 </f></fillRect>
-		<floodFill public="1" set="method" line="193" static="1"><f a="image:x:y:color">
+		<floodFill public="1" set="method" line="207" static="1"><f a="image:x:y:color:format">
 	<c path="lime.graphics.Image"/>
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Int"/>
+	<e path="lime.graphics.PixelFormat"/>
 	<x path="Void"/>
 </f></floodFill>
-		<getPixel public="1" set="method" line="203" static="1"><f a="image:x:y">
+		<getPixel public="1" set="method" line="217" static="1"><f a="image:x:y:format">
 	<c path="lime.graphics.Image"/>
 	<x path="Int"/>
 	<x path="Int"/>
+	<e path="lime.graphics.PixelFormat"/>
 	<x path="Int"/>
 </f></getPixel>
-		<getPixel32 public="1" set="method" line="213" static="1"><f a="image:x:y">
+		<getPixel32 public="1" set="method" line="227" static="1"><f a="image:x:y:format">
 	<c path="lime.graphics.Image"/>
 	<x path="Int"/>
 	<x path="Int"/>
+	<e path="lime.graphics.PixelFormat"/>
 	<x path="Int"/>
 </f></getPixel32>
-		<getPixels public="1" set="method" line="223" static="1"><f a="image:rect">
+		<getPixels public="1" set="method" line="237" static="1"><f a="image:rect:format">
 	<c path="lime.graphics.Image"/>
 	<c path="lime.math.Rectangle"/>
+	<e path="lime.graphics.PixelFormat"/>
 	<c path="lime.utils.ByteArray"/>
 </f></getPixels>
-		<merge public="1" set="method" line="233" static="1"><f a="image:sourceImage:sourceRect:destPoint:redMultiplier:greenMultiplier:blueMultiplier:alphaMultiplier">
+		<merge public="1" set="method" line="247" static="1"><f a="image:sourceImage:sourceRect:destPoint:redMultiplier:greenMultiplier:blueMultiplier:alphaMultiplier">
 	<c path="lime.graphics.Image"/>
 	<c path="lime.graphics.Image"/>
 	<c path="lime.math.Rectangle"/>
@@ -10440,33 +10450,36 @@
 	<x path="Int"/>
 	<x path="Void"/>
 </f></merge>
-		<resize public="1" set="method" line="245" static="1"><f a="image:newWidth:newHeight">
+		<resize public="1" set="method" line="259" static="1"><f a="image:newWidth:newHeight">
 	<c path="lime.graphics.Image"/>
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Void"/>
 </f></resize>
-		<setPixel public="1" set="method" line="267" static="1"><f a="image:x:y:color">
+		<setPixel public="1" set="method" line="281" static="1"><f a="image:x:y:color:format">
 	<c path="lime.graphics.Image"/>
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Int"/>
+	<e path="lime.graphics.PixelFormat"/>
 	<x path="Void"/>
 </f></setPixel>
-		<setPixel32 public="1" set="method" line="277" static="1"><f a="image:x:y:color">
+		<setPixel32 public="1" set="method" line="291" static="1"><f a="image:x:y:color:format">
 	<c path="lime.graphics.Image"/>
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Int"/>
+	<e path="lime.graphics.PixelFormat"/>
 	<x path="Void"/>
 </f></setPixel32>
-		<setPixels public="1" set="method" line="287" static="1"><f a="image:rect:byteArray">
+		<setPixels public="1" set="method" line="301" static="1"><f a="image:rect:byteArray:format">
 	<c path="lime.graphics.Image"/>
 	<c path="lime.math.Rectangle"/>
 	<c path="lime.utils.ByteArray"/>
+	<e path="lime.graphics.PixelFormat"/>
 	<x path="Void"/>
 </f></setPixels>
-		<sync public="1" set="method" line="297" static="1"><f a="image">
+		<sync public="1" set="method" line="311" static="1"><f a="image">
 	<c path="lime.graphics.Image"/>
 	<x path="Void"/>
 </f></sync>
@@ -10478,13 +10491,13 @@
 	<class path="lime.graphics.utils.ImageDataUtil" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/graphics/utils/ImageDataUtil.hx">
 		<__alpha16 static="1"><x path="haxe.ds.Vector"><x path="Int"/></x></__alpha16>
 		<__clamp static="1"><x path="haxe.ds.Vector"><x path="Int"/></x></__clamp>
-		<colorTransform public="1" set="method" line="48" static="1"><f a="image:rect:colorMatrix">
+		<colorTransform public="1" set="method" line="49" static="1"><f a="image:rect:colorMatrix">
 	<c path="lime.graphics.Image"/>
 	<c path="lime.math.Rectangle"/>
 	<x path="lime.math.ColorMatrix"/>
 	<x path="Void"/>
 </f></colorTransform>
-		<copyChannel public="1" set="method" line="89" static="1"><f a="image:sourceImage:sourceRect:destPoint:sourceChannel:destChannel">
+		<copyChannel public="1" set="method" line="99" static="1"><f a="image:sourceImage:sourceRect:destPoint:sourceChannel:destChannel">
 	<c path="lime.graphics.Image"/>
 	<c path="lime.graphics.Image"/>
 	<c path="lime.math.Rectangle"/>
@@ -10493,7 +10506,7 @@
 	<e path="lime.graphics.ImageChannel"/>
 	<x path="Void"/>
 </f></copyChannel>
-		<copyPixels public="1" set="method" line="149" static="1"><f a="image:sourceImage:sourceRect:destPoint:?alphaImage:?alphaPoint:?mergeAlpha">
+		<copyPixels public="1" set="method" line="171" static="1"><f a="image:sourceImage:sourceRect:destPoint:?alphaImage:?alphaPoint:?mergeAlpha">
 	<c path="lime.graphics.Image"/>
 	<c path="lime.graphics.Image"/>
 	<c path="lime.math.Rectangle"/>
@@ -10503,37 +10516,42 @@
 	<x path="Bool"/>
 	<x path="Void"/>
 </f></copyPixels>
-		<fillRect public="1" set="method" line="223" static="1"><f a="image:rect:color">
+		<fillRect public="1" set="method" line="261" static="1"><f a="image:rect:color:format">
 	<c path="lime.graphics.Image"/>
 	<c path="lime.math.Rectangle"/>
 	<x path="Int"/>
+	<e path="lime.graphics.PixelFormat"/>
 	<x path="Void"/>
 </f></fillRect>
-		<floodFill public="1" set="method" line="289" static="1"><f a="image:x:y:color">
+		<floodFill public="1" set="method" line="349" static="1"><f a="image:x:y:color:format">
 	<c path="lime.graphics.Image"/>
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Int"/>
+	<e path="lime.graphics.PixelFormat"/>
 	<x path="Void"/>
 </f></floodFill>
-		<getPixel public="1" set="method" line="356" static="1"><f a="image:x:y">
+		<getPixel public="1" set="method" line="427" static="1"><f a="image:x:y:format">
 	<c path="lime.graphics.Image"/>
 	<x path="Int"/>
 	<x path="Int"/>
+	<e path="lime.graphics.PixelFormat"/>
 	<x path="Int"/>
 </f></getPixel>
-		<getPixel32 public="1" set="method" line="376" static="1"><f a="image:x:y">
+		<getPixel32 public="1" set="method" line="457" static="1"><f a="image:x:y:format">
 	<c path="lime.graphics.Image"/>
 	<x path="Int"/>
 	<x path="Int"/>
+	<e path="lime.graphics.PixelFormat"/>
 	<x path="Int"/>
 </f></getPixel32>
-		<getPixels public="1" set="method" line="396" static="1"><f a="image:rect">
+		<getPixels public="1" set="method" line="492" static="1"><f a="image:rect:format">
 	<c path="lime.graphics.Image"/>
 	<c path="lime.math.Rectangle"/>
+	<e path="lime.graphics.PixelFormat"/>
 	<c path="lime.utils.ByteArray"/>
 </f></getPixels>
-		<merge public="1" set="method" line="445" static="1"><f a="image:sourceImage:sourceRect:destPoint:redMultiplier:greenMultiplier:blueMultiplier:alphaMultiplier">
+		<merge public="1" set="method" line="590" static="1"><f a="image:sourceImage:sourceRect:destPoint:redMultiplier:greenMultiplier:blueMultiplier:alphaMultiplier">
 	<c path="lime.graphics.Image"/>
 	<c path="lime.graphics.Image"/>
 	<c path="lime.math.Rectangle"/>
@@ -10544,46 +10562,124 @@
 	<x path="Int"/>
 	<x path="Void"/>
 </f></merge>
-		<multiplyAlpha public="1" set="method" line="479" static="1"><f a="image">
+		<multiplyAlpha public="1" set="method" line="633" static="1"><f a="image">
 	<c path="lime.graphics.Image"/>
 	<x path="Void"/>
 </f></multiplyAlpha>
-		<resize public="1" set="method" line="504" static="1"><f a="image:newWidth:newHeight">
+		<resize public="1" set="method" line="665" static="1"><f a="image:newWidth:newHeight">
 	<c path="lime.graphics.Image"/>
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Void"/>
 </f></resize>
-		<resizeBuffer public="1" set="method" line="567" static="1"><f a="image:newWidth:newHeight">
+		<resizeBuffer public="1" set="method" line="736" static="1"><f a="image:newWidth:newHeight">
 	<c path="lime.graphics.Image"/>
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Void"/>
 </f></resizeBuffer>
-		<setPixel public="1" set="method" line="597" static="1"><f a="image:x:y:color">
+		<setPixel public="1" set="method" line="766" static="1"><f a="image:x:y:color:format">
 	<c path="lime.graphics.Image"/>
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Int"/>
+	<e path="lime.graphics.PixelFormat"/>
 	<x path="Void"/>
 </f></setPixel>
-		<setPixel32 public="1" set="method" line="612" static="1"><f a="image:x:y:color">
+		<setPixel32 public="1" set="method" line="782" static="1"><f a="image:x:y:color:format">
 	<c path="lime.graphics.Image"/>
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Int"/>
+	<e path="lime.graphics.PixelFormat"/>
 	<x path="Void"/>
 </f></setPixel32>
-		<setPixels public="1" set="method" line="640" static="1"><f a="image:rect:byteArray">
+		<setPixels public="1" set="method" line="826" static="1"><f a="image:rect:byteArray:format">
 	<c path="lime.graphics.Image"/>
 	<c path="lime.math.Rectangle"/>
 	<c path="lime.utils.ByteArray"/>
+	<e path="lime.graphics.PixelFormat"/>
 	<x path="Void"/>
 </f></setPixels>
-		<unmultiplyAlpha public="1" set="method" line="675" static="1"><f a="image">
+		<unmultiplyAlpha public="1" set="method" line="902" static="1"><f a="image">
 	<c path="lime.graphics.Image"/>
 	<x path="Void"/>
 </f></unmultiplyAlpha>
+		<lime_image_data_util_color_transform line="949" static="1"><f a="::">
+	<c path="lime.graphics.Image"/>
+	<c path="lime.math.Rectangle"/>
+	<x path="lime.math.ColorMatrix"/>
+	<unknown/>
+</f></lime_image_data_util_color_transform>
+		<lime_image_data_util_copy_channel line="950" static="1"><f a=":::::">
+	<c path="lime.graphics.Image"/>
+	<c path="lime.graphics.Image"/>
+	<c path="lime.math.Rectangle"/>
+	<c path="lime.math.Vector2"/>
+	<x path="Int"/>
+	<x path="Int"/>
+	<unknown/>
+</f></lime_image_data_util_copy_channel>
+		<lime_image_data_util_copy_pixels line="951" static="1"><f a="::::">
+	<c path="lime.graphics.Image"/>
+	<c path="lime.graphics.Image"/>
+	<c path="lime.math.Rectangle"/>
+	<c path="lime.math.Vector2"/>
+	<x path="Bool"/>
+	<unknown/>
+</f></lime_image_data_util_copy_pixels>
+		<lime_image_data_util_fill_rect line="952" static="1"><f a="::">
+	<c path="lime.graphics.Image"/>
+	<c path="lime.math.Rectangle"/>
+	<x path="Int"/>
+	<unknown/>
+</f></lime_image_data_util_fill_rect>
+		<lime_image_data_util_flood_fill line="953" static="1"><f a=":::">
+	<c path="lime.graphics.Image"/>
+	<x path="Int"/>
+	<x path="Int"/>
+	<x path="Int"/>
+	<unknown/>
+</f></lime_image_data_util_flood_fill>
+		<lime_image_data_util_get_pixels line="954" static="1"><f a="::">
+	<c path="lime.graphics.Image"/>
+	<c path="lime.math.Rectangle"/>
+	<x path="Int"/>
+	<c path="lime.utils.ByteArray"/>
+</f></lime_image_data_util_get_pixels>
+		<lime_image_data_util_merge line="955" static="1"><f a=":::::::">
+	<c path="lime.graphics.Image"/>
+	<c path="lime.graphics.Image"/>
+	<c path="lime.math.Rectangle"/>
+	<c path="lime.math.Vector2"/>
+	<x path="Int"/>
+	<x path="Int"/>
+	<x path="Int"/>
+	<x path="Int"/>
+	<unknown/>
+</f></lime_image_data_util_merge>
+		<lime_image_data_util_multiply_alpha line="956" static="1"><f a="">
+	<c path="lime.graphics.Image"/>
+	<unknown/>
+</f></lime_image_data_util_multiply_alpha>
+		<lime_image_data_util_resize line="957" static="1"><f a=":::">
+	<c path="lime.graphics.Image"/>
+	<c path="lime.graphics.ImageBuffer"/>
+	<x path="Int"/>
+	<x path="Int"/>
+	<unknown/>
+</f></lime_image_data_util_resize>
+		<lime_image_data_util_set_pixels line="958" static="1"><f a=":::">
+	<c path="lime.graphics.Image"/>
+	<c path="lime.math.Rectangle"/>
+	<c path="lime.utils.ByteArray"/>
+	<x path="Int"/>
+	<unknown/>
+</f></lime_image_data_util_set_pixels>
+		<lime_image_data_util_unmultiply_alpha line="959" static="1"><f a="">
+	<c path="lime.graphics.Image"/>
+	<unknown/>
+</f></lime_image_data_util_unmultiply_alpha>
 		<meta><m n=":directlyUsed"/></meta>
 	</class>
 	<abstract path="lime.math.ColorMatrix" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/math/ColorMatrix.hx">
@@ -17415,42 +17511,42 @@
 		<to><icast><x path="Int"/></icast></to>
 		<meta><m n=":enum"/></meta>
 		<impl><class path="lime.system._System.SystemDirectory_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/system/System.hx" private="1" module="lime.system.System" extern="1">
-	<APPLICATION public="1" get="inline" set="null" line="549" static="1">
+	<APPLICATION public="1" get="inline" set="null" line="563" static="1">
 		<x path="lime.system._System.SystemDirectory"/>
 		<meta>
 			<m n=":enum"/>
 			<m n=":impl"/>
 		</meta>
 	</APPLICATION>
-	<APPLICATION_STORAGE public="1" get="inline" set="null" line="550" static="1">
+	<APPLICATION_STORAGE public="1" get="inline" set="null" line="564" static="1">
 		<x path="lime.system._System.SystemDirectory"/>
 		<meta>
 			<m n=":enum"/>
 			<m n=":impl"/>
 		</meta>
 	</APPLICATION_STORAGE>
-	<DESKTOP public="1" get="inline" set="null" line="551" static="1">
+	<DESKTOP public="1" get="inline" set="null" line="565" static="1">
 		<x path="lime.system._System.SystemDirectory"/>
 		<meta>
 			<m n=":enum"/>
 			<m n=":impl"/>
 		</meta>
 	</DESKTOP>
-	<DOCUMENTS public="1" get="inline" set="null" line="552" static="1">
+	<DOCUMENTS public="1" get="inline" set="null" line="566" static="1">
 		<x path="lime.system._System.SystemDirectory"/>
 		<meta>
 			<m n=":enum"/>
 			<m n=":impl"/>
 		</meta>
 	</DOCUMENTS>
-	<FONTS public="1" get="inline" set="null" line="553" static="1">
+	<FONTS public="1" get="inline" set="null" line="567" static="1">
 		<x path="lime.system._System.SystemDirectory"/>
 		<meta>
 			<m n=":enum"/>
 			<m n=":impl"/>
 		</meta>
 	</FONTS>
-	<USER public="1" get="inline" set="null" line="554" static="1">
+	<USER public="1" get="inline" set="null" line="568" static="1">
 		<x path="lime.system._System.SystemDirectory"/>
 		<meta>
 			<m n=":enum"/>
@@ -17461,42 +17557,42 @@
 </class></impl>
 	</abstract>
 	<class path="lime.system._System.SystemDirectory_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/system/System.hx" private="1" module="lime.system.System" extern="1">
-		<APPLICATION public="1" get="inline" set="null" line="549" static="1">
+		<APPLICATION public="1" get="inline" set="null" line="563" static="1">
 			<x path="lime.system._System.SystemDirectory"/>
 			<meta>
 				<m n=":enum"/>
 				<m n=":impl"/>
 			</meta>
 		</APPLICATION>
-		<APPLICATION_STORAGE public="1" get="inline" set="null" line="550" static="1">
+		<APPLICATION_STORAGE public="1" get="inline" set="null" line="564" static="1">
 			<x path="lime.system._System.SystemDirectory"/>
 			<meta>
 				<m n=":enum"/>
 				<m n=":impl"/>
 			</meta>
 		</APPLICATION_STORAGE>
-		<DESKTOP public="1" get="inline" set="null" line="551" static="1">
+		<DESKTOP public="1" get="inline" set="null" line="565" static="1">
 			<x path="lime.system._System.SystemDirectory"/>
 			<meta>
 				<m n=":enum"/>
 				<m n=":impl"/>
 			</meta>
 		</DESKTOP>
-		<DOCUMENTS public="1" get="inline" set="null" line="552" static="1">
+		<DOCUMENTS public="1" get="inline" set="null" line="566" static="1">
 			<x path="lime.system._System.SystemDirectory"/>
 			<meta>
 				<m n=":enum"/>
 				<m n=":impl"/>
 			</meta>
 		</DOCUMENTS>
-		<FONTS public="1" get="inline" set="null" line="553" static="1">
+		<FONTS public="1" get="inline" set="null" line="567" static="1">
 			<x path="lime.system._System.SystemDirectory"/>
 			<meta>
 				<m n=":enum"/>
 				<m n=":impl"/>
 			</meta>
 		</FONTS>
-		<USER public="1" get="inline" set="null" line="554" static="1">
+		<USER public="1" get="inline" set="null" line="568" static="1">
 			<x path="lime.system._System.SystemDirectory"/>
 			<meta>
 				<m n=":enum"/>
@@ -24249,25 +24345,25 @@
 		<extends path="haxe.io.Bytes"/>
 		<implements path="lime.utils.IMemoryRange"/>
 		<implements path="lime.utils.IDataInput"/>
-		<fromBytes public="1" set="method" line="283" static="1"><f a="bytes">
+		<fromBytes public="1" set="method" line="285" static="1"><f a="bytes">
 	<c path="haxe.io.Bytes"/>
 	<c path="lime.utils.ByteArray"/>
 </f></fromBytes>
-		<readFile public="1" set="method" line="392" static="1"><f a="path">
+		<readFile public="1" set="method" line="394" static="1"><f a="path">
 	<c path="String"/>
 	<c path="lime.utils.ByteArray"/>
 </f></readFile>
-		<lime_byte_array_overwrite_file line="1155" static="1"><f a=":">
+		<lime_byte_array_overwrite_file line="1157" static="1"><f a=":">
 	<c path="String"/>
 	<c path="lime.utils.ByteArray"/>
 	<unknown/>
 </f></lime_byte_array_overwrite_file>
-		<lime_byte_array_read_file line="1156" static="1"><unknown/></lime_byte_array_read_file>
-		<lime_lzma_decode line="1157" static="1"><f a="">
+		<lime_byte_array_read_file line="1158" static="1"><unknown/></lime_byte_array_read_file>
+		<lime_lzma_decode line="1159" static="1"><f a="">
 	<t path="haxe.io.BytesData"/>
 	<t path="haxe.io.BytesData"/>
 </f></lime_lzma_decode>
-		<lime_lzma_encode line="1158" static="1"><f a="">
+		<lime_lzma_encode line="1160" static="1"><f a="">
 	<t path="haxe.io.BytesData"/>
 	<t path="haxe.io.BytesData"/>
 </f></lime_lzma_encode>
@@ -24279,18 +24375,18 @@
 		<littleEndian><x path="Bool"/></littleEndian>
 		<bigEndian public="1" get="accessor" set="accessor"><x path="Bool"/></bigEndian>
 		<byteLength public="1" get="accessor" set="null"><x path="Int"/></byteLength>
-		<asString public="1" set="method" line="152"><f a=""><c path="String"/></f></asString>
-		<checkData public="1" set="method" line="161"><f a="length">
+		<asString public="1" set="method" line="154"><f a=""><c path="String"/></f></asString>
+		<checkData public="1" set="method" line="163"><f a="length">
 	<x path="Int"/>
 	<x path="Void"/>
 </f></checkData>
-		<clear public="1" set="method" line="173"><f a=""><x path="Void"/></f></clear>
-		<compress public="1" set="method" line="181"><f a="?algorithm">
+		<clear public="1" set="method" line="175"><f a=""><x path="Void"/></f></clear>
+		<compress public="1" set="method" line="183"><f a="?algorithm">
 	<e path="lime.utils.CompressionAlgorithm"/>
 	<x path="Void"/>
 </f></compress>
-		<deflate public="1" set="method" line="231"><f a=""><x path="Void"/></f></deflate>
-		<ensureElem set="method" line="239">
+		<deflate public="1" set="method" line="233"><f a=""><x path="Void"/></f></deflate>
+		<ensureElem set="method" line="241">
 			<f a="size:updateLength">
 				<x path="Int"/>
 				<x path="Bool"/>
@@ -24298,118 +24394,118 @@
 			</f>
 			<meta><m n=":has_untyped"/></meta>
 		</ensureElem>
-		<getLength public="1" set="method" line="293"><f a=""><x path="Int"/></f></getLength>
-		<getByteBuffer public="1" set="method" line="294"><f a=""><c path="lime.utils.ByteArray"/></f></getByteBuffer>
-		<getStart public="1" set="method" line="295"><f a=""><x path="Int"/></f></getStart>
-		<inflate public="1" set="method" line="299"><f a=""><x path="Void"/></f></inflate>
-		<readBoolean public="1" get="inline" set="null" line="306"><f a=""><x path="Bool"/></f></readBoolean>
-		<readByte public="1" get="inline" set="null" line="317"><f a=""><x path="Int"/></f></readByte>
-		<readBytes public="1" set="method" line="330"><f a="bytes:?offset:?length">
+		<getLength public="1" set="method" line="295"><f a=""><x path="Int"/></f></getLength>
+		<getByteBuffer public="1" set="method" line="296"><f a=""><c path="lime.utils.ByteArray"/></f></getByteBuffer>
+		<getStart public="1" set="method" line="297"><f a=""><x path="Int"/></f></getStart>
+		<inflate public="1" set="method" line="301"><f a=""><x path="Void"/></f></inflate>
+		<readBoolean public="1" get="inline" set="null" line="308"><f a=""><x path="Bool"/></f></readBoolean>
+		<readByte public="1" get="inline" set="null" line="319"><f a=""><x path="Int"/></f></readByte>
+		<readBytes public="1" set="method" line="332"><f a="bytes:?offset:?length">
 	<c path="lime.utils.ByteArray"/>
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Void"/>
 </f></readBytes>
-		<readDouble public="1" set="method" line="377"><f a=""><x path="Float"/></f></readDouble>
-		<readFloat public="1" set="method" line="405"><f a=""><x path="Float"/></f></readFloat>
-		<readInt public="1" set="method" line="420"><f a=""><x path="Int"/></f></readInt>
-		<readMultiByte public="1" get="inline" set="null" line="437"><f a="length:charSet">
+		<readDouble public="1" set="method" line="379"><f a=""><x path="Float"/></f></readDouble>
+		<readFloat public="1" set="method" line="407"><f a=""><x path="Float"/></f></readFloat>
+		<readInt public="1" set="method" line="422"><f a=""><x path="Int"/></f></readInt>
+		<readMultiByte public="1" get="inline" set="null" line="439"><f a="length:charSet">
 	<x path="Int"/>
 	<c path="String"/>
 	<c path="String"/>
 </f></readMultiByte>
-		<readShort public="1" set="method" line="444"><f a=""><x path="Int"/></f></readShort>
-		<readUnsignedByte public="1" get="inline" set="null" line="460"><f a=""><x path="Int"/></f></readUnsignedByte>
-		<readUnsignedInt public="1" set="method" line="472"><f a=""><x path="Int"/></f></readUnsignedInt>
-		<readUnsignedShort public="1" set="method" line="489"><f a=""><x path="Int"/></f></readUnsignedShort>
-		<readUTF public="1" set="method" line="504"><f a=""><c path="String"/></f></readUTF>
-		<readUTFBytes public="1" set="method" line="512">
+		<readShort public="1" set="method" line="446"><f a=""><x path="Int"/></f></readShort>
+		<readUnsignedByte public="1" get="inline" set="null" line="462"><f a=""><x path="Int"/></f></readUnsignedByte>
+		<readUnsignedInt public="1" set="method" line="474"><f a=""><x path="Int"/></f></readUnsignedInt>
+		<readUnsignedShort public="1" set="method" line="491"><f a=""><x path="Int"/></f></readUnsignedShort>
+		<readUTF public="1" set="method" line="506"><f a=""><c path="String"/></f></readUTF>
+		<readUTFBytes public="1" set="method" line="514">
 			<f a="len">
 				<x path="Int"/>
 				<c path="String"/>
 			</f>
 			<meta><m n=":has_untyped"/></meta>
 		</readUTFBytes>
-		<setLength public="1" set="method" line="587"><f a="length">
+		<setLength public="1" set="method" line="589"><f a="length">
 	<x path="Int"/>
 	<x path="Void"/>
 </f></setLength>
-		<slice public="1" set="method" line="598"><f a="begin:?inEnd">
+		<slice public="1" set="method" line="600"><f a="begin:?inEnd">
 	<x path="Int"/>
 	<x path="Int"/>
 	<c path="lime.utils.ByteArray"/>
 </f></slice>
-		<ThrowEOFi set="method" line="634"><f a=""><x path="Int"/></f></ThrowEOFi>
-		<toString public="1" set="method" line="643" override="1"><f a=""><c path="String"/></f></toString>
-		<uncompress public="1" set="method" line="654"><f a="?algorithm">
+		<ThrowEOFi set="method" line="636"><f a=""><x path="Int"/></f></ThrowEOFi>
+		<toString public="1" set="method" line="645" override="1"><f a=""><c path="String"/></f></toString>
+		<uncompress public="1" set="method" line="656"><f a="?algorithm">
 	<e path="lime.utils.CompressionAlgorithm"/>
 	<x path="Void"/>
 </f></uncompress>
-		<write_uncheck get="inline" set="null" line="712">
+		<write_uncheck get="inline" set="null" line="714">
 			<f a="byte">
 				<x path="Int"/>
 				<x path="Void"/>
 			</f>
 			<meta><m n=":has_untyped"/></meta>
 		</write_uncheck>
-		<writeBoolean public="1" get="inline" set="null" line="727"><f a="value">
+		<writeBoolean public="1" get="inline" set="null" line="729"><f a="value">
 	<x path="Bool"/>
 	<x path="Void"/>
 </f></writeBoolean>
-		<writeByte public="1" set="method" line="734">
+		<writeByte public="1" set="method" line="736">
 			<f a="value">
 				<x path="Int"/>
 				<x path="Void"/>
 			</f>
 			<meta><m n=":has_untyped"/></meta>
 		</writeByte>
-		<writeBytes public="1" set="method" line="753"><f a="bytes:?offset:?length">
+		<writeBytes public="1" set="method" line="755"><f a="bytes:?offset:?length">
 	<c path="haxe.io.Bytes"/>
 	<x path="UInt"/>
 	<x path="UInt"/>
 	<x path="Void"/>
 </f></writeBytes>
-		<writeDouble public="1" set="method" line="773"><f a="x">
+		<writeDouble public="1" set="method" line="775"><f a="x">
 	<x path="Float"/>
 	<x path="Void"/>
 </f></writeDouble>
-		<writeFile public="1" set="method" line="788"><f a="path">
+		<writeFile public="1" set="method" line="790"><f a="path">
 	<c path="String"/>
 	<x path="Void"/>
 </f></writeFile>
-		<writeFloat public="1" set="method" line="801"><f a="x">
+		<writeFloat public="1" set="method" line="803"><f a="x">
 	<x path="Float"/>
 	<x path="Void"/>
 </f></writeFloat>
-		<writeInt public="1" set="method" line="816"><f a="value">
+		<writeInt public="1" set="method" line="818"><f a="value">
 	<x path="Int"/>
 	<x path="Void"/>
 </f></writeInt>
-		<writeShort public="1" set="method" line="845"><f a="value">
+		<writeShort public="1" set="method" line="847"><f a="value">
 	<x path="Int"/>
 	<x path="Void"/>
 </f></writeShort>
-		<writeUnsignedInt public="1" set="method" line="871"><f a="value">
+		<writeUnsignedInt public="1" set="method" line="873"><f a="value">
 	<x path="Int"/>
 	<x path="Void"/>
 </f></writeUnsignedInt>
-		<writeUnsignedShort public="1" set="method" line="884"><f a="value">
+		<writeUnsignedShort public="1" set="method" line="886"><f a="value">
 	<x path="Int"/>
 	<x path="Void"/>
 </f></writeUnsignedShort>
-		<writeUTF public="1" set="method" line="897"><f a="value">
+		<writeUTF public="1" set="method" line="899"><f a="value">
 	<c path="String"/>
 	<x path="Void"/>
 </f></writeUTF>
-		<writeUTFBytes public="1" set="method" line="915"><f a="value">
+		<writeUTFBytes public="1" set="method" line="917"><f a="value">
 	<c path="String"/>
 	<x path="Void"/>
 </f></writeUTFBytes>
-		<__fromBytes get="inline" set="null" line="960"><f a="bytes">
+		<__fromBytes get="inline" set="null" line="962"><f a="bytes">
 	<c path="haxe.io.Bytes"/>
 	<x path="Void"/>
 </f></__fromBytes>
-		<__get public="1" get="inline" set="null" line="977">
+		<__get public="1" get="inline" set="null" line="979">
 			<f a="pos">
 				<x path="Int"/>
 				<x path="Int"/>
@@ -24419,7 +24515,7 @@
 				<m n=":keep"/>
 			</meta>
 		</__get>
-		<__set public="1" get="inline" set="null" line="1074">
+		<__set public="1" get="inline" set="null" line="1076">
 			<f a="pos:v">
 				<x path="Int"/>
 				<x path="Int"/>
@@ -24430,23 +24526,23 @@
 				<m n=":keep"/>
 			</meta>
 		</__set>
-		<get_bigEndian get="inline" set="null" line="1098"><f a=""><x path="Bool"/></f></get_bigEndian>
-		<set_bigEndian get="inline" set="null" line="1099"><f a="value">
+		<get_bigEndian get="inline" set="null" line="1100"><f a=""><x path="Bool"/></f></get_bigEndian>
+		<set_bigEndian get="inline" set="null" line="1101"><f a="value">
 	<x path="Bool"/>
 	<x path="Bool"/>
 </f></set_bigEndian>
-		<get_bytesAvailable get="inline" set="null" line="1103"><f a=""><x path="Int"/></f></get_bytesAvailable>
-		<get_byteLength set="method" line="1111"><f a=""><x path="Int"/></f></get_byteLength>
-		<get_endian get="inline" set="null" line="1119"><f a=""><c path="String"/></f></get_endian>
-		<set_endian get="inline" set="null" line="1126"><f a="endian">
+		<get_bytesAvailable get="inline" set="null" line="1105"><f a=""><x path="Int"/></f></get_bytesAvailable>
+		<get_byteLength set="method" line="1113"><f a=""><x path="Int"/></f></get_byteLength>
+		<get_endian get="inline" set="null" line="1121"><f a=""><c path="String"/></f></get_endian>
+		<set_endian get="inline" set="null" line="1128"><f a="endian">
 	<c path="String"/>
 	<c path="String"/>
 </f></set_endian>
-		<set_length get="inline" set="null" line="1134"><f a="value">
+		<set_length get="inline" set="null" line="1136"><f a="value">
 	<x path="Int"/>
 	<x path="Int"/>
 </f></set_length>
-		<new public="1" set="method" line="121"><f a="?size">
+		<new public="1" set="method" line="123"><f a="?size">
 	<x path="Int"/>
 	<x path="Void"/>
 </f></new>
