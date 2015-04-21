@@ -1,6 +1,7 @@
 package lime.audio;
 
 
+import haxe.Timer;
 import lime.app.Event;
 import lime.audio.openal.AL;
 
@@ -15,22 +16,39 @@ class AudioSource {
 	public var onComplete = new Event<Void->Void> ();
 	
 	public var buffer:AudioBuffer;
+	public var currentTime (get, set):Int;
 	public var gain (get, set):Float;
-	public var timeOffset (get, set):Int;
+	public var length (get, set):Int;
+	public var loops:Int;
+	public var offset:Int;
 	
 	private var id:UInt;
+	private var playing:Bool;
 	private var pauseTime:Int;
+	private var __length:Null<Int>;
 	
 	#if flash
 	private var channel:SoundChannel;
 	#end
 	
+	#if (cpp || neko)
+	private var timer:Timer;
+	#end
 	
-	public function new (buffer:AudioBuffer = null) {
+	
+	public function new (buffer:AudioBuffer = null, offset:Int = 0, length:Null<Int> = null, loops:Int = 0) {
 		
 		this.buffer = buffer;
+		this.offset = offset;
+		
+		if (length != null && length != 0) {
+			
+			this.length = length;
+			
+		}
+		
+		this.loops = loops;
 		id = 0;
-		pauseTime = 0;
 		
 		if (buffer != null) {
 			
@@ -103,7 +121,28 @@ class AudioSource {
 			
 		#else
 			
+			if (playing) {
+				
+				return;
+				
+			}
+			
+			playing = true;
+			
+			var time = currentTime;
+			
 			AL.sourcePlay (id);
+			
+			currentTime = time;
+			
+			if (timer != null) {
+				
+				timer.stop ();
+				
+			}
+			
+			timer = new Timer (length - currentTime);
+			timer.run = timer_onRun;
 			
 		#end
 		
@@ -124,7 +163,14 @@ class AudioSource {
 			
 		#else
 			
+			playing = false;
 			AL.sourcePause (id);
+			
+			if (timer != null) {
+				
+				timer.stop ();
+				
+			}
 			
 		#end
 		
@@ -141,8 +187,49 @@ class AudioSource {
 			
 		#else
 			
+			playing = false;
 			AL.sourceStop (id);
 			
+			if (timer != null) {
+				
+				timer.stop ();
+				
+			}
+			
+		#end
+		
+	}
+	
+	
+	
+	
+	// Event Handlers
+	
+	
+	
+	
+	private function timer_onRun () {
+		
+		#if (!flash && !html5)
+		
+		playing = false;
+		
+		if (loops > 0) {
+			
+			loops--;
+			currentTime = 0;
+			play ();
+			return;
+			
+		} else {
+			
+			AL.sourceStop (id);
+			timer.stop ();
+			
+		}
+		
+		onComplete.dispatch ();
+		
 		#end
 		
 	}
@@ -155,12 +242,62 @@ class AudioSource {
 	
 	
 	
+	private function get_currentTime ():Int {
+		
+		#if html5
+			
+			return 0;
+			
+		#elseif flash
+			
+			return Std.int (channel.position);
+			
+		#else
+			
+			var time = Std.int (AL.getSourcef (id, AL.SEC_OFFSET) * 1000) - offset;
+			if (time < 0) return 0;
+			return time;
+			
+		#end
+		
+	}
+	
+	
+	private function set_currentTime (value:Int):Int {
+		
+		#if html5
+			
+			return pauseTime = value;
+			
+		#elseif flash
+			
+			// TODO: create new sound channel
+			//channel.position = value;
+			return pauseTime = value;
+			
+		#else
+			
+			if (buffer != null) {
+				
+				AL.sourceRewind (id);
+				AL.sourcef (id, AL.SEC_OFFSET, (value + offset) / 1000);
+				if (playing) AL.sourcePlay (id);
+				
+			}
+			
+			return value;
+			
+		#end
+		
+	}
+	
+	
 	private function get_gain ():Float {
 		
 		#if html5
-		
-		return 1;
-		
+			
+			return 1;
+			
 		#elseif flash
 			
 			return channel.soundTransform.volume;
@@ -177,9 +314,9 @@ class AudioSource {
 	private function set_gain (value:Float):Float {
 		
 		#if html5
-		
-		return 1;
-		
+			
+			return 1;
+			
 		#elseif flash
 			
 			var soundTransform = channel.soundTransform;
@@ -197,43 +334,35 @@ class AudioSource {
 	}
 	
 	
-	private function get_timeOffset ():Int {
+	private function get_length ():Int {
+		
+		if (__length != null) {
+			
+			return __length;
+			
+		}
 		
 		#if html5
-		
-		return 0;
-		
+			
+			return 0;
+			
 		#elseif flash
 			
-			return Std.int (channel.position);
+			return Std.int (buffer.src.length);
 			
 		#else
 			
-			return Std.int (AL.getSourcef (id, AL.SEC_OFFSET) * 1000);
+			var samples = (buffer.data.length * 8) / (buffer.channels * buffer.bitsPerSample);
+			return Std.int (samples / buffer.sampleRate * 1000) - offset;
 			
 		#end
 		
 	}
 	
 	
-	private function set_timeOffset (value:Int):Int {
+	private function set_length (value:Int):Int {
 		
-		#if html5
-		
-		return 0;
-		
-		#elseif flash
-			
-			// TODO: create new sound channel
-			//channel.position = value;
-			return value;
-			
-		#else
-			
-			AL.sourcef (id, AL.SEC_OFFSET, value / 1000);
-			return value;
-			
-		#end
+		return __length = value;
 		
 	}
 	
