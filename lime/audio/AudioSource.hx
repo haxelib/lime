@@ -31,7 +31,7 @@ class AudioSource {
 	private var channel:SoundChannel;
 	#end
 	
-	#if (cpp || neko)
+	#if (cpp || neko || nodejs)
 	private var timer:Timer;
 	#end
 	
@@ -54,6 +54,25 @@ class AudioSource {
 			
 			init ();
 			
+		}
+		
+	}
+	
+	
+	public function dispose ():Void {
+		
+		switch (AudioManager.context) {
+			
+			case OPENAL (alc, al):
+				
+				if (id != 0) {
+					
+					al.deleteSource (id);
+					
+				}
+			
+			default:
+				
 		}
 		
 	}

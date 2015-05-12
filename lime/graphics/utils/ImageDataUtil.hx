@@ -4,6 +4,7 @@ package lime.graphics.utils;
 import haxe.ds.Vector;
 import lime.graphics.Image;
 import lime.graphics.ImageBuffer;
+import lime.graphics.PixelFormat;
 import lime.math.ColorMatrix;
 import lime.math.Rectangle;
 import lime.math.Vector2;
@@ -228,6 +229,8 @@ class ImageDataUtil {
 			} else {
 				
 				var sourceAlpha:Float;
+				var destAlpha:Float;
+				var outA:Float;
 				var oneMinusSourceAlpha:Float;
 				
 				for (row in Std.int (sourceRect.top + sourceImage.offsetY)...Std.int (sourceRect.bottom + sourceImage.offsetY)) {
@@ -237,13 +240,16 @@ class ImageDataUtil {
 						sourceOffset = (row * sourceStride) + (column * 4);
 						offset = ((row + rowOffset) * stride) + ((column + columnOffset) * 4);
 						
-						sourceAlpha = sourceData[sourceOffset + 3] / 255;
+						sourceAlpha = sourceData[sourceOffset + 3] / 255.0;
+						destAlpha = data[offset + 3] / 255.0;
 						oneMinusSourceAlpha = (1 - sourceAlpha);
 						
-						data[offset] = __clamp[Std.int (sourceData[sourceOffset] + (data[offset] * oneMinusSourceAlpha))];
-						data[offset + 1] = __clamp[Std.int (sourceData[sourceOffset + 1] + (data[offset + 1] * oneMinusSourceAlpha))];
-						data[offset + 2] = __clamp[Std.int (sourceData[sourceOffset + 2] + (data[offset + 2] * oneMinusSourceAlpha))];
-						data[offset + 3] = __clamp[Std.int (sourceData[sourceOffset + 3] + (data[offset + 3] * oneMinusSourceAlpha))];
+						outA = sourceAlpha + destAlpha * oneMinusSourceAlpha;
+						data[offset + 0] = __clamp[Math.round ((sourceData[sourceOffset + 0] * sourceAlpha + data[offset + 0] * destAlpha * oneMinusSourceAlpha) / outA)];
+						data[offset + 1] = __clamp[Math.round ((sourceData[sourceOffset + 1] * sourceAlpha + data[offset + 1] * destAlpha * oneMinusSourceAlpha) / outA)];
+						data[offset + 2] = __clamp[Math.round ((sourceData[sourceOffset + 2] * sourceAlpha + data[offset + 2] * destAlpha * oneMinusSourceAlpha) / outA)];
+						data[offset + 3] = __clamp[Math.round (outA * 255.0)];
+						
 						
 					}
 					
@@ -424,6 +430,173 @@ class ImageDataUtil {
 	}
 	
 	
+	public static function getColorBoundsRect (image:Image, mask:Int, color:Int, findColor:Bool = true, format:PixelFormat):Rectangle {
+		
+		var left:Int = image.width + 1;
+		var right:Int = 0;
+		var top:Int = image.height + 1;
+		var bottom:Int = 0;
+		
+		var r, g, b, a;
+		var mr, mg, mb, ma;
+		
+		if (format == ARGB) {
+			
+			a = (image.transparent) ? (color >> 24) & 0xFF : 0xFF;
+			r = (color >> 16) & 0xFF;
+			g = (color >> 8) & 0xFF;
+			b = color & 0xFF;
+			
+			ma = (image.transparent) ? (mask >> 24) & 0xFF : 0xFF;
+			mr = (mask >> 16) & 0xFF;
+			mg = (mask >> 8) & 0xFF;
+			mb = mask & 0xFF;
+			
+		} else {
+			
+			r = (color >> 24) & 0xFF;
+			g = (color >> 16) & 0xFF;
+			b = (color >> 8) & 0xFF;
+			a = (image.transparent) ? color & 0xFF : 0xFF;
+			
+			mr = (mask >> 24) & 0xFF;
+			mg = (mask >> 16) & 0xFF;
+			mb = (mask >> 8) & 0xFF;
+			ma = (image.transparent) ? mask & 0xFF : 0xFF;
+			
+		}
+		
+		color = (r | (g << 8) | (b << 16) | (a << 24));
+		mask = (mr | (mg << 8) | (mb << 16) | (mask << 24));
+		
+		var pix:Int;
+		
+		for (ix in 0...image.width) {
+			
+			var hit = false;
+			
+			for (iy in 0...image.height) {
+				
+				pix = image.getPixel32 (ix, iy);
+				hit = findColor ? (pix & mask) == color : (pix & mask) != color;
+				
+				if (hit) {
+					
+					if (ix < left) left = ix;
+					break;
+					
+				}
+				
+			}
+			
+			if (hit) {
+				
+				break;
+				
+			}
+			
+		}
+		
+		for (_ix in 0...image.width) {
+			
+			var ix = (image.width - 1) - _ix;
+			var hit = false;
+			
+			for (iy in 0...image.height) {
+				
+				pix = image.getPixel32 (ix, iy);
+				hit = findColor ? (pix & mask) == color : (pix & mask) != color;
+				
+				if (hit) {
+					
+					if (ix > right) right = ix;
+					break;
+					
+				}
+				
+			}
+			
+			if (hit) {
+				
+				break;
+				
+			}
+			
+		}
+		
+		for (iy in 0...image.height) {
+			
+			var hit = false;
+			
+			for (ix in 0...image.width) {
+				
+				pix = image.getPixel32 (ix, iy);
+				hit = findColor ? (pix & mask) == color : (pix & mask) != color;
+				
+				if (hit) {
+					
+					if (iy < top) top = iy;
+					break;
+					
+				}
+				
+			}
+			
+			if (hit) {
+				
+				break;
+				
+			}
+			
+		}
+		
+		for (_iy in 0...image.height) {
+			
+			var iy = (image.height - 1) - _iy;
+			var hit = false;
+			
+			for (ix in 0...image.width) {
+				
+				pix = image.getPixel32 (ix, iy);
+				hit = findColor ? (pix & mask) == color : (pix & mask) != color;
+				
+				if (hit) {
+					
+					if (iy > bottom) bottom = iy;
+					break;
+					
+				}
+				
+			}
+			
+			if (hit) {
+				
+				break;
+				
+			}
+			
+		}
+		
+		var w = right - left;
+		var h = bottom - top;
+		
+		if (w > 0) w++;
+		if (h > 0) h++;
+		
+		if (w < 0) w = 0;
+		if (h < 0) h = 0;
+		
+		if (left == right) w = 1;
+		if (top == bottom) h = 1;
+		
+		if (left > image.width) left = 0;
+		if (top > image.height) top = 0;
+		
+		return new Rectangle (left, top, w, h);
+		
+	}
+	
+	
 	public static function getPixel (image:Image, x:Int, y:Int, format:PixelFormat):Int {
 		
 		var data = image.buffer.data;
@@ -503,7 +676,7 @@ class ImageDataUtil {
 		#end
 		
 		#if ((cpp || neko) && !disable_cffi)
-		if (!System.disableCFFI) byteArray = lime_image_data_util_get_pixels (image, rect, format == ARGB ? 1 : 0); else
+		if (!System.disableCFFI) byteArray = lime_image_data_util_get_pixels (image, rect, format); else
 		#end
 		{
 			
@@ -763,11 +936,100 @@ class ImageDataUtil {
 	}
 	
 	
+	public static function setFormat (image:Image, format:PixelFormat):Void {
+		
+		var data = image.buffer.data;
+		if (data == null) return;
+		
+		#if ((cpp || neko) && !disable_cffi)
+		if (!System.disableCFFI) lime_image_data_util_set_format (image, format); else
+		#end
+		{
+			
+			var index, a16;
+			var length = Std.int (data.length / 4);
+			var r1, g1, b1, a1, r2, g2, b2, a2;
+			var r, g, b, a;
+			
+			switch (image.format) {
+				
+				case RGBA:
+					
+					r1 = 0;
+					g1 = 1;
+					b1 = 2;
+					a1 = 3;
+				
+				case ARGB:
+					
+					r1 = 1;
+					g1 = 2;
+					b1 = 3;
+					a1 = 0;
+				
+				case BGRA:
+					
+					r1 = 2;
+					g1 = 1;
+					b1 = 0;
+					a1 = 3;
+				
+			}
+			
+			switch (format) {
+				
+				case RGBA:
+					
+					r2 = 0;
+					g2 = 1;
+					b2 = 2;
+					a2 = 3;
+				
+				case ARGB:
+					
+					r2 = 1;
+					g2 = 2;
+					b2 = 3;
+					a2 = 0;
+				
+				case BGRA:
+					
+					r2 = 2;
+					g2 = 1;
+					b2 = 0;
+					a2 = 3;
+				
+			}
+			
+			for (i in 0...length) {
+				
+				index = i * 4;
+				
+				r = data[index + r1];
+				g = data[index + g1];
+				b = data[index + b1];
+				a = data[index + a1];
+				
+				data[index + r2] = r;
+				data[index + g2] = g;
+				data[index + b2] = b;
+				data[index + a2] = a;
+				
+			}
+			
+		}
+		
+		image.buffer.format = format;
+		image.dirty = true;
+		
+	}
+	
+	
 	public static function setPixel (image:Image, x:Int, y:Int, color:Int, format:PixelFormat):Void {
 		
 		var data = image.buffer.data;
 		var offset = (4 * (y + image.offsetY) * image.buffer.width + (x + image.offsetX) * 4);
-		if (format == null || format == RGBA) color = color >> 8;
+		if (format == RGBA) color = color >> 8;
 		
 		data[offset] = (color & 0xFF0000) >>> 16;
 		data[offset + 1] = (color & 0x00FF00) >>> 8;
@@ -828,7 +1090,7 @@ class ImageDataUtil {
 		if (image.buffer.data == null) return;
 		
 		#if ((cpp || neko) && !disable_cffi)
-		if (!System.disableCFFI) lime_image_data_util_set_pixels (image, rect, byteArray, format == ARGB ? 1 : 0); else
+		if (!System.disableCFFI) lime_image_data_util_set_pixels (image, rect, byteArray, format); else
 		#end
 		{
 			
@@ -955,6 +1217,7 @@ class ImageDataUtil {
 	private static var lime_image_data_util_merge = System.load ("lime", "lime_image_data_util_merge", -1);
 	private static var lime_image_data_util_multiply_alpha = System.load ("lime", "lime_image_data_util_multiply_alpha", 1);
 	private static var lime_image_data_util_resize = System.load ("lime", "lime_image_data_util_resize", 4);
+	private static var lime_image_data_util_set_format = System.load ("lime", "lime_image_data_util_set_format", 2);
 	private static var lime_image_data_util_set_pixels = System.load ("lime", "lime_image_data_util_set_pixels", 4);
 	private static var lime_image_data_util_unmultiply_alpha = System.load ("lime", "lime_image_data_util_unmultiply_alpha", 1);
 	#end

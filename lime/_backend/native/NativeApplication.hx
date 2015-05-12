@@ -27,6 +27,7 @@ class NativeApplication {
 	private var keyEventInfo = new KeyEventInfo ();
 	private var mouseEventInfo = new MouseEventInfo ();
 	private var renderEventInfo = new RenderEventInfo (RENDER);
+	private var textEventInfo = new TextEventInfo ();
 	private var touchEventInfo = new TouchEventInfo ();
 	private var updateEventInfo = new UpdateEventInfo ();
 	private var windowEventInfo = new WindowEventInfo ();
@@ -70,6 +71,7 @@ class NativeApplication {
 		lime_key_event_manager_register (handleKeyEvent, keyEventInfo);
 		lime_mouse_event_manager_register (handleMouseEvent, mouseEventInfo);
 		lime_render_event_manager_register (handleRenderEvent, renderEventInfo);
+		lime_text_event_manager_register (handleTextEvent, textEventInfo);
 		lime_touch_event_manager_register (handleTouchEvent, touchEventInfo);
 		lime_update_event_manager_register (handleUpdateEvent, updateEventInfo);
 		lime_window_event_manager_register (handleWindowEvent, windowEventInfo);
@@ -209,6 +211,7 @@ class NativeApplication {
 				
 				case RENDER:
 					
+					parent.renderer.render ();
 					parent.renderer.onRender.dispatch (parent.renderer.context);
 					parent.renderer.flip ();
 					
@@ -222,12 +225,35 @@ class NativeApplication {
 					#if lime_console
 					parent.renderer.context = CONSOLE (new ConsoleRenderContext ());
 					#else
-					parent.renderer.context = OPENGL (new GLRenderContext ());
+					if (parent.config.hardware) {
+						
+						parent.renderer.context = OPENGL (new GLRenderContext ());
+						
+					}
 					#end
 					
 					parent.renderer.onRenderContextRestored.dispatch (parent.renderer.context);
 				
 			}
+			
+		}
+		
+	}
+	
+	
+	private function handleTextEvent ():Void {
+		
+		switch (textEventInfo.type) {
+			
+			case TEXT_INPUT:
+				
+				parent.window.onTextInput.dispatch (textEventInfo.text);
+			
+			case TEXT_EDIT:
+				
+				parent.window.onTextEdit.dispatch (textEventInfo.text, textEventInfo.start, textEventInfo.length);
+			
+			default:
 			
 		}
 		
@@ -287,6 +313,10 @@ class NativeApplication {
 					
 					parent.window.onWindowDeactivate.dispatch ();
 				
+				case WINDOW_ENTER:
+					
+					parent.window.onWindowEnter.dispatch ();
+				
 				case WINDOW_FOCUS_IN:
 					
 					parent.window.onWindowFocusIn.dispatch ();
@@ -294,6 +324,10 @@ class NativeApplication {
 				case WINDOW_FOCUS_OUT:
 					
 					parent.window.onWindowFocusOut.dispatch ();
+				
+				case WINDOW_LEAVE:
+					
+					parent.window.onWindowLeave.dispatch ();
 				
 				case WINDOW_MINIMIZE:
 					
@@ -381,6 +415,7 @@ class NativeApplication {
 	private static var lime_key_event_manager_register = System.load ("lime", "lime_key_event_manager_register", 2);
 	private static var lime_mouse_event_manager_register = System.load ("lime", "lime_mouse_event_manager_register", 2);
 	private static var lime_render_event_manager_register = System.load ("lime", "lime_render_event_manager_register", 2);
+	private static var lime_text_event_manager_register = System.load ("lime", "lime_text_event_manager_register", 2);
 	private static var lime_touch_event_manager_register = System.load ("lime", "lime_touch_event_manager_register", 2);
 	private static var lime_update_event_manager_register = System.load ("lime", "lime_update_event_manager_register", 2);
 	private static var lime_window_event_manager_register = System.load ("lime", "lime_window_event_manager_register", 2);
@@ -544,6 +579,44 @@ private class RenderEventInfo {
 }
 
 
+private class TextEventInfo {
+	
+	
+	public var id:Int;
+	public var length:Int;
+	public var start:Int;
+	public var text:String;
+	public var type:TextEventType;
+	
+	
+	public function new (type:TextEventType = null, text:String = "", start:Int = 0, length:Int = 0) {
+		
+		this.type = type;
+		this.text = text;
+		this.start = start;
+		this.length = length;
+		
+	}
+	
+	
+	public function clone ():TextEventInfo {
+		
+		return new TextEventInfo (type, text, start, length);
+		
+	}
+	
+	
+}
+
+
+@:enum private abstract TextEventType(Int) {
+	
+	var TEXT_INPUT = 0;
+	var TEXT_EDIT = 1;
+	
+}
+
+
 private class TouchEventInfo {
 	
 	
@@ -650,11 +723,13 @@ private class WindowEventInfo {
 	var WINDOW_ACTIVATE = 0;
 	var WINDOW_CLOSE = 1;
 	var WINDOW_DEACTIVATE = 2;
-	var WINDOW_FOCUS_IN = 3;
-	var WINDOW_FOCUS_OUT = 4;
-	var WINDOW_MINIMIZE = 5;
-	var WINDOW_MOVE = 6;
-	var WINDOW_RESIZE = 7;
-	var WINDOW_RESTORE = 8;
+	var WINDOW_ENTER = 3;
+	var WINDOW_FOCUS_IN = 4;
+	var WINDOW_FOCUS_OUT = 5;
+	var WINDOW_LEAVE = 6;
+	var WINDOW_MINIMIZE = 7;
+	var WINDOW_MOVE = 8;
+	var WINDOW_RESIZE = 9;
+	var WINDOW_RESTORE = 10;
 	
 }

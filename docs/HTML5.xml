@@ -1994,36 +1994,36 @@
 	framework.</haxe_doc>
 	</typedef>
 	<class path="haxe.Timer" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/haxe/Timer.hx">
-		<sRunningTimers line="211" static="1"><c path="Array"><c path="haxe.Timer"/></c></sRunningTimers>
-		<delay public="1" set="method" line="228" static="1"><f a="f:time">
+		<sRunningTimers line="206" static="1"><c path="Array"><c path="haxe.Timer"/></c></sRunningTimers>
+		<delay public="1" set="method" line="223" static="1"><f a="f:time">
 	<f a=""><x path="Void"/></f>
 	<x path="Int"/>
 	<c path="haxe.Timer"/>
 </f></delay>
-		<getMS set="method" line="244" static="1"><f a=""><x path="Float"/></f></getMS>
-		<measure public="1" params="T" set="method" line="255" static="1"><f a="f:?pos">
+		<getMS set="method" line="239" static="1"><f a=""><x path="Float"/></f></getMS>
+		<measure public="1" params="T" set="method" line="250" static="1"><f a="f:?pos">
 	<f a=""><c path="measure.T"/></f>
 	<t path="haxe.PosInfos"/>
 	<c path="measure.T"/>
 </f></measure>
-		<stamp public="1" set="method" line="272" static="1"><f a=""><x path="Float"/></f></stamp>
-		<__checkTimers public="1" set="method" line="317" static="1">
+		<stamp public="1" set="method" line="267" static="1"><f a=""><x path="Float"/></f></stamp>
+		<__checkTimers public="1" set="method" line="312" static="1">
 			<f a=""><x path="Void"/></f>
 			<meta><m n=":noCompletion"/></meta>
 		</__checkTimers>
 		<mTime><x path="Float"/></mTime>
 		<mFireAt><x path="Float"/></mFireAt>
 		<mRunning><x path="Bool"/></mRunning>
-		<run public="1" set="dynamic" line="265"><f a=""><x path="Void"/></f></run>
-		<stop public="1" set="method" line="283"><f a=""><x path="Void"/></f></stop>
-		<__check set="method" line="305">
+		<run public="1" set="dynamic" line="260"><f a=""><x path="Void"/></f></run>
+		<stop public="1" set="method" line="278"><f a=""><x path="Void"/></f></stop>
+		<__check set="method" line="300">
 			<f a="inTime">
 				<x path="Float"/>
 				<x path="Void"/>
 			</f>
 			<meta><m n=":noCompletion"/></meta>
 		</__check>
-		<new public="1" set="method" line="218"><f a="time">
+		<new public="1" set="method" line="213"><f a="time">
 	<x path="Float"/>
 	<x path="Void"/>
 </f></new>
@@ -2136,6 +2136,7 @@
 		<MD5/>
 		<SHA1/>
 		<SHA256/>
+		<haxe_doc>Hash methods for Hmac calculation.</haxe_doc>
 		<meta>
 			<m n=":directlyUsed"/>
 			<m n=":flatEnum"/>
@@ -2145,24 +2146,25 @@
 		<method><e path="haxe.crypto.HashMethod"/></method>
 		<blockSize><x path="Int"/></blockSize>
 		<length><x path="Int"/></length>
-		<doHash get="inline" set="null" line="48"><f a="b">
+		<doHash get="inline" set="null" line="54"><f a="b">
 	<c path="haxe.io.Bytes"/>
 	<c path="haxe.io.Bytes"/>
 </f></doHash>
-		<nullPad set="method" line="56"><f a="s:chunkLen">
+		<nullPad set="method" line="62"><f a="s:chunkLen">
 	<c path="haxe.io.Bytes"/>
 	<x path="Int"/>
 	<c path="haxe.io.Bytes"/>
 </f></nullPad>
-		<make public="1" set="method" line="67"><f a="key:msg">
+		<make public="1" set="method" line="73"><f a="key:msg">
 	<c path="haxe.io.Bytes"/>
 	<c path="haxe.io.Bytes"/>
 	<c path="haxe.io.Bytes"/>
 </f></make>
-		<new public="1" set="method" line="36"><f a="hashMethod">
+		<new public="1" set="method" line="42"><f a="hashMethod">
 	<e path="haxe.crypto.HashMethod"/>
 	<x path="Void"/>
 </f></new>
+		<haxe_doc>Calculates a Hmac of the given Bytes using a HashMethod.</haxe_doc>
 		<meta><m n=":directlyUsed"/></meta>
 	</class>
 	<class path="haxe.crypto.Md5" params="" file="/usr/lib/haxe/std/haxe/crypto/Md5.hx">
@@ -2308,75 +2310,76 @@
 		</meta>
 	</class>
 	<class path="haxe.crypto.Sha256" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/haxe/crypto/Sha256.hx">
-		<encode public="1" set="method" line="26" static="1"><f a="s">
+		<encode public="1" set="method" line="29" static="1"><f a="s">
 	<c path="String"/>
 	<c path="String"/>
 </f></encode>
-		<make public="1" set="method" line="36" static="1"><f a="b">
+		<make public="1" set="method" line="39" static="1"><f a="b">
 	<c path="haxe.io.Bytes"/>
 	<c path="haxe.io.Bytes"/>
 </f></make>
-		<str2blks set="method" line="112" static="1"><f a="s">
+		<str2blks set="method" line="115" static="1"><f a="s">
 	<c path="String"/>
 	<c path="Array"><x path="Int"/></c>
 </f></str2blks>
-		<bytes2blks set="method" line="129" static="1"><f a="b">
+		<bytes2blks set="method" line="132" static="1"><f a="b">
 	<c path="haxe.io.Bytes"/>
 	<c path="Array"><x path="Int"/></c>
 </f></bytes2blks>
-		<doEncode set="method" line="56"><f a="m:l">
+		<doEncode set="method" line="59"><f a="m:l">
 	<c path="Array"><x path="Int"/></c>
 	<x path="Int"/>
 	<c path="Array"><x path="Int"/></c>
 </f></doEncode>
-		<S set="method" line="146"><f a="X:n">
+		<S set="method" line="149"><f a="X:n">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Int"/>
 </f></S>
-		<R set="method" line="150"><f a="X:n">
+		<R set="method" line="153"><f a="X:n">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Int"/>
 </f></R>
-		<Ch set="method" line="154"><f a="x:y:z">
+		<Ch set="method" line="157"><f a="x:y:z">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Int"/>
 </f></Ch>
-		<Maj set="method" line="158"><f a="x:y:z">
+		<Maj set="method" line="161"><f a="x:y:z">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Int"/>
 </f></Maj>
-		<Sigma0256 set="method" line="162"><f a="x">
+		<Sigma0256 set="method" line="165"><f a="x">
 	<x path="Int"/>
 	<x path="Int"/>
 </f></Sigma0256>
-		<Sigma1256 set="method" line="166"><f a="x">
+		<Sigma1256 set="method" line="169"><f a="x">
 	<x path="Int"/>
 	<x path="Int"/>
 </f></Sigma1256>
-		<Gamma0256 set="method" line="170"><f a="x">
+		<Gamma0256 set="method" line="173"><f a="x">
 	<x path="Int"/>
 	<x path="Int"/>
 </f></Gamma0256>
-		<Gamma1256 set="method" line="174"><f a="x">
+		<Gamma1256 set="method" line="177"><f a="x">
 	<x path="Int"/>
 	<x path="Int"/>
 </f></Gamma1256>
-		<safeAdd set="method" line="178"><f a="x:y">
+		<safeAdd set="method" line="181"><f a="x:y">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Int"/>
 </f></safeAdd>
-		<hex set="method" line="184"><f a="a">
+		<hex set="method" line="187"><f a="a">
 	<c path="Array"><x path="Int"/></c>
 	<c path="String"/>
 </f></hex>
-		<new public="1" set="method" line="53"><f a=""><x path="Void"/></f></new>
+		<new public="1" set="method" line="56"><f a=""><x path="Void"/></f></new>
+		<haxe_doc>Creates a Sha256 of a String.</haxe_doc>
 		<meta><m n=":directlyUsed"/></meta>
 	</class>
 	<abstract path="haxe.ds.HashMap" params="K:V" file="/usr/lib/haxe/std/haxe/ds/HashMap.hx">
@@ -3473,48 +3476,53 @@
 		<meta><m n=":directlyUsed"/></meta>
 	</class>
 	<class path="lime._backend.native.NativeApplication" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/_backend/native/NativeApplication.hx">
-		<lime_application_create line="375" static="1"><f a="">
+		<lime_application_create line="409" static="1"><f a="">
 	<unknown/>
 	<unknown/>
 </f></lime_application_create>
-		<lime_application_exec line="376" static="1"><f a="">
+		<lime_application_exec line="410" static="1"><f a="">
 	<d/>
 	<x path="Int"/>
 </f></lime_application_exec>
-		<lime_application_init line="377" static="1"><unknown/></lime_application_init>
-		<lime_application_update line="378" static="1"><unknown/></lime_application_update>
-		<lime_application_quit line="379" static="1"><unknown/></lime_application_quit>
-		<lime_gamepad_event_manager_register line="380" static="1"><f a=":">
+		<lime_application_init line="411" static="1"><unknown/></lime_application_init>
+		<lime_application_update line="412" static="1"><unknown/></lime_application_update>
+		<lime_application_quit line="413" static="1"><unknown/></lime_application_quit>
+		<lime_gamepad_event_manager_register line="414" static="1"><f a=":">
 	<f a=""><x path="Void"/></f>
 	<c path="lime._backend.native._NativeApplication.GamepadEventInfo"/>
 	<unknown/>
 </f></lime_gamepad_event_manager_register>
-		<lime_key_event_manager_register line="381" static="1"><f a=":">
+		<lime_key_event_manager_register line="415" static="1"><f a=":">
 	<f a=""><x path="Void"/></f>
 	<c path="lime._backend.native._NativeApplication.KeyEventInfo"/>
 	<unknown/>
 </f></lime_key_event_manager_register>
-		<lime_mouse_event_manager_register line="382" static="1"><f a=":">
+		<lime_mouse_event_manager_register line="416" static="1"><f a=":">
 	<f a=""><x path="Void"/></f>
 	<c path="lime._backend.native._NativeApplication.MouseEventInfo"/>
 	<unknown/>
 </f></lime_mouse_event_manager_register>
-		<lime_render_event_manager_register line="383" static="1"><f a=":">
+		<lime_render_event_manager_register line="417" static="1"><f a=":">
 	<f a=""><x path="Void"/></f>
 	<c path="lime._backend.native._NativeApplication.RenderEventInfo"/>
 	<unknown/>
 </f></lime_render_event_manager_register>
-		<lime_touch_event_manager_register line="384" static="1"><f a=":">
+		<lime_text_event_manager_register line="418" static="1"><f a=":">
+	<f a=""><x path="Void"/></f>
+	<c path="lime._backend.native._NativeApplication.TextEventInfo"/>
+	<unknown/>
+</f></lime_text_event_manager_register>
+		<lime_touch_event_manager_register line="419" static="1"><f a=":">
 	<f a=""><x path="Void"/></f>
 	<c path="lime._backend.native._NativeApplication.TouchEventInfo"/>
 	<unknown/>
 </f></lime_touch_event_manager_register>
-		<lime_update_event_manager_register line="385" static="1"><f a=":">
+		<lime_update_event_manager_register line="420" static="1"><f a=":">
 	<f a=""><x path="Void"/></f>
 	<c path="lime._backend.native._NativeApplication.UpdateEventInfo"/>
 	<unknown/>
 </f></lime_update_event_manager_register>
-		<lime_window_event_manager_register line="386" static="1"><f a=":">
+		<lime_window_event_manager_register line="421" static="1"><f a=":">
 	<f a=""><x path="Void"/></f>
 	<c path="lime._backend.native._NativeApplication.WindowEventInfo"/>
 	<unknown/>
@@ -3523,26 +3531,28 @@
 		<keyEventInfo><c path="lime._backend.native._NativeApplication.KeyEventInfo"/></keyEventInfo>
 		<mouseEventInfo><c path="lime._backend.native._NativeApplication.MouseEventInfo"/></mouseEventInfo>
 		<renderEventInfo><c path="lime._backend.native._NativeApplication.RenderEventInfo"/></renderEventInfo>
+		<textEventInfo><c path="lime._backend.native._NativeApplication.TextEventInfo"/></textEventInfo>
 		<touchEventInfo><c path="lime._backend.native._NativeApplication.TouchEventInfo"/></touchEventInfo>
 		<updateEventInfo><c path="lime._backend.native._NativeApplication.UpdateEventInfo"/></updateEventInfo>
 		<windowEventInfo><c path="lime._backend.native._NativeApplication.WindowEventInfo"/></windowEventInfo>
 		<handle public="1"><d/></handle>
 		<parent><c path="lime.app.Application"/></parent>
-		<create public="1" set="method" line="48"><f a="config">
+		<create public="1" set="method" line="49"><f a="config">
 	<t path="lime.app.Config"/>
 	<x path="Void"/>
 </f></create>
-		<exec public="1" set="method" line="67"><f a=""><x path="Int"/></f></exec>
-		<handleGamepadEvent set="method" line="113"><f a=""><x path="Void"/></f></handleGamepadEvent>
-		<handleKeyEvent set="method" line="151"><f a=""><x path="Void"/></f></handleKeyEvent>
-		<handleMouseEvent set="method" line="172"><f a=""><x path="Void"/></f></handleMouseEvent>
-		<handleRenderEvent set="method" line="204"><f a=""><x path="Void"/></f></handleRenderEvent>
-		<handleTouchEvent set="method" line="237"><f a=""><x path="Void"/></f></handleTouchEvent>
-		<handleUpdateEvent set="method" line="264"><f a=""><x path="Void"/></f></handleUpdateEvent>
-		<handleWindowEvent set="method" line="272"><f a=""><x path="Void"/></f></handleWindowEvent>
-		<updateTimer set="method" line="328"><f a=""><x path="Void"/></f></updateTimer>
-		<__cleanup set="method" line="368"><f a=""><x path="Void"/></f></__cleanup>
-		<new public="1" set="method" line="39"><f a="parent">
+		<exec public="1" set="method" line="68"><f a=""><x path="Int"/></f></exec>
+		<handleGamepadEvent set="method" line="115"><f a=""><x path="Void"/></f></handleGamepadEvent>
+		<handleKeyEvent set="method" line="153"><f a=""><x path="Void"/></f></handleKeyEvent>
+		<handleMouseEvent set="method" line="174"><f a=""><x path="Void"/></f></handleMouseEvent>
+		<handleRenderEvent set="method" line="206"><f a=""><x path="Void"/></f></handleRenderEvent>
+		<handleTextEvent set="method" line="244"><f a=""><x path="Void"/></f></handleTextEvent>
+		<handleTouchEvent set="method" line="263"><f a=""><x path="Void"/></f></handleTouchEvent>
+		<handleUpdateEvent set="method" line="290"><f a=""><x path="Void"/></f></handleUpdateEvent>
+		<handleWindowEvent set="method" line="298"><f a=""><x path="Void"/></f></handleWindowEvent>
+		<updateTimer set="method" line="362"><f a=""><x path="Void"/></f></updateTimer>
+		<__cleanup set="method" line="402"><f a=""><x path="Void"/></f></__cleanup>
+		<new public="1" set="method" line="40"><f a="parent">
 	<c path="lime.app.Application"/>
 	<x path="Void"/>
 </f></new>
@@ -3561,8 +3571,8 @@
 		<id public="1"><x path="Int"/></id>
 		<type public="1"><x path="lime._backend.native._NativeApplication.GamepadEventType"/></type>
 		<value public="1"><x path="Float"/></value>
-		<clone public="1" set="method" line="413"><f a=""><c path="lime._backend.native._NativeApplication.GamepadEventInfo"/></f></clone>
-		<new public="1" set="method" line="402"><f a="?type:?id:?button:?axis:?value">
+		<clone public="1" set="method" line="448"><f a=""><c path="lime._backend.native._NativeApplication.GamepadEventInfo"/></f></clone>
+		<new public="1" set="method" line="437"><f a="?type:?id:?button:?axis:?value">
 	<x path="lime._backend.native._NativeApplication.GamepadEventType"/>
 	<x path="Int"/>
 	<x path="Int"/>
@@ -3576,35 +3586,35 @@
 		<this><x path="Int"/></this>
 		<meta><m n=":enum"/></meta>
 		<impl><class path="lime._backend.native._NativeApplication.GamepadEventType_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/_backend/native/NativeApplication.hx" private="1" module="lime._backend.native.NativeApplication" extern="1">
-	<AXIS_MOVE public="1" get="inline" set="null" line="425" static="1">
+	<AXIS_MOVE public="1" get="inline" set="null" line="460" static="1">
 		<x path="lime._backend.native._NativeApplication.GamepadEventType"/>
 		<meta>
 			<m n=":enum"/>
 			<m n=":impl"/>
 		</meta>
 	</AXIS_MOVE>
-	<BUTTON_DOWN public="1" get="inline" set="null" line="426" static="1">
+	<BUTTON_DOWN public="1" get="inline" set="null" line="461" static="1">
 		<x path="lime._backend.native._NativeApplication.GamepadEventType"/>
 		<meta>
 			<m n=":enum"/>
 			<m n=":impl"/>
 		</meta>
 	</BUTTON_DOWN>
-	<BUTTON_UP public="1" get="inline" set="null" line="427" static="1">
+	<BUTTON_UP public="1" get="inline" set="null" line="462" static="1">
 		<x path="lime._backend.native._NativeApplication.GamepadEventType"/>
 		<meta>
 			<m n=":enum"/>
 			<m n=":impl"/>
 		</meta>
 	</BUTTON_UP>
-	<CONNECT public="1" get="inline" set="null" line="428" static="1">
+	<CONNECT public="1" get="inline" set="null" line="463" static="1">
 		<x path="lime._backend.native._NativeApplication.GamepadEventType"/>
 		<meta>
 			<m n=":enum"/>
 			<m n=":impl"/>
 		</meta>
 	</CONNECT>
-	<DISCONNECT public="1" get="inline" set="null" line="429" static="1">
+	<DISCONNECT public="1" get="inline" set="null" line="464" static="1">
 		<x path="lime._backend.native._NativeApplication.GamepadEventType"/>
 		<meta>
 			<m n=":enum"/>
@@ -3615,35 +3625,35 @@
 </class></impl>
 	</abstract>
 	<class path="lime._backend.native._NativeApplication.GamepadEventType_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/_backend/native/NativeApplication.hx" private="1" module="lime._backend.native.NativeApplication" extern="1">
-		<AXIS_MOVE public="1" get="inline" set="null" line="425" static="1">
+		<AXIS_MOVE public="1" get="inline" set="null" line="460" static="1">
 			<x path="lime._backend.native._NativeApplication.GamepadEventType"/>
 			<meta>
 				<m n=":enum"/>
 				<m n=":impl"/>
 			</meta>
 		</AXIS_MOVE>
-		<BUTTON_DOWN public="1" get="inline" set="null" line="426" static="1">
+		<BUTTON_DOWN public="1" get="inline" set="null" line="461" static="1">
 			<x path="lime._backend.native._NativeApplication.GamepadEventType"/>
 			<meta>
 				<m n=":enum"/>
 				<m n=":impl"/>
 			</meta>
 		</BUTTON_DOWN>
-		<BUTTON_UP public="1" get="inline" set="null" line="427" static="1">
+		<BUTTON_UP public="1" get="inline" set="null" line="462" static="1">
 			<x path="lime._backend.native._NativeApplication.GamepadEventType"/>
 			<meta>
 				<m n=":enum"/>
 				<m n=":impl"/>
 			</meta>
 		</BUTTON_UP>
-		<CONNECT public="1" get="inline" set="null" line="428" static="1">
+		<CONNECT public="1" get="inline" set="null" line="463" static="1">
 			<x path="lime._backend.native._NativeApplication.GamepadEventType"/>
 			<meta>
 				<m n=":enum"/>
 				<m n=":impl"/>
 			</meta>
 		</CONNECT>
-		<DISCONNECT public="1" get="inline" set="null" line="429" static="1">
+		<DISCONNECT public="1" get="inline" set="null" line="464" static="1">
 			<x path="lime._backend.native._NativeApplication.GamepadEventType"/>
 			<meta>
 				<m n=":enum"/>
@@ -3656,8 +3666,8 @@
 		<keyCode public="1"><x path="Int"/></keyCode>
 		<modifier public="1"><x path="Int"/></modifier>
 		<type public="1"><x path="lime._backend.native._NativeApplication.KeyEventType"/></type>
-		<clone public="1" set="method" line="451"><f a=""><c path="lime._backend.native._NativeApplication.KeyEventInfo"/></f></clone>
-		<new public="1" set="method" line="442"><f a="?type:?keyCode:?modifier">
+		<clone public="1" set="method" line="486"><f a=""><c path="lime._backend.native._NativeApplication.KeyEventInfo"/></f></clone>
+		<new public="1" set="method" line="477"><f a="?type:?keyCode:?modifier">
 	<x path="lime._backend.native._NativeApplication.KeyEventType"/>
 	<x path="Int"/>
 	<x path="Int"/>
@@ -3669,14 +3679,14 @@
 		<this><x path="Int"/></this>
 		<meta><m n=":enum"/></meta>
 		<impl><class path="lime._backend.native._NativeApplication.KeyEventType_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/_backend/native/NativeApplication.hx" private="1" module="lime._backend.native.NativeApplication" extern="1">
-	<KEY_DOWN public="1" get="inline" set="null" line="463" static="1">
+	<KEY_DOWN public="1" get="inline" set="null" line="498" static="1">
 		<x path="lime._backend.native._NativeApplication.KeyEventType"/>
 		<meta>
 			<m n=":enum"/>
 			<m n=":impl"/>
 		</meta>
 	</KEY_DOWN>
-	<KEY_UP public="1" get="inline" set="null" line="464" static="1">
+	<KEY_UP public="1" get="inline" set="null" line="499" static="1">
 		<x path="lime._backend.native._NativeApplication.KeyEventType"/>
 		<meta>
 			<m n=":enum"/>
@@ -3687,14 +3697,14 @@
 </class></impl>
 	</abstract>
 	<class path="lime._backend.native._NativeApplication.KeyEventType_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/_backend/native/NativeApplication.hx" private="1" module="lime._backend.native.NativeApplication" extern="1">
-		<KEY_DOWN public="1" get="inline" set="null" line="463" static="1">
+		<KEY_DOWN public="1" get="inline" set="null" line="498" static="1">
 			<x path="lime._backend.native._NativeApplication.KeyEventType"/>
 			<meta>
 				<m n=":enum"/>
 				<m n=":impl"/>
 			</meta>
 		</KEY_DOWN>
-		<KEY_UP public="1" get="inline" set="null" line="464" static="1">
+		<KEY_UP public="1" get="inline" set="null" line="499" static="1">
 			<x path="lime._backend.native._NativeApplication.KeyEventType"/>
 			<meta>
 				<m n=":enum"/>
@@ -3710,8 +3720,8 @@
 		<type public="1"><x path="lime._backend.native._NativeApplication.MouseEventType"/></type>
 		<x public="1"><x path="Float"/></x>
 		<y public="1"><x path="Float"/></y>
-		<clone public="1" set="method" line="493"><f a=""><c path="lime._backend.native._NativeApplication.MouseEventInfo"/></f></clone>
-		<new public="1" set="method" line="481"><f a="?type:?x:?y:?button:?movementX:?movementY">
+		<clone public="1" set="method" line="528"><f a=""><c path="lime._backend.native._NativeApplication.MouseEventInfo"/></f></clone>
+		<new public="1" set="method" line="516"><f a="?type:?x:?y:?button:?movementX:?movementY">
 	<x path="lime._backend.native._NativeApplication.MouseEventType"/>
 	<x path="Float"/>
 	<x path="Float"/>
@@ -3726,28 +3736,28 @@
 		<this><x path="Int"/></this>
 		<meta><m n=":enum"/></meta>
 		<impl><class path="lime._backend.native._NativeApplication.MouseEventType_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/_backend/native/NativeApplication.hx" private="1" module="lime._backend.native.NativeApplication" extern="1">
-	<MOUSE_DOWN public="1" get="inline" set="null" line="505" static="1">
+	<MOUSE_DOWN public="1" get="inline" set="null" line="540" static="1">
 		<x path="lime._backend.native._NativeApplication.MouseEventType"/>
 		<meta>
 			<m n=":enum"/>
 			<m n=":impl"/>
 		</meta>
 	</MOUSE_DOWN>
-	<MOUSE_UP public="1" get="inline" set="null" line="506" static="1">
+	<MOUSE_UP public="1" get="inline" set="null" line="541" static="1">
 		<x path="lime._backend.native._NativeApplication.MouseEventType"/>
 		<meta>
 			<m n=":enum"/>
 			<m n=":impl"/>
 		</meta>
 	</MOUSE_UP>
-	<MOUSE_MOVE public="1" get="inline" set="null" line="507" static="1">
+	<MOUSE_MOVE public="1" get="inline" set="null" line="542" static="1">
 		<x path="lime._backend.native._NativeApplication.MouseEventType"/>
 		<meta>
 			<m n=":enum"/>
 			<m n=":impl"/>
 		</meta>
 	</MOUSE_MOVE>
-	<MOUSE_WHEEL public="1" get="inline" set="null" line="508" static="1">
+	<MOUSE_WHEEL public="1" get="inline" set="null" line="543" static="1">
 		<x path="lime._backend.native._NativeApplication.MouseEventType"/>
 		<meta>
 			<m n=":enum"/>
@@ -3758,28 +3768,28 @@
 </class></impl>
 	</abstract>
 	<class path="lime._backend.native._NativeApplication.MouseEventType_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/_backend/native/NativeApplication.hx" private="1" module="lime._backend.native.NativeApplication" extern="1">
-		<MOUSE_DOWN public="1" get="inline" set="null" line="505" static="1">
+		<MOUSE_DOWN public="1" get="inline" set="null" line="540" static="1">
 			<x path="lime._backend.native._NativeApplication.MouseEventType"/>
 			<meta>
 				<m n=":enum"/>
 				<m n=":impl"/>
 			</meta>
 		</MOUSE_DOWN>
-		<MOUSE_UP public="1" get="inline" set="null" line="506" static="1">
+		<MOUSE_UP public="1" get="inline" set="null" line="541" static="1">
 			<x path="lime._backend.native._NativeApplication.MouseEventType"/>
 			<meta>
 				<m n=":enum"/>
 				<m n=":impl"/>
 			</meta>
 		</MOUSE_UP>
-		<MOUSE_MOVE public="1" get="inline" set="null" line="507" static="1">
+		<MOUSE_MOVE public="1" get="inline" set="null" line="542" static="1">
 			<x path="lime._backend.native._NativeApplication.MouseEventType"/>
 			<meta>
 				<m n=":enum"/>
 				<m n=":impl"/>
 			</meta>
 		</MOUSE_MOVE>
-		<MOUSE_WHEEL public="1" get="inline" set="null" line="508" static="1">
+		<MOUSE_WHEEL public="1" get="inline" set="null" line="543" static="1">
 			<x path="lime._backend.native._NativeApplication.MouseEventType"/>
 			<meta>
 				<m n=":enum"/>
@@ -3791,8 +3801,8 @@
 	<class path="lime._backend.native._NativeApplication.RenderEventInfo" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/_backend/native/NativeApplication.hx" private="1" module="lime._backend.native.NativeApplication">
 		<context public="1"><e path="lime.graphics.RenderContext"/></context>
 		<type public="1"><x path="lime._backend.native._NativeApplication.RenderEventType"/></type>
-		<clone public="1" set="method" line="528"><f a=""><c path="lime._backend.native._NativeApplication.RenderEventInfo"/></f></clone>
-		<new public="1" set="method" line="520"><f a="?type:?context">
+		<clone public="1" set="method" line="563"><f a=""><c path="lime._backend.native._NativeApplication.RenderEventInfo"/></f></clone>
+		<new public="1" set="method" line="555"><f a="?type:?context">
 	<x path="lime._backend.native._NativeApplication.RenderEventType"/>
 	<e path="lime.graphics.RenderContext"/>
 	<x path="Void"/>
@@ -3803,21 +3813,21 @@
 		<this><x path="Int"/></this>
 		<meta><m n=":enum"/></meta>
 		<impl><class path="lime._backend.native._NativeApplication.RenderEventType_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/_backend/native/NativeApplication.hx" private="1" module="lime._backend.native.NativeApplication" extern="1">
-	<RENDER public="1" get="inline" set="null" line="540" static="1">
+	<RENDER public="1" get="inline" set="null" line="575" static="1">
 		<x path="lime._backend.native._NativeApplication.RenderEventType"/>
 		<meta>
 			<m n=":enum"/>
 			<m n=":impl"/>
 		</meta>
 	</RENDER>
-	<RENDER_CONTEXT_LOST public="1" get="inline" set="null" line="541" static="1">
+	<RENDER_CONTEXT_LOST public="1" get="inline" set="null" line="576" static="1">
 		<x path="lime._backend.native._NativeApplication.RenderEventType"/>
 		<meta>
 			<m n=":enum"/>
 			<m n=":impl"/>
 		</meta>
 	</RENDER_CONTEXT_LOST>
-	<RENDER_CONTEXT_RESTORED public="1" get="inline" set="null" line="542" static="1">
+	<RENDER_CONTEXT_RESTORED public="1" get="inline" set="null" line="577" static="1">
 		<x path="lime._backend.native._NativeApplication.RenderEventType"/>
 		<meta>
 			<m n=":enum"/>
@@ -3828,21 +3838,21 @@
 </class></impl>
 	</abstract>
 	<class path="lime._backend.native._NativeApplication.RenderEventType_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/_backend/native/NativeApplication.hx" private="1" module="lime._backend.native.NativeApplication" extern="1">
-		<RENDER public="1" get="inline" set="null" line="540" static="1">
+		<RENDER public="1" get="inline" set="null" line="575" static="1">
 			<x path="lime._backend.native._NativeApplication.RenderEventType"/>
 			<meta>
 				<m n=":enum"/>
 				<m n=":impl"/>
 			</meta>
 		</RENDER>
-		<RENDER_CONTEXT_LOST public="1" get="inline" set="null" line="541" static="1">
+		<RENDER_CONTEXT_LOST public="1" get="inline" set="null" line="576" static="1">
 			<x path="lime._backend.native._NativeApplication.RenderEventType"/>
 			<meta>
 				<m n=":enum"/>
 				<m n=":impl"/>
 			</meta>
 		</RENDER_CONTEXT_LOST>
-		<RENDER_CONTEXT_RESTORED public="1" get="inline" set="null" line="542" static="1">
+		<RENDER_CONTEXT_RESTORED public="1" get="inline" set="null" line="577" static="1">
 			<x path="lime._backend.native._NativeApplication.RenderEventType"/>
 			<meta>
 				<m n=":enum"/>
@@ -3851,13 +3861,67 @@
 		</RENDER_CONTEXT_RESTORED>
 		<meta><m n=":enum"/></meta>
 	</class>
+	<class path="lime._backend.native._NativeApplication.TextEventInfo" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/_backend/native/NativeApplication.hx" private="1" module="lime._backend.native.NativeApplication">
+		<id public="1"><x path="Int"/></id>
+		<length public="1"><x path="Int"/></length>
+		<start public="1"><x path="Int"/></start>
+		<text public="1"><c path="String"/></text>
+		<type public="1"><x path="lime._backend.native._NativeApplication.TextEventType"/></type>
+		<clone public="1" set="method" line="602"><f a=""><c path="lime._backend.native._NativeApplication.TextEventInfo"/></f></clone>
+		<new public="1" set="method" line="592"><f a="?type:?text:?start:?length">
+	<x path="lime._backend.native._NativeApplication.TextEventType"/>
+	<c path="String"/>
+	<x path="Int"/>
+	<x path="Int"/>
+	<x path="Void"/>
+</f></new>
+		<meta><m n=":directlyUsed"/></meta>
+	</class>
+	<abstract path="lime._backend.native._NativeApplication.TextEventType" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/_backend/native/NativeApplication.hx" private="1" module="lime._backend.native.NativeApplication">
+		<this><x path="Int"/></this>
+		<meta><m n=":enum"/></meta>
+		<impl><class path="lime._backend.native._NativeApplication.TextEventType_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/_backend/native/NativeApplication.hx" private="1" module="lime._backend.native.NativeApplication" extern="1">
+	<TEXT_INPUT public="1" get="inline" set="null" line="614" static="1">
+		<x path="lime._backend.native._NativeApplication.TextEventType"/>
+		<meta>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</TEXT_INPUT>
+	<TEXT_EDIT public="1" get="inline" set="null" line="615" static="1">
+		<x path="lime._backend.native._NativeApplication.TextEventType"/>
+		<meta>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</TEXT_EDIT>
+	<meta><m n=":enum"/></meta>
+</class></impl>
+	</abstract>
+	<class path="lime._backend.native._NativeApplication.TextEventType_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/_backend/native/NativeApplication.hx" private="1" module="lime._backend.native.NativeApplication" extern="1">
+		<TEXT_INPUT public="1" get="inline" set="null" line="614" static="1">
+			<x path="lime._backend.native._NativeApplication.TextEventType"/>
+			<meta>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</TEXT_INPUT>
+		<TEXT_EDIT public="1" get="inline" set="null" line="615" static="1">
+			<x path="lime._backend.native._NativeApplication.TextEventType"/>
+			<meta>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</TEXT_EDIT>
+		<meta><m n=":enum"/></meta>
+	</class>
 	<class path="lime._backend.native._NativeApplication.TouchEventInfo" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/_backend/native/NativeApplication.hx" private="1" module="lime._backend.native.NativeApplication">
 		<id public="1"><x path="Int"/></id>
 		<type public="1"><x path="lime._backend.native._NativeApplication.TouchEventType"/></type>
 		<x public="1"><x path="Float"/></x>
 		<y public="1"><x path="Float"/></y>
-		<clone public="1" set="method" line="566"><f a=""><c path="lime._backend.native._NativeApplication.TouchEventInfo"/></f></clone>
-		<new public="1" set="method" line="556"><f a="?type:?x:?y:?id">
+		<clone public="1" set="method" line="639"><f a=""><c path="lime._backend.native._NativeApplication.TouchEventInfo"/></f></clone>
+		<new public="1" set="method" line="629"><f a="?type:?x:?y:?id">
 	<x path="lime._backend.native._NativeApplication.TouchEventType"/>
 	<x path="Float"/>
 	<x path="Float"/>
@@ -3870,21 +3934,21 @@
 		<this><x path="Int"/></this>
 		<meta><m n=":enum"/></meta>
 		<impl><class path="lime._backend.native._NativeApplication.TouchEventType_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/_backend/native/NativeApplication.hx" private="1" module="lime._backend.native.NativeApplication" extern="1">
-	<TOUCH_START public="1" get="inline" set="null" line="578" static="1">
+	<TOUCH_START public="1" get="inline" set="null" line="651" static="1">
 		<x path="lime._backend.native._NativeApplication.TouchEventType"/>
 		<meta>
 			<m n=":enum"/>
 			<m n=":impl"/>
 		</meta>
 	</TOUCH_START>
-	<TOUCH_END public="1" get="inline" set="null" line="579" static="1">
+	<TOUCH_END public="1" get="inline" set="null" line="652" static="1">
 		<x path="lime._backend.native._NativeApplication.TouchEventType"/>
 		<meta>
 			<m n=":enum"/>
 			<m n=":impl"/>
 		</meta>
 	</TOUCH_END>
-	<TOUCH_MOVE public="1" get="inline" set="null" line="580" static="1">
+	<TOUCH_MOVE public="1" get="inline" set="null" line="653" static="1">
 		<x path="lime._backend.native._NativeApplication.TouchEventType"/>
 		<meta>
 			<m n=":enum"/>
@@ -3895,21 +3959,21 @@
 </class></impl>
 	</abstract>
 	<class path="lime._backend.native._NativeApplication.TouchEventType_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/_backend/native/NativeApplication.hx" private="1" module="lime._backend.native.NativeApplication" extern="1">
-		<TOUCH_START public="1" get="inline" set="null" line="578" static="1">
+		<TOUCH_START public="1" get="inline" set="null" line="651" static="1">
 			<x path="lime._backend.native._NativeApplication.TouchEventType"/>
 			<meta>
 				<m n=":enum"/>
 				<m n=":impl"/>
 			</meta>
 		</TOUCH_START>
-		<TOUCH_END public="1" get="inline" set="null" line="579" static="1">
+		<TOUCH_END public="1" get="inline" set="null" line="652" static="1">
 			<x path="lime._backend.native._NativeApplication.TouchEventType"/>
 			<meta>
 				<m n=":enum"/>
 				<m n=":impl"/>
 			</meta>
 		</TOUCH_END>
-		<TOUCH_MOVE public="1" get="inline" set="null" line="580" static="1">
+		<TOUCH_MOVE public="1" get="inline" set="null" line="653" static="1">
 			<x path="lime._backend.native._NativeApplication.TouchEventType"/>
 			<meta>
 				<m n=":enum"/>
@@ -3921,8 +3985,8 @@
 	<class path="lime._backend.native._NativeApplication.UpdateEventInfo" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/_backend/native/NativeApplication.hx" private="1" module="lime._backend.native.NativeApplication">
 		<deltaTime public="1"><x path="Int"/></deltaTime>
 		<type public="1"><x path="lime._backend.native._NativeApplication.UpdateEventType"/></type>
-		<clone public="1" set="method" line="600"><f a=""><c path="lime._backend.native._NativeApplication.UpdateEventInfo"/></f></clone>
-		<new public="1" set="method" line="592"><f a="?type:?deltaTime">
+		<clone public="1" set="method" line="673"><f a=""><c path="lime._backend.native._NativeApplication.UpdateEventInfo"/></f></clone>
+		<new public="1" set="method" line="665"><f a="?type:?deltaTime">
 	<x path="lime._backend.native._NativeApplication.UpdateEventType"/>
 	<x path="Int"/>
 	<x path="Void"/>
@@ -3933,7 +3997,7 @@
 		<this><x path="Int"/></this>
 		<meta><m n=":enum"/></meta>
 		<impl><class path="lime._backend.native._NativeApplication.UpdateEventType_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/_backend/native/NativeApplication.hx" private="1" module="lime._backend.native.NativeApplication" extern="1">
-	<UPDATE public="1" get="inline" set="null" line="612" static="1">
+	<UPDATE public="1" get="inline" set="null" line="685" static="1">
 		<x path="lime._backend.native._NativeApplication.UpdateEventType"/>
 		<meta>
 			<m n=":enum"/>
@@ -3944,7 +4008,7 @@
 </class></impl>
 	</abstract>
 	<class path="lime._backend.native._NativeApplication.UpdateEventType_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/_backend/native/NativeApplication.hx" private="1" module="lime._backend.native.NativeApplication" extern="1">
-		<UPDATE public="1" get="inline" set="null" line="612" static="1">
+		<UPDATE public="1" get="inline" set="null" line="685" static="1">
 			<x path="lime._backend.native._NativeApplication.UpdateEventType"/>
 			<meta>
 				<m n=":enum"/>
@@ -3959,8 +4023,8 @@
 		<width public="1"><x path="Int"/></width>
 		<x public="1"><x path="Int"/></x>
 		<y public="1"><x path="Int"/></y>
-		<clone public="1" set="method" line="638"><f a=""><c path="lime._backend.native._NativeApplication.WindowEventInfo"/></f></clone>
-		<new public="1" set="method" line="627"><f a="?type:?width:?height:?x:?y">
+		<clone public="1" set="method" line="711"><f a=""><c path="lime._backend.native._NativeApplication.WindowEventInfo"/></f></clone>
+		<new public="1" set="method" line="700"><f a="?type:?width:?height:?x:?y">
 	<x path="lime._backend.native._NativeApplication.WindowEventType"/>
 	<x path="Int"/>
 	<x path="Int"/>
@@ -3974,63 +4038,77 @@
 		<this><x path="Int"/></this>
 		<meta><m n=":enum"/></meta>
 		<impl><class path="lime._backend.native._NativeApplication.WindowEventType_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/_backend/native/NativeApplication.hx" private="1" module="lime._backend.native.NativeApplication" extern="1">
-	<WINDOW_ACTIVATE public="1" get="inline" set="null" line="650" static="1">
+	<WINDOW_ACTIVATE public="1" get="inline" set="null" line="723" static="1">
 		<x path="lime._backend.native._NativeApplication.WindowEventType"/>
 		<meta>
 			<m n=":enum"/>
 			<m n=":impl"/>
 		</meta>
 	</WINDOW_ACTIVATE>
-	<WINDOW_CLOSE public="1" get="inline" set="null" line="651" static="1">
+	<WINDOW_CLOSE public="1" get="inline" set="null" line="724" static="1">
 		<x path="lime._backend.native._NativeApplication.WindowEventType"/>
 		<meta>
 			<m n=":enum"/>
 			<m n=":impl"/>
 		</meta>
 	</WINDOW_CLOSE>
-	<WINDOW_DEACTIVATE public="1" get="inline" set="null" line="652" static="1">
+	<WINDOW_DEACTIVATE public="1" get="inline" set="null" line="725" static="1">
 		<x path="lime._backend.native._NativeApplication.WindowEventType"/>
 		<meta>
 			<m n=":enum"/>
 			<m n=":impl"/>
 		</meta>
 	</WINDOW_DEACTIVATE>
-	<WINDOW_FOCUS_IN public="1" get="inline" set="null" line="653" static="1">
+	<WINDOW_ENTER public="1" get="inline" set="null" line="726" static="1">
+		<x path="lime._backend.native._NativeApplication.WindowEventType"/>
+		<meta>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</WINDOW_ENTER>
+	<WINDOW_FOCUS_IN public="1" get="inline" set="null" line="727" static="1">
 		<x path="lime._backend.native._NativeApplication.WindowEventType"/>
 		<meta>
 			<m n=":enum"/>
 			<m n=":impl"/>
 		</meta>
 	</WINDOW_FOCUS_IN>
-	<WINDOW_FOCUS_OUT public="1" get="inline" set="null" line="654" static="1">
+	<WINDOW_FOCUS_OUT public="1" get="inline" set="null" line="728" static="1">
 		<x path="lime._backend.native._NativeApplication.WindowEventType"/>
 		<meta>
 			<m n=":enum"/>
 			<m n=":impl"/>
 		</meta>
 	</WINDOW_FOCUS_OUT>
-	<WINDOW_MINIMIZE public="1" get="inline" set="null" line="655" static="1">
+	<WINDOW_LEAVE public="1" get="inline" set="null" line="729" static="1">
+		<x path="lime._backend.native._NativeApplication.WindowEventType"/>
+		<meta>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</WINDOW_LEAVE>
+	<WINDOW_MINIMIZE public="1" get="inline" set="null" line="730" static="1">
 		<x path="lime._backend.native._NativeApplication.WindowEventType"/>
 		<meta>
 			<m n=":enum"/>
 			<m n=":impl"/>
 		</meta>
 	</WINDOW_MINIMIZE>
-	<WINDOW_MOVE public="1" get="inline" set="null" line="656" static="1">
+	<WINDOW_MOVE public="1" get="inline" set="null" line="731" static="1">
 		<x path="lime._backend.native._NativeApplication.WindowEventType"/>
 		<meta>
 			<m n=":enum"/>
 			<m n=":impl"/>
 		</meta>
 	</WINDOW_MOVE>
-	<WINDOW_RESIZE public="1" get="inline" set="null" line="657" static="1">
+	<WINDOW_RESIZE public="1" get="inline" set="null" line="732" static="1">
 		<x path="lime._backend.native._NativeApplication.WindowEventType"/>
 		<meta>
 			<m n=":enum"/>
 			<m n=":impl"/>
 		</meta>
 	</WINDOW_RESIZE>
-	<WINDOW_RESTORE public="1" get="inline" set="null" line="658" static="1">
+	<WINDOW_RESTORE public="1" get="inline" set="null" line="733" static="1">
 		<x path="lime._backend.native._NativeApplication.WindowEventType"/>
 		<meta>
 			<m n=":enum"/>
@@ -4041,63 +4119,77 @@
 </class></impl>
 	</abstract>
 	<class path="lime._backend.native._NativeApplication.WindowEventType_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/_backend/native/NativeApplication.hx" private="1" module="lime._backend.native.NativeApplication" extern="1">
-		<WINDOW_ACTIVATE public="1" get="inline" set="null" line="650" static="1">
+		<WINDOW_ACTIVATE public="1" get="inline" set="null" line="723" static="1">
 			<x path="lime._backend.native._NativeApplication.WindowEventType"/>
 			<meta>
 				<m n=":enum"/>
 				<m n=":impl"/>
 			</meta>
 		</WINDOW_ACTIVATE>
-		<WINDOW_CLOSE public="1" get="inline" set="null" line="651" static="1">
+		<WINDOW_CLOSE public="1" get="inline" set="null" line="724" static="1">
 			<x path="lime._backend.native._NativeApplication.WindowEventType"/>
 			<meta>
 				<m n=":enum"/>
 				<m n=":impl"/>
 			</meta>
 		</WINDOW_CLOSE>
-		<WINDOW_DEACTIVATE public="1" get="inline" set="null" line="652" static="1">
+		<WINDOW_DEACTIVATE public="1" get="inline" set="null" line="725" static="1">
 			<x path="lime._backend.native._NativeApplication.WindowEventType"/>
 			<meta>
 				<m n=":enum"/>
 				<m n=":impl"/>
 			</meta>
 		</WINDOW_DEACTIVATE>
-		<WINDOW_FOCUS_IN public="1" get="inline" set="null" line="653" static="1">
+		<WINDOW_ENTER public="1" get="inline" set="null" line="726" static="1">
+			<x path="lime._backend.native._NativeApplication.WindowEventType"/>
+			<meta>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</WINDOW_ENTER>
+		<WINDOW_FOCUS_IN public="1" get="inline" set="null" line="727" static="1">
 			<x path="lime._backend.native._NativeApplication.WindowEventType"/>
 			<meta>
 				<m n=":enum"/>
 				<m n=":impl"/>
 			</meta>
 		</WINDOW_FOCUS_IN>
-		<WINDOW_FOCUS_OUT public="1" get="inline" set="null" line="654" static="1">
+		<WINDOW_FOCUS_OUT public="1" get="inline" set="null" line="728" static="1">
 			<x path="lime._backend.native._NativeApplication.WindowEventType"/>
 			<meta>
 				<m n=":enum"/>
 				<m n=":impl"/>
 			</meta>
 		</WINDOW_FOCUS_OUT>
-		<WINDOW_MINIMIZE public="1" get="inline" set="null" line="655" static="1">
+		<WINDOW_LEAVE public="1" get="inline" set="null" line="729" static="1">
+			<x path="lime._backend.native._NativeApplication.WindowEventType"/>
+			<meta>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</WINDOW_LEAVE>
+		<WINDOW_MINIMIZE public="1" get="inline" set="null" line="730" static="1">
 			<x path="lime._backend.native._NativeApplication.WindowEventType"/>
 			<meta>
 				<m n=":enum"/>
 				<m n=":impl"/>
 			</meta>
 		</WINDOW_MINIMIZE>
-		<WINDOW_MOVE public="1" get="inline" set="null" line="656" static="1">
+		<WINDOW_MOVE public="1" get="inline" set="null" line="731" static="1">
 			<x path="lime._backend.native._NativeApplication.WindowEventType"/>
 			<meta>
 				<m n=":enum"/>
 				<m n=":impl"/>
 			</meta>
 		</WINDOW_MOVE>
-		<WINDOW_RESIZE public="1" get="inline" set="null" line="657" static="1">
+		<WINDOW_RESIZE public="1" get="inline" set="null" line="732" static="1">
 			<x path="lime._backend.native._NativeApplication.WindowEventType"/>
 			<meta>
 				<m n=":enum"/>
 				<m n=":impl"/>
 			</meta>
 		</WINDOW_RESIZE>
-		<WINDOW_RESTORE public="1" get="inline" set="null" line="658" static="1">
+		<WINDOW_RESTORE public="1" get="inline" set="null" line="733" static="1">
 			<x path="lime._backend.native._NativeApplication.WindowEventType"/>
 			<meta>
 				<m n=":enum"/>
@@ -4328,21 +4420,27 @@
 		<meta><m n=":enum"/></meta>
 	</class>
 	<class path="lime._backend.native.NativeRenderer" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/_backend/native/NativeRenderer.hx">
-		<lime_renderer_create line="68" static="1"><f a="">
+		<lime_renderer_create line="127" static="1"><f a="">
 	<d/>
 	<unknown/>
 </f></lime_renderer_create>
-		<lime_renderer_flip line="69" static="1"><f a="">
+		<lime_renderer_flip line="128" static="1"><f a="">
 	<d/>
 	<unknown/>
 </f></lime_renderer_flip>
+		<lime_renderer_lock line="129" static="1"><unknown/></lime_renderer_lock>
+		<lime_renderer_unlock line="130" static="1"><f a="">
+	<d/>
+	<unknown/>
+</f></lime_renderer_unlock>
 		<handle public="1"><d/></handle>
 		<parent><c path="lime.graphics.Renderer"/></parent>
-		<create public="1" set="method" line="27"><f a=""><x path="Void"/></f></create>
-		<dispatch set="method" line="40"><f a=""><x path="Void"/></f></dispatch>
-		<flip public="1" set="method" line="47"><f a=""><x path="Void"/></f></flip>
-		<render public="1" set="method" line="54"><f a=""><x path="Void"/></f></render>
-		<new public="1" set="method" line="20"><f a="parent">
+		<useHardware><x path="Bool"/></useHardware>
+		<create public="1" set="method" line="38"><f a=""><x path="Void"/></f></create>
+		<dispatch set="method" line="61"><f a=""><x path="Void"/></f></dispatch>
+		<flip public="1" set="method" line="68"><f a=""><x path="Void"/></f></flip>
+		<render public="1" set="method" line="88"><f a=""><x path="Void"/></f></render>
+		<new public="1" set="method" line="31"><f a="parent">
 	<c path="lime.graphics.Renderer"/>
 	<x path="Void"/>
 </f></new>
@@ -4352,11 +4450,11 @@
 		</meta>
 	</class>
 	<class path="lime._backend.native.NativeWindow" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/_backend/native/NativeWindow.hx">
-		<lime_window_close line="155" static="1"><f a="">
+		<lime_window_close line="183" static="1"><f a="">
 	<d/>
 	<unknown/>
 </f></lime_window_close>
-		<lime_window_create line="156" static="1"><f a="::::">
+		<lime_window_create line="184" static="1"><f a="::::">
 	<d/>
 	<x path="Int"/>
 	<x path="Int"/>
@@ -4364,79 +4462,93 @@
 	<c path="String"/>
 	<unknown/>
 </f></lime_window_create>
-		<lime_window_get_height line="157" static="1"><f a="">
+		<lime_window_get_enable_text_events line="185" static="1"><f a="">
+	<d/>
+	<x path="Bool"/>
+</f></lime_window_get_enable_text_events>
+		<lime_window_get_height line="186" static="1"><f a="">
 	<d/>
 	<x path="Int"/>
 </f></lime_window_get_height>
-		<lime_window_get_width line="158" static="1"><f a="">
+		<lime_window_get_width line="187" static="1"><f a="">
 	<d/>
 	<x path="Int"/>
 </f></lime_window_get_width>
-		<lime_window_get_x line="159" static="1"><f a="">
+		<lime_window_get_x line="188" static="1"><f a="">
 	<d/>
 	<x path="Int"/>
 </f></lime_window_get_x>
-		<lime_window_get_y line="160" static="1"><f a="">
+		<lime_window_get_y line="189" static="1"><f a="">
 	<d/>
 	<x path="Int"/>
 </f></lime_window_get_y>
-		<lime_window_move line="161" static="1"><f a="::">
+		<lime_window_move line="190" static="1"><f a="::">
 	<d/>
 	<x path="Int"/>
 	<x path="Int"/>
 	<unknown/>
 </f></lime_window_move>
-		<lime_window_resize line="162" static="1"><f a="::">
+		<lime_window_resize line="191" static="1"><f a="::">
 	<d/>
 	<x path="Int"/>
 	<x path="Int"/>
 	<unknown/>
 </f></lime_window_resize>
-		<lime_window_set_fullscreen line="163" static="1"><f a=":">
+		<lime_window_set_enable_text_events line="192" static="1"><f a=":">
+	<d/>
+	<x path="Bool"/>
+	<x path="Bool"/>
+</f></lime_window_set_enable_text_events>
+		<lime_window_set_fullscreen line="193" static="1"><f a=":">
 	<d/>
 	<x path="Bool"/>
 	<x path="Bool"/>
 </f></lime_window_set_fullscreen>
-		<lime_window_set_icon line="164" static="1"><f a=":">
+		<lime_window_set_icon line="194" static="1"><f a=":">
 	<d/>
 	<c path="lime.graphics.ImageBuffer"/>
 	<unknown/>
 </f></lime_window_set_icon>
-		<lime_window_set_minimized line="165" static="1"><f a=":">
+		<lime_window_set_minimized line="195" static="1"><f a=":">
 	<d/>
 	<x path="Bool"/>
 	<x path="Bool"/>
 </f></lime_window_set_minimized>
 		<handle public="1"><d/></handle>
 		<parent><c path="lime.ui.Window"/></parent>
-		<close public="1" set="method" line="28"><f a=""><x path="Void"/></f></close>
-		<create public="1" set="method" line="40"><f a="application">
+		<close public="1" set="method" line="29"><f a=""><x path="Void"/></f></close>
+		<create public="1" set="method" line="41"><f a="application">
 	<c path="lime.app.Application"/>
 	<x path="Void"/>
 </f></create>
-		<move public="1" set="method" line="90"><f a="x:y">
+		<getEnableTextEvents public="1" set="method" line="92"><f a=""><x path="Bool"/></f></getEnableTextEvents>
+		<move public="1" set="method" line="105"><f a="x:y">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Void"/>
 </f></move>
-		<resize public="1" set="method" line="101"><f a="width:height">
+		<resize public="1" set="method" line="116"><f a="width:height">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Void"/>
 </f></resize>
-		<setFullscreen public="1" set="method" line="112"><f a="value">
+		<setEnableTextEvents public="1" set="method" line="127"><f a="value">
+	<x path="Bool"/>
+	<x path="Bool"/>
+</f></setEnableTextEvents>
+		<setFullscreen public="1" set="method" line="140"><f a="value">
 	<x path="Bool"/>
 	<x path="Bool"/>
 </f></setFullscreen>
-		<setIcon public="1" set="method" line="131"><f a="image">
+		<setIcon public="1" set="method" line="159"><f a="image">
 	<c path="lime.graphics.Image"/>
 	<x path="Void"/>
 </f></setIcon>
-		<setMinimized public="1" set="method" line="142"><f a="value">
+		<setMinimized public="1" set="method" line="170"><f a="value">
 	<x path="Bool"/>
 	<x path="Bool"/>
 </f></setMinimized>
-		<new public="1" set="method" line="21"><f a="parent">
+		<new public="1" set="method" line="22"><f a="parent">
 	<c path="lime.ui.Window"/>
 	<x path="Void"/>
 </f></new>
@@ -4450,77 +4562,77 @@
 		<this><x path="Int"/></this>
 		<meta><m n=":enum"/></meta>
 		<impl><class path="lime._backend.native._NativeWindow.WindowFlags_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/_backend/native/NativeWindow.hx" private="1" module="lime._backend.native.NativeWindow" extern="1">
-	<WINDOW_FLAG_FULLSCREEN public="1" get="inline" set="null" line="173" static="1">
+	<WINDOW_FLAG_FULLSCREEN public="1" get="inline" set="null" line="203" static="1">
 		<x path="lime._backend.native._NativeWindow.WindowFlags"/>
 		<meta>
 			<m n=":enum"/>
 			<m n=":impl"/>
 		</meta>
 	</WINDOW_FLAG_FULLSCREEN>
-	<WINDOW_FLAG_BORDERLESS public="1" get="inline" set="null" line="174" static="1">
+	<WINDOW_FLAG_BORDERLESS public="1" get="inline" set="null" line="204" static="1">
 		<x path="lime._backend.native._NativeWindow.WindowFlags"/>
 		<meta>
 			<m n=":enum"/>
 			<m n=":impl"/>
 		</meta>
 	</WINDOW_FLAG_BORDERLESS>
-	<WINDOW_FLAG_RESIZABLE public="1" get="inline" set="null" line="175" static="1">
+	<WINDOW_FLAG_RESIZABLE public="1" get="inline" set="null" line="205" static="1">
 		<x path="lime._backend.native._NativeWindow.WindowFlags"/>
 		<meta>
 			<m n=":enum"/>
 			<m n=":impl"/>
 		</meta>
 	</WINDOW_FLAG_RESIZABLE>
-	<WINDOW_FLAG_HARDWARE public="1" get="inline" set="null" line="176" static="1">
+	<WINDOW_FLAG_HARDWARE public="1" get="inline" set="null" line="206" static="1">
 		<x path="lime._backend.native._NativeWindow.WindowFlags"/>
 		<meta>
 			<m n=":enum"/>
 			<m n=":impl"/>
 		</meta>
 	</WINDOW_FLAG_HARDWARE>
-	<WINDOW_FLAG_VSYNC public="1" get="inline" set="null" line="177" static="1">
+	<WINDOW_FLAG_VSYNC public="1" get="inline" set="null" line="207" static="1">
 		<x path="lime._backend.native._NativeWindow.WindowFlags"/>
 		<meta>
 			<m n=":enum"/>
 			<m n=":impl"/>
 		</meta>
 	</WINDOW_FLAG_VSYNC>
-	<WINDOW_FLAG_HW_AA public="1" get="inline" set="null" line="178" static="1">
+	<WINDOW_FLAG_HW_AA public="1" get="inline" set="null" line="208" static="1">
 		<x path="lime._backend.native._NativeWindow.WindowFlags"/>
 		<meta>
 			<m n=":enum"/>
 			<m n=":impl"/>
 		</meta>
 	</WINDOW_FLAG_HW_AA>
-	<WINDOW_FLAG_HW_AA_HIRES public="1" get="inline" set="null" line="179" static="1">
+	<WINDOW_FLAG_HW_AA_HIRES public="1" get="inline" set="null" line="209" static="1">
 		<x path="lime._backend.native._NativeWindow.WindowFlags"/>
 		<meta>
 			<m n=":enum"/>
 			<m n=":impl"/>
 		</meta>
 	</WINDOW_FLAG_HW_AA_HIRES>
-	<WINDOW_FLAG_ALLOW_SHADERS public="1" get="inline" set="null" line="180" static="1">
+	<WINDOW_FLAG_ALLOW_SHADERS public="1" get="inline" set="null" line="210" static="1">
 		<x path="lime._backend.native._NativeWindow.WindowFlags"/>
 		<meta>
 			<m n=":enum"/>
 			<m n=":impl"/>
 		</meta>
 	</WINDOW_FLAG_ALLOW_SHADERS>
-	<WINDOW_FLAG_REQUIRE_SHADERS public="1" get="inline" set="null" line="181" static="1">
+	<WINDOW_FLAG_REQUIRE_SHADERS public="1" get="inline" set="null" line="211" static="1">
 		<x path="lime._backend.native._NativeWindow.WindowFlags"/>
 		<meta>
 			<m n=":enum"/>
 			<m n=":impl"/>
 		</meta>
 	</WINDOW_FLAG_REQUIRE_SHADERS>
-	<WINDOW_FLAG_DEPTH_BUFFER public="1" get="inline" set="null" line="182" static="1">
+	<WINDOW_FLAG_DEPTH_BUFFER public="1" get="inline" set="null" line="212" static="1">
 		<x path="lime._backend.native._NativeWindow.WindowFlags"/>
 		<meta>
 			<m n=":enum"/>
 			<m n=":impl"/>
 		</meta>
 	</WINDOW_FLAG_DEPTH_BUFFER>
-	<WINDOW_FLAG_STENCIL_BUFFER public="1" get="inline" set="null" line="183" static="1">
+	<WINDOW_FLAG_STENCIL_BUFFER public="1" get="inline" set="null" line="213" static="1">
 		<x path="lime._backend.native._NativeWindow.WindowFlags"/>
 		<meta>
 			<m n=":enum"/>
@@ -4531,77 +4643,77 @@
 </class></impl>
 	</abstract>
 	<class path="lime._backend.native._NativeWindow.WindowFlags_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/_backend/native/NativeWindow.hx" private="1" module="lime._backend.native.NativeWindow" extern="1">
-		<WINDOW_FLAG_FULLSCREEN public="1" get="inline" set="null" line="173" static="1">
+		<WINDOW_FLAG_FULLSCREEN public="1" get="inline" set="null" line="203" static="1">
 			<x path="lime._backend.native._NativeWindow.WindowFlags"/>
 			<meta>
 				<m n=":enum"/>
 				<m n=":impl"/>
 			</meta>
 		</WINDOW_FLAG_FULLSCREEN>
-		<WINDOW_FLAG_BORDERLESS public="1" get="inline" set="null" line="174" static="1">
+		<WINDOW_FLAG_BORDERLESS public="1" get="inline" set="null" line="204" static="1">
 			<x path="lime._backend.native._NativeWindow.WindowFlags"/>
 			<meta>
 				<m n=":enum"/>
 				<m n=":impl"/>
 			</meta>
 		</WINDOW_FLAG_BORDERLESS>
-		<WINDOW_FLAG_RESIZABLE public="1" get="inline" set="null" line="175" static="1">
+		<WINDOW_FLAG_RESIZABLE public="1" get="inline" set="null" line="205" static="1">
 			<x path="lime._backend.native._NativeWindow.WindowFlags"/>
 			<meta>
 				<m n=":enum"/>
 				<m n=":impl"/>
 			</meta>
 		</WINDOW_FLAG_RESIZABLE>
-		<WINDOW_FLAG_HARDWARE public="1" get="inline" set="null" line="176" static="1">
+		<WINDOW_FLAG_HARDWARE public="1" get="inline" set="null" line="206" static="1">
 			<x path="lime._backend.native._NativeWindow.WindowFlags"/>
 			<meta>
 				<m n=":enum"/>
 				<m n=":impl"/>
 			</meta>
 		</WINDOW_FLAG_HARDWARE>
-		<WINDOW_FLAG_VSYNC public="1" get="inline" set="null" line="177" static="1">
+		<WINDOW_FLAG_VSYNC public="1" get="inline" set="null" line="207" static="1">
 			<x path="lime._backend.native._NativeWindow.WindowFlags"/>
 			<meta>
 				<m n=":enum"/>
 				<m n=":impl"/>
 			</meta>
 		</WINDOW_FLAG_VSYNC>
-		<WINDOW_FLAG_HW_AA public="1" get="inline" set="null" line="178" static="1">
+		<WINDOW_FLAG_HW_AA public="1" get="inline" set="null" line="208" static="1">
 			<x path="lime._backend.native._NativeWindow.WindowFlags"/>
 			<meta>
 				<m n=":enum"/>
 				<m n=":impl"/>
 			</meta>
 		</WINDOW_FLAG_HW_AA>
-		<WINDOW_FLAG_HW_AA_HIRES public="1" get="inline" set="null" line="179" static="1">
+		<WINDOW_FLAG_HW_AA_HIRES public="1" get="inline" set="null" line="209" static="1">
 			<x path="lime._backend.native._NativeWindow.WindowFlags"/>
 			<meta>
 				<m n=":enum"/>
 				<m n=":impl"/>
 			</meta>
 		</WINDOW_FLAG_HW_AA_HIRES>
-		<WINDOW_FLAG_ALLOW_SHADERS public="1" get="inline" set="null" line="180" static="1">
+		<WINDOW_FLAG_ALLOW_SHADERS public="1" get="inline" set="null" line="210" static="1">
 			<x path="lime._backend.native._NativeWindow.WindowFlags"/>
 			<meta>
 				<m n=":enum"/>
 				<m n=":impl"/>
 			</meta>
 		</WINDOW_FLAG_ALLOW_SHADERS>
-		<WINDOW_FLAG_REQUIRE_SHADERS public="1" get="inline" set="null" line="181" static="1">
+		<WINDOW_FLAG_REQUIRE_SHADERS public="1" get="inline" set="null" line="211" static="1">
 			<x path="lime._backend.native._NativeWindow.WindowFlags"/>
 			<meta>
 				<m n=":enum"/>
 				<m n=":impl"/>
 			</meta>
 		</WINDOW_FLAG_REQUIRE_SHADERS>
-		<WINDOW_FLAG_DEPTH_BUFFER public="1" get="inline" set="null" line="182" static="1">
+		<WINDOW_FLAG_DEPTH_BUFFER public="1" get="inline" set="null" line="212" static="1">
 			<x path="lime._backend.native._NativeWindow.WindowFlags"/>
 			<meta>
 				<m n=":enum"/>
 				<m n=":impl"/>
 			</meta>
 		</WINDOW_FLAG_DEPTH_BUFFER>
-		<WINDOW_FLAG_STENCIL_BUFFER public="1" get="inline" set="null" line="183" static="1">
+		<WINDOW_FLAG_STENCIL_BUFFER public="1" get="inline" set="null" line="213" static="1">
 			<x path="lime._backend.native._NativeWindow.WindowFlags"/>
 			<meta>
 				<m n=":enum"/>
@@ -4757,6 +4869,26 @@
 			<haxe_doc>* Called when a render context is restored
 	 * @param	context	The current render context</haxe_doc>
 		</onRenderContextRestored>
+		<onTextEdit public="1" set="method">
+			<f a="text:start:length">
+				<c path="String"/>
+				<x path="Int"/>
+				<x path="Int"/>
+				<x path="Void"/>
+			</f>
+			<haxe_doc>* Called when a text edit event is fired
+	 * @param	text	The current replacement text
+	 * @param	start	The starting index for the edit
+	 * @param	length	The length of the edit</haxe_doc>
+		</onTextEdit>
+		<onTextInput public="1" set="method">
+			<f a="text">
+				<c path="String"/>
+				<x path="Void"/>
+			</f>
+			<haxe_doc>* Called when a text input event is fired
+	 * @param	text	The current input text</haxe_doc>
+		</onTextInput>
 		<onTouchEnd public="1" set="method">
 			<f a="x:y:id">
 				<x path="Float"/>
@@ -4805,6 +4937,10 @@
 			<f a=""><x path="Void"/></f>
 			<haxe_doc>* Called when a window deactivate event is fired</haxe_doc>
 		</onWindowDeactivate>
+		<onWindowEnter public="1" set="method">
+			<f a=""><x path="Void"/></f>
+			<haxe_doc>* Called when a window enter event is fired</haxe_doc>
+		</onWindowEnter>
 		<onWindowFocusIn public="1" set="method">
 			<f a=""><x path="Void"/></f>
 			<haxe_doc>* Called when a window focus in event is fired</haxe_doc>
@@ -4817,6 +4953,10 @@
 			<f a=""><x path="Void"/></f>
 			<haxe_doc>* Called when a window enters fullscreen</haxe_doc>
 		</onWindowFullscreen>
+		<onWindowLeave public="1" set="method">
+			<f a=""><x path="Void"/></f>
+			<haxe_doc>* Called when a window leave event is fired</haxe_doc>
+		</onWindowLeave>
 		<onWindowMove public="1" set="method">
 			<f a="x:y">
 				<x path="Float"/>
@@ -4986,7 +5126,27 @@
 			<haxe_doc>* Called when a render context is restored
 	 * @param	context	The current render context</haxe_doc>
 		</onRenderContextRestored>
-		<onTouchEnd public="1" set="method" line="117">
+		<onTextEdit public="1" set="method" line="117">
+			<f a="text:start:length">
+				<c path="String"/>
+				<x path="Int"/>
+				<x path="Int"/>
+				<x path="Void"/>
+			</f>
+			<haxe_doc>* Called when a text edit event is fired
+	 * @param	text	The current replacement text
+	 * @param	start	The starting index for the edit
+	 * @param	length	The length of the edit</haxe_doc>
+		</onTextEdit>
+		<onTextInput public="1" set="method" line="124">
+			<f a="text">
+				<c path="String"/>
+				<x path="Void"/>
+			</f>
+			<haxe_doc>* Called when a text input event is fired
+	 * @param	text	The current input text</haxe_doc>
+		</onTextInput>
+		<onTouchEnd public="1" set="method" line="133">
 			<f a="x:y:id">
 				<x path="Float"/>
 				<x path="Float"/>
@@ -4998,7 +5158,7 @@
 	 * @param	y	The current y coordinate of the touch point
 	 * @param	id	The ID of the touch point</haxe_doc>
 		</onTouchEnd>
-		<onTouchMove public="1" set="method" line="126">
+		<onTouchMove public="1" set="method" line="142">
 			<f a="x:y:id">
 				<x path="Float"/>
 				<x path="Float"/>
@@ -5010,7 +5170,7 @@
 	 * @param	y	The current y coordinate of the touch point
 	 * @param	id	The ID of the touch point</haxe_doc>
 		</onTouchMove>
-		<onTouchStart public="1" set="method" line="135">
+		<onTouchStart public="1" set="method" line="151">
 			<f a="x:y:id">
 				<x path="Float"/>
 				<x path="Float"/>
@@ -5022,29 +5182,43 @@
 	 * @param	y	The current y coordinate of the touch point
 	 * @param	id	The ID of the touch point</haxe_doc>
 		</onTouchStart>
-		<onWindowActivate public="1" set="method" line="141">
+		<onWindowActivate public="1" set="method" line="157">
 			<f a=""><x path="Void"/></f>
 			<haxe_doc>* Called when a window activate event is fired</haxe_doc>
 		</onWindowActivate>
-		<onWindowClose public="1" set="method" line="147">
+		<onWindowClose public="1" set="method" line="163">
 			<f a=""><x path="Void"/></f>
 			<haxe_doc>* Called when a window close event is fired</haxe_doc>
 		</onWindowClose>
-		<onWindowDeactivate public="1" set="method" line="153">
+		<onWindowDeactivate public="1" set="method" line="169">
 			<f a=""><x path="Void"/></f>
 			<haxe_doc>* Called when a window deactivate event is fired</haxe_doc>
 		</onWindowDeactivate>
-		<onWindowFocusIn public="1" set="method" line="159">
+		<onWindowEnter public="1" set="method" line="175">
+			<f a=""><x path="Void"/></f>
+			<haxe_doc>* Called when a window enter event is fired</haxe_doc>
+		</onWindowEnter>
+		<onWindowFocusIn public="1" set="method" line="181">
 			<f a=""><x path="Void"/></f>
 			<haxe_doc>* Called when a window focus in event is fired</haxe_doc>
 		</onWindowFocusIn>
-		<onWindowFocusOut public="1" set="method" line="165">
+		<onWindowFocusOut public="1" set="method" line="187">
 			<f a=""><x path="Void"/></f>
 			<haxe_doc>* Called when a window focus out event is fired</haxe_doc>
 		</onWindowFocusOut>
-		<onWindowFullscreen public="1" set="method" line="168"><f a=""><x path="Void"/></f></onWindowFullscreen>
-		<onWindowMinimize public="1" set="method" line="169"><f a=""><x path="Void"/></f></onWindowMinimize>
-		<onWindowMove public="1" set="method" line="177">
+		<onWindowFullscreen public="1" set="method" line="193">
+			<f a=""><x path="Void"/></f>
+			<haxe_doc>* Called when a window fullscreen event is fired</haxe_doc>
+		</onWindowFullscreen>
+		<onWindowLeave public="1" set="method" line="199">
+			<f a=""><x path="Void"/></f>
+			<haxe_doc>* Called when a mouse leave event is fired</haxe_doc>
+		</onWindowLeave>
+		<onWindowMinimize public="1" set="method" line="205">
+			<f a=""><x path="Void"/></f>
+			<haxe_doc>* Called when a window minimize event is fired</haxe_doc>
+		</onWindowMinimize>
+		<onWindowMove public="1" set="method" line="213">
 			<f a="x:y">
 				<x path="Float"/>
 				<x path="Float"/>
@@ -5054,7 +5228,7 @@
 	 * @param	x	The x position of the window
 	 * @param	y	The y position of the window</haxe_doc>
 		</onWindowMove>
-		<onWindowResize public="1" set="method" line="185">
+		<onWindowResize public="1" set="method" line="221">
 			<f a="width:height">
 				<x path="Int"/>
 				<x path="Int"/>
@@ -5064,8 +5238,8 @@
 	 * @param	width	The width of the window
 	 * @param	height	The height of the window</haxe_doc>
 		</onWindowResize>
-		<onWindowRestore public="1" set="method" line="188"><f a=""><x path="Void"/></f></onWindowRestore>
-		<render public="1" set="method" line="195">
+		<onWindowRestore public="1" set="method" line="224"><f a=""><x path="Void"/></f></onWindowRestore>
+		<render public="1" set="method" line="231">
 			<f a="context">
 				<e path="lime.graphics.RenderContext"/>
 				<x path="Void"/>
@@ -5073,7 +5247,7 @@
 			<haxe_doc>* Called when a render event is fired
 	 * @param	context	The current render context</haxe_doc>
 		</render>
-		<update public="1" set="method" line="202">
+		<update public="1" set="method" line="238">
 			<f a="deltaTime">
 				<x path="Int"/>
 				<x path="Void"/>
@@ -5133,7 +5307,7 @@
 	 * called automatically by create()
 	 * @param	window	A Window object to add</haxe_doc>
 		</addWindow>
-		<create public="1" set="method" line="141">
+		<create public="1" set="method" line="145">
 			<f a="config">
 				<t path="lime.app.Config"/>
 				<x path="Void"/>
@@ -5143,120 +5317,132 @@
 	 * when building the project using Lime's command-line tools
 	 * @param	config	A Config object</haxe_doc>
 		</create>
-		<exec public="1" set="method" line="154">
+		<exec public="1" set="method" line="158">
 			<f a=""><x path="Int"/></f>
 			<haxe_doc>* Execute the Application. On native platforms, this method
 	 * blocks until the application is finished running. On other 
 	 * platforms, it will return immediately
 	 * @return An exit code, 0 if there was no error</haxe_doc>
 		</exec>
-		<init public="1" set="method" line="163" override="1"><f a="context">
+		<init public="1" set="method" line="167" override="1"><f a="context">
 	<e path="lime.graphics.RenderContext"/>
 	<x path="Void"/>
 </f></init>
-		<onGamepadAxisMove public="1" set="method" line="176" override="1"><f a="gamepad:axis:value">
+		<onGamepadAxisMove public="1" set="method" line="180" override="1"><f a="gamepad:axis:value">
 	<c path="lime.ui.Gamepad"/>
 	<x path="lime.ui.GamepadAxis"/>
 	<x path="Float"/>
 	<x path="Void"/>
 </f></onGamepadAxisMove>
-		<onGamepadButtonDown public="1" set="method" line="187" override="1"><f a="gamepad:button">
+		<onGamepadButtonDown public="1" set="method" line="191" override="1"><f a="gamepad:button">
 	<c path="lime.ui.Gamepad"/>
 	<x path="lime.ui.GamepadButton"/>
 	<x path="Void"/>
 </f></onGamepadButtonDown>
-		<onGamepadButtonUp public="1" set="method" line="198" override="1"><f a="gamepad:button">
+		<onGamepadButtonUp public="1" set="method" line="202" override="1"><f a="gamepad:button">
 	<c path="lime.ui.Gamepad"/>
 	<x path="lime.ui.GamepadButton"/>
 	<x path="Void"/>
 </f></onGamepadButtonUp>
-		<onGamepadConnect public="1" set="method" line="209" override="1"><f a="gamepad">
+		<onGamepadConnect public="1" set="method" line="213" override="1"><f a="gamepad">
 	<c path="lime.ui.Gamepad"/>
 	<x path="Void"/>
 </f></onGamepadConnect>
-		<onGamepadDisconnect public="1" set="method" line="220" override="1"><f a="gamepad">
+		<onGamepadDisconnect public="1" set="method" line="224" override="1"><f a="gamepad">
 	<c path="lime.ui.Gamepad"/>
 	<x path="Void"/>
 </f></onGamepadDisconnect>
-		<onKeyDown public="1" set="method" line="231" override="1"><f a="keyCode:modifier">
+		<onKeyDown public="1" set="method" line="235" override="1"><f a="keyCode:modifier">
 	<x path="lime.ui.KeyCode"/>
 	<x path="lime.ui.KeyModifier"/>
 	<x path="Void"/>
 </f></onKeyDown>
-		<onKeyUp public="1" set="method" line="242" override="1"><f a="keyCode:modifier">
+		<onKeyUp public="1" set="method" line="246" override="1"><f a="keyCode:modifier">
 	<x path="lime.ui.KeyCode"/>
 	<x path="lime.ui.KeyModifier"/>
 	<x path="Void"/>
 </f></onKeyUp>
-		<onMouseDown public="1" set="method" line="253" override="1"><f a="x:y:button">
+		<onMouseDown public="1" set="method" line="257" override="1"><f a="x:y:button">
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Int"/>
 	<x path="Void"/>
 </f></onMouseDown>
-		<onMouseMove public="1" set="method" line="264" override="1"><f a="x:y">
+		<onMouseMove public="1" set="method" line="268" override="1"><f a="x:y">
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Void"/>
 </f></onMouseMove>
-		<onMouseMoveRelative public="1" set="method" line="275" override="1"><f a="x:y">
+		<onMouseMoveRelative public="1" set="method" line="279" override="1"><f a="x:y">
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Void"/>
 </f></onMouseMoveRelative>
-		<onMouseUp public="1" set="method" line="286" override="1"><f a="x:y:button">
+		<onMouseUp public="1" set="method" line="290" override="1"><f a="x:y:button">
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Int"/>
 	<x path="Void"/>
 </f></onMouseUp>
-		<onMouseWheel public="1" set="method" line="297" override="1"><f a="deltaX:deltaY">
+		<onMouseWheel public="1" set="method" line="301" override="1"><f a="deltaX:deltaY">
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Void"/>
 </f></onMouseWheel>
-		<onRenderContextLost public="1" set="method" line="308" override="1"><f a=""><x path="Void"/></f></onRenderContextLost>
-		<onRenderContextRestored public="1" set="method" line="319" override="1"><f a="context">
+		<onRenderContextLost public="1" set="method" line="312" override="1"><f a=""><x path="Void"/></f></onRenderContextLost>
+		<onRenderContextRestored public="1" set="method" line="323" override="1"><f a="context">
 	<e path="lime.graphics.RenderContext"/>
 	<x path="Void"/>
 </f></onRenderContextRestored>
-		<onTouchEnd public="1" set="method" line="330" override="1"><f a="x:y:id">
+		<onTextEdit public="1" set="method" line="334" override="1"><f a="text:start:length">
+	<c path="String"/>
+	<x path="Int"/>
+	<x path="Int"/>
+	<x path="Void"/>
+</f></onTextEdit>
+		<onTextInput public="1" set="method" line="345" override="1"><f a="text">
+	<c path="String"/>
+	<x path="Void"/>
+</f></onTextInput>
+		<onTouchEnd public="1" set="method" line="356" override="1"><f a="x:y:id">
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Int"/>
 	<x path="Void"/>
 </f></onTouchEnd>
-		<onTouchMove public="1" set="method" line="341" override="1"><f a="x:y:id">
+		<onTouchMove public="1" set="method" line="367" override="1"><f a="x:y:id">
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Int"/>
 	<x path="Void"/>
 </f></onTouchMove>
-		<onTouchStart public="1" set="method" line="352" override="1"><f a="x:y:id">
+		<onTouchStart public="1" set="method" line="378" override="1"><f a="x:y:id">
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Int"/>
 	<x path="Void"/>
 </f></onTouchStart>
-		<onWindowActivate public="1" set="method" line="363" override="1"><f a=""><x path="Void"/></f></onWindowActivate>
-		<onWindowClose public="1" set="method" line="374" override="1"><f a=""><x path="Void"/></f></onWindowClose>
-		<onWindowDeactivate public="1" set="method" line="385" override="1"><f a=""><x path="Void"/></f></onWindowDeactivate>
-		<onWindowFocusIn public="1" set="method" line="396" override="1"><f a=""><x path="Void"/></f></onWindowFocusIn>
-		<onWindowFocusOut public="1" set="method" line="407" override="1"><f a=""><x path="Void"/></f></onWindowFocusOut>
-		<onWindowFullscreen public="1" set="method" line="418" override="1"><f a=""><x path="Void"/></f></onWindowFullscreen>
-		<onWindowMinimize public="1" set="method" line="429" override="1"><f a=""><x path="Void"/></f></onWindowMinimize>
-		<onWindowMove public="1" set="method" line="440" override="1"><f a="x:y">
+		<onWindowActivate public="1" set="method" line="389" override="1"><f a=""><x path="Void"/></f></onWindowActivate>
+		<onWindowClose public="1" set="method" line="400" override="1"><f a=""><x path="Void"/></f></onWindowClose>
+		<onWindowDeactivate public="1" set="method" line="411" override="1"><f a=""><x path="Void"/></f></onWindowDeactivate>
+		<onWindowEnter public="1" set="method" line="422" override="1"><f a=""><x path="Void"/></f></onWindowEnter>
+		<onWindowFocusIn public="1" set="method" line="433" override="1"><f a=""><x path="Void"/></f></onWindowFocusIn>
+		<onWindowFocusOut public="1" set="method" line="444" override="1"><f a=""><x path="Void"/></f></onWindowFocusOut>
+		<onWindowFullscreen public="1" set="method" line="455" override="1"><f a=""><x path="Void"/></f></onWindowFullscreen>
+		<onWindowLeave public="1" set="method" line="466" override="1"><f a=""><x path="Void"/></f></onWindowLeave>
+		<onWindowMinimize public="1" set="method" line="477" override="1"><f a=""><x path="Void"/></f></onWindowMinimize>
+		<onWindowMove public="1" set="method" line="488" override="1"><f a="x:y">
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Void"/>
 </f></onWindowMove>
-		<onWindowResize public="1" set="method" line="451" override="1"><f a="width:height">
+		<onWindowResize public="1" set="method" line="499" override="1"><f a="width:height">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Void"/>
 </f></onWindowResize>
-		<onWindowRestore public="1" set="method" line="462" override="1"><f a=""><x path="Void"/></f></onWindowRestore>
-		<removeModule public="1" set="method" line="477">
+		<onWindowRestore public="1" set="method" line="510" override="1"><f a=""><x path="Void"/></f></onWindowRestore>
+		<removeModule public="1" set="method" line="525">
 			<f a="module">
 				<c path="lime.app.IModule"/>
 				<x path="Void"/>
@@ -5264,7 +5450,7 @@
 			<haxe_doc>* Removes a module from the Application
 	 * @param	module	A module to remove</haxe_doc>
 		</removeModule>
-		<removeRenderer public="1" set="method" line="488">
+		<removeRenderer public="1" set="method" line="536">
 			<f a="renderer">
 				<c path="lime.graphics.Renderer"/>
 				<x path="Void"/>
@@ -5272,7 +5458,7 @@
 			<haxe_doc>* Removes a Renderer from the Application
 	 * @param	renderer	A Renderer object to remove</haxe_doc>
 		</removeRenderer>
-		<removeWindow public="1" set="method" line="503">
+		<removeWindow public="1" set="method" line="551">
 			<f a="window">
 				<c path="lime.ui.Window"/>
 				<x path="Void"/>
@@ -5280,19 +5466,19 @@
 			<haxe_doc>* Removes a Window from the Application
 	 * @param	window	A Window object to remove</haxe_doc>
 		</removeWindow>
-		<render public="1" set="method" line="515" override="1"><f a="context">
+		<render public="1" set="method" line="563" override="1"><f a="context">
 	<e path="lime.graphics.RenderContext"/>
 	<x path="Void"/>
 </f></render>
-		<update public="1" set="method" line="526" override="1"><f a="deltaTime">
+		<update public="1" set="method" line="574" override="1"><f a="deltaTime">
 	<x path="Int"/>
 	<x path="Void"/>
 </f></update>
-		<get_renderer get="inline" set="null" line="544">
+		<get_renderer get="inline" set="null" line="592">
 			<f a=""><c path="lime.graphics.Renderer"/></f>
 			<meta><m n=":noCompletion"/></meta>
 		</get_renderer>
-		<get_window get="inline" set="null" line="551">
+		<get_window get="inline" set="null" line="599">
 			<f a=""><c path="lime.ui.Window"/></f>
 			<meta><m n=":noCompletion"/></meta>
 		</get_window>
@@ -5344,6 +5530,10 @@
 		<t path="Null"><x path="Int"/></t>
 		<meta><m n=":optional"/></meta>
 	</height>
+	<hardware>
+		<t path="Null"><x path="Bool"/></t>
+		<meta><m n=":optional"/></meta>
+	</hardware>
 	<fullscreen>
 		<t path="Null"><x path="Bool"/></t>
 		<meta><m n=":optional"/></meta>
@@ -6006,23 +6196,24 @@
 		<pauseTime><x path="Int"/></pauseTime>
 		<__length><t path="Null"><x path="Int"/></t></__length>
 		<timer><c path="haxe.Timer"/></timer>
-		<init set="method" line="62"><f a=""><x path="Void"/></f></init>
-		<play public="1" set="method" line="114"><f a=""><x path="Void"/></f></play>
-		<pause public="1" set="method" line="152"><f a=""><x path="Void"/></f></pause>
-		<stop public="1" set="method" line="180"><f a=""><x path="Void"/></f></stop>
-		<timer_onRun set="method" line="211"><f a=""><x path="Void"/></f></timer_onRun>
-		<get_currentTime set="method" line="245"><f a=""><x path="Int"/></f></get_currentTime>
-		<set_currentTime set="method" line="266"><f a="value">
+		<dispose public="1" set="method" line="62"><f a=""><x path="Void"/></f></dispose>
+		<init set="method" line="81"><f a=""><x path="Void"/></f></init>
+		<play public="1" set="method" line="133"><f a=""><x path="Void"/></f></play>
+		<pause public="1" set="method" line="171"><f a=""><x path="Void"/></f></pause>
+		<stop public="1" set="method" line="199"><f a=""><x path="Void"/></f></stop>
+		<timer_onRun set="method" line="230"><f a=""><x path="Void"/></f></timer_onRun>
+		<get_currentTime set="method" line="264"><f a=""><x path="Int"/></f></get_currentTime>
+		<set_currentTime set="method" line="285"><f a="value">
 	<x path="Int"/>
 	<x path="Int"/>
 </f></set_currentTime>
-		<get_gain set="method" line="295"><f a=""><x path="Float"/></f></get_gain>
-		<set_gain set="method" line="314"><f a="value">
+		<get_gain set="method" line="314"><f a=""><x path="Float"/></f></get_gain>
+		<set_gain set="method" line="333"><f a="value">
 	<x path="Float"/>
 	<x path="Float"/>
 </f></set_gain>
-		<get_length set="method" line="337"><f a=""><x path="Int"/></f></get_length>
-		<set_length set="method" line="363"><f a="value">
+		<get_length set="method" line="356"><f a=""><x path="Int"/></f></get_length>
+		<set_length set="method" line="382"><f a="value">
 	<x path="Int"/>
 	<x path="Int"/>
 </f></set_length>
@@ -6931,6 +7122,7 @@
 			<m n=":allow"><e>lime.audio.openal.AL</e></m>
 		</meta>
 	</class>
+	<typedef path="lime.graphics.CairoRenderContext" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/graphics/CairoRenderContext.hx"><c path="lime.graphics.cairo.Cairo"/></typedef>
 	<class path="lime.graphics.CanvasRenderContext" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/graphics/CanvasRenderContext.hx">
 		<backingStorePixelRatio public="1" set="null"><x path="Float"/></backingStorePixelRatio>
 		<canvas public="1"><d/></canvas>
@@ -8860,7 +9052,7 @@
 	<class path="lime.graphics.Image" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/graphics/Image.hx">
 		<__base64Chars line="55" static="1"><c path="String"/></__base64Chars>
 		<__base64Encoder static="1"><c path="haxe.crypto.BaseCode"/></__base64Encoder>
-		<fromBase64 public="1" set="method" line="384" static="1"><f a="base64:type:onload">
+		<fromBase64 public="1" set="method" line="411" static="1"><f a="base64:type:onload">
 	<c path="String"/>
 	<c path="String"/>
 	<f a="">
@@ -8869,11 +9061,11 @@
 	</f>
 	<c path="lime.graphics.Image"/>
 </f></fromBase64>
-		<fromBitmapData public="1" set="method" line="393" static="1"><f a="bitmapData">
+		<fromBitmapData public="1" set="method" line="421" static="1"><f a="bitmapData">
 	<d/>
 	<c path="lime.graphics.Image"/>
 </f></fromBitmapData>
-		<fromBytes public="1" set="method" line="402" static="1"><f a="bytes:?onload">
+		<fromBytes public="1" set="method" line="431" static="1"><f a="bytes:?onload">
 	<c path="lime.utils.ByteArray"/>
 	<f a="">
 		<c path="lime.graphics.Image"/>
@@ -8881,11 +9073,11 @@
 	</f>
 	<c path="lime.graphics.Image"/>
 </f></fromBytes>
-		<fromCanvas public="1" set="method" line="411" static="1"><f a="canvas">
+		<fromCanvas public="1" set="method" line="441" static="1"><f a="canvas">
 	<d/>
 	<c path="lime.graphics.Image"/>
 </f></fromCanvas>
-		<fromFile public="1" set="method" line="420" static="1"><f a="path:?onload:?onerror">
+		<fromFile public="1" set="method" line="451" static="1"><f a="path:?onload:?onerror">
 	<c path="String"/>
 	<f a="">
 		<c path="lime.graphics.Image"/>
@@ -8894,36 +9086,37 @@
 	<f a=""><x path="Void"/></f>
 	<c path="lime.graphics.Image"/>
 </f></fromFile>
-		<fromImageElement public="1" set="method" line="429" static="1"><f a="image">
+		<fromImageElement public="1" set="method" line="460" static="1"><f a="image">
 	<d/>
 	<c path="lime.graphics.Image"/>
 </f></fromImageElement>
-		<__base64Encode set="method" line="754" static="1"><f a="bytes">
+		<__base64Encode set="method" line="815" static="1"><f a="bytes">
 	<c path="lime.utils.ByteArray"/>
 	<c path="String"/>
 </f></__base64Encode>
-		<__isJPG set="method" line="1046" static="1"><f a="bytes">
+		<__isJPG set="method" line="1107" static="1"><f a="bytes">
 	<c path="lime.utils.ByteArray"/>
 	<x path="Bool"/>
 </f></__isJPG>
-		<__isPNG set="method" line="1054" static="1"><f a="bytes">
+		<__isPNG set="method" line="1115" static="1"><f a="bytes">
 	<c path="lime.utils.ByteArray"/>
 	<x path="Bool"/>
 </f></__isPNG>
-		<__isGIF set="method" line="1061" static="1"><f a="bytes">
+		<__isGIF set="method" line="1122" static="1"><f a="bytes">
 	<c path="lime.utils.ByteArray"/>
 	<x path="Bool"/>
 </f></__isGIF>
-		<lime_image_encode line="1269" static="1"><f a="::">
+		<lime_image_encode line="1359" static="1"><f a="::">
 	<c path="lime.graphics.ImageBuffer"/>
 	<x path="Int"/>
 	<x path="Int"/>
 	<c path="lime.utils.ByteArray"/>
 </f></lime_image_encode>
-		<lime_image_load line="1270" static="1"><d/></lime_image_load>
+		<lime_image_load line="1360" static="1"><d/></lime_image_load>
 		<buffer public="1"><c path="lime.graphics.ImageBuffer"/></buffer>
 		<data public="1" get="accessor" set="accessor"><c path="lime.utils.UInt8Array"/></data>
 		<dirty public="1"><x path="Bool"/></dirty>
+		<format public="1" get="accessor" set="accessor"><x path="lime.graphics.PixelFormat"/></format>
 		<height public="1"><x path="Int"/></height>
 		<offsetX public="1"><x path="Int"/></offsetX>
 		<offsetY public="1"><x path="Int"/></offsetY>
@@ -8936,13 +9129,13 @@
 		<width public="1"><x path="Int"/></width>
 		<x public="1"><x path="Float"/></x>
 		<y public="1"><x path="Float"/></y>
-		<clone public="1" set="method" line="155"><f a=""><c path="lime.graphics.Image"/></f></clone>
-		<colorTransform public="1" set="method" line="163"><f a="rect:colorMatrix">
+		<clone public="1" set="method" line="156"><f a=""><c path="lime.graphics.Image"/></f></clone>
+		<colorTransform public="1" set="method" line="164"><f a="rect:colorMatrix">
 	<c path="lime.math.Rectangle"/>
 	<x path="lime.math.ColorMatrix"/>
 	<x path="Void"/>
 </f></colorTransform>
-		<copyChannel public="1" set="method" line="194"><f a="sourceImage:sourceRect:destPoint:sourceChannel:destChannel">
+		<copyChannel public="1" set="method" line="195"><f a="sourceImage:sourceRect:destPoint:sourceChannel:destChannel">
 	<c path="lime.graphics.Image"/>
 	<c path="lime.math.Rectangle"/>
 	<c path="lime.math.Vector2"/>
@@ -8950,7 +9143,7 @@
 	<e path="lime.graphics.ImageChannel"/>
 	<x path="Void"/>
 </f></copyChannel>
-		<copyPixels public="1" set="method" line="246"><f a="sourceImage:sourceRect:destPoint:?alphaImage:?alphaPoint:?mergeAlpha">
+		<copyPixels public="1" set="method" line="247"><f a="sourceImage:sourceRect:destPoint:?alphaImage:?alphaPoint:?mergeAlpha">
 	<c path="lime.graphics.Image"/>
 	<c path="lime.math.Rectangle"/>
 	<c path="lime.math.Vector2"/>
@@ -8959,42 +9152,49 @@
 	<x path="Bool"/>
 	<x path="Void"/>
 </f></copyPixels>
-		<encode public="1" set="method" line="293"><f a="?format:?quality">
+		<encode public="1" set="method" line="320"><f a="?format:?quality">
 	<c path="String"/>
 	<x path="Int"/>
 	<c path="lime.utils.ByteArray"/>
 </f></encode>
-		<fillRect public="1" set="method" line="322"><f a="rect:color:?format">
+		<fillRect public="1" set="method" line="349"><f a="rect:color:?format">
 	<c path="lime.math.Rectangle"/>
 	<x path="Int"/>
-	<e path="lime.graphics.PixelFormat"/>
+	<x path="lime.graphics.PixelFormat"/>
 	<x path="Void"/>
 </f></fillRect>
-		<floodFill public="1" set="method" line="354"><f a="x:y:color:?format">
+		<floodFill public="1" set="method" line="381"><f a="x:y:color:?format">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Int"/>
-	<e path="lime.graphics.PixelFormat"/>
+	<x path="lime.graphics.PixelFormat"/>
 	<x path="Void"/>
 </f></floodFill>
-		<getPixel public="1" set="method" line="438"><f a="x:y:?format">
+		<getColorBoundsRect public="1" set="method" line="469"><f a="mask:color:?findColor:?format">
 	<x path="Int"/>
 	<x path="Int"/>
-	<e path="lime.graphics.PixelFormat"/>
+	<x path="Bool"/>
+	<x path="lime.graphics.PixelFormat"/>
+	<c path="lime.math.Rectangle"/>
+</f></getColorBoundsRect>
+		<getPixel public="1" set="method" line="499"><f a="x:y:?format">
+	<x path="Int"/>
+	<x path="Int"/>
+	<x path="lime.graphics.PixelFormat"/>
 	<x path="Int"/>
 </f></getPixel>
-		<getPixel32 public="1" set="method" line="479"><f a="x:y:?format">
+		<getPixel32 public="1" set="method" line="540"><f a="x:y:?format">
 	<x path="Int"/>
 	<x path="Int"/>
-	<e path="lime.graphics.PixelFormat"/>
+	<x path="lime.graphics.PixelFormat"/>
 	<x path="Int"/>
 </f></getPixel32>
-		<getPixels public="1" set="method" line="520"><f a="rect:?format">
+		<getPixels public="1" set="method" line="581"><f a="rect:?format">
 	<c path="lime.math.Rectangle"/>
-	<e path="lime.graphics.PixelFormat"/>
+	<x path="lime.graphics.PixelFormat"/>
 	<c path="lime.utils.ByteArray"/>
 </f></getPixels>
-		<merge public="1" set="method" line="571"><f a="sourceImage:sourceRect:destPoint:redMultiplier:greenMultiplier:blueMultiplier:alphaMultiplier">
+		<merge public="1" set="method" line="632"><f a="sourceImage:sourceRect:destPoint:redMultiplier:greenMultiplier:blueMultiplier:alphaMultiplier">
 	<c path="lime.graphics.Image"/>
 	<c path="lime.math.Rectangle"/>
 	<c path="lime.math.Vector2"/>
@@ -9004,36 +9204,36 @@
 	<x path="Int"/>
 	<x path="Void"/>
 </f></merge>
-		<resize public="1" set="method" line="605"><f a="newWidth:newHeight">
+		<resize public="1" set="method" line="666"><f a="newWidth:newHeight">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Void"/>
 </f></resize>
-		<setPixel public="1" set="method" line="642"><f a="x:y:color:?format">
+		<setPixel public="1" set="method" line="703"><f a="x:y:color:?format">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Int"/>
-	<e path="lime.graphics.PixelFormat"/>
+	<x path="lime.graphics.PixelFormat"/>
 	<x path="Void"/>
 </f></setPixel>
-		<setPixel32 public="1" set="method" line="672"><f a="x:y:color:?format">
+		<setPixel32 public="1" set="method" line="733"><f a="x:y:color:?format">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Int"/>
-	<e path="lime.graphics.PixelFormat"/>
+	<x path="lime.graphics.PixelFormat"/>
 	<x path="Void"/>
 </f></setPixel32>
-		<setPixels public="1" set="method" line="702"><f a="rect:byteArray:?format">
+		<setPixels public="1" set="method" line="763"><f a="rect:byteArray:?format">
 	<c path="lime.math.Rectangle"/>
 	<c path="lime.utils.ByteArray"/>
-	<e path="lime.graphics.PixelFormat"/>
+	<x path="lime.graphics.PixelFormat"/>
 	<x path="Void"/>
 </f></setPixels>
-		<__clipRect set="method" line="783"><f a="r">
+		<__clipRect set="method" line="844"><f a="r">
 	<c path="lime.math.Rectangle"/>
 	<c path="lime.math.Rectangle"/>
 </f></__clipRect>
-		<__fromBase64 set="method" line="826"><f a="base64:type:?onload">
+		<__fromBase64 set="method" line="887"><f a="base64:type:?onload">
 	<c path="String"/>
 	<c path="String"/>
 	<f a="">
@@ -9042,7 +9242,7 @@
 	</f>
 	<x path="Void"/>
 </f></__fromBase64>
-		<__fromBytes set="method" line="856"><f a="bytes:onload">
+		<__fromBytes set="method" line="917"><f a="bytes:onload">
 	<c path="lime.utils.ByteArray"/>
 	<f a="">
 		<c path="lime.graphics.Image"/>
@@ -9050,7 +9250,7 @@
 	</f>
 	<x path="Void"/>
 </f></__fromBytes>
-		<__fromFile set="method" line="907"><f a="path:onload:onerror">
+		<__fromFile set="method" line="968"><f a="path:onload:onerror">
 	<c path="String"/>
 	<f a="">
 		<c path="lime.graphics.Image"/>
@@ -9059,37 +9259,42 @@
 	<f a=""><x path="Void"/></f>
 	<x path="Void"/>
 </f></__fromFile>
-		<__fromImageBuffer set="method" line="1023"><f a="buffer">
+		<__fromImageBuffer set="method" line="1084"><f a="buffer">
 	<c path="lime.graphics.ImageBuffer"/>
 	<x path="Void"/>
 </f></__fromImageBuffer>
-		<get_data set="method" line="1084"><f a=""><c path="lime.utils.UInt8Array"/></f></get_data>
-		<set_data set="method" line="1108"><f a="value">
+		<get_data set="method" line="1145"><f a=""><c path="lime.utils.UInt8Array"/></f></get_data>
+		<set_data set="method" line="1169"><f a="value">
 	<c path="lime.utils.UInt8Array"/>
 	<c path="lime.utils.UInt8Array"/>
 </f></set_data>
-		<get_powerOfTwo set="method" line="1115"><f a=""><x path="Bool"/></f></get_powerOfTwo>
-		<set_powerOfTwo set="method" line="1122"><f a="value">
+		<get_format set="method" line="1176"><f a=""><x path="lime.graphics.PixelFormat"/></f></get_format>
+		<set_format set="method" line="1183"><f a="value">
+	<x path="lime.graphics.PixelFormat"/>
+	<x path="lime.graphics.PixelFormat"/>
+</f></set_format>
+		<get_powerOfTwo set="method" line="1204"><f a=""><x path="Bool"/></f></get_powerOfTwo>
+		<set_powerOfTwo set="method" line="1211"><f a="value">
 	<x path="Bool"/>
 	<x path="Bool"/>
 </f></set_powerOfTwo>
-		<get_premultiplied set="method" line="1172"><f a=""><x path="Bool"/></f></get_premultiplied>
-		<set_premultiplied set="method" line="1179"><f a="value">
+		<get_premultiplied set="method" line="1261"><f a=""><x path="Bool"/></f></get_premultiplied>
+		<set_premultiplied set="method" line="1268"><f a="value">
 	<x path="Bool"/>
 	<x path="Bool"/>
 </f></set_premultiplied>
-		<get_rect public="1" set="method" line="1224"><f a=""><c path="lime.math.Rectangle"/></f></get_rect>
-		<get_src public="1" set="method" line="1231"><f a=""><d/></f></get_src>
-		<set_src set="method" line="1238"><f a="value">
+		<get_rect public="1" set="method" line="1313"><f a=""><c path="lime.math.Rectangle"/></f></get_rect>
+		<get_src public="1" set="method" line="1320"><f a=""><d/></f></get_src>
+		<set_src set="method" line="1327"><f a="value">
 	<d/>
 	<d/>
 </f></set_src>
-		<get_transparent set="method" line="1245"><f a=""><x path="Bool"/></f></get_transparent>
-		<set_transparent set="method" line="1252"><f a="value">
+		<get_transparent set="method" line="1334"><f a=""><x path="Bool"/></f></get_transparent>
+		<set_transparent set="method" line="1342"><f a="value">
 	<x path="Bool"/>
 	<x path="Bool"/>
 </f></set_transparent>
-		<new public="1" set="method" line="75"><f a="?buffer:?offsetX:?offsetY:?width:?height:?color:?type">
+		<new public="1" set="method" line="76"><f a="?buffer:?offsetX:?offsetY:?width:?height:?color:?type">
 	<c path="lime.graphics.ImageBuffer"/>
 	<x path="Int"/>
 	<x path="Int"/>
@@ -9113,9 +9318,11 @@
 	<class path="lime.graphics.ImageBuffer" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/graphics/ImageBuffer.hx">
 		<bitsPerPixel public="1"><x path="Int"/></bitsPerPixel>
 		<data public="1"><c path="lime.utils.UInt8Array"/></data>
+		<format public="1"><x path="lime.graphics.PixelFormat"/></format>
 		<height public="1"><x path="Int"/></height>
 		<premultiplied public="1"><x path="Bool"/></premultiplied>
 		<src public="1" get="accessor" set="accessor"><d/></src>
+		<stride public="1" get="accessor" set="null"><x path="Int"/></stride>
 		<transparent public="1"><x path="Bool"/></transparent>
 		<width public="1"><x path="Int"/></width>
 		<__srcBitmapData>
@@ -9142,17 +9349,19 @@
 			<d/>
 			<meta><m n=":noCompletion"/></meta>
 		</__srcImageData>
-		<clone public="1" set="method" line="52"><f a=""><c path="lime.graphics.ImageBuffer"/></f></clone>
-		<get_src set="method" line="122"><f a=""><d/></f></get_src>
-		<set_src set="method" line="142"><f a="value">
+		<clone public="1" set="method" line="56"><f a=""><c path="lime.graphics.ImageBuffer"/></f></clone>
+		<get_src set="method" line="126"><f a=""><d/></f></get_src>
+		<set_src set="method" line="146"><f a="value">
 	<d/>
 	<d/>
 </f></set_src>
-		<new public="1" set="method" line="41"><f a="?data:?width:?height:?bitsPerPixel">
+		<get_stride set="method" line="176"><f a=""><x path="Int"/></f></get_stride>
+		<new public="1" set="method" line="44"><f a="?data:?width:?height:?bitsPerPixel:?format">
 	<c path="lime.utils.UInt8Array"/>
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Int"/>
+	<x path="lime.graphics.PixelFormat"/>
 	<x path="Void"/>
 </f></new>
 		<meta>
@@ -9180,21 +9389,69 @@
 			<m n=":flatEnum"/>
 		</meta>
 	</enum>
-	<enum path="lime.graphics.PixelFormat" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/graphics/PixelFormat.hx">
-		<RGBA/>
-		<ARGB/>
+	<abstract path="lime.graphics.PixelFormat" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/graphics/PixelFormat.hx">
+		<from><icast><x path="Int"/></icast></from>
+		<this><x path="Int"/></this>
+		<to><icast><x path="Int"/></icast></to>
+		<meta><m n=":enum"/></meta>
+		<impl><class path="lime.graphics._PixelFormat.PixelFormat_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/graphics/PixelFormat.hx" private="1" module="lime.graphics.PixelFormat" extern="1">
+	<RGBA public="1" get="inline" set="null" line="6" static="1">
+		<x path="lime.graphics.PixelFormat"/>
 		<meta>
-			<m n=":directlyUsed"/>
-			<m n=":flatEnum"/>
+			<m n=":enum"/>
+			<m n=":impl"/>
 		</meta>
-	</enum>
+	</RGBA>
+	<ARGB public="1" get="inline" set="null" line="7" static="1">
+		<x path="lime.graphics.PixelFormat"/>
+		<meta>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</ARGB>
+	<BGRA public="1" get="inline" set="null" line="8" static="1">
+		<x path="lime.graphics.PixelFormat"/>
+		<meta>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</BGRA>
+	<meta><m n=":enum"/></meta>
+</class></impl>
+	</abstract>
+	<class path="lime.graphics._PixelFormat.PixelFormat_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/graphics/PixelFormat.hx" private="1" module="lime.graphics.PixelFormat" extern="1">
+		<RGBA public="1" get="inline" set="null" line="6" static="1">
+			<x path="lime.graphics.PixelFormat"/>
+			<meta>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</RGBA>
+		<ARGB public="1" get="inline" set="null" line="7" static="1">
+			<x path="lime.graphics.PixelFormat"/>
+			<meta>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</ARGB>
+		<BGRA public="1" get="inline" set="null" line="8" static="1">
+			<x path="lime.graphics.PixelFormat"/>
+			<meta>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</BGRA>
+		<meta><m n=":enum"/></meta>
+	</class>
 	<enum path="lime.graphics.RenderContext" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/graphics/RenderContext.hx">
 		<OPENGL a="gl"><c path="lime.graphics.GLRenderContext"/></OPENGL>
 		<CANVAS a="context"><c path="lime.graphics.CanvasRenderContext"/></CANVAS>
 		<DOM a="element"><c path="lime.graphics.DOMRenderContext"/></DOM>
 		<FLASH a="stage"><c path="lime.graphics.FlashRenderContext"/></FLASH>
+		<CAIRO a="cairo"><t path="lime.graphics.CairoRenderContext"/></CAIRO>
 		<CONSOLE a="context"><c path="lime.graphics.ConsoleRenderContext"/></CONSOLE>
 		<CUSTOM a="data"><d/></CUSTOM>
+		<NONE/>
 		<meta><m n=":directlyUsed"/></meta>
 	</enum>
 	<class path="lime.graphics.Renderer" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/graphics/Renderer.hx">
@@ -9226,6 +9483,2229 @@
 		<c path="lime._backend.native.NativeRenderer"/>
 		<meta><m n=":noCompletion"/></meta>
 	</typedef>
+	<class path="lime.graphics.cairo.Cairo" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/graphics/cairo/Cairo.hx">
+		<version public="1" get="accessor" set="null" static="1"><x path="Int"/></version>
+		<versionString public="1" get="accessor" set="null" static="1"><c path="String"/></versionString>
+		<get_version set="method" line="782" static="1"><f a=""><x path="Int"/></f></get_version>
+		<get_versionString set="method" line="793" static="1"><f a=""><c path="String"/></f></get_versionString>
+		<antialias public="1" get="accessor" set="accessor"><x path="lime.graphics.cairo.CairoAntialias"/></antialias>
+		<currentPoint public="1" get="accessor" set="null"><c path="lime.math.Vector2"/></currentPoint>
+		<dash public="1" get="accessor" set="accessor"><c path="Array"><x path="Float"/></c></dash>
+		<dashCount public="1" get="accessor" set="null"><x path="Int"/></dashCount>
+		<fillRule public="1" get="accessor" set="accessor"><x path="lime.graphics.cairo.CairoFillRule"/></fillRule>
+		<groupTarget public="1" get="accessor" set="null"><x path="lime.graphics.cairo.CairoSurface"/></groupTarget>
+		<hasCurrentPoint public="1" get="accessor" set="null"><x path="Bool"/></hasCurrentPoint>
+		<lineCap public="1" get="accessor" set="accessor"><x path="lime.graphics.cairo.CairoLineCap"/></lineCap>
+		<lineJoin public="1" get="accessor" set="accessor"><x path="lime.graphics.cairo.CairoLineJoin"/></lineJoin>
+		<lineWidth public="1" get="accessor" set="accessor"><x path="Float"/></lineWidth>
+		<matrix public="1" get="accessor" set="accessor"><c path="lime.math.Matrix3"/></matrix>
+		<miterLimit public="1" get="accessor" set="accessor"><x path="Float"/></miterLimit>
+		<operator public="1" get="accessor" set="accessor"><x path="lime.graphics.cairo.CairoOperator"/></operator>
+		<referenceCount public="1" get="accessor" set="null"><x path="Int"/></referenceCount>
+		<source public="1" get="accessor" set="accessor"><x path="lime.graphics.cairo.CairoPattern"/></source>
+		<target public="1" get="accessor" set="null"><x path="lime.graphics.cairo.CairoSurface"/></target>
+		<tolerance public="1" get="accessor" set="accessor"><x path="Float"/></tolerance>
+		<userData public="1"><d/></userData>
+		<handle><d/></handle>
+		<arc public="1" set="method" line="50"><f a="xc:yc:radius:angle1:angle2">
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Void"/>
+</f></arc>
+		<arcNegative public="1" set="method" line="59"><f a="xc:yc:radius:angle1:angle2">
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Void"/>
+</f></arcNegative>
+		<clip public="1" set="method" line="68"><f a=""><x path="Void"/></f></clip>
+		<clipExtents public="1" set="method" line="77"><f a="x1:y1:x2:y2">
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Void"/>
+</f></clipExtents>
+		<clipPreserve public="1" set="method" line="86"><f a=""><x path="Void"/></f></clipPreserve>
+		<closePath public="1" set="method" line="95"><f a=""><x path="Void"/></f></closePath>
+		<copyPage public="1" set="method" line="104"><f a=""><x path="Void"/></f></copyPage>
+		<curveTo public="1" set="method" line="113"><f a="x1:y1:x2:y2:x3:y3">
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Void"/>
+</f></curveTo>
+		<destroy public="1" set="method" line="122"><f a=""><x path="Void"/></f></destroy>
+		<fill public="1" set="method" line="131"><f a=""><x path="Void"/></f></fill>
+		<fillExtents public="1" set="method" line="140"><f a="x1:y1:x2:y2">
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Void"/>
+</f></fillExtents>
+		<fillPreserve public="1" set="method" line="149"><f a=""><x path="Void"/></f></fillPreserve>
+		<identityMatrix public="1" set="method" line="158"><f a=""><x path="Void"/></f></identityMatrix>
+		<inClip public="1" set="method" line="167"><f a="x:y">
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Bool"/>
+</f></inClip>
+		<inFill public="1" set="method" line="178"><f a="x:y">
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Bool"/>
+</f></inFill>
+		<inStroke public="1" set="method" line="189"><f a="x:y">
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Bool"/>
+</f></inStroke>
+		<lineTo public="1" set="method" line="200"><f a="x:y">
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Void"/>
+</f></lineTo>
+		<moveTo public="1" set="method" line="209"><f a="x:y">
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Void"/>
+</f></moveTo>
+		<mask public="1" set="method" line="218"><f a="pattern">
+	<x path="lime.graphics.cairo.CairoPattern"/>
+	<x path="Void"/>
+</f></mask>
+		<maskSurface public="1" set="method" line="227"><f a="surface:x:y">
+	<x path="lime.graphics.cairo.CairoSurface"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Void"/>
+</f></maskSurface>
+		<newPath public="1" set="method" line="236"><f a=""><x path="Void"/></f></newPath>
+		<paint public="1" set="method" line="245"><f a=""><x path="Void"/></f></paint>
+		<paintWithAlpha public="1" set="method" line="254"><f a="alpha">
+	<x path="Float"/>
+	<x path="Void"/>
+</f></paintWithAlpha>
+		<popGroup public="1" set="method" line="263"><f a=""><x path="lime.graphics.cairo.CairoPattern"/></f></popGroup>
+		<popGroupToSource public="1" set="method" line="274"><f a=""><x path="Void"/></f></popGroupToSource>
+		<pushGroup public="1" set="method" line="283"><f a=""><x path="Void"/></f></pushGroup>
+		<pushGroupWithContent public="1" set="method" line="292"><f a="content">
+	<x path="lime.graphics.cairo.CairoContent"/>
+	<x path="Void"/>
+</f></pushGroupWithContent>
+		<rectangle public="1" set="method" line="301"><f a="x:y:width:height">
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Void"/>
+</f></rectangle>
+		<reference public="1" set="method" line="310"><f a=""><x path="Void"/></f></reference>
+		<relCurveTo public="1" set="method" line="319"><f a="dx1:dy1:dx2:dy2:dx3:dy3">
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Void"/>
+</f></relCurveTo>
+		<relLineTo public="1" set="method" line="328"><f a="dx:dy">
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Void"/>
+</f></relLineTo>
+		<relMoveTo public="1" set="method" line="337"><f a="dx:dy">
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Void"/>
+</f></relMoveTo>
+		<resetClip public="1" set="method" line="346"><f a=""><x path="Void"/></f></resetClip>
+		<restore public="1" set="method" line="355"><f a=""><x path="Void"/></f></restore>
+		<save public="1" set="method" line="364"><f a=""><x path="Void"/></f></save>
+		<setSourceRGB public="1" set="method" line="373"><f a="r:g:b">
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Void"/>
+</f></setSourceRGB>
+		<setSourceRGBA public="1" set="method" line="382"><f a="r:g:b:a">
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Void"/>
+</f></setSourceRGBA>
+		<setSourceSurface public="1" set="method" line="391"><f a="surface:x:y">
+	<x path="lime.graphics.cairo.CairoSurface"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Void"/>
+</f></setSourceSurface>
+		<showPage public="1" set="method" line="400"><f a=""><x path="Void"/></f></showPage>
+		<status public="1" set="method" line="409"><f a=""><x path="lime.graphics.cairo.CairoStatus"/></f></status>
+		<stroke public="1" set="method" line="420"><f a=""><x path="Void"/></f></stroke>
+		<strokeExtents public="1" set="method" line="429"><f a="x1:y1:x2:y2">
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Void"/>
+</f></strokeExtents>
+		<strokePreserve public="1" set="method" line="438"><f a=""><x path="Void"/></f></strokePreserve>
+		<transform public="1" set="method" line="447"><f a="matrix">
+	<c path="lime.math.Matrix3"/>
+	<x path="Void"/>
+</f></transform>
+		<translate public="1" set="method" line="456"><f a="x:y">
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Void"/>
+</f></translate>
+		<get_antialias set="method" line="472"><f a=""><x path="lime.graphics.cairo.CairoAntialias"/></f></get_antialias>
+		<set_antialias set="method" line="483"><f a="value">
+	<x path="lime.graphics.cairo.CairoAntialias"/>
+	<x path="lime.graphics.cairo.CairoAntialias"/>
+</f></set_antialias>
+		<get_currentPoint set="method" line="494"><f a=""><c path="lime.math.Vector2"/></f></get_currentPoint>
+		<get_dash set="method" line="506"><f a=""><c path="Array"><x path="Float"/></c></f></get_dash>
+		<set_dash set="method" line="517"><f a="value">
+	<c path="Array"><x path="Float"/></c>
+	<c path="Array"><x path="Float"/></c>
+</f></set_dash>
+		<get_dashCount set="method" line="528"><f a=""><x path="Int"/></f></get_dashCount>
+		<get_fillRule set="method" line="539"><f a=""><x path="lime.graphics.cairo.CairoFillRule"/></f></get_fillRule>
+		<set_fillRule set="method" line="550"><f a="value">
+	<x path="lime.graphics.cairo.CairoFillRule"/>
+	<x path="lime.graphics.cairo.CairoFillRule"/>
+</f></set_fillRule>
+		<get_groupTarget set="method" line="561"><f a=""><x path="lime.graphics.cairo.CairoSurface"/></f></get_groupTarget>
+		<get_hasCurrentPoint set="method" line="572"><f a=""><x path="Bool"/></f></get_hasCurrentPoint>
+		<get_lineCap set="method" line="583"><f a=""><x path="lime.graphics.cairo.CairoLineCap"/></f></get_lineCap>
+		<set_lineCap set="method" line="594"><f a="value">
+	<x path="lime.graphics.cairo.CairoLineCap"/>
+	<x path="lime.graphics.cairo.CairoLineCap"/>
+</f></set_lineCap>
+		<get_lineJoin set="method" line="605"><f a=""><x path="lime.graphics.cairo.CairoLineJoin"/></f></get_lineJoin>
+		<set_lineJoin set="method" line="616"><f a="value">
+	<x path="lime.graphics.cairo.CairoLineJoin"/>
+	<x path="lime.graphics.cairo.CairoLineJoin"/>
+</f></set_lineJoin>
+		<get_lineWidth set="method" line="627"><f a=""><x path="Float"/></f></get_lineWidth>
+		<set_lineWidth set="method" line="638"><f a="value">
+	<x path="Float"/>
+	<x path="Float"/>
+</f></set_lineWidth>
+		<get_matrix set="method" line="649"><f a=""><c path="lime.math.Matrix3"/></f></get_matrix>
+		<set_matrix set="method" line="661"><f a="value">
+	<c path="lime.math.Matrix3"/>
+	<c path="lime.math.Matrix3"/>
+</f></set_matrix>
+		<get_miterLimit set="method" line="672"><f a=""><x path="Float"/></f></get_miterLimit>
+		<set_miterLimit set="method" line="683"><f a="value">
+	<x path="Float"/>
+	<x path="Float"/>
+</f></set_miterLimit>
+		<get_operator set="method" line="694"><f a=""><x path="lime.graphics.cairo.CairoOperator"/></f></get_operator>
+		<set_operator set="method" line="705"><f a="value">
+	<x path="lime.graphics.cairo.CairoOperator"/>
+	<x path="lime.graphics.cairo.CairoOperator"/>
+</f></set_operator>
+		<get_referenceCount set="method" line="716"><f a=""><x path="Int"/></f></get_referenceCount>
+		<get_source set="method" line="727"><f a=""><x path="lime.graphics.cairo.CairoPattern"/></f></get_source>
+		<set_source set="method" line="738"><f a="value">
+	<x path="lime.graphics.cairo.CairoPattern"/>
+	<x path="lime.graphics.cairo.CairoPattern"/>
+</f></set_source>
+		<get_target set="method" line="749"><f a=""><x path="lime.graphics.cairo.CairoSurface"/></f></get_target>
+		<get_tolerance set="method" line="760"><f a=""><x path="Float"/></f></get_tolerance>
+		<set_tolerance set="method" line="771"><f a="value">
+	<x path="Float"/>
+	<x path="Float"/>
+</f></set_tolerance>
+		<new public="1" set="method" line="37"><f a="?surface">
+	<x path="lime.graphics.cairo.CairoSurface"/>
+	<x path="Void"/>
+</f></new>
+	</class>
+	<abstract path="lime.graphics.cairo.CairoAntialias" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/graphics/cairo/CairoAntialias.hx">
+		<from><icast><x path="Int"/></icast></from>
+		<this><x path="Int"/></this>
+		<to><icast><x path="Int"/></icast></to>
+		<meta><m n=":enum"/></meta>
+		<impl><class path="lime.graphics.cairo._CairoAntialias.CairoAntialias_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/graphics/cairo/CairoAntialias.hx" private="1" module="lime.graphics.cairo.CairoAntialias" extern="1">
+	<DEFAULT public="1" get="inline" set="null" line="6" static="1">
+		<x path="lime.graphics.cairo.CairoAntialias"/>
+		<meta>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</DEFAULT>
+	<NONE public="1" get="inline" set="null" line="7" static="1">
+		<x path="lime.graphics.cairo.CairoAntialias"/>
+		<meta>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</NONE>
+	<GRAY public="1" get="inline" set="null" line="8" static="1">
+		<x path="lime.graphics.cairo.CairoAntialias"/>
+		<meta>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</GRAY>
+	<SUBPIXEL public="1" get="inline" set="null" line="9" static="1">
+		<x path="lime.graphics.cairo.CairoAntialias"/>
+		<meta>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</SUBPIXEL>
+	<FAST public="1" get="inline" set="null" line="10" static="1">
+		<x path="lime.graphics.cairo.CairoAntialias"/>
+		<meta>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</FAST>
+	<GOOD public="1" get="inline" set="null" line="11" static="1">
+		<x path="lime.graphics.cairo.CairoAntialias"/>
+		<meta>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</GOOD>
+	<BEST public="1" get="inline" set="null" line="12" static="1">
+		<x path="lime.graphics.cairo.CairoAntialias"/>
+		<meta>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</BEST>
+	<meta><m n=":enum"/></meta>
+</class></impl>
+	</abstract>
+	<class path="lime.graphics.cairo._CairoAntialias.CairoAntialias_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/graphics/cairo/CairoAntialias.hx" private="1" module="lime.graphics.cairo.CairoAntialias" extern="1">
+		<DEFAULT public="1" get="inline" set="null" line="6" static="1">
+			<x path="lime.graphics.cairo.CairoAntialias"/>
+			<meta>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</DEFAULT>
+		<NONE public="1" get="inline" set="null" line="7" static="1">
+			<x path="lime.graphics.cairo.CairoAntialias"/>
+			<meta>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</NONE>
+		<GRAY public="1" get="inline" set="null" line="8" static="1">
+			<x path="lime.graphics.cairo.CairoAntialias"/>
+			<meta>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</GRAY>
+		<SUBPIXEL public="1" get="inline" set="null" line="9" static="1">
+			<x path="lime.graphics.cairo.CairoAntialias"/>
+			<meta>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</SUBPIXEL>
+		<FAST public="1" get="inline" set="null" line="10" static="1">
+			<x path="lime.graphics.cairo.CairoAntialias"/>
+			<meta>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</FAST>
+		<GOOD public="1" get="inline" set="null" line="11" static="1">
+			<x path="lime.graphics.cairo.CairoAntialias"/>
+			<meta>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</GOOD>
+		<BEST public="1" get="inline" set="null" line="12" static="1">
+			<x path="lime.graphics.cairo.CairoAntialias"/>
+			<meta>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</BEST>
+		<meta><m n=":enum"/></meta>
+	</class>
+	<abstract path="lime.graphics.cairo.CairoContent" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/graphics/cairo/CairoContent.hx">
+		<from><icast><x path="Int"/></icast></from>
+		<this><x path="Int"/></this>
+		<to><icast><x path="Int"/></icast></to>
+		<meta><m n=":enum"/></meta>
+		<impl><class path="lime.graphics.cairo._CairoContent.CairoContent_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/graphics/cairo/CairoContent.hx" private="1" module="lime.graphics.cairo.CairoContent" extern="1">
+	<COLOR public="1" get="inline" set="null" line="6" static="1">
+		<x path="lime.graphics.cairo.CairoContent"/>
+		<meta>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</COLOR>
+	<ALPHA public="1" get="inline" set="null" line="7" static="1">
+		<x path="lime.graphics.cairo.CairoContent"/>
+		<meta>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</ALPHA>
+	<COLOR_ALPHA public="1" get="inline" set="null" line="8" static="1">
+		<x path="lime.graphics.cairo.CairoContent"/>
+		<meta>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</COLOR_ALPHA>
+	<meta><m n=":enum"/></meta>
+</class></impl>
+	</abstract>
+	<class path="lime.graphics.cairo._CairoContent.CairoContent_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/graphics/cairo/CairoContent.hx" private="1" module="lime.graphics.cairo.CairoContent" extern="1">
+		<COLOR public="1" get="inline" set="null" line="6" static="1">
+			<x path="lime.graphics.cairo.CairoContent"/>
+			<meta>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</COLOR>
+		<ALPHA public="1" get="inline" set="null" line="7" static="1">
+			<x path="lime.graphics.cairo.CairoContent"/>
+			<meta>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</ALPHA>
+		<COLOR_ALPHA public="1" get="inline" set="null" line="8" static="1">
+			<x path="lime.graphics.cairo.CairoContent"/>
+			<meta>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</COLOR_ALPHA>
+		<meta><m n=":enum"/></meta>
+	</class>
+	<abstract path="lime.graphics.cairo.CairoExtend" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/graphics/cairo/CairoExtend.hx">
+		<from><icast><x path="Int"/></icast></from>
+		<this><x path="Int"/></this>
+		<to><icast><x path="Int"/></icast></to>
+		<meta><m n=":enum"/></meta>
+		<impl><class path="lime.graphics.cairo._CairoExtend.CairoExtend_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/graphics/cairo/CairoExtend.hx" private="1" module="lime.graphics.cairo.CairoExtend" extern="1">
+	<NONE public="1" get="inline" set="null" line="6" static="1">
+		<x path="lime.graphics.cairo.CairoExtend"/>
+		<meta>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</NONE>
+	<REPEAT public="1" get="inline" set="null" line="7" static="1">
+		<x path="lime.graphics.cairo.CairoExtend"/>
+		<meta>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</REPEAT>
+	<REFLECT public="1" get="inline" set="null" line="8" static="1">
+		<x path="lime.graphics.cairo.CairoExtend"/>
+		<meta>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</REFLECT>
+	<PAD public="1" get="inline" set="null" line="9" static="1">
+		<x path="lime.graphics.cairo.CairoExtend"/>
+		<meta>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</PAD>
+	<meta><m n=":enum"/></meta>
+</class></impl>
+	</abstract>
+	<class path="lime.graphics.cairo._CairoExtend.CairoExtend_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/graphics/cairo/CairoExtend.hx" private="1" module="lime.graphics.cairo.CairoExtend" extern="1">
+		<NONE public="1" get="inline" set="null" line="6" static="1">
+			<x path="lime.graphics.cairo.CairoExtend"/>
+			<meta>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</NONE>
+		<REPEAT public="1" get="inline" set="null" line="7" static="1">
+			<x path="lime.graphics.cairo.CairoExtend"/>
+			<meta>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</REPEAT>
+		<REFLECT public="1" get="inline" set="null" line="8" static="1">
+			<x path="lime.graphics.cairo.CairoExtend"/>
+			<meta>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</REFLECT>
+		<PAD public="1" get="inline" set="null" line="9" static="1">
+			<x path="lime.graphics.cairo.CairoExtend"/>
+			<meta>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</PAD>
+		<meta><m n=":enum"/></meta>
+	</class>
+	<abstract path="lime.graphics.cairo.CairoFillRule" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/graphics/cairo/CairoFillRule.hx">
+		<from><icast><x path="Int"/></icast></from>
+		<this><x path="Int"/></this>
+		<to><icast><x path="Int"/></icast></to>
+		<meta><m n=":enum"/></meta>
+		<impl><class path="lime.graphics.cairo._CairoFillRule.CairoFillRule_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/graphics/cairo/CairoFillRule.hx" private="1" module="lime.graphics.cairo.CairoFillRule" extern="1">
+	<WINDING public="1" get="inline" set="null" line="6" static="1">
+		<x path="lime.graphics.cairo.CairoFillRule"/>
+		<meta>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</WINDING>
+	<EVEN_ODD public="1" get="inline" set="null" line="7" static="1">
+		<x path="lime.graphics.cairo.CairoFillRule"/>
+		<meta>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</EVEN_ODD>
+	<meta><m n=":enum"/></meta>
+</class></impl>
+	</abstract>
+	<class path="lime.graphics.cairo._CairoFillRule.CairoFillRule_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/graphics/cairo/CairoFillRule.hx" private="1" module="lime.graphics.cairo.CairoFillRule" extern="1">
+		<WINDING public="1" get="inline" set="null" line="6" static="1">
+			<x path="lime.graphics.cairo.CairoFillRule"/>
+			<meta>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</WINDING>
+		<EVEN_ODD public="1" get="inline" set="null" line="7" static="1">
+			<x path="lime.graphics.cairo.CairoFillRule"/>
+			<meta>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</EVEN_ODD>
+		<meta><m n=":enum"/></meta>
+	</class>
+	<abstract path="lime.graphics.cairo.CairoFilter" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/graphics/cairo/CairoFilter.hx">
+		<from><icast><x path="Int"/></icast></from>
+		<this><x path="Int"/></this>
+		<to><icast><x path="Int"/></icast></to>
+		<meta><m n=":enum"/></meta>
+		<impl><class path="lime.graphics.cairo._CairoFilter.CairoFilter_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/graphics/cairo/CairoFilter.hx" private="1" module="lime.graphics.cairo.CairoFilter" extern="1">
+	<FAST public="1" get="inline" set="null" line="6" static="1">
+		<x path="lime.graphics.cairo.CairoFilter"/>
+		<meta>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</FAST>
+	<GOOD public="1" get="inline" set="null" line="7" static="1">
+		<x path="lime.graphics.cairo.CairoFilter"/>
+		<meta>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</GOOD>
+	<BEST public="1" get="inline" set="null" line="8" static="1">
+		<x path="lime.graphics.cairo.CairoFilter"/>
+		<meta>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</BEST>
+	<NEAREST public="1" get="inline" set="null" line="9" static="1">
+		<x path="lime.graphics.cairo.CairoFilter"/>
+		<meta>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</NEAREST>
+	<BILINEAR public="1" get="inline" set="null" line="10" static="1">
+		<x path="lime.graphics.cairo.CairoFilter"/>
+		<meta>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</BILINEAR>
+	<GAUSSIAN public="1" get="inline" set="null" line="11" static="1">
+		<x path="lime.graphics.cairo.CairoFilter"/>
+		<meta>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</GAUSSIAN>
+	<meta><m n=":enum"/></meta>
+</class></impl>
+	</abstract>
+	<class path="lime.graphics.cairo._CairoFilter.CairoFilter_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/graphics/cairo/CairoFilter.hx" private="1" module="lime.graphics.cairo.CairoFilter" extern="1">
+		<FAST public="1" get="inline" set="null" line="6" static="1">
+			<x path="lime.graphics.cairo.CairoFilter"/>
+			<meta>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</FAST>
+		<GOOD public="1" get="inline" set="null" line="7" static="1">
+			<x path="lime.graphics.cairo.CairoFilter"/>
+			<meta>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</GOOD>
+		<BEST public="1" get="inline" set="null" line="8" static="1">
+			<x path="lime.graphics.cairo.CairoFilter"/>
+			<meta>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</BEST>
+		<NEAREST public="1" get="inline" set="null" line="9" static="1">
+			<x path="lime.graphics.cairo.CairoFilter"/>
+			<meta>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</NEAREST>
+		<BILINEAR public="1" get="inline" set="null" line="10" static="1">
+			<x path="lime.graphics.cairo.CairoFilter"/>
+			<meta>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</BILINEAR>
+		<GAUSSIAN public="1" get="inline" set="null" line="11" static="1">
+			<x path="lime.graphics.cairo.CairoFilter"/>
+			<meta>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</GAUSSIAN>
+		<meta><m n=":enum"/></meta>
+	</class>
+	<abstract path="lime.graphics.cairo.CairoFormat" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/graphics/cairo/CairoFormat.hx">
+		<from><icast><x path="Int"/></icast></from>
+		<this><x path="Int"/></this>
+		<to><icast><x path="Int"/></icast></to>
+		<meta><m n=":enum"/></meta>
+		<impl><class path="lime.graphics.cairo._CairoFormat.CairoFormat_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/graphics/cairo/CairoFormat.hx" private="1" module="lime.graphics.cairo.CairoFormat" extern="1">
+	<INVALID public="1" get="inline" set="null" line="6" static="1">
+		<x path="lime.graphics.cairo.CairoFormat"/>
+		<meta>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</INVALID>
+	<ARGB32 public="1" get="inline" set="null" line="7" static="1">
+		<x path="lime.graphics.cairo.CairoFormat"/>
+		<meta>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</ARGB32>
+	<RGB24 public="1" get="inline" set="null" line="8" static="1">
+		<x path="lime.graphics.cairo.CairoFormat"/>
+		<meta>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</RGB24>
+	<A8 public="1" get="inline" set="null" line="9" static="1">
+		<x path="lime.graphics.cairo.CairoFormat"/>
+		<meta>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</A8>
+	<A1 public="1" get="inline" set="null" line="10" static="1">
+		<x path="lime.graphics.cairo.CairoFormat"/>
+		<meta>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</A1>
+	<RGB16_565 public="1" get="inline" set="null" line="11" static="1">
+		<x path="lime.graphics.cairo.CairoFormat"/>
+		<meta>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</RGB16_565>
+	<RGB30 public="1" get="inline" set="null" line="12" static="1">
+		<x path="lime.graphics.cairo.CairoFormat"/>
+		<meta>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</RGB30>
+	<meta><m n=":enum"/></meta>
+</class></impl>
+	</abstract>
+	<class path="lime.graphics.cairo._CairoFormat.CairoFormat_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/graphics/cairo/CairoFormat.hx" private="1" module="lime.graphics.cairo.CairoFormat" extern="1">
+		<INVALID public="1" get="inline" set="null" line="6" static="1">
+			<x path="lime.graphics.cairo.CairoFormat"/>
+			<meta>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</INVALID>
+		<ARGB32 public="1" get="inline" set="null" line="7" static="1">
+			<x path="lime.graphics.cairo.CairoFormat"/>
+			<meta>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</ARGB32>
+		<RGB24 public="1" get="inline" set="null" line="8" static="1">
+			<x path="lime.graphics.cairo.CairoFormat"/>
+			<meta>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</RGB24>
+		<A8 public="1" get="inline" set="null" line="9" static="1">
+			<x path="lime.graphics.cairo.CairoFormat"/>
+			<meta>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</A8>
+		<A1 public="1" get="inline" set="null" line="10" static="1">
+			<x path="lime.graphics.cairo.CairoFormat"/>
+			<meta>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</A1>
+		<RGB16_565 public="1" get="inline" set="null" line="11" static="1">
+			<x path="lime.graphics.cairo.CairoFormat"/>
+			<meta>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</RGB16_565>
+		<RGB30 public="1" get="inline" set="null" line="12" static="1">
+			<x path="lime.graphics.cairo.CairoFormat"/>
+			<meta>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</RGB30>
+		<meta><m n=":enum"/></meta>
+	</class>
+	<abstract path="lime.graphics.cairo.CairoLineCap" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/graphics/cairo/CairoLineCap.hx">
+		<from><icast><x path="Int"/></icast></from>
+		<this><x path="Int"/></this>
+		<to><icast><x path="Int"/></icast></to>
+		<meta><m n=":enum"/></meta>
+		<impl><class path="lime.graphics.cairo._CairoLineCap.CairoLineCap_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/graphics/cairo/CairoLineCap.hx" private="1" module="lime.graphics.cairo.CairoLineCap" extern="1">
+	<BUTT public="1" get="inline" set="null" line="6" static="1">
+		<x path="lime.graphics.cairo.CairoLineCap"/>
+		<meta>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</BUTT>
+	<ROUND public="1" get="inline" set="null" line="7" static="1">
+		<x path="lime.graphics.cairo.CairoLineCap"/>
+		<meta>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</ROUND>
+	<SQUARE public="1" get="inline" set="null" line="8" static="1">
+		<x path="lime.graphics.cairo.CairoLineCap"/>
+		<meta>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</SQUARE>
+	<meta><m n=":enum"/></meta>
+</class></impl>
+	</abstract>
+	<class path="lime.graphics.cairo._CairoLineCap.CairoLineCap_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/graphics/cairo/CairoLineCap.hx" private="1" module="lime.graphics.cairo.CairoLineCap" extern="1">
+		<BUTT public="1" get="inline" set="null" line="6" static="1">
+			<x path="lime.graphics.cairo.CairoLineCap"/>
+			<meta>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</BUTT>
+		<ROUND public="1" get="inline" set="null" line="7" static="1">
+			<x path="lime.graphics.cairo.CairoLineCap"/>
+			<meta>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</ROUND>
+		<SQUARE public="1" get="inline" set="null" line="8" static="1">
+			<x path="lime.graphics.cairo.CairoLineCap"/>
+			<meta>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</SQUARE>
+		<meta><m n=":enum"/></meta>
+	</class>
+	<abstract path="lime.graphics.cairo.CairoLineJoin" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/graphics/cairo/CairoLineJoin.hx">
+		<from><icast><x path="Int"/></icast></from>
+		<this><x path="Int"/></this>
+		<to><icast><x path="Int"/></icast></to>
+		<meta><m n=":enum"/></meta>
+		<impl><class path="lime.graphics.cairo._CairoLineJoin.CairoLineJoin_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/graphics/cairo/CairoLineJoin.hx" private="1" module="lime.graphics.cairo.CairoLineJoin" extern="1">
+	<MITER public="1" get="inline" set="null" line="6" static="1">
+		<x path="lime.graphics.cairo.CairoLineJoin"/>
+		<meta>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</MITER>
+	<ROUND public="1" get="inline" set="null" line="7" static="1">
+		<x path="lime.graphics.cairo.CairoLineJoin"/>
+		<meta>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</ROUND>
+	<BEVEL public="1" get="inline" set="null" line="8" static="1">
+		<x path="lime.graphics.cairo.CairoLineJoin"/>
+		<meta>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</BEVEL>
+	<meta><m n=":enum"/></meta>
+</class></impl>
+	</abstract>
+	<class path="lime.graphics.cairo._CairoLineJoin.CairoLineJoin_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/graphics/cairo/CairoLineJoin.hx" private="1" module="lime.graphics.cairo.CairoLineJoin" extern="1">
+		<MITER public="1" get="inline" set="null" line="6" static="1">
+			<x path="lime.graphics.cairo.CairoLineJoin"/>
+			<meta>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</MITER>
+		<ROUND public="1" get="inline" set="null" line="7" static="1">
+			<x path="lime.graphics.cairo.CairoLineJoin"/>
+			<meta>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</ROUND>
+		<BEVEL public="1" get="inline" set="null" line="8" static="1">
+			<x path="lime.graphics.cairo.CairoLineJoin"/>
+			<meta>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</BEVEL>
+		<meta><m n=":enum"/></meta>
+	</class>
+	<abstract path="lime.graphics.cairo.CairoOperator" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/graphics/cairo/CairoOperator.hx">
+		<from><icast><x path="Int"/></icast></from>
+		<this><x path="Int"/></this>
+		<to><icast><x path="Int"/></icast></to>
+		<meta><m n=":enum"/></meta>
+		<impl><class path="lime.graphics.cairo._CairoOperator.CairoOperator_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/graphics/cairo/CairoOperator.hx" private="1" module="lime.graphics.cairo.CairoOperator" extern="1">
+	<CLEAR public="1" get="inline" set="null" line="6" static="1">
+		<x path="lime.graphics.cairo.CairoOperator"/>
+		<meta>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</CLEAR>
+	<SOURCE public="1" get="inline" set="null" line="7" static="1">
+		<x path="lime.graphics.cairo.CairoOperator"/>
+		<meta>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</SOURCE>
+	<OVER public="1" get="inline" set="null" line="8" static="1">
+		<x path="lime.graphics.cairo.CairoOperator"/>
+		<meta>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</OVER>
+	<IN public="1" get="inline" set="null" line="9" static="1">
+		<x path="lime.graphics.cairo.CairoOperator"/>
+		<meta>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</IN>
+	<OUT public="1" get="inline" set="null" line="10" static="1">
+		<x path="lime.graphics.cairo.CairoOperator"/>
+		<meta>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</OUT>
+	<ATOP public="1" get="inline" set="null" line="11" static="1">
+		<x path="lime.graphics.cairo.CairoOperator"/>
+		<meta>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</ATOP>
+	<DEST public="1" get="inline" set="null" line="12" static="1">
+		<x path="lime.graphics.cairo.CairoOperator"/>
+		<meta>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</DEST>
+	<DEST_OVER public="1" get="inline" set="null" line="13" static="1">
+		<x path="lime.graphics.cairo.CairoOperator"/>
+		<meta>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</DEST_OVER>
+	<DEST_IN public="1" get="inline" set="null" line="14" static="1">
+		<x path="lime.graphics.cairo.CairoOperator"/>
+		<meta>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</DEST_IN>
+	<DEST_OUT public="1" get="inline" set="null" line="15" static="1">
+		<x path="lime.graphics.cairo.CairoOperator"/>
+		<meta>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</DEST_OUT>
+	<DEST_ATOP public="1" get="inline" set="null" line="16" static="1">
+		<x path="lime.graphics.cairo.CairoOperator"/>
+		<meta>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</DEST_ATOP>
+	<XOR public="1" get="inline" set="null" line="17" static="1">
+		<x path="lime.graphics.cairo.CairoOperator"/>
+		<meta>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</XOR>
+	<ADD public="1" get="inline" set="null" line="18" static="1">
+		<x path="lime.graphics.cairo.CairoOperator"/>
+		<meta>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</ADD>
+	<SATURATE public="1" get="inline" set="null" line="19" static="1">
+		<x path="lime.graphics.cairo.CairoOperator"/>
+		<meta>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</SATURATE>
+	<MULTIPLY public="1" get="inline" set="null" line="20" static="1">
+		<x path="lime.graphics.cairo.CairoOperator"/>
+		<meta>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</MULTIPLY>
+	<SCREEN public="1" get="inline" set="null" line="21" static="1">
+		<x path="lime.graphics.cairo.CairoOperator"/>
+		<meta>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</SCREEN>
+	<OVERLAY public="1" get="inline" set="null" line="22" static="1">
+		<x path="lime.graphics.cairo.CairoOperator"/>
+		<meta>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</OVERLAY>
+	<DARKEN public="1" get="inline" set="null" line="23" static="1">
+		<x path="lime.graphics.cairo.CairoOperator"/>
+		<meta>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</DARKEN>
+	<LIGHTEN public="1" get="inline" set="null" line="24" static="1">
+		<x path="lime.graphics.cairo.CairoOperator"/>
+		<meta>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</LIGHTEN>
+	<COLOR_DODGE public="1" get="inline" set="null" line="25" static="1">
+		<x path="lime.graphics.cairo.CairoOperator"/>
+		<meta>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</COLOR_DODGE>
+	<COLOR_BURN public="1" get="inline" set="null" line="26" static="1">
+		<x path="lime.graphics.cairo.CairoOperator"/>
+		<meta>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</COLOR_BURN>
+	<HARD_LIGHT public="1" get="inline" set="null" line="27" static="1">
+		<x path="lime.graphics.cairo.CairoOperator"/>
+		<meta>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</HARD_LIGHT>
+	<SOFT_LIGHT public="1" get="inline" set="null" line="28" static="1">
+		<x path="lime.graphics.cairo.CairoOperator"/>
+		<meta>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</SOFT_LIGHT>
+	<DIFFERENCE public="1" get="inline" set="null" line="29" static="1">
+		<x path="lime.graphics.cairo.CairoOperator"/>
+		<meta>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</DIFFERENCE>
+	<EXCLUSION public="1" get="inline" set="null" line="30" static="1">
+		<x path="lime.graphics.cairo.CairoOperator"/>
+		<meta>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</EXCLUSION>
+	<HSL_HUE public="1" get="inline" set="null" line="31" static="1">
+		<x path="lime.graphics.cairo.CairoOperator"/>
+		<meta>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</HSL_HUE>
+	<HSL_SATURATION public="1" get="inline" set="null" line="32" static="1">
+		<x path="lime.graphics.cairo.CairoOperator"/>
+		<meta>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</HSL_SATURATION>
+	<HSL_COLOR public="1" get="inline" set="null" line="33" static="1">
+		<x path="lime.graphics.cairo.CairoOperator"/>
+		<meta>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</HSL_COLOR>
+	<HSL_LUMINOSITY public="1" get="inline" set="null" line="34" static="1">
+		<x path="lime.graphics.cairo.CairoOperator"/>
+		<meta>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</HSL_LUMINOSITY>
+	<meta><m n=":enum"/></meta>
+</class></impl>
+	</abstract>
+	<class path="lime.graphics.cairo._CairoOperator.CairoOperator_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/graphics/cairo/CairoOperator.hx" private="1" module="lime.graphics.cairo.CairoOperator" extern="1">
+		<CLEAR public="1" get="inline" set="null" line="6" static="1">
+			<x path="lime.graphics.cairo.CairoOperator"/>
+			<meta>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</CLEAR>
+		<SOURCE public="1" get="inline" set="null" line="7" static="1">
+			<x path="lime.graphics.cairo.CairoOperator"/>
+			<meta>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</SOURCE>
+		<OVER public="1" get="inline" set="null" line="8" static="1">
+			<x path="lime.graphics.cairo.CairoOperator"/>
+			<meta>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</OVER>
+		<IN public="1" get="inline" set="null" line="9" static="1">
+			<x path="lime.graphics.cairo.CairoOperator"/>
+			<meta>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</IN>
+		<OUT public="1" get="inline" set="null" line="10" static="1">
+			<x path="lime.graphics.cairo.CairoOperator"/>
+			<meta>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</OUT>
+		<ATOP public="1" get="inline" set="null" line="11" static="1">
+			<x path="lime.graphics.cairo.CairoOperator"/>
+			<meta>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</ATOP>
+		<DEST public="1" get="inline" set="null" line="12" static="1">
+			<x path="lime.graphics.cairo.CairoOperator"/>
+			<meta>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</DEST>
+		<DEST_OVER public="1" get="inline" set="null" line="13" static="1">
+			<x path="lime.graphics.cairo.CairoOperator"/>
+			<meta>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</DEST_OVER>
+		<DEST_IN public="1" get="inline" set="null" line="14" static="1">
+			<x path="lime.graphics.cairo.CairoOperator"/>
+			<meta>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</DEST_IN>
+		<DEST_OUT public="1" get="inline" set="null" line="15" static="1">
+			<x path="lime.graphics.cairo.CairoOperator"/>
+			<meta>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</DEST_OUT>
+		<DEST_ATOP public="1" get="inline" set="null" line="16" static="1">
+			<x path="lime.graphics.cairo.CairoOperator"/>
+			<meta>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</DEST_ATOP>
+		<XOR public="1" get="inline" set="null" line="17" static="1">
+			<x path="lime.graphics.cairo.CairoOperator"/>
+			<meta>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</XOR>
+		<ADD public="1" get="inline" set="null" line="18" static="1">
+			<x path="lime.graphics.cairo.CairoOperator"/>
+			<meta>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</ADD>
+		<SATURATE public="1" get="inline" set="null" line="19" static="1">
+			<x path="lime.graphics.cairo.CairoOperator"/>
+			<meta>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</SATURATE>
+		<MULTIPLY public="1" get="inline" set="null" line="20" static="1">
+			<x path="lime.graphics.cairo.CairoOperator"/>
+			<meta>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</MULTIPLY>
+		<SCREEN public="1" get="inline" set="null" line="21" static="1">
+			<x path="lime.graphics.cairo.CairoOperator"/>
+			<meta>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</SCREEN>
+		<OVERLAY public="1" get="inline" set="null" line="22" static="1">
+			<x path="lime.graphics.cairo.CairoOperator"/>
+			<meta>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</OVERLAY>
+		<DARKEN public="1" get="inline" set="null" line="23" static="1">
+			<x path="lime.graphics.cairo.CairoOperator"/>
+			<meta>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</DARKEN>
+		<LIGHTEN public="1" get="inline" set="null" line="24" static="1">
+			<x path="lime.graphics.cairo.CairoOperator"/>
+			<meta>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</LIGHTEN>
+		<COLOR_DODGE public="1" get="inline" set="null" line="25" static="1">
+			<x path="lime.graphics.cairo.CairoOperator"/>
+			<meta>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</COLOR_DODGE>
+		<COLOR_BURN public="1" get="inline" set="null" line="26" static="1">
+			<x path="lime.graphics.cairo.CairoOperator"/>
+			<meta>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</COLOR_BURN>
+		<HARD_LIGHT public="1" get="inline" set="null" line="27" static="1">
+			<x path="lime.graphics.cairo.CairoOperator"/>
+			<meta>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</HARD_LIGHT>
+		<SOFT_LIGHT public="1" get="inline" set="null" line="28" static="1">
+			<x path="lime.graphics.cairo.CairoOperator"/>
+			<meta>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</SOFT_LIGHT>
+		<DIFFERENCE public="1" get="inline" set="null" line="29" static="1">
+			<x path="lime.graphics.cairo.CairoOperator"/>
+			<meta>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</DIFFERENCE>
+		<EXCLUSION public="1" get="inline" set="null" line="30" static="1">
+			<x path="lime.graphics.cairo.CairoOperator"/>
+			<meta>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</EXCLUSION>
+		<HSL_HUE public="1" get="inline" set="null" line="31" static="1">
+			<x path="lime.graphics.cairo.CairoOperator"/>
+			<meta>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</HSL_HUE>
+		<HSL_SATURATION public="1" get="inline" set="null" line="32" static="1">
+			<x path="lime.graphics.cairo.CairoOperator"/>
+			<meta>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</HSL_SATURATION>
+		<HSL_COLOR public="1" get="inline" set="null" line="33" static="1">
+			<x path="lime.graphics.cairo.CairoOperator"/>
+			<meta>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</HSL_COLOR>
+		<HSL_LUMINOSITY public="1" get="inline" set="null" line="34" static="1">
+			<x path="lime.graphics.cairo.CairoOperator"/>
+			<meta>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</HSL_LUMINOSITY>
+		<meta><m n=":enum"/></meta>
+	</class>
+	<abstract path="lime.graphics.cairo.CairoPattern" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/graphics/cairo/CairoPattern.hx">
+		<this><d/></this>
+		<impl><class path="lime.graphics.cairo._CairoPattern.CairoPattern_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/graphics/cairo/CairoPattern.hx" private="1" module="lime.graphics.cairo.CairoPattern">
+	<colorStopCount public="1" get="accessor" set="null" static="1">
+		<x path="Int"/>
+		<meta><m n=":impl"/></meta>
+	</colorStopCount>
+	<extend public="1" get="accessor" set="accessor" static="1">
+		<x path="lime.graphics.cairo.CairoExtend"/>
+		<meta><m n=":impl"/></meta>
+	</extend>
+	<filter public="1" get="accessor" set="accessor" static="1">
+		<x path="lime.graphics.cairo.CairoFilter"/>
+		<meta><m n=":impl"/></meta>
+	</filter>
+	<matrix public="1" get="accessor" set="accessor" static="1">
+		<c path="lime.math.Matrix3"/>
+		<meta><m n=":impl"/></meta>
+	</matrix>
+	<_new public="1" set="method" line="17" static="1">
+		<f a="handle">
+			<unknown/>
+			<x path="lime.graphics.cairo.CairoPattern"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</_new>
+	<addColorStopRGB public="1" set="method" line="24" static="1">
+		<f a="this:offset:r:g:b">
+			<d/>
+			<x path="Float"/>
+			<x path="Float"/>
+			<x path="Float"/>
+			<x path="Float"/>
+			<x path="Void"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</addColorStopRGB>
+	<addColorStopRGBA public="1" set="method" line="33" static="1">
+		<f a="this:offset:r:g:b:a">
+			<d/>
+			<x path="Float"/>
+			<x path="Float"/>
+			<x path="Float"/>
+			<x path="Float"/>
+			<x path="Float"/>
+			<x path="Void"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</addColorStopRGBA>
+	<createForSurface public="1" set="method" line="42" static="1"><f a="surface">
+	<x path="lime.graphics.cairo.CairoSurface"/>
+	<x path="lime.graphics.cairo.CairoPattern"/>
+</f></createForSurface>
+	<createLinear public="1" set="method" line="53" static="1"><f a="x0:y0:x1:y1">
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="lime.graphics.cairo.CairoPattern"/>
+</f></createLinear>
+	<createRadial public="1" set="method" line="64" static="1"><f a="cx0:cy0:radius0:cx1:cy1:radius1">
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="lime.graphics.cairo.CairoPattern"/>
+</f></createRadial>
+	<createRGB public="1" set="method" line="75" static="1"><f a="r:g:b">
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="lime.graphics.cairo.CairoPattern"/>
+</f></createRGB>
+	<createRGBA public="1" set="method" line="86" static="1"><f a="r:g:b:a">
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="lime.graphics.cairo.CairoPattern"/>
+</f></createRGBA>
+	<destroy public="1" set="method" line="97" static="1">
+		<f a="this">
+			<d/>
+			<x path="Void"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</destroy>
+	<get_colorStopCount public="1" set="method" line="113" static="1">
+		<f a="this">
+			<d/>
+			<x path="Int"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</get_colorStopCount>
+	<get_extend public="1" set="method" line="124" static="1">
+		<f a="this">
+			<d/>
+			<x path="lime.graphics.cairo.CairoExtend"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</get_extend>
+	<set_extend public="1" set="method" line="135" static="1">
+		<f a="this:value">
+			<d/>
+			<x path="lime.graphics.cairo.CairoExtend"/>
+			<x path="lime.graphics.cairo.CairoExtend"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</set_extend>
+	<get_filter public="1" set="method" line="146" static="1">
+		<f a="this">
+			<d/>
+			<x path="lime.graphics.cairo.CairoFilter"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</get_filter>
+	<set_filter public="1" set="method" line="157" static="1">
+		<f a="this:value">
+			<d/>
+			<x path="lime.graphics.cairo.CairoFilter"/>
+			<x path="lime.graphics.cairo.CairoFilter"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</set_filter>
+	<get_matrix public="1" set="method" line="168" static="1">
+		<f a="this">
+			<d/>
+			<c path="lime.math.Matrix3"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</get_matrix>
+	<set_matrix public="1" set="method" line="180" static="1">
+		<f a="this:value">
+			<d/>
+			<c path="lime.math.Matrix3"/>
+			<c path="lime.math.Matrix3"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</set_matrix>
+</class></impl>
+	</abstract>
+	<class path="lime.graphics.cairo._CairoPattern.CairoPattern_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/graphics/cairo/CairoPattern.hx" private="1" module="lime.graphics.cairo.CairoPattern">
+		<colorStopCount public="1" get="accessor" set="null" static="1">
+			<x path="Int"/>
+			<meta><m n=":impl"/></meta>
+		</colorStopCount>
+		<extend public="1" get="accessor" set="accessor" static="1">
+			<x path="lime.graphics.cairo.CairoExtend"/>
+			<meta><m n=":impl"/></meta>
+		</extend>
+		<filter public="1" get="accessor" set="accessor" static="1">
+			<x path="lime.graphics.cairo.CairoFilter"/>
+			<meta><m n=":impl"/></meta>
+		</filter>
+		<matrix public="1" get="accessor" set="accessor" static="1">
+			<c path="lime.math.Matrix3"/>
+			<meta><m n=":impl"/></meta>
+		</matrix>
+		<_new public="1" set="method" line="17" static="1">
+			<f a="handle">
+				<unknown/>
+				<x path="lime.graphics.cairo.CairoPattern"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</_new>
+		<addColorStopRGB public="1" set="method" line="24" static="1">
+			<f a="this:offset:r:g:b">
+				<d/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Void"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</addColorStopRGB>
+		<addColorStopRGBA public="1" set="method" line="33" static="1">
+			<f a="this:offset:r:g:b:a">
+				<d/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Void"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</addColorStopRGBA>
+		<createForSurface public="1" set="method" line="42" static="1"><f a="surface">
+	<x path="lime.graphics.cairo.CairoSurface"/>
+	<x path="lime.graphics.cairo.CairoPattern"/>
+</f></createForSurface>
+		<createLinear public="1" set="method" line="53" static="1"><f a="x0:y0:x1:y1">
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="lime.graphics.cairo.CairoPattern"/>
+</f></createLinear>
+		<createRadial public="1" set="method" line="64" static="1"><f a="cx0:cy0:radius0:cx1:cy1:radius1">
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="lime.graphics.cairo.CairoPattern"/>
+</f></createRadial>
+		<createRGB public="1" set="method" line="75" static="1"><f a="r:g:b">
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="lime.graphics.cairo.CairoPattern"/>
+</f></createRGB>
+		<createRGBA public="1" set="method" line="86" static="1"><f a="r:g:b:a">
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="Float"/>
+	<x path="lime.graphics.cairo.CairoPattern"/>
+</f></createRGBA>
+		<destroy public="1" set="method" line="97" static="1">
+			<f a="this">
+				<d/>
+				<x path="Void"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</destroy>
+		<get_colorStopCount public="1" set="method" line="113" static="1">
+			<f a="this">
+				<d/>
+				<x path="Int"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</get_colorStopCount>
+		<get_extend public="1" set="method" line="124" static="1">
+			<f a="this">
+				<d/>
+				<x path="lime.graphics.cairo.CairoExtend"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</get_extend>
+		<set_extend public="1" set="method" line="135" static="1">
+			<f a="this:value">
+				<d/>
+				<x path="lime.graphics.cairo.CairoExtend"/>
+				<x path="lime.graphics.cairo.CairoExtend"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</set_extend>
+		<get_filter public="1" set="method" line="146" static="1">
+			<f a="this">
+				<d/>
+				<x path="lime.graphics.cairo.CairoFilter"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</get_filter>
+		<set_filter public="1" set="method" line="157" static="1">
+			<f a="this:value">
+				<d/>
+				<x path="lime.graphics.cairo.CairoFilter"/>
+				<x path="lime.graphics.cairo.CairoFilter"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</set_filter>
+		<get_matrix public="1" set="method" line="168" static="1">
+			<f a="this">
+				<d/>
+				<c path="lime.math.Matrix3"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</get_matrix>
+		<set_matrix public="1" set="method" line="180" static="1">
+			<f a="this:value">
+				<d/>
+				<c path="lime.math.Matrix3"/>
+				<c path="lime.math.Matrix3"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</set_matrix>
+	</class>
+	<abstract path="lime.graphics.cairo.CairoStatus" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/graphics/cairo/CairoStatus.hx">
+		<from><icast><x path="Int"/></icast></from>
+		<this><x path="Int"/></this>
+		<to><icast><x path="Int"/></icast></to>
+		<meta><m n=":enum"/></meta>
+		<impl><class path="lime.graphics.cairo._CairoStatus.CairoStatus_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/graphics/cairo/CairoStatus.hx" private="1" module="lime.graphics.cairo.CairoStatus" extern="1">
+	<SUCCESS public="1" get="inline" set="null" line="6" static="1">
+		<x path="lime.graphics.cairo.CairoStatus"/>
+		<meta>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</SUCCESS>
+	<NO_MEMORY public="1" get="inline" set="null" line="7" static="1">
+		<x path="lime.graphics.cairo.CairoStatus"/>
+		<meta>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</NO_MEMORY>
+	<INVALID_RESTORE public="1" get="inline" set="null" line="8" static="1">
+		<x path="lime.graphics.cairo.CairoStatus"/>
+		<meta>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</INVALID_RESTORE>
+	<INVALID_POP_GROUP public="1" get="inline" set="null" line="9" static="1">
+		<x path="lime.graphics.cairo.CairoStatus"/>
+		<meta>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</INVALID_POP_GROUP>
+	<NO_CURRENT_POINT public="1" get="inline" set="null" line="10" static="1">
+		<x path="lime.graphics.cairo.CairoStatus"/>
+		<meta>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</NO_CURRENT_POINT>
+	<INVALID_MATRIX public="1" get="inline" set="null" line="11" static="1">
+		<x path="lime.graphics.cairo.CairoStatus"/>
+		<meta>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</INVALID_MATRIX>
+	<INVALID_STATUS public="1" get="inline" set="null" line="12" static="1">
+		<x path="lime.graphics.cairo.CairoStatus"/>
+		<meta>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</INVALID_STATUS>
+	<NULL_POINTER public="1" get="inline" set="null" line="13" static="1">
+		<x path="lime.graphics.cairo.CairoStatus"/>
+		<meta>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</NULL_POINTER>
+	<INVALID_STRING public="1" get="inline" set="null" line="14" static="1">
+		<x path="lime.graphics.cairo.CairoStatus"/>
+		<meta>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</INVALID_STRING>
+	<INVALID_PATH_DATA public="1" get="inline" set="null" line="15" static="1">
+		<x path="lime.graphics.cairo.CairoStatus"/>
+		<meta>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</INVALID_PATH_DATA>
+	<READ_ERROR public="1" get="inline" set="null" line="16" static="1">
+		<x path="lime.graphics.cairo.CairoStatus"/>
+		<meta>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</READ_ERROR>
+	<WRITE_ERROR public="1" get="inline" set="null" line="17" static="1">
+		<x path="lime.graphics.cairo.CairoStatus"/>
+		<meta>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</WRITE_ERROR>
+	<SURFACE_FINISHED public="1" get="inline" set="null" line="18" static="1">
+		<x path="lime.graphics.cairo.CairoStatus"/>
+		<meta>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</SURFACE_FINISHED>
+	<SURFACE_TYPE_MISMATCH public="1" get="inline" set="null" line="19" static="1">
+		<x path="lime.graphics.cairo.CairoStatus"/>
+		<meta>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</SURFACE_TYPE_MISMATCH>
+	<PATTERN_TYPE_MISMATCH public="1" get="inline" set="null" line="20" static="1">
+		<x path="lime.graphics.cairo.CairoStatus"/>
+		<meta>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</PATTERN_TYPE_MISMATCH>
+	<INVALID_CONTENT public="1" get="inline" set="null" line="21" static="1">
+		<x path="lime.graphics.cairo.CairoStatus"/>
+		<meta>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</INVALID_CONTENT>
+	<INVALID_FORMAT public="1" get="inline" set="null" line="22" static="1">
+		<x path="lime.graphics.cairo.CairoStatus"/>
+		<meta>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</INVALID_FORMAT>
+	<INVALID_VISUAL public="1" get="inline" set="null" line="23" static="1">
+		<x path="lime.graphics.cairo.CairoStatus"/>
+		<meta>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</INVALID_VISUAL>
+	<FILE_NOT_FOUND public="1" get="inline" set="null" line="24" static="1">
+		<x path="lime.graphics.cairo.CairoStatus"/>
+		<meta>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</FILE_NOT_FOUND>
+	<INVALID_DASH public="1" get="inline" set="null" line="25" static="1">
+		<x path="lime.graphics.cairo.CairoStatus"/>
+		<meta>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</INVALID_DASH>
+	<INVALID_DSC_COMMENT public="1" get="inline" set="null" line="26" static="1">
+		<x path="lime.graphics.cairo.CairoStatus"/>
+		<meta>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</INVALID_DSC_COMMENT>
+	<INVALID_INDEX public="1" get="inline" set="null" line="27" static="1">
+		<x path="lime.graphics.cairo.CairoStatus"/>
+		<meta>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</INVALID_INDEX>
+	<CLIP_NOT_REPRESENTABLE public="1" get="inline" set="null" line="28" static="1">
+		<x path="lime.graphics.cairo.CairoStatus"/>
+		<meta>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</CLIP_NOT_REPRESENTABLE>
+	<TEMP_FILE_ERROR public="1" get="inline" set="null" line="29" static="1">
+		<x path="lime.graphics.cairo.CairoStatus"/>
+		<meta>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</TEMP_FILE_ERROR>
+	<INVALID_STRIDE public="1" get="inline" set="null" line="30" static="1">
+		<x path="lime.graphics.cairo.CairoStatus"/>
+		<meta>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</INVALID_STRIDE>
+	<FONT_TYPE_MISMATCH public="1" get="inline" set="null" line="31" static="1">
+		<x path="lime.graphics.cairo.CairoStatus"/>
+		<meta>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</FONT_TYPE_MISMATCH>
+	<USER_FONT_IMMUTABLE public="1" get="inline" set="null" line="32" static="1">
+		<x path="lime.graphics.cairo.CairoStatus"/>
+		<meta>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</USER_FONT_IMMUTABLE>
+	<USER_FONT_ERROR public="1" get="inline" set="null" line="33" static="1">
+		<x path="lime.graphics.cairo.CairoStatus"/>
+		<meta>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</USER_FONT_ERROR>
+	<NEGATIVE_COUNT public="1" get="inline" set="null" line="34" static="1">
+		<x path="lime.graphics.cairo.CairoStatus"/>
+		<meta>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</NEGATIVE_COUNT>
+	<INVALID_CLUSTERS public="1" get="inline" set="null" line="35" static="1">
+		<x path="lime.graphics.cairo.CairoStatus"/>
+		<meta>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</INVALID_CLUSTERS>
+	<INVALID_SLANT public="1" get="inline" set="null" line="36" static="1">
+		<x path="lime.graphics.cairo.CairoStatus"/>
+		<meta>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</INVALID_SLANT>
+	<INVALID_WEIGHT public="1" get="inline" set="null" line="37" static="1">
+		<x path="lime.graphics.cairo.CairoStatus"/>
+		<meta>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</INVALID_WEIGHT>
+	<INVALID_SIZE public="1" get="inline" set="null" line="38" static="1">
+		<x path="lime.graphics.cairo.CairoStatus"/>
+		<meta>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</INVALID_SIZE>
+	<USER_FONT_NOT_IMPLEMENTED public="1" get="inline" set="null" line="39" static="1">
+		<x path="lime.graphics.cairo.CairoStatus"/>
+		<meta>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</USER_FONT_NOT_IMPLEMENTED>
+	<DEVICE_TYPE_MISMATCH public="1" get="inline" set="null" line="40" static="1">
+		<x path="lime.graphics.cairo.CairoStatus"/>
+		<meta>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</DEVICE_TYPE_MISMATCH>
+	<DEVICE_ERROR public="1" get="inline" set="null" line="41" static="1">
+		<x path="lime.graphics.cairo.CairoStatus"/>
+		<meta>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</DEVICE_ERROR>
+	<INVALID_MESH_CONSTRUCTION public="1" get="inline" set="null" line="42" static="1">
+		<x path="lime.graphics.cairo.CairoStatus"/>
+		<meta>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</INVALID_MESH_CONSTRUCTION>
+	<DEVICE_FINISHED public="1" get="inline" set="null" line="43" static="1">
+		<x path="lime.graphics.cairo.CairoStatus"/>
+		<meta>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</DEVICE_FINISHED>
+	<JBIG2_GLOBAL_MISSING public="1" get="inline" set="null" line="44" static="1">
+		<x path="lime.graphics.cairo.CairoStatus"/>
+		<meta>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</JBIG2_GLOBAL_MISSING>
+	<meta><m n=":enum"/></meta>
+</class></impl>
+	</abstract>
+	<class path="lime.graphics.cairo._CairoStatus.CairoStatus_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/graphics/cairo/CairoStatus.hx" private="1" module="lime.graphics.cairo.CairoStatus" extern="1">
+		<SUCCESS public="1" get="inline" set="null" line="6" static="1">
+			<x path="lime.graphics.cairo.CairoStatus"/>
+			<meta>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</SUCCESS>
+		<NO_MEMORY public="1" get="inline" set="null" line="7" static="1">
+			<x path="lime.graphics.cairo.CairoStatus"/>
+			<meta>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</NO_MEMORY>
+		<INVALID_RESTORE public="1" get="inline" set="null" line="8" static="1">
+			<x path="lime.graphics.cairo.CairoStatus"/>
+			<meta>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</INVALID_RESTORE>
+		<INVALID_POP_GROUP public="1" get="inline" set="null" line="9" static="1">
+			<x path="lime.graphics.cairo.CairoStatus"/>
+			<meta>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</INVALID_POP_GROUP>
+		<NO_CURRENT_POINT public="1" get="inline" set="null" line="10" static="1">
+			<x path="lime.graphics.cairo.CairoStatus"/>
+			<meta>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</NO_CURRENT_POINT>
+		<INVALID_MATRIX public="1" get="inline" set="null" line="11" static="1">
+			<x path="lime.graphics.cairo.CairoStatus"/>
+			<meta>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</INVALID_MATRIX>
+		<INVALID_STATUS public="1" get="inline" set="null" line="12" static="1">
+			<x path="lime.graphics.cairo.CairoStatus"/>
+			<meta>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</INVALID_STATUS>
+		<NULL_POINTER public="1" get="inline" set="null" line="13" static="1">
+			<x path="lime.graphics.cairo.CairoStatus"/>
+			<meta>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</NULL_POINTER>
+		<INVALID_STRING public="1" get="inline" set="null" line="14" static="1">
+			<x path="lime.graphics.cairo.CairoStatus"/>
+			<meta>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</INVALID_STRING>
+		<INVALID_PATH_DATA public="1" get="inline" set="null" line="15" static="1">
+			<x path="lime.graphics.cairo.CairoStatus"/>
+			<meta>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</INVALID_PATH_DATA>
+		<READ_ERROR public="1" get="inline" set="null" line="16" static="1">
+			<x path="lime.graphics.cairo.CairoStatus"/>
+			<meta>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</READ_ERROR>
+		<WRITE_ERROR public="1" get="inline" set="null" line="17" static="1">
+			<x path="lime.graphics.cairo.CairoStatus"/>
+			<meta>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</WRITE_ERROR>
+		<SURFACE_FINISHED public="1" get="inline" set="null" line="18" static="1">
+			<x path="lime.graphics.cairo.CairoStatus"/>
+			<meta>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</SURFACE_FINISHED>
+		<SURFACE_TYPE_MISMATCH public="1" get="inline" set="null" line="19" static="1">
+			<x path="lime.graphics.cairo.CairoStatus"/>
+			<meta>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</SURFACE_TYPE_MISMATCH>
+		<PATTERN_TYPE_MISMATCH public="1" get="inline" set="null" line="20" static="1">
+			<x path="lime.graphics.cairo.CairoStatus"/>
+			<meta>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</PATTERN_TYPE_MISMATCH>
+		<INVALID_CONTENT public="1" get="inline" set="null" line="21" static="1">
+			<x path="lime.graphics.cairo.CairoStatus"/>
+			<meta>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</INVALID_CONTENT>
+		<INVALID_FORMAT public="1" get="inline" set="null" line="22" static="1">
+			<x path="lime.graphics.cairo.CairoStatus"/>
+			<meta>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</INVALID_FORMAT>
+		<INVALID_VISUAL public="1" get="inline" set="null" line="23" static="1">
+			<x path="lime.graphics.cairo.CairoStatus"/>
+			<meta>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</INVALID_VISUAL>
+		<FILE_NOT_FOUND public="1" get="inline" set="null" line="24" static="1">
+			<x path="lime.graphics.cairo.CairoStatus"/>
+			<meta>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</FILE_NOT_FOUND>
+		<INVALID_DASH public="1" get="inline" set="null" line="25" static="1">
+			<x path="lime.graphics.cairo.CairoStatus"/>
+			<meta>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</INVALID_DASH>
+		<INVALID_DSC_COMMENT public="1" get="inline" set="null" line="26" static="1">
+			<x path="lime.graphics.cairo.CairoStatus"/>
+			<meta>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</INVALID_DSC_COMMENT>
+		<INVALID_INDEX public="1" get="inline" set="null" line="27" static="1">
+			<x path="lime.graphics.cairo.CairoStatus"/>
+			<meta>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</INVALID_INDEX>
+		<CLIP_NOT_REPRESENTABLE public="1" get="inline" set="null" line="28" static="1">
+			<x path="lime.graphics.cairo.CairoStatus"/>
+			<meta>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</CLIP_NOT_REPRESENTABLE>
+		<TEMP_FILE_ERROR public="1" get="inline" set="null" line="29" static="1">
+			<x path="lime.graphics.cairo.CairoStatus"/>
+			<meta>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</TEMP_FILE_ERROR>
+		<INVALID_STRIDE public="1" get="inline" set="null" line="30" static="1">
+			<x path="lime.graphics.cairo.CairoStatus"/>
+			<meta>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</INVALID_STRIDE>
+		<FONT_TYPE_MISMATCH public="1" get="inline" set="null" line="31" static="1">
+			<x path="lime.graphics.cairo.CairoStatus"/>
+			<meta>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</FONT_TYPE_MISMATCH>
+		<USER_FONT_IMMUTABLE public="1" get="inline" set="null" line="32" static="1">
+			<x path="lime.graphics.cairo.CairoStatus"/>
+			<meta>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</USER_FONT_IMMUTABLE>
+		<USER_FONT_ERROR public="1" get="inline" set="null" line="33" static="1">
+			<x path="lime.graphics.cairo.CairoStatus"/>
+			<meta>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</USER_FONT_ERROR>
+		<NEGATIVE_COUNT public="1" get="inline" set="null" line="34" static="1">
+			<x path="lime.graphics.cairo.CairoStatus"/>
+			<meta>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</NEGATIVE_COUNT>
+		<INVALID_CLUSTERS public="1" get="inline" set="null" line="35" static="1">
+			<x path="lime.graphics.cairo.CairoStatus"/>
+			<meta>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</INVALID_CLUSTERS>
+		<INVALID_SLANT public="1" get="inline" set="null" line="36" static="1">
+			<x path="lime.graphics.cairo.CairoStatus"/>
+			<meta>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</INVALID_SLANT>
+		<INVALID_WEIGHT public="1" get="inline" set="null" line="37" static="1">
+			<x path="lime.graphics.cairo.CairoStatus"/>
+			<meta>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</INVALID_WEIGHT>
+		<INVALID_SIZE public="1" get="inline" set="null" line="38" static="1">
+			<x path="lime.graphics.cairo.CairoStatus"/>
+			<meta>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</INVALID_SIZE>
+		<USER_FONT_NOT_IMPLEMENTED public="1" get="inline" set="null" line="39" static="1">
+			<x path="lime.graphics.cairo.CairoStatus"/>
+			<meta>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</USER_FONT_NOT_IMPLEMENTED>
+		<DEVICE_TYPE_MISMATCH public="1" get="inline" set="null" line="40" static="1">
+			<x path="lime.graphics.cairo.CairoStatus"/>
+			<meta>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</DEVICE_TYPE_MISMATCH>
+		<DEVICE_ERROR public="1" get="inline" set="null" line="41" static="1">
+			<x path="lime.graphics.cairo.CairoStatus"/>
+			<meta>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</DEVICE_ERROR>
+		<INVALID_MESH_CONSTRUCTION public="1" get="inline" set="null" line="42" static="1">
+			<x path="lime.graphics.cairo.CairoStatus"/>
+			<meta>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</INVALID_MESH_CONSTRUCTION>
+		<DEVICE_FINISHED public="1" get="inline" set="null" line="43" static="1">
+			<x path="lime.graphics.cairo.CairoStatus"/>
+			<meta>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</DEVICE_FINISHED>
+		<JBIG2_GLOBAL_MISSING public="1" get="inline" set="null" line="44" static="1">
+			<x path="lime.graphics.cairo.CairoStatus"/>
+			<meta>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</JBIG2_GLOBAL_MISSING>
+		<meta><m n=":enum"/></meta>
+	</class>
+	<abstract path="lime.graphics.cairo.CairoSurface" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/graphics/cairo/CairoSurface.hx">
+		<this><d/></this>
+		<meta><m n=":access"><e>haxe.io.Bytes</e></m></meta>
+		<impl><class path="lime.graphics.cairo._CairoSurface.CairoSurface_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/graphics/cairo/CairoSurface.hx" private="1" module="lime.graphics.cairo.CairoSurface">
+	<height public="1" get="accessor" set="null" static="1">
+		<x path="Int"/>
+		<meta><m n=":impl"/></meta>
+	</height>
+	<width public="1" get="accessor" set="null" static="1">
+		<x path="Int"/>
+		<meta><m n=":impl"/></meta>
+	</width>
+	<_new public="1" set="method" line="17" static="1">
+		<f a="format:width:height">
+			<x path="lime.graphics.cairo.CairoFormat"/>
+			<x path="Int"/>
+			<x path="Int"/>
+			<x path="lime.graphics.cairo.CairoSurface"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</_new>
+	<createForData public="1" set="method" line="28" static="1"><f a="data:format:width:height:stride">
+	<d/>
+	<x path="lime.graphics.cairo.CairoFormat"/>
+	<x path="Int"/>
+	<x path="Int"/>
+	<x path="Int"/>
+	<x path="lime.graphics.cairo.CairoSurface"/>
+</f></createForData>
+	<destroy public="1" set="method" line="39" static="1">
+		<f a="this">
+			<d/>
+			<x path="Void"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</destroy>
+	<flush public="1" set="method" line="48" static="1">
+		<f a="this">
+			<d/>
+			<x path="Void"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</flush>
+	<fromImage public="1" set="method" line="57" static="1"><f a="image">
+	<c path="lime.graphics.Image"/>
+	<x path="lime.graphics.cairo.CairoSurface"/>
+</f></fromImage>
+	<get_height set="method" line="75" static="1">
+		<f a="this">
+			<d/>
+			<x path="Int"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</get_height>
+	<get_width set="method" line="86" static="1">
+		<f a="this">
+			<d/>
+			<x path="Int"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</get_width>
+	<meta><m n=":access"><e>haxe.io.Bytes</e></m></meta>
+</class></impl>
+	</abstract>
+	<class path="lime.graphics.cairo._CairoSurface.CairoSurface_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/graphics/cairo/CairoSurface.hx" private="1" module="lime.graphics.cairo.CairoSurface">
+		<height public="1" get="accessor" set="null" static="1">
+			<x path="Int"/>
+			<meta><m n=":impl"/></meta>
+		</height>
+		<width public="1" get="accessor" set="null" static="1">
+			<x path="Int"/>
+			<meta><m n=":impl"/></meta>
+		</width>
+		<_new public="1" set="method" line="17" static="1">
+			<f a="format:width:height">
+				<x path="lime.graphics.cairo.CairoFormat"/>
+				<x path="Int"/>
+				<x path="Int"/>
+				<x path="lime.graphics.cairo.CairoSurface"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</_new>
+		<createForData public="1" set="method" line="28" static="1"><f a="data:format:width:height:stride">
+	<d/>
+	<x path="lime.graphics.cairo.CairoFormat"/>
+	<x path="Int"/>
+	<x path="Int"/>
+	<x path="Int"/>
+	<x path="lime.graphics.cairo.CairoSurface"/>
+</f></createForData>
+		<destroy public="1" set="method" line="39" static="1">
+			<f a="this">
+				<d/>
+				<x path="Void"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</destroy>
+		<flush public="1" set="method" line="48" static="1">
+			<f a="this">
+				<d/>
+				<x path="Void"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</flush>
+		<fromImage public="1" set="method" line="57" static="1"><f a="image">
+	<c path="lime.graphics.Image"/>
+	<x path="lime.graphics.cairo.CairoSurface"/>
+</f></fromImage>
+		<get_height set="method" line="75" static="1">
+			<f a="this">
+				<d/>
+				<x path="Int"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</get_height>
+		<get_width set="method" line="86" static="1">
+			<f a="this">
+				<d/>
+				<x path="Int"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</get_width>
+		<meta><m n=":access"><e>haxe.io.Bytes</e></m></meta>
+	</class>
 	<class path="lime.graphics.format.BMP" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/graphics/format/BMP.hx"><encode public="1" set="method" line="12" static="1"><f a="image:?type">
 	<c path="lime.graphics.Image"/>
 	<e path="lime.graphics.format.BMPType"/>
@@ -10423,7 +12903,7 @@
 	<c path="lime.graphics.Image"/>
 	<c path="lime.math.Rectangle"/>
 	<x path="Int"/>
-	<e path="lime.graphics.PixelFormat"/>
+	<x path="lime.graphics.PixelFormat"/>
 	<x path="Void"/>
 </f></fillRect>
 		<floodFill public="1" set="method" line="207" static="1"><f a="image:x:y:color:format">
@@ -10431,27 +12911,27 @@
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Int"/>
-	<e path="lime.graphics.PixelFormat"/>
+	<x path="lime.graphics.PixelFormat"/>
 	<x path="Void"/>
 </f></floodFill>
 		<getPixel public="1" set="method" line="217" static="1"><f a="image:x:y:format">
 	<c path="lime.graphics.Image"/>
 	<x path="Int"/>
 	<x path="Int"/>
-	<e path="lime.graphics.PixelFormat"/>
+	<x path="lime.graphics.PixelFormat"/>
 	<x path="Int"/>
 </f></getPixel>
 		<getPixel32 public="1" set="method" line="227" static="1"><f a="image:x:y:format">
 	<c path="lime.graphics.Image"/>
 	<x path="Int"/>
 	<x path="Int"/>
-	<e path="lime.graphics.PixelFormat"/>
+	<x path="lime.graphics.PixelFormat"/>
 	<x path="Int"/>
 </f></getPixel32>
 		<getPixels public="1" set="method" line="237" static="1"><f a="image:rect:format">
 	<c path="lime.graphics.Image"/>
 	<c path="lime.math.Rectangle"/>
-	<e path="lime.graphics.PixelFormat"/>
+	<x path="lime.graphics.PixelFormat"/>
 	<c path="lime.utils.ByteArray"/>
 </f></getPixels>
 		<merge public="1" set="method" line="247" static="1"><f a="image:sourceImage:sourceRect:destPoint:redMultiplier:greenMultiplier:blueMultiplier:alphaMultiplier">
@@ -10476,7 +12956,7 @@
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Int"/>
-	<e path="lime.graphics.PixelFormat"/>
+	<x path="lime.graphics.PixelFormat"/>
 	<x path="Void"/>
 </f></setPixel>
 		<setPixel32 public="1" set="method" line="291" static="1"><f a="image:x:y:color:format">
@@ -10484,14 +12964,14 @@
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Int"/>
-	<e path="lime.graphics.PixelFormat"/>
+	<x path="lime.graphics.PixelFormat"/>
 	<x path="Void"/>
 </f></setPixel32>
 		<setPixels public="1" set="method" line="301" static="1"><f a="image:rect:byteArray:format">
 	<c path="lime.graphics.Image"/>
 	<c path="lime.math.Rectangle"/>
 	<c path="lime.utils.ByteArray"/>
-	<e path="lime.graphics.PixelFormat"/>
+	<x path="lime.graphics.PixelFormat"/>
 	<x path="Void"/>
 </f></setPixels>
 		<sync public="1" set="method" line="311" static="1"><f a="image">
@@ -10506,13 +12986,13 @@
 	<class path="lime.graphics.utils.ImageDataUtil" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/graphics/utils/ImageDataUtil.hx">
 		<__alpha16 static="1"><x path="haxe.ds.Vector"><x path="Int"/></x></__alpha16>
 		<__clamp static="1"><x path="haxe.ds.Vector"><x path="Int"/></x></__clamp>
-		<colorTransform public="1" set="method" line="49" static="1"><f a="image:rect:colorMatrix">
+		<colorTransform public="1" set="method" line="50" static="1"><f a="image:rect:colorMatrix">
 	<c path="lime.graphics.Image"/>
 	<c path="lime.math.Rectangle"/>
 	<x path="lime.math.ColorMatrix"/>
 	<x path="Void"/>
 </f></colorTransform>
-		<copyChannel public="1" set="method" line="99" static="1"><f a="image:sourceImage:sourceRect:destPoint:sourceChannel:destChannel">
+		<copyChannel public="1" set="method" line="100" static="1"><f a="image:sourceImage:sourceRect:destPoint:sourceChannel:destChannel">
 	<c path="lime.graphics.Image"/>
 	<c path="lime.graphics.Image"/>
 	<c path="lime.math.Rectangle"/>
@@ -10521,7 +13001,7 @@
 	<e path="lime.graphics.ImageChannel"/>
 	<x path="Void"/>
 </f></copyChannel>
-		<copyPixels public="1" set="method" line="171" static="1"><f a="image:sourceImage:sourceRect:destPoint:?alphaImage:?alphaPoint:?mergeAlpha">
+		<copyPixels public="1" set="method" line="172" static="1"><f a="image:sourceImage:sourceRect:destPoint:?alphaImage:?alphaPoint:?mergeAlpha">
 	<c path="lime.graphics.Image"/>
 	<c path="lime.graphics.Image"/>
 	<c path="lime.math.Rectangle"/>
@@ -10531,42 +13011,50 @@
 	<x path="Bool"/>
 	<x path="Void"/>
 </f></copyPixels>
-		<fillRect public="1" set="method" line="261" static="1"><f a="image:rect:color:format">
+		<fillRect public="1" set="method" line="267" static="1"><f a="image:rect:color:format">
 	<c path="lime.graphics.Image"/>
 	<c path="lime.math.Rectangle"/>
 	<x path="Int"/>
-	<e path="lime.graphics.PixelFormat"/>
+	<x path="lime.graphics.PixelFormat"/>
 	<x path="Void"/>
 </f></fillRect>
-		<floodFill public="1" set="method" line="349" static="1"><f a="image:x:y:color:format">
+		<floodFill public="1" set="method" line="355" static="1"><f a="image:x:y:color:format">
 	<c path="lime.graphics.Image"/>
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Int"/>
-	<e path="lime.graphics.PixelFormat"/>
+	<x path="lime.graphics.PixelFormat"/>
 	<x path="Void"/>
 </f></floodFill>
-		<getPixel public="1" set="method" line="427" static="1"><f a="image:x:y:format">
+		<getColorBoundsRect public="1" set="method" line="433" static="1"><f a="image:mask:color:?findColor:format">
 	<c path="lime.graphics.Image"/>
 	<x path="Int"/>
 	<x path="Int"/>
-	<e path="lime.graphics.PixelFormat"/>
+	<x path="Bool"/>
+	<x path="lime.graphics.PixelFormat"/>
+	<c path="lime.math.Rectangle"/>
+</f></getColorBoundsRect>
+		<getPixel public="1" set="method" line="600" static="1"><f a="image:x:y:format">
+	<c path="lime.graphics.Image"/>
+	<x path="Int"/>
+	<x path="Int"/>
+	<x path="lime.graphics.PixelFormat"/>
 	<x path="Int"/>
 </f></getPixel>
-		<getPixel32 public="1" set="method" line="457" static="1"><f a="image:x:y:format">
+		<getPixel32 public="1" set="method" line="630" static="1"><f a="image:x:y:format">
 	<c path="lime.graphics.Image"/>
 	<x path="Int"/>
 	<x path="Int"/>
-	<e path="lime.graphics.PixelFormat"/>
+	<x path="lime.graphics.PixelFormat"/>
 	<x path="Int"/>
 </f></getPixel32>
-		<getPixels public="1" set="method" line="492" static="1"><f a="image:rect:format">
+		<getPixels public="1" set="method" line="665" static="1"><f a="image:rect:format">
 	<c path="lime.graphics.Image"/>
 	<c path="lime.math.Rectangle"/>
-	<e path="lime.graphics.PixelFormat"/>
+	<x path="lime.graphics.PixelFormat"/>
 	<c path="lime.utils.ByteArray"/>
 </f></getPixels>
-		<merge public="1" set="method" line="590" static="1"><f a="image:sourceImage:sourceRect:destPoint:redMultiplier:greenMultiplier:blueMultiplier:alphaMultiplier">
+		<merge public="1" set="method" line="763" static="1"><f a="image:sourceImage:sourceRect:destPoint:redMultiplier:greenMultiplier:blueMultiplier:alphaMultiplier">
 	<c path="lime.graphics.Image"/>
 	<c path="lime.graphics.Image"/>
 	<c path="lime.math.Rectangle"/>
@@ -10577,56 +13065,61 @@
 	<x path="Int"/>
 	<x path="Void"/>
 </f></merge>
-		<multiplyAlpha public="1" set="method" line="633" static="1"><f a="image">
+		<multiplyAlpha public="1" set="method" line="806" static="1"><f a="image">
 	<c path="lime.graphics.Image"/>
 	<x path="Void"/>
 </f></multiplyAlpha>
-		<resize public="1" set="method" line="665" static="1"><f a="image:newWidth:newHeight">
+		<resize public="1" set="method" line="838" static="1"><f a="image:newWidth:newHeight">
 	<c path="lime.graphics.Image"/>
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Void"/>
 </f></resize>
-		<resizeBuffer public="1" set="method" line="736" static="1"><f a="image:newWidth:newHeight">
+		<resizeBuffer public="1" set="method" line="909" static="1"><f a="image:newWidth:newHeight">
 	<c path="lime.graphics.Image"/>
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Void"/>
 </f></resizeBuffer>
-		<setPixel public="1" set="method" line="766" static="1"><f a="image:x:y:color:format">
+		<setFormat public="1" set="method" line="939" static="1"><f a="image:format">
+	<c path="lime.graphics.Image"/>
+	<x path="lime.graphics.PixelFormat"/>
+	<x path="Void"/>
+</f></setFormat>
+		<setPixel public="1" set="method" line="1028" static="1"><f a="image:x:y:color:format">
 	<c path="lime.graphics.Image"/>
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Int"/>
-	<e path="lime.graphics.PixelFormat"/>
+	<x path="lime.graphics.PixelFormat"/>
 	<x path="Void"/>
 </f></setPixel>
-		<setPixel32 public="1" set="method" line="782" static="1"><f a="image:x:y:color:format">
+		<setPixel32 public="1" set="method" line="1044" static="1"><f a="image:x:y:color:format">
 	<c path="lime.graphics.Image"/>
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Int"/>
-	<e path="lime.graphics.PixelFormat"/>
+	<x path="lime.graphics.PixelFormat"/>
 	<x path="Void"/>
 </f></setPixel32>
-		<setPixels public="1" set="method" line="826" static="1"><f a="image:rect:byteArray:format">
+		<setPixels public="1" set="method" line="1088" static="1"><f a="image:rect:byteArray:format">
 	<c path="lime.graphics.Image"/>
 	<c path="lime.math.Rectangle"/>
 	<c path="lime.utils.ByteArray"/>
-	<e path="lime.graphics.PixelFormat"/>
+	<x path="lime.graphics.PixelFormat"/>
 	<x path="Void"/>
 </f></setPixels>
-		<unmultiplyAlpha public="1" set="method" line="902" static="1"><f a="image">
+		<unmultiplyAlpha public="1" set="method" line="1164" static="1"><f a="image">
 	<c path="lime.graphics.Image"/>
 	<x path="Void"/>
 </f></unmultiplyAlpha>
-		<lime_image_data_util_color_transform line="949" static="1"><f a="::">
+		<lime_image_data_util_color_transform line="1211" static="1"><f a="::">
 	<c path="lime.graphics.Image"/>
 	<c path="lime.math.Rectangle"/>
 	<x path="lime.math.ColorMatrix"/>
 	<unknown/>
 </f></lime_image_data_util_color_transform>
-		<lime_image_data_util_copy_channel line="950" static="1"><f a=":::::">
+		<lime_image_data_util_copy_channel line="1212" static="1"><f a=":::::">
 	<c path="lime.graphics.Image"/>
 	<c path="lime.graphics.Image"/>
 	<c path="lime.math.Rectangle"/>
@@ -10635,7 +13128,7 @@
 	<x path="Int"/>
 	<unknown/>
 </f></lime_image_data_util_copy_channel>
-		<lime_image_data_util_copy_pixels line="951" static="1"><f a="::::">
+		<lime_image_data_util_copy_pixels line="1213" static="1"><f a="::::">
 	<c path="lime.graphics.Image"/>
 	<c path="lime.graphics.Image"/>
 	<c path="lime.math.Rectangle"/>
@@ -10643,26 +13136,26 @@
 	<x path="Bool"/>
 	<unknown/>
 </f></lime_image_data_util_copy_pixels>
-		<lime_image_data_util_fill_rect line="952" static="1"><f a="::">
+		<lime_image_data_util_fill_rect line="1214" static="1"><f a="::">
 	<c path="lime.graphics.Image"/>
 	<c path="lime.math.Rectangle"/>
 	<x path="Int"/>
 	<unknown/>
 </f></lime_image_data_util_fill_rect>
-		<lime_image_data_util_flood_fill line="953" static="1"><f a=":::">
+		<lime_image_data_util_flood_fill line="1215" static="1"><f a=":::">
 	<c path="lime.graphics.Image"/>
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Int"/>
 	<unknown/>
 </f></lime_image_data_util_flood_fill>
-		<lime_image_data_util_get_pixels line="954" static="1"><f a="::">
+		<lime_image_data_util_get_pixels line="1216" static="1"><f a="::">
 	<c path="lime.graphics.Image"/>
 	<c path="lime.math.Rectangle"/>
-	<x path="Int"/>
+	<x path="lime.graphics.PixelFormat"/>
 	<c path="lime.utils.ByteArray"/>
 </f></lime_image_data_util_get_pixels>
-		<lime_image_data_util_merge line="955" static="1"><f a=":::::::">
+		<lime_image_data_util_merge line="1217" static="1"><f a=":::::::">
 	<c path="lime.graphics.Image"/>
 	<c path="lime.graphics.Image"/>
 	<c path="lime.math.Rectangle"/>
@@ -10673,25 +13166,30 @@
 	<x path="Int"/>
 	<unknown/>
 </f></lime_image_data_util_merge>
-		<lime_image_data_util_multiply_alpha line="956" static="1"><f a="">
+		<lime_image_data_util_multiply_alpha line="1218" static="1"><f a="">
 	<c path="lime.graphics.Image"/>
 	<unknown/>
 </f></lime_image_data_util_multiply_alpha>
-		<lime_image_data_util_resize line="957" static="1"><f a=":::">
+		<lime_image_data_util_resize line="1219" static="1"><f a=":::">
 	<c path="lime.graphics.Image"/>
 	<c path="lime.graphics.ImageBuffer"/>
 	<x path="Int"/>
 	<x path="Int"/>
 	<unknown/>
 </f></lime_image_data_util_resize>
-		<lime_image_data_util_set_pixels line="958" static="1"><f a=":::">
+		<lime_image_data_util_set_format line="1220" static="1"><f a=":">
+	<c path="lime.graphics.Image"/>
+	<x path="lime.graphics.PixelFormat"/>
+	<unknown/>
+</f></lime_image_data_util_set_format>
+		<lime_image_data_util_set_pixels line="1221" static="1"><f a=":::">
 	<c path="lime.graphics.Image"/>
 	<c path="lime.math.Rectangle"/>
 	<c path="lime.utils.ByteArray"/>
-	<x path="Int"/>
+	<x path="lime.graphics.PixelFormat"/>
 	<unknown/>
 </f></lime_image_data_util_set_pixels>
-		<lime_image_data_util_unmultiply_alpha line="959" static="1"><f a="">
+		<lime_image_data_util_unmultiply_alpha line="1222" static="1"><f a="">
 	<c path="lime.graphics.Image"/>
 	<unknown/>
 </f></lime_image_data_util_unmultiply_alpha>
@@ -11293,21 +13791,21 @@
 	<c path="lime.math.Vector2"/>
 	<c path="lime.math.Vector2"/>
 </f></transformVector2>
-		<translate public="1" set="method" line="409"><f a="dx:dy">
+		<translate public="1" get="inline" set="null" line="409"><f a="dx:dy">
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Void"/>
 </f></translate>
-		<__cleanValues get="inline" set="null" line="419"><f a=""><x path="Void"/></f></__cleanValues>
-		<__transformX public="1" get="inline" set="null" line="431"><f a="pos">
+		<__cleanValues get="inline" set="null" line="417"><f a=""><x path="Void"/></f></__cleanValues>
+		<__transformX public="1" get="inline" set="null" line="429"><f a="pos">
 	<c path="lime.math.Vector2"/>
 	<x path="Float"/>
 </f></__transformX>
-		<__transformY public="1" get="inline" set="null" line="438"><f a="pos">
+		<__transformY public="1" get="inline" set="null" line="436"><f a="pos">
 	<c path="lime.math.Vector2"/>
 	<x path="Float"/>
 </f></__transformY>
-		<__translateTransformed public="1" get="inline" set="null" line="445"><f a="pos">
+		<__translateTransformed public="1" get="inline" set="null" line="443"><f a="pos">
 	<c path="lime.math.Vector2"/>
 	<x path="Void"/>
 </f></__translateTransformed>
@@ -23972,6 +26470,7 @@
 	<class path="lime.ui.Window" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/ui/Window.hx">
 		<currentRenderer public="1"><c path="lime.graphics.Renderer"/></currentRenderer>
 		<config public="1"><t path="lime.app.Config"/></config>
+		<enableTextEvents public="1" get="accessor" set="accessor"><x path="Bool"/></enableTextEvents>
 		<fullscreen public="1" get="accessor" set="accessor"><x path="Bool"/></fullscreen>
 		<height public="1" get="accessor" set="accessor"><x path="Int"/></height>
 		<minimized public="1" get="accessor" set="accessor"><x path="Bool"/></minimized>
@@ -24036,6 +26535,16 @@
 	<x path="Float"/>
 	<x path="Void"/>
 </f></c></onMouseWheel>
+		<onTextEdit public="1"><c path="lime.app.Event"><f a="::">
+	<c path="String"/>
+	<x path="Int"/>
+	<x path="Int"/>
+	<x path="Void"/>
+</f></c></onTextEdit>
+		<onTextInput public="1"><c path="lime.app.Event"><f a="">
+	<c path="String"/>
+	<x path="Void"/>
+</f></c></onTextInput>
 		<onTouchEnd public="1"><c path="lime.app.Event"><f a="::">
 	<x path="Float"/>
 	<x path="Float"/>
@@ -24057,9 +26566,11 @@
 		<onWindowActivate public="1"><c path="lime.app.Event"><f a=""><x path="Void"/></f></c></onWindowActivate>
 		<onWindowClose public="1"><c path="lime.app.Event"><f a=""><x path="Void"/></f></c></onWindowClose>
 		<onWindowDeactivate public="1"><c path="lime.app.Event"><f a=""><x path="Void"/></f></c></onWindowDeactivate>
+		<onWindowEnter public="1"><c path="lime.app.Event"><f a=""><x path="Void"/></f></c></onWindowEnter>
 		<onWindowFocusIn public="1"><c path="lime.app.Event"><f a=""><x path="Void"/></f></c></onWindowFocusIn>
 		<onWindowFocusOut public="1"><c path="lime.app.Event"><f a=""><x path="Void"/></f></c></onWindowFocusOut>
 		<onWindowFullscreen public="1"><c path="lime.app.Event"><f a=""><x path="Void"/></f></c></onWindowFullscreen>
+		<onWindowLeave public="1"><c path="lime.app.Event"><f a=""><x path="Void"/></f></c></onWindowLeave>
 		<onWindowMinimize public="1"><c path="lime.app.Event"><f a=""><x path="Void"/></f></c></onWindowMinimize>
 		<onWindowMove public="1"><c path="lime.app.Event"><f a=":">
 	<x path="Float"/>
@@ -24103,92 +26614,103 @@
 			<x path="Int"/>
 			<meta><m n=":noCompletion"/></meta>
 		</__y>
-		<close public="1" set="method" line="82"><f a=""><x path="Void"/></f></close>
-		<create public="1" set="method" line="89"><f a="application">
+		<close public="1" set="method" line="87"><f a=""><x path="Void"/></f></close>
+		<create public="1" set="method" line="94"><f a="application">
 	<c path="lime.app.Application"/>
 	<x path="Void"/>
 </f></create>
-		<move public="1" set="method" line="102"><f a="x:y">
+		<move public="1" set="method" line="107"><f a="x:y">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Void"/>
 </f></move>
-		<resize public="1" set="method" line="112"><f a="width:height">
+		<resize public="1" set="method" line="117"><f a="width:height">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Void"/>
 </f></resize>
-		<setIcon public="1" set="method" line="122"><f a="image">
+		<setIcon public="1" set="method" line="127"><f a="image">
 	<c path="lime.graphics.Image"/>
 	<x path="Void"/>
 </f></setIcon>
-		<get_fullscreen get="inline" set="null" line="142">
+		<get_enableTextEvents get="inline" set="null" line="147">
+			<f a=""><x path="Bool"/></f>
+			<meta><m n=":noCompletion"/></meta>
+		</get_enableTextEvents>
+		<set_enableTextEvents get="inline" set="null" line="154">
+			<f a="value">
+				<x path="Bool"/>
+				<x path="Bool"/>
+			</f>
+			<meta><m n=":noCompletion"/></meta>
+		</set_enableTextEvents>
+		<get_fullscreen get="inline" set="null" line="161">
 			<f a=""><x path="Bool"/></f>
 			<meta><m n=":noCompletion"/></meta>
 		</get_fullscreen>
-		<set_fullscreen set="method" line="149">
+		<set_fullscreen set="method" line="168">
 			<f a="value">
 				<x path="Bool"/>
 				<x path="Bool"/>
 			</f>
 			<meta><m n=":noCompletion"/></meta>
 		</set_fullscreen>
-		<get_height get="inline" set="null" line="156">
+		<get_height get="inline" set="null" line="175">
 			<f a=""><x path="Int"/></f>
 			<meta><m n=":noCompletion"/></meta>
 		</get_height>
-		<set_height set="method" line="163">
+		<set_height set="method" line="182">
 			<f a="value">
 				<x path="Int"/>
 				<x path="Int"/>
 			</f>
 			<meta><m n=":noCompletion"/></meta>
 		</set_height>
-		<get_minimized get="inline" set="null" line="171">
+		<get_minimized get="inline" set="null" line="190">
 			<f a=""><x path="Bool"/></f>
 			<meta><m n=":noCompletion"/></meta>
 		</get_minimized>
-		<set_minimized set="method" line="178">
+		<set_minimized set="method" line="197">
 			<f a="value">
 				<x path="Bool"/>
 				<x path="Bool"/>
 			</f>
 			<meta><m n=":noCompletion"/></meta>
 		</set_minimized>
-		<get_width get="inline" set="null" line="185">
+		<get_width get="inline" set="null" line="204">
 			<f a=""><x path="Int"/></f>
 			<meta><m n=":noCompletion"/></meta>
 		</get_width>
-		<set_width set="method" line="192">
+		<set_width set="method" line="211">
 			<f a="value">
 				<x path="Int"/>
 				<x path="Int"/>
 			</f>
 			<meta><m n=":noCompletion"/></meta>
 		</set_width>
-		<get_x get="inline" set="null" line="200">
+		<get_x get="inline" set="null" line="219">
 			<f a=""><x path="Int"/></f>
 			<meta><m n=":noCompletion"/></meta>
 		</get_x>
-		<set_x set="method" line="207">
+		<set_x set="method" line="226">
 			<f a="value">
 				<x path="Int"/>
 				<x path="Int"/>
 			</f>
 			<meta><m n=":noCompletion"/></meta>
 		</set_x>
-		<get_y get="inline" set="null" line="215">
+		<get_y get="inline" set="null" line="234">
 			<f a=""><x path="Int"/></f>
 			<meta><m n=":noCompletion"/></meta>
 		</get_y>
-		<set_y set="method" line="222">
+		<set_y set="method" line="241">
 			<f a="value">
 				<x path="Int"/>
 				<x path="Int"/>
 			</f>
 			<meta><m n=":noCompletion"/></meta>
 		</set_y>
-		<new public="1" set="method" line="57"><f a="?config">
+		<new public="1" set="method" line="62"><f a="?config">
 	<t path="lime.app.Config"/>
 	<x path="Void"/>
 </f></new>
@@ -24368,17 +26890,21 @@
 	<c path="String"/>
 	<c path="lime.utils.ByteArray"/>
 </f></readFile>
-		<lime_byte_array_overwrite_file line="1157" static="1"><f a=":">
+		<lime_byte_array_get_native_pointer line="1166" static="1"><f a="">
+	<c path="lime.utils.ByteArray"/>
+	<unknown/>
+</f></lime_byte_array_get_native_pointer>
+		<lime_byte_array_overwrite_file line="1167" static="1"><f a=":">
 	<c path="String"/>
 	<c path="lime.utils.ByteArray"/>
 	<unknown/>
 </f></lime_byte_array_overwrite_file>
-		<lime_byte_array_read_file line="1158" static="1"><unknown/></lime_byte_array_read_file>
-		<lime_lzma_decode line="1159" static="1"><f a="">
+		<lime_byte_array_read_file line="1168" static="1"><unknown/></lime_byte_array_read_file>
+		<lime_lzma_decode line="1169" static="1"><f a="">
 	<t path="haxe.io.BytesData"/>
 	<t path="haxe.io.BytesData"/>
 </f></lime_lzma_decode>
-		<lime_lzma_encode line="1160" static="1"><f a="">
+		<lime_lzma_encode line="1170" static="1"><f a="">
 	<t path="haxe.io.BytesData"/>
 	<t path="haxe.io.BytesData"/>
 </f></lime_lzma_encode>
@@ -24530,7 +27056,8 @@
 				<m n=":keep"/>
 			</meta>
 		</__get>
-		<__set public="1" get="inline" set="null" line="1076">
+		<__getNativePointer public="1" set="method" line="1006"><f a=""><d/></f></__getNativePointer>
+		<__set public="1" get="inline" set="null" line="1085">
 			<f a="pos:v">
 				<x path="Int"/>
 				<x path="Int"/>
@@ -24541,19 +27068,19 @@
 				<m n=":keep"/>
 			</meta>
 		</__set>
-		<get_bigEndian get="inline" set="null" line="1100"><f a=""><x path="Bool"/></f></get_bigEndian>
-		<set_bigEndian get="inline" set="null" line="1101"><f a="value">
+		<get_bigEndian get="inline" set="null" line="1109"><f a=""><x path="Bool"/></f></get_bigEndian>
+		<set_bigEndian get="inline" set="null" line="1110"><f a="value">
 	<x path="Bool"/>
 	<x path="Bool"/>
 </f></set_bigEndian>
-		<get_bytesAvailable get="inline" set="null" line="1105"><f a=""><x path="Int"/></f></get_bytesAvailable>
-		<get_byteLength set="method" line="1113"><f a=""><x path="Int"/></f></get_byteLength>
-		<get_endian get="inline" set="null" line="1121"><f a=""><c path="String"/></f></get_endian>
-		<set_endian get="inline" set="null" line="1128"><f a="endian">
+		<get_bytesAvailable get="inline" set="null" line="1114"><f a=""><x path="Int"/></f></get_bytesAvailable>
+		<get_byteLength set="method" line="1122"><f a=""><x path="Int"/></f></get_byteLength>
+		<get_endian get="inline" set="null" line="1130"><f a=""><c path="String"/></f></get_endian>
+		<set_endian get="inline" set="null" line="1137"><f a="endian">
 	<c path="String"/>
 	<c path="String"/>
 </f></set_endian>
-		<set_length get="inline" set="null" line="1136"><f a="value">
+		<set_length get="inline" set="null" line="1145"><f a="value">
 	<x path="Int"/>
 	<x path="Int"/>
 </f></set_length>

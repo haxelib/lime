@@ -109,6 +109,22 @@ class Module implements IModule {
 	
 	
 	/**
+	 * Called when a text edit event is fired
+	 * @param	text	The current replacement text
+	 * @param	start	The starting index for the edit
+	 * @param	length	The length of the edit
+	 */
+	public function onTextEdit (text:String, start:Int, length:Int):Void { }
+	
+	
+	/**
+	 * Called when a text input event is fired
+	 * @param	text	The current input text
+	 */
+	public function onTextInput (text:String):Void { }
+	
+	
+	/**
 	 * Called when a touch end event is fired
 	 * @param	x	The current x coordinate of the touch point
 	 * @param	y	The current y coordinate of the touch point
@@ -154,6 +170,12 @@ class Module implements IModule {
 	
 	
 	/**
+	 * Called when a window enter event is fired
+	 */
+	public function onWindowEnter ():Void { }
+	
+	
+	/**
 	 * Called when a window focus in event is fired
 	 */
 	public function onWindowFocusIn ():Void { }
@@ -165,7 +187,21 @@ class Module implements IModule {
 	public function onWindowFocusOut ():Void { }
 	
 	
+	/**
+	 * Called when a window fullscreen event is fired
+	 */
 	public function onWindowFullscreen ():Void { }
+	
+	
+	/**
+	 * Called when a mouse leave event is fired
+	 */
+	public function onWindowLeave ():Void { }
+	
+	
+	/**
+	 * Called when a window minimize event is fired
+	 */
 	public function onWindowMinimize ():Void { }
 	
 	
