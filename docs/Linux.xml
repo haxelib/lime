@@ -26295,42 +26295,42 @@
 	<c path="String"/>
 	<x path="Bool"/>
 </f></createIcon>
-		<createMacIcon public="1" set="method" line="95" static="1"><f a="icons:targetPath">
+		<createMacIcon public="1" set="method" line="101" static="1"><f a="icons:targetPath">
 	<c path="Array"><c path="lime.project.Icon"/></c>
 	<c path="String"/>
 	<x path="Bool"/>
 </f></createMacIcon>
-		<createWindowsIcon public="1" set="method" line="183" static="1"><f a="icons:targetPath">
+		<createWindowsIcon public="1" set="method" line="193" static="1"><f a="icons:targetPath">
 	<c path="Array"><c path="lime.project.Icon"/></c>
 	<c path="String"/>
 	<x path="Bool"/>
 </f></createWindowsIcon>
-		<extractBits set="method" line="268" static="1"><f a="data:offset:len">
+		<extractBits set="method" line="278" static="1"><f a="data:offset:len">
 	<c path="lime.utils.ByteArray"/>
 	<x path="Int"/>
 	<x path="Int"/>
 	<c path="haxe.io.Bytes"/>
 </f></extractBits>
-		<findMatch public="1" set="method" line="283" static="1"><f a="icons:width:height">
+		<findMatch public="1" set="method" line="293" static="1"><f a="icons:width:height">
 	<c path="Array"><c path="lime.project.Icon"/></c>
 	<x path="Int"/>
 	<x path="Int"/>
 	<c path="lime.project.Icon"/>
 </f></findMatch>
-		<findNearestMatch public="1" set="method" line="302" static="1"><f a="icons:width:height">
+		<findNearestMatch public="1" set="method" line="312" static="1"><f a="icons:width:height">
 	<c path="Array"><c path="lime.project.Icon"/></c>
 	<x path="Int"/>
 	<x path="Int"/>
 	<c path="lime.project.Icon"/>
 </f></findNearestMatch>
-		<getIconImage set="method" line="345" static="1"><f a="icons:width:height:?backgroundColor">
+		<getIconImage set="method" line="355" static="1"><f a="icons:width:height:?backgroundColor">
 	<c path="Array"><c path="lime.project.Icon"/></c>
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Int"/>
 	<c path="lime.graphics.Image"/>
 </f></getIconImage>
-		<packBits set="method" line="389" static="1"><f a="data:offset:len">
+		<packBits set="method" line="399" static="1"><f a="data:offset:len">
 	<c path="lime.utils.ByteArray"/>
 	<x path="Int"/>
 	<x path="Int"/>
