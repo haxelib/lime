@@ -26706,23 +26706,29 @@
 	</class>
 	<class path="lime.tools.helpers.FlashHelper" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/tools/helpers/FlashHelper.hx">
 		<swfAssetID line="31" static="1"><x path="Int"/></swfAssetID>
-		<compileSWC set="method" line="573" static="1"><f a="project:assets:id">
+		<enableLogging public="1" set="method" line="573" static="1"><f a=""><x path="Void"/></f></enableLogging>
+		<compileSWC set="method" line="596" static="1"><f a="project:assets:id">
 	<c path="lime.project.HXProject"/>
 	<c path="Array"><c path="lime.project.Asset"/></c>
 	<x path="Int"/>
 	<x path="Void"/>
 </f></compileSWC>
-		<embedAssets public="1" set="method" line="718" static="1"><f a="project">
+		<embedAssets public="1" set="method" line="741" static="1"><f a="project">
 	<c path="lime.project.HXProject"/>
 	<x path="Bool"/>
 </f></embedAssets>
-		<nextAssetID set="method" line="877" static="1"><f a=""><x path="Int"/></f></nextAssetID>
-		<run public="1" set="method" line="884" static="1"><f a="project:workingDirectory:targetPath">
+		<getLogLength public="1" set="method" line="900" static="1"><f a=""><x path="Int"/></f></getLogLength>
+		<nextAssetID set="method" line="925" static="1"><f a=""><x path="Int"/></f></nextAssetID>
+		<run public="1" set="method" line="932" static="1"><f a="project:workingDirectory:targetPath">
 	<c path="lime.project.HXProject"/>
 	<c path="String"/>
 	<c path="String"/>
 	<x path="Void"/>
 </f></run>
+		<tailLog public="1" set="method" line="955" static="1"><f a="?start">
+	<x path="Int"/>
+	<x path="Void"/>
+</f></tailLog>
 		<meta><m n=":directlyUsed"/></meta>
 	</class>
 	<class path="lime.tools.helpers.HTML5Helper" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/tools/helpers/HTML5Helper.hx">
@@ -27459,30 +27465,28 @@
 	<class path="lime.tools.platforms.FlashPlatform" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/tools/platforms/FlashPlatform.hx">
 		<extends path="lime.project.PlatformTarget"/>
 		<embedded><x path="Bool"/></embedded>
-		<build public="1" set="method" line="38" override="1"><f a=""><x path="Void"/></f></build>
-		<clean public="1" set="method" line="115" override="1"><f a=""><x path="Void"/></f></clean>
-		<deploy public="1" set="method" line="128" override="1"><f a=""><x path="Void"/></f></deploy>
-		<display public="1" set="method" line="135" override="1"><f a=""><x path="Void"/></f></display>
-		<generateContext set="method" line="160"><f a=""><d/></f></generateContext>
-		<run public="1" set="method" line="195" override="1"><f a=""><x path="Void"/></f></run>
-		<update public="1" set="method" line="219" override="1"><f a=""><x path="Void"/></f></update>
-		<install public="1" set="method" line="292" override="1">
+		<logLength><x path="Int"/></logLength>
+		<build public="1" set="method" line="43" override="1"><f a=""><x path="Void"/></f></build>
+		<clean public="1" set="method" line="120" override="1"><f a=""><x path="Void"/></f></clean>
+		<deploy public="1" set="method" line="133" override="1"><f a=""><x path="Void"/></f></deploy>
+		<display public="1" set="method" line="140" override="1"><f a=""><x path="Void"/></f></display>
+		<generateContext set="method" line="165"><f a=""><d/></f></generateContext>
+		<run public="1" set="method" line="200" override="1"><f a=""><x path="Void"/></f></run>
+		<update public="1" set="method" line="246" override="1"><f a=""><x path="Void"/></f></update>
+		<trace public="1" set="method" line="302" override="1"><f a=""><x path="Void"/></f></trace>
+		<install public="1" set="method" line="326" override="1">
 			<f a=""><x path="Void"/></f>
 			<meta><m n="ignore"/></meta>
 		</install>
-		<rebuild public="1" set="method" line="293" override="1">
+		<rebuild public="1" set="method" line="327" override="1">
 			<f a=""><x path="Void"/></f>
 			<meta><m n="ignore"/></meta>
 		</rebuild>
-		<trace public="1" set="method" line="294" override="1">
-			<f a=""><x path="Void"/></f>
-			<meta><m n="ignore"/></meta>
-		</trace>
-		<uninstall public="1" set="method" line="295" override="1">
+		<uninstall public="1" set="method" line="328" override="1">
 			<f a=""><x path="Void"/></f>
 			<meta><m n="ignore"/></meta>
 		</uninstall>
-		<new public="1" set="method" line="29"><f a="command:_project:targetFlags">
+		<new public="1" set="method" line="34"><f a="command:_project:targetFlags">
 	<c path="String"/>
 	<c path="lime.project.HXProject"/>
 	<x path="Map">
@@ -33013,6 +33017,16 @@
 	<d/>
 	<unknown/>
 </f></file_close>
+		<file_seek line="80" static="1"><f a="::">
+	<d/>
+	<x path="Int"/>
+	<x path="Int"/>
+	<unknown/>
+</f></file_seek>
+		<file_tell line="81" static="1"><f a="">
+	<d/>
+	<x path="Int"/>
+</f></file_tell>
 		<__f><d/></__f>
 		<readByte public="1" set="method" line="34" override="1">
 			<f a=""><x path="Int"/></f>
@@ -33028,6 +33042,12 @@
 			<meta><m n=":has_untyped"/></meta>
 		</readBytes>
 		<close public="1" set="method" line="56" override="1"><f a=""><x path="Void"/></f></close>
+		<seek public="1" set="method" line="61"><f a="p:pos">
+	<x path="Int"/>
+	<e path="sys.io.FileSeek"/>
+	<x path="Void"/>
+</f></seek>
+		<tell public="1" set="method" line="65"><f a=""><x path="Int"/></f></tell>
 		<eof public="1" set="method" line="70"><f a=""><x path="Bool"/></f></eof>
 		<new set="method" line="30"><f a="f">
 	<d/>
@@ -33081,4 +33101,13 @@
 			<m n=":coreApi"/>
 		</meta>
 	</class>
+	<enum path="sys.io.FileSeek" params="" file="/usr/lib/haxe/std/sys/io/FileSeek.hx">
+		<SeekBegin/>
+		<SeekCur/>
+		<SeekEnd/>
+		<meta>
+			<m n=":directlyUsed"/>
+			<m n=":flatEnum"/>
+		</meta>
+	</enum>
 </haxe>
