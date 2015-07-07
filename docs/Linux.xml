@@ -32071,11 +32071,12 @@
 	<x path="lime.utils._ArrayBufferView.TypedArrayType"/>
 	<x path="Int"/>
 </f></bytesForType>
-		<toByteLength get="inline" set="null" line="243"><f a="elemCount">
+		<toString get="inline" set="null" line="243"><f a=""><c path="String"/></f></toString>
+		<toByteLength get="inline" set="null" line="264"><f a="elemCount">
 	<x path="Int"/>
 	<x path="Int"/>
 </f></toByteLength>
-		<copyFromArray set="method" line="252"><f a="array:?offset">
+		<copyFromArray set="method" line="273"><f a="array:?offset">
 	<c path="Array"><x path="Float"/></c>
 	<x path="Int"/>
 	<x path="Void"/>
@@ -32109,70 +32110,70 @@
 			<m n=":enum"/>
 		</meta>
 		<impl><class path="lime.utils._ArrayBufferView.TypedArrayType_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/utils/ArrayBufferView.hx" private="1" module="lime.utils.ArrayBufferView" extern="1">
-	<None public="1" get="inline" set="null" line="339" static="1">
+	<None public="1" get="inline" set="null" line="360" static="1">
 		<x path="lime.utils._ArrayBufferView.TypedArrayType"/>
 		<meta>
 			<m n=":enum"/>
 			<m n=":impl"/>
 		</meta>
 	</None>
-	<Int8 public="1" get="inline" set="null" line="340" static="1">
+	<Int8 public="1" get="inline" set="null" line="361" static="1">
 		<x path="lime.utils._ArrayBufferView.TypedArrayType"/>
 		<meta>
 			<m n=":enum"/>
 			<m n=":impl"/>
 		</meta>
 	</Int8>
-	<Int16 public="1" get="inline" set="null" line="341" static="1">
+	<Int16 public="1" get="inline" set="null" line="362" static="1">
 		<x path="lime.utils._ArrayBufferView.TypedArrayType"/>
 		<meta>
 			<m n=":enum"/>
 			<m n=":impl"/>
 		</meta>
 	</Int16>
-	<Int32 public="1" get="inline" set="null" line="342" static="1">
+	<Int32 public="1" get="inline" set="null" line="363" static="1">
 		<x path="lime.utils._ArrayBufferView.TypedArrayType"/>
 		<meta>
 			<m n=":enum"/>
 			<m n=":impl"/>
 		</meta>
 	</Int32>
-	<Uint8 public="1" get="inline" set="null" line="343" static="1">
+	<Uint8 public="1" get="inline" set="null" line="364" static="1">
 		<x path="lime.utils._ArrayBufferView.TypedArrayType"/>
 		<meta>
 			<m n=":enum"/>
 			<m n=":impl"/>
 		</meta>
 	</Uint8>
-	<Uint8Clamped public="1" get="inline" set="null" line="344" static="1">
+	<Uint8Clamped public="1" get="inline" set="null" line="365" static="1">
 		<x path="lime.utils._ArrayBufferView.TypedArrayType"/>
 		<meta>
 			<m n=":enum"/>
 			<m n=":impl"/>
 		</meta>
 	</Uint8Clamped>
-	<Uint16 public="1" get="inline" set="null" line="345" static="1">
+	<Uint16 public="1" get="inline" set="null" line="366" static="1">
 		<x path="lime.utils._ArrayBufferView.TypedArrayType"/>
 		<meta>
 			<m n=":enum"/>
 			<m n=":impl"/>
 		</meta>
 	</Uint16>
-	<Uint32 public="1" get="inline" set="null" line="346" static="1">
+	<Uint32 public="1" get="inline" set="null" line="367" static="1">
 		<x path="lime.utils._ArrayBufferView.TypedArrayType"/>
 		<meta>
 			<m n=":enum"/>
 			<m n=":impl"/>
 		</meta>
 	</Uint32>
-	<Float32 public="1" get="inline" set="null" line="347" static="1">
+	<Float32 public="1" get="inline" set="null" line="368" static="1">
 		<x path="lime.utils._ArrayBufferView.TypedArrayType"/>
 		<meta>
 			<m n=":enum"/>
 			<m n=":impl"/>
 		</meta>
 	</Float32>
-	<Float64 public="1" get="inline" set="null" line="348" static="1">
+	<Float64 public="1" get="inline" set="null" line="369" static="1">
 		<x path="lime.utils._ArrayBufferView.TypedArrayType"/>
 		<meta>
 			<m n=":enum"/>
@@ -32183,70 +32184,70 @@
 </class></impl>
 	</abstract>
 	<class path="lime.utils._ArrayBufferView.TypedArrayType_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/utils/ArrayBufferView.hx" private="1" module="lime.utils.ArrayBufferView" extern="1">
-		<None public="1" get="inline" set="null" line="339" static="1">
+		<None public="1" get="inline" set="null" line="360" static="1">
 			<x path="lime.utils._ArrayBufferView.TypedArrayType"/>
 			<meta>
 				<m n=":enum"/>
 				<m n=":impl"/>
 			</meta>
 		</None>
-		<Int8 public="1" get="inline" set="null" line="340" static="1">
+		<Int8 public="1" get="inline" set="null" line="361" static="1">
 			<x path="lime.utils._ArrayBufferView.TypedArrayType"/>
 			<meta>
 				<m n=":enum"/>
 				<m n=":impl"/>
 			</meta>
 		</Int8>
-		<Int16 public="1" get="inline" set="null" line="341" static="1">
+		<Int16 public="1" get="inline" set="null" line="362" static="1">
 			<x path="lime.utils._ArrayBufferView.TypedArrayType"/>
 			<meta>
 				<m n=":enum"/>
 				<m n=":impl"/>
 			</meta>
 		</Int16>
-		<Int32 public="1" get="inline" set="null" line="342" static="1">
+		<Int32 public="1" get="inline" set="null" line="363" static="1">
 			<x path="lime.utils._ArrayBufferView.TypedArrayType"/>
 			<meta>
 				<m n=":enum"/>
 				<m n=":impl"/>
 			</meta>
 		</Int32>
-		<Uint8 public="1" get="inline" set="null" line="343" static="1">
+		<Uint8 public="1" get="inline" set="null" line="364" static="1">
 			<x path="lime.utils._ArrayBufferView.TypedArrayType"/>
 			<meta>
 				<m n=":enum"/>
 				<m n=":impl"/>
 			</meta>
 		</Uint8>
-		<Uint8Clamped public="1" get="inline" set="null" line="344" static="1">
+		<Uint8Clamped public="1" get="inline" set="null" line="365" static="1">
 			<x path="lime.utils._ArrayBufferView.TypedArrayType"/>
 			<meta>
 				<m n=":enum"/>
 				<m n=":impl"/>
 			</meta>
 		</Uint8Clamped>
-		<Uint16 public="1" get="inline" set="null" line="345" static="1">
+		<Uint16 public="1" get="inline" set="null" line="366" static="1">
 			<x path="lime.utils._ArrayBufferView.TypedArrayType"/>
 			<meta>
 				<m n=":enum"/>
 				<m n=":impl"/>
 			</meta>
 		</Uint16>
-		<Uint32 public="1" get="inline" set="null" line="346" static="1">
+		<Uint32 public="1" get="inline" set="null" line="367" static="1">
 			<x path="lime.utils._ArrayBufferView.TypedArrayType"/>
 			<meta>
 				<m n=":enum"/>
 				<m n=":impl"/>
 			</meta>
 		</Uint32>
-		<Float32 public="1" get="inline" set="null" line="347" static="1">
+		<Float32 public="1" get="inline" set="null" line="368" static="1">
 			<x path="lime.utils._ArrayBufferView.TypedArrayType"/>
 			<meta>
 				<m n=":enum"/>
 				<m n=":impl"/>
 			</meta>
 		</Float32>
-		<Float64 public="1" get="inline" set="null" line="348" static="1">
+		<Float64 public="1" get="inline" set="null" line="369" static="1">
 			<x path="lime.utils._ArrayBufferView.TypedArrayType"/>
 			<meta>
 				<m n=":enum"/>
@@ -32256,7 +32257,7 @@
 		<meta><m n=":enum"/></meta>
 	</class>
 	<class path="lime.utils.ArrayBufferIO" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/utils/ArrayBufferView.hx" module="lime.utils.ArrayBufferView">
-		<getInt8 public="1" get="inline" set="null" line="356" static="1">
+		<getInt8 public="1" get="inline" set="null" line="377" static="1">
 			<f a="buffer:byteOffset">
 				<x path="lime.utils.ArrayBuffer"/>
 				<x path="Int"/>
@@ -32264,7 +32265,7 @@
 			</f>
 			<meta><m n=":has_untyped"/></meta>
 		</getInt8>
-		<setInt8 public="1" get="inline" set="null" line="368" static="1">
+		<setInt8 public="1" get="inline" set="null" line="389" static="1">
 			<f a="buffer:byteOffset:value">
 				<x path="lime.utils.ArrayBuffer"/>
 				<x path="Int"/>
@@ -32273,7 +32274,7 @@
 			</f>
 			<meta><m n=":has_untyped"/></meta>
 		</setInt8>
-		<getUint8 public="1" get="inline" set="null" line="383" static="1">
+		<getUint8 public="1" get="inline" set="null" line="404" static="1">
 			<f a="buffer:byteOffset">
 				<x path="lime.utils.ArrayBuffer"/>
 				<x path="Int"/>
@@ -32281,13 +32282,13 @@
 			</f>
 			<meta><m n=":has_untyped"/></meta>
 		</getUint8>
-		<setUint8Clamped public="1" get="inline" set="null" line="394" static="1"><f a="buffer:byteOffset:value">
+		<setUint8Clamped public="1" get="inline" set="null" line="415" static="1"><f a="buffer:byteOffset:value">
 	<x path="lime.utils.ArrayBuffer"/>
 	<x path="Int"/>
 	<x path="UInt"/>
 	<x path="UInt"/>
 </f></setUint8Clamped>
-		<setUint8 public="1" get="inline" set="null" line="401" static="1">
+		<setUint8 public="1" get="inline" set="null" line="422" static="1">
 			<f a="buffer:byteOffset:value">
 				<x path="lime.utils.ArrayBuffer"/>
 				<x path="Int"/>
@@ -32296,7 +32297,7 @@
 			</f>
 			<meta><m n=":has_untyped"/></meta>
 		</setUint8>
-		<getInt16 public="1" set="method" line="413" static="1">
+		<getInt16 public="1" set="method" line="434" static="1">
 			<f a="buffer:byteOffset:?littleEndian">
 				<x path="lime.utils.ArrayBuffer"/>
 				<x path="Int"/>
@@ -32305,7 +32306,7 @@
 			</f>
 			<meta><m n=":has_untyped"/></meta>
 		</getInt16>
-		<setInt16 public="1" set="method" line="433" static="1">
+		<setInt16 public="1" set="method" line="454" static="1">
 			<f a="buffer:byteOffset:value:?littleEndian">
 				<x path="lime.utils.ArrayBuffer"/>
 				<x path="Int"/>
@@ -32315,7 +32316,7 @@
 			</f>
 			<meta><m n=":has_untyped"/></meta>
 		</setInt16>
-		<getUint16 public="1" get="inline" set="null" line="462" static="1">
+		<getUint16 public="1" get="inline" set="null" line="483" static="1">
 			<f a="buffer:byteOffset:?littleEndian">
 				<x path="lime.utils.ArrayBuffer"/>
 				<x path="Int"/>
@@ -32324,7 +32325,7 @@
 			</f>
 			<meta><m n=":has_untyped"/></meta>
 		</getUint16>
-		<setUint16 public="1" get="inline" set="null" line="481" static="1">
+		<setUint16 public="1" get="inline" set="null" line="502" static="1">
 			<f a="buffer:byteOffset:value:?littleEndian">
 				<x path="lime.utils.ArrayBuffer"/>
 				<x path="Int"/>
@@ -32334,7 +32335,7 @@
 			</f>
 			<meta><m n=":has_untyped"/></meta>
 		</setUint16>
-		<getInt32 public="1" get="inline" set="null" line="494" static="1">
+		<getInt32 public="1" get="inline" set="null" line="515" static="1">
 			<f a="buffer:byteOffset:?littleEndian">
 				<x path="lime.utils.ArrayBuffer"/>
 				<x path="Int"/>
@@ -32343,7 +32344,7 @@
 			</f>
 			<meta><m n=":has_untyped"/></meta>
 		</getInt32>
-		<setInt32 public="1" get="inline" set="null" line="519" static="1">
+		<setInt32 public="1" get="inline" set="null" line="540" static="1">
 			<f a="buffer:byteOffset:value:?littleEndian">
 				<x path="lime.utils.ArrayBuffer"/>
 				<x path="Int"/>
@@ -32353,7 +32354,7 @@
 			</f>
 			<meta><m n=":has_untyped"/></meta>
 		</setInt32>
-		<getUint32 public="1" get="inline" set="null" line="546" static="1">
+		<getUint32 public="1" get="inline" set="null" line="567" static="1">
 			<f a="buffer:byteOffset:?littleEndian">
 				<x path="lime.utils.ArrayBuffer"/>
 				<x path="Int"/>
@@ -32362,7 +32363,7 @@
 			</f>
 			<meta><m n=":has_untyped"/></meta>
 		</getUint32>
-		<setUint32 public="1" get="inline" set="null" line="557" static="1">
+		<setUint32 public="1" get="inline" set="null" line="578" static="1">
 			<f a="buffer:byteOffset:value:?littleEndian">
 				<x path="lime.utils.ArrayBuffer"/>
 				<x path="Int"/>
@@ -32372,7 +32373,7 @@
 			</f>
 			<meta><m n=":has_untyped"/></meta>
 		</setUint32>
-		<getFloat32 public="1" get="inline" set="null" line="570" static="1">
+		<getFloat32 public="1" get="inline" set="null" line="591" static="1">
 			<f a="buffer:byteOffset:?littleEndian">
 				<x path="lime.utils.ArrayBuffer"/>
 				<x path="Int"/>
@@ -32381,7 +32382,7 @@
 			</f>
 			<meta><m n=":has_untyped"/></meta>
 		</getFloat32>
-		<setFloat32 public="1" get="inline" set="null" line="581" static="1">
+		<setFloat32 public="1" get="inline" set="null" line="602" static="1">
 			<f a="buffer:byteOffset:value:?littleEndian">
 				<x path="lime.utils.ArrayBuffer"/>
 				<x path="Int"/>
@@ -32391,7 +32392,7 @@
 			</f>
 			<meta><m n=":has_untyped"/></meta>
 		</setFloat32>
-		<getFloat64 public="1" get="inline" set="null" line="594" static="1">
+		<getFloat64 public="1" get="inline" set="null" line="615" static="1">
 			<f a="buffer:byteOffset:?littleEndian">
 				<x path="lime.utils.ArrayBuffer"/>
 				<x path="Int"/>
@@ -32400,7 +32401,7 @@
 			</f>
 			<meta><m n=":has_untyped"/></meta>
 		</getFloat64>
-		<setFloat64 public="1" get="inline" set="null" line="605" static="1">
+		<setFloat64 public="1" get="inline" set="null" line="626" static="1">
 			<f a="buffer:byteOffset:value:?littleEndian">
 				<x path="lime.utils.ArrayBuffer"/>
 				<x path="Int"/>
@@ -32410,7 +32411,7 @@
 			</f>
 			<meta><m n=":has_untyped"/></meta>
 		</setFloat64>
-		<_clamp get="inline" set="null" line="621" static="1"><f a="_in">
+		<_clamp get="inline" set="null" line="642" static="1"><f a="_in">
 	<x path="Float"/>
 	<x path="Int"/>
 </f></_clamp>
@@ -32675,12 +32676,12 @@
 			<m n=":arrayAccess"/>
 		</meta>
 		<impl><class path="lime.utils._Float32Array.Float32Array_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/utils/Float32Array.hx" private="1" module="lime.utils.Float32Array">
-	<BYTES_PER_ELEMENT public="1" get="inline" set="null" line="62" static="1"><x path="Int"/></BYTES_PER_ELEMENT>
+	<BYTES_PER_ELEMENT public="1" get="inline" set="null" line="69" static="1"><x path="Int"/></BYTES_PER_ELEMENT>
 	<length public="1" get="accessor" set="null" static="1">
 		<x path="Int"/>
 		<meta><m n=":impl"/></meta>
 	</length>
-	<subarray public="1" get="inline" set="null" line="89" static="1">
+	<subarray public="1" get="inline" set="null" line="96" static="1">
 		<f a="this:begin:?end">
 			<c path="lime.utils.ArrayBufferView"/>
 			<x path="Int"/>
@@ -32689,27 +32690,34 @@
 		</f>
 		<meta><m n=":impl"/></meta>
 	</subarray>
-	<fromBytes public="1" set="method" line="93" static="1"><f a="bytes:?byteOffset:?len">
+	<fromBytes public="1" set="method" line="100" static="1"><f a="bytes:?byteOffset:?len">
 	<c path="haxe.io.Bytes"/>
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="lime.utils.Float32Array"/>
 </f></fromBytes>
-	<toBytes public="1" set="method" line="97" static="1">
+	<toBytes public="1" set="method" line="104" static="1">
 		<f a="this">
 			<c path="lime.utils.ArrayBufferView"/>
 			<c path="haxe.io.Bytes"/>
 		</f>
 		<meta><m n=":impl"/></meta>
 	</toBytes>
-	<get_length get="inline" set="null" line="103" static="1">
+	<toString set="method" line="110" static="1">
+		<f a="this">
+			<c path="lime.utils.ArrayBufferView"/>
+			<c path="String"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</toString>
+	<get_length get="inline" set="null" line="112" static="1">
 		<f a="this">
 			<c path="lime.utils.ArrayBufferView"/>
 			<x path="Int"/>
 		</f>
 		<meta><m n=":impl"/></meta>
 	</get_length>
-	<__get public="1" get="inline" set="null" line="108" static="1">
+	<__get public="1" get="inline" set="null" line="117" static="1">
 		<f a="this:idx">
 			<c path="lime.utils.ArrayBufferView"/>
 			<x path="Int"/>
@@ -32721,7 +32729,7 @@
 			<m n=":arrayAccess"/>
 		</meta>
 	</__get>
-	<__set public="1" get="inline" set="null" line="114" static="1">
+	<__set public="1" get="inline" set="null" line="123" static="1">
 		<f a="this:idx:val">
 			<c path="lime.utils.ArrayBufferView"/>
 			<x path="Int"/>
@@ -32737,12 +32745,12 @@
 </class></impl>
 	</abstract>
 	<class path="lime.utils._Float32Array.Float32Array_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/utils/Float32Array.hx" private="1" module="lime.utils.Float32Array">
-		<BYTES_PER_ELEMENT public="1" get="inline" set="null" line="62" static="1"><x path="Int"/></BYTES_PER_ELEMENT>
+		<BYTES_PER_ELEMENT public="1" get="inline" set="null" line="69" static="1"><x path="Int"/></BYTES_PER_ELEMENT>
 		<length public="1" get="accessor" set="null" static="1">
 			<x path="Int"/>
 			<meta><m n=":impl"/></meta>
 		</length>
-		<subarray public="1" get="inline" set="null" line="89" static="1">
+		<subarray public="1" get="inline" set="null" line="96" static="1">
 			<f a="this:begin:?end">
 				<c path="lime.utils.ArrayBufferView"/>
 				<x path="Int"/>
@@ -32751,27 +32759,34 @@
 			</f>
 			<meta><m n=":impl"/></meta>
 		</subarray>
-		<fromBytes public="1" set="method" line="93" static="1"><f a="bytes:?byteOffset:?len">
+		<fromBytes public="1" set="method" line="100" static="1"><f a="bytes:?byteOffset:?len">
 	<c path="haxe.io.Bytes"/>
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="lime.utils.Float32Array"/>
 </f></fromBytes>
-		<toBytes public="1" set="method" line="97" static="1">
+		<toBytes public="1" set="method" line="104" static="1">
 			<f a="this">
 				<c path="lime.utils.ArrayBufferView"/>
 				<c path="haxe.io.Bytes"/>
 			</f>
 			<meta><m n=":impl"/></meta>
 		</toBytes>
-		<get_length get="inline" set="null" line="103" static="1">
+		<toString set="method" line="110" static="1">
+			<f a="this">
+				<c path="lime.utils.ArrayBufferView"/>
+				<c path="String"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</toString>
+		<get_length get="inline" set="null" line="112" static="1">
 			<f a="this">
 				<c path="lime.utils.ArrayBufferView"/>
 				<x path="Int"/>
 			</f>
 			<meta><m n=":impl"/></meta>
 		</get_length>
-		<__get public="1" get="inline" set="null" line="108" static="1">
+		<__get public="1" get="inline" set="null" line="117" static="1">
 			<f a="this:idx">
 				<c path="lime.utils.ArrayBufferView"/>
 				<x path="Int"/>
@@ -32783,7 +32798,7 @@
 				<m n=":arrayAccess"/>
 			</meta>
 		</__get>
-		<__set public="1" get="inline" set="null" line="114" static="1">
+		<__set public="1" get="inline" set="null" line="123" static="1">
 			<f a="this:idx:val">
 				<c path="lime.utils.ArrayBufferView"/>
 				<x path="Int"/>
@@ -32806,12 +32821,12 @@
 			<m n=":arrayAccess"/>
 		</meta>
 		<impl><class path="lime.utils._Float64Array.Float64Array_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/utils/Float64Array.hx" private="1" module="lime.utils.Float64Array">
-	<BYTES_PER_ELEMENT public="1" get="inline" set="null" line="61" static="1"><x path="Int"/></BYTES_PER_ELEMENT>
+	<BYTES_PER_ELEMENT public="1" get="inline" set="null" line="68" static="1"><x path="Int"/></BYTES_PER_ELEMENT>
 	<length public="1" get="accessor" set="null" static="1">
 		<x path="Int"/>
 		<meta><m n=":impl"/></meta>
 	</length>
-	<subarray public="1" get="inline" set="null" line="88" static="1">
+	<subarray public="1" get="inline" set="null" line="95" static="1">
 		<f a="this:begin:?end">
 			<c path="lime.utils.ArrayBufferView"/>
 			<x path="Int"/>
@@ -32820,27 +32835,27 @@
 		</f>
 		<meta><m n=":impl"/></meta>
 	</subarray>
-	<fromBytes public="1" set="method" line="92" static="1"><f a="bytes:?byteOffset:?len">
+	<fromBytes public="1" set="method" line="99" static="1"><f a="bytes:?byteOffset:?len">
 	<c path="haxe.io.Bytes"/>
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="lime.utils.Float64Array"/>
 </f></fromBytes>
-	<toBytes public="1" set="method" line="96" static="1">
+	<toBytes public="1" set="method" line="103" static="1">
 		<f a="this">
 			<c path="lime.utils.ArrayBufferView"/>
 			<c path="haxe.io.Bytes"/>
 		</f>
 		<meta><m n=":impl"/></meta>
 	</toBytes>
-	<get_length get="inline" set="null" line="102" static="1">
+	<get_length get="inline" set="null" line="109" static="1">
 		<f a="this">
 			<c path="lime.utils.ArrayBufferView"/>
 			<x path="Int"/>
 		</f>
 		<meta><m n=":impl"/></meta>
 	</get_length>
-	<__get public="1" get="inline" set="null" line="107" static="1">
+	<__get public="1" get="inline" set="null" line="114" static="1">
 		<f a="this:idx">
 			<c path="lime.utils.ArrayBufferView"/>
 			<x path="Int"/>
@@ -32852,7 +32867,7 @@
 			<m n=":arrayAccess"/>
 		</meta>
 	</__get>
-	<__set public="1" get="inline" set="null" line="113" static="1">
+	<__set public="1" get="inline" set="null" line="120" static="1">
 		<f a="this:idx:val">
 			<c path="lime.utils.ArrayBufferView"/>
 			<x path="Int"/>
@@ -32865,15 +32880,22 @@
 			<m n=":arrayAccess"/>
 		</meta>
 	</__set>
+	<toString set="method" line="124" static="1">
+		<f a="this">
+			<c path="lime.utils.ArrayBufferView"/>
+			<c path="String"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</toString>
 </class></impl>
 	</abstract>
 	<class path="lime.utils._Float64Array.Float64Array_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/utils/Float64Array.hx" private="1" module="lime.utils.Float64Array">
-		<BYTES_PER_ELEMENT public="1" get="inline" set="null" line="61" static="1"><x path="Int"/></BYTES_PER_ELEMENT>
+		<BYTES_PER_ELEMENT public="1" get="inline" set="null" line="68" static="1"><x path="Int"/></BYTES_PER_ELEMENT>
 		<length public="1" get="accessor" set="null" static="1">
 			<x path="Int"/>
 			<meta><m n=":impl"/></meta>
 		</length>
-		<subarray public="1" get="inline" set="null" line="88" static="1">
+		<subarray public="1" get="inline" set="null" line="95" static="1">
 			<f a="this:begin:?end">
 				<c path="lime.utils.ArrayBufferView"/>
 				<x path="Int"/>
@@ -32882,27 +32904,27 @@
 			</f>
 			<meta><m n=":impl"/></meta>
 		</subarray>
-		<fromBytes public="1" set="method" line="92" static="1"><f a="bytes:?byteOffset:?len">
+		<fromBytes public="1" set="method" line="99" static="1"><f a="bytes:?byteOffset:?len">
 	<c path="haxe.io.Bytes"/>
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="lime.utils.Float64Array"/>
 </f></fromBytes>
-		<toBytes public="1" set="method" line="96" static="1">
+		<toBytes public="1" set="method" line="103" static="1">
 			<f a="this">
 				<c path="lime.utils.ArrayBufferView"/>
 				<c path="haxe.io.Bytes"/>
 			</f>
 			<meta><m n=":impl"/></meta>
 		</toBytes>
-		<get_length get="inline" set="null" line="102" static="1">
+		<get_length get="inline" set="null" line="109" static="1">
 			<f a="this">
 				<c path="lime.utils.ArrayBufferView"/>
 				<x path="Int"/>
 			</f>
 			<meta><m n=":impl"/></meta>
 		</get_length>
-		<__get public="1" get="inline" set="null" line="107" static="1">
+		<__get public="1" get="inline" set="null" line="114" static="1">
 			<f a="this:idx">
 				<c path="lime.utils.ArrayBufferView"/>
 				<x path="Int"/>
@@ -32914,7 +32936,7 @@
 				<m n=":arrayAccess"/>
 			</meta>
 		</__get>
-		<__set public="1" get="inline" set="null" line="113" static="1">
+		<__set public="1" get="inline" set="null" line="120" static="1">
 			<f a="this:idx:val">
 				<c path="lime.utils.ArrayBufferView"/>
 				<x path="Int"/>
@@ -32927,6 +32949,13 @@
 				<m n=":arrayAccess"/>
 			</meta>
 		</__set>
+		<toString set="method" line="124" static="1">
+			<f a="this">
+				<c path="lime.utils.ArrayBufferView"/>
+				<c path="String"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</toString>
 	</class>
 	<class path="lime.utils.GLUtils" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/utils/GLUtils.hx">
 		<compileShader public="1" set="method" line="12" static="1"><f a="source:type">
@@ -32950,12 +32979,12 @@
 			<m n=":arrayAccess"/>
 		</meta>
 		<impl><class path="lime.utils._Int16Array.Int16Array_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/utils/Int16Array.hx" private="1" module="lime.utils.Int16Array">
-	<BYTES_PER_ELEMENT public="1" get="inline" set="null" line="61" static="1"><x path="Int"/></BYTES_PER_ELEMENT>
+	<BYTES_PER_ELEMENT public="1" get="inline" set="null" line="68" static="1"><x path="Int"/></BYTES_PER_ELEMENT>
 	<length public="1" get="accessor" set="null" static="1">
 		<x path="Int"/>
 		<meta><m n=":impl"/></meta>
 	</length>
-	<subarray public="1" get="inline" set="null" line="88" static="1">
+	<subarray public="1" get="inline" set="null" line="95" static="1">
 		<f a="this:begin:?end">
 			<c path="lime.utils.ArrayBufferView"/>
 			<x path="Int"/>
@@ -32964,27 +32993,27 @@
 		</f>
 		<meta><m n=":impl"/></meta>
 	</subarray>
-	<fromBytes public="1" set="method" line="92" static="1"><f a="bytes:?byteOffset:?len">
+	<fromBytes public="1" set="method" line="99" static="1"><f a="bytes:?byteOffset:?len">
 	<c path="haxe.io.Bytes"/>
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="lime.utils.Int16Array"/>
 </f></fromBytes>
-	<toBytes public="1" set="method" line="96" static="1">
+	<toBytes public="1" set="method" line="103" static="1">
 		<f a="this">
 			<c path="lime.utils.ArrayBufferView"/>
 			<c path="haxe.io.Bytes"/>
 		</f>
 		<meta><m n=":impl"/></meta>
 	</toBytes>
-	<get_length get="inline" set="null" line="102" static="1">
+	<get_length get="inline" set="null" line="109" static="1">
 		<f a="this">
 			<c path="lime.utils.ArrayBufferView"/>
 			<x path="Int"/>
 		</f>
 		<meta><m n=":impl"/></meta>
 	</get_length>
-	<__get public="1" get="inline" set="null" line="107" static="1">
+	<__get public="1" get="inline" set="null" line="114" static="1">
 		<f a="this:idx">
 			<c path="lime.utils.ArrayBufferView"/>
 			<x path="Int"/>
@@ -32996,7 +33025,7 @@
 			<m n=":arrayAccess"/>
 		</meta>
 	</__get>
-	<__set public="1" get="inline" set="null" line="113" static="1">
+	<__set public="1" get="inline" set="null" line="120" static="1">
 		<f a="this:idx:val">
 			<c path="lime.utils.ArrayBufferView"/>
 			<x path="Int"/>
@@ -33009,15 +33038,22 @@
 			<m n=":arrayAccess"/>
 		</meta>
 	</__set>
+	<toString set="method" line="124" static="1">
+		<f a="this">
+			<c path="lime.utils.ArrayBufferView"/>
+			<c path="String"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</toString>
 </class></impl>
 	</abstract>
 	<class path="lime.utils._Int16Array.Int16Array_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/utils/Int16Array.hx" private="1" module="lime.utils.Int16Array">
-		<BYTES_PER_ELEMENT public="1" get="inline" set="null" line="61" static="1"><x path="Int"/></BYTES_PER_ELEMENT>
+		<BYTES_PER_ELEMENT public="1" get="inline" set="null" line="68" static="1"><x path="Int"/></BYTES_PER_ELEMENT>
 		<length public="1" get="accessor" set="null" static="1">
 			<x path="Int"/>
 			<meta><m n=":impl"/></meta>
 		</length>
-		<subarray public="1" get="inline" set="null" line="88" static="1">
+		<subarray public="1" get="inline" set="null" line="95" static="1">
 			<f a="this:begin:?end">
 				<c path="lime.utils.ArrayBufferView"/>
 				<x path="Int"/>
@@ -33026,27 +33062,27 @@
 			</f>
 			<meta><m n=":impl"/></meta>
 		</subarray>
-		<fromBytes public="1" set="method" line="92" static="1"><f a="bytes:?byteOffset:?len">
+		<fromBytes public="1" set="method" line="99" static="1"><f a="bytes:?byteOffset:?len">
 	<c path="haxe.io.Bytes"/>
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="lime.utils.Int16Array"/>
 </f></fromBytes>
-		<toBytes public="1" set="method" line="96" static="1">
+		<toBytes public="1" set="method" line="103" static="1">
 			<f a="this">
 				<c path="lime.utils.ArrayBufferView"/>
 				<c path="haxe.io.Bytes"/>
 			</f>
 			<meta><m n=":impl"/></meta>
 		</toBytes>
-		<get_length get="inline" set="null" line="102" static="1">
+		<get_length get="inline" set="null" line="109" static="1">
 			<f a="this">
 				<c path="lime.utils.ArrayBufferView"/>
 				<x path="Int"/>
 			</f>
 			<meta><m n=":impl"/></meta>
 		</get_length>
-		<__get public="1" get="inline" set="null" line="107" static="1">
+		<__get public="1" get="inline" set="null" line="114" static="1">
 			<f a="this:idx">
 				<c path="lime.utils.ArrayBufferView"/>
 				<x path="Int"/>
@@ -33058,7 +33094,7 @@
 				<m n=":arrayAccess"/>
 			</meta>
 		</__get>
-		<__set public="1" get="inline" set="null" line="113" static="1">
+		<__set public="1" get="inline" set="null" line="120" static="1">
 			<f a="this:idx:val">
 				<c path="lime.utils.ArrayBufferView"/>
 				<x path="Int"/>
@@ -33071,6 +33107,13 @@
 				<m n=":arrayAccess"/>
 			</meta>
 		</__set>
+		<toString set="method" line="124" static="1">
+			<f a="this">
+				<c path="lime.utils.ArrayBufferView"/>
+				<c path="String"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</toString>
 	</class>
 	<abstract path="lime.utils.Int32Array" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/utils/Int32Array.hx">
 		<from><icast><c path="lime.utils.ArrayBufferView"/></icast></from>
@@ -33081,12 +33124,12 @@
 			<m n=":arrayAccess"/>
 		</meta>
 		<impl><class path="lime.utils._Int32Array.Int32Array_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/utils/Int32Array.hx" private="1" module="lime.utils.Int32Array">
-	<BYTES_PER_ELEMENT public="1" get="inline" set="null" line="62" static="1"><x path="Int"/></BYTES_PER_ELEMENT>
+	<BYTES_PER_ELEMENT public="1" get="inline" set="null" line="68" static="1"><x path="Int"/></BYTES_PER_ELEMENT>
 	<length public="1" get="accessor" set="null" static="1">
 		<x path="Int"/>
 		<meta><m n=":impl"/></meta>
 	</length>
-	<subarray public="1" get="inline" set="null" line="89" static="1">
+	<subarray public="1" get="inline" set="null" line="95" static="1">
 		<f a="this:begin:?end">
 			<c path="lime.utils.ArrayBufferView"/>
 			<x path="Int"/>
@@ -33095,27 +33138,27 @@
 		</f>
 		<meta><m n=":impl"/></meta>
 	</subarray>
-	<fromBytes public="1" set="method" line="93" static="1"><f a="bytes:?byteOffset:?len">
+	<fromBytes public="1" set="method" line="99" static="1"><f a="bytes:?byteOffset:?len">
 	<c path="haxe.io.Bytes"/>
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="lime.utils.Int32Array"/>
 </f></fromBytes>
-	<toBytes public="1" set="method" line="97" static="1">
+	<toBytes public="1" set="method" line="103" static="1">
 		<f a="this">
 			<c path="lime.utils.ArrayBufferView"/>
 			<c path="haxe.io.Bytes"/>
 		</f>
 		<meta><m n=":impl"/></meta>
 	</toBytes>
-	<get_length get="inline" set="null" line="103" static="1">
+	<get_length get="inline" set="null" line="109" static="1">
 		<f a="this">
 			<c path="lime.utils.ArrayBufferView"/>
 			<x path="Int"/>
 		</f>
 		<meta><m n=":impl"/></meta>
 	</get_length>
-	<__get public="1" get="inline" set="null" line="108" static="1">
+	<__get public="1" get="inline" set="null" line="114" static="1">
 		<f a="this:idx">
 			<c path="lime.utils.ArrayBufferView"/>
 			<x path="Int"/>
@@ -33127,7 +33170,7 @@
 			<m n=":arrayAccess"/>
 		</meta>
 	</__get>
-	<__set public="1" get="inline" set="null" line="114" static="1">
+	<__set public="1" get="inline" set="null" line="120" static="1">
 		<f a="this:idx:val">
 			<c path="lime.utils.ArrayBufferView"/>
 			<x path="Int"/>
@@ -33140,15 +33183,22 @@
 			<m n=":arrayAccess"/>
 		</meta>
 	</__set>
+	<toString set="method" line="124" static="1">
+		<f a="this">
+			<c path="lime.utils.ArrayBufferView"/>
+			<c path="String"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</toString>
 </class></impl>
 	</abstract>
 	<class path="lime.utils._Int32Array.Int32Array_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/utils/Int32Array.hx" private="1" module="lime.utils.Int32Array">
-		<BYTES_PER_ELEMENT public="1" get="inline" set="null" line="62" static="1"><x path="Int"/></BYTES_PER_ELEMENT>
+		<BYTES_PER_ELEMENT public="1" get="inline" set="null" line="68" static="1"><x path="Int"/></BYTES_PER_ELEMENT>
 		<length public="1" get="accessor" set="null" static="1">
 			<x path="Int"/>
 			<meta><m n=":impl"/></meta>
 		</length>
-		<subarray public="1" get="inline" set="null" line="89" static="1">
+		<subarray public="1" get="inline" set="null" line="95" static="1">
 			<f a="this:begin:?end">
 				<c path="lime.utils.ArrayBufferView"/>
 				<x path="Int"/>
@@ -33157,27 +33207,27 @@
 			</f>
 			<meta><m n=":impl"/></meta>
 		</subarray>
-		<fromBytes public="1" set="method" line="93" static="1"><f a="bytes:?byteOffset:?len">
+		<fromBytes public="1" set="method" line="99" static="1"><f a="bytes:?byteOffset:?len">
 	<c path="haxe.io.Bytes"/>
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="lime.utils.Int32Array"/>
 </f></fromBytes>
-		<toBytes public="1" set="method" line="97" static="1">
+		<toBytes public="1" set="method" line="103" static="1">
 			<f a="this">
 				<c path="lime.utils.ArrayBufferView"/>
 				<c path="haxe.io.Bytes"/>
 			</f>
 			<meta><m n=":impl"/></meta>
 		</toBytes>
-		<get_length get="inline" set="null" line="103" static="1">
+		<get_length get="inline" set="null" line="109" static="1">
 			<f a="this">
 				<c path="lime.utils.ArrayBufferView"/>
 				<x path="Int"/>
 			</f>
 			<meta><m n=":impl"/></meta>
 		</get_length>
-		<__get public="1" get="inline" set="null" line="108" static="1">
+		<__get public="1" get="inline" set="null" line="114" static="1">
 			<f a="this:idx">
 				<c path="lime.utils.ArrayBufferView"/>
 				<x path="Int"/>
@@ -33189,7 +33239,7 @@
 				<m n=":arrayAccess"/>
 			</meta>
 		</__get>
-		<__set public="1" get="inline" set="null" line="114" static="1">
+		<__set public="1" get="inline" set="null" line="120" static="1">
 			<f a="this:idx:val">
 				<c path="lime.utils.ArrayBufferView"/>
 				<x path="Int"/>
@@ -33202,6 +33252,13 @@
 				<m n=":arrayAccess"/>
 			</meta>
 		</__set>
+		<toString set="method" line="124" static="1">
+			<f a="this">
+				<c path="lime.utils.ArrayBufferView"/>
+				<c path="String"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</toString>
 	</class>
 	<abstract path="lime.utils.Int8Array" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/utils/Int8Array.hx">
 		<from><icast><c path="lime.utils.ArrayBufferView"/></icast></from>
@@ -33212,12 +33269,12 @@
 			<m n=":arrayAccess"/>
 		</meta>
 		<impl><class path="lime.utils._Int8Array.Int8Array_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/utils/Int8Array.hx" private="1" module="lime.utils.Int8Array">
-	<BYTES_PER_ELEMENT public="1" get="inline" set="null" line="61" static="1"><x path="Int"/></BYTES_PER_ELEMENT>
+	<BYTES_PER_ELEMENT public="1" get="inline" set="null" line="66" static="1"><x path="Int"/></BYTES_PER_ELEMENT>
 	<length public="1" get="accessor" set="null" static="1">
 		<x path="Int"/>
 		<meta><m n=":impl"/></meta>
 	</length>
-	<subarray public="1" get="inline" set="null" line="88" static="1">
+	<subarray public="1" get="inline" set="null" line="93" static="1">
 		<f a="this:begin:?end">
 			<c path="lime.utils.ArrayBufferView"/>
 			<x path="Int"/>
@@ -33226,27 +33283,27 @@
 		</f>
 		<meta><m n=":impl"/></meta>
 	</subarray>
-	<fromBytes public="1" set="method" line="92" static="1"><f a="bytes:?byteOffset:?len">
+	<fromBytes public="1" set="method" line="97" static="1"><f a="bytes:?byteOffset:?len">
 	<c path="haxe.io.Bytes"/>
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="lime.utils.Int8Array"/>
 </f></fromBytes>
-	<toBytes public="1" set="method" line="96" static="1">
+	<toBytes public="1" set="method" line="103" static="1">
 		<f a="this">
 			<c path="lime.utils.ArrayBufferView"/>
 			<c path="haxe.io.Bytes"/>
 		</f>
 		<meta><m n=":impl"/></meta>
 	</toBytes>
-	<get_length get="inline" set="null" line="102" static="1">
+	<get_length get="inline" set="null" line="109" static="1">
 		<f a="this">
 			<c path="lime.utils.ArrayBufferView"/>
 			<x path="Int"/>
 		</f>
 		<meta><m n=":impl"/></meta>
 	</get_length>
-	<__get public="1" get="inline" set="null" line="107" static="1">
+	<__get public="1" get="inline" set="null" line="114" static="1">
 		<f a="this:idx">
 			<c path="lime.utils.ArrayBufferView"/>
 			<x path="Int"/>
@@ -33258,7 +33315,7 @@
 			<m n=":arrayAccess"/>
 		</meta>
 	</__get>
-	<__set public="1" get="inline" set="null" line="113" static="1">
+	<__set public="1" get="inline" set="null" line="120" static="1">
 		<f a="this:idx:val">
 			<c path="lime.utils.ArrayBufferView"/>
 			<x path="Int"/>
@@ -33271,15 +33328,22 @@
 			<m n=":arrayAccess"/>
 		</meta>
 	</__set>
+	<toString set="method" line="124" static="1">
+		<f a="this">
+			<c path="lime.utils.ArrayBufferView"/>
+			<c path="String"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</toString>
 </class></impl>
 	</abstract>
 	<class path="lime.utils._Int8Array.Int8Array_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/utils/Int8Array.hx" private="1" module="lime.utils.Int8Array">
-		<BYTES_PER_ELEMENT public="1" get="inline" set="null" line="61" static="1"><x path="Int"/></BYTES_PER_ELEMENT>
+		<BYTES_PER_ELEMENT public="1" get="inline" set="null" line="66" static="1"><x path="Int"/></BYTES_PER_ELEMENT>
 		<length public="1" get="accessor" set="null" static="1">
 			<x path="Int"/>
 			<meta><m n=":impl"/></meta>
 		</length>
-		<subarray public="1" get="inline" set="null" line="88" static="1">
+		<subarray public="1" get="inline" set="null" line="93" static="1">
 			<f a="this:begin:?end">
 				<c path="lime.utils.ArrayBufferView"/>
 				<x path="Int"/>
@@ -33288,27 +33352,27 @@
 			</f>
 			<meta><m n=":impl"/></meta>
 		</subarray>
-		<fromBytes public="1" set="method" line="92" static="1"><f a="bytes:?byteOffset:?len">
+		<fromBytes public="1" set="method" line="97" static="1"><f a="bytes:?byteOffset:?len">
 	<c path="haxe.io.Bytes"/>
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="lime.utils.Int8Array"/>
 </f></fromBytes>
-		<toBytes public="1" set="method" line="96" static="1">
+		<toBytes public="1" set="method" line="103" static="1">
 			<f a="this">
 				<c path="lime.utils.ArrayBufferView"/>
 				<c path="haxe.io.Bytes"/>
 			</f>
 			<meta><m n=":impl"/></meta>
 		</toBytes>
-		<get_length get="inline" set="null" line="102" static="1">
+		<get_length get="inline" set="null" line="109" static="1">
 			<f a="this">
 				<c path="lime.utils.ArrayBufferView"/>
 				<x path="Int"/>
 			</f>
 			<meta><m n=":impl"/></meta>
 		</get_length>
-		<__get public="1" get="inline" set="null" line="107" static="1">
+		<__get public="1" get="inline" set="null" line="114" static="1">
 			<f a="this:idx">
 				<c path="lime.utils.ArrayBufferView"/>
 				<x path="Int"/>
@@ -33320,7 +33384,7 @@
 				<m n=":arrayAccess"/>
 			</meta>
 		</__get>
-		<__set public="1" get="inline" set="null" line="113" static="1">
+		<__set public="1" get="inline" set="null" line="120" static="1">
 			<f a="this:idx:val">
 				<c path="lime.utils.ArrayBufferView"/>
 				<x path="Int"/>
@@ -33333,6 +33397,13 @@
 				<m n=":arrayAccess"/>
 			</meta>
 		</__set>
+		<toString set="method" line="124" static="1">
+			<f a="this">
+				<c path="lime.utils.ArrayBufferView"/>
+				<c path="String"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</toString>
 	</class>
 	<class path="lime.utils.LZMA" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/utils/LZMA.hx">
 		<decode public="1" set="method" line="11" static="1"><f a="bytes">
@@ -33368,12 +33439,12 @@
 			<m n=":arrayAccess"/>
 		</meta>
 		<impl><class path="lime.utils._UInt16Array.UInt16Array_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/utils/UInt16Array.hx" private="1" module="lime.utils.UInt16Array">
-	<BYTES_PER_ELEMENT public="1" get="inline" set="null" line="61" static="1"><x path="Int"/></BYTES_PER_ELEMENT>
+	<BYTES_PER_ELEMENT public="1" get="inline" set="null" line="68" static="1"><x path="Int"/></BYTES_PER_ELEMENT>
 	<length public="1" get="accessor" set="null" static="1">
 		<x path="Int"/>
 		<meta><m n=":impl"/></meta>
 	</length>
-	<subarray public="1" get="inline" set="null" line="88" static="1">
+	<subarray public="1" get="inline" set="null" line="95" static="1">
 		<f a="this:begin:?end">
 			<c path="lime.utils.ArrayBufferView"/>
 			<x path="Int"/>
@@ -33382,27 +33453,27 @@
 		</f>
 		<meta><m n=":impl"/></meta>
 	</subarray>
-	<fromBytes public="1" set="method" line="92" static="1"><f a="bytes:?byteOffset:?len">
+	<fromBytes public="1" set="method" line="99" static="1"><f a="bytes:?byteOffset:?len">
 	<c path="haxe.io.Bytes"/>
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="lime.utils.UInt16Array"/>
 </f></fromBytes>
-	<toBytes public="1" set="method" line="96" static="1">
+	<toBytes public="1" set="method" line="103" static="1">
 		<f a="this">
 			<c path="lime.utils.ArrayBufferView"/>
 			<c path="haxe.io.Bytes"/>
 		</f>
 		<meta><m n=":impl"/></meta>
 	</toBytes>
-	<get_length get="inline" set="null" line="102" static="1">
+	<get_length get="inline" set="null" line="109" static="1">
 		<f a="this">
 			<c path="lime.utils.ArrayBufferView"/>
 			<x path="Int"/>
 		</f>
 		<meta><m n=":impl"/></meta>
 	</get_length>
-	<__get public="1" get="inline" set="null" line="107" static="1">
+	<__get public="1" get="inline" set="null" line="114" static="1">
 		<f a="this:idx">
 			<c path="lime.utils.ArrayBufferView"/>
 			<x path="Int"/>
@@ -33414,7 +33485,7 @@
 			<m n=":arrayAccess"/>
 		</meta>
 	</__get>
-	<__set public="1" get="inline" set="null" line="113" static="1">
+	<__set public="1" get="inline" set="null" line="120" static="1">
 		<f a="this:idx:val">
 			<c path="lime.utils.ArrayBufferView"/>
 			<x path="Int"/>
@@ -33427,15 +33498,22 @@
 			<m n=":arrayAccess"/>
 		</meta>
 	</__set>
+	<toString set="method" line="124" static="1">
+		<f a="this">
+			<c path="lime.utils.ArrayBufferView"/>
+			<c path="String"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</toString>
 </class></impl>
 	</abstract>
 	<class path="lime.utils._UInt16Array.UInt16Array_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/utils/UInt16Array.hx" private="1" module="lime.utils.UInt16Array">
-		<BYTES_PER_ELEMENT public="1" get="inline" set="null" line="61" static="1"><x path="Int"/></BYTES_PER_ELEMENT>
+		<BYTES_PER_ELEMENT public="1" get="inline" set="null" line="68" static="1"><x path="Int"/></BYTES_PER_ELEMENT>
 		<length public="1" get="accessor" set="null" static="1">
 			<x path="Int"/>
 			<meta><m n=":impl"/></meta>
 		</length>
-		<subarray public="1" get="inline" set="null" line="88" static="1">
+		<subarray public="1" get="inline" set="null" line="95" static="1">
 			<f a="this:begin:?end">
 				<c path="lime.utils.ArrayBufferView"/>
 				<x path="Int"/>
@@ -33444,27 +33522,27 @@
 			</f>
 			<meta><m n=":impl"/></meta>
 		</subarray>
-		<fromBytes public="1" set="method" line="92" static="1"><f a="bytes:?byteOffset:?len">
+		<fromBytes public="1" set="method" line="99" static="1"><f a="bytes:?byteOffset:?len">
 	<c path="haxe.io.Bytes"/>
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="lime.utils.UInt16Array"/>
 </f></fromBytes>
-		<toBytes public="1" set="method" line="96" static="1">
+		<toBytes public="1" set="method" line="103" static="1">
 			<f a="this">
 				<c path="lime.utils.ArrayBufferView"/>
 				<c path="haxe.io.Bytes"/>
 			</f>
 			<meta><m n=":impl"/></meta>
 		</toBytes>
-		<get_length get="inline" set="null" line="102" static="1">
+		<get_length get="inline" set="null" line="109" static="1">
 			<f a="this">
 				<c path="lime.utils.ArrayBufferView"/>
 				<x path="Int"/>
 			</f>
 			<meta><m n=":impl"/></meta>
 		</get_length>
-		<__get public="1" get="inline" set="null" line="107" static="1">
+		<__get public="1" get="inline" set="null" line="114" static="1">
 			<f a="this:idx">
 				<c path="lime.utils.ArrayBufferView"/>
 				<x path="Int"/>
@@ -33476,7 +33554,7 @@
 				<m n=":arrayAccess"/>
 			</meta>
 		</__get>
-		<__set public="1" get="inline" set="null" line="113" static="1">
+		<__set public="1" get="inline" set="null" line="120" static="1">
 			<f a="this:idx:val">
 				<c path="lime.utils.ArrayBufferView"/>
 				<x path="Int"/>
@@ -33489,6 +33567,13 @@
 				<m n=":arrayAccess"/>
 			</meta>
 		</__set>
+		<toString set="method" line="124" static="1">
+			<f a="this">
+				<c path="lime.utils.ArrayBufferView"/>
+				<c path="String"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</toString>
 	</class>
 	<abstract path="lime.utils.UInt32Array" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/utils/UInt32Array.hx">
 		<from><icast><c path="lime.utils.ArrayBufferView"/></icast></from>
@@ -33499,12 +33584,12 @@
 			<m n=":arrayAccess"/>
 		</meta>
 		<impl><class path="lime.utils._UInt32Array.UInt32Array_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/utils/UInt32Array.hx" private="1" module="lime.utils.UInt32Array">
-	<BYTES_PER_ELEMENT public="1" get="inline" set="null" line="61" static="1"><x path="Int"/></BYTES_PER_ELEMENT>
+	<BYTES_PER_ELEMENT public="1" get="inline" set="null" line="68" static="1"><x path="Int"/></BYTES_PER_ELEMENT>
 	<length public="1" get="accessor" set="null" static="1">
 		<x path="Int"/>
 		<meta><m n=":impl"/></meta>
 	</length>
-	<subarray public="1" get="inline" set="null" line="88" static="1">
+	<subarray public="1" get="inline" set="null" line="95" static="1">
 		<f a="this:begin:?end">
 			<c path="lime.utils.ArrayBufferView"/>
 			<x path="Int"/>
@@ -33513,27 +33598,27 @@
 		</f>
 		<meta><m n=":impl"/></meta>
 	</subarray>
-	<fromBytes public="1" set="method" line="92" static="1"><f a="bytes:?byteOffset:?len">
+	<fromBytes public="1" set="method" line="99" static="1"><f a="bytes:?byteOffset:?len">
 	<c path="haxe.io.Bytes"/>
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="lime.utils.UInt32Array"/>
 </f></fromBytes>
-	<toBytes public="1" set="method" line="96" static="1">
+	<toBytes public="1" set="method" line="103" static="1">
 		<f a="this">
 			<c path="lime.utils.ArrayBufferView"/>
 			<c path="haxe.io.Bytes"/>
 		</f>
 		<meta><m n=":impl"/></meta>
 	</toBytes>
-	<get_length get="inline" set="null" line="102" static="1">
+	<get_length get="inline" set="null" line="109" static="1">
 		<f a="this">
 			<c path="lime.utils.ArrayBufferView"/>
 			<x path="Int"/>
 		</f>
 		<meta><m n=":impl"/></meta>
 	</get_length>
-	<__get public="1" get="inline" set="null" line="107" static="1">
+	<__get public="1" get="inline" set="null" line="114" static="1">
 		<f a="this:idx">
 			<c path="lime.utils.ArrayBufferView"/>
 			<x path="Int"/>
@@ -33545,7 +33630,7 @@
 			<m n=":arrayAccess"/>
 		</meta>
 	</__get>
-	<__set public="1" get="inline" set="null" line="113" static="1">
+	<__set public="1" get="inline" set="null" line="120" static="1">
 		<f a="this:idx:val">
 			<c path="lime.utils.ArrayBufferView"/>
 			<x path="Int"/>
@@ -33558,15 +33643,22 @@
 			<m n=":arrayAccess"/>
 		</meta>
 	</__set>
+	<toString set="method" line="124" static="1">
+		<f a="this">
+			<c path="lime.utils.ArrayBufferView"/>
+			<c path="String"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</toString>
 </class></impl>
 	</abstract>
 	<class path="lime.utils._UInt32Array.UInt32Array_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/utils/UInt32Array.hx" private="1" module="lime.utils.UInt32Array">
-		<BYTES_PER_ELEMENT public="1" get="inline" set="null" line="61" static="1"><x path="Int"/></BYTES_PER_ELEMENT>
+		<BYTES_PER_ELEMENT public="1" get="inline" set="null" line="68" static="1"><x path="Int"/></BYTES_PER_ELEMENT>
 		<length public="1" get="accessor" set="null" static="1">
 			<x path="Int"/>
 			<meta><m n=":impl"/></meta>
 		</length>
-		<subarray public="1" get="inline" set="null" line="88" static="1">
+		<subarray public="1" get="inline" set="null" line="95" static="1">
 			<f a="this:begin:?end">
 				<c path="lime.utils.ArrayBufferView"/>
 				<x path="Int"/>
@@ -33575,27 +33667,27 @@
 			</f>
 			<meta><m n=":impl"/></meta>
 		</subarray>
-		<fromBytes public="1" set="method" line="92" static="1"><f a="bytes:?byteOffset:?len">
+		<fromBytes public="1" set="method" line="99" static="1"><f a="bytes:?byteOffset:?len">
 	<c path="haxe.io.Bytes"/>
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="lime.utils.UInt32Array"/>
 </f></fromBytes>
-		<toBytes public="1" set="method" line="96" static="1">
+		<toBytes public="1" set="method" line="103" static="1">
 			<f a="this">
 				<c path="lime.utils.ArrayBufferView"/>
 				<c path="haxe.io.Bytes"/>
 			</f>
 			<meta><m n=":impl"/></meta>
 		</toBytes>
-		<get_length get="inline" set="null" line="102" static="1">
+		<get_length get="inline" set="null" line="109" static="1">
 			<f a="this">
 				<c path="lime.utils.ArrayBufferView"/>
 				<x path="Int"/>
 			</f>
 			<meta><m n=":impl"/></meta>
 		</get_length>
-		<__get public="1" get="inline" set="null" line="107" static="1">
+		<__get public="1" get="inline" set="null" line="114" static="1">
 			<f a="this:idx">
 				<c path="lime.utils.ArrayBufferView"/>
 				<x path="Int"/>
@@ -33607,7 +33699,7 @@
 				<m n=":arrayAccess"/>
 			</meta>
 		</__get>
-		<__set public="1" get="inline" set="null" line="113" static="1">
+		<__set public="1" get="inline" set="null" line="120" static="1">
 			<f a="this:idx:val">
 				<c path="lime.utils.ArrayBufferView"/>
 				<x path="Int"/>
@@ -33620,6 +33712,13 @@
 				<m n=":arrayAccess"/>
 			</meta>
 		</__set>
+		<toString set="method" line="124" static="1">
+			<f a="this">
+				<c path="lime.utils.ArrayBufferView"/>
+				<c path="String"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</toString>
 	</class>
 	<abstract path="lime.utils.UInt8Array" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/utils/UInt8Array.hx">
 		<from><icast><c path="lime.utils.ArrayBufferView"/></icast></from>
@@ -33630,12 +33729,12 @@
 			<m n=":arrayAccess"/>
 		</meta>
 		<impl><class path="lime.utils._UInt8Array.UInt8Array_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/utils/UInt8Array.hx" private="1" module="lime.utils.UInt8Array">
-	<BYTES_PER_ELEMENT public="1" get="inline" set="null" line="62" static="1"><x path="Int"/></BYTES_PER_ELEMENT>
+	<BYTES_PER_ELEMENT public="1" get="inline" set="null" line="68" static="1"><x path="Int"/></BYTES_PER_ELEMENT>
 	<length public="1" get="accessor" set="null" static="1">
 		<x path="Int"/>
 		<meta><m n=":impl"/></meta>
 	</length>
-	<subarray public="1" get="inline" set="null" line="89" static="1">
+	<subarray public="1" get="inline" set="null" line="95" static="1">
 		<f a="this:begin:?end">
 			<c path="lime.utils.ArrayBufferView"/>
 			<x path="Int"/>
@@ -33644,150 +33743,26 @@
 		</f>
 		<meta><m n=":impl"/></meta>
 	</subarray>
-	<fromBytes public="1" set="method" line="93" static="1"><f a="bytes:?byteOffset:?len">
+	<fromBytes public="1" set="method" line="99" static="1"><f a="bytes:?byteOffset:?len">
 	<c path="haxe.io.Bytes"/>
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="lime.utils.UInt8Array"/>
 </f></fromBytes>
-	<toBytes public="1" set="method" line="97" static="1">
+	<toBytes public="1" set="method" line="103" static="1">
 		<f a="this">
 			<c path="lime.utils.ArrayBufferView"/>
 			<c path="haxe.io.Bytes"/>
 		</f>
 		<meta><m n=":impl"/></meta>
 	</toBytes>
-	<get_length get="inline" set="null" line="103" static="1">
+	<toString set="method" line="109" static="1">
 		<f a="this">
 			<c path="lime.utils.ArrayBufferView"/>
-			<x path="Int"/>
+			<c path="String"/>
 		</f>
 		<meta><m n=":impl"/></meta>
-	</get_length>
-	<__get public="1" get="inline" set="null" line="108" static="1">
-		<f a="this:idx">
-			<c path="lime.utils.ArrayBufferView"/>
-			<x path="Int"/>
-			<t path="Null"><x path="UInt"/></t>
-		</f>
-		<meta>
-			<m n=":impl"/>
-			<m n=":noCompletion"/>
-			<m n=":arrayAccess"/>
-		</meta>
-	</__get>
-	<__set public="1" get="inline" set="null" line="114" static="1">
-		<f a="this:idx:val">
-			<c path="lime.utils.ArrayBufferView"/>
-			<x path="Int"/>
-			<x path="UInt"/>
-			<x path="UInt"/>
-		</f>
-		<meta>
-			<m n=":impl"/>
-			<m n=":noCompletion"/>
-			<m n=":arrayAccess"/>
-		</meta>
-	</__set>
-</class></impl>
-	</abstract>
-	<class path="lime.utils._UInt8Array.UInt8Array_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/utils/UInt8Array.hx" private="1" module="lime.utils.UInt8Array">
-		<BYTES_PER_ELEMENT public="1" get="inline" set="null" line="62" static="1"><x path="Int"/></BYTES_PER_ELEMENT>
-		<length public="1" get="accessor" set="null" static="1">
-			<x path="Int"/>
-			<meta><m n=":impl"/></meta>
-		</length>
-		<subarray public="1" get="inline" set="null" line="89" static="1">
-			<f a="this:begin:?end">
-				<c path="lime.utils.ArrayBufferView"/>
-				<x path="Int"/>
-				<x path="Int"/>
-				<x path="lime.utils.UInt8Array"/>
-			</f>
-			<meta><m n=":impl"/></meta>
-		</subarray>
-		<fromBytes public="1" set="method" line="93" static="1"><f a="bytes:?byteOffset:?len">
-	<c path="haxe.io.Bytes"/>
-	<x path="Int"/>
-	<x path="Int"/>
-	<x path="lime.utils.UInt8Array"/>
-</f></fromBytes>
-		<toBytes public="1" set="method" line="97" static="1">
-			<f a="this">
-				<c path="lime.utils.ArrayBufferView"/>
-				<c path="haxe.io.Bytes"/>
-			</f>
-			<meta><m n=":impl"/></meta>
-		</toBytes>
-		<get_length get="inline" set="null" line="103" static="1">
-			<f a="this">
-				<c path="lime.utils.ArrayBufferView"/>
-				<x path="Int"/>
-			</f>
-			<meta><m n=":impl"/></meta>
-		</get_length>
-		<__get public="1" get="inline" set="null" line="108" static="1">
-			<f a="this:idx">
-				<c path="lime.utils.ArrayBufferView"/>
-				<x path="Int"/>
-				<t path="Null"><x path="UInt"/></t>
-			</f>
-			<meta>
-				<m n=":impl"/>
-				<m n=":noCompletion"/>
-				<m n=":arrayAccess"/>
-			</meta>
-		</__get>
-		<__set public="1" get="inline" set="null" line="114" static="1">
-			<f a="this:idx:val">
-				<c path="lime.utils.ArrayBufferView"/>
-				<x path="Int"/>
-				<x path="UInt"/>
-				<x path="UInt"/>
-			</f>
-			<meta>
-				<m n=":impl"/>
-				<m n=":noCompletion"/>
-				<m n=":arrayAccess"/>
-			</meta>
-		</__set>
-	</class>
-	<abstract path="lime.utils.UInt8ClampedArray" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/utils/UInt8ClampedArray.hx">
-		<from><icast><c path="lime.utils.ArrayBufferView"/></icast></from>
-		<this><c path="lime.utils.ArrayBufferView"/></this>
-		<to><icast><c path="lime.utils.ArrayBufferView"/></icast></to>
-		<meta>
-			<m n=":forward"/>
-			<m n=":arrayAccess"/>
-		</meta>
-		<impl><class path="lime.utils._UInt8ClampedArray.UInt8ClampedArray_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/utils/UInt8ClampedArray.hx" private="1" module="lime.utils.UInt8ClampedArray">
-	<BYTES_PER_ELEMENT public="1" get="inline" set="null" line="70" static="1"><x path="Int"/></BYTES_PER_ELEMENT>
-	<length public="1" get="accessor" set="null" static="1">
-		<x path="Int"/>
-		<meta><m n=":impl"/></meta>
-	</length>
-	<subarray public="1" get="inline" set="null" line="97" static="1">
-		<f a="this:begin:?end">
-			<c path="lime.utils.ArrayBufferView"/>
-			<x path="Int"/>
-			<x path="Int"/>
-			<x path="lime.utils.UInt8ClampedArray"/>
-		</f>
-		<meta><m n=":impl"/></meta>
-	</subarray>
-	<fromBytes public="1" set="method" line="101" static="1"><f a="bytes:?byteOffset:?len">
-	<c path="haxe.io.Bytes"/>
-	<x path="Int"/>
-	<x path="Int"/>
-	<x path="lime.utils.UInt8ClampedArray"/>
-</f></fromBytes>
-	<toBytes public="1" set="method" line="105" static="1">
-		<f a="this">
-			<c path="lime.utils.ArrayBufferView"/>
-			<c path="haxe.io.Bytes"/>
-		</f>
-		<meta><m n=":impl"/></meta>
-	</toBytes>
+	</toString>
 	<get_length get="inline" set="null" line="111" static="1">
 		<f a="this">
 			<c path="lime.utils.ArrayBufferView"/>
@@ -33822,34 +33797,41 @@
 	</__set>
 </class></impl>
 	</abstract>
-	<class path="lime.utils._UInt8ClampedArray.UInt8ClampedArray_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/utils/UInt8ClampedArray.hx" private="1" module="lime.utils.UInt8ClampedArray">
-		<BYTES_PER_ELEMENT public="1" get="inline" set="null" line="70" static="1"><x path="Int"/></BYTES_PER_ELEMENT>
+	<class path="lime.utils._UInt8Array.UInt8Array_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/utils/UInt8Array.hx" private="1" module="lime.utils.UInt8Array">
+		<BYTES_PER_ELEMENT public="1" get="inline" set="null" line="68" static="1"><x path="Int"/></BYTES_PER_ELEMENT>
 		<length public="1" get="accessor" set="null" static="1">
 			<x path="Int"/>
 			<meta><m n=":impl"/></meta>
 		</length>
-		<subarray public="1" get="inline" set="null" line="97" static="1">
+		<subarray public="1" get="inline" set="null" line="95" static="1">
 			<f a="this:begin:?end">
 				<c path="lime.utils.ArrayBufferView"/>
 				<x path="Int"/>
 				<x path="Int"/>
-				<x path="lime.utils.UInt8ClampedArray"/>
+				<x path="lime.utils.UInt8Array"/>
 			</f>
 			<meta><m n=":impl"/></meta>
 		</subarray>
-		<fromBytes public="1" set="method" line="101" static="1"><f a="bytes:?byteOffset:?len">
+		<fromBytes public="1" set="method" line="99" static="1"><f a="bytes:?byteOffset:?len">
 	<c path="haxe.io.Bytes"/>
 	<x path="Int"/>
 	<x path="Int"/>
-	<x path="lime.utils.UInt8ClampedArray"/>
+	<x path="lime.utils.UInt8Array"/>
 </f></fromBytes>
-		<toBytes public="1" set="method" line="105" static="1">
+		<toBytes public="1" set="method" line="103" static="1">
 			<f a="this">
 				<c path="lime.utils.ArrayBufferView"/>
 				<c path="haxe.io.Bytes"/>
 			</f>
 			<meta><m n=":impl"/></meta>
 		</toBytes>
+		<toString set="method" line="109" static="1">
+			<f a="this">
+				<c path="lime.utils.ArrayBufferView"/>
+				<c path="String"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</toString>
 		<get_length get="inline" set="null" line="111" static="1">
 			<f a="this">
 				<c path="lime.utils.ArrayBufferView"/>
@@ -33882,6 +33864,151 @@
 				<m n=":arrayAccess"/>
 			</meta>
 		</__set>
+	</class>
+	<abstract path="lime.utils.UInt8ClampedArray" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/utils/UInt8ClampedArray.hx">
+		<from><icast><c path="lime.utils.ArrayBufferView"/></icast></from>
+		<this><c path="lime.utils.ArrayBufferView"/></this>
+		<to><icast><c path="lime.utils.ArrayBufferView"/></icast></to>
+		<meta>
+			<m n=":forward"/>
+			<m n=":arrayAccess"/>
+		</meta>
+		<impl><class path="lime.utils._UInt8ClampedArray.UInt8ClampedArray_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/utils/UInt8ClampedArray.hx" private="1" module="lime.utils.UInt8ClampedArray">
+	<BYTES_PER_ELEMENT public="1" get="inline" set="null" line="76" static="1"><x path="Int"/></BYTES_PER_ELEMENT>
+	<length public="1" get="accessor" set="null" static="1">
+		<x path="Int"/>
+		<meta><m n=":impl"/></meta>
+	</length>
+	<subarray public="1" get="inline" set="null" line="103" static="1">
+		<f a="this:begin:?end">
+			<c path="lime.utils.ArrayBufferView"/>
+			<x path="Int"/>
+			<x path="Int"/>
+			<x path="lime.utils.UInt8ClampedArray"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</subarray>
+	<fromBytes public="1" set="method" line="107" static="1"><f a="bytes:?byteOffset:?len">
+	<c path="haxe.io.Bytes"/>
+	<x path="Int"/>
+	<x path="Int"/>
+	<x path="lime.utils.UInt8ClampedArray"/>
+</f></fromBytes>
+	<toBytes public="1" set="method" line="111" static="1">
+		<f a="this">
+			<c path="lime.utils.ArrayBufferView"/>
+			<c path="haxe.io.Bytes"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</toBytes>
+	<get_length get="inline" set="null" line="117" static="1">
+		<f a="this">
+			<c path="lime.utils.ArrayBufferView"/>
+			<x path="Int"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</get_length>
+	<__get public="1" get="inline" set="null" line="122" static="1">
+		<f a="this:idx">
+			<c path="lime.utils.ArrayBufferView"/>
+			<x path="Int"/>
+			<t path="Null"><x path="UInt"/></t>
+		</f>
+		<meta>
+			<m n=":impl"/>
+			<m n=":noCompletion"/>
+			<m n=":arrayAccess"/>
+		</meta>
+	</__get>
+	<__set public="1" get="inline" set="null" line="128" static="1">
+		<f a="this:idx:val">
+			<c path="lime.utils.ArrayBufferView"/>
+			<x path="Int"/>
+			<x path="UInt"/>
+			<x path="UInt"/>
+		</f>
+		<meta>
+			<m n=":impl"/>
+			<m n=":noCompletion"/>
+			<m n=":arrayAccess"/>
+		</meta>
+	</__set>
+	<toString set="method" line="132" static="1">
+		<f a="this">
+			<c path="lime.utils.ArrayBufferView"/>
+			<c path="String"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</toString>
+</class></impl>
+	</abstract>
+	<class path="lime.utils._UInt8ClampedArray.UInt8ClampedArray_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/utils/UInt8ClampedArray.hx" private="1" module="lime.utils.UInt8ClampedArray">
+		<BYTES_PER_ELEMENT public="1" get="inline" set="null" line="76" static="1"><x path="Int"/></BYTES_PER_ELEMENT>
+		<length public="1" get="accessor" set="null" static="1">
+			<x path="Int"/>
+			<meta><m n=":impl"/></meta>
+		</length>
+		<subarray public="1" get="inline" set="null" line="103" static="1">
+			<f a="this:begin:?end">
+				<c path="lime.utils.ArrayBufferView"/>
+				<x path="Int"/>
+				<x path="Int"/>
+				<x path="lime.utils.UInt8ClampedArray"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</subarray>
+		<fromBytes public="1" set="method" line="107" static="1"><f a="bytes:?byteOffset:?len">
+	<c path="haxe.io.Bytes"/>
+	<x path="Int"/>
+	<x path="Int"/>
+	<x path="lime.utils.UInt8ClampedArray"/>
+</f></fromBytes>
+		<toBytes public="1" set="method" line="111" static="1">
+			<f a="this">
+				<c path="lime.utils.ArrayBufferView"/>
+				<c path="haxe.io.Bytes"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</toBytes>
+		<get_length get="inline" set="null" line="117" static="1">
+			<f a="this">
+				<c path="lime.utils.ArrayBufferView"/>
+				<x path="Int"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</get_length>
+		<__get public="1" get="inline" set="null" line="122" static="1">
+			<f a="this:idx">
+				<c path="lime.utils.ArrayBufferView"/>
+				<x path="Int"/>
+				<t path="Null"><x path="UInt"/></t>
+			</f>
+			<meta>
+				<m n=":impl"/>
+				<m n=":noCompletion"/>
+				<m n=":arrayAccess"/>
+			</meta>
+		</__get>
+		<__set public="1" get="inline" set="null" line="128" static="1">
+			<f a="this:idx:val">
+				<c path="lime.utils.ArrayBufferView"/>
+				<x path="Int"/>
+				<x path="UInt"/>
+				<x path="UInt"/>
+			</f>
+			<meta>
+				<m n=":impl"/>
+				<m n=":noCompletion"/>
+				<m n=":arrayAccess"/>
+			</meta>
+		</__set>
+		<toString set="method" line="132" static="1">
+			<f a="this">
+				<c path="lime.utils.ArrayBufferView"/>
+				<c path="String"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</toString>
 	</class>
 	<typedef path="sys.FileStat" params="" file="/usr/lib/haxe/std/sys/FileStat.hx">
 		<a>
