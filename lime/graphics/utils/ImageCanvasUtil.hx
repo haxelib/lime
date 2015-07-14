@@ -46,6 +46,11 @@ class ImageCanvasUtil {
 			
 			buffer.__srcImage = null;
 			
+		} else if (buffer.data != null && buffer.__srcCanvas == null) {
+			
+			createCanvas (image, buffer.width, buffer.height);
+			createImageData (image);
+			
 		}
 		
 	}
@@ -156,9 +161,19 @@ class ImageCanvasUtil {
 		
 		var buffer = image.buffer;
 		
-		if (buffer.data == null) {
+		if (buffer.__srcImageData == null) {
 			
-			buffer.__srcImageData = buffer.__srcContext.getImageData (0, 0, buffer.width, buffer.height);
+			if (buffer.data == null) {
+				
+				buffer.__srcImageData = buffer.__srcContext.getImageData (0, 0, buffer.width, buffer.height);
+				
+			} else {
+				
+				buffer.__srcImageData = buffer.__srcContext.createImageData (buffer.width, buffer.height);
+				buffer.__srcImageData.data.set (cast buffer.data);
+				
+			}
+			
 			buffer.data = new UInt8Array (cast buffer.__srcImageData.data.buffer);
 			
 		}
@@ -278,6 +293,19 @@ class ImageCanvasUtil {
 			buffer.__srcContext.drawImage (sourceCanvas, 0, 0, newWidth, newHeight);
 			
 		}
+		
+	}
+	
+	
+	public static function scroll (image:Image, x:Int, y:Int):Void {
+		
+		if ((x % image.width == 0) && (y % image.height == 0)) return;
+		
+		convertToCanvas (image);
+		sync (image);
+		
+		image.buffer.__srcContext.clearRect (x, y, image.width, image.height);
+		image.buffer.__srcContext.drawImage (image.buffer.__srcCanvas, x, y);
 		
 	}
 	
