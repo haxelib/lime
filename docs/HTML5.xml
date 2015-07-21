@@ -9474,52 +9474,52 @@
 		<to><icast><x path="Int"/></icast></to>
 		<meta><m n=":enum"/></meta>
 		<impl><class path="lime.graphics._PixelFormat.PixelFormat_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/graphics/PixelFormat.hx" private="1" module="lime.graphics.PixelFormat" extern="1">
-	<RGBA public="1" get="inline" set="null" line="6" static="1">
+	<RGBA32 public="1" get="inline" set="null" line="6" static="1">
 		<x path="lime.graphics.PixelFormat"/>
 		<meta>
 			<m n=":enum"/>
 			<m n=":impl"/>
 		</meta>
-	</RGBA>
-	<ARGB public="1" get="inline" set="null" line="7" static="1">
+	</RGBA32>
+	<ARGB32 public="1" get="inline" set="null" line="7" static="1">
 		<x path="lime.graphics.PixelFormat"/>
 		<meta>
 			<m n=":enum"/>
 			<m n=":impl"/>
 		</meta>
-	</ARGB>
-	<BGRA public="1" get="inline" set="null" line="8" static="1">
+	</ARGB32>
+	<BGRA32 public="1" get="inline" set="null" line="8" static="1">
 		<x path="lime.graphics.PixelFormat"/>
 		<meta>
 			<m n=":enum"/>
 			<m n=":impl"/>
 		</meta>
-	</BGRA>
+	</BGRA32>
 	<meta><m n=":enum"/></meta>
 </class></impl>
 	</abstract>
 	<class path="lime.graphics._PixelFormat.PixelFormat_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/graphics/PixelFormat.hx" private="1" module="lime.graphics.PixelFormat" extern="1">
-		<RGBA public="1" get="inline" set="null" line="6" static="1">
+		<RGBA32 public="1" get="inline" set="null" line="6" static="1">
 			<x path="lime.graphics.PixelFormat"/>
 			<meta>
 				<m n=":enum"/>
 				<m n=":impl"/>
 			</meta>
-		</RGBA>
-		<ARGB public="1" get="inline" set="null" line="7" static="1">
+		</RGBA32>
+		<ARGB32 public="1" get="inline" set="null" line="7" static="1">
 			<x path="lime.graphics.PixelFormat"/>
 			<meta>
 				<m n=":enum"/>
 				<m n=":impl"/>
 			</meta>
-		</ARGB>
-		<BGRA public="1" get="inline" set="null" line="8" static="1">
+		</ARGB32>
+		<BGRA32 public="1" get="inline" set="null" line="8" static="1">
 			<x path="lime.graphics.PixelFormat"/>
 			<meta>
 				<m n=":enum"/>
 				<m n=":impl"/>
 			</meta>
-		</BGRA>
+		</BGRA32>
 		<meta><m n=":enum"/></meta>
 	</class>
 	<enum path="lime.graphics.RenderContext" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/graphics/RenderContext.hx">
@@ -13582,24 +13582,24 @@
 	<x path="Bool"/>
 	<x path="Void"/>
 </f></copyPixels>
-		<createCanvas public="1" set="method" line="126" static="1"><f a="image:width:height">
+		<createCanvas public="1" set="method" line="132" static="1"><f a="image:width:height">
 	<c path="lime.graphics.Image"/>
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Void"/>
 </f></createCanvas>
-		<createImageData public="1" set="method" line="158" static="1"><f a="image">
+		<createImageData public="1" set="method" line="164" static="1"><f a="image">
 	<c path="lime.graphics.Image"/>
 	<x path="Void"/>
 </f></createImageData>
-		<fillRect public="1" set="method" line="186" static="1"><f a="image:rect:color:format">
+		<fillRect public="1" set="method" line="192" static="1"><f a="image:rect:color:format">
 	<c path="lime.graphics.Image"/>
 	<c path="lime.math.Rectangle"/>
 	<x path="Int"/>
 	<x path="lime.graphics.PixelFormat"/>
 	<x path="Void"/>
 </f></fillRect>
-		<floodFill public="1" set="method" line="226" static="1"><f a="image:x:y:color:format">
+		<floodFill public="1" set="method" line="232" static="1"><f a="image:x:y:color:format">
 	<c path="lime.graphics.Image"/>
 	<x path="Int"/>
 	<x path="Int"/>
@@ -13607,27 +13607,27 @@
 	<x path="lime.graphics.PixelFormat"/>
 	<x path="Void"/>
 </f></floodFill>
-		<getPixel public="1" set="method" line="236" static="1"><f a="image:x:y:format">
+		<getPixel public="1" set="method" line="242" static="1"><f a="image:x:y:format">
 	<c path="lime.graphics.Image"/>
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="lime.graphics.PixelFormat"/>
 	<x path="Int"/>
 </f></getPixel>
-		<getPixel32 public="1" set="method" line="246" static="1"><f a="image:x:y:format">
+		<getPixel32 public="1" set="method" line="252" static="1"><f a="image:x:y:format">
 	<c path="lime.graphics.Image"/>
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="lime.graphics.PixelFormat"/>
 	<x path="Int"/>
 </f></getPixel32>
-		<getPixels public="1" set="method" line="256" static="1"><f a="image:rect:format">
+		<getPixels public="1" set="method" line="262" static="1"><f a="image:rect:format">
 	<c path="lime.graphics.Image"/>
 	<c path="lime.math.Rectangle"/>
 	<x path="lime.graphics.PixelFormat"/>
 	<c path="lime.utils.ByteArray"/>
 </f></getPixels>
-		<merge public="1" set="method" line="266" static="1"><f a="image:sourceImage:sourceRect:destPoint:redMultiplier:greenMultiplier:blueMultiplier:alphaMultiplier">
+		<merge public="1" set="method" line="272" static="1"><f a="image:sourceImage:sourceRect:destPoint:redMultiplier:greenMultiplier:blueMultiplier:alphaMultiplier">
 	<c path="lime.graphics.Image"/>
 	<c path="lime.graphics.Image"/>
 	<c path="lime.math.Rectangle"/>
@@ -13638,19 +13638,19 @@
 	<x path="Int"/>
 	<x path="Void"/>
 </f></merge>
-		<resize public="1" set="method" line="278" static="1"><f a="image:newWidth:newHeight">
+		<resize public="1" set="method" line="284" static="1"><f a="image:newWidth:newHeight">
 	<c path="lime.graphics.Image"/>
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Void"/>
 </f></resize>
-		<scroll public="1" set="method" line="300" static="1"><f a="image:x:y">
+		<scroll public="1" set="method" line="306" static="1"><f a="image:x:y">
 	<c path="lime.graphics.Image"/>
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Void"/>
 </f></scroll>
-		<setPixel public="1" set="method" line="313" static="1"><f a="image:x:y:color:format">
+		<setPixel public="1" set="method" line="319" static="1"><f a="image:x:y:color:format">
 	<c path="lime.graphics.Image"/>
 	<x path="Int"/>
 	<x path="Int"/>
@@ -13658,7 +13658,7 @@
 	<x path="lime.graphics.PixelFormat"/>
 	<x path="Void"/>
 </f></setPixel>
-		<setPixel32 public="1" set="method" line="323" static="1"><f a="image:x:y:color:format">
+		<setPixel32 public="1" set="method" line="329" static="1"><f a="image:x:y:color:format">
 	<c path="lime.graphics.Image"/>
 	<x path="Int"/>
 	<x path="Int"/>
@@ -13666,14 +13666,14 @@
 	<x path="lime.graphics.PixelFormat"/>
 	<x path="Void"/>
 </f></setPixel32>
-		<setPixels public="1" set="method" line="333" static="1"><f a="image:rect:byteArray:format">
+		<setPixels public="1" set="method" line="339" static="1"><f a="image:rect:byteArray:format">
 	<c path="lime.graphics.Image"/>
 	<c path="lime.math.Rectangle"/>
 	<c path="lime.utils.ByteArray"/>
 	<x path="lime.graphics.PixelFormat"/>
 	<x path="Void"/>
 </f></setPixels>
-		<sync public="1" set="method" line="343" static="1"><f a="image">
+		<sync public="1" set="method" line="349" static="1"><f a="image">
 	<c path="lime.graphics.Image"/>
 	<x path="Void"/>
 </f></sync>
@@ -13683,15 +13683,13 @@
 		</meta>
 	</class>
 	<class path="lime.graphics.utils.ImageDataUtil" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/graphics/utils/ImageDataUtil.hx">
-		<__alpha16 static="1"><x path="haxe.ds.Vector"><x path="Int"/></x></__alpha16>
-		<__clamp static="1"><x path="haxe.ds.Vector"><x path="Int"/></x></__clamp>
-		<colorTransform public="1" set="method" line="51" static="1"><f a="image:rect:colorMatrix">
+		<colorTransform public="1" set="method" line="26" static="1"><f a="image:rect:colorMatrix">
 	<c path="lime.graphics.Image"/>
 	<c path="lime.math.Rectangle"/>
 	<x path="lime.math.ColorMatrix"/>
 	<x path="Void"/>
 </f></colorTransform>
-		<copyChannel public="1" set="method" line="101" static="1"><f a="image:sourceImage:sourceRect:destPoint:sourceChannel:destChannel">
+		<copyChannel public="1" set="method" line="71" static="1"><f a="image:sourceImage:sourceRect:destPoint:sourceChannel:destChannel">
 	<c path="lime.graphics.Image"/>
 	<c path="lime.graphics.Image"/>
 	<c path="lime.math.Rectangle"/>
@@ -13700,7 +13698,7 @@
 	<e path="lime.graphics.ImageChannel"/>
 	<x path="Void"/>
 </f></copyChannel>
-		<copyPixels public="1" set="method" line="196" static="1"><f a="image:sourceImage:sourceRect:destPoint:?alphaImage:?alphaPoint:?mergeAlpha">
+		<copyPixels public="1" set="method" line="155" static="1"><f a="image:sourceImage:sourceRect:destPoint:?alphaImage:?alphaPoint:?mergeAlpha">
 	<c path="lime.graphics.Image"/>
 	<c path="lime.graphics.Image"/>
 	<c path="lime.math.Rectangle"/>
@@ -13710,14 +13708,14 @@
 	<x path="Bool"/>
 	<x path="Void"/>
 </f></copyPixels>
-		<fillRect public="1" set="method" line="291" static="1"><f a="image:rect:color:format">
+		<fillRect public="1" set="method" line="299" static="1"><f a="image:rect:color:format">
 	<c path="lime.graphics.Image"/>
 	<c path="lime.math.Rectangle"/>
 	<x path="Int"/>
 	<x path="lime.graphics.PixelFormat"/>
 	<x path="Void"/>
 </f></fillRect>
-		<floodFill public="1" set="method" line="379" static="1"><f a="image:x:y:color:format">
+		<floodFill public="1" set="method" line="350" static="1"><f a="image:x:y:color:format">
 	<c path="lime.graphics.Image"/>
 	<x path="Int"/>
 	<x path="Int"/>
@@ -13725,7 +13723,7 @@
 	<x path="lime.graphics.PixelFormat"/>
 	<x path="Void"/>
 </f></floodFill>
-		<getColorBoundsRect public="1" set="method" line="457" static="1"><f a="image:mask:color:?findColor:format">
+		<getColorBoundsRect public="1" set="method" line="432" static="1"><f a="image:mask:color:?findColor:format">
 	<c path="lime.graphics.Image"/>
 	<x path="Int"/>
 	<x path="Int"/>
@@ -13733,27 +13731,27 @@
 	<x path="lime.graphics.PixelFormat"/>
 	<c path="lime.math.Rectangle"/>
 </f></getColorBoundsRect>
-		<getPixel public="1" set="method" line="624" static="1"><f a="image:x:y:format">
+		<getPixel public="1" set="method" line="599" static="1"><f a="image:x:y:format">
 	<c path="lime.graphics.Image"/>
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="lime.graphics.PixelFormat"/>
 	<x path="Int"/>
 </f></getPixel>
-		<getPixel32 public="1" set="method" line="654" static="1"><f a="image:x:y:format">
+		<getPixel32 public="1" set="method" line="616" static="1"><f a="image:x:y:format">
 	<c path="lime.graphics.Image"/>
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="lime.graphics.PixelFormat"/>
 	<x path="Int"/>
 </f></getPixel32>
-		<getPixels public="1" set="method" line="689" static="1"><f a="image:rect:format">
+		<getPixels public="1" set="method" line="633" static="1"><f a="image:rect:format">
 	<c path="lime.graphics.Image"/>
 	<c path="lime.math.Rectangle"/>
 	<x path="lime.graphics.PixelFormat"/>
 	<c path="lime.utils.ByteArray"/>
 </f></getPixels>
-		<merge public="1" set="method" line="787" static="1"><f a="image:sourceImage:sourceRect:destPoint:redMultiplier:greenMultiplier:blueMultiplier:alphaMultiplier">
+		<merge public="1" set="method" line="704" static="1"><f a="image:sourceImage:sourceRect:destPoint:redMultiplier:greenMultiplier:blueMultiplier:alphaMultiplier">
 	<c path="lime.graphics.Image"/>
 	<c path="lime.graphics.Image"/>
 	<c path="lime.math.Rectangle"/>
@@ -13764,28 +13762,28 @@
 	<x path="Int"/>
 	<x path="Void"/>
 </f></merge>
-		<multiplyAlpha public="1" set="method" line="830" static="1"><f a="image">
+		<multiplyAlpha public="1" set="method" line="756" static="1"><f a="image">
 	<c path="lime.graphics.Image"/>
 	<x path="Void"/>
 </f></multiplyAlpha>
-		<resize public="1" set="method" line="862" static="1"><f a="image:newWidth:newHeight">
+		<resize public="1" set="method" line="785" static="1"><f a="image:newWidth:newHeight">
 	<c path="lime.graphics.Image"/>
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Void"/>
 </f></resize>
-		<resizeBuffer public="1" set="method" line="933" static="1"><f a="image:newWidth:newHeight">
+		<resizeBuffer public="1" set="method" line="858" static="1"><f a="image:newWidth:newHeight">
 	<c path="lime.graphics.Image"/>
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Void"/>
 </f></resizeBuffer>
-		<setFormat public="1" set="method" line="963" static="1"><f a="image:format">
+		<setFormat public="1" set="method" line="888" static="1"><f a="image:format">
 	<c path="lime.graphics.Image"/>
 	<x path="lime.graphics.PixelFormat"/>
 	<x path="Void"/>
 </f></setFormat>
-		<setPixel public="1" set="method" line="1052" static="1"><f a="image:x:y:color:format">
+		<setPixel public="1" set="method" line="977" static="1"><f a="image:x:y:color:format">
 	<c path="lime.graphics.Image"/>
 	<x path="Int"/>
 	<x path="Int"/>
@@ -13793,7 +13791,7 @@
 	<x path="lime.graphics.PixelFormat"/>
 	<x path="Void"/>
 </f></setPixel>
-		<setPixel32 public="1" set="method" line="1068" static="1"><f a="image:x:y:color:format">
+		<setPixel32 public="1" set="method" line="991" static="1"><f a="image:x:y:color:format">
 	<c path="lime.graphics.Image"/>
 	<x path="Int"/>
 	<x path="Int"/>
@@ -13801,24 +13799,24 @@
 	<x path="lime.graphics.PixelFormat"/>
 	<x path="Void"/>
 </f></setPixel32>
-		<setPixels public="1" set="method" line="1112" static="1"><f a="image:rect:byteArray:format">
+		<setPixels public="1" set="method" line="1011" static="1"><f a="image:rect:byteArray:format">
 	<c path="lime.graphics.Image"/>
 	<c path="lime.math.Rectangle"/>
 	<c path="lime.utils.ByteArray"/>
 	<x path="lime.graphics.PixelFormat"/>
 	<x path="Void"/>
 </f></setPixels>
-		<unmultiplyAlpha public="1" set="method" line="1188" static="1"><f a="image">
+		<unmultiplyAlpha public="1" set="method" line="1057" static="1"><f a="image">
 	<c path="lime.graphics.Image"/>
 	<x path="Void"/>
 </f></unmultiplyAlpha>
-		<lime_image_data_util_color_transform line="1235" static="1"><f a="::">
+		<lime_image_data_util_color_transform line="1094" static="1"><f a="::">
 	<c path="lime.graphics.Image"/>
 	<c path="lime.math.Rectangle"/>
 	<x path="lime.math.ColorMatrix"/>
 	<unknown/>
 </f></lime_image_data_util_color_transform>
-		<lime_image_data_util_copy_channel line="1236" static="1"><f a=":::::">
+		<lime_image_data_util_copy_channel line="1095" static="1"><f a=":::::">
 	<c path="lime.graphics.Image"/>
 	<c path="lime.graphics.Image"/>
 	<c path="lime.math.Rectangle"/>
@@ -13827,35 +13825,37 @@
 	<x path="Int"/>
 	<unknown/>
 </f></lime_image_data_util_copy_channel>
-		<lime_image_data_util_copy_pixels line="1237" static="1"><f a="::::">
+		<lime_image_data_util_copy_pixels line="1096" static="1"><f a="::::::">
 	<c path="lime.graphics.Image"/>
 	<c path="lime.graphics.Image"/>
 	<c path="lime.math.Rectangle"/>
 	<c path="lime.math.Vector2"/>
+	<t path="Null"><c path="lime.graphics.Image"/></t>
+	<t path="Null"><c path="lime.math.Vector2"/></t>
 	<x path="Bool"/>
 	<unknown/>
 </f></lime_image_data_util_copy_pixels>
-		<lime_image_data_util_fill_rect line="1238" static="1"><f a="::">
+		<lime_image_data_util_fill_rect line="1097" static="1"><f a="::">
 	<c path="lime.graphics.Image"/>
 	<c path="lime.math.Rectangle"/>
-	<x path="Int"/>
+	<x path="lime.math.color.RGBA"/>
 	<unknown/>
 </f></lime_image_data_util_fill_rect>
-		<lime_image_data_util_flood_fill line="1239" static="1"><f a=":::">
+		<lime_image_data_util_flood_fill line="1098" static="1"><f a=":::">
 	<c path="lime.graphics.Image"/>
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Int"/>
 	<unknown/>
 </f></lime_image_data_util_flood_fill>
-		<lime_image_data_util_get_pixels line="1240" static="1"><f a=":::">
+		<lime_image_data_util_get_pixels line="1099" static="1"><f a=":::">
 	<c path="lime.graphics.Image"/>
 	<c path="lime.math.Rectangle"/>
 	<x path="lime.graphics.PixelFormat"/>
 	<c path="lime.utils.ByteArray"/>
 	<unknown/>
 </f></lime_image_data_util_get_pixels>
-		<lime_image_data_util_merge line="1241" static="1"><f a=":::::::">
+		<lime_image_data_util_merge line="1100" static="1"><f a=":::::::">
 	<c path="lime.graphics.Image"/>
 	<c path="lime.graphics.Image"/>
 	<c path="lime.math.Rectangle"/>
@@ -13866,33 +13866,63 @@
 	<x path="Int"/>
 	<unknown/>
 </f></lime_image_data_util_merge>
-		<lime_image_data_util_multiply_alpha line="1242" static="1"><f a="">
+		<lime_image_data_util_multiply_alpha line="1101" static="1"><f a="">
 	<c path="lime.graphics.Image"/>
 	<unknown/>
 </f></lime_image_data_util_multiply_alpha>
-		<lime_image_data_util_resize line="1243" static="1"><f a=":::">
+		<lime_image_data_util_resize line="1102" static="1"><f a=":::">
 	<c path="lime.graphics.Image"/>
 	<c path="lime.graphics.ImageBuffer"/>
 	<x path="Int"/>
 	<x path="Int"/>
 	<unknown/>
 </f></lime_image_data_util_resize>
-		<lime_image_data_util_set_format line="1244" static="1"><f a=":">
+		<lime_image_data_util_set_format line="1103" static="1"><f a=":">
 	<c path="lime.graphics.Image"/>
 	<x path="lime.graphics.PixelFormat"/>
 	<unknown/>
 </f></lime_image_data_util_set_format>
-		<lime_image_data_util_set_pixels line="1245" static="1"><f a=":::">
+		<lime_image_data_util_set_pixels line="1104" static="1"><f a=":::">
 	<c path="lime.graphics.Image"/>
 	<c path="lime.math.Rectangle"/>
 	<c path="lime.utils.ByteArray"/>
 	<x path="lime.graphics.PixelFormat"/>
 	<unknown/>
 </f></lime_image_data_util_set_pixels>
-		<lime_image_data_util_unmultiply_alpha line="1246" static="1"><f a="">
+		<lime_image_data_util_unmultiply_alpha line="1105" static="1"><f a="">
 	<c path="lime.graphics.Image"/>
 	<unknown/>
 </f></lime_image_data_util_unmultiply_alpha>
+		<meta>
+			<m n=":directlyUsed"/>
+			<m n=":access"><e>lime.math.color.RGBA</e></m>
+		</meta>
+	</class>
+	<class path="lime.graphics.utils._ImageDataUtil.ImageDataView" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/graphics/utils/ImageDataUtil.hx" private="1" module="lime.graphics.utils.ImageDataUtil">
+		<x public="1" set="null"><x path="Int"/></x>
+		<y public="1" set="null"><x path="Int"/></y>
+		<height public="1" set="null"><x path="Int"/></height>
+		<width public="1" set="null"><x path="Int"/></width>
+		<image><c path="lime.graphics.Image"/></image>
+		<offset><x path="Int"/></offset>
+		<rect><c path="lime.math.Rectangle"/></rect>
+		<stride><x path="Int"/></stride>
+		<clip public="1" set="method" line="1157"><f a="x:y:width:height">
+	<x path="Int"/>
+	<x path="Int"/>
+	<x path="Int"/>
+	<x path="Int"/>
+	<x path="Void"/>
+</f></clip>
+		<row public="1" get="inline" set="null" line="1170"><f a="y">
+	<x path="Int"/>
+	<x path="Int"/>
+</f></row>
+		<new public="1" set="method" line="1126"><f a="image:?rect">
+	<c path="lime.graphics.Image"/>
+	<c path="lime.math.Rectangle"/>
+	<x path="Void"/>
+</f></new>
 		<meta><m n=":directlyUsed"/></meta>
 	</class>
 	<abstract path="lime.math.ColorMatrix" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/math/ColorMatrix.hx">
@@ -13900,7 +13930,7 @@
 		<this><x path="lime.utils.Float32Array"/></this>
 		<to><icast><x path="lime.utils.Float32Array"/></icast></to>
 		<impl><class path="lime.math._ColorMatrix.ColorMatrix_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/math/ColorMatrix.hx" private="1" module="lime.math.ColorMatrix">
-	<__identity line="14" static="1"><c path="Array"><x path="Float"/></c></__identity>
+	<__identity line="15" static="1"><c path="Array"><x path="Float"/></c></__identity>
 	<alphaMultiplier public="1" get="accessor" set="accessor" static="1">
 		<x path="Float"/>
 		<meta><m n=":impl"/></meta>
@@ -13937,21 +13967,21 @@
 		<x path="Float"/>
 		<meta><m n=":impl"/></meta>
 	</redOffset>
-	<_new public="1" set="method" line="27" static="1">
+	<_new public="1" set="method" line="28" static="1">
 		<f a="?data">
 			<x path="lime.utils.Float32Array"/>
 			<x path="lime.math.ColorMatrix"/>
 		</f>
 		<meta><m n=":impl"/></meta>
 	</_new>
-	<clone public="1" set="method" line="42" static="1">
+	<clone public="1" set="method" line="43" static="1">
 		<f a="this">
 			<x path="lime.utils.Float32Array"/>
 			<x path="lime.math.ColorMatrix"/>
 		</f>
 		<meta><m n=":impl"/></meta>
 	</clone>
-	<concat public="1" set="method" line="49" static="1">
+	<concat public="1" set="method" line="50" static="1">
 		<f a="this:second">
 			<x path="lime.utils.Float32Array"/>
 			<x path="lime.math.ColorMatrix"/>
@@ -13959,7 +13989,7 @@
 		</f>
 		<meta><m n=":impl"/></meta>
 	</concat>
-	<copyFrom public="1" set="method" line="59" static="1">
+	<copyFrom public="1" set="method" line="60" static="1">
 		<f a="this:other">
 			<x path="lime.utils.Float32Array"/>
 			<x path="lime.math.ColorMatrix"/>
@@ -13967,28 +13997,56 @@
 		</f>
 		<meta><m n=":impl"/></meta>
 	</copyFrom>
-	<identity public="1" set="method" line="66" static="1">
+	<identity public="1" set="method" line="67" static="1">
 		<f a="this">
 			<x path="lime.utils.Float32Array"/>
 			<x path="Void"/>
 		</f>
 		<meta><m n=":impl"/></meta>
 	</identity>
-	<__toFlashColorTransform set="method" line="92" static="1">
+	<getAlphaTable public="1" set="method" line="93" static="1">
+		<f a="this">
+			<x path="lime.utils.Float32Array"/>
+			<x path="lime.utils.UInt8Array"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</getAlphaTable>
+	<getBlueTable public="1" set="method" line="114" static="1">
+		<f a="this">
+			<x path="lime.utils.Float32Array"/>
+			<x path="lime.utils.UInt8Array"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</getBlueTable>
+	<getGreenTable public="1" set="method" line="135" static="1">
+		<f a="this">
+			<x path="lime.utils.Float32Array"/>
+			<x path="lime.utils.UInt8Array"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</getGreenTable>
+	<getRedTable public="1" set="method" line="156" static="1">
+		<f a="this">
+			<x path="lime.utils.Float32Array"/>
+			<x path="lime.utils.UInt8Array"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</getRedTable>
+	<__toFlashColorTransform set="method" line="177" static="1">
 		<f a="this">
 			<x path="lime.utils.Float32Array"/>
 			<d/>
 		</f>
 		<meta><m n=":impl"/></meta>
 	</__toFlashColorTransform>
-	<get_alphaMultiplier get="inline" set="null" line="110" static="1">
+	<get_alphaMultiplier get="inline" set="null" line="195" static="1">
 		<f a="this">
 			<x path="lime.utils.Float32Array"/>
 			<x path="Float"/>
 		</f>
 		<meta><m n=":impl"/></meta>
 	</get_alphaMultiplier>
-	<set_alphaMultiplier get="inline" set="null" line="117" static="1">
+	<set_alphaMultiplier get="inline" set="null" line="202" static="1">
 		<f a="this:value">
 			<x path="lime.utils.Float32Array"/>
 			<x path="Float"/>
@@ -13996,14 +14054,14 @@
 		</f>
 		<meta><m n=":impl"/></meta>
 	</set_alphaMultiplier>
-	<get_alphaOffset get="inline" set="null" line="125" static="1">
+	<get_alphaOffset get="inline" set="null" line="209" static="1">
 		<f a="this">
 			<x path="lime.utils.Float32Array"/>
 			<x path="Float"/>
 		</f>
 		<meta><m n=":impl"/></meta>
 	</get_alphaOffset>
-	<set_alphaOffset get="inline" set="null" line="132" static="1">
+	<set_alphaOffset get="inline" set="null" line="216" static="1">
 		<f a="this:value">
 			<x path="lime.utils.Float32Array"/>
 			<x path="Float"/>
@@ -14011,14 +14069,14 @@
 		</f>
 		<meta><m n=":impl"/></meta>
 	</set_alphaOffset>
-	<get_blueMultiplier get="inline" set="null" line="140" static="1">
+	<get_blueMultiplier get="inline" set="null" line="223" static="1">
 		<f a="this">
 			<x path="lime.utils.Float32Array"/>
 			<x path="Float"/>
 		</f>
 		<meta><m n=":impl"/></meta>
 	</get_blueMultiplier>
-	<set_blueMultiplier get="inline" set="null" line="147" static="1">
+	<set_blueMultiplier get="inline" set="null" line="230" static="1">
 		<f a="this:value">
 			<x path="lime.utils.Float32Array"/>
 			<x path="Float"/>
@@ -14026,14 +14084,14 @@
 		</f>
 		<meta><m n=":impl"/></meta>
 	</set_blueMultiplier>
-	<get_blueOffset get="inline" set="null" line="155" static="1">
+	<get_blueOffset get="inline" set="null" line="237" static="1">
 		<f a="this">
 			<x path="lime.utils.Float32Array"/>
 			<x path="Float"/>
 		</f>
 		<meta><m n=":impl"/></meta>
 	</get_blueOffset>
-	<set_blueOffset get="inline" set="null" line="162" static="1">
+	<set_blueOffset get="inline" set="null" line="244" static="1">
 		<f a="this:value">
 			<x path="lime.utils.Float32Array"/>
 			<x path="Float"/>
@@ -14041,14 +14099,14 @@
 		</f>
 		<meta><m n=":impl"/></meta>
 	</set_blueOffset>
-	<get_color set="method" line="170" static="1">
+	<get_color set="method" line="251" static="1">
 		<f a="this">
 			<x path="lime.utils.Float32Array"/>
 			<x path="Int"/>
 		</f>
 		<meta><m n=":impl"/></meta>
 	</get_color>
-	<set_color set="method" line="177" static="1">
+	<set_color set="method" line="258" static="1">
 		<f a="this:value">
 			<x path="lime.utils.Float32Array"/>
 			<x path="Int"/>
@@ -14056,14 +14114,14 @@
 		</f>
 		<meta><m n=":impl"/></meta>
 	</set_color>
-	<get_greenMultiplier get="inline" set="null" line="192" static="1">
+	<get_greenMultiplier get="inline" set="null" line="273" static="1">
 		<f a="this">
 			<x path="lime.utils.Float32Array"/>
 			<x path="Float"/>
 		</f>
 		<meta><m n=":impl"/></meta>
 	</get_greenMultiplier>
-	<set_greenMultiplier get="inline" set="null" line="199" static="1">
+	<set_greenMultiplier get="inline" set="null" line="280" static="1">
 		<f a="this:value">
 			<x path="lime.utils.Float32Array"/>
 			<x path="Float"/>
@@ -14071,14 +14129,14 @@
 		</f>
 		<meta><m n=":impl"/></meta>
 	</set_greenMultiplier>
-	<get_greenOffset get="inline" set="null" line="207" static="1">
+	<get_greenOffset get="inline" set="null" line="287" static="1">
 		<f a="this">
 			<x path="lime.utils.Float32Array"/>
 			<x path="Float"/>
 		</f>
 		<meta><m n=":impl"/></meta>
 	</get_greenOffset>
-	<set_greenOffset get="inline" set="null" line="214" static="1">
+	<set_greenOffset get="inline" set="null" line="294" static="1">
 		<f a="this:value">
 			<x path="lime.utils.Float32Array"/>
 			<x path="Float"/>
@@ -14086,14 +14144,14 @@
 		</f>
 		<meta><m n=":impl"/></meta>
 	</set_greenOffset>
-	<get_redMultiplier get="inline" set="null" line="222" static="1">
+	<get_redMultiplier get="inline" set="null" line="301" static="1">
 		<f a="this">
 			<x path="lime.utils.Float32Array"/>
 			<x path="Float"/>
 		</f>
 		<meta><m n=":impl"/></meta>
 	</get_redMultiplier>
-	<set_redMultiplier get="inline" set="null" line="229" static="1">
+	<set_redMultiplier get="inline" set="null" line="308" static="1">
 		<f a="this:value">
 			<x path="lime.utils.Float32Array"/>
 			<x path="Float"/>
@@ -14101,14 +14159,14 @@
 		</f>
 		<meta><m n=":impl"/></meta>
 	</set_redMultiplier>
-	<get_redOffset get="inline" set="null" line="237" static="1">
+	<get_redOffset get="inline" set="null" line="315" static="1">
 		<f a="this">
 			<x path="lime.utils.Float32Array"/>
 			<x path="Float"/>
 		</f>
 		<meta><m n=":impl"/></meta>
 	</get_redOffset>
-	<set_redOffset get="inline" set="null" line="244" static="1">
+	<set_redOffset get="inline" set="null" line="322" static="1">
 		<f a="this:value">
 			<x path="lime.utils.Float32Array"/>
 			<x path="Float"/>
@@ -14116,7 +14174,7 @@
 		</f>
 		<meta><m n=":impl"/></meta>
 	</set_redOffset>
-	<get public="1" set="method" line="252" static="1">
+	<get public="1" set="method" line="329" static="1">
 		<f a="this:index">
 			<x path="lime.utils.Float32Array"/>
 			<x path="Int"/>
@@ -14127,7 +14185,7 @@
 			<m n=":arrayAccess"/>
 		</meta>
 	</get>
-	<set public="1" set="method" line="259" static="1">
+	<set public="1" set="method" line="336" static="1">
 		<f a="this:index:value">
 			<x path="lime.utils.Float32Array"/>
 			<x path="Int"/>
@@ -14143,7 +14201,7 @@
 </class></impl>
 	</abstract>
 	<class path="lime.math._ColorMatrix.ColorMatrix_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/math/ColorMatrix.hx" private="1" module="lime.math.ColorMatrix">
-		<__identity line="14" static="1"><c path="Array"><x path="Float"/></c></__identity>
+		<__identity line="15" static="1"><c path="Array"><x path="Float"/></c></__identity>
 		<alphaMultiplier public="1" get="accessor" set="accessor" static="1">
 			<x path="Float"/>
 			<meta><m n=":impl"/></meta>
@@ -14180,21 +14238,21 @@
 			<x path="Float"/>
 			<meta><m n=":impl"/></meta>
 		</redOffset>
-		<_new public="1" set="method" line="27" static="1">
+		<_new public="1" set="method" line="28" static="1">
 			<f a="?data">
 				<x path="lime.utils.Float32Array"/>
 				<x path="lime.math.ColorMatrix"/>
 			</f>
 			<meta><m n=":impl"/></meta>
 		</_new>
-		<clone public="1" set="method" line="42" static="1">
+		<clone public="1" set="method" line="43" static="1">
 			<f a="this">
 				<x path="lime.utils.Float32Array"/>
 				<x path="lime.math.ColorMatrix"/>
 			</f>
 			<meta><m n=":impl"/></meta>
 		</clone>
-		<concat public="1" set="method" line="49" static="1">
+		<concat public="1" set="method" line="50" static="1">
 			<f a="this:second">
 				<x path="lime.utils.Float32Array"/>
 				<x path="lime.math.ColorMatrix"/>
@@ -14202,7 +14260,7 @@
 			</f>
 			<meta><m n=":impl"/></meta>
 		</concat>
-		<copyFrom public="1" set="method" line="59" static="1">
+		<copyFrom public="1" set="method" line="60" static="1">
 			<f a="this:other">
 				<x path="lime.utils.Float32Array"/>
 				<x path="lime.math.ColorMatrix"/>
@@ -14210,28 +14268,56 @@
 			</f>
 			<meta><m n=":impl"/></meta>
 		</copyFrom>
-		<identity public="1" set="method" line="66" static="1">
+		<identity public="1" set="method" line="67" static="1">
 			<f a="this">
 				<x path="lime.utils.Float32Array"/>
 				<x path="Void"/>
 			</f>
 			<meta><m n=":impl"/></meta>
 		</identity>
-		<__toFlashColorTransform set="method" line="92" static="1">
+		<getAlphaTable public="1" set="method" line="93" static="1">
+			<f a="this">
+				<x path="lime.utils.Float32Array"/>
+				<x path="lime.utils.UInt8Array"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</getAlphaTable>
+		<getBlueTable public="1" set="method" line="114" static="1">
+			<f a="this">
+				<x path="lime.utils.Float32Array"/>
+				<x path="lime.utils.UInt8Array"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</getBlueTable>
+		<getGreenTable public="1" set="method" line="135" static="1">
+			<f a="this">
+				<x path="lime.utils.Float32Array"/>
+				<x path="lime.utils.UInt8Array"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</getGreenTable>
+		<getRedTable public="1" set="method" line="156" static="1">
+			<f a="this">
+				<x path="lime.utils.Float32Array"/>
+				<x path="lime.utils.UInt8Array"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</getRedTable>
+		<__toFlashColorTransform set="method" line="177" static="1">
 			<f a="this">
 				<x path="lime.utils.Float32Array"/>
 				<d/>
 			</f>
 			<meta><m n=":impl"/></meta>
 		</__toFlashColorTransform>
-		<get_alphaMultiplier get="inline" set="null" line="110" static="1">
+		<get_alphaMultiplier get="inline" set="null" line="195" static="1">
 			<f a="this">
 				<x path="lime.utils.Float32Array"/>
 				<x path="Float"/>
 			</f>
 			<meta><m n=":impl"/></meta>
 		</get_alphaMultiplier>
-		<set_alphaMultiplier get="inline" set="null" line="117" static="1">
+		<set_alphaMultiplier get="inline" set="null" line="202" static="1">
 			<f a="this:value">
 				<x path="lime.utils.Float32Array"/>
 				<x path="Float"/>
@@ -14239,14 +14325,14 @@
 			</f>
 			<meta><m n=":impl"/></meta>
 		</set_alphaMultiplier>
-		<get_alphaOffset get="inline" set="null" line="125" static="1">
+		<get_alphaOffset get="inline" set="null" line="209" static="1">
 			<f a="this">
 				<x path="lime.utils.Float32Array"/>
 				<x path="Float"/>
 			</f>
 			<meta><m n=":impl"/></meta>
 		</get_alphaOffset>
-		<set_alphaOffset get="inline" set="null" line="132" static="1">
+		<set_alphaOffset get="inline" set="null" line="216" static="1">
 			<f a="this:value">
 				<x path="lime.utils.Float32Array"/>
 				<x path="Float"/>
@@ -14254,14 +14340,14 @@
 			</f>
 			<meta><m n=":impl"/></meta>
 		</set_alphaOffset>
-		<get_blueMultiplier get="inline" set="null" line="140" static="1">
+		<get_blueMultiplier get="inline" set="null" line="223" static="1">
 			<f a="this">
 				<x path="lime.utils.Float32Array"/>
 				<x path="Float"/>
 			</f>
 			<meta><m n=":impl"/></meta>
 		</get_blueMultiplier>
-		<set_blueMultiplier get="inline" set="null" line="147" static="1">
+		<set_blueMultiplier get="inline" set="null" line="230" static="1">
 			<f a="this:value">
 				<x path="lime.utils.Float32Array"/>
 				<x path="Float"/>
@@ -14269,14 +14355,14 @@
 			</f>
 			<meta><m n=":impl"/></meta>
 		</set_blueMultiplier>
-		<get_blueOffset get="inline" set="null" line="155" static="1">
+		<get_blueOffset get="inline" set="null" line="237" static="1">
 			<f a="this">
 				<x path="lime.utils.Float32Array"/>
 				<x path="Float"/>
 			</f>
 			<meta><m n=":impl"/></meta>
 		</get_blueOffset>
-		<set_blueOffset get="inline" set="null" line="162" static="1">
+		<set_blueOffset get="inline" set="null" line="244" static="1">
 			<f a="this:value">
 				<x path="lime.utils.Float32Array"/>
 				<x path="Float"/>
@@ -14284,14 +14370,14 @@
 			</f>
 			<meta><m n=":impl"/></meta>
 		</set_blueOffset>
-		<get_color set="method" line="170" static="1">
+		<get_color set="method" line="251" static="1">
 			<f a="this">
 				<x path="lime.utils.Float32Array"/>
 				<x path="Int"/>
 			</f>
 			<meta><m n=":impl"/></meta>
 		</get_color>
-		<set_color set="method" line="177" static="1">
+		<set_color set="method" line="258" static="1">
 			<f a="this:value">
 				<x path="lime.utils.Float32Array"/>
 				<x path="Int"/>
@@ -14299,14 +14385,14 @@
 			</f>
 			<meta><m n=":impl"/></meta>
 		</set_color>
-		<get_greenMultiplier get="inline" set="null" line="192" static="1">
+		<get_greenMultiplier get="inline" set="null" line="273" static="1">
 			<f a="this">
 				<x path="lime.utils.Float32Array"/>
 				<x path="Float"/>
 			</f>
 			<meta><m n=":impl"/></meta>
 		</get_greenMultiplier>
-		<set_greenMultiplier get="inline" set="null" line="199" static="1">
+		<set_greenMultiplier get="inline" set="null" line="280" static="1">
 			<f a="this:value">
 				<x path="lime.utils.Float32Array"/>
 				<x path="Float"/>
@@ -14314,14 +14400,14 @@
 			</f>
 			<meta><m n=":impl"/></meta>
 		</set_greenMultiplier>
-		<get_greenOffset get="inline" set="null" line="207" static="1">
+		<get_greenOffset get="inline" set="null" line="287" static="1">
 			<f a="this">
 				<x path="lime.utils.Float32Array"/>
 				<x path="Float"/>
 			</f>
 			<meta><m n=":impl"/></meta>
 		</get_greenOffset>
-		<set_greenOffset get="inline" set="null" line="214" static="1">
+		<set_greenOffset get="inline" set="null" line="294" static="1">
 			<f a="this:value">
 				<x path="lime.utils.Float32Array"/>
 				<x path="Float"/>
@@ -14329,14 +14415,14 @@
 			</f>
 			<meta><m n=":impl"/></meta>
 		</set_greenOffset>
-		<get_redMultiplier get="inline" set="null" line="222" static="1">
+		<get_redMultiplier get="inline" set="null" line="301" static="1">
 			<f a="this">
 				<x path="lime.utils.Float32Array"/>
 				<x path="Float"/>
 			</f>
 			<meta><m n=":impl"/></meta>
 		</get_redMultiplier>
-		<set_redMultiplier get="inline" set="null" line="229" static="1">
+		<set_redMultiplier get="inline" set="null" line="308" static="1">
 			<f a="this:value">
 				<x path="lime.utils.Float32Array"/>
 				<x path="Float"/>
@@ -14344,14 +14430,14 @@
 			</f>
 			<meta><m n=":impl"/></meta>
 		</set_redMultiplier>
-		<get_redOffset get="inline" set="null" line="237" static="1">
+		<get_redOffset get="inline" set="null" line="315" static="1">
 			<f a="this">
 				<x path="lime.utils.Float32Array"/>
 				<x path="Float"/>
 			</f>
 			<meta><m n=":impl"/></meta>
 		</get_redOffset>
-		<set_redOffset get="inline" set="null" line="244" static="1">
+		<set_redOffset get="inline" set="null" line="322" static="1">
 			<f a="this:value">
 				<x path="lime.utils.Float32Array"/>
 				<x path="Float"/>
@@ -14359,7 +14445,7 @@
 			</f>
 			<meta><m n=":impl"/></meta>
 		</set_redOffset>
-		<get public="1" set="method" line="252" static="1">
+		<get public="1" set="method" line="329" static="1">
 			<f a="this:index">
 				<x path="lime.utils.Float32Array"/>
 				<x path="Int"/>
@@ -14370,7 +14456,7 @@
 				<m n=":arrayAccess"/>
 			</meta>
 		</get>
-		<set public="1" set="method" line="259" static="1">
+		<set public="1" set="method" line="336" static="1">
 			<f a="this:index:value">
 				<x path="lime.utils.Float32Array"/>
 				<x path="Int"/>
@@ -15450,6 +15536,1054 @@
 	<x path="Void"/>
 </f></new>
 		<meta><m n=":directlyUsed"/></meta>
+	</class>
+	<abstract path="lime.math.color.ARGB" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/math/color/ARGB.hx">
+		<from>
+			<icast><x path="Int"/></icast>
+			<icast field="__fromBGRA"><x path="lime.math.color.BGRA"/></icast>
+			<icast field="__fromRGBA"><x path="lime.math.color.RGBA"/></icast>
+		</from>
+		<this><x path="Int"/></this>
+		<to><icast><x path="Int"/></icast></to>
+		<impl><class path="lime.math.color._ARGB.ARGB_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/math/color/ARGB.hx" private="1" module="lime.math.color.ARGB">
+	<a16 static="1"><x path="Int"/></a16>
+	<unmult static="1"><x path="Float"/></unmult>
+	<a public="1" get="accessor" set="accessor" static="1">
+		<x path="Int"/>
+		<meta><m n=":impl"/></meta>
+	</a>
+	<b public="1" get="accessor" set="accessor" static="1">
+		<x path="Int"/>
+		<meta><m n=":impl"/></meta>
+	</b>
+	<g public="1" get="accessor" set="accessor" static="1">
+		<x path="Int"/>
+		<meta><m n=":impl"/></meta>
+	</g>
+	<r public="1" get="accessor" set="accessor" static="1">
+		<x path="Int"/>
+		<meta><m n=":impl"/></meta>
+	</r>
+	<_new public="1" get="inline" set="null" line="21" static="1">
+		<f a="?argb">
+			<x path="Int"/>
+			<x path="lime.math.color.ARGB"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</_new>
+	<create public="1" get="inline" set="null" line="28" static="1"><f a="a:r:g:b">
+	<x path="Int"/>
+	<x path="Int"/>
+	<x path="Int"/>
+	<x path="Int"/>
+	<x path="lime.math.color.ARGB"/>
+</f></create>
+	<multiplyAlpha public="1" get="inline" set="null" line="37" static="1">
+		<f a="this">
+			<x path="Int"/>
+			<x path="Void"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</multiplyAlpha>
+	<readUInt8 public="1" get="inline" set="null" line="53" static="1">
+		<f a="this:data:offset:?format:?premultiplied">
+			<x path="Int"/>
+			<x path="lime.utils.UInt8Array"/>
+			<x path="Int"/>
+			<x path="lime.graphics.PixelFormat"/>
+			<x path="Bool"/>
+			<x path="Void"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</readUInt8>
+	<set public="1" get="inline" set="null" line="80" static="1">
+		<f a="this:a:r:g:b">
+			<x path="Int"/>
+			<x path="Int"/>
+			<x path="Int"/>
+			<x path="Int"/>
+			<x path="Int"/>
+			<x path="Void"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</set>
+	<unmultiplyAlpha public="1" get="inline" set="null" line="87" static="1">
+		<f a="this">
+			<x path="Int"/>
+			<x path="Void"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</unmultiplyAlpha>
+	<writeUInt8 public="1" get="inline" set="null" line="99" static="1">
+		<f a="this:data:offset:?format:?premultiplied">
+			<x path="Int"/>
+			<x path="lime.utils.UInt8Array"/>
+			<x path="Int"/>
+			<x path="lime.graphics.PixelFormat"/>
+			<x path="Bool"/>
+			<x path="Void"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</writeUInt8>
+	<__fromBGRA get="inline" set="null" line="135" static="1">
+		<f a="bgra">
+			<x path="lime.math.color.BGRA"/>
+			<x path="lime.math.color.ARGB"/>
+		</f>
+		<meta><m n=":from"/></meta>
+	</__fromBGRA>
+	<__fromRGBA get="inline" set="null" line="142" static="1">
+		<f a="rgba">
+			<x path="lime.math.color.RGBA"/>
+			<x path="lime.math.color.ARGB"/>
+		</f>
+		<meta><m n=":from"/></meta>
+	</__fromRGBA>
+	<get_a get="inline" set="null" line="156" static="1">
+		<f a="this">
+			<x path="Int"/>
+			<x path="Int"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</get_a>
+	<set_a get="inline" set="null" line="164" static="1">
+		<f a="this:value">
+			<x path="Int"/>
+			<x path="Int"/>
+			<x path="Int"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</set_a>
+	<get_b get="inline" set="null" line="172" static="1">
+		<f a="this">
+			<x path="Int"/>
+			<x path="Int"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</get_b>
+	<set_b get="inline" set="null" line="179" static="1">
+		<f a="this:value">
+			<x path="Int"/>
+			<x path="Int"/>
+			<x path="Int"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</set_b>
+	<get_g get="inline" set="null" line="187" static="1">
+		<f a="this">
+			<x path="Int"/>
+			<x path="Int"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</get_g>
+	<set_g get="inline" set="null" line="194" static="1">
+		<f a="this:value">
+			<x path="Int"/>
+			<x path="Int"/>
+			<x path="Int"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</set_g>
+	<get_r get="inline" set="null" line="202" static="1">
+		<f a="this">
+			<x path="Int"/>
+			<x path="Int"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</get_r>
+	<set_r get="inline" set="null" line="209" static="1">
+		<f a="this:value">
+			<x path="Int"/>
+			<x path="Int"/>
+			<x path="Int"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</set_r>
+	<meta><m n=":directlyUsed"/></meta>
+</class></impl>
+	</abstract>
+	<class path="lime.math.color._ARGB.ARGB_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/math/color/ARGB.hx" private="1" module="lime.math.color.ARGB">
+		<a16 static="1"><x path="Int"/></a16>
+		<unmult static="1"><x path="Float"/></unmult>
+		<a public="1" get="accessor" set="accessor" static="1">
+			<x path="Int"/>
+			<meta><m n=":impl"/></meta>
+		</a>
+		<b public="1" get="accessor" set="accessor" static="1">
+			<x path="Int"/>
+			<meta><m n=":impl"/></meta>
+		</b>
+		<g public="1" get="accessor" set="accessor" static="1">
+			<x path="Int"/>
+			<meta><m n=":impl"/></meta>
+		</g>
+		<r public="1" get="accessor" set="accessor" static="1">
+			<x path="Int"/>
+			<meta><m n=":impl"/></meta>
+		</r>
+		<_new public="1" get="inline" set="null" line="21" static="1">
+			<f a="?argb">
+				<x path="Int"/>
+				<x path="lime.math.color.ARGB"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</_new>
+		<create public="1" get="inline" set="null" line="28" static="1"><f a="a:r:g:b">
+	<x path="Int"/>
+	<x path="Int"/>
+	<x path="Int"/>
+	<x path="Int"/>
+	<x path="lime.math.color.ARGB"/>
+</f></create>
+		<multiplyAlpha public="1" get="inline" set="null" line="37" static="1">
+			<f a="this">
+				<x path="Int"/>
+				<x path="Void"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</multiplyAlpha>
+		<readUInt8 public="1" get="inline" set="null" line="53" static="1">
+			<f a="this:data:offset:?format:?premultiplied">
+				<x path="Int"/>
+				<x path="lime.utils.UInt8Array"/>
+				<x path="Int"/>
+				<x path="lime.graphics.PixelFormat"/>
+				<x path="Bool"/>
+				<x path="Void"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</readUInt8>
+		<set public="1" get="inline" set="null" line="80" static="1">
+			<f a="this:a:r:g:b">
+				<x path="Int"/>
+				<x path="Int"/>
+				<x path="Int"/>
+				<x path="Int"/>
+				<x path="Int"/>
+				<x path="Void"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</set>
+		<unmultiplyAlpha public="1" get="inline" set="null" line="87" static="1">
+			<f a="this">
+				<x path="Int"/>
+				<x path="Void"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</unmultiplyAlpha>
+		<writeUInt8 public="1" get="inline" set="null" line="99" static="1">
+			<f a="this:data:offset:?format:?premultiplied">
+				<x path="Int"/>
+				<x path="lime.utils.UInt8Array"/>
+				<x path="Int"/>
+				<x path="lime.graphics.PixelFormat"/>
+				<x path="Bool"/>
+				<x path="Void"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</writeUInt8>
+		<__fromBGRA get="inline" set="null" line="135" static="1">
+			<f a="bgra">
+				<x path="lime.math.color.BGRA"/>
+				<x path="lime.math.color.ARGB"/>
+			</f>
+			<meta><m n=":from"/></meta>
+		</__fromBGRA>
+		<__fromRGBA get="inline" set="null" line="142" static="1">
+			<f a="rgba">
+				<x path="lime.math.color.RGBA"/>
+				<x path="lime.math.color.ARGB"/>
+			</f>
+			<meta><m n=":from"/></meta>
+		</__fromRGBA>
+		<get_a get="inline" set="null" line="156" static="1">
+			<f a="this">
+				<x path="Int"/>
+				<x path="Int"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</get_a>
+		<set_a get="inline" set="null" line="164" static="1">
+			<f a="this:value">
+				<x path="Int"/>
+				<x path="Int"/>
+				<x path="Int"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</set_a>
+		<get_b get="inline" set="null" line="172" static="1">
+			<f a="this">
+				<x path="Int"/>
+				<x path="Int"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</get_b>
+		<set_b get="inline" set="null" line="179" static="1">
+			<f a="this:value">
+				<x path="Int"/>
+				<x path="Int"/>
+				<x path="Int"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</set_b>
+		<get_g get="inline" set="null" line="187" static="1">
+			<f a="this">
+				<x path="Int"/>
+				<x path="Int"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</get_g>
+		<set_g get="inline" set="null" line="194" static="1">
+			<f a="this:value">
+				<x path="Int"/>
+				<x path="Int"/>
+				<x path="Int"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</set_g>
+		<get_r get="inline" set="null" line="202" static="1">
+			<f a="this">
+				<x path="Int"/>
+				<x path="Int"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</get_r>
+		<set_r get="inline" set="null" line="209" static="1">
+			<f a="this:value">
+				<x path="Int"/>
+				<x path="Int"/>
+				<x path="Int"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</set_r>
+		<meta><m n=":directlyUsed"/></meta>
+	</class>
+	<abstract path="lime.math.color.BGRA" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/math/color/BGRA.hx">
+		<from>
+			<icast><x path="Int"/></icast>
+			<icast field="__fromARGB"><x path="lime.math.color.ARGB"/></icast>
+			<icast field="__fromRGBA"><x path="lime.math.color.RGBA"/></icast>
+		</from>
+		<this><x path="Int"/></this>
+		<to><icast><x path="Int"/></icast></to>
+		<impl><class path="lime.math.color._BGRA.BGRA_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/math/color/BGRA.hx" private="1" module="lime.math.color.BGRA">
+	<a16 static="1"><x path="Int"/></a16>
+	<unmult static="1"><x path="Float"/></unmult>
+	<a public="1" get="accessor" set="accessor" static="1">
+		<x path="Int"/>
+		<meta><m n=":impl"/></meta>
+	</a>
+	<b public="1" get="accessor" set="accessor" static="1">
+		<x path="Int"/>
+		<meta><m n=":impl"/></meta>
+	</b>
+	<g public="1" get="accessor" set="accessor" static="1">
+		<x path="Int"/>
+		<meta><m n=":impl"/></meta>
+	</g>
+	<r public="1" get="accessor" set="accessor" static="1">
+		<x path="Int"/>
+		<meta><m n=":impl"/></meta>
+	</r>
+	<_new public="1" get="inline" set="null" line="21" static="1">
+		<f a="?bgra">
+			<x path="Int"/>
+			<x path="lime.math.color.BGRA"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</_new>
+	<create public="1" get="inline" set="null" line="28" static="1"><f a="b:g:r:a">
+	<x path="Int"/>
+	<x path="Int"/>
+	<x path="Int"/>
+	<x path="Int"/>
+	<x path="lime.math.color.BGRA"/>
+</f></create>
+	<multiplyAlpha public="1" get="inline" set="null" line="37" static="1">
+		<f a="this">
+			<x path="Int"/>
+			<x path="Void"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</multiplyAlpha>
+	<readUInt8 public="1" get="inline" set="null" line="53" static="1">
+		<f a="this:data:offset:?format:?premultiplied">
+			<x path="Int"/>
+			<x path="lime.utils.UInt8Array"/>
+			<x path="Int"/>
+			<x path="lime.graphics.PixelFormat"/>
+			<x path="Bool"/>
+			<x path="Void"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</readUInt8>
+	<set public="1" get="inline" set="null" line="80" static="1">
+		<f a="this:b:g:r:a">
+			<x path="Int"/>
+			<x path="Int"/>
+			<x path="Int"/>
+			<x path="Int"/>
+			<x path="Int"/>
+			<x path="Void"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</set>
+	<unmultiplyAlpha public="1" get="inline" set="null" line="87" static="1">
+		<f a="this">
+			<x path="Int"/>
+			<x path="Void"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</unmultiplyAlpha>
+	<writeUInt8 public="1" get="inline" set="null" line="99" static="1">
+		<f a="this:data:offset:?format:?premultiplied">
+			<x path="Int"/>
+			<x path="lime.utils.UInt8Array"/>
+			<x path="Int"/>
+			<x path="lime.graphics.PixelFormat"/>
+			<x path="Bool"/>
+			<x path="Void"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</writeUInt8>
+	<__fromARGB get="inline" set="null" line="135" static="1">
+		<f a="argb">
+			<x path="lime.math.color.ARGB"/>
+			<x path="lime.math.color.BGRA"/>
+		</f>
+		<meta><m n=":from"/></meta>
+	</__fromARGB>
+	<__fromRGBA get="inline" set="null" line="142" static="1">
+		<f a="rgba">
+			<x path="lime.math.color.RGBA"/>
+			<x path="lime.math.color.BGRA"/>
+		</f>
+		<meta><m n=":from"/></meta>
+	</__fromRGBA>
+	<get_a get="inline" set="null" line="156" static="1">
+		<f a="this">
+			<x path="Int"/>
+			<x path="Int"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</get_a>
+	<set_a get="inline" set="null" line="163" static="1">
+		<f a="this:value">
+			<x path="Int"/>
+			<x path="Int"/>
+			<x path="Int"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</set_a>
+	<get_b get="inline" set="null" line="171" static="1">
+		<f a="this">
+			<x path="Int"/>
+			<x path="Int"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</get_b>
+	<set_b get="inline" set="null" line="178" static="1">
+		<f a="this:value">
+			<x path="Int"/>
+			<x path="Int"/>
+			<x path="Int"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</set_b>
+	<get_g get="inline" set="null" line="186" static="1">
+		<f a="this">
+			<x path="Int"/>
+			<x path="Int"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</get_g>
+	<set_g get="inline" set="null" line="193" static="1">
+		<f a="this:value">
+			<x path="Int"/>
+			<x path="Int"/>
+			<x path="Int"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</set_g>
+	<get_r get="inline" set="null" line="201" static="1">
+		<f a="this">
+			<x path="Int"/>
+			<x path="Int"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</get_r>
+	<set_r get="inline" set="null" line="208" static="1">
+		<f a="this:value">
+			<x path="Int"/>
+			<x path="Int"/>
+			<x path="Int"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</set_r>
+	<meta><m n=":directlyUsed"/></meta>
+</class></impl>
+	</abstract>
+	<class path="lime.math.color._BGRA.BGRA_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/math/color/BGRA.hx" private="1" module="lime.math.color.BGRA">
+		<a16 static="1"><x path="Int"/></a16>
+		<unmult static="1"><x path="Float"/></unmult>
+		<a public="1" get="accessor" set="accessor" static="1">
+			<x path="Int"/>
+			<meta><m n=":impl"/></meta>
+		</a>
+		<b public="1" get="accessor" set="accessor" static="1">
+			<x path="Int"/>
+			<meta><m n=":impl"/></meta>
+		</b>
+		<g public="1" get="accessor" set="accessor" static="1">
+			<x path="Int"/>
+			<meta><m n=":impl"/></meta>
+		</g>
+		<r public="1" get="accessor" set="accessor" static="1">
+			<x path="Int"/>
+			<meta><m n=":impl"/></meta>
+		</r>
+		<_new public="1" get="inline" set="null" line="21" static="1">
+			<f a="?bgra">
+				<x path="Int"/>
+				<x path="lime.math.color.BGRA"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</_new>
+		<create public="1" get="inline" set="null" line="28" static="1"><f a="b:g:r:a">
+	<x path="Int"/>
+	<x path="Int"/>
+	<x path="Int"/>
+	<x path="Int"/>
+	<x path="lime.math.color.BGRA"/>
+</f></create>
+		<multiplyAlpha public="1" get="inline" set="null" line="37" static="1">
+			<f a="this">
+				<x path="Int"/>
+				<x path="Void"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</multiplyAlpha>
+		<readUInt8 public="1" get="inline" set="null" line="53" static="1">
+			<f a="this:data:offset:?format:?premultiplied">
+				<x path="Int"/>
+				<x path="lime.utils.UInt8Array"/>
+				<x path="Int"/>
+				<x path="lime.graphics.PixelFormat"/>
+				<x path="Bool"/>
+				<x path="Void"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</readUInt8>
+		<set public="1" get="inline" set="null" line="80" static="1">
+			<f a="this:b:g:r:a">
+				<x path="Int"/>
+				<x path="Int"/>
+				<x path="Int"/>
+				<x path="Int"/>
+				<x path="Int"/>
+				<x path="Void"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</set>
+		<unmultiplyAlpha public="1" get="inline" set="null" line="87" static="1">
+			<f a="this">
+				<x path="Int"/>
+				<x path="Void"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</unmultiplyAlpha>
+		<writeUInt8 public="1" get="inline" set="null" line="99" static="1">
+			<f a="this:data:offset:?format:?premultiplied">
+				<x path="Int"/>
+				<x path="lime.utils.UInt8Array"/>
+				<x path="Int"/>
+				<x path="lime.graphics.PixelFormat"/>
+				<x path="Bool"/>
+				<x path="Void"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</writeUInt8>
+		<__fromARGB get="inline" set="null" line="135" static="1">
+			<f a="argb">
+				<x path="lime.math.color.ARGB"/>
+				<x path="lime.math.color.BGRA"/>
+			</f>
+			<meta><m n=":from"/></meta>
+		</__fromARGB>
+		<__fromRGBA get="inline" set="null" line="142" static="1">
+			<f a="rgba">
+				<x path="lime.math.color.RGBA"/>
+				<x path="lime.math.color.BGRA"/>
+			</f>
+			<meta><m n=":from"/></meta>
+		</__fromRGBA>
+		<get_a get="inline" set="null" line="156" static="1">
+			<f a="this">
+				<x path="Int"/>
+				<x path="Int"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</get_a>
+		<set_a get="inline" set="null" line="163" static="1">
+			<f a="this:value">
+				<x path="Int"/>
+				<x path="Int"/>
+				<x path="Int"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</set_a>
+		<get_b get="inline" set="null" line="171" static="1">
+			<f a="this">
+				<x path="Int"/>
+				<x path="Int"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</get_b>
+		<set_b get="inline" set="null" line="178" static="1">
+			<f a="this:value">
+				<x path="Int"/>
+				<x path="Int"/>
+				<x path="Int"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</set_b>
+		<get_g get="inline" set="null" line="186" static="1">
+			<f a="this">
+				<x path="Int"/>
+				<x path="Int"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</get_g>
+		<set_g get="inline" set="null" line="193" static="1">
+			<f a="this:value">
+				<x path="Int"/>
+				<x path="Int"/>
+				<x path="Int"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</set_g>
+		<get_r get="inline" set="null" line="201" static="1">
+			<f a="this">
+				<x path="Int"/>
+				<x path="Int"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</get_r>
+		<set_r get="inline" set="null" line="208" static="1">
+			<f a="this:value">
+				<x path="Int"/>
+				<x path="Int"/>
+				<x path="Int"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</set_r>
+		<meta><m n=":directlyUsed"/></meta>
+	</class>
+	<abstract path="lime.math.color.RGBA" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/math/color/RGBA.hx">
+		<from>
+			<icast><x path="Int"/></icast>
+			<icast field="__fromARGB"><x path="lime.math.color.ARGB"/></icast>
+			<icast field="__fromBGRA"><x path="lime.math.color.BGRA"/></icast>
+		</from>
+		<this><x path="Int"/></this>
+		<to><icast><x path="Int"/></icast></to>
+		<meta><m n=":allow"><e>lime.math.color</e></m></meta>
+		<impl><class path="lime.math.color._RGBA.RGBA_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/math/color/RGBA.hx" private="1" module="lime.math.color.RGBA">
+	<__alpha16 static="1"><x path="lime.utils.UInt32Array"/></__alpha16>
+	<__clamp static="1"><x path="lime.utils.UInt8Array"/></__clamp>
+	<a16 static="1"><x path="Int"/></a16>
+	<unmult static="1"><x path="Float"/></unmult>
+	<a public="1" get="accessor" set="accessor" static="1">
+		<x path="Int"/>
+		<meta><m n=":impl"/></meta>
+	</a>
+	<b public="1" get="accessor" set="accessor" static="1">
+		<x path="Int"/>
+		<meta><m n=":impl"/></meta>
+	</b>
+	<g public="1" get="accessor" set="accessor" static="1">
+		<x path="Int"/>
+		<meta><m n=":impl"/></meta>
+	</g>
+	<r public="1" get="accessor" set="accessor" static="1">
+		<x path="Int"/>
+		<meta><m n=":impl"/></meta>
+	</r>
+	<_new public="1" get="inline" set="null" line="52" static="1">
+		<f a="?rgba">
+			<x path="Int"/>
+			<x path="lime.math.color.RGBA"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</_new>
+	<create public="1" get="inline" set="null" line="59" static="1"><f a="r:g:b:a">
+	<x path="Int"/>
+	<x path="Int"/>
+	<x path="Int"/>
+	<x path="Int"/>
+	<x path="lime.math.color.RGBA"/>
+</f></create>
+	<multiplyAlpha public="1" get="inline" set="null" line="68" static="1">
+		<f a="this">
+			<x path="Int"/>
+			<x path="Void"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</multiplyAlpha>
+	<readUInt8 public="1" get="inline" set="null" line="88" static="1">
+		<f a="this:data:offset:?format:?premultiplied">
+			<x path="Int"/>
+			<x path="lime.utils.UInt8Array"/>
+			<x path="Int"/>
+			<x path="lime.graphics.PixelFormat"/>
+			<x path="Bool"/>
+			<x path="Void"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</readUInt8>
+	<set public="1" get="inline" set="null" line="115" static="1">
+		<f a="this:r:g:b:a">
+			<x path="Int"/>
+			<x path="Int"/>
+			<x path="Int"/>
+			<x path="Int"/>
+			<x path="Int"/>
+			<x path="Void"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</set>
+	<unmultiplyAlpha public="1" get="inline" set="null" line="122" static="1">
+		<f a="this">
+			<x path="Int"/>
+			<x path="Void"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</unmultiplyAlpha>
+	<writeUInt8 public="1" get="inline" set="null" line="134" static="1">
+		<f a="this:data:offset:?format:?premultiplied">
+			<x path="Int"/>
+			<x path="lime.utils.UInt8Array"/>
+			<x path="Int"/>
+			<x path="lime.graphics.PixelFormat"/>
+			<x path="Bool"/>
+			<x path="Void"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</writeUInt8>
+	<__fromARGB get="inline" set="null" line="170" static="1">
+		<f a="argb">
+			<x path="lime.math.color.ARGB"/>
+			<x path="lime.math.color.RGBA"/>
+		</f>
+		<meta><m n=":from"/></meta>
+	</__fromARGB>
+	<__fromBGRA get="inline" set="null" line="177" static="1">
+		<f a="bgra">
+			<x path="lime.math.color.BGRA"/>
+			<x path="lime.math.color.RGBA"/>
+		</f>
+		<meta><m n=":from"/></meta>
+	</__fromBGRA>
+	<get_a get="inline" set="null" line="191" static="1">
+		<f a="this">
+			<x path="Int"/>
+			<x path="Int"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</get_a>
+	<set_a get="inline" set="null" line="198" static="1">
+		<f a="this:value">
+			<x path="Int"/>
+			<x path="Int"/>
+			<x path="Int"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</set_a>
+	<get_b get="inline" set="null" line="206" static="1">
+		<f a="this">
+			<x path="Int"/>
+			<x path="Int"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</get_b>
+	<set_b get="inline" set="null" line="213" static="1">
+		<f a="this:value">
+			<x path="Int"/>
+			<x path="Int"/>
+			<x path="Int"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</set_b>
+	<get_g get="inline" set="null" line="221" static="1">
+		<f a="this">
+			<x path="Int"/>
+			<x path="Int"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</get_g>
+	<set_g get="inline" set="null" line="228" static="1">
+		<f a="this:value">
+			<x path="Int"/>
+			<x path="Int"/>
+			<x path="Int"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</set_g>
+	<get_r get="inline" set="null" line="236" static="1">
+		<f a="this">
+			<x path="Int"/>
+			<x path="Int"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</get_r>
+	<set_r get="inline" set="null" line="243" static="1">
+		<f a="this:value">
+			<x path="Int"/>
+			<x path="Int"/>
+			<x path="Int"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</set_r>
+	<meta>
+		<m n=":directlyUsed"/>
+		<m n=":allow"><e>lime.math.color</e></m>
+	</meta>
+</class></impl>
+	</abstract>
+	<class path="lime.utils.ArrayBufferView" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/utils/ArrayBufferView.hx">
+		<type public="1"><x path="lime.utils._ArrayBufferView.TypedArrayType"/></type>
+		<buffer public="1"><x path="lime.utils.ArrayBuffer"/></buffer>
+		<byteOffset public="1"><x path="Int"/></byteOffset>
+		<byteLength public="1"><x path="Int"/></byteLength>
+		<length public="1"><x path="Int"/></length>
+		<bytesPerElement set="null"><x path="Int"/></bytesPerElement>
+		<initTypedArray get="inline" set="null" line="48">
+			<f a="view">
+				<c path="lime.utils.ArrayBufferView"/>
+				<c path="lime.utils.ArrayBufferView"/>
+			</f>
+			<meta><m n=":allow"><e>lime.utils</e></m></meta>
+		</initTypedArray>
+		<initBuffer get="inline" set="null" line="75">
+			<f a="in_buffer:?in_byteOffset:?len">
+				<x path="lime.utils.ArrayBuffer"/>
+				<x path="Int"/>
+				<x path="Int"/>
+				<c path="lime.utils.ArrayBufferView"/>
+			</f>
+			<meta><m n=":allow"><e>lime.utils</e></m></meta>
+		</initBuffer>
+		<initArray params="T" get="inline" set="null" line="112">
+			<f a="array">
+				<c path="Array"><c path="initArray.T"/></c>
+				<c path="lime.utils.ArrayBufferView"/>
+			</f>
+			<meta><m n=":allow"><e>lime.utils</e></m></meta>
+		</initArray>
+		<set public="1" params="T" get="inline" set="null" line="130"><f a="?view:?array:?offset">
+	<c path="lime.utils.ArrayBufferView"/>
+	<c path="Array"><c path="set.T"/></c>
+	<x path="Int"/>
+	<x path="Void"/>
+</f></set>
+		<cloneBuffer get="inline" set="null" line="146"><f a="src:?srcByteOffset">
+	<x path="lime.utils.ArrayBuffer"/>
+	<x path="Int"/>
+	<x path="Void"/>
+</f></cloneBuffer>
+		<bytesForType get="inline" set="null" line="205"><f a="type">
+	<x path="lime.utils._ArrayBufferView.TypedArrayType"/>
+	<x path="Int"/>
+</f></bytesForType>
+		<toString get="inline" set="null" line="243"><f a=""><c path="String"/></f></toString>
+		<toByteLength get="inline" set="null" line="266"><f a="elemCount">
+	<x path="Int"/>
+	<x path="Int"/>
+</f></toByteLength>
+		<copyFromArray set="method" line="275"><f a="array:?offset">
+	<c path="Array"><x path="Float"/></c>
+	<x path="Int"/>
+	<x path="Void"/>
+</f></copyFromArray>
+		<new get="inline" set="null" line="22">
+			<f a="?elements:in_type">
+				<x path="Int"/>
+				<x path="lime.utils._ArrayBufferView.TypedArrayType"/>
+				<x path="Void"/>
+			</f>
+			<meta><m n=":allow"><e>lime.utils</e></m></meta>
+		</new>
+		<meta><m n=":directlyUsed"/></meta>
+	</class>
+	<enum path="lime.utils._ArrayBufferView.TAError" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/utils/ArrayBufferView.hx" private="1" module="lime.utils.ArrayBufferView">
+		<RangeError/>
+		<meta>
+			<m n=":directlyUsed"/>
+			<m n=":flatEnum"/>
+			<m n=":noCompletion"/>
+			<m n=":dox"><e>hide</e></m>
+		</meta>
+	</enum>
+	<class path="lime.math.color._RGBA.RGBA_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/math/color/RGBA.hx" private="1" module="lime.math.color.RGBA">
+		<__alpha16 static="1"><x path="lime.utils.UInt32Array"/></__alpha16>
+		<__clamp static="1"><x path="lime.utils.UInt8Array"/></__clamp>
+		<a16 static="1"><x path="Int"/></a16>
+		<unmult static="1"><x path="Float"/></unmult>
+		<a public="1" get="accessor" set="accessor" static="1">
+			<x path="Int"/>
+			<meta><m n=":impl"/></meta>
+		</a>
+		<b public="1" get="accessor" set="accessor" static="1">
+			<x path="Int"/>
+			<meta><m n=":impl"/></meta>
+		</b>
+		<g public="1" get="accessor" set="accessor" static="1">
+			<x path="Int"/>
+			<meta><m n=":impl"/></meta>
+		</g>
+		<r public="1" get="accessor" set="accessor" static="1">
+			<x path="Int"/>
+			<meta><m n=":impl"/></meta>
+		</r>
+		<_new public="1" get="inline" set="null" line="52" static="1">
+			<f a="?rgba">
+				<x path="Int"/>
+				<x path="lime.math.color.RGBA"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</_new>
+		<create public="1" get="inline" set="null" line="59" static="1"><f a="r:g:b:a">
+	<x path="Int"/>
+	<x path="Int"/>
+	<x path="Int"/>
+	<x path="Int"/>
+	<x path="lime.math.color.RGBA"/>
+</f></create>
+		<multiplyAlpha public="1" get="inline" set="null" line="68" static="1">
+			<f a="this">
+				<x path="Int"/>
+				<x path="Void"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</multiplyAlpha>
+		<readUInt8 public="1" get="inline" set="null" line="88" static="1">
+			<f a="this:data:offset:?format:?premultiplied">
+				<x path="Int"/>
+				<x path="lime.utils.UInt8Array"/>
+				<x path="Int"/>
+				<x path="lime.graphics.PixelFormat"/>
+				<x path="Bool"/>
+				<x path="Void"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</readUInt8>
+		<set public="1" get="inline" set="null" line="115" static="1">
+			<f a="this:r:g:b:a">
+				<x path="Int"/>
+				<x path="Int"/>
+				<x path="Int"/>
+				<x path="Int"/>
+				<x path="Int"/>
+				<x path="Void"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</set>
+		<unmultiplyAlpha public="1" get="inline" set="null" line="122" static="1">
+			<f a="this">
+				<x path="Int"/>
+				<x path="Void"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</unmultiplyAlpha>
+		<writeUInt8 public="1" get="inline" set="null" line="134" static="1">
+			<f a="this:data:offset:?format:?premultiplied">
+				<x path="Int"/>
+				<x path="lime.utils.UInt8Array"/>
+				<x path="Int"/>
+				<x path="lime.graphics.PixelFormat"/>
+				<x path="Bool"/>
+				<x path="Void"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</writeUInt8>
+		<__fromARGB get="inline" set="null" line="170" static="1">
+			<f a="argb">
+				<x path="lime.math.color.ARGB"/>
+				<x path="lime.math.color.RGBA"/>
+			</f>
+			<meta><m n=":from"/></meta>
+		</__fromARGB>
+		<__fromBGRA get="inline" set="null" line="177" static="1">
+			<f a="bgra">
+				<x path="lime.math.color.BGRA"/>
+				<x path="lime.math.color.RGBA"/>
+			</f>
+			<meta><m n=":from"/></meta>
+		</__fromBGRA>
+		<get_a get="inline" set="null" line="191" static="1">
+			<f a="this">
+				<x path="Int"/>
+				<x path="Int"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</get_a>
+		<set_a get="inline" set="null" line="198" static="1">
+			<f a="this:value">
+				<x path="Int"/>
+				<x path="Int"/>
+				<x path="Int"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</set_a>
+		<get_b get="inline" set="null" line="206" static="1">
+			<f a="this">
+				<x path="Int"/>
+				<x path="Int"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</get_b>
+		<set_b get="inline" set="null" line="213" static="1">
+			<f a="this:value">
+				<x path="Int"/>
+				<x path="Int"/>
+				<x path="Int"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</set_b>
+		<get_g get="inline" set="null" line="221" static="1">
+			<f a="this">
+				<x path="Int"/>
+				<x path="Int"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</get_g>
+		<set_g get="inline" set="null" line="228" static="1">
+			<f a="this:value">
+				<x path="Int"/>
+				<x path="Int"/>
+				<x path="Int"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</set_g>
+		<get_r get="inline" set="null" line="236" static="1">
+			<f a="this">
+				<x path="Int"/>
+				<x path="Int"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</get_r>
+		<set_r get="inline" set="null" line="243" static="1">
+			<f a="this:value">
+				<x path="Int"/>
+				<x path="Int"/>
+				<x path="Int"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</set_r>
+		<meta>
+			<m n=":directlyUsed"/>
+			<m n=":allow"><e>lime.math.color</e></m>
+		</meta>
 	</class>
 	<class path="lime.net.URIParser" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/net/URIParser.hx">
 		<URI_REGEX public="1" line="6" static="1"><c path="EReg"/></URI_REGEX>
@@ -27464,80 +28598,6 @@
 	</f>
 	<meta><m n=":impl"/></meta>
 </_new></class>
-	<class path="lime.utils.ArrayBufferView" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/utils/ArrayBufferView.hx">
-		<type public="1"><x path="lime.utils._ArrayBufferView.TypedArrayType"/></type>
-		<buffer public="1"><x path="lime.utils.ArrayBuffer"/></buffer>
-		<byteOffset public="1"><x path="Int"/></byteOffset>
-		<byteLength public="1"><x path="Int"/></byteLength>
-		<length public="1"><x path="Int"/></length>
-		<bytesPerElement set="null"><x path="Int"/></bytesPerElement>
-		<initTypedArray get="inline" set="null" line="48">
-			<f a="view">
-				<c path="lime.utils.ArrayBufferView"/>
-				<c path="lime.utils.ArrayBufferView"/>
-			</f>
-			<meta><m n=":allow"><e>lime.utils</e></m></meta>
-		</initTypedArray>
-		<initBuffer get="inline" set="null" line="75">
-			<f a="in_buffer:?in_byteOffset:?len">
-				<x path="lime.utils.ArrayBuffer"/>
-				<x path="Int"/>
-				<x path="Int"/>
-				<c path="lime.utils.ArrayBufferView"/>
-			</f>
-			<meta><m n=":allow"><e>lime.utils</e></m></meta>
-		</initBuffer>
-		<initArray params="T" get="inline" set="null" line="112">
-			<f a="array">
-				<c path="Array"><c path="initArray.T"/></c>
-				<c path="lime.utils.ArrayBufferView"/>
-			</f>
-			<meta><m n=":allow"><e>lime.utils</e></m></meta>
-		</initArray>
-		<set public="1" params="T" get="inline" set="null" line="130"><f a="?view:?array:?offset">
-	<c path="lime.utils.ArrayBufferView"/>
-	<c path="Array"><c path="set.T"/></c>
-	<x path="Int"/>
-	<x path="Void"/>
-</f></set>
-		<cloneBuffer get="inline" set="null" line="146"><f a="src:?srcByteOffset">
-	<x path="lime.utils.ArrayBuffer"/>
-	<x path="Int"/>
-	<x path="Void"/>
-</f></cloneBuffer>
-		<bytesForType get="inline" set="null" line="205"><f a="type">
-	<x path="lime.utils._ArrayBufferView.TypedArrayType"/>
-	<x path="Int"/>
-</f></bytesForType>
-		<toString get="inline" set="null" line="243"><f a=""><c path="String"/></f></toString>
-		<toByteLength get="inline" set="null" line="266"><f a="elemCount">
-	<x path="Int"/>
-	<x path="Int"/>
-</f></toByteLength>
-		<copyFromArray set="method" line="275"><f a="array:?offset">
-	<c path="Array"><x path="Float"/></c>
-	<x path="Int"/>
-	<x path="Void"/>
-</f></copyFromArray>
-		<new get="inline" set="null" line="22">
-			<f a="?elements:in_type">
-				<x path="Int"/>
-				<x path="lime.utils._ArrayBufferView.TypedArrayType"/>
-				<x path="Void"/>
-			</f>
-			<meta><m n=":allow"><e>lime.utils</e></m></meta>
-		</new>
-		<meta><m n=":directlyUsed"/></meta>
-	</class>
-	<enum path="lime.utils._ArrayBufferView.TAError" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/utils/ArrayBufferView.hx" private="1" module="lime.utils.ArrayBufferView">
-		<RangeError/>
-		<meta>
-			<m n=":directlyUsed"/>
-			<m n=":flatEnum"/>
-			<m n=":noCompletion"/>
-			<m n=":dox"><e>hide</e></m>
-		</meta>
-	</enum>
 	<abstract path="lime.utils._ArrayBufferView.TypedArrayType" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/utils/ArrayBufferView.hx" private="1" module="lime.utils.ArrayBufferView">
 		<from><icast><x path="Int"/></icast></from>
 		<this><x path="Int"/></this>
