@@ -318,7 +318,7 @@ class ImageDataUtil {
 		if (data == null) return;
 		
 		#if ((cpp || neko) && !disable_cffi)
-		if (!System.disableCFFI) lime_image_data_util_fill_rect (image, rect, fillColor); else
+		if (!System.disableCFFI) lime_image_data_util_fill_rect (image, rect, (fillColor >> 16) & 0xFFFF, (fillColor) & 0xFFFF); else // TODO: Better Int32 solution
 		#end
 		{
 			
@@ -355,7 +355,7 @@ class ImageDataUtil {
 		if (format == ARGB32) color = ((color & 0xFFFFFF) << 8) | ((color >> 24) & 0xFF);
 		
 		#if ((cpp || neko) && !disable_cffi)
-		if (!System.disableCFFI) lime_image_data_util_flood_fill (image, x, y, color); else
+		if (!System.disableCFFI) lime_image_data_util_flood_fill (image, x, y, (color >> 16) & 0xFFFF, (color) & 0xFFFF); else // TODO: Better Int32 solution
 		#end
 		{
 			
@@ -605,7 +605,8 @@ class ImageDataUtil {
 		
 		switch (format) {
 			
-			case ARGB32: return pixel >> 8 & 0xFFFFFF;
+			case ARGB32: return (pixel:ARGB);
+			case BGRA32: return (pixel:BGRA);
 			default: return pixel;
 			
 		}
@@ -976,11 +977,17 @@ class ImageDataUtil {
 	
 	public static function setPixel (image:Image, x:Int, y:Int, color:Int, format:PixelFormat):Void {
 		
-		if (format == RGBA32) color = color >> 8;
+		var pixel:RGBA;
 		
-		var pixel:RGBA = color;
+		switch (format) {
+			
+			case ARGB32: pixel = (color:ARGB);
+			case BGRA32: pixel = (color:BGRA);
+			default: pixel = color;
+			
+		}
+		
 		pixel.a = 0xFF;
-		
 		pixel.writeUInt8 (image.buffer.data, (4 * (y + image.offsetY) * image.buffer.width + (x + image.offsetX) * 4), image.buffer.format, image.buffer.premultiplied);
 		
 		image.dirty = true;
@@ -1094,8 +1101,8 @@ class ImageDataUtil {
 	private static var lime_image_data_util_color_transform = System.load ("lime", "lime_image_data_util_color_transform", 3);
 	private static var lime_image_data_util_copy_channel = System.load ("lime", "lime_image_data_util_copy_channel", -1);
 	private static var lime_image_data_util_copy_pixels = System.load ("lime", "lime_image_data_util_copy_pixels", -1);
-	private static var lime_image_data_util_fill_rect = System.load ("lime", "lime_image_data_util_fill_rect", 3);
-	private static var lime_image_data_util_flood_fill = System.load ("lime", "lime_image_data_util_flood_fill", 4);
+	private static var lime_image_data_util_fill_rect = System.load ("lime", "lime_image_data_util_fill_rect", 4);
+	private static var lime_image_data_util_flood_fill = System.load ("lime", "lime_image_data_util_flood_fill", 5);
 	private static var lime_image_data_util_get_pixels = System.load ("lime", "lime_image_data_util_get_pixels", 4);
 	private static var lime_image_data_util_merge = System.load ("lime", "lime_image_data_util_merge", -1);
 	private static var lime_image_data_util_multiply_alpha = System.load ("lime", "lime_image_data_util_multiply_alpha", 1);
