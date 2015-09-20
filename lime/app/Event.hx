@@ -16,11 +16,6 @@ using haxe.macro.Tools;
 class Event<T> {
 	
 	
-	#if macro
-	private static var lastID = 0;
-	private static var typeIDs = new Map<String, Int> ();
-	#end
-	
 	@:noCompletion @:dox(hide) public var listeners:Array<T>;
 	@:noCompletion @:dox(hide) public var repeat:Array<Bool>;
 	
@@ -99,19 +94,19 @@ class Event<T> {
 		}
 		
 		typeString += typeResult.toString ();
+		typeString = StringTools.replace (typeString, "->", "_");
+		typeString = StringTools.replace (typeString, ".", "_");
+		typeString = StringTools.replace (typeString, "<", "_");
+		typeString = StringTools.replace (typeString, ">", "_");
 		
-		var id, name;
+		var name = "Event_" + typeString;
 		
-		if (typeIDs.exists (typeString)) {
+		try {
 			
-			id = typeIDs.get (typeString);
-			name = "Event$" + id;
+			Context.getType ("lime.app." + name);
 			
-		} else {
+		} catch (e:Dynamic) {
 			
-			id = lastID++;
-			name = "Event$" + id;
-		
 			var pos = Context.currentPos ();
 			var fields = Context.getBuildFields ();
 			
@@ -159,12 +154,20 @@ class Event<T> {
 				
 			}
 			
-			for (field in fields) {
+			var i = 0;
+			var field;
+			
+			while (i < fields.length) {
 				
-				if (field.name == "listeners") {
+				field = fields[i];
+				
+				if (field.name == "listeners" || field.name == "dispatch") {
 					
 					fields.remove (field);
-					break;
+					
+				} else {
+					
+					i++;
 					
 				}
 				
@@ -183,8 +186,6 @@ class Event<T> {
 				meta: [ ]
 			});
 			
-			typeIDs.set (typeString, id);
-			
 		}
 		
 		return TPath ( { pack: [ "lime", "app" ], name: name, params: [ TPType (typeParam.toComplexType ()) ] } ).toType ();
@@ -192,6 +193,8 @@ class Event<T> {
 	}
 	#end
 	
+	
+	public var dispatch:Dynamic;
 	
 	//macro public function dispatch (ethis:Expr, args:Array<Expr>):Void {
 		//
