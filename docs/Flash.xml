@@ -3401,7 +3401,7 @@
 		<lime_application_create get="inline" set="null" line="533" static="1">
 			<f a="config">
 				<d/>
-				<x path="Float"/>
+				<d/>
 			</f>
 			<meta><m n=":cffi"/></meta>
 		</lime_application_create>
@@ -3415,28 +3415,28 @@
 		</lime_application_event_manager_register>
 		<lime_application_exec get="inline" set="null" line="535" static="1">
 			<f a="handle">
-				<x path="Float"/>
+				<d/>
 				<x path="Int"/>
 			</f>
 			<meta><m n=":cffi"/></meta>
 		</lime_application_exec>
 		<lime_application_init get="inline" set="null" line="536" static="1">
 			<f a="handle">
-				<x path="Float"/>
+				<d/>
 				<x path="Void"/>
 			</f>
 			<meta><m n=":cffi"/></meta>
 		</lime_application_init>
 		<lime_application_quit get="inline" set="null" line="537" static="1">
 			<f a="handle">
-				<x path="Float"/>
+				<d/>
 				<x path="Int"/>
 			</f>
 			<meta><m n=":cffi"/></meta>
 		</lime_application_quit>
 		<lime_application_set_frame_rate get="inline" set="null" line="538" static="1">
 			<f a="handle:value">
-				<x path="Float"/>
+				<d/>
 				<x path="Float"/>
 				<x path="Void"/>
 			</f>
@@ -3444,7 +3444,7 @@
 		</lime_application_set_frame_rate>
 		<lime_application_update get="inline" set="null" line="539" static="1">
 			<f a="handle">
-				<x path="Float"/>
+				<d/>
 				<x path="Bool"/>
 			</f>
 			<meta><m n=":cffi"/></meta>
@@ -4319,7 +4319,7 @@
 			<f a="x:y:window">
 				<x path="Int"/>
 				<x path="Int"/>
-				<x path="Float"/>
+				<d/>
 				<x path="Void"/>
 			</f>
 			<meta><m n=":cffi"/></meta>
@@ -4511,51 +4511,51 @@
 		<meta><m n=":enum"/></meta>
 	</class>
 	<class path="lime._backend.native.NativeRenderer" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/_backend/native/NativeRenderer.hx">
-		<lime_renderer_create get="inline" set="null" line="162" static="1">
+		<lime_renderer_create get="inline" set="null" line="157" static="1">
 			<f a="window">
-				<x path="Float"/>
-				<x path="Float"/>
+				<d/>
+				<d/>
 			</f>
 			<meta><m n=":cffi"/></meta>
 		</lime_renderer_create>
-		<lime_renderer_flip get="inline" set="null" line="163" static="1">
+		<lime_renderer_flip get="inline" set="null" line="158" static="1">
 			<f a="handle">
-				<x path="Float"/>
+				<d/>
 				<x path="Void"/>
 			</f>
 			<meta><m n=":cffi"/></meta>
 		</lime_renderer_flip>
-		<lime_renderer_get_context get="inline" set="null" line="164" static="1">
+		<lime_renderer_get_context get="inline" set="null" line="159" static="1">
 			<f a="handle">
-				<x path="Float"/>
+				<d/>
 				<x path="Float"/>
 			</f>
 			<meta><m n=":cffi"/></meta>
 		</lime_renderer_get_context>
-		<lime_renderer_get_type get="inline" set="null" line="165" static="1">
+		<lime_renderer_get_type get="inline" set="null" line="160" static="1">
 			<f a="handle">
-				<x path="Float"/>
+				<d/>
 				<d/>
 			</f>
 			<meta><m n=":cffi"/></meta>
 		</lime_renderer_get_type>
-		<lime_renderer_lock get="inline" set="null" line="166" static="1">
+		<lime_renderer_lock get="inline" set="null" line="161" static="1">
 			<f a="handle">
-				<x path="Float"/>
+				<d/>
 				<d/>
 			</f>
 			<meta><m n=":cffi"/></meta>
 		</lime_renderer_lock>
-		<lime_renderer_make_current get="inline" set="null" line="167" static="1">
+		<lime_renderer_make_current get="inline" set="null" line="162" static="1">
 			<f a="handle">
-				<x path="Float"/>
+				<d/>
 				<x path="Void"/>
 			</f>
 			<meta><m n=":cffi"/></meta>
 		</lime_renderer_make_current>
-		<lime_renderer_unlock get="inline" set="null" line="168" static="1">
+		<lime_renderer_unlock get="inline" set="null" line="163" static="1">
 			<f a="handle">
-				<x path="Float"/>
+				<d/>
 				<x path="Void"/>
 			</f>
 			<meta><m n=":cffi"/></meta>
@@ -4563,24 +4563,25 @@
 		<handle public="1"><d/></handle>
 		<parent><c path="lime.graphics.Renderer"/></parent>
 		<useHardware><x path="Bool"/></useHardware>
-		<create public="1" set="method" line="42"><f a=""><x path="Void"/></f></create>
-		<dispatch set="method" line="82"><f a=""><x path="Void"/></f></dispatch>
-		<flip public="1" set="method" line="89"><f a=""><x path="Void"/></f></flip>
-		<render public="1" set="method" line="111"><f a=""><x path="Void"/></f></render>
-		<new public="1" set="method" line="35"><f a="parent">
+		<create public="1" set="method" line="43"><f a=""><x path="Void"/></f></create>
+		<dispatch set="method" line="83"><f a=""><x path="Void"/></f></dispatch>
+		<flip public="1" set="method" line="90"><f a=""><x path="Void"/></f></flip>
+		<render public="1" set="method" line="112"><f a=""><x path="Void"/></f></render>
+		<new public="1" set="method" line="36"><f a="parent">
 	<c path="lime.graphics.Renderer"/>
 	<x path="Void"/>
 </f></new>
 		<meta>
 			<m n=":directlyUsed"/>
 			<m n=":build"><e>lime.system.CFFI.build()</e></m>
+			<m n=":access"><e>lime.graphics.cairo.Cairo</e></m>
 			<m n=":access"><e>lime.ui.Window</e></m>
 		</meta>
 	</class>
 	<class path="lime._backend.native.NativeWindow" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/_backend/native/NativeWindow.hx">
 		<lime_window_alert get="inline" set="null" line="273" static="1">
 			<f a="handle:message:title">
-				<x path="Float"/>
+				<d/>
 				<c path="String"/>
 				<c path="String"/>
 				<x path="Void"/>
@@ -4589,74 +4590,74 @@
 		</lime_window_alert>
 		<lime_window_close get="inline" set="null" line="274" static="1">
 			<f a="handle">
-				<x path="Float"/>
+				<d/>
 				<x path="Void"/>
 			</f>
 			<meta><m n=":cffi"/></meta>
 		</lime_window_close>
 		<lime_window_create get="inline" set="null" line="275" static="1">
 			<f a="application:width:height:flags:title">
-				<x path="Float"/>
+				<d/>
 				<x path="Int"/>
 				<x path="Int"/>
 				<x path="Int"/>
 				<c path="String"/>
-				<x path="Float"/>
+				<d/>
 			</f>
 			<meta><m n=":cffi"/></meta>
 		</lime_window_create>
 		<lime_window_focus get="inline" set="null" line="276" static="1">
 			<f a="handle">
-				<x path="Float"/>
+				<d/>
 				<x path="Void"/>
 			</f>
 			<meta><m n=":cffi"/></meta>
 		</lime_window_focus>
 		<lime_window_get_enable_text_events get="inline" set="null" line="277" static="1">
 			<f a="handle">
-				<x path="Float"/>
+				<d/>
 				<x path="Bool"/>
 			</f>
 			<meta><m n=":cffi"/></meta>
 		</lime_window_get_enable_text_events>
 		<lime_window_get_height get="inline" set="null" line="278" static="1">
 			<f a="handle">
-				<x path="Float"/>
+				<d/>
 				<x path="Int"/>
 			</f>
 			<meta><m n=":cffi"/></meta>
 		</lime_window_get_height>
 		<lime_window_get_id get="inline" set="null" line="279" static="1">
 			<f a="handle">
-				<x path="Float"/>
+				<d/>
 				<x path="Int"/>
 			</f>
 			<meta><m n=":cffi"/></meta>
 		</lime_window_get_id>
 		<lime_window_get_width get="inline" set="null" line="280" static="1">
 			<f a="handle">
-				<x path="Float"/>
+				<d/>
 				<x path="Int"/>
 			</f>
 			<meta><m n=":cffi"/></meta>
 		</lime_window_get_width>
 		<lime_window_get_x get="inline" set="null" line="281" static="1">
 			<f a="handle">
-				<x path="Float"/>
+				<d/>
 				<x path="Int"/>
 			</f>
 			<meta><m n=":cffi"/></meta>
 		</lime_window_get_x>
 		<lime_window_get_y get="inline" set="null" line="282" static="1">
 			<f a="handle">
-				<x path="Float"/>
+				<d/>
 				<x path="Int"/>
 			</f>
 			<meta><m n=":cffi"/></meta>
 		</lime_window_get_y>
 		<lime_window_move get="inline" set="null" line="283" static="1">
 			<f a="handle:x:y">
-				<x path="Float"/>
+				<d/>
 				<x path="Int"/>
 				<x path="Int"/>
 				<x path="Void"/>
@@ -4665,7 +4666,7 @@
 		</lime_window_move>
 		<lime_window_resize get="inline" set="null" line="284" static="1">
 			<f a="handle:width:height">
-				<x path="Float"/>
+				<d/>
 				<x path="Int"/>
 				<x path="Int"/>
 				<x path="Void"/>
@@ -4674,7 +4675,7 @@
 		</lime_window_resize>
 		<lime_window_set_enable_text_events get="inline" set="null" line="285" static="1">
 			<f a="handle:enabled">
-				<x path="Float"/>
+				<d/>
 				<x path="Bool"/>
 				<x path="Void"/>
 			</f>
@@ -4682,7 +4683,7 @@
 		</lime_window_set_enable_text_events>
 		<lime_window_set_fullscreen get="inline" set="null" line="286" static="1">
 			<f a="handle:fullscreen">
-				<x path="Float"/>
+				<d/>
 				<x path="Bool"/>
 				<x path="Bool"/>
 			</f>
@@ -4690,7 +4691,7 @@
 		</lime_window_set_fullscreen>
 		<lime_window_set_icon get="inline" set="null" line="287" static="1">
 			<f a="handle:buffer">
-				<x path="Float"/>
+				<d/>
 				<d/>
 				<x path="Void"/>
 			</f>
@@ -4698,7 +4699,7 @@
 		</lime_window_set_icon>
 		<lime_window_set_minimized get="inline" set="null" line="288" static="1">
 			<f a="handle:minimized">
-				<x path="Float"/>
+				<d/>
 				<x path="Bool"/>
 				<x path="Bool"/>
 			</f>
@@ -4706,7 +4707,7 @@
 		</lime_window_set_minimized>
 		<lime_window_set_title get="inline" set="null" line="289" static="1">
 			<f a="handle:title">
-				<x path="Float"/>
+				<d/>
 				<c path="String"/>
 				<d/>
 			</f>
@@ -8240,77 +8241,77 @@
 		</meta>
 	</class>
 	<class path="lime.audio.openal.ALC" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/audio/openal/ALC.hx">
-		<FALSE public="1" get="inline" set="null" line="12" static="1"><x path="Int"/></FALSE>
-		<TRUE public="1" get="inline" set="null" line="13" static="1"><x path="Int"/></TRUE>
-		<FREQUENCY public="1" get="inline" set="null" line="14" static="1"><x path="Int"/></FREQUENCY>
-		<REFRESH public="1" get="inline" set="null" line="15" static="1"><x path="Int"/></REFRESH>
-		<SYNC public="1" get="inline" set="null" line="16" static="1"><x path="Int"/></SYNC>
-		<MONO_SOURCES public="1" get="inline" set="null" line="17" static="1"><x path="Int"/></MONO_SOURCES>
-		<STEREO_SOURCES public="1" get="inline" set="null" line="18" static="1"><x path="Int"/></STEREO_SOURCES>
-		<NO_ERROR public="1" get="inline" set="null" line="19" static="1"><x path="Int"/></NO_ERROR>
-		<INVALID_DEVICE public="1" get="inline" set="null" line="20" static="1"><x path="Int"/></INVALID_DEVICE>
-		<INVALID_CONTEXT public="1" get="inline" set="null" line="21" static="1"><x path="Int"/></INVALID_CONTEXT>
-		<INVALID_ENUM public="1" get="inline" set="null" line="22" static="1"><x path="Int"/></INVALID_ENUM>
-		<INVALID_VALUE public="1" get="inline" set="null" line="23" static="1"><x path="Int"/></INVALID_VALUE>
-		<OUT_OF_MEMORY public="1" get="inline" set="null" line="24" static="1"><x path="Int"/></OUT_OF_MEMORY>
-		<ATTRIBUTES_SIZE public="1" get="inline" set="null" line="25" static="1"><x path="Int"/></ATTRIBUTES_SIZE>
-		<ALL_ATTRIBUTES public="1" get="inline" set="null" line="26" static="1"><x path="Int"/></ALL_ATTRIBUTES>
-		<DEFAULT_DEVICE_SPECIFIER public="1" get="inline" set="null" line="27" static="1"><x path="Int"/></DEFAULT_DEVICE_SPECIFIER>
-		<DEVICE_SPECIFIER public="1" get="inline" set="null" line="28" static="1"><x path="Int"/></DEVICE_SPECIFIER>
-		<EXTENSIONS public="1" get="inline" set="null" line="29" static="1"><x path="Int"/></EXTENSIONS>
-		<ENUMERATE_ALL_EXT public="1" get="inline" set="null" line="30" static="1"><x path="Int"/></ENUMERATE_ALL_EXT>
-		<DEFAULT_ALL_DEVICES_SPECIFIER public="1" get="inline" set="null" line="31" static="1"><x path="Int"/></DEFAULT_ALL_DEVICES_SPECIFIER>
-		<ALL_DEVICES_SPECIFIER public="1" get="inline" set="null" line="32" static="1"><x path="Int"/></ALL_DEVICES_SPECIFIER>
-		<closeDevice public="1" set="method" line="35" static="1"><f a="device">
+		<FALSE public="1" get="inline" set="null" line="14" static="1"><x path="Int"/></FALSE>
+		<TRUE public="1" get="inline" set="null" line="15" static="1"><x path="Int"/></TRUE>
+		<FREQUENCY public="1" get="inline" set="null" line="16" static="1"><x path="Int"/></FREQUENCY>
+		<REFRESH public="1" get="inline" set="null" line="17" static="1"><x path="Int"/></REFRESH>
+		<SYNC public="1" get="inline" set="null" line="18" static="1"><x path="Int"/></SYNC>
+		<MONO_SOURCES public="1" get="inline" set="null" line="19" static="1"><x path="Int"/></MONO_SOURCES>
+		<STEREO_SOURCES public="1" get="inline" set="null" line="20" static="1"><x path="Int"/></STEREO_SOURCES>
+		<NO_ERROR public="1" get="inline" set="null" line="21" static="1"><x path="Int"/></NO_ERROR>
+		<INVALID_DEVICE public="1" get="inline" set="null" line="22" static="1"><x path="Int"/></INVALID_DEVICE>
+		<INVALID_CONTEXT public="1" get="inline" set="null" line="23" static="1"><x path="Int"/></INVALID_CONTEXT>
+		<INVALID_ENUM public="1" get="inline" set="null" line="24" static="1"><x path="Int"/></INVALID_ENUM>
+		<INVALID_VALUE public="1" get="inline" set="null" line="25" static="1"><x path="Int"/></INVALID_VALUE>
+		<OUT_OF_MEMORY public="1" get="inline" set="null" line="26" static="1"><x path="Int"/></OUT_OF_MEMORY>
+		<ATTRIBUTES_SIZE public="1" get="inline" set="null" line="27" static="1"><x path="Int"/></ATTRIBUTES_SIZE>
+		<ALL_ATTRIBUTES public="1" get="inline" set="null" line="28" static="1"><x path="Int"/></ALL_ATTRIBUTES>
+		<DEFAULT_DEVICE_SPECIFIER public="1" get="inline" set="null" line="29" static="1"><x path="Int"/></DEFAULT_DEVICE_SPECIFIER>
+		<DEVICE_SPECIFIER public="1" get="inline" set="null" line="30" static="1"><x path="Int"/></DEVICE_SPECIFIER>
+		<EXTENSIONS public="1" get="inline" set="null" line="31" static="1"><x path="Int"/></EXTENSIONS>
+		<ENUMERATE_ALL_EXT public="1" get="inline" set="null" line="32" static="1"><x path="Int"/></ENUMERATE_ALL_EXT>
+		<DEFAULT_ALL_DEVICES_SPECIFIER public="1" get="inline" set="null" line="33" static="1"><x path="Int"/></DEFAULT_ALL_DEVICES_SPECIFIER>
+		<ALL_DEVICES_SPECIFIER public="1" get="inline" set="null" line="34" static="1"><x path="Int"/></ALL_DEVICES_SPECIFIER>
+		<closeDevice public="1" set="method" line="37" static="1"><f a="device">
 	<x path="lime.audio.openal.ALDevice"/>
 	<x path="Bool"/>
 </f></closeDevice>
-		<createContext public="1" set="method" line="46" static="1"><f a="device:?attrlist">
+		<createContext public="1" set="method" line="48" static="1"><f a="device:?attrlist">
 	<x path="lime.audio.openal.ALDevice"/>
 	<c path="Array"><x path="Int"/></c>
 	<x path="lime.audio.openal.ALContext"/>
 </f></createContext>
-		<destroyContext public="1" set="method" line="63" static="1"><f a="context">
+		<destroyContext public="1" set="method" line="65" static="1"><f a="context">
 	<x path="lime.audio.openal.ALContext"/>
 	<x path="Void"/>
 </f></destroyContext>
-		<getContextsDevice public="1" set="method" line="72" static="1"><f a="context">
+		<getContextsDevice public="1" set="method" line="74" static="1"><f a="context">
 	<x path="lime.audio.openal.ALContext"/>
 	<x path="lime.audio.openal.ALDevice"/>
 </f></getContextsDevice>
-		<getCurrentContext public="1" set="method" line="89" static="1"><f a=""><x path="lime.audio.openal.ALContext"/></f></getCurrentContext>
-		<getError public="1" set="method" line="106" static="1"><f a="device">
+		<getCurrentContext public="1" set="method" line="91" static="1"><f a=""><x path="lime.audio.openal.ALContext"/></f></getCurrentContext>
+		<getError public="1" set="method" line="108" static="1"><f a="device">
 	<x path="lime.audio.openal.ALDevice"/>
 	<x path="Int"/>
 </f></getError>
-		<getErrorString public="1" set="method" line="117" static="1"><f a="device">
+		<getErrorString public="1" set="method" line="119" static="1"><f a="device">
 	<x path="lime.audio.openal.ALDevice"/>
 	<c path="String"/>
 </f></getErrorString>
-		<getIntegerv public="1" set="method" line="133" static="1"><f a="device:param:size">
+		<getIntegerv public="1" set="method" line="135" static="1"><f a="device:param:size">
 	<x path="lime.audio.openal.ALDevice"/>
 	<x path="Int"/>
 	<x path="Int"/>
 	<c path="Array"><x path="Int"/></c>
 </f></getIntegerv>
-		<getString public="1" set="method" line="144" static="1"><f a="device:param">
+		<getString public="1" set="method" line="146" static="1"><f a="device:param">
 	<x path="lime.audio.openal.ALDevice"/>
 	<x path="Int"/>
 	<c path="String"/>
 </f></getString>
-		<makeContextCurrent public="1" set="method" line="155" static="1"><f a="context">
+		<makeContextCurrent public="1" set="method" line="157" static="1"><f a="context">
 	<x path="lime.audio.openal.ALContext"/>
 	<x path="Bool"/>
 </f></makeContextCurrent>
-		<openDevice public="1" set="method" line="166" static="1"><f a="?deviceName">
+		<openDevice public="1" set="method" line="168" static="1"><f a="?deviceName">
 	<c path="String"/>
 	<x path="lime.audio.openal.ALDevice"/>
 </f></openDevice>
-		<processContext public="1" set="method" line="183" static="1"><f a="context">
+		<processContext public="1" set="method" line="185" static="1"><f a="context">
 	<x path="lime.audio.openal.ALContext"/>
 	<x path="Void"/>
 </f></processContext>
-		<suspendContext public="1" set="method" line="192" static="1"><f a="context">
+		<suspendContext public="1" set="method" line="194" static="1"><f a="context">
 	<x path="lime.audio.openal.ALContext"/>
 	<x path="Void"/>
 </f></suspendContext>
@@ -8320,17 +8321,17 @@
 		</meta>
 	</class>
 	<abstract path="lime.audio.openal.ALContext" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/audio/openal/ALContext.hx">
-		<from><icast><t path="Null"><x path="Float"/></t></icast></from>
-		<this><t path="Null"><x path="Float"/></t></this>
-		<to><icast><t path="Null"><x path="Float"/></t></icast></to>
+		<from><icast><x path="lime.system.CFFIPointer"/></icast></from>
+		<this><x path="lime.system.CFFIPointer"/></this>
+		<to><icast><x path="lime.system.CFFIPointer"/></icast></to>
 		<meta>
 			<m n=":allow"><e>lime.audio.openal.AL</e></m>
 			<m n=":allow"><e>lime.audio.openal.ALC</e></m>
 		</meta>
 		<impl><class path="lime.audio.openal._ALContext.ALContext_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/audio/openal/ALContext.hx" private="1" module="lime.audio.openal.ALContext">
-	<_new set="method" line="11" static="1">
+	<_new get="inline" set="null" line="13" static="1">
 		<f a="handle">
-			<x path="Float"/>
+			<x path="lime.system.CFFIPointer"/>
 			<x path="lime.audio.openal.ALContext"/>
 		</f>
 		<meta><m n=":impl"/></meta>
@@ -8342,9 +8343,9 @@
 </class></impl>
 	</abstract>
 	<class path="lime.audio.openal._ALContext.ALContext_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/audio/openal/ALContext.hx" private="1" module="lime.audio.openal.ALContext">
-		<_new set="method" line="11" static="1">
+		<_new get="inline" set="null" line="13" static="1">
 			<f a="handle">
-				<x path="Float"/>
+				<x path="lime.system.CFFIPointer"/>
 				<x path="lime.audio.openal.ALContext"/>
 			</f>
 			<meta><m n=":impl"/></meta>
@@ -8355,17 +8356,17 @@
 		</meta>
 	</class>
 	<abstract path="lime.audio.openal.ALDevice" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/audio/openal/ALDevice.hx">
-		<from><icast><t path="Null"><x path="Float"/></t></icast></from>
-		<this><t path="Null"><x path="Float"/></t></this>
-		<to><icast><t path="Null"><x path="Float"/></t></icast></to>
+		<from><icast><x path="lime.system.CFFIPointer"/></icast></from>
+		<this><x path="lime.system.CFFIPointer"/></this>
+		<to><icast><x path="lime.system.CFFIPointer"/></icast></to>
 		<meta>
 			<m n=":allow"><e>lime.audio.openal.AL</e></m>
 			<m n=":allow"><e>lime.audio.openal.ALC</e></m>
 		</meta>
 		<impl><class path="lime.audio.openal._ALDevice.ALDevice_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/audio/openal/ALDevice.hx" private="1" module="lime.audio.openal.ALDevice">
-	<_new set="method" line="11" static="1">
+	<_new get="inline" set="null" line="13" static="1">
 		<f a="handle">
-			<x path="Float"/>
+			<x path="lime.system.CFFIPointer"/>
 			<x path="lime.audio.openal.ALDevice"/>
 		</f>
 		<meta><m n=":impl"/></meta>
@@ -8377,9 +8378,9 @@
 </class></impl>
 	</abstract>
 	<class path="lime.audio.openal._ALDevice.ALDevice_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/audio/openal/ALDevice.hx" private="1" module="lime.audio.openal.ALDevice">
-		<_new set="method" line="11" static="1">
+		<_new get="inline" set="null" line="13" static="1">
 			<f a="handle">
-				<x path="Float"/>
+				<x path="lime.system.CFFIPointer"/>
 				<x path="lime.audio.openal.ALDevice"/>
 			</f>
 			<meta><m n=":impl"/></meta>
@@ -10385,7 +10386,7 @@
 	<d/>
 	<c path="lime.graphics.Image"/>
 </f></fromBitmapData>
-		<fromBytes public="1" set="method" line="474" static="1"><f a="bytes:?onload">
+		<fromBytes public="1" set="method" line="478" static="1"><f a="bytes:?onload">
 	<c path="lime.utils.ByteArray"/>
 	<f a="">
 		<c path="lime.graphics.Image"/>
@@ -10393,11 +10394,11 @@
 	</f>
 	<c path="lime.graphics.Image"/>
 </f></fromBytes>
-		<fromCanvas public="1" set="method" line="484" static="1"><f a="canvas">
+		<fromCanvas public="1" set="method" line="488" static="1"><f a="canvas">
 	<d/>
 	<c path="lime.graphics.Image"/>
 </f></fromCanvas>
-		<fromFile public="1" set="method" line="494" static="1"><f a="path:?onload:?onerror">
+		<fromFile public="1" set="method" line="498" static="1"><f a="path:?onload:?onerror">
 	<c path="String"/>
 	<f a="">
 		<c path="lime.graphics.Image"/>
@@ -10406,27 +10407,27 @@
 	<f a=""><x path="Void"/></f>
 	<c path="lime.graphics.Image"/>
 </f></fromFile>
-		<fromImageElement public="1" set="method" line="503" static="1"><f a="image">
+		<fromImageElement public="1" set="method" line="507" static="1"><f a="image">
 	<d/>
 	<c path="lime.graphics.Image"/>
 </f></fromImageElement>
-		<__base64Encode set="method" line="944" static="1"><f a="bytes">
+		<__base64Encode set="method" line="948" static="1"><f a="bytes">
 	<c path="lime.utils.ByteArray"/>
 	<c path="String"/>
 </f></__base64Encode>
-		<__isJPG set="method" line="1293" static="1"><f a="bytes">
+		<__isJPG set="method" line="1297" static="1"><f a="bytes">
 	<c path="lime.utils.ByteArray"/>
 	<x path="Bool"/>
 </f></__isJPG>
-		<__isPNG set="method" line="1301" static="1"><f a="bytes">
+		<__isPNG set="method" line="1305" static="1"><f a="bytes">
 	<c path="lime.utils.ByteArray"/>
 	<x path="Bool"/>
 </f></__isPNG>
-		<__isGIF set="method" line="1308" static="1"><f a="bytes">
+		<__isGIF set="method" line="1312" static="1"><f a="bytes">
 	<c path="lime.utils.ByteArray"/>
 	<x path="Bool"/>
 </f></__isGIF>
-		<lime_image_encode get="inline" set="null" line="1553" static="1">
+		<lime_image_encode get="inline" set="null" line="1557" static="1">
 			<f a="buffer:Type:quality">
 				<d/>
 				<x path="Int"/>
@@ -10435,7 +10436,7 @@
 			</f>
 			<meta><m n=":cffi"/></meta>
 		</lime_image_encode>
-		<lime_image_load get="inline" set="null" line="1554" static="1">
+		<lime_image_load get="inline" set="null" line="1558" static="1">
 			<f a="data">
 				<d/>
 				<d/>
@@ -10499,31 +10500,31 @@
 	<x path="lime.graphics.PixelFormat"/>
 	<x path="Void"/>
 </f></floodFill>
-		<getColorBoundsRect public="1" set="method" line="512"><f a="mask:color:?findColor:?format">
+		<getColorBoundsRect public="1" set="method" line="516"><f a="mask:color:?findColor:?format">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Bool"/>
 	<x path="lime.graphics.PixelFormat"/>
 	<c path="lime.math.Rectangle"/>
 </f></getColorBoundsRect>
-		<getPixel public="1" set="method" line="542"><f a="x:y:?format">
+		<getPixel public="1" set="method" line="546"><f a="x:y:?format">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="lime.graphics.PixelFormat"/>
 	<x path="Int"/>
 </f></getPixel>
-		<getPixel32 public="1" set="method" line="581"><f a="x:y:?format">
+		<getPixel32 public="1" set="method" line="585"><f a="x:y:?format">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="lime.graphics.PixelFormat"/>
 	<x path="Int"/>
 </f></getPixel32>
-		<getPixels public="1" set="method" line="620"><f a="rect:?format">
+		<getPixels public="1" set="method" line="624"><f a="rect:?format">
 	<c path="lime.math.Rectangle"/>
 	<x path="lime.graphics.PixelFormat"/>
 	<c path="lime.utils.ByteArray"/>
 </f></getPixels>
-		<merge public="1" set="method" line="689"><f a="sourceImage:sourceRect:destPoint:redMultiplier:greenMultiplier:blueMultiplier:alphaMultiplier">
+		<merge public="1" set="method" line="693"><f a="sourceImage:sourceRect:destPoint:redMultiplier:greenMultiplier:blueMultiplier:alphaMultiplier">
 	<c path="lime.graphics.Image"/>
 	<c path="lime.math.Rectangle"/>
 	<c path="lime.math.Vector2"/>
@@ -10533,41 +10534,41 @@
 	<x path="Int"/>
 	<x path="Void"/>
 </f></merge>
-		<resize public="1" set="method" line="723"><f a="newWidth:newHeight">
+		<resize public="1" set="method" line="727"><f a="newWidth:newHeight">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Void"/>
 </f></resize>
-		<scroll public="1" set="method" line="760"><f a="x:y">
+		<scroll public="1" set="method" line="764"><f a="x:y">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Void"/>
 </f></scroll>
-		<setPixel public="1" set="method" line="791"><f a="x:y:color:?format">
+		<setPixel public="1" set="method" line="795"><f a="x:y:color:?format">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="lime.graphics.PixelFormat"/>
 	<x path="Void"/>
 </f></setPixel>
-		<setPixel32 public="1" set="method" line="828"><f a="x:y:color:?format">
+		<setPixel32 public="1" set="method" line="832"><f a="x:y:color:?format">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="lime.graphics.PixelFormat"/>
 	<x path="Void"/>
 </f></setPixel32>
-		<setPixels public="1" set="method" line="865"><f a="rect:byteArray:?format">
+		<setPixels public="1" set="method" line="869"><f a="rect:byteArray:?format">
 	<c path="lime.math.Rectangle"/>
 	<c path="lime.utils.ByteArray"/>
 	<x path="lime.graphics.PixelFormat"/>
 	<x path="Void"/>
 </f></setPixels>
-		<__clipRect set="method" line="973"><f a="r">
+		<__clipRect set="method" line="977"><f a="r">
 	<c path="lime.math.Rectangle"/>
 	<c path="lime.math.Rectangle"/>
 </f></__clipRect>
-		<__fromBase64 set="method" line="1016"><f a="base64:type:?onload">
+		<__fromBase64 set="method" line="1020"><f a="base64:type:?onload">
 	<c path="String"/>
 	<c path="String"/>
 	<f a="">
@@ -10576,7 +10577,7 @@
 	</f>
 	<x path="Void"/>
 </f></__fromBase64>
-		<__fromBytes set="method" line="1046"><f a="bytes:onload">
+		<__fromBytes set="method" line="1050"><f a="bytes:onload">
 	<c path="lime.utils.ByteArray"/>
 	<f a="">
 		<c path="lime.graphics.Image"/>
@@ -10584,7 +10585,7 @@
 	</f>
 	<x path="Void"/>
 </f></__fromBytes>
-		<__fromFile set="method" line="1101"><f a="path:onload:onerror">
+		<__fromFile set="method" line="1105"><f a="path:onload:onerror">
 	<c path="String"/>
 	<f a="">
 		<c path="lime.graphics.Image"/>
@@ -10593,38 +10594,38 @@
 	<f a=""><x path="Void"/></f>
 	<x path="Void"/>
 </f></__fromFile>
-		<__fromImageBuffer set="method" line="1270"><f a="buffer">
+		<__fromImageBuffer set="method" line="1274"><f a="buffer">
 	<c path="lime.graphics.ImageBuffer"/>
 	<x path="Void"/>
 </f></__fromImageBuffer>
-		<get_data set="method" line="1331"><f a=""><x path="lime.utils.UInt8Array"/></f></get_data>
-		<set_data set="method" line="1355"><f a="value">
+		<get_data set="method" line="1335"><f a=""><x path="lime.utils.UInt8Array"/></f></get_data>
+		<set_data set="method" line="1359"><f a="value">
 	<x path="lime.utils.UInt8Array"/>
 	<x path="lime.utils.UInt8Array"/>
 </f></set_data>
-		<get_format set="method" line="1362"><f a=""><x path="lime.graphics.PixelFormat"/></f></get_format>
-		<set_format set="method" line="1369"><f a="value">
+		<get_format set="method" line="1366"><f a=""><x path="lime.graphics.PixelFormat"/></f></get_format>
+		<set_format set="method" line="1373"><f a="value">
 	<x path="lime.graphics.PixelFormat"/>
 	<x path="lime.graphics.PixelFormat"/>
 </f></set_format>
-		<get_powerOfTwo set="method" line="1390"><f a=""><x path="Bool"/></f></get_powerOfTwo>
-		<set_powerOfTwo set="method" line="1397"><f a="value">
+		<get_powerOfTwo set="method" line="1394"><f a=""><x path="Bool"/></f></get_powerOfTwo>
+		<set_powerOfTwo set="method" line="1401"><f a="value">
 	<x path="Bool"/>
 	<x path="Bool"/>
 </f></set_powerOfTwo>
-		<get_premultiplied set="method" line="1447"><f a=""><x path="Bool"/></f></get_premultiplied>
-		<set_premultiplied set="method" line="1454"><f a="value">
+		<get_premultiplied set="method" line="1451"><f a=""><x path="Bool"/></f></get_premultiplied>
+		<set_premultiplied set="method" line="1458"><f a="value">
 	<x path="Bool"/>
 	<x path="Bool"/>
 </f></set_premultiplied>
-		<get_rect set="method" line="1499"><f a=""><c path="lime.math.Rectangle"/></f></get_rect>
-		<get_src set="method" line="1506"><f a=""><d/></f></get_src>
-		<set_src set="method" line="1521"><f a="value">
+		<get_rect set="method" line="1503"><f a=""><c path="lime.math.Rectangle"/></f></get_rect>
+		<get_src set="method" line="1510"><f a=""><d/></f></get_src>
+		<set_src set="method" line="1525"><f a="value">
 	<d/>
 	<d/>
 </f></set_src>
-		<get_transparent set="method" line="1528"><f a=""><x path="Bool"/></f></get_transparent>
-		<set_transparent set="method" line="1536"><f a="value">
+		<get_transparent set="method" line="1532"><f a=""><x path="Bool"/></f></get_transparent>
+		<set_transparent set="method" line="1540"><f a="value">
 	<x path="Bool"/>
 	<x path="Bool"/>
 </f></set_transparent>
@@ -10838,8 +10839,8 @@
 	<class path="lime.graphics.cairo.Cairo" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/graphics/cairo/Cairo.hx">
 		<version public="1" get="accessor" set="null" static="1"><x path="Int"/></version>
 		<versionString public="1" get="accessor" set="null" static="1"><c path="String"/></versionString>
-		<get_version set="method" line="877" static="1"><f a=""><x path="Int"/></f></get_version>
-		<get_versionString set="method" line="888" static="1"><f a=""><c path="String"/></f></get_versionString>
+		<get_version set="method" line="848" static="1"><f a=""><x path="Int"/></f></get_version>
+		<get_versionString set="method" line="859" static="1"><f a=""><c path="String"/></f></get_versionString>
 		<antialias public="1" get="accessor" set="accessor"><x path="lime.graphics.cairo.CairoAntialias"/></antialias>
 		<currentPoint public="1" get="accessor" set="null"><c path="lime.math.Vector2"/></currentPoint>
 		<dash public="1" get="accessor" set="accessor"><c path="Array"><x path="Float"/></c></dash>
@@ -10855,20 +10856,15 @@
 		<matrix public="1" get="accessor" set="accessor"><c path="lime.math.Matrix3"/></matrix>
 		<miterLimit public="1" get="accessor" set="accessor"><x path="Float"/></miterLimit>
 		<operator public="1" get="accessor" set="accessor"><x path="lime.graphics.cairo.CairoOperator"/></operator>
-		<referenceCount public="1" get="accessor" set="null"><x path="Int"/></referenceCount>
 		<source public="1" get="accessor" set="accessor"><x path="lime.graphics.cairo.CairoPattern"/></source>
 		<target public="1" get="accessor" set="null"><x path="lime.graphics.cairo.CairoSurface"/></target>
 		<tolerance public="1" get="accessor" set="accessor"><x path="Float"/></tolerance>
 		<userData public="1"><d/></userData>
 		<handle>
-			<d/>
+			<x path="lime.system.CFFIPointer"/>
 			<meta><m n=":noCompletion"/></meta>
 		</handle>
-		<recreate public="1" set="method" line="55"><f a="surface">
-	<x path="lime.graphics.cairo.CairoSurface"/>
-	<x path="Void"/>
-</f></recreate>
-		<arc public="1" set="method" line="64"><f a="xc:yc:radius:angle1:angle2">
+		<arc public="1" set="method" line="56"><f a="xc:yc:radius:angle1:angle2">
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Float"/>
@@ -10876,7 +10872,7 @@
 	<x path="Float"/>
 	<x path="Void"/>
 </f></arc>
-		<arcNegative public="1" set="method" line="73"><f a="xc:yc:radius:angle1:angle2">
+		<arcNegative public="1" set="method" line="65"><f a="xc:yc:radius:angle1:angle2">
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Float"/>
@@ -10884,18 +10880,18 @@
 	<x path="Float"/>
 	<x path="Void"/>
 </f></arcNegative>
-		<clip public="1" set="method" line="82"><f a=""><x path="Void"/></f></clip>
-		<clipExtents public="1" set="method" line="91"><f a="x1:y1:x2:y2">
+		<clip public="1" set="method" line="74"><f a=""><x path="Void"/></f></clip>
+		<clipExtents public="1" set="method" line="83"><f a="x1:y1:x2:y2">
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Void"/>
 </f></clipExtents>
-		<clipPreserve public="1" set="method" line="100"><f a=""><x path="Void"/></f></clipPreserve>
-		<closePath public="1" set="method" line="109"><f a=""><x path="Void"/></f></closePath>
-		<copyPage public="1" set="method" line="118"><f a=""><x path="Void"/></f></copyPage>
-		<curveTo public="1" set="method" line="127"><f a="x1:y1:x2:y2:x3:y3">
+		<clipPreserve public="1" set="method" line="92"><f a=""><x path="Void"/></f></clipPreserve>
+		<closePath public="1" set="method" line="101"><f a=""><x path="Void"/></f></closePath>
+		<copyPage public="1" set="method" line="110"><f a=""><x path="Void"/></f></copyPage>
+		<curveTo public="1" set="method" line="119"><f a="x1:y1:x2:y2:x3:y3">
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Float"/>
@@ -10904,74 +10900,76 @@
 	<x path="Float"/>
 	<x path="Void"/>
 </f></curveTo>
-		<destroy public="1" set="method" line="136"><f a=""><x path="Void"/></f></destroy>
-		<fill public="1" set="method" line="145"><f a=""><x path="Void"/></f></fill>
-		<fillExtents public="1" set="method" line="154"><f a="x1:y1:x2:y2">
+		<fill public="1" set="method" line="128"><f a=""><x path="Void"/></f></fill>
+		<fillExtents public="1" set="method" line="137"><f a="x1:y1:x2:y2">
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Void"/>
 </f></fillExtents>
-		<fillPreserve public="1" set="method" line="163"><f a=""><x path="Void"/></f></fillPreserve>
-		<identityMatrix public="1" set="method" line="172"><f a=""><x path="Void"/></f></identityMatrix>
-		<inClip public="1" set="method" line="181"><f a="x:y">
+		<fillPreserve public="1" set="method" line="146"><f a=""><x path="Void"/></f></fillPreserve>
+		<identityMatrix public="1" set="method" line="155"><f a=""><x path="Void"/></f></identityMatrix>
+		<inClip public="1" set="method" line="164"><f a="x:y">
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Bool"/>
 </f></inClip>
-		<inFill public="1" set="method" line="192"><f a="x:y">
+		<inFill public="1" set="method" line="175"><f a="x:y">
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Bool"/>
 </f></inFill>
-		<inStroke public="1" set="method" line="203"><f a="x:y">
+		<inStroke public="1" set="method" line="186"><f a="x:y">
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Bool"/>
 </f></inStroke>
-		<lineTo public="1" set="method" line="214"><f a="x:y">
+		<lineTo public="1" set="method" line="197"><f a="x:y">
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Void"/>
 </f></lineTo>
-		<moveTo public="1" set="method" line="223"><f a="x:y">
+		<moveTo public="1" set="method" line="206"><f a="x:y">
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Void"/>
 </f></moveTo>
-		<mask public="1" set="method" line="232"><f a="pattern">
+		<mask public="1" set="method" line="215"><f a="pattern">
 	<x path="lime.graphics.cairo.CairoPattern"/>
 	<x path="Void"/>
 </f></mask>
-		<maskSurface public="1" set="method" line="241"><f a="surface:x:y">
+		<maskSurface public="1" set="method" line="224"><f a="surface:x:y">
 	<x path="lime.graphics.cairo.CairoSurface"/>
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Void"/>
 </f></maskSurface>
-		<newPath public="1" set="method" line="250"><f a=""><x path="Void"/></f></newPath>
-		<paint public="1" set="method" line="259"><f a=""><x path="Void"/></f></paint>
-		<paintWithAlpha public="1" set="method" line="268"><f a="alpha">
+		<newPath public="1" set="method" line="233"><f a=""><x path="Void"/></f></newPath>
+		<paint public="1" set="method" line="242"><f a=""><x path="Void"/></f></paint>
+		<paintWithAlpha public="1" set="method" line="251"><f a="alpha">
 	<x path="Float"/>
 	<x path="Void"/>
 </f></paintWithAlpha>
-		<popGroup public="1" set="method" line="277"><f a=""><x path="lime.graphics.cairo.CairoPattern"/></f></popGroup>
-		<popGroupToSource public="1" set="method" line="288"><f a=""><x path="Void"/></f></popGroupToSource>
-		<pushGroup public="1" set="method" line="297"><f a=""><x path="Void"/></f></pushGroup>
-		<pushGroupWithContent public="1" set="method" line="306"><f a="content">
+		<popGroup public="1" set="method" line="260"><f a=""><x path="lime.graphics.cairo.CairoPattern"/></f></popGroup>
+		<popGroupToSource public="1" set="method" line="271"><f a=""><x path="Void"/></f></popGroupToSource>
+		<pushGroup public="1" set="method" line="280"><f a=""><x path="Void"/></f></pushGroup>
+		<pushGroupWithContent public="1" set="method" line="289"><f a="content">
 	<x path="lime.graphics.cairo.CairoContent"/>
 	<x path="Void"/>
 </f></pushGroupWithContent>
-		<rectangle public="1" set="method" line="315"><f a="x:y:width:height">
+		<recreate set="method" line="298"><f a="surface">
+	<x path="lime.graphics.cairo.CairoSurface"/>
+	<x path="Void"/>
+</f></recreate>
+		<rectangle public="1" set="method" line="306"><f a="x:y:width:height">
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Void"/>
 </f></rectangle>
-		<reference public="1" set="method" line="324"><f a=""><x path="Void"/></f></reference>
-		<relCurveTo public="1" set="method" line="333"><f a="dx1:dy1:dx2:dy2:dx3:dy3">
+		<relCurveTo public="1" set="method" line="315"><f a="dx1:dy1:dx2:dy2:dx3:dy3">
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Float"/>
@@ -10980,236 +10978,232 @@
 	<x path="Float"/>
 	<x path="Void"/>
 </f></relCurveTo>
-		<relLineTo public="1" set="method" line="342"><f a="dx:dy">
+		<relLineTo public="1" set="method" line="324"><f a="dx:dy">
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Void"/>
 </f></relLineTo>
-		<relMoveTo public="1" set="method" line="351"><f a="dx:dy">
+		<relMoveTo public="1" set="method" line="333"><f a="dx:dy">
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Void"/>
 </f></relMoveTo>
-		<resetClip public="1" set="method" line="360"><f a=""><x path="Void"/></f></resetClip>
-		<restore public="1" set="method" line="369"><f a=""><x path="Void"/></f></restore>
-		<save public="1" set="method" line="378"><f a=""><x path="Void"/></f></save>
-		<setFontSize public="1" set="method" line="387"><f a="size">
+		<resetClip public="1" set="method" line="342"><f a=""><x path="Void"/></f></resetClip>
+		<restore public="1" set="method" line="351"><f a=""><x path="Void"/></f></restore>
+		<save public="1" set="method" line="360"><f a=""><x path="Void"/></f></save>
+		<setFontSize public="1" set="method" line="369"><f a="size">
 	<x path="Float"/>
 	<x path="Void"/>
 </f></setFontSize>
-		<setSourceRGB public="1" set="method" line="396"><f a="r:g:b">
+		<setSourceRGB public="1" set="method" line="378"><f a="r:g:b">
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Void"/>
 </f></setSourceRGB>
-		<setSourceRGBA public="1" set="method" line="405"><f a="r:g:b:a">
+		<setSourceRGBA public="1" set="method" line="387"><f a="r:g:b:a">
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Void"/>
 </f></setSourceRGBA>
-		<setSourceSurface public="1" set="method" line="414"><f a="surface:x:y">
+		<setSourceSurface public="1" set="method" line="396"><f a="surface:x:y">
 	<x path="lime.graphics.cairo.CairoSurface"/>
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Void"/>
 </f></setSourceSurface>
-		<showPage public="1" set="method" line="423"><f a=""><x path="Void"/></f></showPage>
-		<showText public="1" set="method" line="432"><f a="utf8">
+		<showPage public="1" set="method" line="405"><f a=""><x path="Void"/></f></showPage>
+		<showText public="1" set="method" line="414"><f a="utf8">
 	<c path="String"/>
 	<x path="Void"/>
 </f></showText>
-		<status public="1" set="method" line="441"><f a=""><x path="lime.graphics.cairo.CairoStatus"/></f></status>
-		<stroke public="1" set="method" line="452"><f a=""><x path="Void"/></f></stroke>
-		<strokeExtents public="1" set="method" line="461"><f a="x1:y1:x2:y2">
+		<status public="1" set="method" line="423"><f a=""><x path="lime.graphics.cairo.CairoStatus"/></f></status>
+		<stroke public="1" set="method" line="434"><f a=""><x path="Void"/></f></stroke>
+		<strokeExtents public="1" set="method" line="443"><f a="x1:y1:x2:y2">
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Void"/>
 </f></strokeExtents>
-		<strokePreserve public="1" set="method" line="470"><f a=""><x path="Void"/></f></strokePreserve>
-		<transform public="1" set="method" line="479"><f a="matrix">
+		<strokePreserve public="1" set="method" line="452"><f a=""><x path="Void"/></f></strokePreserve>
+		<transform public="1" set="method" line="461"><f a="matrix">
 	<c path="lime.math.Matrix3"/>
 	<x path="Void"/>
 </f></transform>
-		<rotate public="1" set="method" line="487"><f a="amount">
+		<rotate public="1" set="method" line="469"><f a="amount">
 	<x path="Float"/>
 	<x path="Void"/>
 </f></rotate>
-		<scale public="1" set="method" line="495"><f a="x:y">
+		<scale public="1" set="method" line="477"><f a="x:y">
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Void"/>
 </f></scale>
-		<translate public="1" set="method" line="504"><f a="x:y">
+		<translate public="1" set="method" line="486"><f a="x:y">
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Void"/>
 </f></translate>
-		<get_antialias set="method" line="522">
+		<get_antialias set="method" line="504">
 			<f a=""><x path="lime.graphics.cairo.CairoAntialias"/></f>
 			<meta><m n=":noCompletion"/></meta>
 		</get_antialias>
-		<set_antialias set="method" line="533">
+		<set_antialias set="method" line="515">
 			<f a="value">
 				<x path="lime.graphics.cairo.CairoAntialias"/>
 				<x path="lime.graphics.cairo.CairoAntialias"/>
 			</f>
 			<meta><m n=":noCompletion"/></meta>
 		</set_antialias>
-		<get_currentPoint set="method" line="544">
+		<get_currentPoint set="method" line="526">
 			<f a=""><c path="lime.math.Vector2"/></f>
 			<meta><m n=":noCompletion"/></meta>
 		</get_currentPoint>
-		<get_dash set="method" line="556">
+		<get_dash set="method" line="538">
 			<f a=""><c path="Array"><x path="Float"/></c></f>
 			<meta><m n=":noCompletion"/></meta>
 		</get_dash>
-		<set_dash set="method" line="568">
+		<set_dash set="method" line="550">
 			<f a="value">
 				<c path="Array"><x path="Float"/></c>
 				<c path="Array"><x path="Float"/></c>
 			</f>
 			<meta><m n=":noCompletion"/></meta>
 		</set_dash>
-		<get_dashCount set="method" line="579">
+		<get_dashCount set="method" line="561">
 			<f a=""><x path="Int"/></f>
 			<meta><m n=":noCompletion"/></meta>
 		</get_dashCount>
-		<get_fillRule set="method" line="590">
+		<get_fillRule set="method" line="572">
 			<f a=""><x path="lime.graphics.cairo.CairoFillRule"/></f>
 			<meta><m n=":noCompletion"/></meta>
 		</get_fillRule>
-		<set_fillRule set="method" line="601">
+		<set_fillRule set="method" line="583">
 			<f a="value">
 				<x path="lime.graphics.cairo.CairoFillRule"/>
 				<x path="lime.graphics.cairo.CairoFillRule"/>
 			</f>
 			<meta><m n=":noCompletion"/></meta>
 		</set_fillRule>
-		<get_fontFace set="method" line="612">
+		<get_fontFace set="method" line="594">
 			<f a=""><x path="lime.graphics.cairo.CairoFontFace"/></f>
 			<meta><m n=":noCompletion"/></meta>
 		</get_fontFace>
-		<set_fontFace set="method" line="623">
+		<set_fontFace set="method" line="605">
 			<f a="value">
 				<x path="lime.graphics.cairo.CairoFontFace"/>
 				<x path="lime.graphics.cairo.CairoFontFace"/>
 			</f>
 			<meta><m n=":noCompletion"/></meta>
 		</set_fontFace>
-		<get_fontOptions set="method" line="634">
+		<get_fontOptions set="method" line="616">
 			<f a=""><x path="lime.graphics.cairo.CairoFontOptions"/></f>
 			<meta><m n=":noCompletion"/></meta>
 		</get_fontOptions>
-		<set_fontOptions set="method" line="645">
+		<set_fontOptions set="method" line="627">
 			<f a="value">
 				<x path="lime.graphics.cairo.CairoFontOptions"/>
 				<x path="lime.graphics.cairo.CairoFontOptions"/>
 			</f>
 			<meta><m n=":noCompletion"/></meta>
 		</set_fontOptions>
-		<get_groupTarget set="method" line="656">
+		<get_groupTarget set="method" line="638">
 			<f a=""><x path="lime.graphics.cairo.CairoSurface"/></f>
 			<meta><m n=":noCompletion"/></meta>
 		</get_groupTarget>
-		<get_hasCurrentPoint set="method" line="667">
+		<get_hasCurrentPoint set="method" line="649">
 			<f a=""><x path="Bool"/></f>
 			<meta><m n=":noCompletion"/></meta>
 		</get_hasCurrentPoint>
-		<get_lineCap set="method" line="678">
+		<get_lineCap set="method" line="660">
 			<f a=""><x path="lime.graphics.cairo.CairoLineCap"/></f>
 			<meta><m n=":noCompletion"/></meta>
 		</get_lineCap>
-		<set_lineCap set="method" line="689">
+		<set_lineCap set="method" line="671">
 			<f a="value">
 				<x path="lime.graphics.cairo.CairoLineCap"/>
 				<x path="lime.graphics.cairo.CairoLineCap"/>
 			</f>
 			<meta><m n=":noCompletion"/></meta>
 		</set_lineCap>
-		<get_lineJoin set="method" line="700">
+		<get_lineJoin set="method" line="682">
 			<f a=""><x path="lime.graphics.cairo.CairoLineJoin"/></f>
 			<meta><m n=":noCompletion"/></meta>
 		</get_lineJoin>
-		<set_lineJoin set="method" line="711">
+		<set_lineJoin set="method" line="693">
 			<f a="value">
 				<x path="lime.graphics.cairo.CairoLineJoin"/>
 				<x path="lime.graphics.cairo.CairoLineJoin"/>
 			</f>
 			<meta><m n=":noCompletion"/></meta>
 		</set_lineJoin>
-		<get_lineWidth set="method" line="722">
+		<get_lineWidth set="method" line="704">
 			<f a=""><x path="Float"/></f>
 			<meta><m n=":noCompletion"/></meta>
 		</get_lineWidth>
-		<set_lineWidth set="method" line="733">
+		<set_lineWidth set="method" line="715">
 			<f a="value">
 				<x path="Float"/>
 				<x path="Float"/>
 			</f>
 			<meta><m n=":noCompletion"/></meta>
 		</set_lineWidth>
-		<get_matrix set="method" line="744">
+		<get_matrix set="method" line="726">
 			<f a=""><c path="lime.math.Matrix3"/></f>
 			<meta><m n=":noCompletion"/></meta>
 		</get_matrix>
-		<set_matrix set="method" line="756">
+		<set_matrix set="method" line="738">
 			<f a="value">
 				<c path="lime.math.Matrix3"/>
 				<c path="lime.math.Matrix3"/>
 			</f>
 			<meta><m n=":noCompletion"/></meta>
 		</set_matrix>
-		<get_miterLimit set="method" line="767">
+		<get_miterLimit set="method" line="749">
 			<f a=""><x path="Float"/></f>
 			<meta><m n=":noCompletion"/></meta>
 		</get_miterLimit>
-		<set_miterLimit set="method" line="778">
+		<set_miterLimit set="method" line="760">
 			<f a="value">
 				<x path="Float"/>
 				<x path="Float"/>
 			</f>
 			<meta><m n=":noCompletion"/></meta>
 		</set_miterLimit>
-		<get_operator set="method" line="789">
+		<get_operator set="method" line="771">
 			<f a=""><x path="lime.graphics.cairo.CairoOperator"/></f>
 			<meta><m n=":noCompletion"/></meta>
 		</get_operator>
-		<set_operator set="method" line="800">
+		<set_operator set="method" line="782">
 			<f a="value">
 				<x path="lime.graphics.cairo.CairoOperator"/>
 				<x path="lime.graphics.cairo.CairoOperator"/>
 			</f>
 			<meta><m n=":noCompletion"/></meta>
 		</set_operator>
-		<get_referenceCount set="method" line="811">
-			<f a=""><x path="Int"/></f>
-			<meta><m n=":noCompletion"/></meta>
-		</get_referenceCount>
-		<get_source set="method" line="822">
+		<get_source set="method" line="793">
 			<f a=""><x path="lime.graphics.cairo.CairoPattern"/></f>
 			<meta><m n=":noCompletion"/></meta>
 		</get_source>
-		<set_source set="method" line="833">
+		<set_source set="method" line="804">
 			<f a="value">
 				<x path="lime.graphics.cairo.CairoPattern"/>
 				<x path="lime.graphics.cairo.CairoPattern"/>
 			</f>
 			<meta><m n=":noCompletion"/></meta>
 		</set_source>
-		<get_target set="method" line="844">
+		<get_target set="method" line="815">
 			<f a=""><x path="lime.graphics.cairo.CairoSurface"/></f>
 			<meta><m n=":noCompletion"/></meta>
 		</get_target>
-		<get_tolerance set="method" line="855">
+		<get_tolerance set="method" line="826">
 			<f a=""><x path="Float"/></f>
 			<meta><m n=":noCompletion"/></meta>
 		</get_tolerance>
-		<set_tolerance set="method" line="866">
+		<set_tolerance set="method" line="837">
 			<f a="value">
 				<x path="Float"/>
 				<x path="Float"/>
@@ -11473,26 +11467,32 @@
 		<meta><m n=":enum"/></meta>
 	</class>
 	<abstract path="lime.graphics.cairo.CairoFTFontFace" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/graphics/cairo/CairoFTFontFace.hx">
-		<from><icast><x path="lime.graphics.cairo.CairoFontFace"/></icast></from>
+		<from>
+			<icast><x path="lime.system.CFFIPointer"/></icast>
+			<icast><x path="lime.graphics.cairo.CairoFontFace"/></icast>
+		</from>
 		<this><x path="lime.graphics.cairo.CairoFontFace"/></this>
-		<to><icast><x path="lime.graphics.cairo.CairoFontFace"/></icast></to>
+		<to>
+			<icast><x path="lime.system.CFFIPointer"/></icast>
+			<icast><x path="lime.graphics.cairo.CairoFontFace"/></icast>
+		</to>
 		<meta><m n=":build"><e>lime.system.CFFI.build()</e></m></meta>
 		<impl><class path="lime.graphics.cairo._CairoFTFontFace.CairoFTFontFace_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/graphics/cairo/CairoFTFontFace.hx" private="1" module="lime.graphics.cairo.CairoFTFontFace">
-	<FT_LOAD_FORCE_AUTOHINT public="1" get="inline" set="null" line="14" static="1"><x path="Int"/></FT_LOAD_FORCE_AUTOHINT>
-	<_new set="method" line="17" static="1">
+	<FT_LOAD_FORCE_AUTOHINT public="1" get="inline" set="null" line="15" static="1"><x path="Int"/></FT_LOAD_FORCE_AUTOHINT>
+	<_new set="method" line="18" static="1">
 		<f a=""><x path="lime.graphics.cairo.CairoFTFontFace"/></f>
 		<meta><m n=":impl"/></meta>
 	</_new>
-	<create public="1" set="method" line="24" static="1"><f a="face:loadFlags">
+	<create public="1" set="method" line="25" static="1"><f a="face:loadFlags">
 	<c path="lime.text.Font"/>
 	<x path="Int"/>
 	<x path="lime.graphics.cairo.CairoFTFontFace"/>
 </f></create>
-	<lime_cairo_ft_font_face_create get="inline" set="null" line="43" static="1">
+	<lime_cairo_ft_font_face_create get="inline" set="null" line="44" static="1">
 		<f a="face:flags">
-			<x path="Float"/>
+			<x path="lime.system.CFFIPointer"/>
 			<x path="Int"/>
-			<x path="Float"/>
+			<x path="lime.system.CFFIPointer"/>
 		</f>
 		<meta><m n=":cffi"/></meta>
 	</lime_cairo_ft_font_face_create>
@@ -11500,21 +11500,21 @@
 </class></impl>
 	</abstract>
 	<class path="lime.graphics.cairo._CairoFTFontFace.CairoFTFontFace_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/graphics/cairo/CairoFTFontFace.hx" private="1" module="lime.graphics.cairo.CairoFTFontFace">
-		<FT_LOAD_FORCE_AUTOHINT public="1" get="inline" set="null" line="14" static="1"><x path="Int"/></FT_LOAD_FORCE_AUTOHINT>
-		<_new set="method" line="17" static="1">
+		<FT_LOAD_FORCE_AUTOHINT public="1" get="inline" set="null" line="15" static="1"><x path="Int"/></FT_LOAD_FORCE_AUTOHINT>
+		<_new set="method" line="18" static="1">
 			<f a=""><x path="lime.graphics.cairo.CairoFTFontFace"/></f>
 			<meta><m n=":impl"/></meta>
 		</_new>
-		<create public="1" set="method" line="24" static="1"><f a="face:loadFlags">
+		<create public="1" set="method" line="25" static="1"><f a="face:loadFlags">
 	<c path="lime.text.Font"/>
 	<x path="Int"/>
 	<x path="lime.graphics.cairo.CairoFTFontFace"/>
 </f></create>
-		<lime_cairo_ft_font_face_create get="inline" set="null" line="43" static="1">
+		<lime_cairo_ft_font_face_create get="inline" set="null" line="44" static="1">
 			<f a="face:flags">
-				<x path="Float"/>
+				<x path="lime.system.CFFIPointer"/>
 				<x path="Int"/>
-				<x path="Float"/>
+				<x path="lime.system.CFFIPointer"/>
 			</f>
 			<meta><m n=":cffi"/></meta>
 		</lime_cairo_ft_font_face_create>
@@ -11669,74 +11669,25 @@
 		<meta><m n=":enum"/></meta>
 	</class>
 	<abstract path="lime.graphics.cairo.CairoFontFace" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/graphics/cairo/CairoFontFace.hx">
-		<from><icast><x path="Float"/></icast></from>
-		<this><d/></this>
-		<to><icast><x path="Float"/></icast></to>
+		<from><icast><x path="lime.system.CFFIPointer"/></icast></from>
+		<this><x path="lime.system.CFFIPointer"/></this>
+		<to><icast><x path="lime.system.CFFIPointer"/></icast></to>
 		<meta><m n=":build"><e>lime.system.CFFI.build()</e></m></meta>
 		<impl><class path="lime.graphics.cairo._CairoFontFace.CairoFontFace_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/graphics/cairo/CairoFontFace.hx" private="1" module="lime.graphics.cairo.CairoFontFace">
-	<referenceCount public="1" get="accessor" set="null" static="1">
-		<x path="Int"/>
-		<meta><m n=":impl"/></meta>
-	</referenceCount>
-	<_new set="method" line="15" static="1">
+	<_new set="method" line="14" static="1">
 		<f a=""><x path="lime.graphics.cairo.CairoFontFace"/></f>
 		<meta><m n=":impl"/></meta>
 	</_new>
-	<destroy public="1" set="method" line="22" static="1">
+	<status public="1" set="method" line="21" static="1">
 		<f a="this">
-			<d/>
-			<x path="Void"/>
-		</f>
-		<meta><m n=":impl"/></meta>
-	</destroy>
-	<reference public="1" set="method" line="31" static="1">
-		<f a="this">
-			<d/>
-			<x path="lime.graphics.cairo.CairoFontFace"/>
-		</f>
-		<meta><m n=":impl"/></meta>
-	</reference>
-	<status public="1" set="method" line="42" static="1">
-		<f a="this">
-			<d/>
+			<x path="lime.system.CFFIPointer"/>
 			<x path="lime.graphics.cairo.CairoStatus"/>
 		</f>
 		<meta><m n=":impl"/></meta>
 	</status>
-	<get_referenceCount set="method" line="60" static="1">
-		<f a="this">
-			<d/>
-			<x path="Int"/>
-		</f>
-		<meta>
-			<m n=":impl"/>
-			<m n=":noCompletion"/>
-		</meta>
-	</get_referenceCount>
-	<lime_cairo_font_face_destroy get="inline" set="null" line="79" static="1">
+	<lime_cairo_font_face_status get="inline" set="null" line="40" static="1">
 		<f a="handle">
-			<x path="Float"/>
-			<x path="Void"/>
-		</f>
-		<meta><m n=":cffi"/></meta>
-	</lime_cairo_font_face_destroy>
-	<lime_cairo_font_face_get_reference_count get="inline" set="null" line="80" static="1">
-		<f a="handle">
-			<x path="Float"/>
-			<x path="Int"/>
-		</f>
-		<meta><m n=":cffi"/></meta>
-	</lime_cairo_font_face_get_reference_count>
-	<lime_cairo_font_face_reference get="inline" set="null" line="81" static="1">
-		<f a="handle">
-			<x path="Float"/>
-			<x path="Void"/>
-		</f>
-		<meta><m n=":cffi"/></meta>
-	</lime_cairo_font_face_reference>
-	<lime_cairo_font_face_status get="inline" set="null" line="82" static="1">
-		<f a="handle">
-			<x path="Float"/>
+			<x path="lime.system.CFFIPointer"/>
 			<x path="Int"/>
 		</f>
 		<meta><m n=":cffi"/></meta>
@@ -11745,69 +11696,20 @@
 </class></impl>
 	</abstract>
 	<class path="lime.graphics.cairo._CairoFontFace.CairoFontFace_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/graphics/cairo/CairoFontFace.hx" private="1" module="lime.graphics.cairo.CairoFontFace">
-		<referenceCount public="1" get="accessor" set="null" static="1">
-			<x path="Int"/>
-			<meta><m n=":impl"/></meta>
-		</referenceCount>
-		<_new set="method" line="15" static="1">
+		<_new set="method" line="14" static="1">
 			<f a=""><x path="lime.graphics.cairo.CairoFontFace"/></f>
 			<meta><m n=":impl"/></meta>
 		</_new>
-		<destroy public="1" set="method" line="22" static="1">
+		<status public="1" set="method" line="21" static="1">
 			<f a="this">
-				<d/>
-				<x path="Void"/>
-			</f>
-			<meta><m n=":impl"/></meta>
-		</destroy>
-		<reference public="1" set="method" line="31" static="1">
-			<f a="this">
-				<d/>
-				<x path="lime.graphics.cairo.CairoFontFace"/>
-			</f>
-			<meta><m n=":impl"/></meta>
-		</reference>
-		<status public="1" set="method" line="42" static="1">
-			<f a="this">
-				<d/>
+				<x path="lime.system.CFFIPointer"/>
 				<x path="lime.graphics.cairo.CairoStatus"/>
 			</f>
 			<meta><m n=":impl"/></meta>
 		</status>
-		<get_referenceCount set="method" line="60" static="1">
-			<f a="this">
-				<d/>
-				<x path="Int"/>
-			</f>
-			<meta>
-				<m n=":impl"/>
-				<m n=":noCompletion"/>
-			</meta>
-		</get_referenceCount>
-		<lime_cairo_font_face_destroy get="inline" set="null" line="79" static="1">
+		<lime_cairo_font_face_status get="inline" set="null" line="40" static="1">
 			<f a="handle">
-				<x path="Float"/>
-				<x path="Void"/>
-			</f>
-			<meta><m n=":cffi"/></meta>
-		</lime_cairo_font_face_destroy>
-		<lime_cairo_font_face_get_reference_count get="inline" set="null" line="80" static="1">
-			<f a="handle">
-				<x path="Float"/>
-				<x path="Int"/>
-			</f>
-			<meta><m n=":cffi"/></meta>
-		</lime_cairo_font_face_get_reference_count>
-		<lime_cairo_font_face_reference get="inline" set="null" line="81" static="1">
-			<f a="handle">
-				<x path="Float"/>
-				<x path="Void"/>
-			</f>
-			<meta><m n=":cffi"/></meta>
-		</lime_cairo_font_face_reference>
-		<lime_cairo_font_face_status get="inline" set="null" line="82" static="1">
-			<f a="handle">
-				<x path="Float"/>
+				<x path="lime.system.CFFIPointer"/>
 				<x path="Int"/>
 			</f>
 			<meta><m n=":cffi"/></meta>
@@ -11815,9 +11717,9 @@
 		<meta><m n=":build"><e>lime.system.CFFI.build()</e></m></meta>
 	</class>
 	<abstract path="lime.graphics.cairo.CairoFontOptions" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/graphics/cairo/CairoFontOptions.hx">
-		<from><icast><x path="Float"/></icast></from>
-		<this><d/></this>
-		<to><icast><x path="Float"/></icast></to>
+		<from><icast><x path="lime.system.CFFIPointer"/></icast></from>
+		<this><x path="lime.system.CFFIPointer"/></this>
+		<to><icast><x path="lime.system.CFFIPointer"/></icast></to>
 		<meta><m n=":build"><e>lime.system.CFFI.build()</e></m></meta>
 		<impl><class path="lime.graphics.cairo._CairoFontOptions.CairoFontOptions_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/graphics/cairo/CairoFontOptions.hx" private="1" module="lime.graphics.cairo.CairoFontOptions">
 	<antialias public="1" get="accessor" set="accessor" static="1">
@@ -11836,20 +11738,13 @@
 		<x path="lime.graphics.cairo.CairoSubpixelOrder"/>
 		<meta><m n=":impl"/></meta>
 	</subpixelOrder>
-	<_new public="1" set="method" line="20" static="1">
+	<_new public="1" set="method" line="21" static="1">
 		<f a=""><x path="lime.graphics.cairo.CairoFontOptions"/></f>
 		<meta><m n=":impl"/></meta>
 	</_new>
-	<destroy public="1" set="method" line="31" static="1">
+	<get_antialias set="method" line="39" static="1">
 		<f a="this">
-			<d/>
-			<x path="Void"/>
-		</f>
-		<meta><m n=":impl"/></meta>
-	</destroy>
-	<get_antialias set="method" line="47" static="1">
-		<f a="this">
-			<d/>
+			<x path="lime.system.CFFIPointer"/>
 			<x path="lime.graphics.cairo.CairoAntialias"/>
 		</f>
 		<meta>
@@ -11857,9 +11752,9 @@
 			<m n=":noCompletion"/>
 		</meta>
 	</get_antialias>
-	<set_antialias set="method" line="58" static="1">
+	<set_antialias set="method" line="50" static="1">
 		<f a="this:value">
-			<d/>
+			<x path="lime.system.CFFIPointer"/>
 			<x path="lime.graphics.cairo.CairoAntialias"/>
 			<x path="lime.graphics.cairo.CairoAntialias"/>
 		</f>
@@ -11868,9 +11763,9 @@
 			<m n=":noCompletion"/>
 		</meta>
 	</set_antialias>
-	<get_hintMetrics set="method" line="69" static="1">
+	<get_hintMetrics set="method" line="61" static="1">
 		<f a="this">
-			<d/>
+			<x path="lime.system.CFFIPointer"/>
 			<x path="lime.graphics.cairo.CairoHintMetrics"/>
 		</f>
 		<meta>
@@ -11878,9 +11773,9 @@
 			<m n=":noCompletion"/>
 		</meta>
 	</get_hintMetrics>
-	<set_hintMetrics set="method" line="80" static="1">
+	<set_hintMetrics set="method" line="72" static="1">
 		<f a="this:value">
-			<d/>
+			<x path="lime.system.CFFIPointer"/>
 			<x path="lime.graphics.cairo.CairoHintMetrics"/>
 			<x path="lime.graphics.cairo.CairoHintMetrics"/>
 		</f>
@@ -11889,9 +11784,9 @@
 			<m n=":noCompletion"/>
 		</meta>
 	</set_hintMetrics>
-	<get_hintStyle set="method" line="92" static="1">
+	<get_hintStyle set="method" line="84" static="1">
 		<f a="this">
-			<d/>
+			<x path="lime.system.CFFIPointer"/>
 			<x path="lime.graphics.cairo.CairoHintStyle"/>
 		</f>
 		<meta>
@@ -11899,9 +11794,9 @@
 			<m n=":noCompletion"/>
 		</meta>
 	</get_hintStyle>
-	<set_hintStyle set="method" line="103" static="1">
+	<set_hintStyle set="method" line="95" static="1">
 		<f a="this:value">
-			<d/>
+			<x path="lime.system.CFFIPointer"/>
 			<x path="lime.graphics.cairo.CairoHintStyle"/>
 			<x path="lime.graphics.cairo.CairoHintStyle"/>
 		</f>
@@ -11910,9 +11805,9 @@
 			<m n=":noCompletion"/>
 		</meta>
 	</set_hintStyle>
-	<get_subpixelOrder set="method" line="114" static="1">
+	<get_subpixelOrder set="method" line="106" static="1">
 		<f a="this">
-			<d/>
+			<x path="lime.system.CFFIPointer"/>
 			<x path="lime.graphics.cairo.CairoSubpixelOrder"/>
 		</f>
 		<meta>
@@ -11920,9 +11815,9 @@
 			<m n=":noCompletion"/>
 		</meta>
 	</get_subpixelOrder>
-	<set_subpixelOrder set="method" line="125" static="1">
+	<set_subpixelOrder set="method" line="117" static="1">
 		<f a="this:value">
-			<d/>
+			<x path="lime.system.CFFIPointer"/>
 			<x path="lime.graphics.cairo.CairoSubpixelOrder"/>
 			<x path="lime.graphics.cairo.CairoSubpixelOrder"/>
 		</f>
@@ -11931,72 +11826,65 @@
 			<m n=":noCompletion"/>
 		</meta>
 	</set_subpixelOrder>
-	<lime_cairo_font_options_create get="inline" set="null" line="144" static="1">
-		<f a=""><x path="Float"/></f>
+	<lime_cairo_font_options_create get="inline" set="null" line="136" static="1">
+		<f a=""><x path="lime.system.CFFIPointer"/></f>
 		<meta><m n=":cffi"/></meta>
 	</lime_cairo_font_options_create>
-	<lime_cairo_font_options_destroy get="inline" set="null" line="145" static="1">
+	<lime_cairo_font_options_get_antialias get="inline" set="null" line="137" static="1">
 		<f a="handle">
-			<x path="Float"/>
-			<x path="Void"/>
-		</f>
-		<meta><m n=":cffi"/></meta>
-	</lime_cairo_font_options_destroy>
-	<lime_cairo_font_options_get_antialias get="inline" set="null" line="146" static="1">
-		<f a="handle">
-			<x path="Float"/>
+			<x path="lime.system.CFFIPointer"/>
 			<x path="Int"/>
 		</f>
 		<meta><m n=":cffi"/></meta>
 	</lime_cairo_font_options_get_antialias>
-	<lime_cairo_font_options_get_hint_metrics get="inline" set="null" line="147" static="1">
+	<lime_cairo_font_options_get_hint_metrics get="inline" set="null" line="138" static="1">
 		<f a="handle">
-			<x path="Float"/>
+			<x path="lime.system.CFFIPointer"/>
 			<x path="Int"/>
 		</f>
 		<meta><m n=":cffi"/></meta>
 	</lime_cairo_font_options_get_hint_metrics>
-	<lime_cairo_font_options_get_hint_style get="inline" set="null" line="148" static="1">
+	<lime_cairo_font_options_get_hint_style get="inline" set="null" line="139" static="1">
 		<f a="handle">
-			<x path="Float"/>
+			<x path="lime.system.CFFIPointer"/>
 			<x path="Int"/>
 		</f>
 		<meta><m n=":cffi"/></meta>
 	</lime_cairo_font_options_get_hint_style>
-	<lime_cairo_font_options_get_subpixel_order get="inline" set="null" line="149" static="1">
+	<lime_cairo_font_options_get_subpixel_order get="inline" set="null" line="140" static="1">
 		<f a="handle">
-			<x path="Float"/>
+			<x path="lime.system.CFFIPointer"/>
 			<x path="Int"/>
 		</f>
 		<meta><m n=":cffi"/></meta>
 	</lime_cairo_font_options_get_subpixel_order>
-	<lime_cairo_font_options_set_antialias get="inline" set="null" line="150" static="1">
+	<lime_cairo_font_options_set_antialias get="inline" set="null" line="141" static="1">
 		<f a="handle:v">
-			<x path="Float"/>
+			<x path="lime.system.CFFIPointer"/>
 			<x path="Int"/>
 			<x path="Void"/>
 		</f>
 		<meta><m n=":cffi"/></meta>
 	</lime_cairo_font_options_set_antialias>
-	<lime_cairo_font_options_set_hint_metrics get="inline" set="null" line="151" static="1">
+	<lime_cairo_font_options_set_hint_metrics get="inline" set="null" line="142" static="1">
 		<f a="handle:v">
-			<x path="Float"/>
+			<x path="lime.system.CFFIPointer"/>
 			<x path="Int"/>
 			<x path="Void"/>
 		</f>
 		<meta><m n=":cffi"/></meta>
 	</lime_cairo_font_options_set_hint_metrics>
-	<lime_cairo_font_options_set_hint_style get="inline" set="null" line="152" static="1">
+	<lime_cairo_font_options_set_hint_style get="inline" set="null" line="143" static="1">
 		<f a="handle:v">
-			<x path="Float"/>
+			<x path="lime.system.CFFIPointer"/>
 			<x path="Int"/>
 			<x path="Void"/>
 		</f>
 		<meta><m n=":cffi"/></meta>
 	</lime_cairo_font_options_set_hint_style>
-	<lime_cairo_font_options_set_subpixel_order get="inline" set="null" line="153" static="1">
+	<lime_cairo_font_options_set_subpixel_order get="inline" set="null" line="144" static="1">
 		<f a="handle:v">
-			<x path="Float"/>
+			<x path="lime.system.CFFIPointer"/>
 			<x path="Int"/>
 			<x path="Void"/>
 		</f>
@@ -12022,20 +11910,13 @@
 			<x path="lime.graphics.cairo.CairoSubpixelOrder"/>
 			<meta><m n=":impl"/></meta>
 		</subpixelOrder>
-		<_new public="1" set="method" line="20" static="1">
+		<_new public="1" set="method" line="21" static="1">
 			<f a=""><x path="lime.graphics.cairo.CairoFontOptions"/></f>
 			<meta><m n=":impl"/></meta>
 		</_new>
-		<destroy public="1" set="method" line="31" static="1">
+		<get_antialias set="method" line="39" static="1">
 			<f a="this">
-				<d/>
-				<x path="Void"/>
-			</f>
-			<meta><m n=":impl"/></meta>
-		</destroy>
-		<get_antialias set="method" line="47" static="1">
-			<f a="this">
-				<d/>
+				<x path="lime.system.CFFIPointer"/>
 				<x path="lime.graphics.cairo.CairoAntialias"/>
 			</f>
 			<meta>
@@ -12043,9 +11924,9 @@
 				<m n=":noCompletion"/>
 			</meta>
 		</get_antialias>
-		<set_antialias set="method" line="58" static="1">
+		<set_antialias set="method" line="50" static="1">
 			<f a="this:value">
-				<d/>
+				<x path="lime.system.CFFIPointer"/>
 				<x path="lime.graphics.cairo.CairoAntialias"/>
 				<x path="lime.graphics.cairo.CairoAntialias"/>
 			</f>
@@ -12054,9 +11935,9 @@
 				<m n=":noCompletion"/>
 			</meta>
 		</set_antialias>
-		<get_hintMetrics set="method" line="69" static="1">
+		<get_hintMetrics set="method" line="61" static="1">
 			<f a="this">
-				<d/>
+				<x path="lime.system.CFFIPointer"/>
 				<x path="lime.graphics.cairo.CairoHintMetrics"/>
 			</f>
 			<meta>
@@ -12064,9 +11945,9 @@
 				<m n=":noCompletion"/>
 			</meta>
 		</get_hintMetrics>
-		<set_hintMetrics set="method" line="80" static="1">
+		<set_hintMetrics set="method" line="72" static="1">
 			<f a="this:value">
-				<d/>
+				<x path="lime.system.CFFIPointer"/>
 				<x path="lime.graphics.cairo.CairoHintMetrics"/>
 				<x path="lime.graphics.cairo.CairoHintMetrics"/>
 			</f>
@@ -12075,9 +11956,9 @@
 				<m n=":noCompletion"/>
 			</meta>
 		</set_hintMetrics>
-		<get_hintStyle set="method" line="92" static="1">
+		<get_hintStyle set="method" line="84" static="1">
 			<f a="this">
-				<d/>
+				<x path="lime.system.CFFIPointer"/>
 				<x path="lime.graphics.cairo.CairoHintStyle"/>
 			</f>
 			<meta>
@@ -12085,9 +11966,9 @@
 				<m n=":noCompletion"/>
 			</meta>
 		</get_hintStyle>
-		<set_hintStyle set="method" line="103" static="1">
+		<set_hintStyle set="method" line="95" static="1">
 			<f a="this:value">
-				<d/>
+				<x path="lime.system.CFFIPointer"/>
 				<x path="lime.graphics.cairo.CairoHintStyle"/>
 				<x path="lime.graphics.cairo.CairoHintStyle"/>
 			</f>
@@ -12096,9 +11977,9 @@
 				<m n=":noCompletion"/>
 			</meta>
 		</set_hintStyle>
-		<get_subpixelOrder set="method" line="114" static="1">
+		<get_subpixelOrder set="method" line="106" static="1">
 			<f a="this">
-				<d/>
+				<x path="lime.system.CFFIPointer"/>
 				<x path="lime.graphics.cairo.CairoSubpixelOrder"/>
 			</f>
 			<meta>
@@ -12106,9 +11987,9 @@
 				<m n=":noCompletion"/>
 			</meta>
 		</get_subpixelOrder>
-		<set_subpixelOrder set="method" line="125" static="1">
+		<set_subpixelOrder set="method" line="117" static="1">
 			<f a="this:value">
-				<d/>
+				<x path="lime.system.CFFIPointer"/>
 				<x path="lime.graphics.cairo.CairoSubpixelOrder"/>
 				<x path="lime.graphics.cairo.CairoSubpixelOrder"/>
 			</f>
@@ -12117,72 +11998,65 @@
 				<m n=":noCompletion"/>
 			</meta>
 		</set_subpixelOrder>
-		<lime_cairo_font_options_create get="inline" set="null" line="144" static="1">
-			<f a=""><x path="Float"/></f>
+		<lime_cairo_font_options_create get="inline" set="null" line="136" static="1">
+			<f a=""><x path="lime.system.CFFIPointer"/></f>
 			<meta><m n=":cffi"/></meta>
 		</lime_cairo_font_options_create>
-		<lime_cairo_font_options_destroy get="inline" set="null" line="145" static="1">
+		<lime_cairo_font_options_get_antialias get="inline" set="null" line="137" static="1">
 			<f a="handle">
-				<x path="Float"/>
-				<x path="Void"/>
-			</f>
-			<meta><m n=":cffi"/></meta>
-		</lime_cairo_font_options_destroy>
-		<lime_cairo_font_options_get_antialias get="inline" set="null" line="146" static="1">
-			<f a="handle">
-				<x path="Float"/>
+				<x path="lime.system.CFFIPointer"/>
 				<x path="Int"/>
 			</f>
 			<meta><m n=":cffi"/></meta>
 		</lime_cairo_font_options_get_antialias>
-		<lime_cairo_font_options_get_hint_metrics get="inline" set="null" line="147" static="1">
+		<lime_cairo_font_options_get_hint_metrics get="inline" set="null" line="138" static="1">
 			<f a="handle">
-				<x path="Float"/>
+				<x path="lime.system.CFFIPointer"/>
 				<x path="Int"/>
 			</f>
 			<meta><m n=":cffi"/></meta>
 		</lime_cairo_font_options_get_hint_metrics>
-		<lime_cairo_font_options_get_hint_style get="inline" set="null" line="148" static="1">
+		<lime_cairo_font_options_get_hint_style get="inline" set="null" line="139" static="1">
 			<f a="handle">
-				<x path="Float"/>
+				<x path="lime.system.CFFIPointer"/>
 				<x path="Int"/>
 			</f>
 			<meta><m n=":cffi"/></meta>
 		</lime_cairo_font_options_get_hint_style>
-		<lime_cairo_font_options_get_subpixel_order get="inline" set="null" line="149" static="1">
+		<lime_cairo_font_options_get_subpixel_order get="inline" set="null" line="140" static="1">
 			<f a="handle">
-				<x path="Float"/>
+				<x path="lime.system.CFFIPointer"/>
 				<x path="Int"/>
 			</f>
 			<meta><m n=":cffi"/></meta>
 		</lime_cairo_font_options_get_subpixel_order>
-		<lime_cairo_font_options_set_antialias get="inline" set="null" line="150" static="1">
+		<lime_cairo_font_options_set_antialias get="inline" set="null" line="141" static="1">
 			<f a="handle:v">
-				<x path="Float"/>
+				<x path="lime.system.CFFIPointer"/>
 				<x path="Int"/>
 				<x path="Void"/>
 			</f>
 			<meta><m n=":cffi"/></meta>
 		</lime_cairo_font_options_set_antialias>
-		<lime_cairo_font_options_set_hint_metrics get="inline" set="null" line="151" static="1">
+		<lime_cairo_font_options_set_hint_metrics get="inline" set="null" line="142" static="1">
 			<f a="handle:v">
-				<x path="Float"/>
+				<x path="lime.system.CFFIPointer"/>
 				<x path="Int"/>
 				<x path="Void"/>
 			</f>
 			<meta><m n=":cffi"/></meta>
 		</lime_cairo_font_options_set_hint_metrics>
-		<lime_cairo_font_options_set_hint_style get="inline" set="null" line="152" static="1">
+		<lime_cairo_font_options_set_hint_style get="inline" set="null" line="143" static="1">
 			<f a="handle:v">
-				<x path="Float"/>
+				<x path="lime.system.CFFIPointer"/>
 				<x path="Int"/>
 				<x path="Void"/>
 			</f>
 			<meta><m n=":cffi"/></meta>
 		</lime_cairo_font_options_set_hint_style>
-		<lime_cairo_font_options_set_subpixel_order get="inline" set="null" line="153" static="1">
+		<lime_cairo_font_options_set_subpixel_order get="inline" set="null" line="144" static="1">
 			<f a="handle:v">
-				<x path="Float"/>
+				<x path="lime.system.CFFIPointer"/>
 				<x path="Int"/>
 				<x path="Void"/>
 			</f>
@@ -12455,9 +12329,15 @@
 		<meta><m n=":enum"/></meta>
 	</class>
 	<abstract path="lime.graphics.cairo.CairoImageSurface" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/graphics/cairo/CairoImageSurface.hx">
-		<from><icast><x path="lime.graphics.cairo.CairoSurface"/></icast></from>
+		<from>
+			<icast><x path="lime.system.CFFIPointer"/></icast>
+			<icast><x path="lime.graphics.cairo.CairoSurface"/></icast>
+		</from>
 		<this><x path="lime.graphics.cairo.CairoSurface"/></this>
-		<to><icast><x path="lime.graphics.cairo.CairoSurface"/></icast></to>
+		<to>
+			<icast><x path="lime.system.CFFIPointer"/></icast>
+			<icast><x path="lime.graphics.cairo.CairoSurface"/></icast>
+		</to>
 		<meta>
 			<m n=":build"><e>lime.system.CFFI.build()</e></m>
 			<m n=":forward"/>
@@ -12483,7 +12363,7 @@
 		<x path="Int"/>
 		<meta><m n=":impl"/></meta>
 	</width>
-	<_new public="1" set="method" line="19" static="1">
+	<_new public="1" set="method" line="21" static="1">
 		<f a="format:width:height">
 			<x path="lime.graphics.cairo.CairoFormat"/>
 			<x path="Int"/>
@@ -12492,7 +12372,7 @@
 		</f>
 		<meta><m n=":impl"/></meta>
 	</_new>
-	<create public="1" set="method" line="30" static="1"><f a="data:format:width:height:stride">
+	<create public="1" set="method" line="32" static="1"><f a="data:format:width:height:stride">
 	<d/>
 	<x path="lime.graphics.cairo.CairoFormat"/>
 	<x path="Int"/>
@@ -12500,11 +12380,11 @@
 	<x path="Int"/>
 	<x path="lime.graphics.cairo.CairoSurface"/>
 </f></create>
-	<fromImage public="1" set="method" line="41" static="1"><f a="image">
+	<fromImage public="1" set="method" line="43" static="1"><f a="image">
 	<c path="lime.graphics.Image"/>
 	<x path="lime.graphics.cairo.CairoSurface"/>
 </f></fromImage>
-	<get_data set="method" line="59" static="1">
+	<get_data set="method" line="61" static="1">
 		<f a="this">
 			<x path="lime.graphics.cairo.CairoSurface"/>
 			<d/>
@@ -12514,7 +12394,7 @@
 			<m n=":noCompletion"/>
 		</meta>
 	</get_data>
-	<get_format set="method" line="70" static="1">
+	<get_format set="method" line="72" static="1">
 		<f a="this">
 			<x path="lime.graphics.cairo.CairoSurface"/>
 			<x path="lime.graphics.cairo.CairoFormat"/>
@@ -12524,7 +12404,7 @@
 			<m n=":noCompletion"/>
 		</meta>
 	</get_format>
-	<get_height set="method" line="81" static="1">
+	<get_height set="method" line="83" static="1">
 		<f a="this">
 			<x path="lime.graphics.cairo.CairoSurface"/>
 			<x path="Int"/>
@@ -12534,7 +12414,7 @@
 			<m n=":noCompletion"/>
 		</meta>
 	</get_height>
-	<get_stride set="method" line="92" static="1">
+	<get_stride set="method" line="94" static="1">
 		<f a="this">
 			<x path="lime.graphics.cairo.CairoSurface"/>
 			<x path="Int"/>
@@ -12544,7 +12424,7 @@
 			<m n=":noCompletion"/>
 		</meta>
 	</get_stride>
-	<get_width set="method" line="103" static="1">
+	<get_width set="method" line="105" static="1">
 		<f a="this">
 			<x path="lime.graphics.cairo.CairoSurface"/>
 			<x path="Int"/>
@@ -12578,7 +12458,7 @@
 			<x path="Int"/>
 			<meta><m n=":impl"/></meta>
 		</width>
-		<_new public="1" set="method" line="19" static="1">
+		<_new public="1" set="method" line="21" static="1">
 			<f a="format:width:height">
 				<x path="lime.graphics.cairo.CairoFormat"/>
 				<x path="Int"/>
@@ -12587,7 +12467,7 @@
 			</f>
 			<meta><m n=":impl"/></meta>
 		</_new>
-		<create public="1" set="method" line="30" static="1"><f a="data:format:width:height:stride">
+		<create public="1" set="method" line="32" static="1"><f a="data:format:width:height:stride">
 	<d/>
 	<x path="lime.graphics.cairo.CairoFormat"/>
 	<x path="Int"/>
@@ -12595,11 +12475,11 @@
 	<x path="Int"/>
 	<x path="lime.graphics.cairo.CairoSurface"/>
 </f></create>
-		<fromImage public="1" set="method" line="41" static="1"><f a="image">
+		<fromImage public="1" set="method" line="43" static="1"><f a="image">
 	<c path="lime.graphics.Image"/>
 	<x path="lime.graphics.cairo.CairoSurface"/>
 </f></fromImage>
-		<get_data set="method" line="59" static="1">
+		<get_data set="method" line="61" static="1">
 			<f a="this">
 				<x path="lime.graphics.cairo.CairoSurface"/>
 				<d/>
@@ -12609,7 +12489,7 @@
 				<m n=":noCompletion"/>
 			</meta>
 		</get_data>
-		<get_format set="method" line="70" static="1">
+		<get_format set="method" line="72" static="1">
 			<f a="this">
 				<x path="lime.graphics.cairo.CairoSurface"/>
 				<x path="lime.graphics.cairo.CairoFormat"/>
@@ -12619,7 +12499,7 @@
 				<m n=":noCompletion"/>
 			</meta>
 		</get_format>
-		<get_height set="method" line="81" static="1">
+		<get_height set="method" line="83" static="1">
 			<f a="this">
 				<x path="lime.graphics.cairo.CairoSurface"/>
 				<x path="Int"/>
@@ -12629,7 +12509,7 @@
 				<m n=":noCompletion"/>
 			</meta>
 		</get_height>
-		<get_stride set="method" line="92" static="1">
+		<get_stride set="method" line="94" static="1">
 			<f a="this">
 				<x path="lime.graphics.cairo.CairoSurface"/>
 				<x path="Int"/>
@@ -12639,7 +12519,7 @@
 				<m n=":noCompletion"/>
 			</meta>
 		</get_stride>
-		<get_width set="method" line="103" static="1">
+		<get_width set="method" line="105" static="1">
 			<f a="this">
 				<x path="lime.graphics.cairo.CairoSurface"/>
 				<x path="Int"/>
@@ -13196,9 +13076,9 @@
 		<meta><m n=":enum"/></meta>
 	</class>
 	<abstract path="lime.graphics.cairo.CairoPattern" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/graphics/cairo/CairoPattern.hx">
-		<from><icast><x path="Float"/></icast></from>
-		<this><d/></this>
-		<to><icast><x path="Float"/></icast></to>
+		<from><icast><x path="lime.system.CFFIPointer"/></icast></from>
+		<this><x path="lime.system.CFFIPointer"/></this>
+		<to><icast><x path="lime.system.CFFIPointer"/></icast></to>
 		<meta><m n=":build"><e>lime.system.CFFI.build()</e></m></meta>
 		<impl><class path="lime.graphics.cairo._CairoPattern.CairoPattern_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/graphics/cairo/CairoPattern.hx" private="1" module="lime.graphics.cairo.CairoPattern">
 	<colorStopCount public="1" get="accessor" set="null" static="1">
@@ -13217,16 +13097,16 @@
 		<c path="lime.math.Matrix3"/>
 		<meta><m n=":impl"/></meta>
 	</matrix>
-	<_new public="1" set="method" line="20" static="1">
+	<_new public="1" set="method" line="21" static="1">
 		<f a="handle">
-			<unknown/>
+			<x path="lime.system.CFFIPointer"/>
 			<x path="lime.graphics.cairo.CairoPattern"/>
 		</f>
 		<meta><m n=":impl"/></meta>
 	</_new>
-	<addColorStopRGB public="1" set="method" line="27" static="1">
+	<addColorStopRGB public="1" set="method" line="28" static="1">
 		<f a="this:offset:r:g:b">
-			<d/>
+			<x path="lime.system.CFFIPointer"/>
 			<x path="Float"/>
 			<x path="Float"/>
 			<x path="Float"/>
@@ -13235,9 +13115,9 @@
 		</f>
 		<meta><m n=":impl"/></meta>
 	</addColorStopRGB>
-	<addColorStopRGBA public="1" set="method" line="36" static="1">
+	<addColorStopRGBA public="1" set="method" line="37" static="1">
 		<f a="this:offset:r:g:b:a">
-			<d/>
+			<x path="lime.system.CFFIPointer"/>
 			<x path="Float"/>
 			<x path="Float"/>
 			<x path="Float"/>
@@ -13247,18 +13127,18 @@
 		</f>
 		<meta><m n=":impl"/></meta>
 	</addColorStopRGBA>
-	<createForSurface public="1" set="method" line="45" static="1"><f a="surface">
+	<createForSurface public="1" set="method" line="46" static="1"><f a="surface">
 	<x path="lime.graphics.cairo.CairoSurface"/>
 	<x path="lime.graphics.cairo.CairoPattern"/>
 </f></createForSurface>
-	<createLinear public="1" set="method" line="56" static="1"><f a="x0:y0:x1:y1">
+	<createLinear public="1" set="method" line="57" static="1"><f a="x0:y0:x1:y1">
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="lime.graphics.cairo.CairoPattern"/>
 </f></createLinear>
-	<createRadial public="1" set="method" line="67" static="1"><f a="cx0:cy0:radius0:cx1:cy1:radius1">
+	<createRadial public="1" set="method" line="68" static="1"><f a="cx0:cy0:radius0:cx1:cy1:radius1">
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Float"/>
@@ -13267,29 +13147,22 @@
 	<x path="Float"/>
 	<x path="lime.graphics.cairo.CairoPattern"/>
 </f></createRadial>
-	<createRGB public="1" set="method" line="78" static="1"><f a="r:g:b">
+	<createRGB public="1" set="method" line="79" static="1"><f a="r:g:b">
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="lime.graphics.cairo.CairoPattern"/>
 </f></createRGB>
-	<createRGBA public="1" set="method" line="89" static="1"><f a="r:g:b:a">
+	<createRGBA public="1" set="method" line="90" static="1"><f a="r:g:b:a">
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="lime.graphics.cairo.CairoPattern"/>
 </f></createRGBA>
-	<destroy public="1" set="method" line="100" static="1">
+	<get_colorStopCount set="method" line="108" static="1">
 		<f a="this">
-			<d/>
-			<x path="Void"/>
-		</f>
-		<meta><m n=":impl"/></meta>
-	</destroy>
-	<get_colorStopCount set="method" line="116" static="1">
-		<f a="this">
-			<d/>
+			<x path="lime.system.CFFIPointer"/>
 			<x path="Int"/>
 		</f>
 		<meta>
@@ -13297,9 +13170,9 @@
 			<m n=":noCompletion"/>
 		</meta>
 	</get_colorStopCount>
-	<get_extend set="method" line="127" static="1">
+	<get_extend set="method" line="119" static="1">
 		<f a="this">
-			<d/>
+			<x path="lime.system.CFFIPointer"/>
 			<x path="lime.graphics.cairo.CairoExtend"/>
 		</f>
 		<meta>
@@ -13307,9 +13180,9 @@
 			<m n=":noCompletion"/>
 		</meta>
 	</get_extend>
-	<set_extend set="method" line="138" static="1">
+	<set_extend set="method" line="130" static="1">
 		<f a="this:value">
-			<d/>
+			<x path="lime.system.CFFIPointer"/>
 			<x path="lime.graphics.cairo.CairoExtend"/>
 			<x path="lime.graphics.cairo.CairoExtend"/>
 		</f>
@@ -13318,9 +13191,9 @@
 			<m n=":noCompletion"/>
 		</meta>
 	</set_extend>
-	<get_filter set="method" line="149" static="1">
+	<get_filter set="method" line="141" static="1">
 		<f a="this">
-			<d/>
+			<x path="lime.system.CFFIPointer"/>
 			<x path="lime.graphics.cairo.CairoFilter"/>
 		</f>
 		<meta>
@@ -13328,9 +13201,9 @@
 			<m n=":noCompletion"/>
 		</meta>
 	</get_filter>
-	<set_filter set="method" line="160" static="1">
+	<set_filter set="method" line="152" static="1">
 		<f a="this:value">
-			<d/>
+			<x path="lime.system.CFFIPointer"/>
 			<x path="lime.graphics.cairo.CairoFilter"/>
 			<x path="lime.graphics.cairo.CairoFilter"/>
 		</f>
@@ -13339,9 +13212,9 @@
 			<m n=":noCompletion"/>
 		</meta>
 	</set_filter>
-	<get_matrix set="method" line="171" static="1">
+	<get_matrix set="method" line="163" static="1">
 		<f a="this">
-			<d/>
+			<x path="lime.system.CFFIPointer"/>
 			<c path="lime.math.Matrix3"/>
 		</f>
 		<meta>
@@ -13349,9 +13222,9 @@
 			<m n=":noCompletion"/>
 		</meta>
 	</get_matrix>
-	<set_matrix set="method" line="183" static="1">
+	<set_matrix set="method" line="175" static="1">
 		<f a="this:value">
-			<d/>
+			<x path="lime.system.CFFIPointer"/>
 			<c path="lime.math.Matrix3"/>
 			<c path="lime.math.Matrix3"/>
 		</f>
@@ -13380,16 +13253,16 @@
 			<c path="lime.math.Matrix3"/>
 			<meta><m n=":impl"/></meta>
 		</matrix>
-		<_new public="1" set="method" line="20" static="1">
+		<_new public="1" set="method" line="21" static="1">
 			<f a="handle">
-				<unknown/>
+				<x path="lime.system.CFFIPointer"/>
 				<x path="lime.graphics.cairo.CairoPattern"/>
 			</f>
 			<meta><m n=":impl"/></meta>
 		</_new>
-		<addColorStopRGB public="1" set="method" line="27" static="1">
+		<addColorStopRGB public="1" set="method" line="28" static="1">
 			<f a="this:offset:r:g:b">
-				<d/>
+				<x path="lime.system.CFFIPointer"/>
 				<x path="Float"/>
 				<x path="Float"/>
 				<x path="Float"/>
@@ -13398,9 +13271,9 @@
 			</f>
 			<meta><m n=":impl"/></meta>
 		</addColorStopRGB>
-		<addColorStopRGBA public="1" set="method" line="36" static="1">
+		<addColorStopRGBA public="1" set="method" line="37" static="1">
 			<f a="this:offset:r:g:b:a">
-				<d/>
+				<x path="lime.system.CFFIPointer"/>
 				<x path="Float"/>
 				<x path="Float"/>
 				<x path="Float"/>
@@ -13410,18 +13283,18 @@
 			</f>
 			<meta><m n=":impl"/></meta>
 		</addColorStopRGBA>
-		<createForSurface public="1" set="method" line="45" static="1"><f a="surface">
+		<createForSurface public="1" set="method" line="46" static="1"><f a="surface">
 	<x path="lime.graphics.cairo.CairoSurface"/>
 	<x path="lime.graphics.cairo.CairoPattern"/>
 </f></createForSurface>
-		<createLinear public="1" set="method" line="56" static="1"><f a="x0:y0:x1:y1">
+		<createLinear public="1" set="method" line="57" static="1"><f a="x0:y0:x1:y1">
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="lime.graphics.cairo.CairoPattern"/>
 </f></createLinear>
-		<createRadial public="1" set="method" line="67" static="1"><f a="cx0:cy0:radius0:cx1:cy1:radius1">
+		<createRadial public="1" set="method" line="68" static="1"><f a="cx0:cy0:radius0:cx1:cy1:radius1">
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Float"/>
@@ -13430,29 +13303,22 @@
 	<x path="Float"/>
 	<x path="lime.graphics.cairo.CairoPattern"/>
 </f></createRadial>
-		<createRGB public="1" set="method" line="78" static="1"><f a="r:g:b">
+		<createRGB public="1" set="method" line="79" static="1"><f a="r:g:b">
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="lime.graphics.cairo.CairoPattern"/>
 </f></createRGB>
-		<createRGBA public="1" set="method" line="89" static="1"><f a="r:g:b:a">
+		<createRGBA public="1" set="method" line="90" static="1"><f a="r:g:b:a">
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="lime.graphics.cairo.CairoPattern"/>
 </f></createRGBA>
-		<destroy public="1" set="method" line="100" static="1">
+		<get_colorStopCount set="method" line="108" static="1">
 			<f a="this">
-				<d/>
-				<x path="Void"/>
-			</f>
-			<meta><m n=":impl"/></meta>
-		</destroy>
-		<get_colorStopCount set="method" line="116" static="1">
-			<f a="this">
-				<d/>
+				<x path="lime.system.CFFIPointer"/>
 				<x path="Int"/>
 			</f>
 			<meta>
@@ -13460,9 +13326,9 @@
 				<m n=":noCompletion"/>
 			</meta>
 		</get_colorStopCount>
-		<get_extend set="method" line="127" static="1">
+		<get_extend set="method" line="119" static="1">
 			<f a="this">
-				<d/>
+				<x path="lime.system.CFFIPointer"/>
 				<x path="lime.graphics.cairo.CairoExtend"/>
 			</f>
 			<meta>
@@ -13470,9 +13336,9 @@
 				<m n=":noCompletion"/>
 			</meta>
 		</get_extend>
-		<set_extend set="method" line="138" static="1">
+		<set_extend set="method" line="130" static="1">
 			<f a="this:value">
-				<d/>
+				<x path="lime.system.CFFIPointer"/>
 				<x path="lime.graphics.cairo.CairoExtend"/>
 				<x path="lime.graphics.cairo.CairoExtend"/>
 			</f>
@@ -13481,9 +13347,9 @@
 				<m n=":noCompletion"/>
 			</meta>
 		</set_extend>
-		<get_filter set="method" line="149" static="1">
+		<get_filter set="method" line="141" static="1">
 			<f a="this">
-				<d/>
+				<x path="lime.system.CFFIPointer"/>
 				<x path="lime.graphics.cairo.CairoFilter"/>
 			</f>
 			<meta>
@@ -13491,9 +13357,9 @@
 				<m n=":noCompletion"/>
 			</meta>
 		</get_filter>
-		<set_filter set="method" line="160" static="1">
+		<set_filter set="method" line="152" static="1">
 			<f a="this:value">
-				<d/>
+				<x path="lime.system.CFFIPointer"/>
 				<x path="lime.graphics.cairo.CairoFilter"/>
 				<x path="lime.graphics.cairo.CairoFilter"/>
 			</f>
@@ -13502,9 +13368,9 @@
 				<m n=":noCompletion"/>
 			</meta>
 		</set_filter>
-		<get_matrix set="method" line="171" static="1">
+		<get_matrix set="method" line="163" static="1">
 			<f a="this">
-				<d/>
+				<x path="lime.system.CFFIPointer"/>
 				<c path="lime.math.Matrix3"/>
 			</f>
 			<meta>
@@ -13512,9 +13378,9 @@
 				<m n=":noCompletion"/>
 			</meta>
 		</get_matrix>
-		<set_matrix set="method" line="183" static="1">
+		<set_matrix set="method" line="175" static="1">
 			<f a="this:value">
-				<d/>
+				<x path="lime.system.CFFIPointer"/>
 				<c path="lime.math.Matrix3"/>
 				<c path="lime.math.Matrix3"/>
 			</f>
@@ -14178,21 +14044,14 @@
 		<meta><m n=":enum"/></meta>
 	</class>
 	<abstract path="lime.graphics.cairo.CairoSurface" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/graphics/cairo/CairoSurface.hx">
-		<from><icast><x path="Float"/></icast></from>
-		<this><d/></this>
-		<to><icast><x path="Float"/></icast></to>
+		<from><icast><x path="lime.system.CFFIPointer"/></icast></from>
+		<this><x path="lime.system.CFFIPointer"/></this>
+		<to><icast><x path="lime.system.CFFIPointer"/></icast></to>
 		<meta><m n=":build"><e>lime.system.CFFI.build()</e></m></meta>
 		<impl><class path="lime.graphics.cairo._CairoSurface.CairoSurface_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/graphics/cairo/CairoSurface.hx" private="1" module="lime.graphics.cairo.CairoSurface">
-	<destroy public="1" set="method" line="12" static="1">
+	<flush public="1" set="method" line="14" static="1">
 		<f a="this">
-			<d/>
-			<x path="Void"/>
-		</f>
-		<meta><m n=":impl"/></meta>
-	</destroy>
-	<flush public="1" set="method" line="21" static="1">
-		<f a="this">
-			<d/>
+			<x path="lime.system.CFFIPointer"/>
 			<x path="Void"/>
 		</f>
 		<meta><m n=":impl"/></meta>
@@ -14201,16 +14060,9 @@
 </class></impl>
 	</abstract>
 	<class path="lime.graphics.cairo._CairoSurface.CairoSurface_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/graphics/cairo/CairoSurface.hx" private="1" module="lime.graphics.cairo.CairoSurface">
-		<destroy public="1" set="method" line="12" static="1">
+		<flush public="1" set="method" line="14" static="1">
 			<f a="this">
-				<d/>
-				<x path="Void"/>
-			</f>
-			<meta><m n=":impl"/></meta>
-		</destroy>
-		<flush public="1" set="method" line="21" static="1">
-			<f a="this">
-				<d/>
+				<x path="lime.system.CFFIPointer"/>
 				<x path="Void"/>
 			</f>
 			<meta><m n=":impl"/></meta>
@@ -24075,6 +23927,330 @@
 		</lime_cffi_set_finalizer>
 		<meta><m n=":directlyUsed"/></meta>
 	</class>
+	<abstract path="lime.system.CFFIPointer" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/system/CFFIPointer.hx">
+		<from><icast><d/></icast></from>
+		<this><d/></this>
+		<to><icast><d/></icast></to>
+		<meta><m n=":build"><e>lime.system.CFFI.build()</e></m></meta>
+		<impl><class path="lime.system._CFFIPointer.CFFIPointer_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/system/CFFIPointer.hx" private="1" module="lime.system.CFFIPointer">
+	<_new public="1" get="inline" set="null" line="11" static="1">
+		<f a="handle">
+			<d/>
+			<x path="lime.system.CFFIPointer"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</_new>
+	<get public="1" set="method" line="18" static="1">
+		<f a="this">
+			<d/>
+			<x path="Float"/>
+		</f>
+		<meta><m n=":impl"/></meta>
+	</get>
+	<equals get="inline" set="null" line="33" static="1">
+		<f a="a:b">
+			<x path="lime.system.CFFIPointer"/>
+			<x path="Int"/>
+			<x path="Bool"/>
+		</f>
+		<meta>
+			<m n=":noCompletion"/>
+			<m n=":op"><e>A==B</e></m>
+		</meta>
+	</equals>
+	<equalsPointer get="inline" set="null" line="34" static="1">
+		<f a="a:b">
+			<x path="lime.system.CFFIPointer"/>
+			<x path="lime.system.CFFIPointer"/>
+			<x path="Bool"/>
+		</f>
+		<meta>
+			<m n=":noCompletion"/>
+			<m n=":op"><e>A==B</e></m>
+		</meta>
+	</equalsPointer>
+	<greaterThan get="inline" set="null" line="35" static="1">
+		<f a="a:b">
+			<x path="lime.system.CFFIPointer"/>
+			<x path="Int"/>
+			<x path="Bool"/>
+		</f>
+		<meta>
+			<m n=":noCompletion"/>
+			<m n=":op"><e><![CDATA[A>B]]></e></m>
+		</meta>
+	</greaterThan>
+	<greaterThanPointer get="inline" set="null" line="36" static="1">
+		<f a="a:b">
+			<x path="lime.system.CFFIPointer"/>
+			<x path="lime.system.CFFIPointer"/>
+			<x path="Bool"/>
+		</f>
+		<meta>
+			<m n=":noCompletion"/>
+			<m n=":op"><e><![CDATA[A>B]]></e></m>
+		</meta>
+	</greaterThanPointer>
+	<greaterThanOrEqual get="inline" set="null" line="37" static="1">
+		<f a="a:b">
+			<x path="lime.system.CFFIPointer"/>
+			<x path="Int"/>
+			<x path="Bool"/>
+		</f>
+		<meta>
+			<m n=":noCompletion"/>
+			<m n=":op"><e><![CDATA[A>=B]]></e></m>
+		</meta>
+	</greaterThanOrEqual>
+	<greaterThanOrEqualPointer get="inline" set="null" line="38" static="1">
+		<f a="a:b">
+			<x path="lime.system.CFFIPointer"/>
+			<x path="lime.system.CFFIPointer"/>
+			<x path="Bool"/>
+		</f>
+		<meta>
+			<m n=":noCompletion"/>
+			<m n=":op"><e><![CDATA[A>=B]]></e></m>
+		</meta>
+	</greaterThanOrEqualPointer>
+	<lessThan get="inline" set="null" line="39" static="1">
+		<f a="a:b">
+			<x path="lime.system.CFFIPointer"/>
+			<x path="Int"/>
+			<x path="Bool"/>
+		</f>
+		<meta>
+			<m n=":noCompletion"/>
+			<m n=":op"><e><![CDATA[A<B]]></e></m>
+		</meta>
+	</lessThan>
+	<lessThanPointer get="inline" set="null" line="40" static="1">
+		<f a="a:b">
+			<x path="lime.system.CFFIPointer"/>
+			<x path="lime.system.CFFIPointer"/>
+			<x path="Bool"/>
+		</f>
+		<meta>
+			<m n=":noCompletion"/>
+			<m n=":op"><e><![CDATA[A<B]]></e></m>
+		</meta>
+	</lessThanPointer>
+	<lessThanOrEqual get="inline" set="null" line="41" static="1">
+		<f a="a:b">
+			<x path="lime.system.CFFIPointer"/>
+			<x path="Int"/>
+			<x path="Bool"/>
+		</f>
+		<meta>
+			<m n=":noCompletion"/>
+			<m n=":op"><e><![CDATA[A<=B]]></e></m>
+		</meta>
+	</lessThanOrEqual>
+	<lessThanOrEqualPointer get="inline" set="null" line="42" static="1">
+		<f a="a:b">
+			<x path="lime.system.CFFIPointer"/>
+			<x path="lime.system.CFFIPointer"/>
+			<x path="Bool"/>
+		</f>
+		<meta>
+			<m n=":noCompletion"/>
+			<m n=":op"><e><![CDATA[A<=B]]></e></m>
+		</meta>
+	</lessThanOrEqualPointer>
+	<notEquals get="inline" set="null" line="43" static="1">
+		<f a="a:b">
+			<x path="lime.system.CFFIPointer"/>
+			<x path="Int"/>
+			<x path="Bool"/>
+		</f>
+		<meta>
+			<m n=":noCompletion"/>
+			<m n=":op"><e>A!=B</e></m>
+		</meta>
+	</notEquals>
+	<notEqualsPointer get="inline" set="null" line="44" static="1">
+		<f a="a:b">
+			<x path="lime.system.CFFIPointer"/>
+			<x path="lime.system.CFFIPointer"/>
+			<x path="Bool"/>
+		</f>
+		<meta>
+			<m n=":noCompletion"/>
+			<m n=":op"><e>A!=B</e></m>
+		</meta>
+	</notEqualsPointer>
+	<lime_cffi_get_native_pointer get="inline" set="null" line="55" static="1">
+		<f a="ptr">
+			<d/>
+			<x path="Float"/>
+		</f>
+		<meta><m n=":cffi"/></meta>
+	</lime_cffi_get_native_pointer>
+	<meta>
+		<m n=":directlyUsed"/>
+		<m n=":build"><e>lime.system.CFFI.build()</e></m>
+	</meta>
+</class></impl>
+	</abstract>
+	<class path="lime.system._CFFIPointer.CFFIPointer_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/system/CFFIPointer.hx" private="1" module="lime.system.CFFIPointer">
+		<_new public="1" get="inline" set="null" line="11" static="1">
+			<f a="handle">
+				<d/>
+				<x path="lime.system.CFFIPointer"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</_new>
+		<get public="1" set="method" line="18" static="1">
+			<f a="this">
+				<d/>
+				<x path="Float"/>
+			</f>
+			<meta><m n=":impl"/></meta>
+		</get>
+		<equals get="inline" set="null" line="33" static="1">
+			<f a="a:b">
+				<x path="lime.system.CFFIPointer"/>
+				<x path="Int"/>
+				<x path="Bool"/>
+			</f>
+			<meta>
+				<m n=":noCompletion"/>
+				<m n=":op"><e>A==B</e></m>
+			</meta>
+		</equals>
+		<equalsPointer get="inline" set="null" line="34" static="1">
+			<f a="a:b">
+				<x path="lime.system.CFFIPointer"/>
+				<x path="lime.system.CFFIPointer"/>
+				<x path="Bool"/>
+			</f>
+			<meta>
+				<m n=":noCompletion"/>
+				<m n=":op"><e>A==B</e></m>
+			</meta>
+		</equalsPointer>
+		<greaterThan get="inline" set="null" line="35" static="1">
+			<f a="a:b">
+				<x path="lime.system.CFFIPointer"/>
+				<x path="Int"/>
+				<x path="Bool"/>
+			</f>
+			<meta>
+				<m n=":noCompletion"/>
+				<m n=":op"><e><![CDATA[A>B]]></e></m>
+			</meta>
+		</greaterThan>
+		<greaterThanPointer get="inline" set="null" line="36" static="1">
+			<f a="a:b">
+				<x path="lime.system.CFFIPointer"/>
+				<x path="lime.system.CFFIPointer"/>
+				<x path="Bool"/>
+			</f>
+			<meta>
+				<m n=":noCompletion"/>
+				<m n=":op"><e><![CDATA[A>B]]></e></m>
+			</meta>
+		</greaterThanPointer>
+		<greaterThanOrEqual get="inline" set="null" line="37" static="1">
+			<f a="a:b">
+				<x path="lime.system.CFFIPointer"/>
+				<x path="Int"/>
+				<x path="Bool"/>
+			</f>
+			<meta>
+				<m n=":noCompletion"/>
+				<m n=":op"><e><![CDATA[A>=B]]></e></m>
+			</meta>
+		</greaterThanOrEqual>
+		<greaterThanOrEqualPointer get="inline" set="null" line="38" static="1">
+			<f a="a:b">
+				<x path="lime.system.CFFIPointer"/>
+				<x path="lime.system.CFFIPointer"/>
+				<x path="Bool"/>
+			</f>
+			<meta>
+				<m n=":noCompletion"/>
+				<m n=":op"><e><![CDATA[A>=B]]></e></m>
+			</meta>
+		</greaterThanOrEqualPointer>
+		<lessThan get="inline" set="null" line="39" static="1">
+			<f a="a:b">
+				<x path="lime.system.CFFIPointer"/>
+				<x path="Int"/>
+				<x path="Bool"/>
+			</f>
+			<meta>
+				<m n=":noCompletion"/>
+				<m n=":op"><e><![CDATA[A<B]]></e></m>
+			</meta>
+		</lessThan>
+		<lessThanPointer get="inline" set="null" line="40" static="1">
+			<f a="a:b">
+				<x path="lime.system.CFFIPointer"/>
+				<x path="lime.system.CFFIPointer"/>
+				<x path="Bool"/>
+			</f>
+			<meta>
+				<m n=":noCompletion"/>
+				<m n=":op"><e><![CDATA[A<B]]></e></m>
+			</meta>
+		</lessThanPointer>
+		<lessThanOrEqual get="inline" set="null" line="41" static="1">
+			<f a="a:b">
+				<x path="lime.system.CFFIPointer"/>
+				<x path="Int"/>
+				<x path="Bool"/>
+			</f>
+			<meta>
+				<m n=":noCompletion"/>
+				<m n=":op"><e><![CDATA[A<=B]]></e></m>
+			</meta>
+		</lessThanOrEqual>
+		<lessThanOrEqualPointer get="inline" set="null" line="42" static="1">
+			<f a="a:b">
+				<x path="lime.system.CFFIPointer"/>
+				<x path="lime.system.CFFIPointer"/>
+				<x path="Bool"/>
+			</f>
+			<meta>
+				<m n=":noCompletion"/>
+				<m n=":op"><e><![CDATA[A<=B]]></e></m>
+			</meta>
+		</lessThanOrEqualPointer>
+		<notEquals get="inline" set="null" line="43" static="1">
+			<f a="a:b">
+				<x path="lime.system.CFFIPointer"/>
+				<x path="Int"/>
+				<x path="Bool"/>
+			</f>
+			<meta>
+				<m n=":noCompletion"/>
+				<m n=":op"><e>A!=B</e></m>
+			</meta>
+		</notEquals>
+		<notEqualsPointer get="inline" set="null" line="44" static="1">
+			<f a="a:b">
+				<x path="lime.system.CFFIPointer"/>
+				<x path="lime.system.CFFIPointer"/>
+				<x path="Bool"/>
+			</f>
+			<meta>
+				<m n=":noCompletion"/>
+				<m n=":op"><e>A!=B</e></m>
+			</meta>
+		</notEqualsPointer>
+		<lime_cffi_get_native_pointer get="inline" set="null" line="55" static="1">
+			<f a="ptr">
+				<d/>
+				<x path="Float"/>
+			</f>
+			<meta><m n=":cffi"/></meta>
+		</lime_cffi_get_native_pointer>
+		<meta>
+			<m n=":directlyUsed"/>
+			<m n=":build"><e>lime.system.CFFI.build()</e></m>
+		</meta>
+	</class>
 	<class path="lime.system.Clipboard" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/system/Clipboard.hx">
 		<text public="1" get="accessor" set="accessor" static="1"><c path="String"/></text>
 		<get_text set="method" line="26" static="1"><f a=""><c path="String"/></f></get_text>
@@ -24649,28 +24825,28 @@
 </f></fromFile>
 		<lime_font_get_ascender get="inline" set="null" line="493" static="1">
 			<f a="handle">
-				<x path="Float"/>
+				<d/>
 				<x path="Int"/>
 			</f>
 			<meta><m n=":cffi"/></meta>
 		</lime_font_get_ascender>
 		<lime_font_get_descender get="inline" set="null" line="494" static="1">
 			<f a="handle">
-				<x path="Float"/>
+				<d/>
 				<x path="Int"/>
 			</f>
 			<meta><m n=":cffi"/></meta>
 		</lime_font_get_descender>
 		<lime_font_get_family_name get="inline" set="null" line="495" static="1">
 			<f a="handle">
-				<x path="Float"/>
+				<d/>
 				<d/>
 			</f>
 			<meta><m n=":cffi"/></meta>
 		</lime_font_get_family_name>
 		<lime_font_get_glyph_index get="inline" set="null" line="496" static="1">
 			<f a="handle:character">
-				<x path="Float"/>
+				<d/>
 				<c path="String"/>
 				<x path="Int"/>
 			</f>
@@ -24678,7 +24854,7 @@
 		</lime_font_get_glyph_index>
 		<lime_font_get_glyph_indices get="inline" set="null" line="497" static="1">
 			<f a="handle:characters">
-				<x path="Float"/>
+				<d/>
 				<c path="String"/>
 				<d/>
 			</f>
@@ -24686,7 +24862,7 @@
 		</lime_font_get_glyph_indices>
 		<lime_font_get_glyph_metrics get="inline" set="null" line="498" static="1">
 			<f a="handle:index">
-				<x path="Float"/>
+				<d/>
 				<x path="Int"/>
 				<d/>
 			</f>
@@ -24694,35 +24870,35 @@
 		</lime_font_get_glyph_metrics>
 		<lime_font_get_height get="inline" set="null" line="499" static="1">
 			<f a="handle">
-				<x path="Float"/>
+				<d/>
 				<x path="Int"/>
 			</f>
 			<meta><m n=":cffi"/></meta>
 		</lime_font_get_height>
 		<lime_font_get_num_glyphs get="inline" set="null" line="500" static="1">
 			<f a="handle">
-				<x path="Float"/>
+				<d/>
 				<x path="Int"/>
 			</f>
 			<meta><m n=":cffi"/></meta>
 		</lime_font_get_num_glyphs>
 		<lime_font_get_underline_position get="inline" set="null" line="501" static="1">
 			<f a="handle">
-				<x path="Float"/>
+				<d/>
 				<x path="Int"/>
 			</f>
 			<meta><m n=":cffi"/></meta>
 		</lime_font_get_underline_position>
 		<lime_font_get_underline_thickness get="inline" set="null" line="502" static="1">
 			<f a="handle">
-				<x path="Float"/>
+				<d/>
 				<x path="Int"/>
 			</f>
 			<meta><m n=":cffi"/></meta>
 		</lime_font_get_underline_thickness>
 		<lime_font_get_units_per_em get="inline" set="null" line="503" static="1">
 			<f a="handle">
-				<x path="Float"/>
+				<d/>
 				<x path="Int"/>
 			</f>
 			<meta><m n=":cffi"/></meta>
@@ -24736,7 +24912,7 @@
 		</lime_font_load>
 		<lime_font_outline_decompose get="inline" set="null" line="505" static="1">
 			<f a="handle:size">
-				<x path="Float"/>
+				<d/>
 				<x path="Int"/>
 				<d/>
 			</f>
@@ -24744,7 +24920,7 @@
 		</lime_font_outline_decompose>
 		<lime_font_render_glyph get="inline" set="null" line="506" static="1">
 			<f a="handle:index:data">
-				<x path="Float"/>
+				<d/>
 				<x path="Int"/>
 				<d/>
 				<x path="Bool"/>
@@ -24753,7 +24929,7 @@
 		</lime_font_render_glyph>
 		<lime_font_render_glyphs get="inline" set="null" line="507" static="1">
 			<f a="handle:indices:data">
-				<x path="Float"/>
+				<d/>
 				<d/>
 				<d/>
 				<x path="Bool"/>
@@ -24762,7 +24938,7 @@
 		</lime_font_render_glyphs>
 		<lime_font_set_size get="inline" set="null" line="508" static="1">
 			<f a="handle:size">
-				<x path="Float"/>
+				<d/>
 				<x path="Int"/>
 				<x path="Void"/>
 			</f>
@@ -25127,8 +25303,8 @@
 		</lime_text_layout_create>
 		<lime_text_layout_position get="inline" set="null" line="248" static="1">
 			<f a="textHandle:fontHandle:size:textString:data">
-				<x path="Float"/>
-				<x path="Float"/>
+				<d/>
+				<d/>
 				<x path="Int"/>
 				<c path="String"/>
 				<d/>
@@ -25138,7 +25314,7 @@
 		</lime_text_layout_position>
 		<lime_text_layout_set_direction get="inline" set="null" line="249" static="1">
 			<f a="textHandle:direction">
-				<x path="Float"/>
+				<d/>
 				<x path="Int"/>
 				<x path="Void"/>
 			</f>
@@ -25146,7 +25322,7 @@
 		</lime_text_layout_set_direction>
 		<lime_text_layout_set_language get="inline" set="null" line="250" static="1">
 			<f a="textHandle:language">
-				<x path="Float"/>
+				<d/>
 				<c path="String"/>
 				<x path="Void"/>
 			</f>
@@ -25154,7 +25330,7 @@
 		</lime_text_layout_set_language>
 		<lime_text_layout_set_script get="inline" set="null" line="251" static="1">
 			<f a="textHandle:script">
-				<x path="Float"/>
+				<d/>
 				<c path="String"/>
 				<x path="Void"/>
 			</f>
