@@ -12205,7 +12205,7 @@
 	<class path="lime.graphics.Image" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/graphics/Image.hx">
 		<__base64Chars line="67" static="1"><c path="String"/></__base64Chars>
 		<__base64Encoder static="1"><c path="haxe.crypto.BaseCode"/></__base64Encoder>
-		<fromBase64 public="1" set="method" line="454" static="1"><f a="base64:type:onload">
+		<fromBase64 public="1" set="method" line="456" static="1"><f a="base64:type:onload">
 	<c path="String"/>
 	<c path="String"/>
 	<f a="">
@@ -12214,11 +12214,11 @@
 	</f>
 	<c path="lime.graphics.Image"/>
 </f></fromBase64>
-		<fromBitmapData public="1" set="method" line="464" static="1"><f a="bitmapData">
+		<fromBitmapData public="1" set="method" line="466" static="1"><f a="bitmapData">
 	<d/>
 	<c path="lime.graphics.Image"/>
 </f></fromBitmapData>
-		<fromBytes public="1" set="method" line="478" static="1"><f a="bytes:?onload">
+		<fromBytes public="1" set="method" line="480" static="1"><f a="bytes:?onload">
 	<c path="lime.utils.ByteArray"/>
 	<f a="">
 		<c path="lime.graphics.Image"/>
@@ -12226,11 +12226,11 @@
 	</f>
 	<c path="lime.graphics.Image"/>
 </f></fromBytes>
-		<fromCanvas public="1" set="method" line="488" static="1"><f a="canvas">
+		<fromCanvas public="1" set="method" line="490" static="1"><f a="canvas">
 	<d/>
 	<c path="lime.graphics.Image"/>
 </f></fromCanvas>
-		<fromFile public="1" set="method" line="498" static="1"><f a="path:?onload:?onerror">
+		<fromFile public="1" set="method" line="500" static="1"><f a="path:?onload:?onerror">
 	<c path="String"/>
 	<f a="">
 		<c path="lime.graphics.Image"/>
@@ -12239,27 +12239,27 @@
 	<f a=""><x path="Void"/></f>
 	<c path="lime.graphics.Image"/>
 </f></fromFile>
-		<fromImageElement public="1" set="method" line="507" static="1"><f a="image">
+		<fromImageElement public="1" set="method" line="509" static="1"><f a="image">
 	<d/>
 	<c path="lime.graphics.Image"/>
 </f></fromImageElement>
-		<__base64Encode set="method" line="948" static="1"><f a="bytes">
+		<__base64Encode set="method" line="950" static="1"><f a="bytes">
 	<c path="lime.utils.ByteArray"/>
 	<c path="String"/>
 </f></__base64Encode>
-		<__isJPG set="method" line="1297" static="1"><f a="bytes">
+		<__isJPG set="method" line="1299" static="1"><f a="bytes">
 	<c path="lime.utils.ByteArray"/>
 	<x path="Bool"/>
 </f></__isJPG>
-		<__isPNG set="method" line="1305" static="1"><f a="bytes">
+		<__isPNG set="method" line="1307" static="1"><f a="bytes">
 	<c path="lime.utils.ByteArray"/>
 	<x path="Bool"/>
 </f></__isPNG>
-		<__isGIF set="method" line="1312" static="1"><f a="bytes">
+		<__isGIF set="method" line="1314" static="1"><f a="bytes">
 	<c path="lime.utils.ByteArray"/>
 	<x path="Bool"/>
 </f></__isGIF>
-		<lime_image_encode get="inline" set="null" line="1557" static="1">
+		<lime_image_encode get="inline" set="null" line="1559" static="1">
 			<f a="buffer:Type:quality">
 				<d/>
 				<x path="Int"/>
@@ -12268,7 +12268,7 @@
 			</f>
 			<meta><m n=":cffi"/></meta>
 		</lime_image_encode>
-		<lime_image_load get="inline" set="null" line="1558" static="1">
+		<lime_image_load get="inline" set="null" line="1560" static="1">
 			<f a="data">
 				<d/>
 				<d/>
@@ -12325,38 +12325,38 @@
 	<x path="lime.graphics.PixelFormat"/>
 	<x path="Void"/>
 </f></fillRect>
-		<floodFill public="1" set="method" line="417"><f a="x:y:color:?format">
+		<floodFill public="1" set="method" line="419"><f a="x:y:color:?format">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="lime.graphics.PixelFormat"/>
 	<x path="Void"/>
 </f></floodFill>
-		<getColorBoundsRect public="1" set="method" line="516"><f a="mask:color:?findColor:?format">
+		<getColorBoundsRect public="1" set="method" line="518"><f a="mask:color:?findColor:?format">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Bool"/>
 	<x path="lime.graphics.PixelFormat"/>
 	<c path="lime.math.Rectangle"/>
 </f></getColorBoundsRect>
-		<getPixel public="1" set="method" line="546"><f a="x:y:?format">
+		<getPixel public="1" set="method" line="548"><f a="x:y:?format">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="lime.graphics.PixelFormat"/>
 	<x path="Int"/>
 </f></getPixel>
-		<getPixel32 public="1" set="method" line="585"><f a="x:y:?format">
+		<getPixel32 public="1" set="method" line="587"><f a="x:y:?format">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="lime.graphics.PixelFormat"/>
 	<x path="Int"/>
 </f></getPixel32>
-		<getPixels public="1" set="method" line="624"><f a="rect:?format">
+		<getPixels public="1" set="method" line="626"><f a="rect:?format">
 	<c path="lime.math.Rectangle"/>
 	<x path="lime.graphics.PixelFormat"/>
 	<c path="lime.utils.ByteArray"/>
 </f></getPixels>
-		<merge public="1" set="method" line="693"><f a="sourceImage:sourceRect:destPoint:redMultiplier:greenMultiplier:blueMultiplier:alphaMultiplier">
+		<merge public="1" set="method" line="695"><f a="sourceImage:sourceRect:destPoint:redMultiplier:greenMultiplier:blueMultiplier:alphaMultiplier">
 	<c path="lime.graphics.Image"/>
 	<c path="lime.math.Rectangle"/>
 	<c path="lime.math.Vector2"/>
@@ -12366,41 +12366,41 @@
 	<x path="Int"/>
 	<x path="Void"/>
 </f></merge>
-		<resize public="1" set="method" line="727"><f a="newWidth:newHeight">
+		<resize public="1" set="method" line="729"><f a="newWidth:newHeight">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Void"/>
 </f></resize>
-		<scroll public="1" set="method" line="764"><f a="x:y">
+		<scroll public="1" set="method" line="766"><f a="x:y">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Void"/>
 </f></scroll>
-		<setPixel public="1" set="method" line="795"><f a="x:y:color:?format">
+		<setPixel public="1" set="method" line="797"><f a="x:y:color:?format">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="lime.graphics.PixelFormat"/>
 	<x path="Void"/>
 </f></setPixel>
-		<setPixel32 public="1" set="method" line="832"><f a="x:y:color:?format">
+		<setPixel32 public="1" set="method" line="834"><f a="x:y:color:?format">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="lime.graphics.PixelFormat"/>
 	<x path="Void"/>
 </f></setPixel32>
-		<setPixels public="1" set="method" line="869"><f a="rect:byteArray:?format">
+		<setPixels public="1" set="method" line="871"><f a="rect:byteArray:?format">
 	<c path="lime.math.Rectangle"/>
 	<c path="lime.utils.ByteArray"/>
 	<x path="lime.graphics.PixelFormat"/>
 	<x path="Void"/>
 </f></setPixels>
-		<__clipRect set="method" line="977"><f a="r">
+		<__clipRect set="method" line="979"><f a="r">
 	<c path="lime.math.Rectangle"/>
 	<c path="lime.math.Rectangle"/>
 </f></__clipRect>
-		<__fromBase64 set="method" line="1020"><f a="base64:type:?onload">
+		<__fromBase64 set="method" line="1022"><f a="base64:type:?onload">
 	<c path="String"/>
 	<c path="String"/>
 	<f a="">
@@ -12409,7 +12409,7 @@
 	</f>
 	<x path="Void"/>
 </f></__fromBase64>
-		<__fromBytes set="method" line="1050"><f a="bytes:onload">
+		<__fromBytes set="method" line="1052"><f a="bytes:onload">
 	<c path="lime.utils.ByteArray"/>
 	<f a="">
 		<c path="lime.graphics.Image"/>
@@ -12417,7 +12417,7 @@
 	</f>
 	<x path="Void"/>
 </f></__fromBytes>
-		<__fromFile set="method" line="1105"><f a="path:onload:onerror">
+		<__fromFile set="method" line="1107"><f a="path:onload:onerror">
 	<c path="String"/>
 	<f a="">
 		<c path="lime.graphics.Image"/>
@@ -12426,38 +12426,38 @@
 	<f a=""><x path="Void"/></f>
 	<x path="Void"/>
 </f></__fromFile>
-		<__fromImageBuffer set="method" line="1274"><f a="buffer">
+		<__fromImageBuffer set="method" line="1276"><f a="buffer">
 	<c path="lime.graphics.ImageBuffer"/>
 	<x path="Void"/>
 </f></__fromImageBuffer>
-		<get_data set="method" line="1335"><f a=""><x path="lime.utils.UInt8Array"/></f></get_data>
-		<set_data set="method" line="1359"><f a="value">
+		<get_data set="method" line="1337"><f a=""><x path="lime.utils.UInt8Array"/></f></get_data>
+		<set_data set="method" line="1361"><f a="value">
 	<x path="lime.utils.UInt8Array"/>
 	<x path="lime.utils.UInt8Array"/>
 </f></set_data>
-		<get_format set="method" line="1366"><f a=""><x path="lime.graphics.PixelFormat"/></f></get_format>
-		<set_format set="method" line="1373"><f a="value">
+		<get_format set="method" line="1368"><f a=""><x path="lime.graphics.PixelFormat"/></f></get_format>
+		<set_format set="method" line="1375"><f a="value">
 	<x path="lime.graphics.PixelFormat"/>
 	<x path="lime.graphics.PixelFormat"/>
 </f></set_format>
-		<get_powerOfTwo set="method" line="1394"><f a=""><x path="Bool"/></f></get_powerOfTwo>
-		<set_powerOfTwo set="method" line="1401"><f a="value">
+		<get_powerOfTwo set="method" line="1396"><f a=""><x path="Bool"/></f></get_powerOfTwo>
+		<set_powerOfTwo set="method" line="1403"><f a="value">
 	<x path="Bool"/>
 	<x path="Bool"/>
 </f></set_powerOfTwo>
-		<get_premultiplied set="method" line="1451"><f a=""><x path="Bool"/></f></get_premultiplied>
-		<set_premultiplied set="method" line="1458"><f a="value">
+		<get_premultiplied set="method" line="1453"><f a=""><x path="Bool"/></f></get_premultiplied>
+		<set_premultiplied set="method" line="1460"><f a="value">
 	<x path="Bool"/>
 	<x path="Bool"/>
 </f></set_premultiplied>
-		<get_rect set="method" line="1503"><f a=""><c path="lime.math.Rectangle"/></f></get_rect>
-		<get_src set="method" line="1510"><f a=""><d/></f></get_src>
-		<set_src set="method" line="1525"><f a="value">
+		<get_rect set="method" line="1505"><f a=""><c path="lime.math.Rectangle"/></f></get_rect>
+		<get_src set="method" line="1512"><f a=""><d/></f></get_src>
+		<set_src set="method" line="1527"><f a="value">
 	<d/>
 	<d/>
 </f></set_src>
-		<get_transparent set="method" line="1532"><f a=""><x path="Bool"/></f></get_transparent>
-		<set_transparent set="method" line="1540"><f a="value">
+		<get_transparent set="method" line="1534"><f a=""><x path="Bool"/></f></get_transparent>
+		<set_transparent set="method" line="1542"><f a="value">
 	<x path="Bool"/>
 	<x path="Bool"/>
 </f></set_transparent>
@@ -26699,30 +26699,30 @@
 		<varMatch line="26" static="1"><c path="EReg"/></varMatch>
 		<includePaths public="1"><c path="Array"><c path="String"/></c></includePaths>
 		<initialize set="method" line="60"><f a=""><x path="Void"/></f></initialize>
-		<isValidElement set="method" line="141"><f a="element:section">
+		<isValidElement set="method" line="156"><f a="element:section">
 	<c path="haxe.xml.Fast"/>
 	<c path="String"/>
 	<x path="Bool"/>
 </f></isValidElement>
-		<findIncludeFile set="method" line="247"><f a="base">
+		<findIncludeFile set="method" line="262"><f a="base">
 	<c path="String"/>
 	<c path="String"/>
 </f></findIncludeFile>
-		<formatAttributeName set="method" line="326"><f a="name">
+		<formatAttributeName set="method" line="341"><f a="name">
 	<c path="String"/>
 	<c path="String"/>
 </f></formatAttributeName>
-		<parseAppElement set="method" line="341"><f a="element">
+		<parseAppElement set="method" line="356"><f a="element">
 	<c path="haxe.xml.Fast"/>
 	<x path="Void"/>
 </f></parseAppElement>
-		<parseAssetsElement set="method" line="399"><f a="element:?basePath:?isTemplate">
+		<parseAssetsElement set="method" line="414"><f a="element:?basePath:?isTemplate">
 	<c path="haxe.xml.Fast"/>
 	<c path="String"/>
 	<x path="Bool"/>
 	<x path="Void"/>
 </f></parseAssetsElement>
-		<parseAssetsElementDirectory set="method" line="637"><f a="path:targetPath:include:exclude:type:embed:glyphs:recursive">
+		<parseAssetsElementDirectory set="method" line="652"><f a="path:targetPath:include:exclude:type:embed:glyphs:recursive">
 	<c path="String"/>
 	<c path="String"/>
 	<c path="String"/>
@@ -26733,30 +26733,30 @@
 	<x path="Bool"/>
 	<x path="Void"/>
 </f></parseAssetsElementDirectory>
-		<parseMetaElement set="method" line="694"><f a="element">
+		<parseMetaElement set="method" line="709"><f a="element">
 	<c path="haxe.xml.Fast"/>
 	<x path="Void"/>
 </f></parseMetaElement>
-		<parseOutputElement set="method" line="727"><f a="element">
+		<parseOutputElement set="method" line="742"><f a="element">
 	<c path="haxe.xml.Fast"/>
 	<x path="Void"/>
 </f></parseOutputElement>
-		<parseXML set="method" line="750"><f a="xml:section:?extensionPath">
+		<parseXML set="method" line="765"><f a="xml:section:?extensionPath">
 	<c path="haxe.xml.Fast"/>
 	<c path="String"/>
 	<c path="String"/>
 	<x path="Void"/>
 </f></parseXML>
-		<parseWindowElement set="method" line="1590"><f a="element">
+		<parseWindowElement set="method" line="1605"><f a="element">
 	<c path="haxe.xml.Fast"/>
 	<x path="Void"/>
 </f></parseWindowElement>
-		<process public="1" set="method" line="1670"><f a="projectFile:useExtensionPath">
+		<process public="1" set="method" line="1685"><f a="projectFile:useExtensionPath">
 	<c path="String"/>
 	<x path="Bool"/>
 	<x path="Void"/>
 </f></process>
-		<substitute set="method" line="1691"><f a="string">
+		<substitute set="method" line="1706"><f a="string">
 	<c path="String"/>
 	<c path="String"/>
 </f></substitute>
