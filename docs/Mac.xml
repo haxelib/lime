@@ -4867,11 +4867,11 @@
 	<c path="String"/>
 	<d/>
 </x></font>
-		<clear public="1" set="method" line="1065"><f a="?prefix">
+		<clear public="1" set="method" line="1066"><f a="?prefix">
 	<c path="String"/>
 	<x path="Void"/>
 </f></clear>
-		<new public="1" set="method" line="1056"><f a=""><x path="Void"/></f></new>
+		<new public="1" set="method" line="1057"><f a=""><x path="Void"/></f></new>
 		<meta><m n=":directlyUsed"/></meta>
 	</class>
 	<class path="lime.app.Event_Void_Void" params="T" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/ui/Window.hx">
@@ -4903,19 +4903,19 @@
 		<meta><m n=":directlyUsed"/></meta>
 	</class>
 	<class path="lime.Assets" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/Assets.hx">
-		<cache public="1" line="39" static="1"><c path="lime.AssetCache"/></cache>
-		<libraries public="1" set="null" line="40" static="1"><x path="Map">
+		<cache public="1" line="40" static="1"><c path="lime.AssetCache"/></cache>
+		<libraries public="1" set="null" line="41" static="1"><x path="Map">
 	<c path="String"/>
 	<c path="lime.AssetLibrary"/>
 </x></libraries>
-		<onChange public="1" line="41" static="1"><c path="lime.app.Event_Void_Void"><f a=""><x path="Void"/></f></c></onChange>
-		<initialized line="43" static="1"><x path="Bool"/></initialized>
-		<exists public="1" set="method" line="46" static="1"><f a="id:?type">
+		<onChange public="1" line="42" static="1"><c path="lime.app.Event_Void_Void"><f a=""><x path="Void"/></f></c></onChange>
+		<initialized line="44" static="1"><x path="Bool"/></initialized>
+		<exists public="1" set="method" line="47" static="1"><f a="id:?type">
 	<c path="String"/>
 	<x path="lime.AssetType"/>
 	<x path="Bool"/>
 </f></exists>
-		<getAudioBuffer public="1" set="method" line="81" static="1">
+		<getAudioBuffer public="1" set="method" line="82" static="1">
 			<f a="id:?useCache">
 				<c path="String"/>
 				<x path="Bool"/>
@@ -4926,7 +4926,7 @@
 	 * @param	id		The ID or asset path for the sound
 	 * @return		A new Sound object</haxe_doc>
 		</getAudioBuffer>
-		<getBytes public="1" set="method" line="150" static="1">
+		<getBytes public="1" set="method" line="151" static="1">
 			<f a="id">
 				<c path="String"/>
 				<c path="lime.utils.ByteArray"/>
@@ -4936,7 +4936,7 @@
 	 * @param	id		The ID or asset path for the file
 	 * @return		A new ByteArray object</haxe_doc>
 		</getBytes>
-		<getFont public="1" set="method" line="199" static="1">
+		<getFont public="1" set="method" line="200" static="1">
 			<f a="id:?useCache">
 				<c path="String"/>
 				<x path="Bool"/>
@@ -4947,7 +4947,7 @@
 	 * @param	id		The ID or asset path for the font
 	 * @return		A new Font object</haxe_doc>
 		</getFont>
-		<getImage public="1" set="method" line="263" static="1">
+		<getImage public="1" set="method" line="264" static="1">
 			<f a="id:?useCache">
 				<c path="String"/>
 				<x path="Bool"/>
@@ -4959,11 +4959,11 @@
 	 * @param	useCache		(Optional) Whether to use BitmapData from the cache(Default: true)
 	 * @return		A new BitmapData object</haxe_doc>
 		</getImage>
-		<getLibrary set="method" line="326" static="1"><f a="name">
+		<getLibrary set="method" line="327" static="1"><f a="name">
 	<c path="String"/>
 	<c path="lime.AssetLibrary"/>
 </f></getLibrary>
-		<getPath public="1" set="method" line="345" static="1">
+		<getPath public="1" set="method" line="346" static="1">
 			<f a="id">
 				<c path="String"/>
 				<c path="String"/>
@@ -4973,7 +4973,7 @@
 	 * @param	id		The ID or asset path for the asset
 	 * @return		The path to the asset (or null)</haxe_doc>
 		</getPath>
-		<getText public="1" set="method" line="386" static="1">
+		<getText public="1" set="method" line="387" static="1">
 			<f a="id">
 				<c path="String"/>
 				<c path="String"/>
@@ -4983,61 +4983,61 @@
 	 * @param	id		The ID or asset path for the file
 	 * @return		A new String object</haxe_doc>
 		</getText>
-		<initialize set="method" line="429" static="1"><f a=""><x path="Void"/></f></initialize>
-		<isLocal public="1" set="method" line="446" static="1"><f a="id:?type:?useCache">
+		<initialize set="method" line="430" static="1"><f a=""><x path="Void"/></f></initialize>
+		<isLocal public="1" set="method" line="447" static="1"><f a="id:?type:?useCache">
 	<c path="String"/>
 	<x path="lime.AssetType"/>
 	<x path="Bool"/>
 	<x path="Bool"/>
 </f></isLocal>
-		<isValidAudio set="method" line="491" static="1"><f a="buffer">
+		<isValidAudio set="method" line="492" static="1"><f a="buffer">
 	<c path="lime.audio.AudioBuffer"/>
 	<x path="Bool"/>
 </f></isValidAudio>
-		<isValidImage set="method" line="507" static="1"><f a="buffer">
+		<isValidImage set="method" line="508" static="1"><f a="buffer">
 	<c path="lime.graphics.Image"/>
 	<x path="Bool"/>
 </f></isValidImage>
-		<list public="1" set="method" line="536" static="1"><f a="?type">
+		<list public="1" set="method" line="537" static="1"><f a="?type">
 	<x path="lime.AssetType"/>
 	<c path="Array"><c path="String"/></c>
 </f></list>
-		<loadAudioBuffer public="1" set="method" line="559" static="1"><f a="id:?useCache">
+		<loadAudioBuffer public="1" set="method" line="560" static="1"><f a="id:?useCache">
 	<c path="String"/>
 	<x path="Bool"/>
 	<c path="lime.app.Future"><c path="lime.audio.AudioBuffer"/></c>
 </f></loadAudioBuffer>
-		<loadBytes public="1" set="method" line="617" static="1"><f a="id">
+		<loadBytes public="1" set="method" line="618" static="1"><f a="id">
 	<c path="String"/>
 	<c path="lime.app.Future"><c path="lime.utils.ByteArray"/></c>
 </f></loadBytes>
-		<loadFont public="1" set="method" line="654" static="1"><f a="id">
+		<loadFont public="1" set="method" line="655" static="1"><f a="id">
 	<c path="String"/>
 	<c path="lime.app.Future"><c path="lime.text.Font"/></c>
 </f></loadFont>
-		<loadImage public="1" set="method" line="691" static="1"><f a="id:?useCache">
+		<loadImage public="1" set="method" line="692" static="1"><f a="id:?useCache">
 	<c path="String"/>
 	<x path="Bool"/>
 	<c path="lime.app.Future"><c path="lime.graphics.Image"/></c>
 </f></loadImage>
-		<loadLibrary public="1" set="method" line="749" static="1"><f a="name">
+		<loadLibrary public="1" set="method" line="750" static="1"><f a="name">
 	<c path="String"/>
 	<c path="lime.app.Future"><c path="lime.AssetLibrary"/></c>
 </f></loadLibrary>
-		<loadText public="1" set="method" line="780" static="1"><f a="id">
+		<loadText public="1" set="method" line="781" static="1"><f a="id">
 	<c path="String"/>
 	<c path="lime.app.Future"><c path="String"/></c>
 </f></loadText>
-		<registerLibrary public="1" set="method" line="817" static="1"><f a="name:library">
+		<registerLibrary public="1" set="method" line="818" static="1"><f a="name:library">
 	<c path="String"/>
 	<c path="lime.AssetLibrary"/>
 	<x path="Void"/>
 </f></registerLibrary>
-		<unloadLibrary public="1" set="method" line="844" static="1"><f a="name">
+		<unloadLibrary public="1" set="method" line="845" static="1"><f a="name">
 	<c path="String"/>
 	<x path="Void"/>
 </f></unloadLibrary>
-		<library_onChange set="method" line="874" static="1"><f a=""><x path="Void"/></f></library_onChange>
+		<library_onChange set="method" line="875" static="1"><f a=""><x path="Void"/></f></library_onChange>
 		<haxe_doc><![CDATA[* <p>The Assets class provides a cross-platform interface to access 
  * embedded images, fonts, sounds and other resource files.</p>
  * 
@@ -5059,115 +5059,115 @@
 	</class>
 	<class path="lime.AssetLibrary" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/Assets.hx" module="lime.Assets">
 		<onChange public="1"><c path="lime.app.Event_Void_Void"><f a=""><x path="Void"/></f></c></onChange>
-		<exists public="1" set="method" line="898"><f a="id:type">
+		<exists public="1" set="method" line="899"><f a="id:type">
 	<c path="String"/>
 	<c path="String"/>
 	<x path="Bool"/>
 </f></exists>
-		<getAudioBuffer public="1" set="method" line="905"><f a="id">
+		<getAudioBuffer public="1" set="method" line="906"><f a="id">
 	<c path="String"/>
 	<c path="lime.audio.AudioBuffer"/>
 </f></getAudioBuffer>
-		<getBytes public="1" set="method" line="912"><f a="id">
+		<getBytes public="1" set="method" line="913"><f a="id">
 	<c path="String"/>
 	<c path="lime.utils.ByteArray"/>
 </f></getBytes>
-		<getFont public="1" set="method" line="919"><f a="id">
+		<getFont public="1" set="method" line="920"><f a="id">
 	<c path="String"/>
 	<c path="lime.text.Font"/>
 </f></getFont>
-		<getImage public="1" set="method" line="926"><f a="id">
+		<getImage public="1" set="method" line="927"><f a="id">
 	<c path="String"/>
 	<c path="lime.graphics.Image"/>
 </f></getImage>
-		<getPath public="1" set="method" line="933"><f a="id">
+		<getPath public="1" set="method" line="934"><f a="id">
 	<c path="String"/>
 	<c path="String"/>
 </f></getPath>
-		<getText public="1" set="method" line="940"><f a="id">
+		<getText public="1" set="method" line="941"><f a="id">
 	<c path="String"/>
 	<c path="String"/>
 </f></getText>
-		<isLocal public="1" set="method" line="965"><f a="id:type">
+		<isLocal public="1" set="method" line="966"><f a="id:type">
 	<c path="String"/>
 	<c path="String"/>
 	<x path="Bool"/>
 </f></isLocal>
-		<list public="1" set="method" line="972"><f a="type">
+		<list public="1" set="method" line="973"><f a="type">
 	<c path="String"/>
 	<c path="Array"><c path="String"/></c>
 </f></list>
-		<load set="method" line="979"><f a=""><c path="lime.app.Future"><c path="lime.AssetLibrary"/></c></f></load>
-		<loadAudioBuffer public="1" set="method" line="986"><f a="id">
+		<load set="method" line="980"><f a=""><c path="lime.app.Future"><c path="lime.AssetLibrary"/></c></f></load>
+		<loadAudioBuffer public="1" set="method" line="987"><f a="id">
 	<c path="String"/>
 	<c path="lime.app.Future"><c path="lime.audio.AudioBuffer"/></c>
 </f></loadAudioBuffer>
-		<loadBytes public="1" set="method" line="993"><f a="id">
+		<loadBytes public="1" set="method" line="994"><f a="id">
 	<c path="String"/>
 	<c path="lime.app.Future"><c path="lime.utils.ByteArray"/></c>
 </f></loadBytes>
-		<loadFont public="1" set="method" line="1000"><f a="id">
+		<loadFont public="1" set="method" line="1001"><f a="id">
 	<c path="String"/>
 	<c path="lime.app.Future"><c path="lime.text.Font"/></c>
 </f></loadFont>
-		<loadImage public="1" set="method" line="1007"><f a="id">
+		<loadImage public="1" set="method" line="1008"><f a="id">
 	<c path="String"/>
 	<c path="lime.app.Future"><c path="lime.graphics.Image"/></c>
 </f></loadImage>
-		<loadText public="1" set="method" line="1014"><f a="id">
+		<loadText public="1" set="method" line="1015"><f a="id">
 	<c path="String"/>
 	<c path="lime.app.Future"><c path="String"/></c>
 </f></loadText>
-		<unload public="1" set="method" line="1037"><f a=""><x path="Void"/></f></unload>
-		<new public="1" set="method" line="891"><f a=""><x path="Void"/></f></new>
+		<unload public="1" set="method" line="1038"><f a=""><x path="Void"/></f></unload>
+		<new public="1" set="method" line="892"><f a=""><x path="Void"/></f></new>
 	</class>
 	<abstract path="lime.AssetType" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/Assets.hx" module="lime.Assets">
 		<this><c path="String"/></this>
 		<meta><m n=":enum"/></meta>
 		<impl><class path="lime._Assets.AssetType_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/Assets.hx" private="1" module="lime.Assets" extern="1">
-	<BINARY public="1" get="inline" set="null" line="1505" static="1">
+	<BINARY public="1" get="inline" set="null" line="1507" static="1">
 		<x path="lime.AssetType"/>
 		<meta>
 			<m n=":enum"/>
 			<m n=":impl"/>
 		</meta>
 	</BINARY>
-	<FONT public="1" get="inline" set="null" line="1506" static="1">
+	<FONT public="1" get="inline" set="null" line="1508" static="1">
 		<x path="lime.AssetType"/>
 		<meta>
 			<m n=":enum"/>
 			<m n=":impl"/>
 		</meta>
 	</FONT>
-	<IMAGE public="1" get="inline" set="null" line="1507" static="1">
+	<IMAGE public="1" get="inline" set="null" line="1509" static="1">
 		<x path="lime.AssetType"/>
 		<meta>
 			<m n=":enum"/>
 			<m n=":impl"/>
 		</meta>
 	</IMAGE>
-	<MUSIC public="1" get="inline" set="null" line="1508" static="1">
+	<MUSIC public="1" get="inline" set="null" line="1510" static="1">
 		<x path="lime.AssetType"/>
 		<meta>
 			<m n=":enum"/>
 			<m n=":impl"/>
 		</meta>
 	</MUSIC>
-	<SOUND public="1" get="inline" set="null" line="1509" static="1">
+	<SOUND public="1" get="inline" set="null" line="1511" static="1">
 		<x path="lime.AssetType"/>
 		<meta>
 			<m n=":enum"/>
 			<m n=":impl"/>
 		</meta>
 	</SOUND>
-	<TEMPLATE public="1" get="inline" set="null" line="1510" static="1">
+	<TEMPLATE public="1" get="inline" set="null" line="1512" static="1">
 		<x path="lime.AssetType"/>
 		<meta>
 			<m n=":enum"/>
 			<m n=":impl"/>
 		</meta>
 	</TEMPLATE>
-	<TEXT public="1" get="inline" set="null" line="1511" static="1">
+	<TEXT public="1" get="inline" set="null" line="1513" static="1">
 		<x path="lime.AssetType"/>
 		<meta>
 			<m n=":enum"/>
@@ -5178,49 +5178,49 @@
 </class></impl>
 	</abstract>
 	<class path="lime._Assets.AssetType_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/Assets.hx" private="1" module="lime.Assets" extern="1">
-		<BINARY public="1" get="inline" set="null" line="1505" static="1">
+		<BINARY public="1" get="inline" set="null" line="1507" static="1">
 			<x path="lime.AssetType"/>
 			<meta>
 				<m n=":enum"/>
 				<m n=":impl"/>
 			</meta>
 		</BINARY>
-		<FONT public="1" get="inline" set="null" line="1506" static="1">
+		<FONT public="1" get="inline" set="null" line="1508" static="1">
 			<x path="lime.AssetType"/>
 			<meta>
 				<m n=":enum"/>
 				<m n=":impl"/>
 			</meta>
 		</FONT>
-		<IMAGE public="1" get="inline" set="null" line="1507" static="1">
+		<IMAGE public="1" get="inline" set="null" line="1509" static="1">
 			<x path="lime.AssetType"/>
 			<meta>
 				<m n=":enum"/>
 				<m n=":impl"/>
 			</meta>
 		</IMAGE>
-		<MUSIC public="1" get="inline" set="null" line="1508" static="1">
+		<MUSIC public="1" get="inline" set="null" line="1510" static="1">
 			<x path="lime.AssetType"/>
 			<meta>
 				<m n=":enum"/>
 				<m n=":impl"/>
 			</meta>
 		</MUSIC>
-		<SOUND public="1" get="inline" set="null" line="1509" static="1">
+		<SOUND public="1" get="inline" set="null" line="1511" static="1">
 			<x path="lime.AssetType"/>
 			<meta>
 				<m n=":enum"/>
 				<m n=":impl"/>
 			</meta>
 		</SOUND>
-		<TEMPLATE public="1" get="inline" set="null" line="1510" static="1">
+		<TEMPLATE public="1" get="inline" set="null" line="1512" static="1">
 			<x path="lime.AssetType"/>
 			<meta>
 				<m n=":enum"/>
 				<m n=":impl"/>
 			</meta>
 		</TEMPLATE>
-		<TEXT public="1" get="inline" set="null" line="1511" static="1">
+		<TEXT public="1" get="inline" set="null" line="1513" static="1">
 			<x path="lime.AssetType"/>
 			<meta>
 				<m n=":enum"/>
@@ -8653,8 +8653,8 @@
 	<c path="Array"><x path="lime.AssetType"/></c>
 	<x path="Void"/>
 </f></load>
-		<start set="method" line="225"><f a=""><x path="Void"/></f></start>
-		<update set="method" line="242"><f a="loaded:total">
+		<start set="method" line="237"><f a=""><x path="Void"/></f></start>
+		<update set="method" line="254"><f a="loaded:total">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Void"/>
@@ -26058,7 +26058,7 @@
 		<_templatePaths public="1" static="1"><c path="Array"><c path="String"/></c></_templatePaths>
 		<initialized static="1"><x path="Bool"/></initialized>
 		<main public="1" set="method" line="77" static="1"><f a=""><x path="Void"/></f></main>
-		<fromFile public="1" set="method" line="398" static="1"><f a="projectFile:?userDefines:?includePaths">
+		<fromFile public="1" set="method" line="402" static="1"><f a="projectFile:?userDefines:?includePaths">
 	<c path="String"/>
 	<x path="Map">
 		<c path="String"/>
@@ -26067,7 +26067,7 @@
 	<c path="Array"><c path="String"/></c>
 	<c path="lime.project.HXProject"/>
 </f></fromFile>
-		<fromHaxelib public="1" set="method" line="447" static="1"><f a="haxelib:?userDefines:?clearCache">
+		<fromHaxelib public="1" set="method" line="451" static="1"><f a="haxelib:?userDefines:?clearCache">
 	<c path="lime.project.Haxelib"/>
 	<x path="Map">
 		<c path="String"/>
@@ -26076,7 +26076,7 @@
 	<x path="Bool"/>
 	<c path="lime.project.HXProject"/>
 </f></fromHaxelib>
-		<fromPath public="1" set="method" line="468" static="1"><f a="path:?userDefines">
+		<fromPath public="1" set="method" line="472" static="1"><f a="path:?userDefines">
 	<c path="String"/>
 	<x path="Map">
 		<c path="String"/>
@@ -26084,8 +26084,8 @@
 	</x>
 	<c path="lime.project.HXProject"/>
 </f></fromPath>
-		<initialize set="method" line="618" static="1"><f a=""><x path="Void"/></f></initialize>
-		<processHaxelibs set="method" line="721" static="1">
+		<initialize set="method" line="622" static="1"><f a=""><x path="Void"/></f></initialize>
+		<processHaxelibs set="method" line="725" static="1">
 			<f a="project:userDefines">
 				<c path="lime.project.HXProject"/>
 				<x path="Map">
@@ -26096,7 +26096,7 @@
 			</f>
 			<meta><m n=":noCompletion"/></meta>
 		</processHaxelibs>
-		<resolveClass set="method" line="753" static="1">
+		<resolveClass set="method" line="757" static="1">
 			<f a="name">
 				<c path="String"/>
 				<x path="Class"><d/></x>
@@ -26158,45 +26158,45 @@
 		<defaultApp><t path="lime.project.ApplicationData"/></defaultApp>
 		<defaultMeta><t path="lime.project.MetaData"/></defaultMeta>
 		<defaultWindow><t path="lime.project.WindowData"/></defaultWindow>
-		<clone public="1" set="method" line="218"><f a=""><c path="lime.project.HXProject"/></f></clone>
-		<filter set="method" line="339"><f a="text:?include:?exclude">
+		<clone public="1" set="method" line="222"><f a=""><c path="lime.project.HXProject"/></f></clone>
+		<filter set="method" line="343"><f a="text:?include:?exclude">
 	<c path="String"/>
 	<c path="Array"><c path="String"/></c>
 	<c path="Array"><c path="String"/></c>
 	<x path="Bool"/>
 </f></filter>
-		<getHaxelibVersion set="method" line="510"><f a="haxelib">
+		<getHaxelibVersion set="method" line="514"><f a="haxelib">
 	<c path="lime.project.Haxelib"/>
 	<c path="String"/>
 </f></getHaxelibVersion>
-		<include public="1" set="method" line="537"><f a="path">
+		<include public="1" set="method" line="541"><f a="path">
 	<c path="String"/>
 	<x path="Void"/>
 </f></include>
-		<includeAssets public="1" set="method" line="544"><f a="path:?rename:?include:?exclude">
+		<includeAssets public="1" set="method" line="548"><f a="path:?rename:?include:?exclude">
 	<c path="String"/>
 	<c path="String"/>
 	<c path="Array"><c path="String"/></c>
 	<c path="Array"><c path="String"/></c>
 	<x path="Void"/>
 </f></includeAssets>
-		<merge public="1" set="method" line="647"><f a="project">
+		<merge public="1" set="method" line="651"><f a="project">
 	<c path="lime.project.HXProject"/>
 	<x path="Void"/>
 </f></merge>
-		<path public="1" set="method" line="704"><f a="value">
+		<path public="1" set="method" line="708"><f a="value">
 	<c path="String"/>
 	<x path="Void"/>
 </f></path>
-		<setenv public="1" set="method" line="772"><f a="name:value">
+		<setenv public="1" set="method" line="776"><f a="name:value">
 	<c path="String"/>
 	<c path="String"/>
 	<x path="Void"/>
 </f></setenv>
-		<get_host set="method" line="786"><f a=""><x path="lime.project.Platform"/></f></get_host>
-		<get_templateContext set="method" line="793"><f a=""><d/></f></get_templateContext>
-		<get_window set="method" line="1216"><f a=""><t path="lime.project.WindowData"/></f></get_window>
-		<set_window set="method" line="1231"><f a="value">
+		<get_host set="method" line="790"><f a=""><x path="lime.project.Platform"/></f></get_host>
+		<get_templateContext set="method" line="797"><f a=""><d/></f></get_templateContext>
+		<get_window set="method" line="1220"><f a=""><t path="lime.project.WindowData"/></f></get_window>
+		<set_window set="method" line="1235"><f a="value">
 	<t path="lime.project.WindowData"/>
 	<t path="lime.project.WindowData"/>
 </f></set_window>
@@ -26474,7 +26474,14 @@
 			<m n=":impl"/>
 		</meta>
 	</EMSCRIPTEN>
-	<CUSTOM public="1" get="inline" set="null" line="24" static="1">
+	<TVOS public="1" get="inline" set="null" line="24" static="1">
+		<x path="lime.project.Platform"/>
+		<meta>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</TVOS>
+	<CUSTOM public="1" get="inline" set="null" line="25" static="1">
 		<x path="lime.project.Platform"/>
 		<meta>
 			<m n=":enum"/>
@@ -26611,7 +26618,14 @@
 				<m n=":impl"/>
 			</meta>
 		</EMSCRIPTEN>
-		<CUSTOM public="1" get="inline" set="null" line="24" static="1">
+		<TVOS public="1" get="inline" set="null" line="24" static="1">
+			<x path="lime.project.Platform"/>
+			<meta>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</TVOS>
+		<CUSTOM public="1" get="inline" set="null" line="25" static="1">
 			<x path="lime.project.Platform"/>
 			<meta>
 				<m n=":enum"/>
@@ -26747,16 +26761,16 @@
 	<c path="String"/>
 	<x path="Void"/>
 </f></parseXML>
-		<parseWindowElement set="method" line="1605"><f a="element">
+		<parseWindowElement set="method" line="1658"><f a="element">
 	<c path="haxe.xml.Fast"/>
 	<x path="Void"/>
 </f></parseWindowElement>
-		<process public="1" set="method" line="1685"><f a="projectFile:useExtensionPath">
+		<process public="1" set="method" line="1738"><f a="projectFile:useExtensionPath">
 	<c path="String"/>
 	<x path="Bool"/>
 	<x path="Void"/>
 </f></process>
-		<substitute set="method" line="1706"><f a="string">
+		<substitute set="method" line="1759"><f a="string">
 	<c path="String"/>
 	<c path="String"/>
 </f></substitute>
@@ -27715,6 +27729,7 @@
 		<meta><m n=":flatEnum"/></meta>
 	</enum>
 	<class path="lime.system.System" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/system/System.hx">
+		<allowScreenTimeout public="1" get="accessor" set="accessor" static="1"><x path="Bool"/></allowScreenTimeout>
 		<applicationDirectory public="1" get="accessor" set="null" static="1"><c path="String"/></applicationDirectory>
 		<applicationStorageDirectory public="1" get="accessor" set="null" static="1"><c path="String"/></applicationStorageDirectory>
 		<desktopDirectory public="1" get="accessor" set="null" static="1"><c path="String"/></desktopDirectory>
@@ -27724,31 +27739,47 @@
 		<fontsDirectory public="1" get="accessor" set="null" static="1"><c path="String"/></fontsDirectory>
 		<numDisplays public="1" get="accessor" set="null" static="1"><x path="Int"/></numDisplays>
 		<userDirectory public="1" get="accessor" set="null" static="1"><c path="String"/></userDirectory>
-		<exit public="1" set="method" line="110" static="1"><f a="code">
+		<exit public="1" set="method" line="111" static="1"><f a="code">
 	<x path="Int"/>
 	<x path="Void"/>
 </f></exit>
-		<getDisplay public="1" set="method" line="142" static="1"><f a="id">
+		<getDisplay public="1" set="method" line="143" static="1"><f a="id">
 	<x path="Int"/>
 	<c path="lime.system.Display"/>
 </f></getDisplay>
-		<getTimer public="1" set="method" line="193" static="1"><f a=""><x path="Int"/></f></getTimer>
-		<load public="1" get="inline" set="null" line="212" static="1"><f a="library:method:?args:?lazy">
+		<getTimer public="1" set="method" line="194" static="1"><f a=""><x path="Int"/></f></getTimer>
+		<load public="1" get="inline" set="null" line="213" static="1"><f a="library:method:?args:?lazy">
 	<c path="String"/>
 	<c path="String"/>
 	<x path="Int"/>
 	<x path="Bool"/>
 	<d/>
 </f></load>
-		<get_applicationDirectory set="method" line="230" static="1"><f a=""><c path="String"/></f></get_applicationDirectory>
-		<get_applicationStorageDirectory set="method" line="251" static="1"><f a=""><c path="String"/></f></get_applicationStorageDirectory>
-		<get_desktopDirectory set="method" line="291" static="1"><f a=""><c path="String"/></f></get_desktopDirectory>
-		<get_documentsDirectory set="method" line="312" static="1"><f a=""><c path="String"/></f></get_documentsDirectory>
-		<get_fontsDirectory set="method" line="333" static="1"><f a=""><c path="String"/></f></get_fontsDirectory>
-		<get_numDisplays set="method" line="344" static="1"><f a=""><x path="Int"/></f></get_numDisplays>
-		<get_userDirectory set="method" line="355" static="1"><f a=""><c path="String"/></f></get_userDirectory>
-		<get_endianness set="method" line="376" static="1"><f a=""><e path="lime.system.Endian"/></f></get_endianness>
-		<lime_system_get_directory get="inline" set="null" line="397" static="1">
+		<get_allowScreenTimeout set="method" line="231" static="1"><f a=""><x path="Bool"/></f></get_allowScreenTimeout>
+		<set_allowScreenTimeout set="method" line="242" static="1"><f a="value">
+	<x path="Bool"/>
+	<x path="Bool"/>
+</f></set_allowScreenTimeout>
+		<get_applicationDirectory set="method" line="253" static="1"><f a=""><c path="String"/></f></get_applicationDirectory>
+		<get_applicationStorageDirectory set="method" line="274" static="1"><f a=""><c path="String"/></f></get_applicationStorageDirectory>
+		<get_desktopDirectory set="method" line="314" static="1"><f a=""><c path="String"/></f></get_desktopDirectory>
+		<get_documentsDirectory set="method" line="335" static="1"><f a=""><c path="String"/></f></get_documentsDirectory>
+		<get_fontsDirectory set="method" line="356" static="1"><f a=""><c path="String"/></f></get_fontsDirectory>
+		<get_numDisplays set="method" line="367" static="1"><f a=""><x path="Int"/></f></get_numDisplays>
+		<get_userDirectory set="method" line="378" static="1"><f a=""><c path="String"/></f></get_userDirectory>
+		<get_endianness set="method" line="399" static="1"><f a=""><e path="lime.system.Endian"/></f></get_endianness>
+		<lime_system_get_allow_screen_timeout get="inline" set="null" line="420" static="1">
+			<f a=""><x path="Bool"/></f>
+			<meta><m n=":cffi"/></meta>
+		</lime_system_get_allow_screen_timeout>
+		<lime_system_set_allow_screen_timeout get="inline" set="null" line="421" static="1">
+			<f a="value">
+				<x path="Bool"/>
+				<x path="Bool"/>
+			</f>
+			<meta><m n=":cffi"/></meta>
+		</lime_system_set_allow_screen_timeout>
+		<lime_system_get_directory get="inline" set="null" line="422" static="1">
 			<f a="type:company:title">
 				<x path="Int"/>
 				<c path="String"/>
@@ -27757,18 +27788,18 @@
 			</f>
 			<meta><m n=":cffi"/></meta>
 		</lime_system_get_directory>
-		<lime_system_get_display get="inline" set="null" line="398" static="1">
+		<lime_system_get_display get="inline" set="null" line="423" static="1">
 			<f a="index">
 				<x path="Int"/>
 				<d/>
 			</f>
 			<meta><m n=":cffi"/></meta>
 		</lime_system_get_display>
-		<lime_system_get_num_displays get="inline" set="null" line="399" static="1">
+		<lime_system_get_num_displays get="inline" set="null" line="424" static="1">
 			<f a=""><x path="Int"/></f>
 			<meta><m n=":cffi"/></meta>
 		</lime_system_get_num_displays>
-		<lime_system_get_timer get="inline" set="null" line="400" static="1">
+		<lime_system_get_timer get="inline" set="null" line="425" static="1">
 			<f a=""><x path="Float"/></f>
 			<meta><m n=":cffi"/></meta>
 		</lime_system_get_timer>
@@ -27791,42 +27822,42 @@
 		</to>
 		<meta><m n=":enum"/></meta>
 		<impl><class path="lime.system._System.SystemDirectory_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/system/System.hx" private="1" module="lime.system.System" extern="1">
-	<APPLICATION public="1" get="inline" set="null" line="409" static="1">
+	<APPLICATION public="1" get="inline" set="null" line="434" static="1">
 		<x path="lime.system._System.SystemDirectory"/>
 		<meta>
 			<m n=":enum"/>
 			<m n=":impl"/>
 		</meta>
 	</APPLICATION>
-	<APPLICATION_STORAGE public="1" get="inline" set="null" line="410" static="1">
+	<APPLICATION_STORAGE public="1" get="inline" set="null" line="435" static="1">
 		<x path="lime.system._System.SystemDirectory"/>
 		<meta>
 			<m n=":enum"/>
 			<m n=":impl"/>
 		</meta>
 	</APPLICATION_STORAGE>
-	<DESKTOP public="1" get="inline" set="null" line="411" static="1">
+	<DESKTOP public="1" get="inline" set="null" line="436" static="1">
 		<x path="lime.system._System.SystemDirectory"/>
 		<meta>
 			<m n=":enum"/>
 			<m n=":impl"/>
 		</meta>
 	</DESKTOP>
-	<DOCUMENTS public="1" get="inline" set="null" line="412" static="1">
+	<DOCUMENTS public="1" get="inline" set="null" line="437" static="1">
 		<x path="lime.system._System.SystemDirectory"/>
 		<meta>
 			<m n=":enum"/>
 			<m n=":impl"/>
 		</meta>
 	</DOCUMENTS>
-	<FONTS public="1" get="inline" set="null" line="413" static="1">
+	<FONTS public="1" get="inline" set="null" line="438" static="1">
 		<x path="lime.system._System.SystemDirectory"/>
 		<meta>
 			<m n=":enum"/>
 			<m n=":impl"/>
 		</meta>
 	</FONTS>
-	<USER public="1" get="inline" set="null" line="414" static="1">
+	<USER public="1" get="inline" set="null" line="439" static="1">
 		<x path="lime.system._System.SystemDirectory"/>
 		<meta>
 			<m n=":enum"/>
@@ -27837,42 +27868,42 @@
 </class></impl>
 	</abstract>
 	<class path="lime.system._System.SystemDirectory_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/system/System.hx" private="1" module="lime.system.System" extern="1">
-		<APPLICATION public="1" get="inline" set="null" line="409" static="1">
+		<APPLICATION public="1" get="inline" set="null" line="434" static="1">
 			<x path="lime.system._System.SystemDirectory"/>
 			<meta>
 				<m n=":enum"/>
 				<m n=":impl"/>
 			</meta>
 		</APPLICATION>
-		<APPLICATION_STORAGE public="1" get="inline" set="null" line="410" static="1">
+		<APPLICATION_STORAGE public="1" get="inline" set="null" line="435" static="1">
 			<x path="lime.system._System.SystemDirectory"/>
 			<meta>
 				<m n=":enum"/>
 				<m n=":impl"/>
 			</meta>
 		</APPLICATION_STORAGE>
-		<DESKTOP public="1" get="inline" set="null" line="411" static="1">
+		<DESKTOP public="1" get="inline" set="null" line="436" static="1">
 			<x path="lime.system._System.SystemDirectory"/>
 			<meta>
 				<m n=":enum"/>
 				<m n=":impl"/>
 			</meta>
 		</DESKTOP>
-		<DOCUMENTS public="1" get="inline" set="null" line="412" static="1">
+		<DOCUMENTS public="1" get="inline" set="null" line="437" static="1">
 			<x path="lime.system._System.SystemDirectory"/>
 			<meta>
 				<m n=":enum"/>
 				<m n=":impl"/>
 			</meta>
 		</DOCUMENTS>
-		<FONTS public="1" get="inline" set="null" line="413" static="1">
+		<FONTS public="1" get="inline" set="null" line="438" static="1">
 			<x path="lime.system._System.SystemDirectory"/>
 			<meta>
 				<m n=":enum"/>
 				<m n=":impl"/>
 			</meta>
 		</FONTS>
-		<USER public="1" get="inline" set="null" line="414" static="1">
+		<USER public="1" get="inline" set="null" line="439" static="1">
 			<x path="lime.system._System.SystemDirectory"/>
 			<meta>
 				<m n=":enum"/>
@@ -31220,6 +31251,42 @@
 </f></copyUniqueKeys>
 		<meta><m n=":directlyUsed"/></meta>
 	</class>
+	<class path="lime.tools.helpers.TVOSHelper" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/tools/helpers/TVOSHelper.hx">
+		<initialized line="16" static="1"><x path="Bool"/></initialized>
+		<build public="1" set="method" line="19" static="1"><f a="project:workingDirectory:?additionalArguments">
+	<c path="lime.project.HXProject"/>
+	<c path="String"/>
+	<c path="Array"><c path="String"/></c>
+	<x path="Void"/>
+</f></build>
+		<getSDKDirectory public="1" set="method" line="60" static="1"><f a="project">
+	<c path="lime.project.HXProject"/>
+	<c path="String"/>
+</f></getSDKDirectory>
+		<getIOSVersion set="method" line="89" static="1"><f a="project">
+	<c path="lime.project.HXProject"/>
+	<x path="Void"/>
+</f></getIOSVersion>
+		<getOSXVersion set="method" line="121" static="1"><f a=""><c path="String"/></f></getOSXVersion>
+		<getProvisioningFile public="1" set="method" line="130" static="1"><f a=""><c path="String"/></f></getProvisioningFile>
+		<getXcodeVersion set="method" line="150" static="1"><f a=""><c path="String"/></f></getXcodeVersion>
+		<initialize set="method" line="160" static="1"><f a="project">
+	<c path="lime.project.HXProject"/>
+	<x path="Void"/>
+</f></initialize>
+		<launch public="1" set="method" line="173" static="1"><f a="project:workingDirectory">
+	<c path="lime.project.HXProject"/>
+	<c path="String"/>
+	<x path="Void"/>
+</f></launch>
+		<sign public="1" set="method" line="292" static="1"><f a="project:workingDirectory:entitlementsPath">
+	<c path="lime.project.HXProject"/>
+	<c path="String"/>
+	<c path="String"/>
+	<x path="Void"/>
+</f></sign>
+		<meta><m n=":directlyUsed"/></meta>
+	</class>
 	<class path="lime.tools.helpers.TizenHelper" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/tools/helpers/TizenHelper.hx">
 		<cacheID line="19" static="1"><c path="String"/></cacheID>
 		<cacheUUID line="20" static="1"><c path="String"/></cacheUUID>
@@ -31622,6 +31689,47 @@
 	<x path="Void"/>
 </f></new>
 	</class>
+	<class path="lime.tools.platforms.TVOSPlatform" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/tools/platforms/TVOSPlatform.hx">
+		<extends path="lime.project.PlatformTarget"/>
+		<build public="1" set="method" line="47" override="1"><f a=""><x path="Void"/></f></build>
+		<clean public="1" set="method" line="69" override="1"><f a=""><x path="Void"/></f></clean>
+		<deploy public="1" set="method" line="80" override="1"><f a=""><x path="Void"/></f></deploy>
+		<display public="1" set="method" line="87" override="1"><f a=""><x path="Void"/></f></display>
+		<generateContext set="method" line="98"><f a=""><d/></f></generateContext>
+		<rebuild public="1" set="method" line="308" override="1"><f a=""><x path="Void"/></f></rebuild>
+		<run public="1" set="method" line="325" override="1"><f a=""><x path="Void"/></f></run>
+		<update public="1" set="method" line="334" override="1"><f a=""><x path="Void"/></f></update>
+		<install public="1" set="method" line="587" override="1">
+			<f a=""><x path="Void"/></f>
+			<meta><m n="ignore"/></meta>
+		</install>
+		<trace public="1" set="method" line="588" override="1">
+			<f a=""><x path="Void"/></f>
+			<meta><m n="ignore"/></meta>
+		</trace>
+		<uninstall public="1" set="method" line="589" override="1">
+			<f a=""><x path="Void"/></f>
+			<meta><m n="ignore"/></meta>
+		</uninstall>
+		<new public="1" set="method" line="38"><f a="command:_project:targetFlags">
+	<c path="String"/>
+	<c path="lime.project.HXProject"/>
+	<x path="Map">
+		<c path="String"/>
+		<c path="String"/>
+	</x>
+	<x path="Void"/>
+</f></new>
+	</class>
+	<typedef path="lime.tools.platforms._TVOSPlatform.IconSize" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/tools/platforms/TVOSPlatform.hx" private="1" module="lime.tools.platforms.TVOSPlatform"><a>
+	<size><x path="Int"/></size>
+	<name><c path="String"/></name>
+</a></typedef>
+	<typedef path="lime.tools.platforms._TVOSPlatform.SplashSize" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/tools/platforms/TVOSPlatform.hx" private="1" module="lime.tools.platforms.TVOSPlatform"><a>
+	<w><x path="Int"/></w>
+	<name><c path="String"/></name>
+	<h><x path="Int"/></h>
+</a></typedef>
 	<class path="lime.tools.platforms.TizenPlatform" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/tools/platforms/TizenPlatform.hx">
 		<extends path="lime.project.PlatformTarget"/>
 		<uuid line="25" static="1"><c path="String"/></uuid>
