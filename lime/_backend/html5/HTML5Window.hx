@@ -19,6 +19,8 @@ import lime.app.Application;
 import lime.graphics.Image;
 import lime.system.Display;
 import lime.system.System;
+import lime.ui.Gamepad;
+import lime.ui.Joystick;
 import lime.ui.Touch;
 import lime.ui.Window;
 
@@ -29,6 +31,8 @@ typedef InputEvent = js.html.Event;
 #end
 
 @:access(lime.app.Application)
+@:access(lime.ui.Gamepad)
+@:access(lime.ui.Joystick)
 @:access(lime.ui.Window)
 
 
@@ -201,6 +205,9 @@ class HTML5Window {
 			element.addEventListener ("touchmove", handleTouchEvent, true);
 			element.addEventListener ("touchend", handleTouchEvent, true);
 			
+			element.addEventListener ("gamepadconnected", handleGamepadEvent, true);
+			element.addEventListener ("gamepaddisconnected", handleGamepadEvent, true);
+			
 		}
 		
 	}
@@ -233,6 +240,34 @@ class HTML5Window {
 			
 			Timer.delay (function () { textInput.focus (); }, 20);
 			
+		}
+		
+	}
+	
+	
+	private function handleGamepadEvent (event:Dynamic):Void {
+		
+		switch (event.type) {
+			
+			case "gamepadconnected":
+				
+				trace ("GAMEPAD CONNECTED");
+				
+				Joystick.__connect (event.gamepad.index);
+				
+				if (event.gamepad.mapping == "standard") {
+					
+					Gamepad.__connect (event.gamepad.index);
+					
+				}
+			
+			case "gamepaddisconnected":
+				
+				Joystick.__disconnect (event.gamepad.index);
+				Gamepad.__disconnect (event.gamepad.index);
+			
+			default:
+				
 		}
 		
 	}
@@ -413,6 +448,25 @@ class HTML5Window {
 			
 		}
 		
+		var windowWidth:Float = setWidth;
+		var windowHeight:Float = setHeight;
+		
+		if (windowWidth == 0 || windowHeight == 0) {
+			
+			if (rect != null) {
+				
+				windowWidth = rect.width;
+				windowHeight = rect.height;
+				
+			} else {
+				
+				windowWidth = 1;
+				windowHeight = 1;
+				
+			}
+			
+		}
+		
 		for (data in event.changedTouches) {
 			
 			var x = 0.0;
@@ -420,8 +474,8 @@ class HTML5Window {
 			
 			if (rect != null) {
 				
-				x = (data.clientX - rect.left) * (parent.width / rect.width);
-				y = (data.clientY - rect.top) * (parent.height / rect.height);
+				x = (data.clientX - rect.left) * (windowWidth / rect.width);
+				y = (data.clientY - rect.top) * (windowHeight / rect.height);
 				
 			} else {
 				
@@ -438,12 +492,12 @@ class HTML5Window {
 					
 					if (touch == null) {
 						
-						touch = new Touch (x / setWidth, y / setHeight, data.identifier, 0, 0, data.force, parent.id);
+						touch = new Touch (x / windowWidth, y / windowHeight, data.identifier, 0, 0, data.force, parent.id);
 						
 					} else {
 						
-						touch.x = x / setWidth;
-						touch.y = y / setHeight;
+						touch.x = x / windowWidth;
+						touch.y = y / windowHeight;
 						touch.id = data.identifier;
 						touch.dx = 0;
 						touch.dy = 0;
@@ -477,8 +531,8 @@ class HTML5Window {
 						var cacheX = touch.x;
 						var cacheY = touch.y;
 						
-						touch.x = x / setWidth;
-						touch.y = y / setHeight;
+						touch.x = x / windowWidth;
+						touch.y = y / windowHeight;
 						touch.dx = touch.x - cacheX;
 						touch.dy = touch.y - cacheY;
 						touch.pressure = data.force;
@@ -506,8 +560,8 @@ class HTML5Window {
 						var cacheX = touch.x;
 						var cacheY = touch.y;
 						
-						touch.x = x / setWidth;
-						touch.y = y / setHeight;
+						touch.x = x / windowWidth;
+						touch.y = y / windowHeight;
 						touch.dx = touch.x - cacheX;
 						touch.dy = touch.y - cacheY;
 						touch.pressure = data.force;

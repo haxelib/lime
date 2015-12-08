@@ -18,6 +18,7 @@ import sys.FileSystem;
 import sys.io.File;
 
 #if (lime && !lime_legacy)
+import haxe.xml.Fast;
 import lime.text.Font;
 import lime.tools.helpers.FileHelper;
 import lime.tools.helpers.ProcessHelper;
@@ -414,7 +415,7 @@ class HXProject {
 		
 		FileHelper.copyFile (path, classFile);
 		
-		ProcessHelper.runCommand ("", "haxe", [ name, "-main", "lime.project.HXProject", "-cp", tempDirectory, "-neko", nekoOutput, "-cp", PathHelper.combine (PathHelper.getHaxelib (new Haxelib ("lime")), "tools"), "-lib", "lime" ]);
+		ProcessHelper.runCommand ("", "haxe", [ name, "-main", "lime.project.HXProject", "-cp", tempDirectory, "-neko", nekoOutput, "-cp", PathHelper.combine (PathHelper.getHaxelib (new Haxelib ("lime")), "tools"), "-lib", "lime", "-D", "lime_curl" ]);
 		ProcessHelper.runCommand ("", "neko", [ FileSystem.fullPath (nekoOutput), HXProject._command, name, Std.string (HXProject._target), Std.string (HXProject._debug), Serializer.run (HXProject._targetFlags), Serializer.run (HXProject._templatePaths), temporaryFile ]);
 		
 		try {
@@ -617,6 +618,19 @@ class HXProject {
 		}
 		
 	}
+	
+	
+	#if (lime && !lime_legacy)
+	
+	public function includeXML (xml:String):Void {
+		
+		var projectXML = new ProjectXMLParser ();
+		@:privateAccess projectXML.parseXML (new Fast (Xml.parse (xml).firstElement ()), "");
+		merge (projectXML);
+		
+	}
+	
+	#end
 	
 	
 	private static function initialize ():Void {
