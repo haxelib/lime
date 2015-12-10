@@ -427,7 +427,7 @@ class ProjectXMLParser extends HXProject {
 		
 		if (element.has.embed) {
 			
-			embed = substitute (element.att.embed) == "true";
+			embed = parseBool (element.att.embed);
 			
 		}
 		
@@ -590,7 +590,7 @@ class ProjectXMLParser extends HXProject {
 					
 					if (childElement.has.embed) {
 						
-						childEmbed = substitute (childElement.att.embed) == "true";
+						childEmbed = parseBool (childElement.att.embed);
 						
 					}
 					
@@ -702,6 +702,13 @@ class ProjectXMLParser extends HXProject {
 			}
 			
 		}
+		
+	}
+	
+	
+	private function parseBool (attribute:String):Bool {
+		
+		return substitute (attribute) == "true";
 		
 	}
 	
@@ -956,10 +963,17 @@ class ProjectXMLParser extends HXProject {
 						
 						var name = substitute (element.att.name);
 						var version = "";
+						var optional = false;
 						
 						if (element.has.version) {
 							
 							version = substitute (element.att.version);
+							
+						}
+						
+						if (element.has.optional) {
+							
+							optional = parseBool (element.att.optional);
 							
 						}
 						
@@ -979,7 +993,13 @@ class ProjectXMLParser extends HXProject {
 							
 						} else {
 							
-							path = PathHelper.getHaxelib (haxelib, true);
+							path = PathHelper.getHaxelib (haxelib, !optional);
+							
+						}
+						
+						if (path == "") {
+							
+							continue;
 							
 						}
 						
@@ -1049,7 +1069,7 @@ class ProjectXMLParser extends HXProject {
 						
 						if (element.has.register) {
 							
-							registerStatics = (substitute (element.att.register) == "true");
+							registerStatics = parseBool (element.att.register);
 							
 						}
 						
@@ -1252,19 +1272,19 @@ class ProjectXMLParser extends HXProject {
 							
 							if (element.has.embed) {
 								
-								embed = (substitute (element.att.embed) == "true");
+								embed = parseBool (element.att.embed);
 								
 							}
 							
 							if (element.has.preload) {
 								
-								preload = (substitute (element.att.preload) == "true");
+								preload = parseBool (element.att.preload);
 								
 							}
 							
 							if (element.has.generate) {
 								
-								generate = (substitute (element.att.generate) == "true");
+								generate = parseBool (element.att.generate);
 								
 							}
 							

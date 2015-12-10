@@ -26585,30 +26585,34 @@
 	<x path="Bool"/>
 	<x path="Void"/>
 </f></parseAssetsElementDirectory>
-		<parseMetaElement set="method" line="709"><f a="element">
+		<parseBool set="method" line="709"><f a="attribute">
+	<c path="String"/>
+	<x path="Bool"/>
+</f></parseBool>
+		<parseMetaElement set="method" line="716"><f a="element">
 	<c path="haxe.xml.Fast"/>
 	<x path="Void"/>
 </f></parseMetaElement>
-		<parseOutputElement set="method" line="742"><f a="element">
+		<parseOutputElement set="method" line="749"><f a="element">
 	<c path="haxe.xml.Fast"/>
 	<x path="Void"/>
 </f></parseOutputElement>
-		<parseXML set="method" line="765"><f a="xml:section:?extensionPath">
+		<parseXML set="method" line="772"><f a="xml:section:?extensionPath">
 	<c path="haxe.xml.Fast"/>
 	<c path="String"/>
 	<c path="String"/>
 	<x path="Void"/>
 </f></parseXML>
-		<parseWindowElement set="method" line="1658"><f a="element">
+		<parseWindowElement set="method" line="1678"><f a="element">
 	<c path="haxe.xml.Fast"/>
 	<x path="Void"/>
 </f></parseWindowElement>
-		<process public="1" set="method" line="1738"><f a="projectFile:useExtensionPath">
+		<process public="1" set="method" line="1758"><f a="projectFile:useExtensionPath">
 	<c path="String"/>
 	<x path="Bool"/>
 	<x path="Void"/>
 </f></process>
-		<substitute set="method" line="1759"><f a="string">
+		<substitute set="method" line="1779"><f a="string">
 	<c path="String"/>
 	<c path="String"/>
 </f></substitute>
