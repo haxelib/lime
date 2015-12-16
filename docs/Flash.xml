@@ -2474,31 +2474,33 @@
 		<meta><m n=":directlyUsed"/></meta>
 	</class>
 	<class path="lime.app.Event_Void_Void" params="T" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/ui/FileDialog.hx">
-		<repeat public="1">
+		<canceled public="1" set="null"><x path="Bool"/></canceled>
+		<__repeat public="1">
 			<c path="Array"><x path="Bool"/></c>
 			<meta>
 				<m n=":noCompletion"/>
 				<m n=":dox"><e>hide</e></m>
 			</meta>
-		</repeat>
-		<priorities><c path="Array"><x path="Int"/></c></priorities>
-		<add public="1" set="method" line="36"><f a="listener:?once:?priority">
+		</__repeat>
+		<__priorities><c path="Array"><x path="Int"/></c></__priorities>
+		<add public="1" set="method" line="38"><f a="listener:?once:?priority">
 	<c path="lime.app.Event_Void_Void.T"/>
 	<x path="Bool"/>
 	<x path="Int"/>
 	<x path="Void"/>
 </f></add>
-		<has public="1" set="method" line="230"><f a="listener">
+		<cancel public="1" set="method" line="209"><f a=""><x path="Void"/></f></cancel>
+		<has public="1" set="method" line="247"><f a="listener">
 	<c path="lime.app.Event_Void_Void.T"/>
 	<x path="Bool"/>
 </f></has>
-		<remove public="1" set="method" line="245"><f a="listener">
+		<remove public="1" set="method" line="262"><f a="listener">
 	<c path="lime.app.Event_Void_Void.T"/>
 	<x path="Void"/>
 </f></remove>
-		<listeners public="1"><c path="Array"><f a=""><x path="Void"/></f></c></listeners>
+		<__listeners public="1"><c path="Array"><f a=""><x path="Void"/></f></c></__listeners>
 		<dispatch public="1" set="method" line="20"><f a=""><x path="Void"/></f></dispatch>
-		<new public="1" set="method" line="25"><f a=""><x path="Void"/></f></new>
+		<new public="1" set="method" line="26"><f a=""><x path="Void"/></f></new>
 		<meta>
 			<m n=":directlyUsed"/>
 			<m n=":dox"><e>hide</e></m>
@@ -2833,14 +2835,14 @@
 		<meta><m n=":enum"/></meta>
 	</class>
 	<class path="lime._backend.native.NativeApplication" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/_backend/native/NativeApplication.hx">
-		<lime_application_create get="inline" set="null" line="573" static="1">
+		<lime_application_create get="inline" set="null" line="605" static="1">
 			<f a="config">
 				<d/>
 				<d/>
 			</f>
 			<meta><m n=":cffi"/></meta>
 		</lime_application_create>
-		<lime_application_event_manager_register get="inline" set="null" line="574" static="1">
+		<lime_application_event_manager_register get="inline" set="null" line="606" static="1">
 			<f a="callback:eventObject">
 				<d/>
 				<d/>
@@ -2848,28 +2850,28 @@
 			</f>
 			<meta><m n=":cffi"/></meta>
 		</lime_application_event_manager_register>
-		<lime_application_exec get="inline" set="null" line="575" static="1">
+		<lime_application_exec get="inline" set="null" line="607" static="1">
 			<f a="handle">
 				<d/>
 				<x path="Int"/>
 			</f>
 			<meta><m n=":cffi"/></meta>
 		</lime_application_exec>
-		<lime_application_init get="inline" set="null" line="576" static="1">
+		<lime_application_init get="inline" set="null" line="608" static="1">
 			<f a="handle">
 				<d/>
 				<x path="Void"/>
 			</f>
 			<meta><m n=":cffi"/></meta>
 		</lime_application_init>
-		<lime_application_quit get="inline" set="null" line="577" static="1">
+		<lime_application_quit get="inline" set="null" line="609" static="1">
 			<f a="handle">
 				<d/>
 				<x path="Int"/>
 			</f>
 			<meta><m n=":cffi"/></meta>
 		</lime_application_quit>
-		<lime_application_set_frame_rate get="inline" set="null" line="578" static="1">
+		<lime_application_set_frame_rate get="inline" set="null" line="610" static="1">
 			<f a="handle:value">
 				<d/>
 				<x path="Float"/>
@@ -2877,14 +2879,14 @@
 			</f>
 			<meta><m n=":cffi"/></meta>
 		</lime_application_set_frame_rate>
-		<lime_application_update get="inline" set="null" line="579" static="1">
+		<lime_application_update get="inline" set="null" line="611" static="1">
 			<f a="handle">
 				<d/>
 				<x path="Bool"/>
 			</f>
 			<meta><m n=":cffi"/></meta>
 		</lime_application_update>
-		<lime_gamepad_event_manager_register get="inline" set="null" line="580" static="1">
+		<lime_gamepad_event_manager_register get="inline" set="null" line="612" static="1">
 			<f a="callback:eventObject">
 				<d/>
 				<d/>
@@ -2892,7 +2894,7 @@
 			</f>
 			<meta><m n=":cffi"/></meta>
 		</lime_gamepad_event_manager_register>
-		<lime_joystick_event_manager_register get="inline" set="null" line="581" static="1">
+		<lime_joystick_event_manager_register get="inline" set="null" line="613" static="1">
 			<f a="callback:eventObject">
 				<d/>
 				<d/>
@@ -2900,7 +2902,7 @@
 			</f>
 			<meta><m n=":cffi"/></meta>
 		</lime_joystick_event_manager_register>
-		<lime_key_event_manager_register get="inline" set="null" line="582" static="1">
+		<lime_key_event_manager_register get="inline" set="null" line="614" static="1">
 			<f a="callback:eventObject">
 				<d/>
 				<d/>
@@ -2908,7 +2910,7 @@
 			</f>
 			<meta><m n=":cffi"/></meta>
 		</lime_key_event_manager_register>
-		<lime_mouse_event_manager_register get="inline" set="null" line="583" static="1">
+		<lime_mouse_event_manager_register get="inline" set="null" line="615" static="1">
 			<f a="callback:eventObject">
 				<d/>
 				<d/>
@@ -2916,7 +2918,7 @@
 			</f>
 			<meta><m n=":cffi"/></meta>
 		</lime_mouse_event_manager_register>
-		<lime_render_event_manager_register get="inline" set="null" line="584" static="1">
+		<lime_render_event_manager_register get="inline" set="null" line="616" static="1">
 			<f a="callback:eventObject">
 				<d/>
 				<d/>
@@ -2924,7 +2926,7 @@
 			</f>
 			<meta><m n=":cffi"/></meta>
 		</lime_render_event_manager_register>
-		<lime_sensor_event_manager_register get="inline" set="null" line="585" static="1">
+		<lime_sensor_event_manager_register get="inline" set="null" line="617" static="1">
 			<f a="callback:eventObject">
 				<d/>
 				<d/>
@@ -2932,7 +2934,7 @@
 			</f>
 			<meta><m n=":cffi"/></meta>
 		</lime_sensor_event_manager_register>
-		<lime_text_event_manager_register get="inline" set="null" line="586" static="1">
+		<lime_text_event_manager_register get="inline" set="null" line="618" static="1">
 			<f a="callback:eventObject">
 				<d/>
 				<d/>
@@ -2940,7 +2942,7 @@
 			</f>
 			<meta><m n=":cffi"/></meta>
 		</lime_text_event_manager_register>
-		<lime_touch_event_manager_register get="inline" set="null" line="587" static="1">
+		<lime_touch_event_manager_register get="inline" set="null" line="619" static="1">
 			<f a="callback:eventObject">
 				<d/>
 				<d/>
@@ -2948,7 +2950,7 @@
 			</f>
 			<meta><m n=":cffi"/></meta>
 		</lime_touch_event_manager_register>
-		<lime_window_event_manager_register get="inline" set="null" line="588" static="1">
+		<lime_window_event_manager_register get="inline" set="null" line="620" static="1">
 			<f a="callback:eventObject">
 				<d/>
 				<d/>
@@ -2974,29 +2976,29 @@
 		<handle public="1"><d/></handle>
 		<frameRate><x path="Float"/></frameRate>
 		<parent><c path="lime.app.Application"/></parent>
-		<create public="1" set="method" line="74"><f a="config">
+		<create public="1" set="method" line="76"><f a="config">
 	<t path="lime.app.Config"/>
 	<x path="Void"/>
 </f></create>
-		<exec public="1" set="method" line="83"><f a=""><x path="Int"/></f></exec>
-		<exit public="1" set="method" line="140"><f a=""><x path="Void"/></f></exit>
-		<getFrameRate public="1" set="method" line="147"><f a=""><x path="Float"/></f></getFrameRate>
-		<handleApplicationEvent set="method" line="154"><f a=""><x path="Void"/></f></handleApplicationEvent>
-		<handleGamepadEvent set="method" line="172"><f a=""><x path="Void"/></f></handleGamepadEvent>
-		<handleJoystickEvent set="method" line="204"><f a=""><x path="Void"/></f></handleJoystickEvent>
-		<handleKeyEvent set="method" line="246"><f a=""><x path="Void"/></f></handleKeyEvent>
-		<handleMouseEvent set="method" line="269"><f a=""><x path="Void"/></f></handleMouseEvent>
-		<handleRenderEvent set="method" line="303"><f a=""><x path="Void"/></f></handleRenderEvent>
-		<handleSensorEvent set="method" line="347"><f a=""><x path="Void"/></f></handleSensorEvent>
-		<handleTextEvent set="method" line="360"><f a=""><x path="Void"/></f></handleTextEvent>
-		<handleTouchEvent set="method" line="385"><f a=""><x path="Void"/></f></handleTouchEvent>
-		<handleWindowEvent set="method" line="455"><f a=""><x path="Void"/></f></handleWindowEvent>
-		<setFrameRate public="1" set="method" line="522"><f a="value">
+		<exec public="1" set="method" line="85"><f a=""><x path="Int"/></f></exec>
+		<exit public="1" set="method" line="142"><f a=""><x path="Void"/></f></exit>
+		<getFrameRate public="1" set="method" line="149"><f a=""><x path="Float"/></f></getFrameRate>
+		<handleApplicationEvent set="method" line="156"><f a=""><x path="Void"/></f></handleApplicationEvent>
+		<handleGamepadEvent set="method" line="174"><f a=""><x path="Void"/></f></handleGamepadEvent>
+		<handleJoystickEvent set="method" line="206"><f a=""><x path="Void"/></f></handleJoystickEvent>
+		<handleKeyEvent set="method" line="248"><f a=""><x path="Void"/></f></handleKeyEvent>
+		<handleMouseEvent set="method" line="301"><f a=""><x path="Void"/></f></handleMouseEvent>
+		<handleRenderEvent set="method" line="335"><f a=""><x path="Void"/></f></handleRenderEvent>
+		<handleSensorEvent set="method" line="379"><f a=""><x path="Void"/></f></handleSensorEvent>
+		<handleTextEvent set="method" line="392"><f a=""><x path="Void"/></f></handleTextEvent>
+		<handleTouchEvent set="method" line="417"><f a=""><x path="Void"/></f></handleTouchEvent>
+		<handleWindowEvent set="method" line="487"><f a=""><x path="Void"/></f></handleWindowEvent>
+		<setFrameRate public="1" set="method" line="554"><f a="value">
 	<x path="Float"/>
 	<x path="Float"/>
 </f></setFrameRate>
-		<updateTimer set="method" line="532"><f a=""><x path="Void"/></f></updateTimer>
-		<new public="1" set="method" line="60"><f a="parent">
+		<updateTimer set="method" line="564"><f a=""><x path="Void"/></f></updateTimer>
+		<new public="1" set="method" line="62"><f a="parent">
 	<c path="lime.app.Application"/>
 	<x path="Void"/>
 </f></new>
@@ -3016,8 +3018,8 @@
 	<class path="lime._backend.native._NativeApplication.ApplicationEventInfo" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/_backend/native/NativeApplication.hx" private="1" module="lime._backend.native.NativeApplication">
 		<deltaTime public="1"><x path="Int"/></deltaTime>
 		<type public="1"><x path="lime._backend.native._NativeApplication.ApplicationEventType"/></type>
-		<clone public="1" set="method" line="610"><f a=""><c path="lime._backend.native._NativeApplication.ApplicationEventInfo"/></f></clone>
-		<new public="1" set="method" line="602"><f a="?type:?deltaTime">
+		<clone public="1" set="method" line="642"><f a=""><c path="lime._backend.native._NativeApplication.ApplicationEventInfo"/></f></clone>
+		<new public="1" set="method" line="634"><f a="?type:?deltaTime">
 	<x path="lime._backend.native._NativeApplication.ApplicationEventType"/>
 	<x path="Int"/>
 	<x path="Void"/>
@@ -3028,14 +3030,14 @@
 		<this><x path="Int"/></this>
 		<meta><m n=":enum"/></meta>
 		<impl><class path="lime._backend.native._NativeApplication.ApplicationEventType_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/_backend/native/NativeApplication.hx" private="1" module="lime._backend.native.NativeApplication" extern="1">
-	<UPDATE public="1" get="inline" set="null" line="622" static="1">
+	<UPDATE public="1" get="inline" set="null" line="654" static="1">
 		<x path="lime._backend.native._NativeApplication.ApplicationEventType"/>
 		<meta>
 			<m n=":enum"/>
 			<m n=":impl"/>
 		</meta>
 	</UPDATE>
-	<EXIT public="1" get="inline" set="null" line="623" static="1">
+	<EXIT public="1" get="inline" set="null" line="655" static="1">
 		<x path="lime._backend.native._NativeApplication.ApplicationEventType"/>
 		<meta>
 			<m n=":enum"/>
@@ -3046,14 +3048,14 @@
 </class></impl>
 	</abstract>
 	<class path="lime._backend.native._NativeApplication.ApplicationEventType_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/_backend/native/NativeApplication.hx" private="1" module="lime._backend.native.NativeApplication" extern="1">
-		<UPDATE public="1" get="inline" set="null" line="622" static="1">
+		<UPDATE public="1" get="inline" set="null" line="654" static="1">
 			<x path="lime._backend.native._NativeApplication.ApplicationEventType"/>
 			<meta>
 				<m n=":enum"/>
 				<m n=":impl"/>
 			</meta>
 		</UPDATE>
-		<EXIT public="1" get="inline" set="null" line="623" static="1">
+		<EXIT public="1" get="inline" set="null" line="655" static="1">
 			<x path="lime._backend.native._NativeApplication.ApplicationEventType"/>
 			<meta>
 				<m n=":enum"/>
@@ -3068,8 +3070,8 @@
 		<id public="1"><x path="Int"/></id>
 		<type public="1"><x path="lime._backend.native._NativeApplication.GamepadEventType"/></type>
 		<value public="1"><x path="Float"/></value>
-		<clone public="1" set="method" line="649"><f a=""><c path="lime._backend.native._NativeApplication.GamepadEventInfo"/></f></clone>
-		<new public="1" set="method" line="638"><f a="?type:?id:?button:?axis:?value">
+		<clone public="1" set="method" line="681"><f a=""><c path="lime._backend.native._NativeApplication.GamepadEventInfo"/></f></clone>
+		<new public="1" set="method" line="670"><f a="?type:?id:?button:?axis:?value">
 	<x path="lime._backend.native._NativeApplication.GamepadEventType"/>
 	<x path="Int"/>
 	<x path="Int"/>
@@ -3083,35 +3085,35 @@
 		<this><x path="Int"/></this>
 		<meta><m n=":enum"/></meta>
 		<impl><class path="lime._backend.native._NativeApplication.GamepadEventType_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/_backend/native/NativeApplication.hx" private="1" module="lime._backend.native.NativeApplication" extern="1">
-	<AXIS_MOVE public="1" get="inline" set="null" line="661" static="1">
+	<AXIS_MOVE public="1" get="inline" set="null" line="693" static="1">
 		<x path="lime._backend.native._NativeApplication.GamepadEventType"/>
 		<meta>
 			<m n=":enum"/>
 			<m n=":impl"/>
 		</meta>
 	</AXIS_MOVE>
-	<BUTTON_DOWN public="1" get="inline" set="null" line="662" static="1">
+	<BUTTON_DOWN public="1" get="inline" set="null" line="694" static="1">
 		<x path="lime._backend.native._NativeApplication.GamepadEventType"/>
 		<meta>
 			<m n=":enum"/>
 			<m n=":impl"/>
 		</meta>
 	</BUTTON_DOWN>
-	<BUTTON_UP public="1" get="inline" set="null" line="663" static="1">
+	<BUTTON_UP public="1" get="inline" set="null" line="695" static="1">
 		<x path="lime._backend.native._NativeApplication.GamepadEventType"/>
 		<meta>
 			<m n=":enum"/>
 			<m n=":impl"/>
 		</meta>
 	</BUTTON_UP>
-	<CONNECT public="1" get="inline" set="null" line="664" static="1">
+	<CONNECT public="1" get="inline" set="null" line="696" static="1">
 		<x path="lime._backend.native._NativeApplication.GamepadEventType"/>
 		<meta>
 			<m n=":enum"/>
 			<m n=":impl"/>
 		</meta>
 	</CONNECT>
-	<DISCONNECT public="1" get="inline" set="null" line="665" static="1">
+	<DISCONNECT public="1" get="inline" set="null" line="697" static="1">
 		<x path="lime._backend.native._NativeApplication.GamepadEventType"/>
 		<meta>
 			<m n=":enum"/>
@@ -3122,35 +3124,35 @@
 </class></impl>
 	</abstract>
 	<class path="lime._backend.native._NativeApplication.GamepadEventType_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/_backend/native/NativeApplication.hx" private="1" module="lime._backend.native.NativeApplication" extern="1">
-		<AXIS_MOVE public="1" get="inline" set="null" line="661" static="1">
+		<AXIS_MOVE public="1" get="inline" set="null" line="693" static="1">
 			<x path="lime._backend.native._NativeApplication.GamepadEventType"/>
 			<meta>
 				<m n=":enum"/>
 				<m n=":impl"/>
 			</meta>
 		</AXIS_MOVE>
-		<BUTTON_DOWN public="1" get="inline" set="null" line="662" static="1">
+		<BUTTON_DOWN public="1" get="inline" set="null" line="694" static="1">
 			<x path="lime._backend.native._NativeApplication.GamepadEventType"/>
 			<meta>
 				<m n=":enum"/>
 				<m n=":impl"/>
 			</meta>
 		</BUTTON_DOWN>
-		<BUTTON_UP public="1" get="inline" set="null" line="663" static="1">
+		<BUTTON_UP public="1" get="inline" set="null" line="695" static="1">
 			<x path="lime._backend.native._NativeApplication.GamepadEventType"/>
 			<meta>
 				<m n=":enum"/>
 				<m n=":impl"/>
 			</meta>
 		</BUTTON_UP>
-		<CONNECT public="1" get="inline" set="null" line="664" static="1">
+		<CONNECT public="1" get="inline" set="null" line="696" static="1">
 			<x path="lime._backend.native._NativeApplication.GamepadEventType"/>
 			<meta>
 				<m n=":enum"/>
 				<m n=":impl"/>
 			</meta>
 		</CONNECT>
-		<DISCONNECT public="1" get="inline" set="null" line="665" static="1">
+		<DISCONNECT public="1" get="inline" set="null" line="697" static="1">
 			<x path="lime._backend.native._NativeApplication.GamepadEventType"/>
 			<meta>
 				<m n=":enum"/>
@@ -3166,8 +3168,8 @@
 		<value public="1"><x path="Float"/></value>
 		<x public="1"><x path="Int"/></x>
 		<y public="1"><x path="Int"/></y>
-		<clone public="1" set="method" line="693"><f a=""><c path="lime._backend.native._NativeApplication.JoystickEventInfo"/></f></clone>
-		<new public="1" set="method" line="681"><f a="?type:?id:?index:?value:?x:?y">
+		<clone public="1" set="method" line="725"><f a=""><c path="lime._backend.native._NativeApplication.JoystickEventInfo"/></f></clone>
+		<new public="1" set="method" line="713"><f a="?type:?id:?index:?value:?x:?y">
 	<x path="lime._backend.native._NativeApplication.JoystickEventType"/>
 	<x path="Int"/>
 	<x path="Int"/>
@@ -3182,49 +3184,49 @@
 		<this><x path="Int"/></this>
 		<meta><m n=":enum"/></meta>
 		<impl><class path="lime._backend.native._NativeApplication.JoystickEventType_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/_backend/native/NativeApplication.hx" private="1" module="lime._backend.native.NativeApplication" extern="1">
-	<AXIS_MOVE public="1" get="inline" set="null" line="705" static="1">
+	<AXIS_MOVE public="1" get="inline" set="null" line="737" static="1">
 		<x path="lime._backend.native._NativeApplication.JoystickEventType"/>
 		<meta>
 			<m n=":enum"/>
 			<m n=":impl"/>
 		</meta>
 	</AXIS_MOVE>
-	<HAT_MOVE public="1" get="inline" set="null" line="706" static="1">
+	<HAT_MOVE public="1" get="inline" set="null" line="738" static="1">
 		<x path="lime._backend.native._NativeApplication.JoystickEventType"/>
 		<meta>
 			<m n=":enum"/>
 			<m n=":impl"/>
 		</meta>
 	</HAT_MOVE>
-	<TRACKBALL_MOVE public="1" get="inline" set="null" line="707" static="1">
+	<TRACKBALL_MOVE public="1" get="inline" set="null" line="739" static="1">
 		<x path="lime._backend.native._NativeApplication.JoystickEventType"/>
 		<meta>
 			<m n=":enum"/>
 			<m n=":impl"/>
 		</meta>
 	</TRACKBALL_MOVE>
-	<BUTTON_DOWN public="1" get="inline" set="null" line="708" static="1">
+	<BUTTON_DOWN public="1" get="inline" set="null" line="740" static="1">
 		<x path="lime._backend.native._NativeApplication.JoystickEventType"/>
 		<meta>
 			<m n=":enum"/>
 			<m n=":impl"/>
 		</meta>
 	</BUTTON_DOWN>
-	<BUTTON_UP public="1" get="inline" set="null" line="709" static="1">
+	<BUTTON_UP public="1" get="inline" set="null" line="741" static="1">
 		<x path="lime._backend.native._NativeApplication.JoystickEventType"/>
 		<meta>
 			<m n=":enum"/>
 			<m n=":impl"/>
 		</meta>
 	</BUTTON_UP>
-	<CONNECT public="1" get="inline" set="null" line="710" static="1">
+	<CONNECT public="1" get="inline" set="null" line="742" static="1">
 		<x path="lime._backend.native._NativeApplication.JoystickEventType"/>
 		<meta>
 			<m n=":enum"/>
 			<m n=":impl"/>
 		</meta>
 	</CONNECT>
-	<DISCONNECT public="1" get="inline" set="null" line="711" static="1">
+	<DISCONNECT public="1" get="inline" set="null" line="743" static="1">
 		<x path="lime._backend.native._NativeApplication.JoystickEventType"/>
 		<meta>
 			<m n=":enum"/>
@@ -3235,49 +3237,49 @@
 </class></impl>
 	</abstract>
 	<class path="lime._backend.native._NativeApplication.JoystickEventType_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/_backend/native/NativeApplication.hx" private="1" module="lime._backend.native.NativeApplication" extern="1">
-		<AXIS_MOVE public="1" get="inline" set="null" line="705" static="1">
+		<AXIS_MOVE public="1" get="inline" set="null" line="737" static="1">
 			<x path="lime._backend.native._NativeApplication.JoystickEventType"/>
 			<meta>
 				<m n=":enum"/>
 				<m n=":impl"/>
 			</meta>
 		</AXIS_MOVE>
-		<HAT_MOVE public="1" get="inline" set="null" line="706" static="1">
+		<HAT_MOVE public="1" get="inline" set="null" line="738" static="1">
 			<x path="lime._backend.native._NativeApplication.JoystickEventType"/>
 			<meta>
 				<m n=":enum"/>
 				<m n=":impl"/>
 			</meta>
 		</HAT_MOVE>
-		<TRACKBALL_MOVE public="1" get="inline" set="null" line="707" static="1">
+		<TRACKBALL_MOVE public="1" get="inline" set="null" line="739" static="1">
 			<x path="lime._backend.native._NativeApplication.JoystickEventType"/>
 			<meta>
 				<m n=":enum"/>
 				<m n=":impl"/>
 			</meta>
 		</TRACKBALL_MOVE>
-		<BUTTON_DOWN public="1" get="inline" set="null" line="708" static="1">
+		<BUTTON_DOWN public="1" get="inline" set="null" line="740" static="1">
 			<x path="lime._backend.native._NativeApplication.JoystickEventType"/>
 			<meta>
 				<m n=":enum"/>
 				<m n=":impl"/>
 			</meta>
 		</BUTTON_DOWN>
-		<BUTTON_UP public="1" get="inline" set="null" line="709" static="1">
+		<BUTTON_UP public="1" get="inline" set="null" line="741" static="1">
 			<x path="lime._backend.native._NativeApplication.JoystickEventType"/>
 			<meta>
 				<m n=":enum"/>
 				<m n=":impl"/>
 			</meta>
 		</BUTTON_UP>
-		<CONNECT public="1" get="inline" set="null" line="710" static="1">
+		<CONNECT public="1" get="inline" set="null" line="742" static="1">
 			<x path="lime._backend.native._NativeApplication.JoystickEventType"/>
 			<meta>
 				<m n=":enum"/>
 				<m n=":impl"/>
 			</meta>
 		</CONNECT>
-		<DISCONNECT public="1" get="inline" set="null" line="711" static="1">
+		<DISCONNECT public="1" get="inline" set="null" line="743" static="1">
 			<x path="lime._backend.native._NativeApplication.JoystickEventType"/>
 			<meta>
 				<m n=":enum"/>
@@ -3291,8 +3293,8 @@
 		<modifier public="1"><x path="Int"/></modifier>
 		<type public="1"><x path="lime._backend.native._NativeApplication.KeyEventType"/></type>
 		<windowID public="1"><x path="Int"/></windowID>
-		<clone public="1" set="method" line="735"><f a=""><c path="lime._backend.native._NativeApplication.KeyEventInfo"/></f></clone>
-		<new public="1" set="method" line="725"><f a="?type:?windowID:?keyCode:?modifier">
+		<clone public="1" set="method" line="767"><f a=""><c path="lime._backend.native._NativeApplication.KeyEventInfo"/></f></clone>
+		<new public="1" set="method" line="757"><f a="?type:?windowID:?keyCode:?modifier">
 	<x path="lime._backend.native._NativeApplication.KeyEventType"/>
 	<x path="Int"/>
 	<x path="Int"/>
@@ -3305,14 +3307,14 @@
 		<this><x path="Int"/></this>
 		<meta><m n=":enum"/></meta>
 		<impl><class path="lime._backend.native._NativeApplication.KeyEventType_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/_backend/native/NativeApplication.hx" private="1" module="lime._backend.native.NativeApplication" extern="1">
-	<KEY_DOWN public="1" get="inline" set="null" line="747" static="1">
+	<KEY_DOWN public="1" get="inline" set="null" line="779" static="1">
 		<x path="lime._backend.native._NativeApplication.KeyEventType"/>
 		<meta>
 			<m n=":enum"/>
 			<m n=":impl"/>
 		</meta>
 	</KEY_DOWN>
-	<KEY_UP public="1" get="inline" set="null" line="748" static="1">
+	<KEY_UP public="1" get="inline" set="null" line="780" static="1">
 		<x path="lime._backend.native._NativeApplication.KeyEventType"/>
 		<meta>
 			<m n=":enum"/>
@@ -3323,14 +3325,14 @@
 </class></impl>
 	</abstract>
 	<class path="lime._backend.native._NativeApplication.KeyEventType_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/_backend/native/NativeApplication.hx" private="1" module="lime._backend.native.NativeApplication" extern="1">
-		<KEY_DOWN public="1" get="inline" set="null" line="747" static="1">
+		<KEY_DOWN public="1" get="inline" set="null" line="779" static="1">
 			<x path="lime._backend.native._NativeApplication.KeyEventType"/>
 			<meta>
 				<m n=":enum"/>
 				<m n=":impl"/>
 			</meta>
 		</KEY_DOWN>
-		<KEY_UP public="1" get="inline" set="null" line="748" static="1">
+		<KEY_UP public="1" get="inline" set="null" line="780" static="1">
 			<x path="lime._backend.native._NativeApplication.KeyEventType"/>
 			<meta>
 				<m n=":enum"/>
@@ -3347,8 +3349,8 @@
 		<windowID public="1"><x path="Int"/></windowID>
 		<x public="1"><x path="Float"/></x>
 		<y public="1"><x path="Float"/></y>
-		<clone public="1" set="method" line="779"><f a=""><c path="lime._backend.native._NativeApplication.MouseEventInfo"/></f></clone>
-		<new public="1" set="method" line="766"><f a="?type:?windowID:?x:?y:?button:?movementX:?movementY">
+		<clone public="1" set="method" line="811"><f a=""><c path="lime._backend.native._NativeApplication.MouseEventInfo"/></f></clone>
+		<new public="1" set="method" line="798"><f a="?type:?windowID:?x:?y:?button:?movementX:?movementY">
 	<x path="lime._backend.native._NativeApplication.MouseEventType"/>
 	<x path="Int"/>
 	<x path="Float"/>
@@ -3364,28 +3366,28 @@
 		<this><x path="Int"/></this>
 		<meta><m n=":enum"/></meta>
 		<impl><class path="lime._backend.native._NativeApplication.MouseEventType_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/_backend/native/NativeApplication.hx" private="1" module="lime._backend.native.NativeApplication" extern="1">
-	<MOUSE_DOWN public="1" get="inline" set="null" line="791" static="1">
+	<MOUSE_DOWN public="1" get="inline" set="null" line="823" static="1">
 		<x path="lime._backend.native._NativeApplication.MouseEventType"/>
 		<meta>
 			<m n=":enum"/>
 			<m n=":impl"/>
 		</meta>
 	</MOUSE_DOWN>
-	<MOUSE_UP public="1" get="inline" set="null" line="792" static="1">
+	<MOUSE_UP public="1" get="inline" set="null" line="824" static="1">
 		<x path="lime._backend.native._NativeApplication.MouseEventType"/>
 		<meta>
 			<m n=":enum"/>
 			<m n=":impl"/>
 		</meta>
 	</MOUSE_UP>
-	<MOUSE_MOVE public="1" get="inline" set="null" line="793" static="1">
+	<MOUSE_MOVE public="1" get="inline" set="null" line="825" static="1">
 		<x path="lime._backend.native._NativeApplication.MouseEventType"/>
 		<meta>
 			<m n=":enum"/>
 			<m n=":impl"/>
 		</meta>
 	</MOUSE_MOVE>
-	<MOUSE_WHEEL public="1" get="inline" set="null" line="794" static="1">
+	<MOUSE_WHEEL public="1" get="inline" set="null" line="826" static="1">
 		<x path="lime._backend.native._NativeApplication.MouseEventType"/>
 		<meta>
 			<m n=":enum"/>
@@ -3396,28 +3398,28 @@
 </class></impl>
 	</abstract>
 	<class path="lime._backend.native._NativeApplication.MouseEventType_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/_backend/native/NativeApplication.hx" private="1" module="lime._backend.native.NativeApplication" extern="1">
-		<MOUSE_DOWN public="1" get="inline" set="null" line="791" static="1">
+		<MOUSE_DOWN public="1" get="inline" set="null" line="823" static="1">
 			<x path="lime._backend.native._NativeApplication.MouseEventType"/>
 			<meta>
 				<m n=":enum"/>
 				<m n=":impl"/>
 			</meta>
 		</MOUSE_DOWN>
-		<MOUSE_UP public="1" get="inline" set="null" line="792" static="1">
+		<MOUSE_UP public="1" get="inline" set="null" line="824" static="1">
 			<x path="lime._backend.native._NativeApplication.MouseEventType"/>
 			<meta>
 				<m n=":enum"/>
 				<m n=":impl"/>
 			</meta>
 		</MOUSE_UP>
-		<MOUSE_MOVE public="1" get="inline" set="null" line="793" static="1">
+		<MOUSE_MOVE public="1" get="inline" set="null" line="825" static="1">
 			<x path="lime._backend.native._NativeApplication.MouseEventType"/>
 			<meta>
 				<m n=":enum"/>
 				<m n=":impl"/>
 			</meta>
 		</MOUSE_MOVE>
-		<MOUSE_WHEEL public="1" get="inline" set="null" line="794" static="1">
+		<MOUSE_WHEEL public="1" get="inline" set="null" line="826" static="1">
 			<x path="lime._backend.native._NativeApplication.MouseEventType"/>
 			<meta>
 				<m n=":enum"/>
@@ -3429,8 +3431,8 @@
 	<class path="lime._backend.native._NativeApplication.RenderEventInfo" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/_backend/native/NativeApplication.hx" private="1" module="lime._backend.native.NativeApplication">
 		<context public="1"><e path="lime.graphics.RenderContext"/></context>
 		<type public="1"><x path="lime._backend.native._NativeApplication.RenderEventType"/></type>
-		<clone public="1" set="method" line="814"><f a=""><c path="lime._backend.native._NativeApplication.RenderEventInfo"/></f></clone>
-		<new public="1" set="method" line="806"><f a="?type:?context">
+		<clone public="1" set="method" line="846"><f a=""><c path="lime._backend.native._NativeApplication.RenderEventInfo"/></f></clone>
+		<new public="1" set="method" line="838"><f a="?type:?context">
 	<x path="lime._backend.native._NativeApplication.RenderEventType"/>
 	<e path="lime.graphics.RenderContext"/>
 	<x path="Void"/>
@@ -3441,21 +3443,21 @@
 		<this><x path="Int"/></this>
 		<meta><m n=":enum"/></meta>
 		<impl><class path="lime._backend.native._NativeApplication.RenderEventType_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/_backend/native/NativeApplication.hx" private="1" module="lime._backend.native.NativeApplication" extern="1">
-	<RENDER public="1" get="inline" set="null" line="826" static="1">
+	<RENDER public="1" get="inline" set="null" line="858" static="1">
 		<x path="lime._backend.native._NativeApplication.RenderEventType"/>
 		<meta>
 			<m n=":enum"/>
 			<m n=":impl"/>
 		</meta>
 	</RENDER>
-	<RENDER_CONTEXT_LOST public="1" get="inline" set="null" line="827" static="1">
+	<RENDER_CONTEXT_LOST public="1" get="inline" set="null" line="859" static="1">
 		<x path="lime._backend.native._NativeApplication.RenderEventType"/>
 		<meta>
 			<m n=":enum"/>
 			<m n=":impl"/>
 		</meta>
 	</RENDER_CONTEXT_LOST>
-	<RENDER_CONTEXT_RESTORED public="1" get="inline" set="null" line="828" static="1">
+	<RENDER_CONTEXT_RESTORED public="1" get="inline" set="null" line="860" static="1">
 		<x path="lime._backend.native._NativeApplication.RenderEventType"/>
 		<meta>
 			<m n=":enum"/>
@@ -3466,21 +3468,21 @@
 </class></impl>
 	</abstract>
 	<class path="lime._backend.native._NativeApplication.RenderEventType_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/_backend/native/NativeApplication.hx" private="1" module="lime._backend.native.NativeApplication" extern="1">
-		<RENDER public="1" get="inline" set="null" line="826" static="1">
+		<RENDER public="1" get="inline" set="null" line="858" static="1">
 			<x path="lime._backend.native._NativeApplication.RenderEventType"/>
 			<meta>
 				<m n=":enum"/>
 				<m n=":impl"/>
 			</meta>
 		</RENDER>
-		<RENDER_CONTEXT_LOST public="1" get="inline" set="null" line="827" static="1">
+		<RENDER_CONTEXT_LOST public="1" get="inline" set="null" line="859" static="1">
 			<x path="lime._backend.native._NativeApplication.RenderEventType"/>
 			<meta>
 				<m n=":enum"/>
 				<m n=":impl"/>
 			</meta>
 		</RENDER_CONTEXT_LOST>
-		<RENDER_CONTEXT_RESTORED public="1" get="inline" set="null" line="828" static="1">
+		<RENDER_CONTEXT_RESTORED public="1" get="inline" set="null" line="860" static="1">
 			<x path="lime._backend.native._NativeApplication.RenderEventType"/>
 			<meta>
 				<m n=":enum"/>
@@ -3495,8 +3497,8 @@
 		<y public="1"><x path="Float"/></y>
 		<z public="1"><x path="Float"/></z>
 		<type public="1"><x path="lime._backend.native._NativeApplication.SensorEventType"/></type>
-		<clone public="1" set="method" line="854"><f a=""><c path="lime._backend.native._NativeApplication.SensorEventInfo"/></f></clone>
-		<new public="1" set="method" line="843"><f a="?type:?id:?x:?y:?z">
+		<clone public="1" set="method" line="886"><f a=""><c path="lime._backend.native._NativeApplication.SensorEventInfo"/></f></clone>
+		<new public="1" set="method" line="875"><f a="?type:?id:?x:?y:?z">
 	<x path="lime._backend.native._NativeApplication.SensorEventType"/>
 	<x path="Int"/>
 	<x path="Float"/>
@@ -3510,7 +3512,7 @@
 		<this><x path="Int"/></this>
 		<meta><m n=":enum"/></meta>
 		<impl><class path="lime._backend.native._NativeApplication.SensorEventType_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/_backend/native/NativeApplication.hx" private="1" module="lime._backend.native.NativeApplication" extern="1">
-	<ACCELEROMETER public="1" get="inline" set="null" line="866" static="1">
+	<ACCELEROMETER public="1" get="inline" set="null" line="898" static="1">
 		<x path="lime._backend.native._NativeApplication.SensorEventType"/>
 		<meta>
 			<m n=":enum"/>
@@ -3521,7 +3523,7 @@
 </class></impl>
 	</abstract>
 	<class path="lime._backend.native._NativeApplication.SensorEventType_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/_backend/native/NativeApplication.hx" private="1" module="lime._backend.native.NativeApplication" extern="1">
-		<ACCELEROMETER public="1" get="inline" set="null" line="866" static="1">
+		<ACCELEROMETER public="1" get="inline" set="null" line="898" static="1">
 			<x path="lime._backend.native._NativeApplication.SensorEventType"/>
 			<meta>
 				<m n=":enum"/>
@@ -3537,8 +3539,8 @@
 		<text public="1"><c path="String"/></text>
 		<type public="1"><x path="lime._backend.native._NativeApplication.TextEventType"/></type>
 		<windowID public="1"><x path="Int"/></windowID>
-		<clone public="1" set="method" line="893"><f a=""><c path="lime._backend.native._NativeApplication.TextEventInfo"/></f></clone>
-		<new public="1" set="method" line="882"><f a="?type:?windowID:?text:?start:?length">
+		<clone public="1" set="method" line="925"><f a=""><c path="lime._backend.native._NativeApplication.TextEventInfo"/></f></clone>
+		<new public="1" set="method" line="914"><f a="?type:?windowID:?text:?start:?length">
 	<x path="lime._backend.native._NativeApplication.TextEventType"/>
 	<x path="Int"/>
 	<c path="String"/>
@@ -3552,14 +3554,14 @@
 		<this><x path="Int"/></this>
 		<meta><m n=":enum"/></meta>
 		<impl><class path="lime._backend.native._NativeApplication.TextEventType_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/_backend/native/NativeApplication.hx" private="1" module="lime._backend.native.NativeApplication" extern="1">
-	<TEXT_INPUT public="1" get="inline" set="null" line="905" static="1">
+	<TEXT_INPUT public="1" get="inline" set="null" line="937" static="1">
 		<x path="lime._backend.native._NativeApplication.TextEventType"/>
 		<meta>
 			<m n=":enum"/>
 			<m n=":impl"/>
 		</meta>
 	</TEXT_INPUT>
-	<TEXT_EDIT public="1" get="inline" set="null" line="906" static="1">
+	<TEXT_EDIT public="1" get="inline" set="null" line="938" static="1">
 		<x path="lime._backend.native._NativeApplication.TextEventType"/>
 		<meta>
 			<m n=":enum"/>
@@ -3570,14 +3572,14 @@
 </class></impl>
 	</abstract>
 	<class path="lime._backend.native._NativeApplication.TextEventType_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/_backend/native/NativeApplication.hx" private="1" module="lime._backend.native.NativeApplication" extern="1">
-		<TEXT_INPUT public="1" get="inline" set="null" line="905" static="1">
+		<TEXT_INPUT public="1" get="inline" set="null" line="937" static="1">
 			<x path="lime._backend.native._NativeApplication.TextEventType"/>
 			<meta>
 				<m n=":enum"/>
 				<m n=":impl"/>
 			</meta>
 		</TEXT_INPUT>
-		<TEXT_EDIT public="1" get="inline" set="null" line="906" static="1">
+		<TEXT_EDIT public="1" get="inline" set="null" line="938" static="1">
 			<x path="lime._backend.native._NativeApplication.TextEventType"/>
 			<meta>
 				<m n=":enum"/>
@@ -3595,8 +3597,8 @@
 		<type public="1"><x path="lime._backend.native._NativeApplication.TouchEventType"/></type>
 		<x public="1"><x path="Float"/></x>
 		<y public="1"><x path="Float"/></y>
-		<clone public="1" set="method" line="938"><f a=""><c path="lime._backend.native._NativeApplication.TouchEventInfo"/></f></clone>
-		<new public="1" set="method" line="924"><f a="?type:?x:?y:?id:?dx:?dy:?pressure:?device">
+		<clone public="1" set="method" line="970"><f a=""><c path="lime._backend.native._NativeApplication.TouchEventInfo"/></f></clone>
+		<new public="1" set="method" line="956"><f a="?type:?x:?y:?id:?dx:?dy:?pressure:?device">
 	<x path="lime._backend.native._NativeApplication.TouchEventType"/>
 	<x path="Float"/>
 	<x path="Float"/>
@@ -3613,21 +3615,21 @@
 		<this><x path="Int"/></this>
 		<meta><m n=":enum"/></meta>
 		<impl><class path="lime._backend.native._NativeApplication.TouchEventType_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/_backend/native/NativeApplication.hx" private="1" module="lime._backend.native.NativeApplication" extern="1">
-	<TOUCH_START public="1" get="inline" set="null" line="950" static="1">
+	<TOUCH_START public="1" get="inline" set="null" line="982" static="1">
 		<x path="lime._backend.native._NativeApplication.TouchEventType"/>
 		<meta>
 			<m n=":enum"/>
 			<m n=":impl"/>
 		</meta>
 	</TOUCH_START>
-	<TOUCH_END public="1" get="inline" set="null" line="951" static="1">
+	<TOUCH_END public="1" get="inline" set="null" line="983" static="1">
 		<x path="lime._backend.native._NativeApplication.TouchEventType"/>
 		<meta>
 			<m n=":enum"/>
 			<m n=":impl"/>
 		</meta>
 	</TOUCH_END>
-	<TOUCH_MOVE public="1" get="inline" set="null" line="952" static="1">
+	<TOUCH_MOVE public="1" get="inline" set="null" line="984" static="1">
 		<x path="lime._backend.native._NativeApplication.TouchEventType"/>
 		<meta>
 			<m n=":enum"/>
@@ -3638,21 +3640,21 @@
 </class></impl>
 	</abstract>
 	<class path="lime._backend.native._NativeApplication.TouchEventType_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/_backend/native/NativeApplication.hx" private="1" module="lime._backend.native.NativeApplication" extern="1">
-		<TOUCH_START public="1" get="inline" set="null" line="950" static="1">
+		<TOUCH_START public="1" get="inline" set="null" line="982" static="1">
 			<x path="lime._backend.native._NativeApplication.TouchEventType"/>
 			<meta>
 				<m n=":enum"/>
 				<m n=":impl"/>
 			</meta>
 		</TOUCH_START>
-		<TOUCH_END public="1" get="inline" set="null" line="951" static="1">
+		<TOUCH_END public="1" get="inline" set="null" line="983" static="1">
 			<x path="lime._backend.native._NativeApplication.TouchEventType"/>
 			<meta>
 				<m n=":enum"/>
 				<m n=":impl"/>
 			</meta>
 		</TOUCH_END>
-		<TOUCH_MOVE public="1" get="inline" set="null" line="952" static="1">
+		<TOUCH_MOVE public="1" get="inline" set="null" line="984" static="1">
 			<x path="lime._backend.native._NativeApplication.TouchEventType"/>
 			<meta>
 				<m n=":enum"/>
@@ -3668,8 +3670,8 @@
 		<windowID public="1"><x path="Int"/></windowID>
 		<x public="1"><x path="Int"/></x>
 		<y public="1"><x path="Int"/></y>
-		<clone public="1" set="method" line="980"><f a=""><c path="lime._backend.native._NativeApplication.WindowEventInfo"/></f></clone>
-		<new public="1" set="method" line="968"><f a="?type:?windowID:?width:?height:?x:?y">
+		<clone public="1" set="method" line="1012"><f a=""><c path="lime._backend.native._NativeApplication.WindowEventInfo"/></f></clone>
+		<new public="1" set="method" line="1000"><f a="?type:?windowID:?width:?height:?x:?y">
 	<x path="lime._backend.native._NativeApplication.WindowEventType"/>
 	<x path="Int"/>
 	<x path="Int"/>
@@ -3684,77 +3686,77 @@
 		<this><x path="Int"/></this>
 		<meta><m n=":enum"/></meta>
 		<impl><class path="lime._backend.native._NativeApplication.WindowEventType_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/_backend/native/NativeApplication.hx" private="1" module="lime._backend.native.NativeApplication" extern="1">
-	<WINDOW_ACTIVATE public="1" get="inline" set="null" line="992" static="1">
+	<WINDOW_ACTIVATE public="1" get="inline" set="null" line="1024" static="1">
 		<x path="lime._backend.native._NativeApplication.WindowEventType"/>
 		<meta>
 			<m n=":enum"/>
 			<m n=":impl"/>
 		</meta>
 	</WINDOW_ACTIVATE>
-	<WINDOW_CLOSE public="1" get="inline" set="null" line="993" static="1">
+	<WINDOW_CLOSE public="1" get="inline" set="null" line="1025" static="1">
 		<x path="lime._backend.native._NativeApplication.WindowEventType"/>
 		<meta>
 			<m n=":enum"/>
 			<m n=":impl"/>
 		</meta>
 	</WINDOW_CLOSE>
-	<WINDOW_DEACTIVATE public="1" get="inline" set="null" line="994" static="1">
+	<WINDOW_DEACTIVATE public="1" get="inline" set="null" line="1026" static="1">
 		<x path="lime._backend.native._NativeApplication.WindowEventType"/>
 		<meta>
 			<m n=":enum"/>
 			<m n=":impl"/>
 		</meta>
 	</WINDOW_DEACTIVATE>
-	<WINDOW_ENTER public="1" get="inline" set="null" line="995" static="1">
+	<WINDOW_ENTER public="1" get="inline" set="null" line="1027" static="1">
 		<x path="lime._backend.native._NativeApplication.WindowEventType"/>
 		<meta>
 			<m n=":enum"/>
 			<m n=":impl"/>
 		</meta>
 	</WINDOW_ENTER>
-	<WINDOW_FOCUS_IN public="1" get="inline" set="null" line="996" static="1">
+	<WINDOW_FOCUS_IN public="1" get="inline" set="null" line="1028" static="1">
 		<x path="lime._backend.native._NativeApplication.WindowEventType"/>
 		<meta>
 			<m n=":enum"/>
 			<m n=":impl"/>
 		</meta>
 	</WINDOW_FOCUS_IN>
-	<WINDOW_FOCUS_OUT public="1" get="inline" set="null" line="997" static="1">
+	<WINDOW_FOCUS_OUT public="1" get="inline" set="null" line="1029" static="1">
 		<x path="lime._backend.native._NativeApplication.WindowEventType"/>
 		<meta>
 			<m n=":enum"/>
 			<m n=":impl"/>
 		</meta>
 	</WINDOW_FOCUS_OUT>
-	<WINDOW_LEAVE public="1" get="inline" set="null" line="998" static="1">
+	<WINDOW_LEAVE public="1" get="inline" set="null" line="1030" static="1">
 		<x path="lime._backend.native._NativeApplication.WindowEventType"/>
 		<meta>
 			<m n=":enum"/>
 			<m n=":impl"/>
 		</meta>
 	</WINDOW_LEAVE>
-	<WINDOW_MINIMIZE public="1" get="inline" set="null" line="999" static="1">
+	<WINDOW_MINIMIZE public="1" get="inline" set="null" line="1031" static="1">
 		<x path="lime._backend.native._NativeApplication.WindowEventType"/>
 		<meta>
 			<m n=":enum"/>
 			<m n=":impl"/>
 		</meta>
 	</WINDOW_MINIMIZE>
-	<WINDOW_MOVE public="1" get="inline" set="null" line="1000" static="1">
+	<WINDOW_MOVE public="1" get="inline" set="null" line="1032" static="1">
 		<x path="lime._backend.native._NativeApplication.WindowEventType"/>
 		<meta>
 			<m n=":enum"/>
 			<m n=":impl"/>
 		</meta>
 	</WINDOW_MOVE>
-	<WINDOW_RESIZE public="1" get="inline" set="null" line="1001" static="1">
+	<WINDOW_RESIZE public="1" get="inline" set="null" line="1033" static="1">
 		<x path="lime._backend.native._NativeApplication.WindowEventType"/>
 		<meta>
 			<m n=":enum"/>
 			<m n=":impl"/>
 		</meta>
 	</WINDOW_RESIZE>
-	<WINDOW_RESTORE public="1" get="inline" set="null" line="1002" static="1">
+	<WINDOW_RESTORE public="1" get="inline" set="null" line="1034" static="1">
 		<x path="lime._backend.native._NativeApplication.WindowEventType"/>
 		<meta>
 			<m n=":enum"/>
@@ -3765,77 +3767,77 @@
 </class></impl>
 	</abstract>
 	<class path="lime._backend.native._NativeApplication.WindowEventType_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/_backend/native/NativeApplication.hx" private="1" module="lime._backend.native.NativeApplication" extern="1">
-		<WINDOW_ACTIVATE public="1" get="inline" set="null" line="992" static="1">
+		<WINDOW_ACTIVATE public="1" get="inline" set="null" line="1024" static="1">
 			<x path="lime._backend.native._NativeApplication.WindowEventType"/>
 			<meta>
 				<m n=":enum"/>
 				<m n=":impl"/>
 			</meta>
 		</WINDOW_ACTIVATE>
-		<WINDOW_CLOSE public="1" get="inline" set="null" line="993" static="1">
+		<WINDOW_CLOSE public="1" get="inline" set="null" line="1025" static="1">
 			<x path="lime._backend.native._NativeApplication.WindowEventType"/>
 			<meta>
 				<m n=":enum"/>
 				<m n=":impl"/>
 			</meta>
 		</WINDOW_CLOSE>
-		<WINDOW_DEACTIVATE public="1" get="inline" set="null" line="994" static="1">
+		<WINDOW_DEACTIVATE public="1" get="inline" set="null" line="1026" static="1">
 			<x path="lime._backend.native._NativeApplication.WindowEventType"/>
 			<meta>
 				<m n=":enum"/>
 				<m n=":impl"/>
 			</meta>
 		</WINDOW_DEACTIVATE>
-		<WINDOW_ENTER public="1" get="inline" set="null" line="995" static="1">
+		<WINDOW_ENTER public="1" get="inline" set="null" line="1027" static="1">
 			<x path="lime._backend.native._NativeApplication.WindowEventType"/>
 			<meta>
 				<m n=":enum"/>
 				<m n=":impl"/>
 			</meta>
 		</WINDOW_ENTER>
-		<WINDOW_FOCUS_IN public="1" get="inline" set="null" line="996" static="1">
+		<WINDOW_FOCUS_IN public="1" get="inline" set="null" line="1028" static="1">
 			<x path="lime._backend.native._NativeApplication.WindowEventType"/>
 			<meta>
 				<m n=":enum"/>
 				<m n=":impl"/>
 			</meta>
 		</WINDOW_FOCUS_IN>
-		<WINDOW_FOCUS_OUT public="1" get="inline" set="null" line="997" static="1">
+		<WINDOW_FOCUS_OUT public="1" get="inline" set="null" line="1029" static="1">
 			<x path="lime._backend.native._NativeApplication.WindowEventType"/>
 			<meta>
 				<m n=":enum"/>
 				<m n=":impl"/>
 			</meta>
 		</WINDOW_FOCUS_OUT>
-		<WINDOW_LEAVE public="1" get="inline" set="null" line="998" static="1">
+		<WINDOW_LEAVE public="1" get="inline" set="null" line="1030" static="1">
 			<x path="lime._backend.native._NativeApplication.WindowEventType"/>
 			<meta>
 				<m n=":enum"/>
 				<m n=":impl"/>
 			</meta>
 		</WINDOW_LEAVE>
-		<WINDOW_MINIMIZE public="1" get="inline" set="null" line="999" static="1">
+		<WINDOW_MINIMIZE public="1" get="inline" set="null" line="1031" static="1">
 			<x path="lime._backend.native._NativeApplication.WindowEventType"/>
 			<meta>
 				<m n=":enum"/>
 				<m n=":impl"/>
 			</meta>
 		</WINDOW_MINIMIZE>
-		<WINDOW_MOVE public="1" get="inline" set="null" line="1000" static="1">
+		<WINDOW_MOVE public="1" get="inline" set="null" line="1032" static="1">
 			<x path="lime._backend.native._NativeApplication.WindowEventType"/>
 			<meta>
 				<m n=":enum"/>
 				<m n=":impl"/>
 			</meta>
 		</WINDOW_MOVE>
-		<WINDOW_RESIZE public="1" get="inline" set="null" line="1001" static="1">
+		<WINDOW_RESIZE public="1" get="inline" set="null" line="1033" static="1">
 			<x path="lime._backend.native._NativeApplication.WindowEventType"/>
 			<meta>
 				<m n=":enum"/>
 				<m n=":impl"/>
 			</meta>
 		</WINDOW_RESIZE>
-		<WINDOW_RESTORE public="1" get="inline" set="null" line="1002" static="1">
+		<WINDOW_RESTORE public="1" get="inline" set="null" line="1034" static="1">
 			<x path="lime._backend.native._NativeApplication.WindowEventType"/>
 			<meta>
 				<m n=":enum"/>
@@ -5836,71 +5838,75 @@
 	</antialiasing>
 </a></typedef>
 	<class path="lime.app.Event" params="T" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/app/Event.hx">
-		<listeners public="1">
+		<canceled public="1" set="null"><x path="Bool"/></canceled>
+		<__listeners public="1">
 			<c path="Array"><c path="lime.app.Event.T"/></c>
 			<meta>
 				<m n=":noCompletion"/>
 				<m n=":dox"><e>hide</e></m>
 			</meta>
-		</listeners>
-		<repeat public="1">
+		</__listeners>
+		<__repeat public="1">
 			<c path="Array"><x path="Bool"/></c>
 			<meta>
 				<m n=":noCompletion"/>
 				<m n=":dox"><e>hide</e></m>
 			</meta>
-		</repeat>
-		<priorities><c path="Array"><x path="Int"/></c></priorities>
-		<add public="1" set="method" line="36"><f a="listener:?once:?priority">
+		</__repeat>
+		<__priorities><c path="Array"><x path="Int"/></c></__priorities>
+		<add public="1" set="method" line="38"><f a="listener:?once:?priority">
 	<c path="lime.app.Event.T"/>
 	<x path="Bool"/>
 	<x path="Int"/>
 	<x path="Void"/>
 </f></add>
+		<cancel public="1" set="method" line="209"><f a=""><x path="Void"/></f></cancel>
 		<dispatch public="1"><d/></dispatch>
-		<has public="1" set="method" line="230"><f a="listener">
+		<has public="1" set="method" line="247"><f a="listener">
 	<c path="lime.app.Event.T"/>
 	<x path="Bool"/>
 </f></has>
-		<remove public="1" set="method" line="245"><f a="listener">
+		<remove public="1" set="method" line="262"><f a="listener">
 	<c path="lime.app.Event.T"/>
 	<x path="Void"/>
 </f></remove>
-		<new public="1" set="method" line="25"><f a=""><x path="Void"/></f></new>
+		<new public="1" set="method" line="26"><f a=""><x path="Void"/></f></new>
 		<meta><m n=":genericBuild"><e>lime.app.Event.build()</e></m></meta>
 	</class>
 	<class path="lime.app.Event_Array_String__Void" params="T" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/ui/FileDialog.hx">
-		<repeat public="1">
+		<canceled public="1" set="null"><x path="Bool"/></canceled>
+		<__repeat public="1">
 			<c path="Array"><x path="Bool"/></c>
 			<meta>
 				<m n=":noCompletion"/>
 				<m n=":dox"><e>hide</e></m>
 			</meta>
-		</repeat>
-		<priorities><c path="Array"><x path="Int"/></c></priorities>
-		<add public="1" set="method" line="36"><f a="listener:?once:?priority">
+		</__repeat>
+		<__priorities><c path="Array"><x path="Int"/></c></__priorities>
+		<add public="1" set="method" line="38"><f a="listener:?once:?priority">
 	<c path="lime.app.Event_Array_String__Void.T"/>
 	<x path="Bool"/>
 	<x path="Int"/>
 	<x path="Void"/>
 </f></add>
-		<has public="1" set="method" line="230"><f a="listener">
+		<cancel public="1" set="method" line="209"><f a=""><x path="Void"/></f></cancel>
+		<has public="1" set="method" line="247"><f a="listener">
 	<c path="lime.app.Event_Array_String__Void.T"/>
 	<x path="Bool"/>
 </f></has>
-		<remove public="1" set="method" line="245"><f a="listener">
+		<remove public="1" set="method" line="262"><f a="listener">
 	<c path="lime.app.Event_Array_String__Void.T"/>
 	<x path="Void"/>
 </f></remove>
-		<listeners public="1"><c path="Array"><f a="">
+		<__listeners public="1"><c path="Array"><f a="">
 	<c path="Array"><c path="String"/></c>
 	<x path="Void"/>
-</f></c></listeners>
+</f></c></__listeners>
 		<dispatch public="1" set="method" line="24"><f a="a">
 	<c path="Array"><c path="String"/></c>
 	<x path="Void"/>
 </f></dispatch>
-		<new public="1" set="method" line="25"><f a=""><x path="Void"/></f></new>
+		<new public="1" set="method" line="26"><f a=""><x path="Void"/></f></new>
 		<meta>
 			<m n=":directlyUsed"/>
 			<m n=":dox"><e>hide</e></m>
@@ -5908,37 +5914,39 @@
 		</meta>
 	</class>
 	<class path="lime.app.Event_Dynamic_Void" params="T" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/system/ThreadPool.hx">
-		<repeat public="1">
+		<canceled public="1" set="null"><x path="Bool"/></canceled>
+		<__repeat public="1">
 			<c path="Array"><x path="Bool"/></c>
 			<meta>
 				<m n=":noCompletion"/>
 				<m n=":dox"><e>hide</e></m>
 			</meta>
-		</repeat>
-		<priorities><c path="Array"><x path="Int"/></c></priorities>
-		<add public="1" set="method" line="36"><f a="listener:?once:?priority">
+		</__repeat>
+		<__priorities><c path="Array"><x path="Int"/></c></__priorities>
+		<add public="1" set="method" line="38"><f a="listener:?once:?priority">
 	<c path="lime.app.Event_Dynamic_Void.T"/>
 	<x path="Bool"/>
 	<x path="Int"/>
 	<x path="Void"/>
 </f></add>
-		<has public="1" set="method" line="230"><f a="listener">
+		<cancel public="1" set="method" line="209"><f a=""><x path="Void"/></f></cancel>
+		<has public="1" set="method" line="247"><f a="listener">
 	<c path="lime.app.Event_Dynamic_Void.T"/>
 	<x path="Bool"/>
 </f></has>
-		<remove public="1" set="method" line="245"><f a="listener">
+		<remove public="1" set="method" line="262"><f a="listener">
 	<c path="lime.app.Event_Dynamic_Void.T"/>
 	<x path="Void"/>
 </f></remove>
-		<listeners public="1"><c path="Array"><f a="">
+		<__listeners public="1"><c path="Array"><f a="">
 	<d/>
 	<x path="Void"/>
-</f></c></listeners>
+</f></c></__listeners>
 		<dispatch public="1" set="method" line="20"><f a="a">
 	<d/>
 	<x path="Void"/>
 </f></dispatch>
-		<new public="1" set="method" line="25"><f a=""><x path="Void"/></f></new>
+		<new public="1" set="method" line="26"><f a=""><x path="Void"/></f></new>
 		<meta>
 			<m n=":directlyUsed"/>
 			<m n=":dox"><e>hide</e></m>
@@ -5946,41 +5954,43 @@
 		</meta>
 	</class>
 	<class path="lime.app.Event_Float_Float_Float_Void" params="T" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/system/Sensor.hx">
-		<repeat public="1">
+		<canceled public="1" set="null"><x path="Bool"/></canceled>
+		<__repeat public="1">
 			<c path="Array"><x path="Bool"/></c>
 			<meta>
 				<m n=":noCompletion"/>
 				<m n=":dox"><e>hide</e></m>
 			</meta>
-		</repeat>
-		<priorities><c path="Array"><x path="Int"/></c></priorities>
-		<add public="1" set="method" line="36"><f a="listener:?once:?priority">
+		</__repeat>
+		<__priorities><c path="Array"><x path="Int"/></c></__priorities>
+		<add public="1" set="method" line="38"><f a="listener:?once:?priority">
 	<c path="lime.app.Event_Float_Float_Float_Void.T"/>
 	<x path="Bool"/>
 	<x path="Int"/>
 	<x path="Void"/>
 </f></add>
-		<has public="1" set="method" line="230"><f a="listener">
+		<cancel public="1" set="method" line="209"><f a=""><x path="Void"/></f></cancel>
+		<has public="1" set="method" line="247"><f a="listener">
 	<c path="lime.app.Event_Float_Float_Float_Void.T"/>
 	<x path="Bool"/>
 </f></has>
-		<remove public="1" set="method" line="245"><f a="listener">
+		<remove public="1" set="method" line="262"><f a="listener">
 	<c path="lime.app.Event_Float_Float_Float_Void.T"/>
 	<x path="Void"/>
 </f></remove>
-		<listeners public="1"><c path="Array"><f a="::">
+		<__listeners public="1"><c path="Array"><f a="::">
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Void"/>
-</f></c></listeners>
+</f></c></__listeners>
 		<dispatch public="1" set="method" line="14"><f a="a:a1:a2">
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Void"/>
 </f></dispatch>
-		<new public="1" set="method" line="25"><f a=""><x path="Void"/></f></new>
+		<new public="1" set="method" line="26"><f a=""><x path="Void"/></f></new>
 		<meta>
 			<m n=":directlyUsed"/>
 			<m n=":dox"><e>hide</e></m>
@@ -5988,41 +5998,43 @@
 		</meta>
 	</class>
 	<class path="lime.app.Event_Float_Float_Int_Void" params="T" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/ui/Window.hx">
-		<repeat public="1">
+		<canceled public="1" set="null"><x path="Bool"/></canceled>
+		<__repeat public="1">
 			<c path="Array"><x path="Bool"/></c>
 			<meta>
 				<m n=":noCompletion"/>
 				<m n=":dox"><e>hide</e></m>
 			</meta>
-		</repeat>
-		<priorities><c path="Array"><x path="Int"/></c></priorities>
-		<add public="1" set="method" line="36"><f a="listener:?once:?priority">
+		</__repeat>
+		<__priorities><c path="Array"><x path="Int"/></c></__priorities>
+		<add public="1" set="method" line="38"><f a="listener:?once:?priority">
 	<c path="lime.app.Event_Float_Float_Int_Void.T"/>
 	<x path="Bool"/>
 	<x path="Int"/>
 	<x path="Void"/>
 </f></add>
-		<has public="1" set="method" line="230"><f a="listener">
+		<cancel public="1" set="method" line="209"><f a=""><x path="Void"/></f></cancel>
+		<has public="1" set="method" line="247"><f a="listener">
 	<c path="lime.app.Event_Float_Float_Int_Void.T"/>
 	<x path="Bool"/>
 </f></has>
-		<remove public="1" set="method" line="245"><f a="listener">
+		<remove public="1" set="method" line="262"><f a="listener">
 	<c path="lime.app.Event_Float_Float_Int_Void.T"/>
 	<x path="Void"/>
 </f></remove>
-		<listeners public="1"><c path="Array"><f a="::">
+		<__listeners public="1"><c path="Array"><f a="::">
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Int"/>
 	<x path="Void"/>
-</f></c></listeners>
+</f></c></__listeners>
 		<dispatch public="1" set="method" line="41"><f a="a:a1:a2">
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Int"/>
 	<x path="Void"/>
 </f></dispatch>
-		<new public="1" set="method" line="25"><f a=""><x path="Void"/></f></new>
+		<new public="1" set="method" line="26"><f a=""><x path="Void"/></f></new>
 		<meta>
 			<m n=":directlyUsed"/>
 			<m n=":dox"><e>hide</e></m>
@@ -6030,39 +6042,41 @@
 		</meta>
 	</class>
 	<class path="lime.app.Event_Float_Float_Void" params="T" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/ui/Window.hx">
-		<repeat public="1">
+		<canceled public="1" set="null"><x path="Bool"/></canceled>
+		<__repeat public="1">
 			<c path="Array"><x path="Bool"/></c>
 			<meta>
 				<m n=":noCompletion"/>
 				<m n=":dox"><e>hide</e></m>
 			</meta>
-		</repeat>
-		<priorities><c path="Array"><x path="Int"/></c></priorities>
-		<add public="1" set="method" line="36"><f a="listener:?once:?priority">
+		</__repeat>
+		<__priorities><c path="Array"><x path="Int"/></c></__priorities>
+		<add public="1" set="method" line="38"><f a="listener:?once:?priority">
 	<c path="lime.app.Event_Float_Float_Void.T"/>
 	<x path="Bool"/>
 	<x path="Int"/>
 	<x path="Void"/>
 </f></add>
-		<has public="1" set="method" line="230"><f a="listener">
+		<cancel public="1" set="method" line="209"><f a=""><x path="Void"/></f></cancel>
+		<has public="1" set="method" line="247"><f a="listener">
 	<c path="lime.app.Event_Float_Float_Void.T"/>
 	<x path="Bool"/>
 </f></has>
-		<remove public="1" set="method" line="245"><f a="listener">
+		<remove public="1" set="method" line="262"><f a="listener">
 	<c path="lime.app.Event_Float_Float_Void.T"/>
 	<x path="Void"/>
 </f></remove>
-		<listeners public="1"><c path="Array"><f a=":">
+		<__listeners public="1"><c path="Array"><f a=":">
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Void"/>
-</f></c></listeners>
+</f></c></__listeners>
 		<dispatch public="1" set="method" line="42"><f a="a:a1">
 	<x path="Float"/>
 	<x path="Float"/>
 	<x path="Void"/>
 </f></dispatch>
-		<new public="1" set="method" line="25"><f a=""><x path="Void"/></f></new>
+		<new public="1" set="method" line="26"><f a=""><x path="Void"/></f></new>
 		<meta>
 			<m n=":directlyUsed"/>
 			<m n=":dox"><e>hide</e></m>
@@ -6070,39 +6084,41 @@
 		</meta>
 	</class>
 	<class path="lime.app.Event_Int_Float_Void" params="T" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/ui/Joystick.hx">
-		<repeat public="1">
+		<canceled public="1" set="null"><x path="Bool"/></canceled>
+		<__repeat public="1">
 			<c path="Array"><x path="Bool"/></c>
 			<meta>
 				<m n=":noCompletion"/>
 				<m n=":dox"><e>hide</e></m>
 			</meta>
-		</repeat>
-		<priorities><c path="Array"><x path="Int"/></c></priorities>
-		<add public="1" set="method" line="36"><f a="listener:?once:?priority">
+		</__repeat>
+		<__priorities><c path="Array"><x path="Int"/></c></__priorities>
+		<add public="1" set="method" line="38"><f a="listener:?once:?priority">
 	<c path="lime.app.Event_Int_Float_Void.T"/>
 	<x path="Bool"/>
 	<x path="Int"/>
 	<x path="Void"/>
 </f></add>
-		<has public="1" set="method" line="230"><f a="listener">
+		<cancel public="1" set="method" line="209"><f a=""><x path="Void"/></f></cancel>
+		<has public="1" set="method" line="247"><f a="listener">
 	<c path="lime.app.Event_Int_Float_Void.T"/>
 	<x path="Bool"/>
 </f></has>
-		<remove public="1" set="method" line="245"><f a="listener">
+		<remove public="1" set="method" line="262"><f a="listener">
 	<c path="lime.app.Event_Int_Float_Void.T"/>
 	<x path="Void"/>
 </f></remove>
-		<listeners public="1"><c path="Array"><f a=":">
+		<__listeners public="1"><c path="Array"><f a=":">
 	<x path="Int"/>
 	<x path="Float"/>
 	<x path="Void"/>
-</f></c></listeners>
+</f></c></__listeners>
 		<dispatch public="1" set="method" line="25"><f a="a:a1">
 	<x path="Int"/>
 	<x path="Float"/>
 	<x path="Void"/>
 </f></dispatch>
-		<new public="1" set="method" line="25"><f a=""><x path="Void"/></f></new>
+		<new public="1" set="method" line="26"><f a=""><x path="Void"/></f></new>
 		<meta>
 			<m n=":directlyUsed"/>
 			<m n=":dox"><e>hide</e></m>
@@ -6110,39 +6126,41 @@
 		</meta>
 	</class>
 	<class path="lime.app.Event_Int_Int_Void" params="T" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/ui/Window.hx">
-		<repeat public="1">
+		<canceled public="1" set="null"><x path="Bool"/></canceled>
+		<__repeat public="1">
 			<c path="Array"><x path="Bool"/></c>
 			<meta>
 				<m n=":noCompletion"/>
 				<m n=":dox"><e>hide</e></m>
 			</meta>
-		</repeat>
-		<priorities><c path="Array"><x path="Int"/></c></priorities>
-		<add public="1" set="method" line="36"><f a="listener:?once:?priority">
+		</__repeat>
+		<__priorities><c path="Array"><x path="Int"/></c></__priorities>
+		<add public="1" set="method" line="38"><f a="listener:?once:?priority">
 	<c path="lime.app.Event_Int_Int_Void.T"/>
 	<x path="Bool"/>
 	<x path="Int"/>
 	<x path="Void"/>
 </f></add>
-		<has public="1" set="method" line="230"><f a="listener">
+		<cancel public="1" set="method" line="209"><f a=""><x path="Void"/></f></cancel>
+		<has public="1" set="method" line="247"><f a="listener">
 	<c path="lime.app.Event_Int_Int_Void.T"/>
 	<x path="Bool"/>
 </f></has>
-		<remove public="1" set="method" line="245"><f a="listener">
+		<remove public="1" set="method" line="262"><f a="listener">
 	<c path="lime.app.Event_Int_Int_Void.T"/>
 	<x path="Void"/>
 </f></remove>
-		<listeners public="1"><c path="Array"><f a=":">
+		<__listeners public="1"><c path="Array"><f a=":">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Void"/>
-</f></c></listeners>
+</f></c></__listeners>
 		<dispatch public="1" set="method" line="47"><f a="a:a1">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Void"/>
 </f></dispatch>
-		<new public="1" set="method" line="25"><f a=""><x path="Void"/></f></new>
+		<new public="1" set="method" line="26"><f a=""><x path="Void"/></f></new>
 		<meta>
 			<m n=":directlyUsed"/>
 			<m n=":dox"><e>hide</e></m>
@@ -6150,37 +6168,39 @@
 		</meta>
 	</class>
 	<class path="lime.app.Event_Int_Void" params="T" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/app/Module.hx">
-		<repeat public="1">
+		<canceled public="1" set="null"><x path="Bool"/></canceled>
+		<__repeat public="1">
 			<c path="Array"><x path="Bool"/></c>
 			<meta>
 				<m n=":noCompletion"/>
 				<m n=":dox"><e>hide</e></m>
 			</meta>
-		</repeat>
-		<priorities><c path="Array"><x path="Int"/></c></priorities>
-		<add public="1" set="method" line="36"><f a="listener:?once:?priority">
+		</__repeat>
+		<__priorities><c path="Array"><x path="Int"/></c></__priorities>
+		<add public="1" set="method" line="38"><f a="listener:?once:?priority">
 	<c path="lime.app.Event_Int_Void.T"/>
 	<x path="Bool"/>
 	<x path="Int"/>
 	<x path="Void"/>
 </f></add>
-		<has public="1" set="method" line="230"><f a="listener">
+		<cancel public="1" set="method" line="209"><f a=""><x path="Void"/></f></cancel>
+		<has public="1" set="method" line="247"><f a="listener">
 	<c path="lime.app.Event_Int_Void.T"/>
 	<x path="Bool"/>
 </f></has>
-		<remove public="1" set="method" line="245"><f a="listener">
+		<remove public="1" set="method" line="262"><f a="listener">
 	<c path="lime.app.Event_Int_Void.T"/>
 	<x path="Void"/>
 </f></remove>
-		<listeners public="1"><c path="Array"><f a="">
+		<__listeners public="1"><c path="Array"><f a="">
 	<x path="Int"/>
 	<x path="Void"/>
-</f></c></listeners>
+</f></c></__listeners>
 		<dispatch public="1" set="method" line="23"><f a="a">
 	<x path="Int"/>
 	<x path="Void"/>
 </f></dispatch>
-		<new public="1" set="method" line="25"><f a=""><x path="Void"/></f></new>
+		<new public="1" set="method" line="26"><f a=""><x path="Void"/></f></new>
 		<meta>
 			<m n=":directlyUsed"/>
 			<m n=":dox"><e>hide</e></m>
@@ -6188,39 +6208,41 @@
 		</meta>
 	</class>
 	<class path="lime.app.Event_Int_lime_ui_JoystickHatPosition_Void" params="T" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/ui/Joystick.hx">
-		<repeat public="1">
+		<canceled public="1" set="null"><x path="Bool"/></canceled>
+		<__repeat public="1">
 			<c path="Array"><x path="Bool"/></c>
 			<meta>
 				<m n=":noCompletion"/>
 				<m n=":dox"><e>hide</e></m>
 			</meta>
-		</repeat>
-		<priorities><c path="Array"><x path="Int"/></c></priorities>
-		<add public="1" set="method" line="36"><f a="listener:?once:?priority">
+		</__repeat>
+		<__priorities><c path="Array"><x path="Int"/></c></__priorities>
+		<add public="1" set="method" line="38"><f a="listener:?once:?priority">
 	<c path="lime.app.Event_Int_lime_ui_JoystickHatPosition_Void.T"/>
 	<x path="Bool"/>
 	<x path="Int"/>
 	<x path="Void"/>
 </f></add>
-		<has public="1" set="method" line="230"><f a="listener">
+		<cancel public="1" set="method" line="209"><f a=""><x path="Void"/></f></cancel>
+		<has public="1" set="method" line="247"><f a="listener">
 	<c path="lime.app.Event_Int_lime_ui_JoystickHatPosition_Void.T"/>
 	<x path="Bool"/>
 </f></has>
-		<remove public="1" set="method" line="245"><f a="listener">
+		<remove public="1" set="method" line="262"><f a="listener">
 	<c path="lime.app.Event_Int_lime_ui_JoystickHatPosition_Void.T"/>
 	<x path="Void"/>
 </f></remove>
-		<listeners public="1"><c path="Array"><f a=":">
+		<__listeners public="1"><c path="Array"><f a=":">
 	<x path="Int"/>
 	<x path="lime.ui.JoystickHatPosition"/>
 	<x path="Void"/>
-</f></c></listeners>
+</f></c></__listeners>
 		<dispatch public="1" set="method" line="29"><f a="a:a1">
 	<x path="Int"/>
 	<x path="lime.ui.JoystickHatPosition"/>
 	<x path="Void"/>
 </f></dispatch>
-		<new public="1" set="method" line="25"><f a=""><x path="Void"/></f></new>
+		<new public="1" set="method" line="26"><f a=""><x path="Void"/></f></new>
 		<meta>
 			<m n=":directlyUsed"/>
 			<m n=":dox"><e>hide</e></m>
@@ -6228,41 +6250,43 @@
 		</meta>
 	</class>
 	<class path="lime.app.Event_String_Int_Int_Void" params="T" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/ui/Window.hx">
-		<repeat public="1">
+		<canceled public="1" set="null"><x path="Bool"/></canceled>
+		<__repeat public="1">
 			<c path="Array"><x path="Bool"/></c>
 			<meta>
 				<m n=":noCompletion"/>
 				<m n=":dox"><e>hide</e></m>
 			</meta>
-		</repeat>
-		<priorities><c path="Array"><x path="Int"/></c></priorities>
-		<add public="1" set="method" line="36"><f a="listener:?once:?priority">
+		</__repeat>
+		<__priorities><c path="Array"><x path="Int"/></c></__priorities>
+		<add public="1" set="method" line="38"><f a="listener:?once:?priority">
 	<c path="lime.app.Event_String_Int_Int_Void.T"/>
 	<x path="Bool"/>
 	<x path="Int"/>
 	<x path="Void"/>
 </f></add>
-		<has public="1" set="method" line="230"><f a="listener">
+		<cancel public="1" set="method" line="209"><f a=""><x path="Void"/></f></cancel>
+		<has public="1" set="method" line="247"><f a="listener">
 	<c path="lime.app.Event_String_Int_Int_Void.T"/>
 	<x path="Bool"/>
 </f></has>
-		<remove public="1" set="method" line="245"><f a="listener">
+		<remove public="1" set="method" line="262"><f a="listener">
 	<c path="lime.app.Event_String_Int_Int_Void.T"/>
 	<x path="Void"/>
 </f></remove>
-		<listeners public="1"><c path="Array"><f a="::">
+		<__listeners public="1"><c path="Array"><f a="::">
 	<c path="String"/>
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Void"/>
-</f></c></listeners>
+</f></c></__listeners>
 		<dispatch public="1" set="method" line="49"><f a="a:a1:a2">
 	<c path="String"/>
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Void"/>
 </f></dispatch>
-		<new public="1" set="method" line="25"><f a=""><x path="Void"/></f></new>
+		<new public="1" set="method" line="26"><f a=""><x path="Void"/></f></new>
 		<meta>
 			<m n=":directlyUsed"/>
 			<m n=":dox"><e>hide</e></m>
@@ -6270,37 +6294,39 @@
 		</meta>
 	</class>
 	<class path="lime.app.Event_String_Void" params="T" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/ui/FileDialog.hx">
-		<repeat public="1">
+		<canceled public="1" set="null"><x path="Bool"/></canceled>
+		<__repeat public="1">
 			<c path="Array"><x path="Bool"/></c>
 			<meta>
 				<m n=":noCompletion"/>
 				<m n=":dox"><e>hide</e></m>
 			</meta>
-		</repeat>
-		<priorities><c path="Array"><x path="Int"/></c></priorities>
-		<add public="1" set="method" line="36"><f a="listener:?once:?priority">
+		</__repeat>
+		<__priorities><c path="Array"><x path="Int"/></c></__priorities>
+		<add public="1" set="method" line="38"><f a="listener:?once:?priority">
 	<c path="lime.app.Event_String_Void.T"/>
 	<x path="Bool"/>
 	<x path="Int"/>
 	<x path="Void"/>
 </f></add>
-		<has public="1" set="method" line="230"><f a="listener">
+		<cancel public="1" set="method" line="209"><f a=""><x path="Void"/></f></cancel>
+		<has public="1" set="method" line="247"><f a="listener">
 	<c path="lime.app.Event_String_Void.T"/>
 	<x path="Bool"/>
 </f></has>
-		<remove public="1" set="method" line="245"><f a="listener">
+		<remove public="1" set="method" line="262"><f a="listener">
 	<c path="lime.app.Event_String_Void.T"/>
 	<x path="Void"/>
 </f></remove>
-		<listeners public="1"><c path="Array"><f a="">
+		<__listeners public="1"><c path="Array"><f a="">
 	<c path="String"/>
 	<x path="Void"/>
-</f></c></listeners>
+</f></c></__listeners>
 		<dispatch public="1" set="method" line="22"><f a="a">
 	<c path="String"/>
 	<x path="Void"/>
 </f></dispatch>
-		<new public="1" set="method" line="25"><f a=""><x path="Void"/></f></new>
+		<new public="1" set="method" line="26"><f a=""><x path="Void"/></f></new>
 		<meta>
 			<m n=":directlyUsed"/>
 			<m n=":dox"><e>hide</e></m>
@@ -6308,37 +6334,39 @@
 		</meta>
 	</class>
 	<class path="lime.app.Event_lime_graphics_RenderContext_Void" params="T" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/graphics/Renderer.hx">
-		<repeat public="1">
+		<canceled public="1" set="null"><x path="Bool"/></canceled>
+		<__repeat public="1">
 			<c path="Array"><x path="Bool"/></c>
 			<meta>
 				<m n=":noCompletion"/>
 				<m n=":dox"><e>hide</e></m>
 			</meta>
-		</repeat>
-		<priorities><c path="Array"><x path="Int"/></c></priorities>
-		<add public="1" set="method" line="36"><f a="listener:?once:?priority">
+		</__repeat>
+		<__priorities><c path="Array"><x path="Int"/></c></__priorities>
+		<add public="1" set="method" line="38"><f a="listener:?once:?priority">
 	<c path="lime.app.Event_lime_graphics_RenderContext_Void.T"/>
 	<x path="Bool"/>
 	<x path="Int"/>
 	<x path="Void"/>
 </f></add>
-		<has public="1" set="method" line="230"><f a="listener">
+		<cancel public="1" set="method" line="209"><f a=""><x path="Void"/></f></cancel>
+		<has public="1" set="method" line="247"><f a="listener">
 	<c path="lime.app.Event_lime_graphics_RenderContext_Void.T"/>
 	<x path="Bool"/>
 </f></has>
-		<remove public="1" set="method" line="245"><f a="listener">
+		<remove public="1" set="method" line="262"><f a="listener">
 	<c path="lime.app.Event_lime_graphics_RenderContext_Void.T"/>
 	<x path="Void"/>
 </f></remove>
-		<listeners public="1"><c path="Array"><f a="">
+		<__listeners public="1"><c path="Array"><f a="">
 	<e path="lime.graphics.RenderContext"/>
 	<x path="Void"/>
-</f></c></listeners>
+</f></c></__listeners>
 		<dispatch public="1" set="method" line="13"><f a="a">
 	<e path="lime.graphics.RenderContext"/>
 	<x path="Void"/>
 </f></dispatch>
-		<new public="1" set="method" line="25"><f a=""><x path="Void"/></f></new>
+		<new public="1" set="method" line="26"><f a=""><x path="Void"/></f></new>
 		<meta>
 			<m n=":directlyUsed"/>
 			<m n=":dox"><e>hide</e></m>
@@ -6346,39 +6374,41 @@
 		</meta>
 	</class>
 	<class path="lime.app.Event_lime_ui_GamepadAxis_Float_Void" params="T" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/ui/Gamepad.hx">
-		<repeat public="1">
+		<canceled public="1" set="null"><x path="Bool"/></canceled>
+		<__repeat public="1">
 			<c path="Array"><x path="Bool"/></c>
 			<meta>
 				<m n=":noCompletion"/>
 				<m n=":dox"><e>hide</e></m>
 			</meta>
-		</repeat>
-		<priorities><c path="Array"><x path="Int"/></c></priorities>
-		<add public="1" set="method" line="36"><f a="listener:?once:?priority">
+		</__repeat>
+		<__priorities><c path="Array"><x path="Int"/></c></__priorities>
+		<add public="1" set="method" line="38"><f a="listener:?once:?priority">
 	<c path="lime.app.Event_lime_ui_GamepadAxis_Float_Void.T"/>
 	<x path="Bool"/>
 	<x path="Int"/>
 	<x path="Void"/>
 </f></add>
-		<has public="1" set="method" line="230"><f a="listener">
+		<cancel public="1" set="method" line="209"><f a=""><x path="Void"/></f></cancel>
+		<has public="1" set="method" line="247"><f a="listener">
 	<c path="lime.app.Event_lime_ui_GamepadAxis_Float_Void.T"/>
 	<x path="Bool"/>
 </f></has>
-		<remove public="1" set="method" line="245"><f a="listener">
+		<remove public="1" set="method" line="262"><f a="listener">
 	<c path="lime.app.Event_lime_ui_GamepadAxis_Float_Void.T"/>
 	<x path="Void"/>
 </f></remove>
-		<listeners public="1"><c path="Array"><f a=":">
+		<__listeners public="1"><c path="Array"><f a=":">
 	<x path="lime.ui.GamepadAxis"/>
 	<x path="Float"/>
 	<x path="Void"/>
-</f></c></listeners>
+</f></c></__listeners>
 		<dispatch public="1" set="method" line="23"><f a="a:a1">
 	<x path="lime.ui.GamepadAxis"/>
 	<x path="Float"/>
 	<x path="Void"/>
 </f></dispatch>
-		<new public="1" set="method" line="25"><f a=""><x path="Void"/></f></new>
+		<new public="1" set="method" line="26"><f a=""><x path="Void"/></f></new>
 		<meta>
 			<m n=":directlyUsed"/>
 			<m n=":dox"><e>hide</e></m>
@@ -6386,37 +6416,39 @@
 		</meta>
 	</class>
 	<class path="lime.app.Event_lime_ui_GamepadButton_Void" params="T" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/ui/Gamepad.hx">
-		<repeat public="1">
+		<canceled public="1" set="null"><x path="Bool"/></canceled>
+		<__repeat public="1">
 			<c path="Array"><x path="Bool"/></c>
 			<meta>
 				<m n=":noCompletion"/>
 				<m n=":dox"><e>hide</e></m>
 			</meta>
-		</repeat>
-		<priorities><c path="Array"><x path="Int"/></c></priorities>
-		<add public="1" set="method" line="36"><f a="listener:?once:?priority">
+		</__repeat>
+		<__priorities><c path="Array"><x path="Int"/></c></__priorities>
+		<add public="1" set="method" line="38"><f a="listener:?once:?priority">
 	<c path="lime.app.Event_lime_ui_GamepadButton_Void.T"/>
 	<x path="Bool"/>
 	<x path="Int"/>
 	<x path="Void"/>
 </f></add>
-		<has public="1" set="method" line="230"><f a="listener">
+		<cancel public="1" set="method" line="209"><f a=""><x path="Void"/></f></cancel>
+		<has public="1" set="method" line="247"><f a="listener">
 	<c path="lime.app.Event_lime_ui_GamepadButton_Void.T"/>
 	<x path="Bool"/>
 </f></has>
-		<remove public="1" set="method" line="245"><f a="listener">
+		<remove public="1" set="method" line="262"><f a="listener">
 	<c path="lime.app.Event_lime_ui_GamepadButton_Void.T"/>
 	<x path="Void"/>
 </f></remove>
-		<listeners public="1"><c path="Array"><f a="">
+		<__listeners public="1"><c path="Array"><f a="">
 	<x path="lime.ui.GamepadButton"/>
 	<x path="Void"/>
-</f></c></listeners>
+</f></c></__listeners>
 		<dispatch public="1" set="method" line="24"><f a="a">
 	<x path="lime.ui.GamepadButton"/>
 	<x path="Void"/>
 </f></dispatch>
-		<new public="1" set="method" line="25"><f a=""><x path="Void"/></f></new>
+		<new public="1" set="method" line="26"><f a=""><x path="Void"/></f></new>
 		<meta>
 			<m n=":directlyUsed"/>
 			<m n=":dox"><e>hide</e></m>
@@ -6424,37 +6456,39 @@
 		</meta>
 	</class>
 	<class path="lime.app.Event_lime_ui_Gamepad_Void" params="T" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/ui/Gamepad.hx">
-		<repeat public="1">
+		<canceled public="1" set="null"><x path="Bool"/></canceled>
+		<__repeat public="1">
 			<c path="Array"><x path="Bool"/></c>
 			<meta>
 				<m n=":noCompletion"/>
 				<m n=":dox"><e>hide</e></m>
 			</meta>
-		</repeat>
-		<priorities><c path="Array"><x path="Int"/></c></priorities>
-		<add public="1" set="method" line="36"><f a="listener:?once:?priority">
+		</__repeat>
+		<__priorities><c path="Array"><x path="Int"/></c></__priorities>
+		<add public="1" set="method" line="38"><f a="listener:?once:?priority">
 	<c path="lime.app.Event_lime_ui_Gamepad_Void.T"/>
 	<x path="Bool"/>
 	<x path="Int"/>
 	<x path="Void"/>
 </f></add>
-		<has public="1" set="method" line="230"><f a="listener">
+		<cancel public="1" set="method" line="209"><f a=""><x path="Void"/></f></cancel>
+		<has public="1" set="method" line="247"><f a="listener">
 	<c path="lime.app.Event_lime_ui_Gamepad_Void.T"/>
 	<x path="Bool"/>
 </f></has>
-		<remove public="1" set="method" line="245"><f a="listener">
+		<remove public="1" set="method" line="262"><f a="listener">
 	<c path="lime.app.Event_lime_ui_Gamepad_Void.T"/>
 	<x path="Void"/>
 </f></remove>
-		<listeners public="1"><c path="Array"><f a="">
+		<__listeners public="1"><c path="Array"><f a="">
 	<c path="lime.ui.Gamepad"/>
 	<x path="Void"/>
-</f></c></listeners>
+</f></c></__listeners>
 		<dispatch public="1" set="method" line="17"><f a="a">
 	<c path="lime.ui.Gamepad"/>
 	<x path="Void"/>
 </f></dispatch>
-		<new public="1" set="method" line="25"><f a=""><x path="Void"/></f></new>
+		<new public="1" set="method" line="26"><f a=""><x path="Void"/></f></new>
 		<meta>
 			<m n=":directlyUsed"/>
 			<m n=":dox"><e>hide</e></m>
@@ -6462,37 +6496,39 @@
 		</meta>
 	</class>
 	<class path="lime.app.Event_lime_ui_Joystick_Void" params="T" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/ui/Joystick.hx">
-		<repeat public="1">
+		<canceled public="1" set="null"><x path="Bool"/></canceled>
+		<__repeat public="1">
 			<c path="Array"><x path="Bool"/></c>
 			<meta>
 				<m n=":noCompletion"/>
 				<m n=":dox"><e>hide</e></m>
 			</meta>
-		</repeat>
-		<priorities><c path="Array"><x path="Int"/></c></priorities>
-		<add public="1" set="method" line="36"><f a="listener:?once:?priority">
+		</__repeat>
+		<__priorities><c path="Array"><x path="Int"/></c></__priorities>
+		<add public="1" set="method" line="38"><f a="listener:?once:?priority">
 	<c path="lime.app.Event_lime_ui_Joystick_Void.T"/>
 	<x path="Bool"/>
 	<x path="Int"/>
 	<x path="Void"/>
 </f></add>
-		<has public="1" set="method" line="230"><f a="listener">
+		<cancel public="1" set="method" line="209"><f a=""><x path="Void"/></f></cancel>
+		<has public="1" set="method" line="247"><f a="listener">
 	<c path="lime.app.Event_lime_ui_Joystick_Void.T"/>
 	<x path="Bool"/>
 </f></has>
-		<remove public="1" set="method" line="245"><f a="listener">
+		<remove public="1" set="method" line="262"><f a="listener">
 	<c path="lime.app.Event_lime_ui_Joystick_Void.T"/>
 	<x path="Void"/>
 </f></remove>
-		<listeners public="1"><c path="Array"><f a="">
+		<__listeners public="1"><c path="Array"><f a="">
 	<c path="lime.ui.Joystick"/>
 	<x path="Void"/>
-</f></c></listeners>
+</f></c></__listeners>
 		<dispatch public="1" set="method" line="15"><f a="a">
 	<c path="lime.ui.Joystick"/>
 	<x path="Void"/>
 </f></dispatch>
-		<new public="1" set="method" line="25"><f a=""><x path="Void"/></f></new>
+		<new public="1" set="method" line="26"><f a=""><x path="Void"/></f></new>
 		<meta>
 			<m n=":directlyUsed"/>
 			<m n=":dox"><e>hide</e></m>
@@ -6500,39 +6536,41 @@
 		</meta>
 	</class>
 	<class path="lime.app.Event_lime_ui_KeyCode_lime_ui_KeyModifier_Void" params="T" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/ui/Window.hx">
-		<repeat public="1">
+		<canceled public="1" set="null"><x path="Bool"/></canceled>
+		<__repeat public="1">
 			<c path="Array"><x path="Bool"/></c>
 			<meta>
 				<m n=":noCompletion"/>
 				<m n=":dox"><e>hide</e></m>
 			</meta>
-		</repeat>
-		<priorities><c path="Array"><x path="Int"/></c></priorities>
-		<add public="1" set="method" line="36"><f a="listener:?once:?priority">
+		</__repeat>
+		<__priorities><c path="Array"><x path="Int"/></c></__priorities>
+		<add public="1" set="method" line="38"><f a="listener:?once:?priority">
 	<c path="lime.app.Event_lime_ui_KeyCode_lime_ui_KeyModifier_Void.T"/>
 	<x path="Bool"/>
 	<x path="Int"/>
 	<x path="Void"/>
 </f></add>
-		<has public="1" set="method" line="230"><f a="listener">
+		<cancel public="1" set="method" line="209"><f a=""><x path="Void"/></f></cancel>
+		<has public="1" set="method" line="247"><f a="listener">
 	<c path="lime.app.Event_lime_ui_KeyCode_lime_ui_KeyModifier_Void.T"/>
 	<x path="Bool"/>
 </f></has>
-		<remove public="1" set="method" line="245"><f a="listener">
+		<remove public="1" set="method" line="262"><f a="listener">
 	<c path="lime.app.Event_lime_ui_KeyCode_lime_ui_KeyModifier_Void.T"/>
 	<x path="Void"/>
 </f></remove>
-		<listeners public="1"><c path="Array"><f a=":">
+		<__listeners public="1"><c path="Array"><f a=":">
 	<x path="lime.ui.KeyCode"/>
 	<x path="lime.ui.KeyModifier"/>
 	<x path="Void"/>
-</f></c></listeners>
+</f></c></__listeners>
 		<dispatch public="1" set="method" line="37"><f a="a:a1">
 	<x path="lime.ui.KeyCode"/>
 	<x path="lime.ui.KeyModifier"/>
 	<x path="Void"/>
 </f></dispatch>
-		<new public="1" set="method" line="25"><f a=""><x path="Void"/></f></new>
+		<new public="1" set="method" line="26"><f a=""><x path="Void"/></f></new>
 		<meta>
 			<m n=":directlyUsed"/>
 			<m n=":dox"><e>hide</e></m>
@@ -6540,37 +6578,39 @@
 		</meta>
 	</class>
 	<class path="lime.app.Event_lime_ui_Touch_Void" params="T" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/ui/Touch.hx">
-		<repeat public="1">
+		<canceled public="1" set="null"><x path="Bool"/></canceled>
+		<__repeat public="1">
 			<c path="Array"><x path="Bool"/></c>
 			<meta>
 				<m n=":noCompletion"/>
 				<m n=":dox"><e>hide</e></m>
 			</meta>
-		</repeat>
-		<priorities><c path="Array"><x path="Int"/></c></priorities>
-		<add public="1" set="method" line="36"><f a="listener:?once:?priority">
+		</__repeat>
+		<__priorities><c path="Array"><x path="Int"/></c></__priorities>
+		<add public="1" set="method" line="38"><f a="listener:?once:?priority">
 	<c path="lime.app.Event_lime_ui_Touch_Void.T"/>
 	<x path="Bool"/>
 	<x path="Int"/>
 	<x path="Void"/>
 </f></add>
-		<has public="1" set="method" line="230"><f a="listener">
+		<cancel public="1" set="method" line="209"><f a=""><x path="Void"/></f></cancel>
+		<has public="1" set="method" line="247"><f a="listener">
 	<c path="lime.app.Event_lime_ui_Touch_Void.T"/>
 	<x path="Bool"/>
 </f></has>
-		<remove public="1" set="method" line="245"><f a="listener">
+		<remove public="1" set="method" line="262"><f a="listener">
 	<c path="lime.app.Event_lime_ui_Touch_Void.T"/>
 	<x path="Void"/>
 </f></remove>
-		<listeners public="1"><c path="Array"><f a="">
+		<__listeners public="1"><c path="Array"><f a="">
 	<c path="lime.ui.Touch"/>
 	<x path="Void"/>
-</f></c></listeners>
+</f></c></__listeners>
 		<dispatch public="1" set="method" line="10"><f a="a">
 	<c path="lime.ui.Touch"/>
 	<x path="Void"/>
 </f></dispatch>
-		<new public="1" set="method" line="25"><f a=""><x path="Void"/></f></new>
+		<new public="1" set="method" line="26"><f a=""><x path="Void"/></f></new>
 		<meta>
 			<m n=":directlyUsed"/>
 			<m n=":dox"><e>hide</e></m>
@@ -6578,37 +6618,39 @@
 		</meta>
 	</class>
 	<class path="lime.app.Event_lime_utils_Resource_Void" params="T" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/ui/FileDialog.hx">
-		<repeat public="1">
+		<canceled public="1" set="null"><x path="Bool"/></canceled>
+		<__repeat public="1">
 			<c path="Array"><x path="Bool"/></c>
 			<meta>
 				<m n=":noCompletion"/>
 				<m n=":dox"><e>hide</e></m>
 			</meta>
-		</repeat>
-		<priorities><c path="Array"><x path="Int"/></c></priorities>
-		<add public="1" set="method" line="36"><f a="listener:?once:?priority">
+		</__repeat>
+		<__priorities><c path="Array"><x path="Int"/></c></__priorities>
+		<add public="1" set="method" line="38"><f a="listener:?once:?priority">
 	<c path="lime.app.Event_lime_utils_Resource_Void.T"/>
 	<x path="Bool"/>
 	<x path="Int"/>
 	<x path="Void"/>
 </f></add>
-		<has public="1" set="method" line="230"><f a="listener">
+		<cancel public="1" set="method" line="209"><f a=""><x path="Void"/></f></cancel>
+		<has public="1" set="method" line="247"><f a="listener">
 	<c path="lime.app.Event_lime_utils_Resource_Void.T"/>
 	<x path="Bool"/>
 </f></has>
-		<remove public="1" set="method" line="245"><f a="listener">
+		<remove public="1" set="method" line="262"><f a="listener">
 	<c path="lime.app.Event_lime_utils_Resource_Void.T"/>
 	<x path="Void"/>
 </f></remove>
-		<listeners public="1"><c path="Array"><f a="">
+		<__listeners public="1"><c path="Array"><f a="">
 	<x path="lime.utils.Resource"/>
 	<x path="Void"/>
-</f></c></listeners>
+</f></c></__listeners>
 		<dispatch public="1" set="method" line="21"><f a="a">
 	<x path="lime.utils.Resource"/>
 	<x path="Void"/>
 </f></dispatch>
-		<new public="1" set="method" line="25"><f a=""><x path="Void"/></f></new>
+		<new public="1" set="method" line="26"><f a=""><x path="Void"/></f></new>
 		<meta>
 			<m n=":directlyUsed"/>
 			<m n=":dox"><e>hide</e></m>
@@ -7335,29 +7377,29 @@
 		<dispose public="1" set="method" line="79"><f a=""><x path="Void"/></f></dispose>
 		<init set="method" line="98"><f a=""><x path="Void"/></f></init>
 		<play public="1" set="method" line="150"><f a=""><x path="Void"/></f></play>
-		<pause public="1" set="method" line="206"><f a=""><x path="Void"/></f></pause>
-		<stop public="1" set="method" line="242"><f a=""><x path="Void"/></f></stop>
-		<timer_onRun set="method" line="281"><f a=""><x path="Void"/></f></timer_onRun>
-		<get_currentTime set="method" line="393"><f a=""><x path="Int"/></f></get_currentTime>
-		<set_currentTime set="method" line="414"><f a="value">
+		<pause public="1" set="method" line="200"><f a=""><x path="Void"/></f></pause>
+		<stop public="1" set="method" line="236"><f a=""><x path="Void"/></f></stop>
+		<timer_onRun set="method" line="362"><f a=""><x path="Void"/></f></timer_onRun>
+		<get_currentTime set="method" line="396"><f a=""><x path="Int"/></f></get_currentTime>
+		<set_currentTime set="method" line="417"><f a="value">
 	<x path="Int"/>
 	<x path="Int"/>
 </f></set_currentTime>
-		<get_gain set="method" line="443"><f a=""><x path="Float"/></f></get_gain>
-		<set_gain set="method" line="462"><f a="value">
+		<get_gain set="method" line="465"><f a=""><x path="Float"/></f></get_gain>
+		<set_gain set="method" line="484"><f a="value">
 	<x path="Float"/>
 	<x path="Float"/>
 </f></set_gain>
-		<get_loops get="inline" set="null" line="485"><f a=""><x path="Int"/></f></get_loops>
-		<set_loops get="inline" set="null" line="498"><f a="loops">
-	<x path="Int"/>
-	<x path="Int"/>
-</f></set_loops>
-		<get_length set="method" line="511"><f a=""><x path="Int"/></f></get_length>
-		<set_length set="method" line="537"><f a="value">
+		<get_length set="method" line="507"><f a=""><x path="Int"/></f></get_length>
+		<set_length set="method" line="533"><f a="value">
 	<x path="Int"/>
 	<x path="Int"/>
 </f></set_length>
+		<get_loops set="method" line="563"><f a=""><x path="Int"/></f></get_loops>
+		<set_loops set="method" line="580"><f a="loops">
+	<x path="Int"/>
+	<x path="Int"/>
+</f></set_loops>
 		<new public="1" set="method" line="56"><f a="?buffer:?offset:?length:?loops">
 	<c path="lime.audio.AudioBuffer"/>
 	<x path="Int"/>
