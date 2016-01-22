@@ -10,6 +10,8 @@ import lime.system.Display;
 
 #if openfl
 import openfl.display.Stage;
+#elseif flash
+import flash.display.Stage;
 #else
 typedef Stage = Dynamic;
 #end
@@ -19,6 +21,7 @@ class Window {
 	
 	
 	public var application (default, null):Application;
+	public var borderless (get, set):Bool;
 	public var config:WindowConfig;
 	public var display (get, null):Display;
 	public var enableTextEvents (get, set):Bool;
@@ -49,6 +52,7 @@ class Window {
 	public var onTextEdit = new Event<String->Int->Int->Void> ();
 	public var onTextInput = new Event<String->Void> ();
 	public var renderer:Renderer;
+	public var resizable (get, set):Bool;
 	public var scale (get, null):Float;
 	public var stage:Stage;
 	public var title (get, set):String;
@@ -57,9 +61,11 @@ class Window {
 	public var y (get, set):Int;
 	
 	@:noCompletion private var backend:WindowBackend;
+	@:noCompletion private var __borderless:Bool;
 	@:noCompletion private var __fullscreen:Bool;
 	@:noCompletion private var __height:Int;
 	@:noCompletion private var __minimized:Bool;
+	@:noCompletion private var __resizable:Bool;
 	@:noCompletion private var __scale:Float;
 	@:noCompletion private var __title:String;
 	@:noCompletion private var __width:Int;
@@ -87,6 +93,8 @@ class Window {
 			if (Reflect.hasField (config, "x")) __x = config.x;
 			if (Reflect.hasField (config, "y")) __y = config.y;
 			if (Reflect.hasField (config, "fullscreen")) __fullscreen = config.fullscreen;
+			if (Reflect.hasField (config, "borderless")) __borderless = config.borderless;
+			if (Reflect.hasField (config, "resizable")) __resizable = config.resizable;
 			if (Reflect.hasField (config, "title")) __title = config.title;
 			
 		}
@@ -313,6 +321,20 @@ class Window {
 	}
 	
 	
+	@:noCompletion private inline function get_borderless ():Bool {
+		
+		return __borderless;
+		
+	}
+	
+	
+	@:noCompletion private function set_borderless (value:Bool):Bool {
+		
+		return __borderless = backend.setBorderless (value);
+		
+	}
+	
+	
 	@:noCompletion private inline function get_enableTextEvents ():Bool {
 		
 		return backend.getEnableTextEvents ();
@@ -366,6 +388,21 @@ class Window {
 	@:noCompletion private function set_minimized (value:Bool):Bool {
 		
 		return __minimized = backend.setMinimized (value);
+		
+	}
+	
+	
+	@:noCompletion private inline function get_resizable ():Bool {
+		
+		return __resizable;
+		
+	}
+	
+	
+	@:noCompletion private function set_resizable (value:Bool):Bool {
+		
+		__resizable = backend.setResizable (value);
+		return __resizable;
 		
 	}
 	

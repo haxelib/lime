@@ -128,17 +128,13 @@ class NativeWindow {
 	
 	public function getDisplay ():Display {
 		
-		var center = new Vector2 (parent.__x + (parent.__width / 2), parent.__y + (parent.__height / 2));
-		var numDisplays = System.numDisplays;
-		var display;
-		
-		for (i in 0...numDisplays) {
+		if (handle != null) {
 			
-			display = System.getDisplay (i);
+			var index = lime_window_get_display (handle);
 			
-			if (display.bounds.containsPoint (center)) {
+			if (index > -1) {
 				
-				return display;
+				return System.getDisplay (index);
 				
 			}
 			
@@ -187,6 +183,20 @@ class NativeWindow {
 			
 		}
 		
+	}
+	
+	
+	public function setBorderless (value:Bool):Bool {
+		
+		if (handle != null) {
+			
+			#if !macro
+			lime_window_set_borderless (handle, value);
+			#end
+			
+		}
+		
+		return value;
 	}
 	
 	
@@ -254,6 +264,25 @@ class NativeWindow {
 	}
 	
 	
+	public function setResizable (value:Bool):Bool {
+		
+		if (handle != null) {
+			
+			#if !macro
+			lime_window_set_resizable (handle, value);
+			
+			// TODO: remove need for workaround
+			
+			lime_window_set_borderless (handle, !parent.__borderless);
+			lime_window_set_borderless (handle, parent.__borderless);
+			#end
+			
+		}
+		
+		return value;
+	}
+	
+	
 	public function setTitle (value:String):String {
 		
 		if (handle != null) {
@@ -274,6 +303,7 @@ class NativeWindow {
 	@:cffi private static function lime_window_close (handle:Dynamic):Void;
 	@:cffi private static function lime_window_create (application:Dynamic, width:Int, height:Int, flags:Int, title:String):Dynamic;
 	@:cffi private static function lime_window_focus (handle:Dynamic):Void;
+	@:cffi private static function lime_window_get_display (handle:Dynamic):Int;
 	@:cffi private static function lime_window_get_enable_text_events (handle:Dynamic):Bool;
 	@:cffi private static function lime_window_get_height (handle:Dynamic):Int;
 	@:cffi private static function lime_window_get_id (handle:Dynamic):Int;
@@ -282,10 +312,12 @@ class NativeWindow {
 	@:cffi private static function lime_window_get_y (handle:Dynamic):Int;
 	@:cffi private static function lime_window_move (handle:Dynamic, x:Int, y:Int):Void;
 	@:cffi private static function lime_window_resize (handle:Dynamic, width:Int, height:Int):Void;
+	@:cffi private static function lime_window_set_borderless (handle:Dynamic, borderless:Bool):Bool;
 	@:cffi private static function lime_window_set_enable_text_events (handle:Dynamic, enabled:Bool):Void;
 	@:cffi private static function lime_window_set_fullscreen (handle:Dynamic, fullscreen:Bool):Bool;
 	@:cffi private static function lime_window_set_icon (handle:Dynamic, buffer:Dynamic):Void;
 	@:cffi private static function lime_window_set_minimized (handle:Dynamic, minimized:Bool):Bool;
+	@:cffi private static function lime_window_set_resizable (handle:Dynamic, resizable:Bool):Bool;
 	@:cffi private static function lime_window_set_title (handle:Dynamic, title:String):Dynamic;
 	#end
 	
