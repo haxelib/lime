@@ -31139,27 +31139,27 @@
 		<extends path="lime.project.PlatformTarget"/>
 		<embedded><x path="Bool"/></embedded>
 		<logLength><x path="Int"/></logLength>
-		<build public="1" set="method" line="44" override="1"><f a=""><x path="Void"/></f></build>
-		<clean public="1" set="method" line="109" override="1"><f a=""><x path="Void"/></f></clean>
-		<deploy public="1" set="method" line="122" override="1"><f a=""><x path="Void"/></f></deploy>
-		<display public="1" set="method" line="129" override="1"><f a=""><x path="Void"/></f></display>
-		<generateContext set="method" line="145"><f a=""><d/></f></generateContext>
-		<run public="1" set="method" line="186" override="1"><f a=""><x path="Void"/></f></run>
-		<update public="1" set="method" line="232" override="1"><f a=""><x path="Void"/></f></update>
-		<trace public="1" set="method" line="289" override="1"><f a=""><x path="Void"/></f></trace>
-		<install public="1" set="method" line="313" override="1">
+		<build public="1" set="method" line="45" override="1"><f a=""><x path="Void"/></f></build>
+		<clean public="1" set="method" line="110" override="1"><f a=""><x path="Void"/></f></clean>
+		<deploy public="1" set="method" line="123" override="1"><f a=""><x path="Void"/></f></deploy>
+		<display public="1" set="method" line="130" override="1"><f a=""><x path="Void"/></f></display>
+		<generateContext set="method" line="146"><f a=""><d/></f></generateContext>
+		<run public="1" set="method" line="187" override="1"><f a=""><x path="Void"/></f></run>
+		<update public="1" set="method" line="235" override="1"><f a=""><x path="Void"/></f></update>
+		<trace public="1" set="method" line="292" override="1"><f a=""><x path="Void"/></f></trace>
+		<install public="1" set="method" line="317" override="1">
 			<f a=""><x path="Void"/></f>
 			<meta><m n="ignore"/></meta>
 		</install>
-		<rebuild public="1" set="method" line="314" override="1">
+		<rebuild public="1" set="method" line="318" override="1">
 			<f a=""><x path="Void"/></f>
 			<meta><m n="ignore"/></meta>
 		</rebuild>
-		<uninstall public="1" set="method" line="315" override="1">
+		<uninstall public="1" set="method" line="319" override="1">
 			<f a=""><x path="Void"/></f>
 			<meta><m n="ignore"/></meta>
 		</uninstall>
-		<new public="1" set="method" line="35"><f a="command:_project:targetFlags">
+		<new public="1" set="method" line="36"><f a="command:_project:targetFlags">
 	<c path="String"/>
 	<c path="lime.project.HXProject"/>
 	<x path="Map">
