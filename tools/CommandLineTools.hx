@@ -246,6 +246,10 @@ class CommandLineTools {
 							target = Platform.TVOS;
 							targetFlags.set ("simulator", "");
 						
+						case "mac", "macos":
+							
+							target = Platform.MAC;
+						
 						default:
 							
 							target = cast targetName.toLowerCase ();
@@ -547,7 +551,7 @@ class CommandLineTools {
 				
 			} else {
 				
-				ProcessHelper.runCommand ("", "haxelib", ["run", handler].concat (args));
+				ProcessHelper.runCommand ("", "haxelib", [ "run", handler ].concat (args));
 				
 			}
 			
@@ -807,6 +811,7 @@ class CommandLineTools {
 		LogHelper.println ("  \x1b[3m(android)\x1b[0m \x1b[1m-emulator\x1b[0m -- Target the device emulator");
 		LogHelper.println ("  \x1b[3m(html5)\x1b[0m \x1b[1m-minify\x1b[0m -- Minify output using the Google Closure compiler");
 		LogHelper.println ("  \x1b[3m(html5)\x1b[0m \x1b[1m-minify -yui\x1b[0m -- Minify output using the YUI compressor");
+		LogHelper.println ("  \x1b[3m(flash)\x1b[0m \x1b[1m-web\x1b[0m -- Make html page with embeded swf using the SWFObject js library");
 		LogHelper.println ("");
 		LogHelper.println (" " + LogHelper.accentColor + "Project Overrides:" + LogHelper.resetColor);
 		LogHelper.println ("");
@@ -1205,6 +1210,11 @@ class CommandLineTools {
 				target = Platform.FIREFOX;
 				overrides.haxedefs.set ("firefoxos", "");
 			
+			case "mac", "macos":
+				
+				target = Platform.MAC;
+				overrides.haxedefs.set ("macos", "");
+			
 			default:
 				
 				target = cast targetName.toLowerCase ();
@@ -1365,9 +1375,9 @@ class CommandLineTools {
 				project.templatePaths.push (projectDefines.get (key));
 				
 			} else if (field == "config") {
-
+				
 				project.config.set (attribute, projectDefines.get (key));
-
+				
 			} else {
 				
 				if (Reflect.hasField (project, field)) {

@@ -28,38 +28,30 @@ class AndroidHelper {
 			
 		}
 		
-		var ant = project.environment.get ("ANT_HOME");
-		
-		if (ant == null || ant == "") {
-			
-			ant = "ant";
-			
-		} else {
-			
-			ant += "/bin/ant";
-			
-		}
-		
-		var build = "debug";
+		var task = "assembleDebug";
 		
 		if (project.certificate != null) {
 			
-			build = "release";
+			task = "assembleRelease";
 			
 		}
 		
-		// Fix bug in Android build system, force compile
-		
-		var buildProperties = projectDirectory + "/bin/build.prop";
-		
-		if (FileSystem.exists (buildProperties)) {
+		if (project.environment.exists ("ANDROID_GRADLE_TASK")) {
 			
-			FileSystem.deleteFile (buildProperties);
+			task = project.environment.get ("ANDROID_GRADLE_TASK");
 			
 		}
 		
-		ProcessHelper.runCommand (projectDirectory, ant, [ build ]);
-		
+		if (PlatformHelper.hostPlatform != Platform.WINDOWS) {
+			
+			ProcessHelper.runCommand ("", "chmod", [ "755", PathHelper.combine (projectDirectory, "gradlew") ]);
+			ProcessHelper.runCommand (projectDirectory, "./gradlew", [ task ]);
+			
+		} else {
+			
+			ProcessHelper.runCommand (projectDirectory, "gradlew", [ task ]);
+			
+		}
 	}
 	
 	
@@ -132,33 +124,33 @@ class AndroidHelper {
 		adbName = "adb";
 		androidName = "android";
 		emulatorName = "emulator";
-
+		
 		if (PlatformHelper.hostPlatform == Platform.WINDOWS) {
-
+			
 			adbName += ".exe";
 			androidName += ".bat";
 			emulatorName += ".exe";
-
+			
 		}
-
+		
 		if (!FileSystem.exists (adbPath + adbName)) {
-
+			
 			adbPath = project.environment.get ("ANDROID_SDK") + "/platform-tools/";
-
+			
 		}
-
+		
 		if (PlatformHelper.hostPlatform != Platform.WINDOWS) {
-
+			
 			adbName = "./" + adbName;
 			androidName = "./" + androidName;
 			emulatorName = "./" + emulatorName;
-
+			
 		}
 		
 		if (project.environment.exists ("JAVA_HOME")) {
-
+			
 			Sys.putEnv ("JAVA_HOME", project.environment.get ("JAVA_HOME"));
-
+			
 		}
 		
 	}

@@ -279,50 +279,92 @@ package lime.utils;
                 case Int8:
                     while(i<len) {
                         var pos = (offset+i)*bytesPerElement;
+                        #if neko
+                        var value = array[i];
+                        if (value == null) value = 0;
+                        ArrayBufferIO.setInt8(buffer, pos, Std.int(value));
+                        #else
                         ArrayBufferIO.setInt8(buffer,
                             pos, Std.int(array[i]));
+                        #end
                         ++i;
                     }
                 case Int16:
                     while(i<len) {
                         var pos = (offset+i)*bytesPerElement;
+                        #if neko
+                        var value = array[i];
+                        if (value == null) value = 0;
+                        ArrayBufferIO.setInt16(buffer, pos, Std.int(value));
+                        #else
                         ArrayBufferIO.setInt16(buffer,
                             pos, Std.int(array[i]));
+                        #end
                         ++i;
                     }
                 case Int32:
                     while(i<len) {
                         var pos = (offset+i)*bytesPerElement;
+                        #if neko
+                        var value = array[i];
+                        if (value == null) value = 0;
+                        ArrayBufferIO.setInt32(buffer, pos, Std.int(value));
+                        #else
                         ArrayBufferIO.setInt32(buffer,
                             pos, Std.int(array[i]));
+                        #end
                         ++i;
                     }
                 case Uint8:
                     while(i<len) {
                         var pos = (offset+i)*bytesPerElement;
+                        #if neko
+                        var value = array[i];
+                        if (value == null) value = 0;
+                        ArrayBufferIO.setUint8(buffer, pos, Std.int(value));
+                        #else
                         ArrayBufferIO.setUint8(buffer,
                             pos, Std.int(array[i]));
+                        #end
                         ++i;
                     }
                 case Uint16:
                     while(i<len) {
                         var pos = (offset+i)*bytesPerElement;
+                        #if neko
+                        var value = array[i];
+                        if (value == null) value = 0;
+                        ArrayBufferIO.setUint16(buffer, pos, Std.int(value));
+                        #else
                         ArrayBufferIO.setUint16(buffer,
                             pos, Std.int(array[i]));
+                        #end
                         ++i;
                     }
                 case Uint32:
                     while(i<len) {
                         var pos = (offset+i)*bytesPerElement;
+                        #if neko
+                        var value = array[i];
+                        if (value == null) value = 0;
+                        ArrayBufferIO.setUint32(buffer, pos, Std.int(value));
+                        #else
                         ArrayBufferIO.setUint32(buffer,
                             pos, Std.int(array[i]));
+                        #end
                         ++i;
                     }
                 case Uint8Clamped:
                     while(i<len) {
                         var pos = (offset+i)*bytesPerElement;
+                        #if neko
+                        var value = array[i];
+                        if (value == null) value = 0;
+                        ArrayBufferIO.setUint8Clamped(buffer, pos, Std.int(value));
+                        #else
                         ArrayBufferIO.setUint8Clamped(buffer,
                             pos, Std.int(array[i]));
+                        #end
                         ++i;
                     }
                 case Float32:
@@ -396,6 +438,7 @@ abstract TypedArrayType(Int) from Int to Int {
             #if cpp
                 untyped __global__.__hxcpp_memory_set_byte(buffer.getData(), byteOffset, value);
             #elseif neko
+                if (value == null) value = 0;
                 untyped __dollar__sset(buffer.b, byteOffset, value & 0xff);
             #else
                 buffer.set(byteOffset, value);
@@ -427,6 +470,9 @@ abstract TypedArrayType(Int) from Int to Int {
             #if cpp
                 untyped __global__.__hxcpp_memory_set_byte(buffer.getData(), byteOffset, value);
             #else
+                #if neko
+                    if (value == null) value = 0;
+                #end
                 buffer.set( byteOffset, value );
             #end
 
@@ -474,6 +520,7 @@ abstract TypedArrayType(Int) from Int to Int {
             #if cpp
                 untyped __global__.__hxcpp_memory_set_i16(buffer.getData(), byteOffset, value);
             #elseif neko
+                if (value == null) value = 0;
                 untyped var b = buffer.b;
                 untyped __dollar__sset(b, byteOffset  , (value     ) & 0xff);
                 untyped __dollar__sset(b, byteOffset+1, (value >> 8) & 0xff);
@@ -489,6 +536,7 @@ abstract TypedArrayType(Int) from Int to Int {
             #if cpp
                 untyped __global__.__hxcpp_memory_set_i16(buffer.getData(), byteOffset, value);
             #elseif neko
+                if (value == null) value = 0;
                 untyped var b = buffer.b;
                 untyped __dollar__sset(b, byteOffset  , (value >> 8) & 0xff);
                 untyped __dollar__sset(b, byteOffset+1, (value     ) & 0xff);
@@ -608,6 +656,9 @@ abstract TypedArrayType(Int) from Int to Int {
             #if cpp
                 untyped __global__.__hxcpp_memory_set_i32(buffer.getData(), byteOffset, value);
             #else
+                #if neko
+                    if (value == null) value = 0;
+                #end
                 #if (haxe_ver >= 3.2)
                     buffer.setInt32(byteOffset,value);
                 #else
@@ -626,6 +677,9 @@ abstract TypedArrayType(Int) from Int to Int {
             #if cpp
                 untyped __global__.__hxcpp_memory_set_i32(buffer.getData(), byteOffset, value);
             #else
+                #if neko
+                    if (value == null) value = 0;
+                #end
                 #if (haxe_ver >= 3.2)
                     buffer.setInt32(byteOffset,value);
                 #else
@@ -711,6 +765,9 @@ abstract TypedArrayType(Int) from Int to Int {
             #if cpp
                 untyped __global__.__hxcpp_memory_set_float(buffer.getData(), byteOffset, value);
             #else
+                #if neko
+                    if (value == null) value = 0;
+                #end
                 buffer.setFloat( byteOffset, value );
             #end
 
@@ -722,6 +779,9 @@ abstract TypedArrayType(Int) from Int to Int {
             #if cpp
                 untyped __global__.__hxcpp_memory_set_float(buffer.getData(), byteOffset, value);
             #else
+                #if neko
+                    if (value == null) value = 0;
+                #end
                 buffer.setFloat( byteOffset, value );
             #end
 
@@ -755,6 +815,9 @@ abstract TypedArrayType(Int) from Int to Int {
             #if cpp
                 untyped __global__.__hxcpp_memory_set_double(buffer.getData(), byteOffset, value);
             #else
+                #if neko
+                    if (value == null) value = 0;
+                #end
                 buffer.setDouble( byteOffset, value );
             #end
 
@@ -766,6 +829,9 @@ abstract TypedArrayType(Int) from Int to Int {
             #if cpp
                 untyped __global__.__hxcpp_memory_set_double(buffer.getData(), byteOffset, value);
             #else
+                #if neko
+                    if (value == null) value = 0;
+                #end
                 buffer.setDouble( byteOffset, value );
             #end
 

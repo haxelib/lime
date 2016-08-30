@@ -513,6 +513,7 @@ class Image {
 	
 	public static function fromFile (path:String, onload:Image -> Void = null, onerror:Void -> Void = null):Image {
 		
+		if (path == null) return null;
 		var image = new Image ();
 		image.__fromFile (path, onload, onerror);
 		return image;
@@ -534,6 +535,7 @@ class Image {
 		return _image;
 		
 	}
+	
 	
 	public function getColorBoundsRect (mask:Int, color:Int, findColor:Bool = true, format:PixelFormat = null):Rectangle {
 		
@@ -1096,7 +1098,6 @@ class Image {
 		
 		#if (js && html5)
 		var image = new JSImage ();
-		image.crossOrigin = "Anonymous";
 		
 		var image_onLoaded = function (event) {
 			

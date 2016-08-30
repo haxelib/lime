@@ -4294,7 +4294,7 @@
 		</meta>
 	</class>
 	<class path="lime._backend.native.NativeWindow" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/_backend/native/NativeWindow.hx">
-		<lime_window_alert get="inline" set="null" line="339" static="1">
+		<lime_window_alert get="inline" set="null" line="342" static="1">
 			<f a="handle:message:title">
 				<d/>
 				<c path="String"/>
@@ -4303,14 +4303,14 @@
 			</f>
 			<meta><m n=":cffi"/></meta>
 		</lime_window_alert>
-		<lime_window_close get="inline" set="null" line="340" static="1">
+		<lime_window_close get="inline" set="null" line="343" static="1">
 			<f a="handle">
 				<d/>
 				<x path="Void"/>
 			</f>
 			<meta><m n=":cffi"/></meta>
 		</lime_window_close>
-		<lime_window_create get="inline" set="null" line="341" static="1">
+		<lime_window_create get="inline" set="null" line="344" static="1">
 			<f a="application:width:height:flags:title">
 				<d/>
 				<x path="Int"/>
@@ -4321,63 +4321,63 @@
 			</f>
 			<meta><m n=":cffi"/></meta>
 		</lime_window_create>
-		<lime_window_focus get="inline" set="null" line="342" static="1">
+		<lime_window_focus get="inline" set="null" line="345" static="1">
 			<f a="handle">
 				<d/>
 				<x path="Void"/>
 			</f>
 			<meta><m n=":cffi"/></meta>
 		</lime_window_focus>
-		<lime_window_get_display get="inline" set="null" line="343" static="1">
+		<lime_window_get_display get="inline" set="null" line="346" static="1">
 			<f a="handle">
 				<d/>
 				<x path="Int"/>
 			</f>
 			<meta><m n=":cffi"/></meta>
 		</lime_window_get_display>
-		<lime_window_get_enable_text_events get="inline" set="null" line="344" static="1">
+		<lime_window_get_enable_text_events get="inline" set="null" line="347" static="1">
 			<f a="handle">
 				<d/>
 				<x path="Bool"/>
 			</f>
 			<meta><m n=":cffi"/></meta>
 		</lime_window_get_enable_text_events>
-		<lime_window_get_height get="inline" set="null" line="345" static="1">
+		<lime_window_get_height get="inline" set="null" line="348" static="1">
 			<f a="handle">
 				<d/>
 				<x path="Int"/>
 			</f>
 			<meta><m n=":cffi"/></meta>
 		</lime_window_get_height>
-		<lime_window_get_id get="inline" set="null" line="346" static="1">
+		<lime_window_get_id get="inline" set="null" line="349" static="1">
 			<f a="handle">
 				<d/>
 				<x path="Int"/>
 			</f>
 			<meta><m n=":cffi"/></meta>
 		</lime_window_get_id>
-		<lime_window_get_width get="inline" set="null" line="347" static="1">
+		<lime_window_get_width get="inline" set="null" line="350" static="1">
 			<f a="handle">
 				<d/>
 				<x path="Int"/>
 			</f>
 			<meta><m n=":cffi"/></meta>
 		</lime_window_get_width>
-		<lime_window_get_x get="inline" set="null" line="348" static="1">
+		<lime_window_get_x get="inline" set="null" line="351" static="1">
 			<f a="handle">
 				<d/>
 				<x path="Int"/>
 			</f>
 			<meta><m n=":cffi"/></meta>
 		</lime_window_get_x>
-		<lime_window_get_y get="inline" set="null" line="349" static="1">
+		<lime_window_get_y get="inline" set="null" line="352" static="1">
 			<f a="handle">
 				<d/>
 				<x path="Int"/>
 			</f>
 			<meta><m n=":cffi"/></meta>
 		</lime_window_get_y>
-		<lime_window_move get="inline" set="null" line="350" static="1">
+		<lime_window_move get="inline" set="null" line="353" static="1">
 			<f a="handle:x:y">
 				<d/>
 				<x path="Int"/>
@@ -4386,7 +4386,7 @@
 			</f>
 			<meta><m n=":cffi"/></meta>
 		</lime_window_move>
-		<lime_window_resize get="inline" set="null" line="351" static="1">
+		<lime_window_resize get="inline" set="null" line="354" static="1">
 			<f a="handle:width:height">
 				<d/>
 				<x path="Int"/>
@@ -4395,7 +4395,7 @@
 			</f>
 			<meta><m n=":cffi"/></meta>
 		</lime_window_resize>
-		<lime_window_set_borderless get="inline" set="null" line="352" static="1">
+		<lime_window_set_borderless get="inline" set="null" line="355" static="1">
 			<f a="handle:borderless">
 				<d/>
 				<x path="Bool"/>
@@ -4403,7 +4403,7 @@
 			</f>
 			<meta><m n=":cffi"/></meta>
 		</lime_window_set_borderless>
-		<lime_window_set_enable_text_events get="inline" set="null" line="353" static="1">
+		<lime_window_set_enable_text_events get="inline" set="null" line="356" static="1">
 			<f a="handle:enabled">
 				<d/>
 				<x path="Bool"/>
@@ -4411,7 +4411,7 @@
 			</f>
 			<meta><m n=":cffi"/></meta>
 		</lime_window_set_enable_text_events>
-		<lime_window_set_fullscreen get="inline" set="null" line="354" static="1">
+		<lime_window_set_fullscreen get="inline" set="null" line="357" static="1">
 			<f a="handle:fullscreen">
 				<d/>
 				<x path="Bool"/>
@@ -4419,7 +4419,7 @@
 			</f>
 			<meta><m n=":cffi"/></meta>
 		</lime_window_set_fullscreen>
-		<lime_window_set_icon get="inline" set="null" line="355" static="1">
+		<lime_window_set_icon get="inline" set="null" line="358" static="1">
 			<f a="handle:buffer">
 				<d/>
 				<d/>
@@ -4427,7 +4427,7 @@
 			</f>
 			<meta><m n=":cffi"/></meta>
 		</lime_window_set_icon>
-		<lime_window_set_maximized get="inline" set="null" line="356" static="1">
+		<lime_window_set_maximized get="inline" set="null" line="359" static="1">
 			<f a="handle:maximized">
 				<d/>
 				<x path="Bool"/>
@@ -4435,7 +4435,7 @@
 			</f>
 			<meta><m n=":cffi"/></meta>
 		</lime_window_set_maximized>
-		<lime_window_set_minimized get="inline" set="null" line="357" static="1">
+		<lime_window_set_minimized get="inline" set="null" line="360" static="1">
 			<f a="handle:minimized">
 				<d/>
 				<x path="Bool"/>
@@ -4443,7 +4443,7 @@
 			</f>
 			<meta><m n=":cffi"/></meta>
 		</lime_window_set_minimized>
-		<lime_window_set_resizable get="inline" set="null" line="358" static="1">
+		<lime_window_set_resizable get="inline" set="null" line="361" static="1">
 			<f a="handle:resizable">
 				<d/>
 				<x path="Bool"/>
@@ -4451,7 +4451,7 @@
 			</f>
 			<meta><m n=":cffi"/></meta>
 		</lime_window_set_resizable>
-		<lime_window_set_title get="inline" set="null" line="359" static="1">
+		<lime_window_set_title get="inline" set="null" line="362" static="1">
 			<f a="handle:title">
 				<d/>
 				<c path="String"/>
@@ -4472,48 +4472,48 @@
 	<c path="lime.app.Application"/>
 	<x path="Void"/>
 </f></create>
-		<focus public="1" set="method" line="133"><f a=""><x path="Void"/></f></focus>
-		<getDisplay public="1" set="method" line="146"><f a=""><c path="lime.system.Display"/></f></getDisplay>
-		<getEnableTextEvents public="1" set="method" line="165"><f a=""><x path="Bool"/></f></getEnableTextEvents>
-		<move public="1" set="method" line="180"><f a="x:y">
+		<focus public="1" set="method" line="136"><f a=""><x path="Void"/></f></focus>
+		<getDisplay public="1" set="method" line="149"><f a=""><c path="lime.system.Display"/></f></getDisplay>
+		<getEnableTextEvents public="1" set="method" line="168"><f a=""><x path="Bool"/></f></getEnableTextEvents>
+		<move public="1" set="method" line="183"><f a="x:y">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Void"/>
 </f></move>
-		<resize public="1" set="method" line="193"><f a="width:height">
+		<resize public="1" set="method" line="196"><f a="width:height">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Void"/>
 </f></resize>
-		<setBorderless public="1" set="method" line="206"><f a="value">
+		<setBorderless public="1" set="method" line="209"><f a="value">
 	<x path="Bool"/>
 	<x path="Bool"/>
 </f></setBorderless>
-		<setEnableTextEvents public="1" set="method" line="220"><f a="value">
+		<setEnableTextEvents public="1" set="method" line="223"><f a="value">
 	<x path="Bool"/>
 	<x path="Bool"/>
 </f></setEnableTextEvents>
-		<setFullscreen public="1" set="method" line="235"><f a="value">
+		<setFullscreen public="1" set="method" line="238"><f a="value">
 	<x path="Bool"/>
 	<x path="Bool"/>
 </f></setFullscreen>
-		<setIcon public="1" set="method" line="261"><f a="image">
+		<setIcon public="1" set="method" line="264"><f a="image">
 	<c path="lime.graphics.Image"/>
 	<x path="Void"/>
 </f></setIcon>
-		<setMaximized public="1" set="method" line="274"><f a="value">
+		<setMaximized public="1" set="method" line="277"><f a="value">
 	<x path="Bool"/>
 	<x path="Bool"/>
 </f></setMaximized>
-		<setMinimized public="1" set="method" line="289"><f a="value">
+		<setMinimized public="1" set="method" line="292"><f a="value">
 	<x path="Bool"/>
 	<x path="Bool"/>
 </f></setMinimized>
-		<setResizable public="1" set="method" line="304"><f a="value">
+		<setResizable public="1" set="method" line="307"><f a="value">
 	<x path="Bool"/>
 	<x path="Bool"/>
 </f></setResizable>
-		<setTitle public="1" set="method" line="323"><f a="value">
+		<setTitle public="1" set="method" line="326"><f a="value">
 	<c path="String"/>
 	<c path="String"/>
 </f></setTitle>
@@ -4532,178 +4532,220 @@
 		<this><x path="Int"/></this>
 		<meta><m n=":enum"/></meta>
 		<impl><class path="lime._backend.native._NativeWindow.WindowFlags_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/_backend/native/NativeWindow.hx" private="1" module="lime._backend.native.NativeWindow" extern="1">
-	<WINDOW_FLAG_FULLSCREEN public="1" get="inline" set="null" line="368" static="1">
+	<WINDOW_FLAG_FULLSCREEN public="1" get="inline" set="null" line="371" static="1">
 		<x path="lime._backend.native._NativeWindow.WindowFlags"/>
 		<meta>
 			<m n=":enum"/>
 			<m n=":impl"/>
 		</meta>
 	</WINDOW_FLAG_FULLSCREEN>
-	<WINDOW_FLAG_BORDERLESS public="1" get="inline" set="null" line="369" static="1">
+	<WINDOW_FLAG_BORDERLESS public="1" get="inline" set="null" line="372" static="1">
 		<x path="lime._backend.native._NativeWindow.WindowFlags"/>
 		<meta>
 			<m n=":enum"/>
 			<m n=":impl"/>
 		</meta>
 	</WINDOW_FLAG_BORDERLESS>
-	<WINDOW_FLAG_RESIZABLE public="1" get="inline" set="null" line="370" static="1">
+	<WINDOW_FLAG_RESIZABLE public="1" get="inline" set="null" line="373" static="1">
 		<x path="lime._backend.native._NativeWindow.WindowFlags"/>
 		<meta>
 			<m n=":enum"/>
 			<m n=":impl"/>
 		</meta>
 	</WINDOW_FLAG_RESIZABLE>
-	<WINDOW_FLAG_HARDWARE public="1" get="inline" set="null" line="371" static="1">
+	<WINDOW_FLAG_HARDWARE public="1" get="inline" set="null" line="374" static="1">
 		<x path="lime._backend.native._NativeWindow.WindowFlags"/>
 		<meta>
 			<m n=":enum"/>
 			<m n=":impl"/>
 		</meta>
 	</WINDOW_FLAG_HARDWARE>
-	<WINDOW_FLAG_VSYNC public="1" get="inline" set="null" line="372" static="1">
+	<WINDOW_FLAG_VSYNC public="1" get="inline" set="null" line="375" static="1">
 		<x path="lime._backend.native._NativeWindow.WindowFlags"/>
 		<meta>
 			<m n=":enum"/>
 			<m n=":impl"/>
 		</meta>
 	</WINDOW_FLAG_VSYNC>
-	<WINDOW_FLAG_HW_AA public="1" get="inline" set="null" line="373" static="1">
+	<WINDOW_FLAG_HW_AA public="1" get="inline" set="null" line="376" static="1">
 		<x path="lime._backend.native._NativeWindow.WindowFlags"/>
 		<meta>
 			<m n=":enum"/>
 			<m n=":impl"/>
 		</meta>
 	</WINDOW_FLAG_HW_AA>
-	<WINDOW_FLAG_HW_AA_HIRES public="1" get="inline" set="null" line="374" static="1">
+	<WINDOW_FLAG_HW_AA_HIRES public="1" get="inline" set="null" line="377" static="1">
 		<x path="lime._backend.native._NativeWindow.WindowFlags"/>
 		<meta>
 			<m n=":enum"/>
 			<m n=":impl"/>
 		</meta>
 	</WINDOW_FLAG_HW_AA_HIRES>
-	<WINDOW_FLAG_ALLOW_SHADERS public="1" get="inline" set="null" line="375" static="1">
+	<WINDOW_FLAG_ALLOW_SHADERS public="1" get="inline" set="null" line="378" static="1">
 		<x path="lime._backend.native._NativeWindow.WindowFlags"/>
 		<meta>
 			<m n=":enum"/>
 			<m n=":impl"/>
 		</meta>
 	</WINDOW_FLAG_ALLOW_SHADERS>
-	<WINDOW_FLAG_REQUIRE_SHADERS public="1" get="inline" set="null" line="376" static="1">
+	<WINDOW_FLAG_REQUIRE_SHADERS public="1" get="inline" set="null" line="379" static="1">
 		<x path="lime._backend.native._NativeWindow.WindowFlags"/>
 		<meta>
 			<m n=":enum"/>
 			<m n=":impl"/>
 		</meta>
 	</WINDOW_FLAG_REQUIRE_SHADERS>
-	<WINDOW_FLAG_DEPTH_BUFFER public="1" get="inline" set="null" line="377" static="1">
+	<WINDOW_FLAG_DEPTH_BUFFER public="1" get="inline" set="null" line="380" static="1">
 		<x path="lime._backend.native._NativeWindow.WindowFlags"/>
 		<meta>
 			<m n=":enum"/>
 			<m n=":impl"/>
 		</meta>
 	</WINDOW_FLAG_DEPTH_BUFFER>
-	<WINDOW_FLAG_STENCIL_BUFFER public="1" get="inline" set="null" line="378" static="1">
+	<WINDOW_FLAG_STENCIL_BUFFER public="1" get="inline" set="null" line="381" static="1">
 		<x path="lime._backend.native._NativeWindow.WindowFlags"/>
 		<meta>
 			<m n=":enum"/>
 			<m n=":impl"/>
 		</meta>
 	</WINDOW_FLAG_STENCIL_BUFFER>
-	<WINDOW_FLAG_ALLOW_HIGHDPI public="1" get="inline" set="null" line="379" static="1">
+	<WINDOW_FLAG_ALLOW_HIGHDPI public="1" get="inline" set="null" line="382" static="1">
 		<x path="lime._backend.native._NativeWindow.WindowFlags"/>
 		<meta>
 			<m n=":enum"/>
 			<m n=":impl"/>
 		</meta>
 	</WINDOW_FLAG_ALLOW_HIGHDPI>
+	<WINDOW_FLAG_HIDDEN public="1" get="inline" set="null" line="383" static="1">
+		<x path="lime._backend.native._NativeWindow.WindowFlags"/>
+		<meta>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</WINDOW_FLAG_HIDDEN>
+	<WINDOW_FLAG_MINIMIZED public="1" get="inline" set="null" line="384" static="1">
+		<x path="lime._backend.native._NativeWindow.WindowFlags"/>
+		<meta>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</WINDOW_FLAG_MINIMIZED>
+	<WINDOW_FLAG_MAXIMIZED public="1" get="inline" set="null" line="385" static="1">
+		<x path="lime._backend.native._NativeWindow.WindowFlags"/>
+		<meta>
+			<m n=":enum"/>
+			<m n=":impl"/>
+		</meta>
+	</WINDOW_FLAG_MAXIMIZED>
 	<meta><m n=":enum"/></meta>
 </class></impl>
 	</abstract>
 	<class path="lime._backend.native._NativeWindow.WindowFlags_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/_backend/native/NativeWindow.hx" private="1" module="lime._backend.native.NativeWindow" extern="1">
-		<WINDOW_FLAG_FULLSCREEN public="1" get="inline" set="null" line="368" static="1">
+		<WINDOW_FLAG_FULLSCREEN public="1" get="inline" set="null" line="371" static="1">
 			<x path="lime._backend.native._NativeWindow.WindowFlags"/>
 			<meta>
 				<m n=":enum"/>
 				<m n=":impl"/>
 			</meta>
 		</WINDOW_FLAG_FULLSCREEN>
-		<WINDOW_FLAG_BORDERLESS public="1" get="inline" set="null" line="369" static="1">
+		<WINDOW_FLAG_BORDERLESS public="1" get="inline" set="null" line="372" static="1">
 			<x path="lime._backend.native._NativeWindow.WindowFlags"/>
 			<meta>
 				<m n=":enum"/>
 				<m n=":impl"/>
 			</meta>
 		</WINDOW_FLAG_BORDERLESS>
-		<WINDOW_FLAG_RESIZABLE public="1" get="inline" set="null" line="370" static="1">
+		<WINDOW_FLAG_RESIZABLE public="1" get="inline" set="null" line="373" static="1">
 			<x path="lime._backend.native._NativeWindow.WindowFlags"/>
 			<meta>
 				<m n=":enum"/>
 				<m n=":impl"/>
 			</meta>
 		</WINDOW_FLAG_RESIZABLE>
-		<WINDOW_FLAG_HARDWARE public="1" get="inline" set="null" line="371" static="1">
+		<WINDOW_FLAG_HARDWARE public="1" get="inline" set="null" line="374" static="1">
 			<x path="lime._backend.native._NativeWindow.WindowFlags"/>
 			<meta>
 				<m n=":enum"/>
 				<m n=":impl"/>
 			</meta>
 		</WINDOW_FLAG_HARDWARE>
-		<WINDOW_FLAG_VSYNC public="1" get="inline" set="null" line="372" static="1">
+		<WINDOW_FLAG_VSYNC public="1" get="inline" set="null" line="375" static="1">
 			<x path="lime._backend.native._NativeWindow.WindowFlags"/>
 			<meta>
 				<m n=":enum"/>
 				<m n=":impl"/>
 			</meta>
 		</WINDOW_FLAG_VSYNC>
-		<WINDOW_FLAG_HW_AA public="1" get="inline" set="null" line="373" static="1">
+		<WINDOW_FLAG_HW_AA public="1" get="inline" set="null" line="376" static="1">
 			<x path="lime._backend.native._NativeWindow.WindowFlags"/>
 			<meta>
 				<m n=":enum"/>
 				<m n=":impl"/>
 			</meta>
 		</WINDOW_FLAG_HW_AA>
-		<WINDOW_FLAG_HW_AA_HIRES public="1" get="inline" set="null" line="374" static="1">
+		<WINDOW_FLAG_HW_AA_HIRES public="1" get="inline" set="null" line="377" static="1">
 			<x path="lime._backend.native._NativeWindow.WindowFlags"/>
 			<meta>
 				<m n=":enum"/>
 				<m n=":impl"/>
 			</meta>
 		</WINDOW_FLAG_HW_AA_HIRES>
-		<WINDOW_FLAG_ALLOW_SHADERS public="1" get="inline" set="null" line="375" static="1">
+		<WINDOW_FLAG_ALLOW_SHADERS public="1" get="inline" set="null" line="378" static="1">
 			<x path="lime._backend.native._NativeWindow.WindowFlags"/>
 			<meta>
 				<m n=":enum"/>
 				<m n=":impl"/>
 			</meta>
 		</WINDOW_FLAG_ALLOW_SHADERS>
-		<WINDOW_FLAG_REQUIRE_SHADERS public="1" get="inline" set="null" line="376" static="1">
+		<WINDOW_FLAG_REQUIRE_SHADERS public="1" get="inline" set="null" line="379" static="1">
 			<x path="lime._backend.native._NativeWindow.WindowFlags"/>
 			<meta>
 				<m n=":enum"/>
 				<m n=":impl"/>
 			</meta>
 		</WINDOW_FLAG_REQUIRE_SHADERS>
-		<WINDOW_FLAG_DEPTH_BUFFER public="1" get="inline" set="null" line="377" static="1">
+		<WINDOW_FLAG_DEPTH_BUFFER public="1" get="inline" set="null" line="380" static="1">
 			<x path="lime._backend.native._NativeWindow.WindowFlags"/>
 			<meta>
 				<m n=":enum"/>
 				<m n=":impl"/>
 			</meta>
 		</WINDOW_FLAG_DEPTH_BUFFER>
-		<WINDOW_FLAG_STENCIL_BUFFER public="1" get="inline" set="null" line="378" static="1">
+		<WINDOW_FLAG_STENCIL_BUFFER public="1" get="inline" set="null" line="381" static="1">
 			<x path="lime._backend.native._NativeWindow.WindowFlags"/>
 			<meta>
 				<m n=":enum"/>
 				<m n=":impl"/>
 			</meta>
 		</WINDOW_FLAG_STENCIL_BUFFER>
-		<WINDOW_FLAG_ALLOW_HIGHDPI public="1" get="inline" set="null" line="379" static="1">
+		<WINDOW_FLAG_ALLOW_HIGHDPI public="1" get="inline" set="null" line="382" static="1">
 			<x path="lime._backend.native._NativeWindow.WindowFlags"/>
 			<meta>
 				<m n=":enum"/>
 				<m n=":impl"/>
 			</meta>
 		</WINDOW_FLAG_ALLOW_HIGHDPI>
+		<WINDOW_FLAG_HIDDEN public="1" get="inline" set="null" line="383" static="1">
+			<x path="lime._backend.native._NativeWindow.WindowFlags"/>
+			<meta>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</WINDOW_FLAG_HIDDEN>
+		<WINDOW_FLAG_MINIMIZED public="1" get="inline" set="null" line="384" static="1">
+			<x path="lime._backend.native._NativeWindow.WindowFlags"/>
+			<meta>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</WINDOW_FLAG_MINIMIZED>
+		<WINDOW_FLAG_MAXIMIZED public="1" get="inline" set="null" line="385" static="1">
+			<x path="lime._backend.native._NativeWindow.WindowFlags"/>
+			<meta>
+				<m n=":enum"/>
+				<m n=":impl"/>
+			</meta>
+		</WINDOW_FLAG_MAXIMIZED>
 		<meta><m n=":enum"/></meta>
 	</class>
 	<class path="lime.app.IModule" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/app/IModule.hx" interface="1">
@@ -5503,6 +5545,18 @@
 		<t path="Null"><c path="String"/></t>
 		<meta><m n=":optional"/></meta>
 	</parameters>
+	<minimized>
+		<t path="Null"><x path="Bool"/></t>
+		<meta><m n=":optional"/></meta>
+	</minimized>
+	<maximized>
+		<t path="Null"><x path="Bool"/></t>
+		<meta><m n=":optional"/></meta>
+	</maximized>
+	<hidden>
+		<t path="Null"><x path="Bool"/></t>
+		<meta><m n=":optional"/></meta>
+	</hidden>
 	<height>
 		<t path="Null"><x path="Int"/></t>
 		<meta><m n=":optional"/></meta>
@@ -7009,11 +7063,11 @@
 	<c path="haxe.io.Bytes"/>
 	<c path="lime.audio.AudioBuffer"/>
 </f></fromBytes>
-		<fromFile public="1" set="method" line="101" static="1"><f a="path">
+		<fromFile public="1" set="method" line="103" static="1"><f a="path">
 	<c path="String"/>
 	<c path="lime.audio.AudioBuffer"/>
 </f></fromFile>
-		<fromURL public="1" set="method" line="150" static="1"><f a="url:handler">
+		<fromURL public="1" set="method" line="154" static="1"><f a="url:handler">
 	<c path="String"/>
 	<f a="">
 		<c path="lime.audio.AudioBuffer"/>
@@ -7021,7 +7075,7 @@
 	</f>
 	<x path="Void"/>
 </f></fromURL>
-		<lime_audio_load get="inline" set="null" line="191" static="1">
+		<lime_audio_load get="inline" set="null" line="195" static="1">
 			<f a="data">
 				<d/>
 				<d/>
@@ -8426,21 +8480,21 @@
 	<class path="lime.graphics.ConsoleRenderContext" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/graphics/ConsoleRenderContext.hx">
 		<width public="1" get="accessor" set="null"><x path="Int"/></width>
 		<height public="1" get="accessor" set="null"><x path="Int"/></height>
-		<createIndexBuffer public="1" set="method" line="109"><f a="indices:count">
+		<createIndexBuffer public="1" set="method" line="112"><f a="indices:count">
 	<unknown/>
 	<x path="Int"/>
 	<c path="lime.graphics.console.IndexBuffer"/>
 </f></createIndexBuffer>
-		<createVertexBuffer public="1" set="method" line="110"><f a="decl:count">
+		<createVertexBuffer public="1" set="method" line="113"><f a="decl:count">
 	<unknown/>
 	<x path="Int"/>
 	<c path="lime.graphics.console.VertexBuffer"/>
 </f></createVertexBuffer>
-		<lookupShader public="1" set="method" line="111"><f a="name">
+		<lookupShader public="1" set="method" line="114"><f a="name">
 	<c path="String"/>
 	<c path="lime.graphics.console.Shader"/>
 </f></lookupShader>
-		<clear public="1" set="method" line="113"><f a="r:g:b:a:?depth:?stencil">
+		<clear public="1" set="method" line="116"><f a="r:g:b:a:?depth:?stencil">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Int"/>
@@ -8449,11 +8503,11 @@
 	<x path="Int"/>
 	<x path="Void"/>
 </f></clear>
-		<bindShader public="1" set="method" line="115"><f a="shader">
+		<bindShader public="1" set="method" line="118"><f a="shader">
 	<c path="lime.graphics.console.Shader"/>
 	<x path="Void"/>
 </f></bindShader>
-		<setViewport public="1" set="method" line="117"><f a="x:y:width:height:?nearPlane:?farPlane">
+		<setViewport public="1" set="method" line="120"><f a="x:y:width:height:?nearPlane:?farPlane">
 	<unknown/>
 	<unknown/>
 	<unknown/>
@@ -8462,36 +8516,36 @@
 	<x path="Float"/>
 	<x path="Void"/>
 </f></setViewport>
-		<setVertexShaderConstantF public="1" set="method" line="119"><f a="startRegister:vec4:vec4count">
+		<setVertexShaderConstantF public="1" set="method" line="122"><f a="startRegister:vec4:vec4count">
 	<unknown/>
 	<unknown/>
 	<unknown/>
 	<x path="Void"/>
 </f></setVertexShaderConstantF>
-		<setVertexSource public="1" set="method" line="121"><f a="vb">
+		<setVertexSource public="1" set="method" line="124"><f a="vb">
 	<c path="lime.graphics.console.VertexBuffer"/>
 	<x path="Void"/>
 </f></setVertexSource>
-		<setIndexSource public="1" set="method" line="122"><f a="ib">
+		<setIndexSource public="1" set="method" line="125"><f a="ib">
 	<c path="lime.graphics.console.IndexBuffer"/>
 	<x path="Void"/>
 </f></setIndexSource>
-		<draw public="1" set="method" line="124"><f a="primitive:startVertex:primitiveCount">
+		<draw public="1" set="method" line="127"><f a="primitive:startVertex:primitiveCount">
 	<unknown/>
 	<unknown/>
 	<unknown/>
 	<x path="Void"/>
 </f></draw>
-		<drawIndexed public="1" set="method" line="125"><f a="primitive:vertexCount:startIndex:primitiveCount">
+		<drawIndexed public="1" set="method" line="128"><f a="primitive:vertexCount:startIndex:primitiveCount">
 	<unknown/>
 	<unknown/>
 	<unknown/>
 	<unknown/>
 	<x path="Void"/>
 </f></drawIndexed>
-		<get_width set="method" line="127"><f a=""><x path="Int"/></f></get_width>
-		<get_height set="method" line="128"><f a=""><x path="Int"/></f></get_height>
-		<new public="1" set="method" line="99"><f a=""><x path="Void"/></f></new>
+		<get_width set="method" line="130"><f a=""><x path="Int"/></f></get_width>
+		<get_height set="method" line="131"><f a=""><x path="Int"/></f></get_height>
+		<new public="1" set="method" line="102"><f a=""><x path="Void"/></f></new>
 	</class>
 	<class path="lime.graphics.DOMRenderContext" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/graphics/DOMRenderContext.hx">
 		<accessKey public="1"><c path="String"/></accessKey>
@@ -10039,27 +10093,27 @@
 	<f a=""><x path="Void"/></f>
 	<c path="lime.graphics.Image"/>
 </f></fromFile>
-		<fromImageElement public="1" set="method" line="526" static="1"><f a="image">
+		<fromImageElement public="1" set="method" line="527" static="1"><f a="image">
 	<d/>
 	<c path="lime.graphics.Image"/>
 </f></fromImageElement>
-		<__base64Encode set="method" line="1023" static="1"><f a="bytes">
+		<__base64Encode set="method" line="1025" static="1"><f a="bytes">
 	<c path="haxe.io.Bytes"/>
 	<c path="String"/>
 </f></__base64Encode>
-		<__isJPG set="method" line="1374" static="1"><f a="bytes">
+		<__isJPG set="method" line="1375" static="1"><f a="bytes">
 	<c path="haxe.io.Bytes"/>
 	<x path="Bool"/>
 </f></__isJPG>
-		<__isPNG set="method" line="1381" static="1"><f a="bytes">
+		<__isPNG set="method" line="1382" static="1"><f a="bytes">
 	<c path="haxe.io.Bytes"/>
 	<x path="Bool"/>
 </f></__isPNG>
-		<__isGIF set="method" line="1387" static="1"><f a="bytes">
+		<__isGIF set="method" line="1388" static="1"><f a="bytes">
 	<c path="haxe.io.Bytes"/>
 	<x path="Bool"/>
 </f></__isGIF>
-		<lime_image_load get="inline" set="null" line="1628" static="1">
+		<lime_image_load get="inline" set="null" line="1629" static="1">
 			<f a="data">
 				<d/>
 				<d/>
@@ -10124,31 +10178,31 @@
 	<x path="lime.graphics.PixelFormat"/>
 	<x path="Void"/>
 </f></floodFill>
-		<getColorBoundsRect public="1" set="method" line="538"><f a="mask:color:?findColor:?format">
+		<getColorBoundsRect public="1" set="method" line="540"><f a="mask:color:?findColor:?format">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Bool"/>
 	<x path="lime.graphics.PixelFormat"/>
 	<c path="lime.math.Rectangle"/>
 </f></getColorBoundsRect>
-		<getPixel public="1" set="method" line="568"><f a="x:y:?format">
+		<getPixel public="1" set="method" line="570"><f a="x:y:?format">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="lime.graphics.PixelFormat"/>
 	<x path="Int"/>
 </f></getPixel>
-		<getPixel32 public="1" set="method" line="607"><f a="x:y:?format">
+		<getPixel32 public="1" set="method" line="609"><f a="x:y:?format">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="lime.graphics.PixelFormat"/>
 	<x path="Int"/>
 </f></getPixel32>
-		<getPixels public="1" set="method" line="646"><f a="rect:?format">
+		<getPixels public="1" set="method" line="648"><f a="rect:?format">
 	<c path="lime.math.Rectangle"/>
 	<x path="lime.graphics.PixelFormat"/>
 	<c path="haxe.io.Bytes"/>
 </f></getPixels>
-		<merge public="1" set="method" line="719"><f a="sourceImage:sourceRect:destPoint:redMultiplier:greenMultiplier:blueMultiplier:alphaMultiplier">
+		<merge public="1" set="method" line="721"><f a="sourceImage:sourceRect:destPoint:redMultiplier:greenMultiplier:blueMultiplier:alphaMultiplier">
 	<c path="lime.graphics.Image"/>
 	<c path="lime.math.Rectangle"/>
 	<c path="lime.math.Vector2"/>
@@ -10158,37 +10212,37 @@
 	<x path="Int"/>
 	<x path="Void"/>
 </f></merge>
-		<resize public="1" set="method" line="753"><f a="newWidth:newHeight">
+		<resize public="1" set="method" line="755"><f a="newWidth:newHeight">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Void"/>
 </f></resize>
-		<scroll public="1" set="method" line="790"><f a="x:y">
+		<scroll public="1" set="method" line="792"><f a="x:y">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Void"/>
 </f></scroll>
-		<setPixel public="1" set="method" line="821"><f a="x:y:color:?format">
+		<setPixel public="1" set="method" line="823"><f a="x:y:color:?format">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="lime.graphics.PixelFormat"/>
 	<x path="Void"/>
 </f></setPixel>
-		<setPixel32 public="1" set="method" line="858"><f a="x:y:color:?format">
+		<setPixel32 public="1" set="method" line="860"><f a="x:y:color:?format">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="lime.graphics.PixelFormat"/>
 	<x path="Void"/>
 </f></setPixel32>
-		<setPixels public="1" set="method" line="895"><f a="rect:bytes:?format">
+		<setPixels public="1" set="method" line="897"><f a="rect:bytes:?format">
 	<c path="lime.math.Rectangle"/>
 	<c path="haxe.io.Bytes"/>
 	<x path="lime.graphics.PixelFormat"/>
 	<x path="Void"/>
 </f></setPixels>
-		<threshold public="1" set="method" line="977"><f a="sourceImage:sourceRect:destPoint:operation:threshold:?color:?mask:?copySource:?format">
+		<threshold public="1" set="method" line="979"><f a="sourceImage:sourceRect:destPoint:operation:threshold:?color:?mask:?copySource:?format">
 	<c path="lime.graphics.Image"/>
 	<c path="lime.math.Rectangle"/>
 	<c path="lime.math.Vector2"/>
@@ -10200,11 +10254,11 @@
 	<x path="lime.graphics.PixelFormat"/>
 	<x path="Int"/>
 </f></threshold>
-		<__clipRect set="method" line="1052"><f a="r">
+		<__clipRect set="method" line="1054"><f a="r">
 	<c path="lime.math.Rectangle"/>
 	<c path="lime.math.Rectangle"/>
 </f></__clipRect>
-		<__fromBase64 set="method" line="1095"><f a="base64:type:?onload">
+		<__fromBase64 set="method" line="1097"><f a="base64:type:?onload">
 	<c path="String"/>
 	<c path="String"/>
 	<f a="">
@@ -10213,7 +10267,7 @@
 	</f>
 	<x path="Void"/>
 </f></__fromBase64>
-		<__fromBytes set="method" line="1126"><f a="bytes:onload">
+		<__fromBytes set="method" line="1127"><f a="bytes:onload">
 	<c path="haxe.io.Bytes"/>
 	<f a="">
 		<c path="lime.graphics.Image"/>
@@ -10221,7 +10275,7 @@
 	</f>
 	<x path="Void"/>
 </f></__fromBytes>
-		<__fromFile set="method" line="1181"><f a="path:onload:onerror">
+		<__fromFile set="method" line="1182"><f a="path:onload:onerror">
 	<c path="String"/>
 	<f a="">
 		<c path="lime.graphics.Image"/>
@@ -10230,38 +10284,38 @@
 	<f a=""><x path="Void"/></f>
 	<x path="Void"/>
 </f></__fromFile>
-		<__fromImageBuffer set="method" line="1351"><f a="buffer">
+		<__fromImageBuffer set="method" line="1352"><f a="buffer">
 	<c path="lime.graphics.ImageBuffer"/>
 	<x path="Void"/>
 </f></__fromImageBuffer>
-		<get_data set="method" line="1408"><f a=""><x path="lime.utils.UInt8Array"/></f></get_data>
-		<set_data set="method" line="1430"><f a="value">
+		<get_data set="method" line="1409"><f a=""><x path="lime.utils.UInt8Array"/></f></get_data>
+		<set_data set="method" line="1431"><f a="value">
 	<x path="lime.utils.UInt8Array"/>
 	<x path="lime.utils.UInt8Array"/>
 </f></set_data>
-		<get_format set="method" line="1437"><f a=""><x path="lime.graphics.PixelFormat"/></f></get_format>
-		<set_format set="method" line="1444"><f a="value">
+		<get_format set="method" line="1438"><f a=""><x path="lime.graphics.PixelFormat"/></f></get_format>
+		<set_format set="method" line="1445"><f a="value">
 	<x path="lime.graphics.PixelFormat"/>
 	<x path="lime.graphics.PixelFormat"/>
 </f></set_format>
-		<get_powerOfTwo set="method" line="1465"><f a=""><x path="Bool"/></f></get_powerOfTwo>
-		<set_powerOfTwo set="method" line="1472"><f a="value">
+		<get_powerOfTwo set="method" line="1466"><f a=""><x path="Bool"/></f></get_powerOfTwo>
+		<set_powerOfTwo set="method" line="1473"><f a="value">
 	<x path="Bool"/>
 	<x path="Bool"/>
 </f></set_powerOfTwo>
-		<get_premultiplied set="method" line="1522"><f a=""><x path="Bool"/></f></get_premultiplied>
-		<set_premultiplied set="method" line="1529"><f a="value">
+		<get_premultiplied set="method" line="1523"><f a=""><x path="Bool"/></f></get_premultiplied>
+		<set_premultiplied set="method" line="1530"><f a="value">
 	<x path="Bool"/>
 	<x path="Bool"/>
 </f></set_premultiplied>
-		<get_rect set="method" line="1574"><f a=""><c path="lime.math.Rectangle"/></f></get_rect>
-		<get_src set="method" line="1581"><f a=""><d/></f></get_src>
-		<set_src set="method" line="1596"><f a="value">
+		<get_rect set="method" line="1575"><f a=""><c path="lime.math.Rectangle"/></f></get_rect>
+		<get_src set="method" line="1582"><f a=""><d/></f></get_src>
+		<set_src set="method" line="1597"><f a="value">
 	<d/>
 	<d/>
 </f></set_src>
-		<get_transparent set="method" line="1603"><f a=""><x path="Bool"/></f></get_transparent>
-		<set_transparent set="method" line="1611"><f a="value">
+		<get_transparent set="method" line="1604"><f a=""><x path="Bool"/></f></get_transparent>
+		<set_transparent set="method" line="1612"><f a="value">
 	<x path="Bool"/>
 	<x path="Bool"/>
 </f></set_transparent>
@@ -24214,32 +24268,32 @@
 	<c path="haxe.io.Bytes"/>
 	<c path="lime.text.Font"/>
 </f></fromBytes>
-		<fromFile public="1" set="method" line="98" static="1"><f a="path">
+		<fromFile public="1" set="method" line="100" static="1"><f a="path">
 	<c path="String"/>
 	<c path="lime.text.Font"/>
 </f></fromFile>
-		<lime_font_get_ascender get="inline" set="null" line="499" static="1">
+		<lime_font_get_ascender get="inline" set="null" line="503" static="1">
 			<f a="handle">
 				<d/>
 				<x path="Int"/>
 			</f>
 			<meta><m n=":cffi"/></meta>
 		</lime_font_get_ascender>
-		<lime_font_get_descender get="inline" set="null" line="500" static="1">
+		<lime_font_get_descender get="inline" set="null" line="504" static="1">
 			<f a="handle">
 				<d/>
 				<x path="Int"/>
 			</f>
 			<meta><m n=":cffi"/></meta>
 		</lime_font_get_descender>
-		<lime_font_get_family_name get="inline" set="null" line="501" static="1">
+		<lime_font_get_family_name get="inline" set="null" line="505" static="1">
 			<f a="handle">
 				<d/>
 				<d/>
 			</f>
 			<meta><m n=":cffi"/></meta>
 		</lime_font_get_family_name>
-		<lime_font_get_glyph_index get="inline" set="null" line="502" static="1">
+		<lime_font_get_glyph_index get="inline" set="null" line="506" static="1">
 			<f a="handle:character">
 				<d/>
 				<c path="String"/>
@@ -24247,7 +24301,7 @@
 			</f>
 			<meta><m n=":cffi"/></meta>
 		</lime_font_get_glyph_index>
-		<lime_font_get_glyph_indices get="inline" set="null" line="503" static="1">
+		<lime_font_get_glyph_indices get="inline" set="null" line="507" static="1">
 			<f a="handle:characters">
 				<d/>
 				<c path="String"/>
@@ -24255,7 +24309,7 @@
 			</f>
 			<meta><m n=":cffi"/></meta>
 		</lime_font_get_glyph_indices>
-		<lime_font_get_glyph_metrics get="inline" set="null" line="504" static="1">
+		<lime_font_get_glyph_metrics get="inline" set="null" line="508" static="1">
 			<f a="handle:index">
 				<d/>
 				<x path="Int"/>
@@ -24263,49 +24317,49 @@
 			</f>
 			<meta><m n=":cffi"/></meta>
 		</lime_font_get_glyph_metrics>
-		<lime_font_get_height get="inline" set="null" line="505" static="1">
+		<lime_font_get_height get="inline" set="null" line="509" static="1">
 			<f a="handle">
 				<d/>
 				<x path="Int"/>
 			</f>
 			<meta><m n=":cffi"/></meta>
 		</lime_font_get_height>
-		<lime_font_get_num_glyphs get="inline" set="null" line="506" static="1">
+		<lime_font_get_num_glyphs get="inline" set="null" line="510" static="1">
 			<f a="handle">
 				<d/>
 				<x path="Int"/>
 			</f>
 			<meta><m n=":cffi"/></meta>
 		</lime_font_get_num_glyphs>
-		<lime_font_get_underline_position get="inline" set="null" line="507" static="1">
+		<lime_font_get_underline_position get="inline" set="null" line="511" static="1">
 			<f a="handle">
 				<d/>
 				<x path="Int"/>
 			</f>
 			<meta><m n=":cffi"/></meta>
 		</lime_font_get_underline_position>
-		<lime_font_get_underline_thickness get="inline" set="null" line="508" static="1">
+		<lime_font_get_underline_thickness get="inline" set="null" line="512" static="1">
 			<f a="handle">
 				<d/>
 				<x path="Int"/>
 			</f>
 			<meta><m n=":cffi"/></meta>
 		</lime_font_get_underline_thickness>
-		<lime_font_get_units_per_em get="inline" set="null" line="509" static="1">
+		<lime_font_get_units_per_em get="inline" set="null" line="513" static="1">
 			<f a="handle">
 				<d/>
 				<x path="Int"/>
 			</f>
 			<meta><m n=":cffi"/></meta>
 		</lime_font_get_units_per_em>
-		<lime_font_load get="inline" set="null" line="510" static="1">
+		<lime_font_load get="inline" set="null" line="514" static="1">
 			<f a="data">
 				<d/>
 				<d/>
 			</f>
 			<meta><m n=":cffi"/></meta>
 		</lime_font_load>
-		<lime_font_outline_decompose get="inline" set="null" line="511" static="1">
+		<lime_font_outline_decompose get="inline" set="null" line="515" static="1">
 			<f a="handle:size">
 				<d/>
 				<x path="Int"/>
@@ -24313,7 +24367,7 @@
 			</f>
 			<meta><m n=":cffi"/></meta>
 		</lime_font_outline_decompose>
-		<lime_font_render_glyph get="inline" set="null" line="512" static="1">
+		<lime_font_render_glyph get="inline" set="null" line="516" static="1">
 			<f a="handle:index:data">
 				<d/>
 				<x path="Int"/>
@@ -24322,7 +24376,7 @@
 			</f>
 			<meta><m n=":cffi"/></meta>
 		</lime_font_render_glyph>
-		<lime_font_render_glyphs get="inline" set="null" line="513" static="1">
+		<lime_font_render_glyphs get="inline" set="null" line="517" static="1">
 			<f a="handle:indices:data">
 				<d/>
 				<d/>
@@ -24331,7 +24385,7 @@
 			</f>
 			<meta><m n=":cffi"/></meta>
 		</lime_font_render_glyphs>
-		<lime_font_set_size get="inline" set="null" line="514" static="1">
+		<lime_font_set_size get="inline" set="null" line="518" static="1">
 			<f a="handle:size">
 				<d/>
 				<x path="Int"/>
@@ -24357,24 +24411,24 @@
 			<meta><m n=":noCompletion"/></meta>
 		</__fontPathWithoutDirectory>
 		<decompose public="1" set="method" line="67"><f a=""><t path="lime.text.NativeFontData"/></f></decompose>
-		<getGlyph public="1" set="method" line="112"><f a="character">
+		<getGlyph public="1" set="method" line="116"><f a="character">
 	<c path="String"/>
 	<x path="lime.text.Glyph"/>
 </f></getGlyph>
-		<getGlyphs public="1" set="method" line="123"><f a="?characters">
+		<getGlyphs public="1" set="method" line="127"><f a="?characters">
 	<c path="String"/>
 	<c path="Array"><x path="lime.text.Glyph"/></c>
 </f></getGlyphs>
-		<getGlyphMetrics public="1" set="method" line="135"><f a="glyph">
+		<getGlyphMetrics public="1" set="method" line="139"><f a="glyph">
 	<x path="lime.text.Glyph"/>
 	<c path="lime.text.GlyphMetrics"/>
 </f></getGlyphMetrics>
-		<renderGlyph public="1" set="method" line="154"><f a="glyph:fontSize">
+		<renderGlyph public="1" set="method" line="158"><f a="glyph:fontSize">
 	<x path="lime.text.Glyph"/>
 	<x path="Int"/>
 	<c path="lime.graphics.Image"/>
 </f></renderGlyph>
-		<renderGlyphs public="1" set="method" line="192"><f a="glyphs:fontSize">
+		<renderGlyphs public="1" set="method" line="196"><f a="glyphs:fontSize">
 	<c path="Array"><x path="lime.text.Glyph"/></c>
 	<x path="Int"/>
 	<x path="Map">
@@ -24382,34 +24436,34 @@
 		<c path="lime.graphics.Image"/>
 	</x>
 </f></renderGlyphs>
-		<__fromBytes set="method" line="356">
+		<__fromBytes set="method" line="360">
 			<f a="bytes">
 				<c path="haxe.io.Bytes"/>
 				<x path="Void"/>
 			</f>
 			<meta><m n=":noCompletion"/></meta>
 		</__fromBytes>
-		<__fromFile set="method" line="377">
+		<__fromFile set="method" line="381">
 			<f a="path">
 				<c path="String"/>
 				<x path="Void"/>
 			</f>
 			<meta><m n=":noCompletion"/></meta>
 		</__fromFile>
-		<__setSize set="method" line="398">
+		<__setSize set="method" line="402">
 			<f a="size">
 				<x path="Int"/>
 				<x path="Void"/>
 			</f>
 			<meta><m n=":noCompletion"/></meta>
 		</__setSize>
-		<get_ascender set="method" line="414"><f a=""><x path="Int"/></f></get_ascender>
-		<get_descender set="method" line="425"><f a=""><x path="Int"/></f></get_descender>
-		<get_height set="method" line="436"><f a=""><x path="Int"/></f></get_height>
-		<get_numGlyphs set="method" line="447"><f a=""><x path="Int"/></f></get_numGlyphs>
-		<get_underlinePosition set="method" line="458"><f a=""><x path="Int"/></f></get_underlinePosition>
-		<get_underlineThickness set="method" line="469"><f a=""><x path="Int"/></f></get_underlineThickness>
-		<get_unitsPerEM set="method" line="480"><f a=""><x path="Int"/></f></get_unitsPerEM>
+		<get_ascender set="method" line="418"><f a=""><x path="Int"/></f></get_ascender>
+		<get_descender set="method" line="429"><f a=""><x path="Int"/></f></get_descender>
+		<get_height set="method" line="440"><f a=""><x path="Int"/></f></get_height>
+		<get_numGlyphs set="method" line="451"><f a=""><x path="Int"/></f></get_numGlyphs>
+		<get_underlinePosition set="method" line="462"><f a=""><x path="Int"/></f></get_underlinePosition>
+		<get_underlineThickness set="method" line="473"><f a=""><x path="Int"/></f></get_underlineThickness>
+		<get_unitsPerEM set="method" line="484"><f a=""><x path="Int"/></f></get_unitsPerEM>
 		<new public="1" set="method" line="50"><f a="?name">
 	<c path="String"/>
 	<x path="Void"/>
@@ -31611,70 +31665,70 @@
 			<m n=":enum"/>
 		</meta>
 		<impl><class path="lime.utils._ArrayBufferView.TypedArrayType_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/utils/ArrayBufferView.hx" private="1" module="lime.utils.ArrayBufferView" extern="1">
-	<None public="1" get="inline" set="null" line="362" static="1">
+	<None public="1" get="inline" set="null" line="404" static="1">
 		<x path="lime.utils.TypedArrayType"/>
 		<meta>
 			<m n=":enum"/>
 			<m n=":impl"/>
 		</meta>
 	</None>
-	<Int8 public="1" get="inline" set="null" line="363" static="1">
+	<Int8 public="1" get="inline" set="null" line="405" static="1">
 		<x path="lime.utils.TypedArrayType"/>
 		<meta>
 			<m n=":enum"/>
 			<m n=":impl"/>
 		</meta>
 	</Int8>
-	<Int16 public="1" get="inline" set="null" line="364" static="1">
+	<Int16 public="1" get="inline" set="null" line="406" static="1">
 		<x path="lime.utils.TypedArrayType"/>
 		<meta>
 			<m n=":enum"/>
 			<m n=":impl"/>
 		</meta>
 	</Int16>
-	<Int32 public="1" get="inline" set="null" line="365" static="1">
+	<Int32 public="1" get="inline" set="null" line="407" static="1">
 		<x path="lime.utils.TypedArrayType"/>
 		<meta>
 			<m n=":enum"/>
 			<m n=":impl"/>
 		</meta>
 	</Int32>
-	<Uint8 public="1" get="inline" set="null" line="366" static="1">
+	<Uint8 public="1" get="inline" set="null" line="408" static="1">
 		<x path="lime.utils.TypedArrayType"/>
 		<meta>
 			<m n=":enum"/>
 			<m n=":impl"/>
 		</meta>
 	</Uint8>
-	<Uint8Clamped public="1" get="inline" set="null" line="367" static="1">
+	<Uint8Clamped public="1" get="inline" set="null" line="409" static="1">
 		<x path="lime.utils.TypedArrayType"/>
 		<meta>
 			<m n=":enum"/>
 			<m n=":impl"/>
 		</meta>
 	</Uint8Clamped>
-	<Uint16 public="1" get="inline" set="null" line="368" static="1">
+	<Uint16 public="1" get="inline" set="null" line="410" static="1">
 		<x path="lime.utils.TypedArrayType"/>
 		<meta>
 			<m n=":enum"/>
 			<m n=":impl"/>
 		</meta>
 	</Uint16>
-	<Uint32 public="1" get="inline" set="null" line="369" static="1">
+	<Uint32 public="1" get="inline" set="null" line="411" static="1">
 		<x path="lime.utils.TypedArrayType"/>
 		<meta>
 			<m n=":enum"/>
 			<m n=":impl"/>
 		</meta>
 	</Uint32>
-	<Float32 public="1" get="inline" set="null" line="370" static="1">
+	<Float32 public="1" get="inline" set="null" line="412" static="1">
 		<x path="lime.utils.TypedArrayType"/>
 		<meta>
 			<m n=":enum"/>
 			<m n=":impl"/>
 		</meta>
 	</Float32>
-	<Float64 public="1" get="inline" set="null" line="371" static="1">
+	<Float64 public="1" get="inline" set="null" line="413" static="1">
 		<x path="lime.utils.TypedArrayType"/>
 		<meta>
 			<m n=":enum"/>
@@ -31685,70 +31739,70 @@
 </class></impl>
 	</abstract>
 	<class path="lime.utils._ArrayBufferView.TypedArrayType_Impl_" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/utils/ArrayBufferView.hx" private="1" module="lime.utils.ArrayBufferView" extern="1">
-		<None public="1" get="inline" set="null" line="362" static="1">
+		<None public="1" get="inline" set="null" line="404" static="1">
 			<x path="lime.utils.TypedArrayType"/>
 			<meta>
 				<m n=":enum"/>
 				<m n=":impl"/>
 			</meta>
 		</None>
-		<Int8 public="1" get="inline" set="null" line="363" static="1">
+		<Int8 public="1" get="inline" set="null" line="405" static="1">
 			<x path="lime.utils.TypedArrayType"/>
 			<meta>
 				<m n=":enum"/>
 				<m n=":impl"/>
 			</meta>
 		</Int8>
-		<Int16 public="1" get="inline" set="null" line="364" static="1">
+		<Int16 public="1" get="inline" set="null" line="406" static="1">
 			<x path="lime.utils.TypedArrayType"/>
 			<meta>
 				<m n=":enum"/>
 				<m n=":impl"/>
 			</meta>
 		</Int16>
-		<Int32 public="1" get="inline" set="null" line="365" static="1">
+		<Int32 public="1" get="inline" set="null" line="407" static="1">
 			<x path="lime.utils.TypedArrayType"/>
 			<meta>
 				<m n=":enum"/>
 				<m n=":impl"/>
 			</meta>
 		</Int32>
-		<Uint8 public="1" get="inline" set="null" line="366" static="1">
+		<Uint8 public="1" get="inline" set="null" line="408" static="1">
 			<x path="lime.utils.TypedArrayType"/>
 			<meta>
 				<m n=":enum"/>
 				<m n=":impl"/>
 			</meta>
 		</Uint8>
-		<Uint8Clamped public="1" get="inline" set="null" line="367" static="1">
+		<Uint8Clamped public="1" get="inline" set="null" line="409" static="1">
 			<x path="lime.utils.TypedArrayType"/>
 			<meta>
 				<m n=":enum"/>
 				<m n=":impl"/>
 			</meta>
 		</Uint8Clamped>
-		<Uint16 public="1" get="inline" set="null" line="368" static="1">
+		<Uint16 public="1" get="inline" set="null" line="410" static="1">
 			<x path="lime.utils.TypedArrayType"/>
 			<meta>
 				<m n=":enum"/>
 				<m n=":impl"/>
 			</meta>
 		</Uint16>
-		<Uint32 public="1" get="inline" set="null" line="369" static="1">
+		<Uint32 public="1" get="inline" set="null" line="411" static="1">
 			<x path="lime.utils.TypedArrayType"/>
 			<meta>
 				<m n=":enum"/>
 				<m n=":impl"/>
 			</meta>
 		</Uint32>
-		<Float32 public="1" get="inline" set="null" line="370" static="1">
+		<Float32 public="1" get="inline" set="null" line="412" static="1">
 			<x path="lime.utils.TypedArrayType"/>
 			<meta>
 				<m n=":enum"/>
 				<m n=":impl"/>
 			</meta>
 		</Float32>
-		<Float64 public="1" get="inline" set="null" line="371" static="1">
+		<Float64 public="1" get="inline" set="null" line="413" static="1">
 			<x path="lime.utils.TypedArrayType"/>
 			<meta>
 				<m n=":enum"/>
@@ -31758,7 +31812,7 @@
 		<meta><m n=":enum"/></meta>
 	</class>
 	<class path="lime.utils.ArrayBufferIO" params="" file="/home/joshua/TeamCity/buildAgent/work/5672bbce04c0a25f/lime/lime/utils/ArrayBufferView.hx" module="lime.utils.ArrayBufferView">
-		<getInt16 public="1" set="method" line="437" static="1">
+		<getInt16 public="1" set="method" line="483" static="1">
 			<f a="buffer:byteOffset">
 				<x path="lime.utils.ArrayBuffer"/>
 				<x path="Int"/>
@@ -31766,7 +31820,7 @@
 			</f>
 			<meta><m n=":has_untyped"/></meta>
 		</getInt16>
-		<getInt16_BE public="1" set="method" line="454" static="1">
+		<getInt16_BE public="1" set="method" line="500" static="1">
 			<f a="buffer:byteOffset">
 				<x path="lime.utils.ArrayBuffer"/>
 				<x path="Int"/>
@@ -31774,7 +31828,7 @@
 			</f>
 			<meta><m n=":has_untyped"/></meta>
 		</getInt16_BE>
-		<setInt16 public="1" set="method" line="472" static="1">
+		<setInt16 public="1" set="method" line="518" static="1">
 			<f a="buffer:byteOffset:value">
 				<x path="lime.utils.ArrayBuffer"/>
 				<x path="Int"/>
@@ -31783,7 +31837,7 @@
 			</f>
 			<meta><m n=":has_untyped"/></meta>
 		</setInt16>
-		<setInt16_BE public="1" set="method" line="487" static="1">
+		<setInt16_BE public="1" set="method" line="534" static="1">
 			<f a="buffer:byteOffset:value">
 				<x path="lime.utils.ArrayBuffer"/>
 				<x path="Int"/>

@@ -1,4 +1,27 @@
-/* .navbar { position:static !important; margin:0px !important;} */
+.main-content {
+	margin-top:15px;
+}
+
+.dark {
+	background: rgb(20,20,25);
+	color: white;
+}
+.dark a {
+	color: white;
+}
+.dark a:hover {
+	color: rgb(200,200,200);
+}
+.dark blockquote {
+	 border-left: 3px solid rgb(126,126,129);
+}
+.dark blockquote small {
+	color: white;
+	font-weight: bold;
+}
+.dark blockquote small:before {
+	display: none;
+}
 
 /* #nav { */
 /*   float: left; */
@@ -7,6 +30,37 @@
 /* } */
 /*#content .header { position:absolute; background:rgba(255,255,255,0.9); left:250px; right:15px; padding:0px 12px; border-bottom:1px solid #EEE;}*/
 /*#content .body { padding-top:80px;}*/
+.nav-list {padding-right: 0;	 }
+.nav-list>li>a, .nav-list .nav-header {margin-right:0;}
+.nav-list>li>a.treeLink {padding-left:20px;}
+.nav-list a { word-wrap: break-word; font-size:14px; text-shadow: none!important;}
+.nav-list>.active>a.treeLink, .nav-list>.active>a.treeLink:hover, .nav-list>.active>a.treeLink:focus {
+	background:#999;
+	color:#fff;
+}
+
+.nav-list li i.fa {
+	height: 16px;
+	width: 16px;
+	color: rgb(200,200,200);
+	font-weight:normal;
+	font-size:16px;
+}
+
+.viewsource {float:right}
+
+/** Footer sitemap **/
+footer{
+	margin-top:40px;
+	font-size:14px;
+}
+.copyright {
+	padding: 6px;
+	overflow: hidden;
+	text-align:center;
+	margin: 40px 0;
+}
+.dark .copyright a { color:#F48821; }
 
 /* .doc { margin-top:16px; } */
 .toggle-hide { display:block; }
@@ -17,6 +71,8 @@
 /* .availability { margin-left:14px; color:#93a1a1; } */
 /* .doc { margin-left:14px; } */
 
+
+
 /* #nav li { list-style-type: none; } */
 #nav .expando > ul { display:none; }
 #nav .expando.expanded > ul { display:inherit; }
@@ -26,6 +82,8 @@
 
 /* .nav .nav li { margin-left: 14px; } */
 
+.dropdown { padding: 0 9px; } 
+
 #nav.searching .expando > ul { display:inherit; }
 #nav.searching .expando > a { display:none; }
 #nav.searching ul { margin-left:0px; }
@@ -34,16 +92,48 @@
 
 .nav-header {
 	text-transform: none;
+	font-size:14px;
+	color:#555;
+	text-shadow: none;
 }
 
-/* h1 code { padding:4px; font-size:15px; } */
-/* h3 code { padding:4px; font-size:13px; } */
-code {
-  border: 0;
-  font-weight: normal;
-  color: #666666;
-  background: none;
+.availability {
+	color: #AB611A;
+	font-size: 90%;
 }
+
+h3 code { 
+	background:none;
+	box-shadow: 0 0 15px rgb(240, 240, 240);
+	padding: 4px 8px;
+	white-space: inherit;
+	display: inline-block;
+	line-height: 1.5em;
+	margin-left: -10px;
+}
+
+h3 span.label {	
+	margin-right: 5px; 
+}
+
+code {
+  font-family: Monaco,Menlo,Consolas,"Courier New",monospace;
+  font-weight: normal;
+  color: #666;
+  background-color: #f7f7f9;
+  border: 1px solid #e1e1e8;
+  white-space: nowrap;
+  border-radius: 3px;
+  padding: 2px 4px;
+  font-size: 13px;
+}
+
+code .identifier {
+  font-family:bold 14px "Helvetica Neue",Helvetica,Arial,sans-serif;
+  color:#002b36;
+  padding: 0 0 0 5px;  
+}
+
 code .identifier, code.type {
   font-weight: bold;
 }
@@ -53,7 +143,6 @@ code a { text-decoration:none; }
 code a:hover { text-decoration:underline; }
 
 /*code.dark { background:#272822; color:#F8F8F2; border:none; } */
-code .identifier { color:#002b36; }
 code .type { color:#268bd2; }
 /* code .keyword { color:#dc322f; } */
 /* code .directive { color:#2aa198; } */
@@ -68,7 +157,41 @@ code .type { color:#268bd2; }
 /* .navbar-fixed-bottom .navbar-inner { padding: 0; } */
 
 body {
-  padding-top: 20px;
+  padding: 0px;
+  font-size:16px;
+  font-family:"Open Sans", sans-serif;
+  color: #1e1e1e;
+  line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: "Source Sans Pro", sans-serif;
+	font-weight: 600;
+	word-wrap: break-word;
+}
+h1 {
+	font-size: 36px;
+	color: #171717;
+}
+h1 small {
+	font-size: 14px;
+	color: #999;
+	font-weight: normal;
+}
+h2 {
+	font-size: 30px;
+}
+h3 {
+	font-size: 24px;
+}
+h4 {
+	font-size: 20px;
+}
+h5, h5 code {
+	font-size: 18px;
+}
+h6 {
+	font-size: 16px;
 }
 
 .sidebar-nav {
@@ -77,6 +200,7 @@ body {
 
 #searchForm {
   padding: 0 9px;
+  margin-bottom:10px;
 }
 
 #searchForm .control-group {
@@ -84,15 +208,45 @@ body {
 }
 
 .indent {
-  margin-left: 40px;
+  margin-left: 20px;
+  border-left: 5px solid #eeeeee;
+  padding-left:20px;
+}
+
+table.params {
+  border-left: 5px solid #eeeeee;
+  margin-left: 20px;
+}
+table.params th {
+  background:#fcfcfc;
 }
 
 .doc-main {
   margin-bottom: 40px;
 }
 
+.doc-main p { font-style: italic; }
+
 .section {
   border-bottom: 1px solid #eee;
+}
+
+.table p {
+  margin: 3px 0;
+}
+
+.table th, .table td {
+  border-top: 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.table a small {
+  color: #666;
+}
+
+.table .fa {
+  color: rgb(200,200,200);
+  margin-right:5px;
 }
 
 .javadoc {
@@ -104,7 +258,6 @@ body {
 .inline-content * {
   display: inline;
 }
-
 /**
  * Stuff for input-block-level:
  * http://stackoverflow.com/questions/13306670/bootstrap-prepended-and-appended-input-how-to-max-input-field-width
@@ -140,6 +293,7 @@ body {
 }
 .field + .field {
   border-top: 1px solid #eee;
+  margin-top: 10px;
 }
 .fields {
   margin-left: 40px;
@@ -173,4 +327,29 @@ pre.example:before {
   -webkit-border-radius: 4px 0;
   border-radius: 4px 0;
   border: 1px solid rgba(0,0,0,0.15);
+}
+
+.inherited-fields {
+  padding: 5px 20px;
+  margin-top:1em;
+  background:#fcfcfc;
+}
+
+@media (max-width: 767px) {
+  .navbar-fixed-top, .navbar-fixed-bottom, .navbar-static-top {
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .navbar .divider { 
+    display: none;
+  }
+  
+  .main-content {
+    margin-top:0px;
+  }
+}
+@media (max-width: 979px) {
+  .main-content {
+    margin-top:15px;
+  }
 }
