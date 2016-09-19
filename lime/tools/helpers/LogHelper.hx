@@ -10,6 +10,8 @@ import sys.io.Process;
 import neko.Lib;
 #elseif cpp
 import cpp.Lib;
+#elseif cs
+import cs.Lib;
 #end
 
 
@@ -49,7 +51,9 @@ class LogHelper {
 		
 		if (verbose && e != null) {
 			
+			#if !cs
 			Lib.rethrow (e);
+			#end
 			
 		}
 		

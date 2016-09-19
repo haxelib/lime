@@ -212,7 +212,7 @@ class CommandLineTools {
 							
 							target = PlatformHelper.hostPlatform;
 							targetFlags.set ("cpp", "");
-							
+						
 						case "neko":
 							
 							target = PlatformHelper.hostPlatform;
@@ -222,11 +222,16 @@ class CommandLineTools {
 							
 							target = PlatformHelper.hostPlatform;
 							targetFlags.set ("nodejs", "");
+						
+						case "cs":
 							
+							target = PlatformHelper.hostPlatform;
+							targetFlags.set ("cs", "");
+						
 						case "iphone", "iphoneos":
 							
 							target = Platform.IOS;
-							
+						
 						case "iphonesim":
 							
 							target = Platform.IOS;
@@ -872,12 +877,6 @@ class CommandLineTools {
 			
 			LogHelper.println ("Use \x1b[3m" + commandName + " setup\x1b[0m to configure platforms or \x1b[3m" + commandName + " help\x1b[0m for more commands");
 			
-			if (targetFlags.exists ("openfl")) {
-				
-				LogHelper.println ("\x1b[37mUse \x1b[3m-Dv2\x1b[0m\x1b[37m or \x1b[3m-Dlegacy\x1b[0m\x1b[37m with your commands to use OpenFL 2.x legacy mode\x1b[0m");
-				
-			}
-			
 		}
 		
 	}
@@ -1180,7 +1179,7 @@ class CommandLineTools {
 				
 				target = PlatformHelper.hostPlatform;
 				targetFlags.set ("cpp", "");
-				
+			
 			case "neko":
 				
 				target = PlatformHelper.hostPlatform;
@@ -1195,6 +1194,11 @@ class CommandLineTools {
 				
 				target = PlatformHelper.hostPlatform;
 				targetFlags.set ("nodejs", "");
+			
+			case "cs":
+				
+				target = PlatformHelper.hostPlatform;
+				targetFlags.set ("cs", "");
 			
 			case "iphone", "iphoneos":
 				
@@ -1609,6 +1613,8 @@ class CommandLineTools {
 							property += split[i].substr (0, 1).toUpperCase () + split[i].substr (1, split[i].length - 1);
 							
 						}
+						
+						if (field == "window-allow-high-dpi") property = "allowHighDPI";
 						
 						var fieldReference = Reflect.field (overrides, fieldName);
 						
