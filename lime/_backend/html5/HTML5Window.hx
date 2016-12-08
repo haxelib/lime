@@ -10,11 +10,13 @@ import js.html.InputElement;
 import js.html.InputEvent;
 import js.html.MouseEvent;
 import js.html.TouchEvent;
+import js.html.ClipboardEvent;
 import js.Browser;
 import lime.app.Application;
 import lime.graphics.Image;
 import lime.system.Display;
 import lime.system.System;
+import lime.system.Clipboard;
 import lime.ui.Gamepad;
 import lime.ui.Joystick;
 import lime.ui.Touch;
@@ -30,6 +32,7 @@ import lime.ui.Window;
 class HTML5Window {
 	
 	
+	private static var dummyCharacter = String.fromCharCode (127);
 	private static var textInput:InputElement;
 	private static var windowID:Int = 0;
 	
@@ -207,6 +210,8 @@ class HTML5Window {
 				return true;
 			}, false);
 			
+			element.addEventListener ("contextmenu", handleContextMenuEvent, true);
+			
 			element.addEventListener ("touchstart", handleTouchEvent, true);
 			element.addEventListener ("touchmove", handleTouchEvent, true);
 			element.addEventListener ("touchend", handleTouchEvent, true);
@@ -236,6 +241,17 @@ class HTML5Window {
 	public function getEnableTextEvents ():Bool {
 		
 		return enableTextEvents;
+		
+	}
+	
+	
+	private function handleContextMenuEvent (event:MouseEvent):Void {
+		
+		if (parent.onMouseUp.canceled) {
+			
+			event.preventDefault ();
+			
+		}
 		
 	}
 	
@@ -277,12 +293,45 @@ class HTML5Window {
 	}
 	
 	
+	private function handleCutOrCopyEvent (event:ClipboardEvent):Void {
+		
+		event.clipboardData.setData('text/plain', Clipboard.text);
+		event.preventDefault(); // We want our data, not data from any selection, to be written to the clipboard
+		
+	}
+
+
+	private function handlePasteEvent (event:ClipboardEvent):Void {
+		
+		if(untyped event.clipboardData.types.indexOf('text/plain') > -1){
+			var text = Clipboard.text = event.clipboardData.getData('text/plain');
+			parent.onTextInput.dispatch (text);
+			
+			// We are already handling the data from the clipboard, we do not want it inserted into the hidden input
+			event.preventDefault();
+		}
+		
+	}
+
+
 	private function handleInputEvent (event:InputEvent):Void {
 		
-		if (textInput.value != "") {
+		// In order to ensure that the browser will fire clipboard events, we always need to have something selected.
+		// Therefore, `value` cannot be "".
+		
+		if (textInput.value != dummyCharacter) {
 			
-			parent.onTextInput.dispatch (textInput.value);
-			textInput.value = "";
+			if (textInput.value.charAt (0) == dummyCharacter) {
+				
+				parent.onTextInput.dispatch (textInput.value.substr (1));
+				
+			} else {
+				
+				parent.onTextInput.dispatch (textInput.value);
+				
+			}
+			
+			textInput.value = dummyCharacter;
 			
 		}
 		
@@ -332,18 +381,50 @@ class HTML5Window {
 				case "mousedown":
 					
 					parent.onMouseDown.dispatch (x, y, event.button);
+					
+					if (parent.onMouseDown.canceled) {
+						
+						event.preventDefault ();
+						
+					}
 				
 				case "mouseenter":
 					
-					parent.onEnter.dispatch ();
+					if (event.target == element) {
+						
+						parent.onEnter.dispatch ();
+						
+						if (parent.onEnter.canceled) {
+							
+							event.preventDefault ();
+							
+						}
+						
+					}
 				
 				case "mouseleave":
 					
-					parent.onLeave.dispatch ();
+					if (event.target == element) {
+						
+						parent.onLeave.dispatch ();
+						
+						if (parent.onLeave.canceled) {
+							
+							event.preventDefault ();
+							
+						}
+						
+					}
 				
 				case "mouseup":
 					
 					parent.onMouseUp.dispatch (x, y, event.button);
+					
+					if (parent.onMouseUp.canceled) {
+						
+						event.preventDefault ();
+						
+					}
 				
 				case "mousemove":
 					
@@ -351,6 +432,12 @@ class HTML5Window {
 						
 						parent.onMouseMove.dispatch (x, y);
 						parent.onMouseMoveRelative.dispatch (x - cacheMouseX, y - cacheMouseY);
+						
+						if (parent.onMouseMove.canceled || parent.onMouseMoveRelative.canceled) {
+							
+							event.preventDefault ();
+							
+						}
 						
 					}
 				
@@ -364,6 +451,12 @@ class HTML5Window {
 		} else {
 			
 			parent.onMouseWheel.dispatch (untyped event.deltaX, - untyped event.deltaY);
+			
+			if (parent.onMouseWheel.canceled) {
+				
+				event.preventDefault ();
+				
+			}
 			
 		}
 		
@@ -648,7 +741,7 @@ class HTML5Window {
 				textInput.style.position = 'absolute';
 				textInput.style.opacity = "0";
 				textInput.style.color = "transparent";
-				textInput.value = "";
+				textInput.value = dummyCharacter; // See: handleInputEvent()
 				
 				untyped textInput.autocapitalize = "off";
 				untyped textInput.autocorrect = "off";
@@ -683,10 +776,14 @@ class HTML5Window {
 				
 				textInput.addEventListener ('input', handleInputEvent, true);
 				textInput.addEventListener ('blur', handleFocusEvent, true);
+				textInput.addEventListener ('cut', handleCutOrCopyEvent, true);
+				textInput.addEventListener ('copy', handleCutOrCopyEvent, true);
+				textInput.addEventListener ('paste', handlePasteEvent, true);
 				
 			}
 			
 			textInput.focus ();
+			textInput.select ();
 			
 		} else {
 			
@@ -694,6 +791,9 @@ class HTML5Window {
 				
 				textInput.removeEventListener ('input', handleInputEvent, true);
 				textInput.removeEventListener ('blur', handleFocusEvent, true);
+				textInput.removeEventListener ('cut', handleCutOrCopyEvent, true);
+				textInput.removeEventListener ('copy', handleCutOrCopyEvent, true);
+				textInput.removeEventListener ('paste', handlePasteEvent, true);
 				
 				textInput.blur ();
 				

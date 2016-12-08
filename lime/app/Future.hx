@@ -18,19 +18,50 @@ import lime.utils.Log;
 	
 	private var __completeListeners:Array<T->Void>;
 	private var __errorListeners:Array<Dynamic->Void>;
-	private var __progressListeners:Array<Float->Void>;
+	private var __progressListeners:Array<Int->Int->Void>;
 	
 	
-	public function new (work:Void->T = null) {
+	public function new (work:Void->T = null, async:Bool = false) {
 		
 		if (work != null) {
 			
-			var promise = new Promise<T> ();
-			promise.future = this;
-			
-			FutureWork.queue ({ promise: promise, work: work });
+			if (async) {
+				
+				var promise = new Promise<T> ();
+				promise.future = this;
+				
+				FutureWork.queue ({ promise: promise, work: work });
+				
+			} else {
+				
+				try {
+					
+					value = work ();
+					isComplete = true;
+					
+				} catch (e:Dynamic) {
+					
+					error = e;
+					isError = true;
+					
+				}
+				
+			}
 			
 		}
+		
+	}
+	
+	
+	public static function ofEvents<T> (onComplete:Event<T->Void>, onError:Event<Dynamic->Void> = null, onProgress:Event<Int->Int->Void> = null):Future<T> {
+		
+		var promise = new Promise<T> ();
+		
+		onComplete.add (function (data) promise.complete (data), true);
+		if (onError != null) onError.add (function (error) promise.error (error), true);
+		if (onProgress != null) onProgress.add (function (progress, total) promise.progress (progress, total), true);
+		
+		return promise.future;
 		
 	}
 	
@@ -89,7 +120,7 @@ import lime.utils.Log;
 	}
 	
 	
-	public function onProgress (listener:Float->Void):Future<T> {
+	public function onProgress (listener:Int->Int->Void):Future<T> {
 		
 		if (listener != null) {
 			
@@ -200,6 +231,26 @@ import lime.utils.Log;
 			return promise.future;
 			
 		}
+		
+	}
+	
+	
+	public static function withError (error:Dynamic):Future<Dynamic> {
+		
+		var future = new Future<Dynamic> ();
+		future.isError = true;
+		future.error = error;
+		return future;
+		
+	}
+	
+	
+	public static function withValue<T> (value:T):Future<T> {
+		
+		var future = new Future<T> ();
+		future.isComplete = true;
+		future.value = value;
+		return future;
 		
 	}
 	

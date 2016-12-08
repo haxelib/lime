@@ -317,6 +317,14 @@ class Image {
 			destPoint.y = 0;					//clamp destination point to 0
 		}
 		
+		// TODO: Optimize
+		
+		if (sourceImage == this) {
+			
+			sourceImage = clone ();
+			
+		}
+		
 		switch (type) {
 			
 			case CANVAS:
@@ -801,12 +809,6 @@ class Image {
 			
 			case DATA:
 				
-				//#if (js && html5)
-				//ImageCanvasUtil.convertToData (this);
-				//#end
-				
-				//ImageDataUtil.scroll (this, x, y);
-				
 				copyPixels (this, rect, new Vector2 (x, y));
 			
 			case FLASH:
@@ -1181,7 +1183,7 @@ class Image {
 			
 		#else
 			
-			throw "ImageBuffer.loadFromBytes not supported on this target";
+			throw "Image.fromBytes not supported on this target";
 			
 		#end
 		

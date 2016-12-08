@@ -35,7 +35,7 @@ import sys.FileSystem;
 class TVOSPlatform extends PlatformTarget {
 	
 	
-	public function new (command:String, _project:HXProject, targetFlags:Map <String, String> ) {
+	public function new (command:String, _project:HXProject, targetFlags:Map<String, String> ) {
 		
 		super (command, _project, targetFlags);
 		
@@ -106,13 +106,6 @@ class TVOSPlatform extends PlatformTarget {
 		project.sources = PathHelper.relocatePaths (project.sources, PathHelper.combine (targetDirectory, project.app.file + "/haxe"));
 		//project.dependencies.push ("stdc++");
 		
-		if (project.certificate == null || project.certificate.identity == null) {
-			
-			project.certificate = new Keystore ();
-			project.certificate.identity = "tvOS Developer";
-			
-		}
-		
 		if (project.targetFlags.exists ("xml")) {
 			
 			project.haxeflags.push ("-xml " + targetDirectory + "/types.xml");
@@ -125,11 +118,18 @@ class TVOSPlatform extends PlatformTarget {
 			
 		}
 		
+		if (!project.config.exists ("tvos.identity")) {
+			
+			project.config.set ("tvos.identity", "tvOS Developer");
+			
+		}
+		
 		var context = project.templateContext;
 		
 		context.HAS_ICON = false;
 		context.HAS_LAUNCH_IMAGE = false;
 		context.OBJC_ARC = false;
+		context.KEY_STORE_IDENTITY = project.config.getString ("tvos.identity");
 		
 		context.linkedLibraries = [];
 		
@@ -161,7 +161,7 @@ class TVOSPlatform extends PlatformTarget {
 			
 		}
 		
-		var valid_archs = new Array <String> ();
+		var valid_archs = new Array<String> ();
 		var arm64 = false;
 		var architectures = project.architectures;
 		

@@ -55,7 +55,11 @@ class AudioBuffer {
 	
 	public function dispose ():Void {
 		
-		#if lime_console
+		#if (js && html5 && howlerjs)
+		
+		__srcHowl.unload ();
+		
+		#elseif lime_console
 		if (channels > 0) {
 			
 			src.release ();
@@ -187,10 +191,14 @@ class AudioBuffer {
 			
 		}
 		
+		return null;
+		
 		#end
-		#end
+		#else
 		
 		return null;
+		
+		#end
 		
 	}
 	
@@ -291,15 +299,7 @@ class AudioBuffer {
 			
 			audioBuffer.__srcSound.addEventListener (flash.events.ProgressEvent.PROGRESS, function (event) {
 				
-				if (event.bytesTotal == 0) {
-					
-					promise.progress (0);
-					
-				} else {
-					
-					promise.progress (event.bytesLoaded / event.bytesTotal);
-					
-				}
+				promise.progress (event.bytesLoaded, event.bytesTotal);
 				
 			});
 			
@@ -374,7 +374,7 @@ class AudioBuffer {
 		
 		#else
 		
-		promise.completeWith (new Future<AudioBuffer> (function () return fromFiles (paths)));
+		promise.completeWith (new Future<AudioBuffer> (function () return fromFiles (paths), true));
 		
 		#end
 		

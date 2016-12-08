@@ -1,192 +1,411 @@
-package lime.net;
+package lime.net; #if !macro
 
 
+import haxe.io.Bytes;
+import lime.app.Event;
 import lime.app.Future;
 import lime.app.Promise;
-import lime.net.curl.CURLCode;
-import lime.net.curl.CURLEasy;
-import lime.system.BackgroundWorker;
-import lime.system.CFFI;
-import lime.utils.Bytes;
 
-#if (js && html5)
-import js.html.XMLHttpRequest;
+
+#if display
+
+class HTTPRequest<T> {
+
+#else
+
+@:genericBuild(lime.net.HTTPRequest.build())
+class HTTPRequest<T> extends AbstractHTTPRequest<T> {}
+
+private class AbstractHTTPRequest<T> implements _IHTTPRequest {
+	
 #end
-
-
-class HTTPRequest {
+	
+	public var contentType:String;
+	public var data:Bytes;
+	public var enableResponseHeaders:Bool;
+	public var followRedirects:Bool;
+	public var formData:Map<String, Dynamic>;
+	public var headers:Array<HTTPRequestHeader>;
+	public var method:HTTPRequestMethod;
+	public var responseData:T;
+	public var responseHeaders:Array<HTTPRequestHeader>;
+	public var responseStatus:Int;
+	public var timeout:Int;
+	public var uri:String;
+	public var userAgent:String;
+	
+	#if !display
+	private var backend:HTTPRequestBackend;
+	#end
 	
 	
-	public var bytes:Bytes;
-	
-	private var bytesLoaded:Int;
-	private var bytesTotal:Int;
-	private var promise:Promise<Bytes>;
-	
-	
-	public function new () {
+	public function new (uri:String = null) {
 		
-		promise = new Promise<Bytes> ();
+		this.uri = uri;
+		
+		contentType = "application/x-www-form-urlencoded";
+		followRedirects = true;
+		formData = new Map ();
+		headers = [];
+		method = GET;
+		timeout = 30000;
+		
+		#if !display
+		backend = new HTTPRequestBackend ();
+		backend.init (this);
+		#end
 		
 	}
 	
 	
-	public function load (url:String):Future<Bytes> {
+	public function cancel ():Void {
 		
-		bytesLoaded = 0;
-		bytesTotal = 0;
+		#if !display
+		backend.cancel ();
+		#end
 		
-		#if flash
+	}
+	
+	
+	public function load (uri:String = null):Future<T> {
 		
+		return null;
 		
+	}
+	
+	
+}
+
+
+#if !display
+
+
+class _HTTPRequest_Bytes<T> extends AbstractHTTPRequest<T> {
+	
+	
+	public function new (uri:String = null) {
 		
-		#elseif (js && html5)
+		super (uri);
 		
-		var request = new XMLHttpRequest ();
-		request.addEventListener ("progress", request_onProgress, false);
-		request.onreadystatechange = function () {
-			
-			if (request.readyState != 4) return;
-			
-			if (request.status != null && request.status >= 200 && request.status <= 400) {
-				
-				bytes = Bytes.ofData (request.response);
-				promise.complete (bytes);
-				
-			} else {
-				
-				promise.error (request.status);
-				
-			}
-			
-		};
+	}
+	
+	
+	private function fromBytes (bytes:Bytes):T {
 		
-		request.open ("GET", url, true);
-		request.responseType = ARRAYBUFFER;
-		request.send ("");
+		return cast bytes;
 		
-		#else
+	}
+	
+	
+	public override function load (uri:String = null):Future<T> {
 		
-		if (url.indexOf ("http://") == -1 && url.indexOf ("https://") == -1) {
+		if (uri != null) {
 			
-			var worker = new BackgroundWorker ();
-			worker.doWork.add (function (_) {
-				
-				var path = url;
-				var index = path.indexOf ("?");
-				
-				if (index > -1) {
-					
-					path = path.substring (0, index);
-					
-				}
-				
-				var bytes = Bytes.readFile (path);
-				promise.complete (bytes);
-				
-			});
-			worker.run ();
-			
-		} else {
-			
-			bytes = Bytes.alloc (0);
-			
-			bytesLoaded = 0;
-			bytesTotal = 0;
-			
-			var curl = CURLEasy.init ();
-			
-			CURLEasy.setopt (curl, URL, url);
-			CURLEasy.setopt (curl, HTTPGET, true);
-			
-			CURLEasy.setopt (curl, FOLLOWLOCATION, true);
-			CURLEasy.setopt (curl, AUTOREFERER, true);
-			CURLEasy.setopt (curl, HTTPHEADER, [ "Expect: " ]);
-			
-			CURLEasy.setopt (curl, PROGRESSFUNCTION, curl_onProgress);
-			CURLEasy.setopt (curl, WRITEFUNCTION, curl_onWrite);
-			
-			CURLEasy.setopt (curl, SSL_VERIFYPEER, false);
-			CURLEasy.setopt (curl, SSL_VERIFYHOST, 0);
-			CURLEasy.setopt (curl, USERAGENT, "libcurl-agent/1.0");
-			CURLEasy.setopt (curl, CONNECTTIMEOUT, 30);
-			CURLEasy.setopt (curl, TRANSFERTEXT, 0);
-			
-			var worker = new BackgroundWorker ();
-			worker.doWork.add (function (_) {
-				
-				var result = CURLEasy.perform (curl);
-				worker.sendComplete (result);
-				
-			});
-			worker.onComplete.add (function (result) {
-				
-				var responseCode = CURLEasy.getinfo (curl, RESPONSE_CODE);
-				
-				if (result == CURLCode.OK) {
-					
-					promise.complete (bytes);
-					
-				} else {
-					
-					promise.error (result);
-					
-				}
-				
-			});
-			worker.run ();
+			this.uri = uri;
 			
 		}
 		
-		#end
+		var promise = new Promise<T> ();
+		var future = backend.loadData (this.uri);
+		
+		future.onProgress (promise.progress);
+		future.onError (promise.error);
+		
+		future.onComplete (function (bytes) {
+			
+			responseData = fromBytes (bytes);
+			promise.complete (responseData);
+			
+		});
 		
 		return promise.future;
 		
 	}
 	
 	
+}
+
+
+class _HTTPRequest_String<T> extends AbstractHTTPRequest<T> {
 	
 	
-	// Event Handlers
-	
-	
-	
-	
-	private function curl_onProgress (dltotal:Float, dlnow:Float, uptotal:Float, upnow:Float):Int {
+	public function new (uri:String = null) {
 		
-		if (upnow > bytesLoaded || dlnow > bytesLoaded || uptotal > bytesTotal || dltotal > bytesTotal) {
+		super (uri);
+		
+	}
+	
+	
+	public override function load (uri:String = null):Future<T> {
+		
+		if (uri != null) {
 			
-			if (upnow > bytesLoaded) bytesLoaded = Std.int (upnow);
-			if (dlnow > bytesLoaded) bytesLoaded = Std.int (dlnow);
-			if (uptotal > bytesTotal) bytesTotal = Std.int (uptotal);
-			if (dltotal > bytesTotal) bytesTotal = Std.int (dltotal);
-			
-			promise.progress (bytesLoaded / bytesTotal);
+			this.uri = uri;
 			
 		}
 		
-		return 0;
+		var promise = new Promise<T> ();
+		var future = backend.loadText (this.uri);
 		
-	}
-	
-	
-	private function curl_onWrite (output:Bytes, size:Int, nmemb:Int):Int {
+		future.onProgress (promise.progress);
+		future.onError (promise.error);
 		
-		var cacheBytes = bytes;
-		bytes = Bytes.alloc (bytes.length + output.length);
-		bytes.blit (0, cacheBytes, 0, cacheBytes.length);
-		bytes.blit (cacheBytes.length, output, 0, output.length);
+		future.onComplete (function (text) {
+			
+			responseData = cast text;
+			promise.complete (responseData);
+			
+		});
 		
-		return size * nmemb;
-		
-	}
-	
-	
-	private function request_onProgress (event:Dynamic):Void {
-		
-		promise.progress (event.loaded / event.total);
+		return promise.future;
 		
 	}
 	
 	
 }
+
+
+interface _IHTTPRequest {
+	
+	public var contentType:String;
+	public var data:haxe.io.Bytes;
+	public var enableResponseHeaders:Bool;
+	public var followRedirects:Bool;
+	public var formData:Map<String, Dynamic>;
+	public var headers:Array<HTTPRequestHeader>;
+	public var method:HTTPRequestMethod;
+	//public var responseData:T;
+	public var responseHeaders:Array<HTTPRequestHeader>;
+	public var responseStatus:Int;
+	public var timeout:Int;
+	public var uri:String;
+	public var userAgent:String;
+	
+	public function cancel ():Void;
+	
+}
+
+
+#if flash
+private typedef HTTPRequestBackend = lime._backend.flash.FlashHTTPRequest;
+#elseif (js && html5)
+private typedef HTTPRequestBackend = lime._backend.html5.HTML5HTTPRequest;
+#else
+private typedef HTTPRequestBackend = lime._backend.native.NativeHTTPRequest;
+#end
+#end
+
+
+#else
+
+
+import haxe.macro.Context;
+import haxe.macro.Expr;
+import haxe.macro.Type;
+using haxe.macro.Tools;
+
+
+class HTTPRequest {
+	
+	
+	private static function build () {
+		
+		var paramType;
+		var type:BaseType, typeArgs;
+		var stringAbstract = false;
+		var bytesAbstract = false;
+		
+		switch (Context.follow (Context.getLocalType ())) {
+			
+			case TInst (localType, [ t ]):
+				
+				paramType = t;
+				
+				switch (t) {
+					
+					case TInst (t, args):
+						
+						type = t.get ();
+						typeArgs = args;
+					
+					case TAbstract (t, args):
+						
+						type = t.get ();
+						typeArgs = args;
+						
+						stringAbstract = isStringAbstract (t.get ());
+						if (!stringAbstract) bytesAbstract = isBytesAbstract (t.get ());
+					
+					case TType (t, args):
+						
+						type = t.get ();
+						typeArgs = args;
+					
+					case TMono (_):
+						
+						Context.fatalError ("Invalid number of type parameters for " + localType.toString (), Context.currentPos ());
+						return null;
+					
+					case TDynamic (_):
+						
+						switch (Context.getType ("haxe.io.Bytes")) {
+							
+							case TInst (t, args):
+								
+								type = t.get ();
+								typeArgs = args;
+							
+							default:
+								
+								throw false;
+							
+						}
+					
+					default:
+						
+						throw false;
+					
+				}
+				
+			default:
+				
+				throw false;
+			
+		}
+		
+		var typeString = type.module;
+		
+		if (type.name != type.module && !StringTools.endsWith (type.module, "." + type.name)) {
+			
+			typeString += "." + type.name;
+			
+		}
+		
+		if (typeString == "String" || stringAbstract) {
+			
+			return TPath ( { pack: [ "lime", "net" ], name: "HTTPRequest", sub: "_HTTPRequest_String", params: [ TPType (paramType.toComplexType ()) ] } ).toType ();
+			
+		} else if (typeString == "haxe.io.Bytes" || bytesAbstract) {
+			
+			return TPath ( { pack: [ "lime", "net" ], name: "HTTPRequest", sub: "_HTTPRequest_Bytes", params: [ TPType (paramType.toComplexType ()) ] } ).toType ();
+			
+		} else {
+		
+			var typeParamString = typeString;
+			
+			if (typeArgs.length > 0) {
+				
+				typeParamString += "<";
+				
+				for (i in 0...typeArgs.length) {
+					
+					if (i > 0) typeParamString += ",";
+					typeParamString += typeArgs[i].toString ();
+					
+				}
+				
+				typeParamString += ">";
+				
+			}
+			
+			var flattenedTypeString = typeParamString;
+			
+			flattenedTypeString = StringTools.replace (flattenedTypeString, "->", "_");
+			flattenedTypeString = StringTools.replace (flattenedTypeString, ".", "_");
+			flattenedTypeString = StringTools.replace (flattenedTypeString, "<", "_");
+			flattenedTypeString = StringTools.replace (flattenedTypeString, ">", "_");
+			
+			var name = "_HTTPRequest_" + flattenedTypeString;
+			
+			try {
+				
+				Context.getType ("lime.net." + name);
+				
+			} catch (e:Dynamic) {
+				
+				var pos = Context.currentPos ();
+				
+				var fields = [
+					{ name: "new", access: [ APublic ], kind: FFun({ args: [ { name: "uri", type: macro :String, opt: true } ], expr: macro { super (uri); }, params: [], ret: macro :Void }), pos: Context.currentPos () },
+					{ name: "fromBytes", access: [ APrivate, AOverride ], kind: FFun ( { args: [ { name: "bytes", type: macro :haxe.io.Bytes } ], expr: Context.parse ("return " + typeString + ".fromBytes (bytes)", pos), params: [], ret: paramType.toComplexType () } ), pos: pos }
+				];
+				
+				Context.defineType ({
+					
+					name: name,
+					pack: [ "lime", "net" ],
+					kind: TDClass ({ pack: [ "lime", "net" ], name: "HTTPRequest", sub: "_HTTPRequest_Bytes", params: [ TPType (paramType.toComplexType ()) ] }, null, false),
+					fields: fields,
+					pos: pos
+					
+				});
+				
+			}
+			
+			return TPath ( { pack: [ "lime", "net" ], name: name, params: [] } ).toType ();
+			
+		}
+		
+	}
+	
+	
+	private static function isBytesAbstract (type:AbstractType):Bool {
+		
+		while (type != null) {
+			
+			switch (type.type) {
+				
+				case TInst (t, _):
+					
+					return t.get ().module == "haxe.io.Bytes";
+				
+				case TAbstract (t, _):
+					
+					type = t.get ();
+				
+				default:
+					
+					return false;
+				
+			}
+			
+		}
+		
+		return false;
+		
+	}
+	
+	
+	private static function isStringAbstract (type:AbstractType):Bool {
+		
+		while (type != null) {
+			
+			switch (type.type) {
+				
+				case TInst (t, _):
+					
+					return t.get ().module == "String";
+				
+				case TAbstract (t, _):
+					
+					type = t.get ();
+				
+				default:
+					
+					return false;
+				
+			}
+			
+		}
+		
+		return false;
+		
+	}
+	
+	
+	
+	
+}
+
+
+#end

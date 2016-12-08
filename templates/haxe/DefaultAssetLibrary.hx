@@ -39,9 +39,9 @@ import flash.net.URLRequest;
 class DefaultAssetLibrary extends AssetLibrary {
 	
 	
-	public var className (default, null) = new Map <String, Dynamic> ();
-	public var path (default, null) = new Map <String, String> ();
-	public var type (default, null) = new Map <String, AssetType> ();
+	public var className (default, null) = new Map<String, Dynamic> ();
+	public var path (default, null) = new Map<String, String> ();
+	public var type (default, null) = new Map<String, AssetType> ();
 	
 	private var lastModified:Float;
 	private var timer:Timer;
@@ -109,19 +109,24 @@ class DefaultAssetLibrary extends AssetLibrary {
 			if (Sys.args ().indexOf ("-livereload") > -1) {
 				
 				var path = FileSystem.fullPath ("manifest");
-				lastModified = FileSystem.stat (path).mtime.getTime ();
 				
-				timer = new Timer (2000);
-				timer.run = function () {
+				if (FileSystem.exists (path)) {
 					
-					var modified = FileSystem.stat (path).mtime.getTime ();
+					lastModified = FileSystem.stat (path).mtime.getTime ();
 					
-					if (modified > lastModified) {
+					timer = new Timer (2000);
+					timer.run = function () {
 						
-						lastModified = modified;
-						loadManifest ();
+						var modified = FileSystem.stat (path).mtime.getTime ();
 						
-						onChange.dispatch ();
+						if (modified > lastModified) {
+							
+							lastModified = modified;
+							loadManifest ();
+							
+							onChange.dispatch ();
+							
+						}
 						
 					}
 					
@@ -242,7 +247,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 			
 		}
 		
-		var bytes = loader.bytes;
+		var bytes:Bytes = cast loader.responseData;
 		
 		if (bytes != null) {
 			
@@ -380,7 +385,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 			
 		}
 		
-		var bytes = loader.bytes;
+		var bytes:Bytes = cast loader.responseData;
 		
 		if (bytes != null) {
 			
@@ -475,7 +480,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		if (Assets.isLocal (id)) {
 			
-			promise.completeWith (new Future<AudioBuffer> (function () return getAudioBuffer (id)));
+			promise.completeWith (new Future<AudioBuffer> (function () return getAudioBuffer (id), true));
 			
 		} else if (path.exists (id)) {
 			
@@ -510,15 +515,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 			});
 			loader.addEventListener (ProgressEvent.PROGRESS, function (event) {
 				
-				if (event.bytesTotal == 0) {
-					
-					promise.progress (0);
-					
-				} else {
-					
-					promise.progress (event.bytesLoaded / event.bytesTotal);
-					
-				}
+				promise.progress (event.bytesLoaded, event.bytesTotal);
 				
 			});
 			loader.addEventListener (IOErrorEvent.IO_ERROR, promise.error);
@@ -534,7 +531,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		if (path.exists (id)) {
 			
-			var request = new HTTPRequest ();
+			var request = new HTTPRequest<Bytes> ();
 			promise.completeWith (request.load (path.get (id) + "?" + Assets.cache.version));
 			
 		} else {
@@ -545,7 +542,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		#else
 		
-		promise.completeWith (new Future<Bytes> (function () return getBytes (id)));
+		promise.completeWith (new Future<Bytes> (function () return getBytes (id), true));
 		
 		#end
 		
@@ -571,15 +568,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 			});
 			loader.contentLoaderInfo.addEventListener (ProgressEvent.PROGRESS, function (event) {
 				
-				if (event.bytesTotal == 0) {
-					
-					promise.progress (0);
-					
-				} else {
-					
-					promise.progress (event.bytesLoaded / event.bytesTotal);
-					
-				}
+				promise.progress (event.bytesLoaded, event.bytesTotal);
 				
 			});
 			loader.contentLoaderInfo.addEventListener (IOErrorEvent.IO_ERROR, promise.error);
@@ -612,7 +601,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		#else
 		
-		promise.completeWith (new Future<Image> (function () return getImage (id)));
+		promise.completeWith (new Future<Image> (function () return getImage (id), true));
 		
 		#end
 		
@@ -693,11 +682,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		if (path.exists (id)) {
 			
-			var request = new HTTPRequest ();
-			var future = request.load (path.get (id) + "?" + Assets.cache.version);
-			future.onProgress (function (progress) promise.progress (progress));
-			future.onError (function (msg) promise.error (msg));
-			future.onComplete (function (bytes) promise.complete (bytes.getString (0, bytes.length)));
+			var request = new HTTPRequest<String> ();
+			promise.completeWith (request.load (path.get (id) + "?" + Assets.cache.version));
 			
 		} else {
 			
@@ -721,7 +707,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 					
 				}
 				
-			});
+			}, true);
 			
 		}));
 		

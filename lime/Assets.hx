@@ -41,7 +41,7 @@ class Assets {
 	
 	
 	public static var cache = new AssetCache ();
-	public static var libraries (default, null) = new Map <String, AssetLibrary> ();
+	public static var libraries (default, null) = new Map<String, AssetLibrary> ();
 	public static var onChange = new Event<Void->Void> ();
 	
 	
@@ -938,28 +938,28 @@ class AssetLibrary {
 	
 	public function loadAudioBuffer (id:String):Future<AudioBuffer> {
 		
-		return new Future<AudioBuffer> (function () return getAudioBuffer (id));
+		return new Future<AudioBuffer> (function () return getAudioBuffer (id), true);
 		
 	}
 	
 	
 	public function loadBytes (id:String):Future<Bytes> {
 		
-		return new Future<Bytes> (function () return getBytes (id));
+		return new Future<Bytes> (function () return getBytes (id), true);
 		
 	}
 	
 	
 	public function loadFont (id:String):Future<Font> {
 		
-		return new Future<Font> (function () return getFont (id));
+		return new Future<Font> (function () return getFont (id), true);
 		
 	}
 	
 	
 	public function loadImage (id:String):Future<Image> {
 		
-		return new Future<Image> (function () return getImage (id));
+		return new Future<Image> (function () return getImage (id), true);
 		
 	}
 	
@@ -980,7 +980,7 @@ class AssetLibrary {
 					
 				}
 				
-			});
+			}, true);
 			
 		});
 		
