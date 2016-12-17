@@ -18,6 +18,11 @@ import js.Browser;
 @:build(lime.system.CFFI.build())
 #end
 
+#if !lime_debug
+@:fileXml('tags="haxe,release"')
+@:noDebug
+#end
+
 
 class JPEG {
 	
@@ -26,10 +31,7 @@ class JPEG {
 		
 		#if (lime_cffi && !macro)
 		
-		#if !cs
-		return lime_jpeg_decode_bytes (bytes, decodeData, new ImageBuffer (new UInt8Array (Bytes.alloc (0))));
-		#else
-		var bufferData:Dynamic = lime_jpeg_decode_bytes (bytes, decodeData, null);
+		var bufferData:Dynamic = lime_jpeg_decode_bytes (bytes, decodeData);
 		
 		if (bufferData != null) {
 			
@@ -38,7 +40,6 @@ class JPEG {
 			return new Image (buffer);
 			
 		}
-		#end
 		
 		#end
 		
@@ -51,10 +52,7 @@ class JPEG {
 		
 		#if (lime_cffi && !macro)
 		
-		#if !cs
-		return lime_jpeg_decode_file (path, decodeData, new ImageBuffer (new UInt8Array (Bytes.alloc (0))));
-		#else
-		var bufferData:Dynamic = lime_jpeg_decode_file (path, decodeData, null);
+		var bufferData:Dynamic = lime_jpeg_decode_file (path, decodeData);
 		
 		if (bufferData != null) {
 			
@@ -63,8 +61,6 @@ class JPEG {
 			return new Image (buffer);
 			
 		}
-		#end
-		
 		#end
 		
 		return null;
@@ -88,12 +84,8 @@ class JPEG {
 		
 		#elseif (sys && (!disable_cffi || !format) && !macro)
 			
-			#if !cs
-			return lime_image_encode (image.buffer, 1, quality, Bytes.alloc (0));
-			#else
-			var data:Dynamic = lime_image_encode (image.buffer, 1, quality, null);
+			var data:Dynamic = lime_image_encode (image.buffer, 1, quality);
 			return @:privateAccess new Bytes (data.length, data.b);
-			#end
 			
 		#elseif (js && html5)
 		
@@ -130,9 +122,9 @@ class JPEG {
 	
 	
 	#if (lime_cffi && !macro)
-	@:cffi private static function lime_jpeg_decode_bytes (data:Dynamic, decodeData:Bool, buffer:Dynamic):Dynamic;
-	@:cffi private static function lime_jpeg_decode_file (path:String, decodeData:Bool, buffer:Dynamic):Dynamic;
-	@:cffi private static function lime_image_encode (data:Dynamic, type:Int, quality:Int, bytes:Dynamic):Dynamic;
+	@:cffi private static function lime_jpeg_decode_bytes (data:Dynamic, decodeData:Bool):Dynamic;
+	@:cffi private static function lime_jpeg_decode_file (path:String, decodeData:Bool):Dynamic;
+	@:cffi private static function lime_image_encode (data:Dynamic, type:Int, quality:Int):Dynamic;
 	#end
 	
 	

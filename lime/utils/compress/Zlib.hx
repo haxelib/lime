@@ -11,6 +11,11 @@ import flash.utils.ByteArray;
 @:build(lime.system.CFFI.build())
 #end
 
+#if !lime_debug
+@:fileXml('tags="haxe,release"')
+@:noDebug
+#end
+
 
 class Zlib {
 	
@@ -19,13 +24,9 @@ class Zlib {
 		
 		#if (lime_cffi && !macro)
 		
-		#if !cs
-		return lime_zlib_compress (bytes, Bytes.alloc (0));
-		#else
-		var data:Dynamic = lime_zlib_compress (bytes, null);
+		var data:Dynamic = lime_zlib_compress (bytes);
 		if (data == null) return null;
 		return @:privateAccess new Bytes (data.length, data.b);
-		#end
 		
 		#elseif (js && html5)
 		
@@ -55,13 +56,9 @@ class Zlib {
 		
 		#if (lime_cffi && !macro)
 		
-		#if !cs
-		return lime_zlib_decompress (bytes, Bytes.alloc (0));
-		#else
-		var data:Dynamic = lime_zlib_decompress (bytes, null);
+		var data:Dynamic = lime_zlib_decompress (bytes);
 		if (data == null) return null;
 		return @:privateAccess new Bytes (data.length, data.b);
-		#end
 		
 		#elseif (js && html5)
 		
@@ -95,8 +92,8 @@ class Zlib {
 	
 	
 	#if (lime_cffi && !macro)
-	@:cffi private static function lime_zlib_compress (data:Dynamic, bytes:Dynamic):Dynamic;
-	@:cffi private static function lime_zlib_decompress (data:Dynamic, bytes:Dynamic):Dynamic;
+	@:cffi private static function lime_zlib_compress (data:Dynamic):Dynamic;
+	@:cffi private static function lime_zlib_decompress (data:Dynamic):Dynamic;
 	#end
 	
 	

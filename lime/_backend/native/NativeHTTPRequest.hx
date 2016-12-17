@@ -12,6 +12,11 @@ import lime.net.HTTPRequest;
 import lime.net.HTTPRequestMethod;
 import lime.system.BackgroundWorker;
 
+#if !lime_debug
+@:fileXml('tags="haxe,release"')
+@:noDebug
+#end
+
 
 class NativeHTTPRequest {
 	
@@ -81,7 +86,7 @@ class NativeHTTPRequest {
 				
 			}
 			
-			bytes = lime.utils.Bytes.readFile (path);
+			bytes = lime.utils.Bytes.fromFile (path);
 			promise.complete (bytes);
 			
 		});

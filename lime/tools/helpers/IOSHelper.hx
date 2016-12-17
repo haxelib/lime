@@ -46,6 +46,9 @@ class IOSHelper {
 			
 		}
 		
+		commands.push ("-project");
+		commands.push (project.app.file + ".xcodeproj");
+		
 		if (additionalArguments != null) {
 			
 			commands = commands.concat (additionalArguments);
@@ -105,7 +108,7 @@ class IOSHelper {
 				
 				var files = FileSystem.readDirectory (devPath);
 				var extractVersion = ~/^iPhoneOS(.*).sdk$/;
-				var best = "", version;
+				var best = "0", version;
 				
 				for (file in files) {
 					

@@ -108,7 +108,7 @@ class HXProject {
 		serializer.useCache = true;
 		serializer.serialize (instance);
 		
-		File.saveContent (args[7], serializer.toString ());
+		File.saveContent (args[args.length - 1], serializer.toString ());
 		
 	}
 	
@@ -155,7 +155,7 @@ class HXProject {
 				
 				if (target == Platform.IOS) {
 					
-					architectures = [ Architecture.ARMV7, Architecture.ARM64 ];
+					architectures = [ Architecture.ARM64 ];
 					
 				} else if (target == Platform.ANDROID) {
 					
@@ -823,6 +823,7 @@ class HXProject {
 		
 		for (haxelib in haxelibs) {
 			
+			var validatePath = PathHelper.getHaxelib (haxelib, true);
 			project.haxelibs.push (haxelib);
 			
 			var includeProject = HXProject.fromHaxelib (haxelib, userDefines);

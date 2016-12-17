@@ -28,6 +28,11 @@ import lime.ui.Window;
 @:build(lime.system.CFFI.build())
 #end
 
+#if !lime_debug
+@:fileXml('tags="haxe,release"')
+@:noDebug
+#end
+
 @:access(haxe.Timer)
 @:access(lime._backend.native.NativeGLRenderContext)
 @:access(lime._backend.native.NativeRenderer)
@@ -597,6 +602,7 @@ class NativeApplication {
 	
 	private function updateTimer ():Void {
 		
+		#if lime_cffi
 		if (Timer.sRunningTimers.length > 0) {
 			
 			var currentTime = System.getTimer ();
@@ -631,6 +637,7 @@ class NativeApplication {
 			}
 			
 		}
+		#end
 		
 	}
 	

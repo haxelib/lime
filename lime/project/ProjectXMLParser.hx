@@ -1292,7 +1292,17 @@ class ProjectXMLParser extends HXProject {
 							
 						} else {
 							
-							PathHelper.haxelibOverrides.set (name, path);
+							path = PathHelper.tryFullPath (PathHelper.combine (extensionPath, path));
+							
+							if (version != "") {
+								
+								PathHelper.haxelibOverrides.set (name + ":" + version, path);
+								
+							} else {
+								
+								PathHelper.haxelibOverrides.set (name, path);
+								
+							}
 							
 						}
 						
