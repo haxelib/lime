@@ -48,7 +48,7 @@ import sys.FileSystem;
 		
 		::if (assets != null)::var id;
 		::foreach assets::id = "::id::";
-		::if (embed)::::if (type == "font")::classTypes.set (id, __ASSET__::flatName::);::else::paths.set (id, ::if (resourceName == id)::id::else::"::resourceName::"::end::);::end::
+		::if (embed)::::if (type == "font")::classTypes.set (id, __ASSET__::flatName::); preload.set (id, true);::else::paths.set (id, ::if (resourceName == id)::id::else::"::resourceName::"::end::);::end::
 		::else::paths.set (id, ::if (resourceName == id)::id::else::"::resourceName::"::end::);::end::
 		types.set (id, AssetType.$$upper(::type::));
 		::end::::end::
@@ -200,10 +200,10 @@ import sys.FileSystem;
 
 ::if (assets != null)::
 ::foreach assets::::if (embed)::::if (type == "image")::@:image("::sourcePath::") #if display private #end class __ASSET__::flatName:: extends lime.graphics.Image {}
-::elseif (type == "sound")::@:file("::sourcePath::") #if display private #end class __ASSET__::flatName:: extends lime.utils.Bytes {}
-::elseif (type == "music")::@:file("::sourcePath::") #if display private #end class __ASSET__::flatName:: extends lime.utils.Bytes {}
+::elseif (type == "sound")::@:file("::sourcePath::") #if display private #end class __ASSET__::flatName:: extends haxe.io.Bytes {}
+::elseif (type == "music")::@:file("::sourcePath::") #if display private #end class __ASSET__::flatName:: extends haxe.io.Bytes {}
 ::elseif (type == "font")::@:font("::sourcePath::") #if display private #end class __ASSET__::flatName:: extends lime.text.Font {}
-::else::@:file("::sourcePath::") #if display private #end class __ASSET__::flatName:: extends lime.utils.Bytes {}
+::else::@:file("::sourcePath::") #if display private #end class __ASSET__::flatName:: extends haxe.io.Bytes {}
 ::end::::end::::end::
 ::end::
 
