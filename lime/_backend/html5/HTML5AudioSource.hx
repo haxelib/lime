@@ -1,10 +1,10 @@
 package lime._backend.html5;
 
 
-import lime.audio.AudioSource;
+import lime.media.AudioSource;
 import lime.math.Vector4;
 
-@:access(lime.audio.AudioBuffer)
+@:access(lime.media.AudioBuffer)
 
 
 class HTML5AudioSource {
@@ -24,6 +24,7 @@ class HTML5AudioSource {
 		
 		this.parent = parent;
 		
+		id = -1;
 		gain = 1;
 		position = new Vector4 ();
 		
@@ -59,9 +60,15 @@ class HTML5AudioSource {
 		var time = getCurrentTime ();
 		
 		completed = false;
+		
+		var cacheVolume = untyped parent.buffer.__srcHowl._volume;
+		untyped parent.buffer.__srcHowl._volume = parent.gain;
+		
 		id = parent.buffer.__srcHowl.play ();
 		
-		setGain (parent.gain);
+		untyped parent.buffer.__srcHowl._volume = cacheVolume;
+		//setGain (parent.gain);
+		
 		setPosition (parent.position);
 		
 		parent.buffer.__srcHowl.on ("end", howl_onEnd, id);
@@ -140,6 +147,12 @@ class HTML5AudioSource {
 	
 	
 	public function getCurrentTime ():Int {
+		
+		if (id == -1) {
+			
+			return 0;
+			
+		}
 		
 		#if howlerjs
 		

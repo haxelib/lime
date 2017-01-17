@@ -54,6 +54,8 @@ class IOSPlatform extends PlatformTarget {
 			
 			IOSHelper.build (project, targetDirectory);
 			
+			if (noOutput) return;
+			
 			if (!project.targetFlags.exists ("simulator")) {
 				
 				var entitlements = targetDirectory + "/" + project.app.file + "/" + project.app.file + "-Entitlements.plist";
@@ -210,12 +212,6 @@ class IOSPlatform extends PlatformTarget {
 			
 		}
 		
-		if (project.config.getFloat ("ios.deployment", 8) < 7) {
-			
-			ArrayHelper.addUnique (architectures, Architecture.ARMV7);
-			
-		}
-		
 		for (architecture in project.architectures) {
 			
 			switch (architecture) {
@@ -232,6 +228,7 @@ class IOSPlatform extends PlatformTarget {
 		
 		context.CURRENT_ARCHS = "( " + valid_archs.join(",") + ") ";
 		
+		valid_archs.push ("x86_64");
 		valid_archs.push ("i386");
 		
 		context.VALID_ARCHS = valid_archs.join(" ");

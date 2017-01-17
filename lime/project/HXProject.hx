@@ -155,7 +155,7 @@ class HXProject {
 				
 				if (target == Platform.IOS) {
 					
-					architectures = [ Architecture.ARM64 ];
+					architectures = [ Architecture.ARMV7, Architecture.ARM64 ];
 					
 				} else if (target == Platform.ANDROID) {
 					
@@ -752,6 +752,7 @@ class HXProject {
 			
 			config.merge (project.config);
 			
+			architectures = ArrayHelper.concatUnique (architectures, project.architectures);
 			assets = ArrayHelper.concatUnique (assets, project.assets);
 			dependencies = ArrayHelper.concatUnique (dependencies, project.dependencies, true);
 			haxeflags = ArrayHelper.concatUnique (haxeflags, project.haxeflags);

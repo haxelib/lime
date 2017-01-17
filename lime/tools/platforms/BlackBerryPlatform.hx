@@ -71,6 +71,8 @@ class BlackBerryPlatform extends PlatformTarget {
 			
 		}
 		
+		if (noOutput) return;
+		
 		if (!project.targetFlags.exists ("html5")) {
 			
 			var destination = targetDirectory + "/bin/";

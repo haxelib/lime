@@ -2,9 +2,10 @@ package lime._backend.native;
 
 
 import haxe.Timer;
+import lime._backend.native.NativeCFFI;
 import lime.app.Application;
 import lime.app.Config;
-import lime.audio.AudioManager;
+import lime.media.AudioManager;
 import lime.graphics.opengl.GL;
 import lime.graphics.ConsoleRenderContext;
 import lime.graphics.GLRenderContext;
@@ -24,16 +25,13 @@ import lime.ui.KeyModifier;
 import lime.ui.Touch;
 import lime.ui.Window;
 
-#if !macro
-@:build(lime.system.CFFI.build())
-#end
-
 #if !lime_debug
 @:fileXml('tags="haxe,release"')
 @:noDebug
 #end
 
 @:access(haxe.Timer)
+@:access(lime._backend.native.NativeCFFI)
 @:access(lime._backend.native.NativeGLRenderContext)
 @:access(lime._backend.native.NativeRenderer)
 @:access(lime.app.Application)
@@ -66,13 +64,15 @@ class NativeApplication {
 	
 	private var frameRate:Float;
 	private var parent:Application;
+	private var toggleFullscreen:Bool;
 	
 	
 	public function new (parent:Application):Void {
 		
 		this.parent = parent;
 		frameRate = 60;
-
+		toggleFullscreen = true;
+		
 		#if (lime_console && final)
 		// suppress traces in final builds
 		haxe.Log.trace = function(v:Dynamic, ?infos:haxe.PosInfos) {};
@@ -90,7 +90,7 @@ class NativeApplication {
 	public function create (config:Config):Void {
 		
 		#if !macro
-		handle = lime_application_create ( { } );
+		handle = NativeCFFI.lime_application_create ( { } );
 		#end
 		
 	}
@@ -100,32 +100,32 @@ class NativeApplication {
 		
 		#if !macro
 		
-		lime_application_event_manager_register (handleApplicationEvent, applicationEventInfo);
-		lime_drop_event_manager_register (handleDropEvent, dropEventInfo);
-		lime_gamepad_event_manager_register (handleGamepadEvent, gamepadEventInfo);
-		lime_joystick_event_manager_register (handleJoystickEvent, joystickEventInfo);
-		lime_key_event_manager_register (handleKeyEvent, keyEventInfo);
-		lime_mouse_event_manager_register (handleMouseEvent, mouseEventInfo);
-		lime_render_event_manager_register (handleRenderEvent, renderEventInfo);
-		lime_text_event_manager_register (handleTextEvent, textEventInfo);
-		lime_touch_event_manager_register (handleTouchEvent, touchEventInfo);
-		lime_window_event_manager_register (handleWindowEvent, windowEventInfo);
+		NativeCFFI.lime_application_event_manager_register (handleApplicationEvent, applicationEventInfo);
+		NativeCFFI.lime_drop_event_manager_register (handleDropEvent, dropEventInfo);
+		NativeCFFI.lime_gamepad_event_manager_register (handleGamepadEvent, gamepadEventInfo);
+		NativeCFFI.lime_joystick_event_manager_register (handleJoystickEvent, joystickEventInfo);
+		NativeCFFI.lime_key_event_manager_register (handleKeyEvent, keyEventInfo);
+		NativeCFFI.lime_mouse_event_manager_register (handleMouseEvent, mouseEventInfo);
+		NativeCFFI.lime_render_event_manager_register (handleRenderEvent, renderEventInfo);
+		NativeCFFI.lime_text_event_manager_register (handleTextEvent, textEventInfo);
+		NativeCFFI.lime_touch_event_manager_register (handleTouchEvent, touchEventInfo);
+		NativeCFFI.lime_window_event_manager_register (handleWindowEvent, windowEventInfo);
 		
 		#if (ios || android || tvos)
-		lime_sensor_event_manager_register (handleSensorEvent, sensorEventInfo);
+		NativeCFFI.lime_sensor_event_manager_register (handleSensorEvent, sensorEventInfo);
 		#end
 		
 		#if nodejs
 		
-		lime_application_init (handle);
+		NativeCFFI.lime_application_init (handle);
 		
 		var eventLoop = function () {
 			
-			var active = lime_application_update (handle);
+			var active = NativeCFFI.lime_application_update (handle);
 			
 			if (!active) {
 				
-				untyped process.exitCode = lime_application_quit (handle);
+				untyped process.exitCode = NativeCFFI.lime_application_quit (handle);
 				parent.onExit.dispatch (untyped process.exitCode);
 				
 			} else {
@@ -141,7 +141,7 @@ class NativeApplication {
 		
 		#elseif lime_cffi
 		
-		var result = lime_application_exec (handle);
+		var result = NativeCFFI.lime_application_exec (handle);
 		
 		#if (!emscripten && !ios && !nodejs)
 		parent.onExit.dispatch (result);
@@ -162,7 +162,7 @@ class NativeApplication {
 		AudioManager.shutdown ();
 		
 		#if !macro
-		lime_application_quit (handle);
+		NativeCFFI.lime_application_quit (handle);
 		#end
 		
 	}
@@ -302,17 +302,53 @@ class NativeApplication {
 			
 			#if (windows || linux)
 			
-			if (keyCode == RETURN && (modifier == KeyModifier.LEFT_ALT || modifier == KeyModifier.RIGHT_ALT) && type == KEY_DOWN && !window.onKeyDown.canceled) {
+			if (keyCode == RETURN) {
 				
-				window.fullscreen = !window.fullscreen;
+				if (type == KEY_DOWN) {
+					
+					if (toggleFullscreen && modifier.altKey && (!modifier.ctrlKey && !modifier.shiftKey && !modifier.metaKey)) {
+						
+						toggleFullscreen = false;
+						
+						if (!window.onKeyDown.canceled) {
+							
+							window.fullscreen = !window.fullscreen;
+							
+						}
+						
+					}
+					
+				} else {
+					
+					toggleFullscreen = true;
+					
+				}
 				
 			}
 			
 			#elseif mac
 			
-			if (keyCode == F && modifier.ctrlKey && modifier.metaKey && type == KEY_DOWN && !modifier.altKey && !modifier.shiftKey && !window.onKeyDown.canceled) {
+			if (keyCode == F) {
 				
-				window.fullscreen = !window.fullscreen;
+				if (type == KEY_DOWN) {
+					
+					if (toggleFullscreen && (modifier.ctrlKey && modifier.metaKey) && (!modifier.altKey && !modifier.shiftKey)) {
+						
+						toggleFullscreen = false;
+						
+						if (!window.onKeyDown.canceled) {
+							
+							window.fullscreen = !window.fullscreen;
+							
+						}
+						
+					}
+					
+				} else {
+					
+					toggleFullscreen = true;
+					
+				}
 				
 			}
 			
@@ -593,7 +629,7 @@ class NativeApplication {
 	public function setFrameRate (value:Float):Float {
 		
 		#if !macro
-		lime_application_set_frame_rate (handle, value);
+		NativeCFFI.lime_application_set_frame_rate (handle, value);
 		#end
 		return frameRate = value;
 		
@@ -640,27 +676,6 @@ class NativeApplication {
 		#end
 		
 	}
-	
-	
-	#if !macro
-	@:cffi private static function lime_application_create (config:Dynamic):Dynamic;
-	@:cffi private static function lime_application_event_manager_register (callback:Dynamic, eventObject:Dynamic):Void;
-	@:cffi private static function lime_application_exec (handle:Dynamic):Int;
-	@:cffi private static function lime_application_init (handle:Dynamic):Void;
-	@:cffi private static function lime_application_quit (handle:Dynamic):Int;
-	@:cffi private static function lime_application_set_frame_rate (handle:Dynamic, value:Float):Void;
-	@:cffi private static function lime_application_update (handle:Dynamic):Bool;
-	@:cffi private static function lime_drop_event_manager_register (callback:Dynamic, eventObject:Dynamic):Void;
-	@:cffi private static function lime_gamepad_event_manager_register (callback:Dynamic, eventObject:Dynamic):Void;
-	@:cffi private static function lime_joystick_event_manager_register (callback:Dynamic, eventObject:Dynamic):Void;
-	@:cffi private static function lime_key_event_manager_register (callback:Dynamic, eventObject:Dynamic):Void;
-	@:cffi private static function lime_mouse_event_manager_register (callback:Dynamic, eventObject:Dynamic):Void;
-	@:cffi private static function lime_render_event_manager_register (callback:Dynamic, eventObject:Dynamic):Void;
-	@:cffi private static function lime_sensor_event_manager_register (callback:Dynamic, eventObject:Dynamic):Void;
-	@:cffi private static function lime_text_event_manager_register (callback:Dynamic, eventObject:Dynamic):Void;
-	@:cffi private static function lime_touch_event_manager_register (callback:Dynamic, eventObject:Dynamic):Void;
-	@:cffi private static function lime_window_event_manager_register (callback:Dynamic, eventObject:Dynamic):Void;
-	#end
 	
 	
 }

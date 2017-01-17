@@ -6,7 +6,7 @@ import haxe.Unserializer;
 import lime.app.Event;
 import lime.app.Promise;
 import lime.app.Future;
-import lime.audio.AudioBuffer;
+import lime.media.AudioBuffer;
 import lime.graphics.Image;
 import lime.text.Font;
 import lime.utils.Bytes;
@@ -486,9 +486,18 @@ class Assets {
 		if (data != null && data != "") {
 			
 			var library = AssetLibrary.fromManifest (AssetManifest.parse (data));
-			libraries.set (name, library);
-			library.onChange.add (onChange.dispatch);
-			promise.completeWith (library.load ());
+			
+			if (library == null) {
+				
+				promise.error ("[Assets] Cannot open library \"" + name + "\"");
+				
+			} else {
+				
+				libraries.set (name, library);
+				library.onChange.add (onChange.dispatch);
+				promise.completeWith (library.load ());
+				
+			}
 			
 		} else {
 			

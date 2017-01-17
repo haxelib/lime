@@ -4,7 +4,7 @@ package lime.app;
 import haxe.io.Bytes;
 import haxe.io.Path;
 import lime.app.Event;
-import lime.audio.AudioBuffer;
+import lime.media.AudioBuffer;
 import lime.utils.AssetLibrary;
 import lime.utils.Assets;
 import lime.utils.AssetType;
@@ -21,6 +21,8 @@ import flash.events.ProgressEvent;
 import flash.Lib;
 #end
 
+@:access(lime.utils.AssetLibrary)
+
 #if !lime_debug
 @:fileXml('tags="haxe,release"')
 @:noDebug
@@ -34,7 +36,12 @@ class Preloader #if flash extends Sprite #end {
 	public var onComplete = new Event<Void->Void> ();
 	public var onProgress = new Event<Int->Int->Void> ();
 	
+	private var bytesLoaded:Int;
+	private var bytesTotal:Int;
+	private var bytesTotalCache = new Map<String, Int> ();
+	private var initLibraryNames:Bool;
 	private var libraries:Array<AssetLibrary>;
+	private var libraryNames:Array<String>;
 	private var loadedLibraries:Int;
 	private var loadedStage:Bool;
 	
@@ -45,7 +52,10 @@ class Preloader #if flash extends Sprite #end {
 		super ();
 		#end
 		
+		bytesLoaded = 0;
+		bytesTotal = 0;
 		libraries = new Array<AssetLibrary> ();
+		libraryNames = new Array<String> ();
 		
 		onProgress.add (update);
 		
@@ -55,6 +65,17 @@ class Preloader #if flash extends Sprite #end {
 	public function addLibrary (library:AssetLibrary):Void {
 		
 		libraries.push (library);
+		
+	}
+	
+	
+	public function addLibraryName (name:String):Void {
+		
+		if (libraryNames.indexOf (name) == -1) {
+			
+			libraryNames.push (name);
+			
+		}
 		
 	}
 	
@@ -75,16 +96,39 @@ class Preloader #if flash extends Sprite #end {
 	
 	public function load ():Void {
 		
+		for (library in libraries) {
+			
+			bytesTotal += library.bytesTotal;
+			
+		}
+		
 		loadedLibraries = -1;
 		
 		for (library in libraries) {
 			
-			library.load ().onComplete (function (_) {
+			library.load ().onProgress (function (loaded, total) {
+				
+				bytesLoaded += loaded;
+				onProgress.dispatch (bytesLoaded, bytesTotal);
+				
+			}).onComplete (function (_) {
 				
 				loadedLibraries++;
 				updateProgress ();
 				
+			}).onError (function (e) {
+				
+				trace (e);
+				
 			});
+			
+		}
+		
+		// TODO: Handle bytes total better
+		
+		for (name in libraryNames) {
+			
+			bytesTotal += 200;
 			
 		}
 		
@@ -120,9 +164,48 @@ class Preloader #if flash extends Sprite #end {
 	
 	private function updateProgress ():Void {
 		
-		update (loadedLibraries, libraries.length);
+		onProgress.dispatch (bytesLoaded, bytesTotal);
 		
-		if (#if flash loadedStage && #end loadedLibraries == libraries.length) {
+		if (loadedLibraries == libraries.length && !initLibraryNames) {
+			
+			initLibraryNames = true;
+			
+			for (name in libraryNames) {
+				
+				Assets.loadLibrary (name).onProgress (function (loaded, total) {
+					
+					if (total > 0) {
+						
+						if (!bytesTotalCache.exists (name)) {
+							
+							bytesTotalCache.set (name, total);
+							bytesTotal += (total - 200);
+							
+						}
+						
+						if (loaded > total) loaded = total;
+						bytesLoaded += loaded;
+						
+						onProgress.dispatch (bytesLoaded, bytesTotal);
+						
+					}
+					
+				}).onComplete (function (_) {
+					
+					loadedLibraries++;
+					updateProgress ();
+					
+				}).onError (function (e) {
+					
+					trace (e);
+					
+				});
+				
+			}	
+			
+		}
+		
+		if (#if flash loadedStage && #end loadedLibraries == (libraries.length + libraryNames.length)) {
 			
 			start ();
 			
@@ -133,6 +216,8 @@ class Preloader #if flash extends Sprite #end {
 	
 	#if flash
 	private function current_onEnter (event:flash.events.Event):Void {
+		
+		// TODO: Merge progress with library load progress
 		
 		if (!loadedStage && Lib.current.loaderInfo.bytesLoaded == Lib.current.loaderInfo.bytesTotal) {
 			

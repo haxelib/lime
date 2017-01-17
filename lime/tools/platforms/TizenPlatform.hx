@@ -56,6 +56,8 @@ class TizenPlatform extends PlatformTarget {
 		
 		ProcessHelper.runCommand ("", "haxe", [ hxml, "-D", "tizen" ] );
 		
+		if (noOutput) return;
+		
 		var args = [ "-Dtizen", "-DAPP_ID=" + TizenHelper.getUUID (project) ];
 		
 		if (project.targetFlags.exists ("simulator")) {
