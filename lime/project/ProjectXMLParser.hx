@@ -1053,6 +1053,20 @@ class ProjectXMLParser extends HXProject {
 						defines.remove (element.att.name);
 						environment.remove (element.att.name);
 					
+					case "define":
+						
+						var name = element.att.name;
+						var value = "";
+						
+						if (element.has.value) {
+							
+							value = substitute (element.att.value);
+							
+						}
+						
+						defines.set (name, value);
+						haxedefs.set (name, value);
+					
 					case "setenv":
 						
 						var value = "";
@@ -1771,6 +1785,18 @@ class ProjectXMLParser extends HXProject {
 							
 						}
 						
+						var dependency = new Dependency (name, path);
+						
+						#if (lime < "4.0.0")
+						dependency.forceLoad = true;
+						#end
+						
+						if (element.has.resolve ("force-load")) {
+							
+							dependency.forceLoad = (substitute (element.att.resolve ("force-load")) == "true");
+							
+						}
+						
 						var i = dependencies.length;
 						
 						while (i-- > 0) {
@@ -1783,7 +1809,7 @@ class ProjectXMLParser extends HXProject {
 							
 						}
 						
-						dependencies.push (new Dependency (name, path));
+						dependencies.push (dependency);
 					
 					case "android":
 						

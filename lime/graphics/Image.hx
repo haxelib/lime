@@ -31,8 +31,15 @@ import js.html.ImageElement;
 import js.html.Image in JSImage;
 import js.Browser;
 #elseif flash
+import flash.display.Bitmap;
 import flash.display.BitmapData;
+import flash.display.Loader;
+import flash.events.Event;
+import flash.events.IOErrorEvent;
+import flash.events.ProgressEvent;
 import flash.geom.Matrix;
+import flash.net.URLRequest;
+import flash.system.LoaderContext;
 import flash.utils.ByteArray;
 #end
 
@@ -733,15 +740,41 @@ class Image {
 	
 	public static function loadFromBase64 (base64:String, type:String):Future<Image> {
 		
+		if (base64 == null || type == null) return Future.withValue (null);
+		
 		var promise = new Promise<Image> ();
 		
-		// TODO: Handle error, progress
+		#if (js && html5)
+		var image = new JSImage ();
 		
-		fromBase64 (base64, type, function (image) {
+		image.addEventListener ("load", function (event) {
 			
-			promise.complete (image);
+			var buffer = new ImageBuffer (null, image.width, image.height);
+			buffer.__srcImage = cast image;
 			
-		});
+			promise.complete (new Image (buffer));
+			
+		}, false);
+		
+		image.addEventListener ("progress", function (event) {
+			
+			promise.progress (event.loaded, event.total);
+			
+		}, false);
+		
+		image.addEventListener ("error", function (event) {
+			
+			promise.error (event.detail);
+			
+		}, false);
+		
+		image.src = "data:" + type + ";base64," + base64;
+		
+		#else
+		
+		promise.error ("");
+		
+		#end
 		
 		return promise.future;
 		
@@ -750,17 +783,57 @@ class Image {
 	
 	public static function loadFromBytes (bytes:Bytes):Future<Image> {
 		
+		if (bytes == null) return Future.withValue (null);
+		
 		#if (js && html5)
+		
+		var type = "";
+		
+		if (__isPNG (bytes)) {
+			
+			type = "image/png";
+			
+		} else if (__isJPG (bytes)) {
+			
+			type = "image/jpeg";
+			
+		} else if (__isGIF (bytes)) {
+			
+			type = "image/gif";
+			
+		} else {
+			
+			throw "Image tried to read PNG/JPG Bytes, but found an invalid header.";
+			
+		}
+		
+		return loadFromBase64 (__base64Encode (bytes), type);
+		
+		#elseif flash
 		
 		var promise = new Promise<Image> ();
 		
-		// TODO: Handle error, progress
+		var loader = new Loader ();
 		
-		fromBytes (bytes, function (image) {
+		loader.contentLoaderInfo.addEventListener (Event.COMPLETE, function (event) {
 			
-			promise.complete (image);
+			promise.complete (Image.fromBitmapData (cast (loader.content, Bitmap).bitmapData));
 			
 		});
+		
+		loader.contentLoaderInfo.addEventListener (ProgressEvent.PROGRESS, function (event) {
+			
+			promise.progress (event.bytesLoaded, event.bytesTotal);
+			
+		});
+		
+		loader.contentLoaderInfo.addEventListener (IOErrorEvent.IO_ERROR, function (event) {
+			
+			promise.error (event.error);
+			
+		});
+		
+		loader.loadBytes (bytes.getData ());
 		
 		return promise.future;
 		
@@ -775,21 +848,65 @@ class Image {
 	
 	public static function loadFromFile (path:String):Future<Image> {
 		
+		if (path == null) return Future.withValue (null);
+		
 		#if (js && html5)
 		
 		var promise = new Promise<Image> ();
 		
-		// TODO: Handle progress
+		var image = new JSImage ();
+		image.crossOrigin = "Anonymous";
 		
-		fromFile (path, function (image) {
+		image.addEventListener ("load", function (event) {
 			
-			promise.complete (image);
+			var buffer = new ImageBuffer (null, image.width, image.height);
+			buffer.__srcImage = cast image;
 			
-		}, function () {
+			promise.complete (new Image (buffer));
 			
-			promise.error ("");
+		}, false);
+		
+		image.addEventListener ("progress", function (event) {
+			
+			promise.progress (event.loaded, event.total);
+			
+		}, false);
+		
+		image.addEventListener ("error", function (event) {
+			
+			promise.error (event.detail);
+			
+		}, false);
+		
+		image.src = path;
+		
+		return promise.future;
+		
+		#elseif flash
+		
+		var promise = new Promise<Image> ();
+		
+		var loader = new Loader ();
+		
+		loader.contentLoaderInfo.addEventListener (Event.COMPLETE, function (event) {
+			
+			promise.complete (Image.fromBitmapData (cast (loader.content, Bitmap).bitmapData));
 			
 		});
+		
+		loader.contentLoaderInfo.addEventListener (ProgressEvent.PROGRESS, function (event) {
+			
+			promise.progress (event.bytesLoaded, event.bytesTotal);
+			
+		});
+		
+		loader.contentLoaderInfo.addEventListener (IOErrorEvent.IO_ERROR, function (event) {
+			
+			promise.error (event.error);
+			
+		});
+		
+		loader.load (new URLRequest (path), new LoaderContext (true));
 		
 		return promise.future;
 		
@@ -1426,10 +1543,10 @@ class Image {
 				}
 				
 			}
-			
+		
 		#else
 			
-			throw "ImageBuffer.loadFromFile not supported on this target";
+			throw "Image.fromFile not supported on this target";
 			
 		#end
 		

@@ -28,13 +28,6 @@ import sys.FileSystem;
 		
 		super ();
 		
-		#if flash
-		
-		::if (assets != null)::::foreach assets::::if (embed)::classTypes.set ("::id::", __ASSET__::flatName::);::else::paths.set ("::id::", "::resourceName::");::end::
-		types.set ("::id::", AssetType.$$upper(::type::));::end::::end::
-		
-		#else
-		
 		if (ApplicationMain.config != null && Reflect.hasField (ApplicationMain.config, "assetsPrefix")) {
 			
 			rootPath = Reflect.field (ApplicationMain.config, "assetsPrefix");
@@ -53,7 +46,7 @@ import sys.FileSystem;
 			
 		}
 		
-		#if (openfl && !display)
+		#if (openfl && !flash && !display)
 		::if (assets != null)::::foreach assets::::if (type == "font")::openfl.text.Font.registerFont (__ASSET__OPENFL__::flatName::);
 		::end::::end::::end::
 		#end
@@ -68,7 +61,7 @@ import sys.FileSystem;
 		#end ::else::::if (embed)::
 		#if html5
 		preload.set (id, true);
-		#elseif (desktop || cpp)
+		#elseif (desktop || cpp || flash)
 		classTypes.set (id, __ASSET__::flatName::);
 		types.set (id, AssetType.$$upper(::type::));
 		#end
@@ -111,8 +104,6 @@ import sys.FileSystem;
 			
 		}
 		
-		#end
-		
 	}
 	
 	
@@ -123,7 +114,9 @@ import sys.FileSystem;
 		
 		if (bytes != null) {
 			
-			__fromManifest (AssetManifest.fromBytes (bytes));
+			var manifest = AssetManifest.fromBytes (bytes);
+			manifest.basePath = rootPath;
+			__fromManifest (manifest);
 			
 		} else {
 			
@@ -133,6 +126,7 @@ import sys.FileSystem;
 			
 			if (manifest != null) {
 				
+				manifest.basePath = rootPath;
 				__fromManifest (manifest);
 				
 			} else {
@@ -160,23 +154,6 @@ import sys.FileSystem;
 				//Log.warn ('Could not load asset manifest (${e})');
 				//
 			//});
-			
-		}
-		
-	}
-	
-	
-	private override function __fromManifest (manifest:AssetManifest):Void {
-		
-		super.__fromManifest (manifest);
-		
-		if (rootPath != "") {
-			
-			for (asset in manifest.assets) {
-				
-				paths.set (asset.id, rootPath + asset.path);
-				
-			}
 			
 		}
 		

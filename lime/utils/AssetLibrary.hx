@@ -104,6 +104,8 @@ class AssetLibrary {
 	
 	public static function fromManifest (manifest:AssetManifest):AssetLibrary {
 		
+		if (manifest == null) return null;
+		
 		var library:AssetLibrary = null;
 		
 		if (manifest.libraryType == null) {
@@ -486,7 +488,11 @@ class AssetLibrary {
 			
 		} else if (classTypes.exists (id)) {
 			
+			#if flash
+			return Future.withValue (Bytes.ofData (Type.createInstance (classTypes.get (id), [])));
+			#else
 			return Future.withValue (Type.createInstance (classTypes.get (id), []));
+			#end
 			
 		} else {
 			
@@ -563,7 +569,9 @@ class AssetLibrary {
 						
 					} else {
 						
-						return bytes.getString (0, bytes.length);
+						var text = bytes.getString (0, bytes.length);
+						cachedText.set(id, text);
+						return text;
 						
 					}
 					
@@ -628,6 +636,7 @@ class AssetLibrary {
 	private function __fromManifest (manifest:AssetManifest):Void {
 		
 		var hasSize = (manifest.version >= 2);
+		var basePath = manifest.basePath;
 		var size, id;
 		
 		for (asset in manifest.assets) {
@@ -635,7 +644,7 @@ class AssetLibrary {
 			size = hasSize ? asset.size : 100;
 			id = asset.id;
 			
-			paths.set (id, asset.path);
+			paths.set (id, basePath + asset.path);
 			sizes.set (id, size);
 			types.set (id, asset.type);
 			

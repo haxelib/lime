@@ -135,11 +135,13 @@ class ProcessHelper {
 			
 		}
 		
+		#if (haxe_ver < "3.3.0")
 		if (args != null && PlatformHelper.hostPlatform == Platform.WINDOWS) {
 			
 			command = PathHelper.escape (command);
 			
 		}
+		#end
 		
 		if (safeExecute) {
 			
