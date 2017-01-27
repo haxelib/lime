@@ -376,9 +376,6 @@ class HTML5Window {
 				
 			}
 			
-			x /= scale;
-			y /= scale;
-			
 			switch (event.type) {
 				
 				case "mousedown":
@@ -453,7 +450,7 @@ class HTML5Window {
 			
 		} else {
 			
-			parent.onMouseWheel.dispatch (untyped event.deltaX / scale, - untyped event.deltaY / scale);
+			parent.onMouseWheel.dispatch (untyped event.deltaX, - untyped event.deltaY);
 			
 			if (parent.onMouseWheel.canceled) {
 				

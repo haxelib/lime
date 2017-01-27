@@ -1,3 +1,11 @@
+3.7.2 (01/26/2017)
+------------------
+
+* Reverted high-DPI HTML5 mouse scale change
+* Improved the DPI values returned from display.dpi
+* Fixed "Update to Recommended Settings" message on Xcode 8.2
+
+
 3.7.1 (01/25/2017)
 ------------------
 
