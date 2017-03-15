@@ -50,6 +50,7 @@ class Preloader #if flash extends Sprite #end {
 	private var libraryNames:Array<String>;
 	private var loadedLibraries:Int;
 	private var loadedStage:Bool;
+	private var preloadComplete:Bool;
 	private var preloadStarted:Bool;
 	private var simulateProgress:Bool;
 	
@@ -187,7 +188,7 @@ class Preloader #if flash extends Sprite #end {
 				
 			}).onError (function (e) {
 				
-				trace (e);
+				Log.error (e);
 				
 			});
 			
@@ -266,7 +267,7 @@ class Preloader #if flash extends Sprite #end {
 			
 		}
 		
-		if (loadedLibraries == libraries.length && !initLibraryNames) {
+		if (#if flash loadedStage && #end loadedLibraries == libraries.length && !initLibraryNames) {
 			
 			initLibraryNames = true;
 			
@@ -331,7 +332,7 @@ class Preloader #if flash extends Sprite #end {
 					
 				}).onError (function (e) {
 					
-					trace (e);
+					Log.error (e);
 					
 				});
 				
@@ -341,7 +342,13 @@ class Preloader #if flash extends Sprite #end {
 		
 		if (!simulateProgress && #if flash loadedStage && #end loadedLibraries == (libraries.length + libraryNames.length)) {
 			
-			Log.verbose ("Preload complete");
+			if (!preloadComplete) {
+				
+				preloadComplete = true;
+				
+				Log.verbose ("Preload complete");
+				
+			}
 			
 			start ();
 			

@@ -1,18 +1,15 @@
 package lime.graphics.opengl; #if (!js || !html5 || display)
 
 
-#if !lime_debug
-@:fileXml('tags="haxe,release"')
-@:noDebug
-#end
+import lime.graphics.opengl.GL;
 
 
-class GLFramebuffer extends GLObject {
+abstract GLFramebuffer(GLObject) from GLObject to GLObject {
 	
 	
-	private override function getType ():String {
+	@:from private static function fromInt (id:Int):GLFramebuffer {
 		
-		return "Framebuffer";
+		return GLObject.fromInt (FRAMEBUFFER, id);
 		
 	}
 	

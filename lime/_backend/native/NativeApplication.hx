@@ -36,6 +36,7 @@ import lime.ui.Window;
 @:access(lime._backend.native.NativeRenderer)
 @:access(lime.app.Application)
 @:access(lime.graphics.opengl.GL)
+@:access(lime.graphics.GLRenderContext)
 @:access(lime.graphics.Renderer)
 @:access(lime.system.Sensor)
 @:access(lime.ui.Gamepad)
@@ -413,13 +414,30 @@ class NativeApplication {
 				
 				case RENDER:
 					
-					renderer.render ();
-					renderer.onRender.dispatch ();
-					renderer.flip ();
+					if (renderer.context != null) {
+						
+						renderer.render ();
+						renderer.onRender.dispatch ();
+						renderer.flip ();
+						
+					}
 					
 				case RENDER_CONTEXT_LOST:
 					
-					if (renderer.backend.useHardware) {
+					if (renderer.backend.useHardware && renderer.context != null) {
+						
+						switch (renderer.context) {
+							
+							case OPENGL (gl):
+								
+								#if (lime_cffi && lime_opengl && !display)
+								(gl:NativeGLRenderContext).__contextLost ();
+								if (GL.context == gl) GL.context = null;
+								#end
+							
+							default:
+							
+						}
 						
 						renderer.context = null;
 						renderer.onContextLost.dispatch ();

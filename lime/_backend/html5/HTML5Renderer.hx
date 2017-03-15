@@ -12,8 +12,10 @@ import lime.graphics.GLRenderContext;
 import lime.graphics.Renderer;
 import lime.math.Rectangle;
 
+@:access(lime._backend.html5.HTML5GLRenderContext)
 @:access(lime.app.Application)
 @:access(lime.graphics.opengl.GL)
+@:access(lime.graphics.GLRenderContext)
 @:access(lime.graphics.Renderer)
 @:access(lime.ui.Window)
 
@@ -73,7 +75,7 @@ class HTML5Renderer {
 					
 				};
 				
-				for (name in [ "webgl2", "webgl", "experimental-webgl" ]) {
+				for (name in [ #if !webgl1 "webgl2", #end "webgl", "experimental-webgl" ]) {
 					
 					webgl = cast parent.window.backend.canvas.getContext (name, options);
 					if (webgl != null) break;
@@ -93,12 +95,13 @@ class HTML5Renderer {
 				webgl = untyped WebGLDebugUtils.makeDebugContext (webgl);
 				#end
 				
-				GL.context = cast webgl;
-				#if (js && html5)
+				#if ((js && html5) && !display)
+				GL.context = new GLRenderContext (cast webgl);
 				parent.context = OPENGL (GL.context);
 				#else
 				parent.context = OPENGL (new GLRenderContext ());
 				#end
+				
 				parent.type = OPENGL;
 				
 			}
@@ -122,6 +125,15 @@ class HTML5Renderer {
 			case "webglcontextlost":
 				
 				event.preventDefault ();
+				
+				#if !display
+				if (GL.context != null) {
+					
+					GL.context.__contextLost = true;
+					
+				}
+				#end
+				
 				parent.context = null;
 				
 				parent.onContextLost.dispatch ();

@@ -5,7 +5,6 @@ import haxe.io.Path;
 import haxe.Template;
 import lime.tools.helpers.AndroidHelper;
 import lime.tools.helpers.ArrayHelper;
-import lime.tools.helpers.AssetHelper;
 import lime.tools.helpers.CPPHelper;
 import lime.tools.helpers.DeploymentHelper;
 import lime.tools.helpers.FileHelper;
@@ -316,6 +315,18 @@ class AndroidPlatform extends PlatformTarget {
 		context.ANDROID_GRADLE_PLUGIN = project.config.getString ("android.gradle-plugin", "2.1.0");
 		context.ANDROID_LIBRARY_PROJECTS = [];
 		
+		if (!project.environment.exists ("ANDROID_SDK") || !project.environment.exists ("ANDROID_NDK_ROOT")) {
+			
+			var command = "lime";
+			var toolsBase = Type.resolveClass ("CommandLineTools");
+			if (toolsBase != null)
+				command = Reflect.field (toolsBase, "commandName");
+			
+			LogHelper.error ("You must define ANDROID_SDK and ANDROID_NDK_ROOT to target Android, please run '" + command + " setup android' first");
+			Sys.exit (1);
+			
+		}
+		
 		var escaped = ~/([ #!=\\:])/g;
 		context.ANDROID_SDK_ESCAPED = escaped.replace(context.ENV_ANDROID_SDK, "\\$1");
 		context.ANDROID_NDK_ROOT_ESCAPED = escaped.replace(context.ENV_ANDROID_NDK_ROOT, "\\$1");
@@ -419,8 +430,6 @@ class AndroidPlatform extends PlatformTarget {
 			}
 			
 		}
-		
-		AssetHelper.createManifest (project, sourceSet + "/assets/manifest");
 		
 	}
 	

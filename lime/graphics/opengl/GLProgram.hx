@@ -1,43 +1,17 @@
 package lime.graphics.opengl; #if (!js || !html5 || display)
 
 
-#if !lime_debug
-@:fileXml('tags="haxe,release"')
-@:noDebug
-#end
+import lime.graphics.opengl.GL;
+
+@:forward(refs)
 
 
-class GLProgram extends GLObject {
+abstract GLProgram(GLObject) from GLObject to GLObject {
 	
 	
-	public var shaders:Array<GLShader>;
-	
-	
-	public function new (version:Int, id:Dynamic) {
+	@:from private static function fromInt (id:Int):GLProgram {
 		
-		super (version, id);
-		shaders = new Array<GLShader> ();
-		
-	}
-	
-	
-	public function attach (shader:GLShader):Void {
-		
-		shaders.push (shader);
-		
-	}
-	
-	
-	public function getShaders ():Array<GLShader> {
-		
-		return shaders.copy ();
-		
-	}
-	
-	
-	private override function getType ():String {
-		
-		return "Program";
+		return GLObject.fromInt (PROGRAM, id);
 		
 	}
 	
