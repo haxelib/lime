@@ -7,6 +7,7 @@ import lime.app.Future;
 import lime.app.Promise;
 import lime.media.AudioBuffer;
 import lime.graphics.Image;
+import lime.net.HTTPRequest;
 import lime.text.Font;
 import lime.utils.AssetType;
 
@@ -428,6 +429,8 @@ class AssetLibrary {
 			
 			for (id in preload.keys ()) {
 				
+				if (!preload.get (id)) continue;
+				
 				Log.verbose ("Preloading asset: " + id + " [" + types.get (id) + "]");
 				
 				switch (types.get (id)) {
@@ -635,27 +638,26 @@ class AssetLibrary {
 			
 			return Future.withValue (cachedText.get (id));
 			
+		} else if (cachedBytes.exists (id) || classTypes.exists (id)) {
+			
+			var bytes = getBytes (id);
+			
+			if (bytes == null) {
+				
+				return cast Future.withValue (null);
+				
+			} else {
+				
+				var text = bytes.getString (0, bytes.length);
+				cachedText.set (id, text);
+				return Future.withValue (text);
+				
+			}
+			
 		} else {
 			
-			return loadBytes (id).then (function (bytes) {
-				
-				return new Future<String> (function () {
-					
-					if (bytes == null) {
-						
-						return null;
-						
-					} else {
-						
-						var text = bytes.getString (0, bytes.length);
-						cachedText.set(id, text);
-						return text;
-						
-					}
-					
-				}, true);
-				
-			});
+			var request = new HTTPRequest<String> ();
+			return request.load (paths.get (id));
 			
 		}
 		
@@ -775,7 +777,7 @@ class AssetLibrary {
 			
 			id = asset.id;
 			
-			if (preload.exists (id)) {
+			if (preload.exists (id) && preload.get (id)) {
 				
 				bytesTotal += sizes.get (id);
 				
@@ -859,7 +861,16 @@ class AssetLibrary {
 	
 	private function load_onError (id:String, message:Dynamic):Void {
 		
-		promise.error ("Error loading asset \"" + id + "\"");
+		if (message != null && message != "") {
+			
+			promise.error ("Error loading asset \"" + id + "\": " + Std.string (message));
+			
+		} else {
+			
+			promise.error ("Error loading asset \"" + id + "\"");
+			
+		}
+		
 		
 	}
 	
