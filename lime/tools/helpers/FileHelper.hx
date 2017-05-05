@@ -8,6 +8,7 @@ import lime.tools.helpers.PlatformHelper;
 import lime.tools.helpers.StringHelper;
 import lime.project.Asset;
 import lime.project.AssetEncoding;
+import lime.project.AssetType;
 import lime.project.HXProject;
 import lime.project.NDLL;
 import lime.project.Platform;
@@ -25,8 +26,60 @@ import cpp.Lib;
 class FileHelper {
 	
 	
-	private static var binaryExtensions = [ "jpg", "jpeg", "png", "exe", "gif", "ini", "zip", "tar", "gz", "fla", "swf", "atf" ];
-	private static var textExtensions = [ "xml", "java", "hx", "hxml", "html", "ini", "gpe", "pch", "pbxproj", "plist", "json", "cpp", "mm", "properties", "hxproj", "nmml", "lime" ];
+	private static var knownExtensions:Map<String, AssetType>;
+	
+	
+	private static function __init__ ():Void {
+		
+		knownExtensions = [
+			
+			"jpg" => IMAGE,
+			"jpeg" => IMAGE,
+			"png" => IMAGE,
+			"gif" => IMAGE,
+			"webp" => IMAGE,
+			"bmp" => IMAGE,
+			"tiff" => IMAGE,
+			"jfif" => IMAGE,
+			"exe" => BINARY,
+			"bin" => BINARY,
+			"so" => BINARY,
+			"pch" => BINARY,
+			"dll" => BINARY,
+			"zip" => BINARY,
+			"tar" => BINARY,
+			"gz" => BINARY,
+			"fla" => BINARY,
+			"swf" => BINARY,
+			"atf" => BINARY,
+			"psd" => BINARY,
+			"txt" => TEXT,
+			"xml" => TEXT,
+			"java" => TEXT,
+			"hx" => TEXT,
+			"cpp" => TEXT,
+			"c" => TEXT,
+			"h" => TEXT,
+			"cs" => TEXT,
+			"js" => TEXT,
+			"mm" => TEXT,
+			"hxml" => TEXT,
+			"html" => TEXT,
+			"json" => TEXT,
+			"css" => TEXT,
+			"gpe" => TEXT,
+			"pbxproj" => TEXT,
+			"plist" => TEXT,
+			"properties" => TEXT,
+			"ini" => TEXT,
+			"hxproj" => TEXT,
+			"nmml" => TEXT,
+			"lime" => TEXT,
+			"svg" => TEXT,
+			
+		];
+		
+	}
 	
 	
 	public static function copyAsset (asset:Asset, destination:String, context:Dynamic = null) {
@@ -111,39 +164,28 @@ class FileHelper {
 		
 		if (process && context != null) {
 			
-			for (binary in binaryExtensions) {
+			if (knownExtensions.exists (extension) && knownExtensions.get (extension) != TEXT) {
 				
-				if (extension == binary) {
-					
-					copyIfNewer (source, destination);
-					return;
-					
-				}
+				copyIfNewer (source, destination);
+				return;
 				
 			}
 			
-			var match = false;
+			var _isText = false;
 			
-			for (text in textExtensions) {
+			if (knownExtensions.exists (extension) && knownExtensions.get (extension) == TEXT) {
 				
-				if (extension == text) {
-					
-					match = true;
-					break;
-					
-				}
+				_isText = true;
+				
+			} else {
+				
+				_isText = isText (source);
 				
 			}
 			
-			if (!match) {
+			if (_isText) {
 				
-				match = isText (source);
-				
-			}
-			
-			if (match) {
-				
-				LogHelper.info ("", " - \x1b[1mCopying template file:\x1b[0m " + source + " \x1b[3;37m->\x1b[0m " + destination);
+				//LogHelper.info ("", " - \x1b[1mProcessing template file:\x1b[0m " + source + " \x1b[3;37m->\x1b[0m " + destination);
 				
 				var fileContents:String = File.getContent (source);
 				var template:Template = new Template (fileContents);
@@ -152,6 +194,21 @@ class FileHelper {
 					upper: function (_, s) return s.toUpperCase (),
 					replace: function (_, s, sub, by) return StringTools.replace(s, sub, by)
 				});
+				
+				try {
+					
+					if (FileSystem.exists (destination)) {
+						
+						var existingContent = File.getContent (destination);
+						if (result == existingContent) return;
+						
+					}
+					
+				} catch (e:Dynamic) {}
+				
+				PathHelper.mkdir (Path.directory (destination));
+				
+				LogHelper.info ("", " - \x1b[1mCopying template file:\x1b[0m " + source + " \x1b[3;37m->\x1b[0m " + destination);
 				
 				try {
 					
@@ -376,11 +433,20 @@ class FileHelper {
 	
 	public static function recursiveCopyTemplate (templatePaths:Array<String>, source:String, destination:String, context:Dynamic = null, process:Bool = true, warnIfNotFound:Bool = true) {
 		
-		var paths = PathHelper.findTemplates (templatePaths, source, warnIfNotFound);
+		var destinations = [];
+		var paths = PathHelper.findTemplateRecursive (templatePaths, source, warnIfNotFound, destinations);
 		
-		for (path in paths) {
+		if (paths != null) {
 			
-			recursiveCopy (path, destination, context, process);
+			PathHelper.mkdir (destination);
+			
+			for (i in 0...paths.length) {
+				
+				var itemDestination = PathHelper.combine (destination, destinations[i]);
+				
+				copyFile (paths[i], itemDestination, context, process);
+				
+			}
 			
 		}
 		
