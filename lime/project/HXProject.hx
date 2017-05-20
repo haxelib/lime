@@ -85,30 +85,33 @@ class HXProject {
 		
 		var args = Sys.args ();
 		
-		if (args.length < 7) {
+		if (args.length < 2) {
 			
 			return;
 			
 		}
 		
-		HXProject._command = args[0];
-		HXProject._target = cast args[2];
-		HXProject._debug = (args[3] == "true");
-		HXProject._targetFlags = Unserializer.run (args[4]);
-		HXProject._templatePaths = Unserializer.run (args[5]);
-		if (args.length > 6) HXProject._userDefines = Unserializer.run (args[6]);
-		if (args.length > 7) HXProject._environment = Unserializer.run (args[7]);
+		var inputData = Unserializer.run (File.getContent (args[0]));
+		var outputFile = args[1];
+		
+		HXProject._command = inputData.command;
+		HXProject._target = cast inputData.target;
+		HXProject._debug = inputData.debug;
+		HXProject._targetFlags = inputData.targetFlags;
+		HXProject._templatePaths = inputData.templatePaths;
+		HXProject._userDefines = inputData.userDefines;
+		HXProject._environment = inputData.environment;
 		
 		initialize ();
 		
-		var classRef = Type.resolveClass (args[1]);
+		var classRef = Type.resolveClass (inputData.name);
 		var instance = Type.createInstance (classRef, []);
 		
 		var serializer = new Serializer ();
 		serializer.useCache = true;
 		serializer.serialize (instance);
 		
-		File.saveContent (args[args.length - 1], serializer.toString ());
+		File.saveContent (outputFile, serializer.toString ());
 		
 	}
 	
@@ -125,7 +128,7 @@ class HXProject {
 		templatePaths = _templatePaths.copy ();
 		
 		defaultMeta = { title: "MyApplication", description: "", packageName: "com.example.myapp", version: "1.0.0", company: "", companyUrl: "", buildNumber: null, companyId: "" }
-		defaultApp = { main: "Main", file: "MyApplication", path: "bin", preloader: "", swfVersion: 11.2, url: "", init: null }
+		defaultApp = { main: "Main", file: "MyApplication", path: "bin", preloader: "", swfVersion: 17, url: "", init: null }
 		defaultWindow = { width: 800, height: 600, parameters: "{}", background: 0xFFFFFF, fps: 30, hardware: true, display: 0, resizable: true, borderless: false, orientation: Orientation.AUTO, vsync: false, fullscreen: false, allowHighDPI: true, alwaysOnTop: false, antialiasing: 0, allowShaders: true, requireShaders: false, depthBuffer: false, stencilBuffer: false }
 		
 		platformType = PlatformType.DESKTOP;
@@ -459,18 +462,48 @@ class HXProject {
 		var tempDirectory = PathHelper.getTemporaryDirectory ();
 		var classFile = PathHelper.combine (tempDirectory, name + ".hx");
 		var nekoOutput = PathHelper.combine (tempDirectory, name + ".n");
-		var temporaryFile = PathHelper.combine (tempDirectory, "output.dat");
 		
 		FileHelper.copyFile (path, classFile);
 		
 		ProcessHelper.runCommand ("", "haxe", [ name, "-main", "lime.project.HXProject", "-cp", tempDirectory, "-neko", nekoOutput, "-cp", PathHelper.combine (PathHelper.getHaxelib (new Haxelib ("lime")), "tools"), "-lib", "lime", "-D", "lime-curl", "-D", "native", "-D", "lime-native", "-D", "lime-cffi" ]);
-		ProcessHelper.runCommand ("", "neko", [ FileSystem.fullPath (nekoOutput), HXProject._command, name, Std.string (HXProject._target), Std.string (HXProject._debug), Serializer.run (HXProject._targetFlags), Serializer.run (HXProject._templatePaths), Serializer.run (HXProject._userDefines), Serializer.run (HXProject._environment), temporaryFile ]);
 		
-		var tPaths:Array<String> = [];
+		var inputFile = PathHelper.combine (tempDirectory, "input.dat");
+		var outputFile = PathHelper.combine (tempDirectory, "output.dat");
+		
+		var inputData = Serializer.run ({
+			
+			command: HXProject._command,
+			name: name,
+			target: HXProject._target,
+			debug: HXProject._debug,
+			targetFlags: HXProject._targetFlags,
+			templatePaths: HXProject._templatePaths,
+			userDefines: HXProject._userDefines,
+			environment: HXProject._environment
+			
+		});
+		
+		File.saveContent (inputFile, inputData);
+		
 		try {
 			
-			var outputPath = PathHelper.combine (tempDirectory, "output.dat");
+			ProcessHelper.runCommand ("", "neko", [ FileSystem.fullPath (nekoOutput), inputFile, outputFile ]);
+			
+		} catch (e:Dynamic) {
+			
+			FileSystem.deleteFile (inputFile);
+			Sys.exit (1);
+			
+		}
 		
+		var tPaths:Array<String> = [];
+		
+		try {
+			
+			FileSystem.deleteFile (inputFile);
+			
+			var outputPath = PathHelper.combine (tempDirectory, "output.dat");
+			
 			if (FileSystem.exists (outputPath)) {
 				
 				var output = File.getContent (outputPath);
@@ -482,6 +515,9 @@ class HXProject {
 				//Add them after loading template paths from haxelibs below
 				tPaths = project.templatePaths; 
 				project.templatePaths = [];
+				
+				FileSystem.deleteFile (outputPath);
+				
 			}
 			
 		} catch (e:Dynamic) {}
@@ -1078,18 +1114,19 @@ class HXProject {
 		for (haxelib in haxelibs) {
 			
 			var name = haxelib.name;
+			var version = HaxelibHelper.getVersion (haxelib);
 			
-			if (haxelib.version != "") {
+			if (haxelib.version != null) {
 				
-				name += ":" + haxelib.version;
+				name += ":" + version;
 				
 			}
 			
 			#if lime
 			
-			if (PathHelper.haxelibOverrides.exists (name)) {
+			if (HaxelibHelper.pathOverrides.exists (name)) {
 				
-				var param = "-cp " + PathHelper.haxelibOverrides.get (name);
+				var param = "-cp " + HaxelibHelper.pathOverrides.get (name);
 				compilerFlags.remove (param);
 				compilerFlags.push (param);
 				
@@ -1101,7 +1138,7 @@ class HXProject {
 				
 				try {
 					
-					output = ProcessHelper.runProcess ("", "haxelib", [ "path", name ], true, true, true);
+					output = HaxelibHelper.runProcess ("", [ "path", name ], true, true, true);
 					
 				} catch (e:Dynamic) { }
 				

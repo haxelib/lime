@@ -253,17 +253,17 @@ class NativeApplication {
 			case AXIS_MOVE:
 				
 				var joystick = Joystick.devices.get (joystickEventInfo.id);
-				if (joystick != null) joystick.onAxisMove.dispatch (joystickEventInfo.index, joystickEventInfo.value);
+				if (joystick != null) joystick.onAxisMove.dispatch (joystickEventInfo.index, joystickEventInfo.x);
 			
 			case HAT_MOVE:
 				
 				var joystick = Joystick.devices.get (joystickEventInfo.id);
-				if (joystick != null) joystick.onHatMove.dispatch (joystickEventInfo.index, joystickEventInfo.x);
+				if (joystick != null) joystick.onHatMove.dispatch (joystickEventInfo.index, joystickEventInfo.value);
 			
 			case TRACKBALL_MOVE:
 				
 				var joystick = Joystick.devices.get (joystickEventInfo.id);
-				if (joystick != null) joystick.onTrackballMove.dispatch (joystickEventInfo.index, joystickEventInfo.value);
+				if (joystick != null) joystick.onTrackballMove.dispatch (joystickEventInfo.index, joystickEventInfo.x, joystickEventInfo.y);
 			
 			case BUTTON_DOWN:
 				
@@ -427,7 +427,12 @@ class NativeApplication {
 						
 						renderer.render ();
 						renderer.onRender.dispatch ();
-						renderer.flip ();
+						
+						if (!renderer.onRender.canceled) {
+							
+							renderer.flip ();
+							
+						}
 						
 					}
 					
@@ -821,12 +826,12 @@ private class JoystickEventInfo {
 	public var id:Int;
 	public var index:Int;
 	public var type:JoystickEventType;
-	public var value:Float;
-	public var x:Int;
-	public var y:Int;
+	public var value:Int;
+	public var x:Float;
+	public var y:Float;
 	
 	
-	public function new (type:JoystickEventType = null, id:Int = 0, index:Int = 0, value:Float = 0, x:Int = 0, y:Int = 0) {
+	public function new (type:JoystickEventType = null, id:Int = 0, index:Int = 0, value:Int = 0, x:Float = 0, y:Float = 0) {
 		
 		this.type = type;
 		this.id = id;

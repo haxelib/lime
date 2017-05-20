@@ -223,7 +223,12 @@ class ProjectXMLParser extends HXProject {
 					
 					required = substitute (required);
 					var check = StringTools.trim (required);
-					if (check != "" && !defines.exists (check) && (environment == null || !environment.exists (check)) && check != command) {
+					
+					if (check == "false") {
+						
+						matchRequired = false;
+						
+					} else if (check != "" && check != "true" && !defines.exists (check) && (environment == null || !environment.exists (check)) && check != command) {
 						
 						matchRequired = false;
 						
@@ -364,6 +369,21 @@ class ProjectXMLParser extends HXProject {
 		}
 		
 		return segments.join ("");
+		
+	}
+	
+	
+	public static function fromFile (path:String, defines:Map<String, Dynamic> = null, includePaths:Array<String> = null, useExtensionPath:Bool = false):ProjectXMLParser {
+		
+		if (path == null) return null;
+		
+		if (FileSystem.exists (path)) {
+			
+			return new ProjectXMLParser (path, defines, includePaths, useExtensionPath);
+			
+		}
+		
+		return null;
 		
 	}
 	
@@ -1183,7 +1203,7 @@ class ProjectXMLParser extends HXProject {
 						if (element.has.haxelib) {
 							
 							haxelib = new Haxelib (substitute (element.att.haxelib));
-							path = findIncludeFile (PathHelper.getHaxelib (haxelib, true));
+							path = findIncludeFile (HaxelibHelper.getPath (haxelib, true));
 							addSourcePath = false;
 							
 						} else if (element.has.path) {
@@ -1298,24 +1318,24 @@ class ProjectXMLParser extends HXProject {
 							
 						}
 						
-						/*if (name == "nme" && defines.exists ("openfl")) {
-							
-							name = "openfl-nme-compatibility";
-							version = "";
-							
-						}*/
-						
 						var haxelib = new Haxelib (name, version);
+						
+						if (version != "" && defines.exists (name) && !haxelib.versionMatches (defines.get (name))) {
+							
+							LogHelper.warn ("Ignoring requested haxelib \"" + name + "\" version \"" + version + "\" (version \"" + defines.get (name) + "\" was already included)");
+							continue;
+							
+						}
 						
 						if (path == null) {
 							
 							if (defines.exists ("setup")) {
 								
-								path = PathHelper.getHaxelib (haxelib);
+								path = HaxelibHelper.getPath (haxelib);
 								
 							} else {
 								
-								path = PathHelper.getHaxelib (haxelib, !optional);
+								path = HaxelibHelper.getPath (haxelib, !optional);
 								
 								if (optional && path == "") {
 									
@@ -1331,11 +1351,11 @@ class ProjectXMLParser extends HXProject {
 							
 							if (version != "") {
 								
-								PathHelper.haxelibOverrides.set (name + ":" + version, path);
+								HaxelibHelper.pathOverrides.set (name + ":" + version, path);
 								
 							} else {
 								
-								PathHelper.haxelibOverrides.set (name, path);
+								HaxelibHelper.pathOverrides.set (name, path);
 								
 							}
 							
@@ -1343,7 +1363,7 @@ class ProjectXMLParser extends HXProject {
 						
 						if (!defines.exists (haxelib.name)) {
 							
-							defines.set (haxelib.name, HaxelibHelper.getVersion (haxelib));
+							defines.set (haxelib.name, Std.string (HaxelibHelper.getVersion (haxelib)));
 							
 						}
 						
@@ -1679,7 +1699,7 @@ class ProjectXMLParser extends HXProject {
 							
 							if (element.has.haxelib) {
 								
-								var haxelibPath = PathHelper.getHaxelib (new Haxelib (substitute (element.att.haxelib)), true);
+								var haxelibPath = HaxelibHelper.getPath (new Haxelib (substitute (element.att.haxelib)), true);
 								var path = PathHelper.combine (haxelibPath, substitute (element.att.path));
 								templatePaths.push (path);
 								
@@ -2193,7 +2213,7 @@ class ProjectXMLParser extends HXProject {
 		
 		if (string.substr (0, 8) == "haxelib:") {
 			
-			var path = PathHelper.getHaxelib (new Haxelib (string.substr (8)), true);
+			var path = HaxelibHelper.getPath (new Haxelib (string.substr (8)), true);
 			return PathHelper.standardize (path);
 			
 		} else if (defines.exists (string)) {
