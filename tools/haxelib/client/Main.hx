@@ -1079,23 +1079,34 @@ class Main {
 				return dev;
 			}
 		}
+		var current = try getCurrent(dir) catch(e:Dynamic) null;
+		if ( current != null && matchVersion(version, current) ) {
+			return dir+"/"+Data.safe(current);
+		}
 		var matches = [];
 		for( v in FileSystem.readDirectory(dir) ) {
-			if( v == version) return dir + "/" + v;
+			if( v == version ) return dir+"/"+v;
 			if( v.charAt(0) == "." )
 				continue;
 			v = Data.unsafe(v);
 			var semver = try SemVer.ofString(v) catch (_:Dynamic) null;
+			if ( semver == null ) {
+				var json = try File.getContent(dir+"/"+v+"/"+Data.JSON) catch( e : Dynamic ) null;
+				if ( json != null ) {
+					var inf = Data.readData(json, false);
+					semver = try SemVer.ofString(inf.version) catch (_:Dynamic) null;
+				}
+			}
 			if (semver != null && matchVersion(version, semver))
-				matches.push(semver);
+				matches.push({ dir: v, ver: semver });
 		}
-		var best = null;
+		var best:Dynamic = null;
 		for( match in matches ) {
-			if (best == null || match > best) {
+			if (best == null || match.ver > best.ver || (match.ver == best.ver && match.dir.indexOf (",") == -1)) {
 				best = match;
 			}
 		}
-		return if (best != null) dir + "/" + Data.safe(best) else null;
+		return if (best != null) dir + "/" + Data.safe(best.dir) else null;
 	}
 
 	function list() {
