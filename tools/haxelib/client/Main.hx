@@ -1081,6 +1081,7 @@ class Main {
 		}
 		var matches = [];
 		for( v in FileSystem.readDirectory(dir) ) {
+			if( v == version) return dir + "/" + v;
 			if( v.charAt(0) == "." )
 				continue;
 			v = Data.unsafe(v);
@@ -1290,7 +1291,7 @@ class Main {
 		var dev = try getDev(pdir) catch (_:Dynamic) null;
 		var vdir = try getVersionDir(version,dev,pdir) catch (_:Dynamic) null;
 
-		if( vdir != null && !FileSystem.exists(vdir) )
+		if( vdir == null || !FileSystem.exists(vdir) )
 			throw "Library "+prj+" version "+version+" is not installed";
 
 		for( p in l )
