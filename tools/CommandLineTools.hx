@@ -228,7 +228,22 @@ class CommandLineTools {
 				if (haxelib != null) {
 					
 					var haxelibPath = HaxelibHelper.getPath (haxelib, true);
-					hxmlPath = PathHelper.combine (haxelibPath, "rebuild.hxml");
+					
+					switch (haxelib.name) {
+						
+						case "hxcpp":
+							
+							hxmlPath = PathHelper.combine (haxelibPath, "tools/hxcpp/compile.hxml");
+						
+						case "haxelib":
+							
+							hxmlPath = PathHelper.combine (haxelibPath, "../client.hxml");
+						
+						default:
+							
+							hxmlPath = PathHelper.combine (haxelibPath, "rebuild.hxml");
+						
+					}
 					
 				}
 				
@@ -295,7 +310,7 @@ class CommandLineTools {
 						
 						if (hxmlPath != null && FileSystem.exists (hxmlPath)) {
 							
-							ProcessHelper.runCommand (Path.directory (hxmlPath), "haxe", [ "rebuild.hxml" ]);
+							ProcessHelper.runCommand (Path.directory (hxmlPath), "haxe", [ Path.withoutDirectory (hxmlPath) ]);
 							
 						}
 						
@@ -2021,6 +2036,10 @@ class CommandLineTools {
 			} else if (argument.substr (0, 2) == "-I") {
 				
 				includePaths.push (argument.substr (2));
+				
+			} else if (argument == "-haxelib-debug") {
+				
+				HaxelibHelper.debug = true;
 				
 			} else if (argument == "-args") {
 				

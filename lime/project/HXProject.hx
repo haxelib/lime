@@ -1114,9 +1114,12 @@ class HXProject {
 		for (haxelib in haxelibs) {
 			
 			var name = haxelib.name;
-			var version = HaxelibHelper.getVersion (haxelib);
 			
-			if (version != null) {
+			// TODO: Handle real version when better/smarter haxelib available
+			var version = haxelib.version;
+			//var version = HaxelibHelper.getVersion (haxelib);
+			
+			if (version != null && version != "") {
 				
 				name += ":" + version;
 				
@@ -1133,7 +1136,7 @@ class HXProject {
 			} else {
 				
 				var cache = LogHelper.verbose;
-				LogHelper.verbose = false;
+				LogHelper.verbose = HaxelibHelper.debug;
 				var output = "";
 				
 				try {
@@ -1153,7 +1156,11 @@ class HXProject {
 					
 					if (arg != "") {
 						
-						if (!StringTools.startsWith (arg, "-")) {
+						if (StringTools.startsWith (arg, "Error: ")) {
+							
+							LogHelper.error (arg.substr (7));
+							
+						} else if (!StringTools.startsWith (arg, "-")) {
 							
 							var path = PathHelper.standardize (arg);
 							
