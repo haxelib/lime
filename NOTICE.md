@@ -72,6 +72,9 @@ The typed array implementation was developed in collaboration with Sven Bergstr√
 and the hxtypedarray project, which is available under an "MIT" license.
 For details, see https://github.com/underscorediscovery/hxtypedarray
 
+The unifill project is included in the [lime/text/unifill/](lime/text/unifill/) directory,
+which is available under an "MIT" license. For details, see https://github.com/mandel59/unifill
+
 lime/project/Version is adapted from thx.semver project, which is available under
 an "MIT" license. For details, see https://github.com/fponticelli/thx.semver
 
@@ -111,7 +114,7 @@ This product bundles ios-deploy 1.9.0, which is available under an
 This product bundles node.js 0.10.26, which is available under an
 "MIT" license. For details, see https://github.com/joyent/node.
 
-This product bundles http-server 0.7.4, which is available under an
+This product bundles http-server 0.10.0 and its dependencies, which is available under an
 "MIT" license. For details, see https://github.com/nodeapps/http-server.
 
 This product bundles webify 0.1.1.0, which is available under an

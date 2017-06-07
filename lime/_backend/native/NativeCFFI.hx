@@ -43,6 +43,7 @@ class NativeCFFI {
 	@:cffi private static function lime_bytes_get_data_pointer_offset (data:Dynamic, offset:Int):Float;
 	@:cffi private static function lime_bytes_read_file (path:String, bytes:Dynamic):Dynamic;
 	@:cffi private static function lime_cffi_get_native_pointer (ptr:Dynamic):Float;
+	@:cffi private static function lime_clipboard_event_manager_register (callback:Dynamic, eventObject:Dynamic):Void;
 	@:cffi private static function lime_clipboard_get_text ():Dynamic;
 	@:cffi private static function lime_clipboard_set_text (text:String):Void;
 	@:cffi private static function lime_data_pointer_offset (dataPointer:DataPointer, offset:Int):Float;
@@ -88,7 +89,7 @@ class NativeCFFI {
 	@:cffi private static function lime_image_data_util_multiply_alpha (image:Dynamic):Void;
 	@:cffi private static function lime_image_data_util_resize (image:Dynamic, buffer:Dynamic, width:Int, height:Int):Void;
 	@:cffi private static function lime_image_data_util_set_format (image:Dynamic, format:Int):Void;
-	@:cffi private static function lime_image_data_util_set_pixels (image:Dynamic, rect:Dynamic, bytes:Dynamic, format:Int):Void;
+	@:cffi private static function lime_image_data_util_set_pixels (image:Dynamic, rect:Dynamic, bytes:Dynamic, offset:Int, format:Int):Void;
 	@:cffi private static function lime_image_data_util_threshold (image:Dynamic, sourceImage:Dynamic, sourceRect:Dynamic, destPoint:Dynamic, operation:Int, thresholdRG:Int, thresholdBA:Int, colorRG:Int, colorBA:Int, maskRG:Int, maskBA:Int, copySource:Bool):Int;
 	@:cffi private static function lime_image_data_util_unmultiply_alpha (image:Dynamic):Void;
 	@:cffi private static function lime_joystick_get_device_guid (id:Int):Dynamic;
