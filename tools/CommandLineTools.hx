@@ -36,6 +36,7 @@ class CommandLineTools {
 	private var overrides:HXProject;
 	private var project:HXProject;
 	private var projectDefines:Map<String, String>;
+	private var runFromHaxelib:Bool;
 	private var targetFlags:Map<String, String>;
 	private var traceEnabled:Bool;
 	private var userDefines:Map<String, Dynamic>;
@@ -83,6 +84,13 @@ class CommandLineTools {
 		switch (command) {
 			
 			case "":
+				
+				if (targetFlags.exists ("version")) {
+					
+					Sys.println (getToolsVersion ());
+					return;
+					
+				}
 				
 				displayInfo (true);
 			
@@ -300,6 +308,11 @@ class CommandLineTools {
 							
 							target = Platform.MAC;
 						
+						case "webassembly", "wasm":
+							
+							target = Platform.EMSCRIPTEN;
+							targetFlags.set ("webassembly", "");
+						
 						default:
 							
 							target = cast targetName.toLowerCase ();
@@ -310,7 +323,16 @@ class CommandLineTools {
 						
 						if (hxmlPath != null && FileSystem.exists (hxmlPath)) {
 							
+							var cacheValue = Sys.getEnv ("HAXELIB_PATH");
+							Sys.putEnv ("HAXELIB_PATH", HaxelibHelper.getRepositoryPath ());
+							
 							ProcessHelper.runCommand (Path.directory (hxmlPath), "haxe", [ Path.withoutDirectory (hxmlPath) ]);
+							
+							if (cacheValue != null) {
+								
+								Sys.putEnv ("HAXELIB_PATH", cacheValue);
+								
+							}
 							
 						}
 						
@@ -456,68 +478,70 @@ class CommandLineTools {
 			
 		}
 		
-		var process = new Process ("haxelib", [ "path", "lime" ]);
 		var path = "";
-		var lines = new Array<String> ();
 		
-		try {
+		if (FileSystem.exists ("tools.n")) {
 			
-			while (true) {
-				
-				var length = lines.length;
-				var line = StringTools.trim (process.stdout.readLine ());
-				
-				if (length > 0 && (line == "-D lime" || StringTools.startsWith (line, "-D lime="))) {
-					
-					path = StringTools.trim (lines[length - 1]);
-					
-				}
-				
-				lines.push (line);
-				
-			}
+			path = PathHelper.combine (Sys.getCwd (), "../");
 			
-		} catch (e:Dynamic) {
+		} else if (FileSystem.exists ("run.n")) {
+			
+			path = Sys.getCwd ();
 			
 		}
 		
 		if (path == "") {
 			
-			for (line in lines) {
+			var process = new Process ("haxelib", [ "path", "lime" ]);
+			var lines = new Array<String> ();
+			
+			try {
 				
-				if (line != "" && line.substr (0, 1) != "-") {
+				while (true) {
 					
-					try {
+					var length = lines.length;
+					var line = StringTools.trim (process.stdout.readLine ());
+					
+					if (length > 0 && (line == "-D lime" || StringTools.startsWith (line, "-D lime="))) {
 						
-						if (FileSystem.exists (line)) {
-							
-							path = line;
-							
-						}
+						path = StringTools.trim (lines[length - 1]);
 						
-					} catch (e:Dynamic) {}
+					}
+					
+					lines.push (line);
+					
+				}
+				
+			} catch (e:Dynamic) {
+				
+			}
+			
+			if (path == "") {
+				
+				for (line in lines) {
+					
+					if (line != "" && line.substr (0, 1) != "-") {
+						
+						try {
+							
+							if (FileSystem.exists (line)) {
+								
+								path = line;
+								
+							}
+							
+						} catch (e:Dynamic) {}
+						
+					}
 					
 				}
 				
 			}
 			
-		}
-		
-		if (path == "") {
-			
-			if (FileSystem.exists ("tools.n")) {
-				
-				path = PathHelper.combine (Sys.getCwd (), "../");
-				
-			} else if (FileSystem.exists ("run.n")) {
-				
-				path = Sys.getCwd ();
-				
-			}
+			process.close ();
 			
 		}
 		
-		process.close ();
 		path += "/ndll/";
 		
 		switch (PlatformHelper.hostPlatform) {
@@ -1406,6 +1430,59 @@ class CommandLineTools {
 			
 		}
 		
+		if (runFromHaxelib && !targetFlags.exists ("nolocalrepocheck")) {
+			
+			try {
+				
+				var forceGlobal = (overrides.haxeflags.indexOf ("--global") > -1);
+				var projectDirectory = Path.directory (projectFile);
+				var localRepository = PathHelper.combine (projectDirectory, ".haxelib");
+				
+				if (!forceGlobal && FileSystem.exists (localRepository) && FileSystem.isDirectory (localRepository)) {
+					
+					var overrideExists = HaxelibHelper.pathOverrides.exists ("lime");
+					var cacheOverride = HaxelibHelper.pathOverrides.get ("lime");
+					HaxelibHelper.pathOverrides.remove ("lime");
+					
+					var workingDirectory = Sys.getCwd ();
+					Sys.setCwd (projectDirectory);
+					
+					var limePath = HaxelibHelper.getPath (new Haxelib ("lime"), true, true);
+					var toolsPath = HaxelibHelper.getPath (new Haxelib ("lime-tools"));
+					
+					Sys.setCwd (workingDirectory);
+					
+					if (!StringTools.startsWith (toolsPath, limePath)) {
+						
+						LogHelper.info ("", LogHelper.accentColor + "Requesting alternate tools from .haxelib repository...\x1b[0m\n\n");
+						
+						var args = Sys.args ();
+						args.pop ();
+						
+						Sys.setCwd (limePath);
+						
+						args = [ PathHelper.combine (limePath, "run.n") ].concat (args);
+						args.push ("--haxelib-lime=" + limePath);
+						args.push ("-nolocalrepocheck");
+						args.push (workingDirectory);
+						
+						Sys.exit (Sys.command ("neko", args));
+						return null;
+						
+					}
+					
+					if (overrideExists) {
+						
+						HaxelibHelper.pathOverrides.set ("lime", cacheOverride);
+						
+					}
+					
+				}
+				
+			} catch (e:Dynamic) {}
+			
+		}
+		
 		var target = null;
 		
 		switch (targetName) {
@@ -1453,6 +1530,11 @@ class CommandLineTools {
 				
 				target = Platform.MAC;
 				overrides.haxedefs.set ("macos", "");
+			
+			case "webassembly", "wasm":
+				
+				target = Platform.EMSCRIPTEN;
+				targetFlags.set ("webassembly", "");
 			
 			default:
 				
@@ -1658,8 +1740,9 @@ class CommandLineTools {
 						
 					}
 					
-					LogHelper.info ("", LogHelper.accentColor + "Requesting tools version " + getToolsVersion (haxelib.version) + "...\x1b[0m");
+					LogHelper.info ("", LogHelper.accentColor + "Requesting tools version " + getToolsVersion (haxelib.version) + "...\x1b[0m\n\n");
 					
+					HaxelibHelper.pathOverrides.remove ("lime");
 					var path = HaxelibHelper.getPath (haxelib);
 					
 					var args = Sys.args ();
@@ -1677,16 +1760,19 @@ class CommandLineTools {
 					var args = [ PathHelper.combine (path, "run.n") ].concat (args);
 					args.push (workingDirectory);
 					
-					//trace (args);
-					
 					Sys.exit (Sys.command ("neko", args));
+					return null;
 					
 					//var args = [ "run", "lime:" + haxelib.version ].concat (args);
 					//Sys.exit (Sys.command ("haxelib", args));
 					
 				} else {
 					
-					LogHelper.warn ("", LogHelper.accentColor + "Could not switch to requested tools version\x1b[0m");
+					if (Std.string (version) != Std.string (HaxelibHelper.getVersion (haxelib))) {
+						
+						LogHelper.warn ("", LogHelper.accentColor + "Could not switch to requested tools version\x1b[0m");
+						
+					}
 					
 				}
 				
@@ -1802,7 +1888,6 @@ class CommandLineTools {
 	private function processArguments ():Void {
 		
 		var arguments = Sys.args ();
-		var runFromHaxelib = false;
 		
 		if (arguments.length > 0) {
 			
@@ -1839,6 +1924,8 @@ class CommandLineTools {
 				arguments.push (lastArgument);
 				
 			}
+			
+			HaxelibHelper.workingDirectory = Sys.getCwd ();
 			
 		}
 		
