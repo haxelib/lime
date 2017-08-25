@@ -115,6 +115,11 @@ class ProjectXMLParser extends HXProject {
 			defines.set ("targetType", "js");
 			defines.set ("html5", "1");
 			
+		} else if (target == Platform.AIR) {
+			
+			defines.set ("targetType", "swf");
+			defines.set ("flash", "1");
+			
 		} else if (platformType == DESKTOP && target != PlatformHelper.hostPlatform) {
 			
 			defines.set ("native", "1");
@@ -1166,6 +1171,8 @@ class ProjectXMLParser extends HXProject {
 						defines.set (name, value);
 						environment.set (name, value);
 						setenv (name, value);
+						
+						if (needRerun) return;
 					
 					case "error":
 						
@@ -1323,6 +1330,14 @@ class ProjectXMLParser extends HXProject {
 						javaPaths.push (PathHelper.combine (extensionPath, substitute (element.att.path)));
 					
 					case "haxelib":
+						
+						if (element.has.repository) {
+							
+							setenv ("HAXELIB_PATH", PathHelper.combine (Sys.getCwd (), element.att.repository));
+							if (needRerun) return;
+							continue;
+							
+						}
 						
 						var name = substitute (element.att.name);
 						var version = "";

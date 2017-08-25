@@ -20,6 +20,8 @@ import utils.CreateTemplate;
 import utils.JavaExternGenerator;
 import utils.PlatformSetup;
 
+@:access(lime.project.HXProject)
+
 
 class CommandLineTools {
 	
@@ -714,6 +716,10 @@ class CommandLineTools {
 				case TVOS:
 					
 					platform = new TVOSPlatform (command, project, targetFlags);
+				
+				case AIR:
+					
+					platform = new AIRPlatform (command, project, targetFlags);
 				
 				default:
 				
@@ -1483,6 +1489,34 @@ class CommandLineTools {
 			
 		}
 		
+		if (targetFlags.exists ("air")) {
+			
+			switch (targetName) {
+				
+				case "android":
+					
+					targetName = "air";
+					targetFlags.set ("android", "");
+				
+				case "ios":
+					
+					targetName = "air";
+					targetFlags.set ("ios", "");
+				
+				case "windows":
+					
+					targetName = "air";
+					targetFlags.set ("windows", "");
+				
+				case "mac", "macos":
+					
+					targetName = "air";
+					targetFlags.set ("mac", "");
+				
+			}
+			
+		}
+		
 		var target = null;
 		
 		switch (targetName) {
@@ -1692,6 +1726,30 @@ class CommandLineTools {
 				}
 				
 			}
+			
+		}
+		
+		if (project != null && project.needRerun && !project.targetFlags.exists ("norerun")) {
+			
+			HaxelibHelper.pathOverrides.remove ("lime");
+			var workingDirectory = Sys.getCwd ();
+			var limePath = HaxelibHelper.getPath (new Haxelib ("lime"), true, true);
+			Sys.setCwd (workingDirectory);
+			
+			LogHelper.info ("", LogHelper.accentColor + "Requesting alternate tools from custom haxelib path...\x1b[0m\n\n");
+			
+			var args = Sys.args ();
+			args.pop ();
+			
+			Sys.setCwd (limePath);
+			
+			args = [ PathHelper.combine (limePath, "run.n") ].concat (args);
+			args.push ("--haxelib-lime=" + limePath);
+			args.push ("-norerun");
+			args.push (workingDirectory);
+			
+			Sys.exit (Sys.command ("neko", args));
+			return null;
 			
 		}
 		
@@ -1905,10 +1963,15 @@ class CommandLineTools {
 			}
 			
 			lastArgument = new Path (lastArgument).toString ();
+			var isRootDirectory = false;
 			
-			if (((StringTools.endsWith (lastArgument, "/") && lastArgument != "/") || StringTools.endsWith (lastArgument, "\\")) && !StringTools.endsWith (lastArgument, ":\\")) {
+			if (PlatformHelper.hostPlatform == WINDOWS) {
 				
-				lastArgument = lastArgument.substr (0, lastArgument.length - 1);
+				isRootDirectory = (lastArgument.length == 3 && lastArgument.charAt (1) == ":" && (lastArgument.charAt (2) == "/" || lastArgument.charAt (2) == "\\"));
+				
+			} else {
+				
+				isRootDirectory = (lastArgument == "/");
 				
 			}
 			
@@ -1919,7 +1982,7 @@ class CommandLineTools {
 				Sys.setCwd (lastArgument);
 				runFromHaxelib = true;
 				
-			} else {
+			} else if (!isRootDirectory) {
 				
 				arguments.push (lastArgument);
 				
