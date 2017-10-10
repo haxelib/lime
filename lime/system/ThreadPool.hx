@@ -1,6 +1,7 @@
 package lime.system;
 
 
+import haxe.Constraints.Function;
 import lime.app.Application;
 import lime.app.Event;
 
@@ -22,12 +23,13 @@ class ThreadPool {
 	
 	
 	public var currentThreads (default, null):Int;
-	public var doWork = new Event<Dynamic->Void> ();
+	public var doWork = new Event<Function->Void> ();
 	public var maxThreads:Int;
 	public var minThreads:Int;
-	public var onComplete = new Event<Dynamic->Void> ();
-	public var onError = new Event<Dynamic->Void> ();
-	public var onProgress = new Event<Dynamic->Void> ();
+	public var onComplete = new Event<Function->Void> ();
+	public var onError = new Event<Function->Void> ();
+	public var onProgress = new Event<Function->Void> ();
+	public var onRun = new Event<Function->Void> ();
 	
 	#if (cpp || neko)
 	private var __synchronous:Bool;
@@ -96,13 +98,13 @@ class ThreadPool {
 		} else {
 			
 			__synchronous = true;
-			doWork.dispatch (state);
+			runWork (state);
 			
 		}
 		
 		#else
 		
-		doWork.dispatch (state);
+		runWork (state);
 		
 		#end
 		
@@ -157,6 +159,24 @@ class ThreadPool {
 	}
 	
 	
+	private function runWork (state:Dynamic = null):Void {
+		
+		#if (cpp || neko)
+		if (!__synchronous) {
+			
+			__workResult.add (new ThreadPoolMessage (WORK, state));
+			doWork.dispatch (state);
+			return;
+			
+		}
+		#end
+		
+		onRun.dispatch (state);
+		doWork.dispatch (state);
+		
+	}
+	
+	
 	#if (cpp || neko)
 	
 	private function __doWork ():Void {
@@ -167,7 +187,7 @@ class ThreadPool {
 			
 			if (message.type == WORK) {
 				
-				doWork.dispatch (message.state);
+				runWork (message.state);
 				
 			} else if (message.type == EXIT) {
 				
@@ -189,6 +209,10 @@ class ThreadPool {
 			while (message != null) {
 				
 				switch (message.type) {
+					
+					case WORK:
+						
+						onRun.dispatch (message.state);
 					
 					case PROGRESS:
 						

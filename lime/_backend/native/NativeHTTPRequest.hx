@@ -34,12 +34,14 @@ class NativeHTTPRequest {
 	private var parent:_IHTTPRequest;
 	private var promise:Promise<Bytes>;
 	private var readPosition:Int;
+	private var writePosition:Int;
 	private var timeout:Timer;
 	
 	
 	public function new () {
 		
 		curl = null;
+		timeout = null;
 		
 	}
 	
@@ -124,6 +126,8 @@ class NativeHTTPRequest {
 		bytesLoaded = 0;
 		bytesTotal = 0;
 		readPosition = 0;
+		writePosition = 0;
+
 		
 		if (curl == null) {
 			
@@ -308,32 +312,17 @@ class NativeHTTPRequest {
 			
 			CURL.globalInit (CURL.GLOBAL_ALL);
 			
-			threadPool = new ThreadPool (1, 1);
+			threadPool = new ThreadPool (1, 4);
 			threadPool.doWork.add (threadPool_doWork);
+			threadPool.onRun.add (threadPool_onRun);
+			threadPool.onProgress.add (threadPool_onProgress);
 			threadPool.onComplete.add (threadPool_onComplete);
 			threadPool.onError.add (threadPool_onError);
 			
 		}
 		
 		canceled = false;
-		
-		if (parent.timeout > 0) {
-			
-			timeout = Timer.delay (function () {
-				
-				if (this.promise != null && bytesLoaded == 0 && bytesTotal == 0 && !this.promise.isComplete && !this.promise.isError) {
-					
-					//cancel ();
-					
-					this.promise.error (CURL.strerror (CURLCode.OPERATION_TIMEDOUT));
-					
-				}
-				
-			}, parent.timeout);
-			
-		}
-		
-		threadPool.queue ({ instance: this, uri: uri, binary: binary });
+		threadPool.queue ({ instance: this, uri: uri, binary: binary, timeout: parent.timeout });
 		
 		return promise.future;
 		
@@ -366,6 +355,18 @@ class NativeHTTPRequest {
 		
 	}
 	
+
+	private function growBuffer (length:Int) {
+
+		if (length > bytes.length) {
+
+			var cacheBytes = bytes;
+			bytes = Bytes.alloc (length);
+			bytes.blit (0, cacheBytes, 0, cacheBytes.length);
+		
+		}
+
+	}
 	
 	
 	
@@ -378,7 +379,19 @@ class NativeHTTPRequest {
 		
 		parent.responseHeaders = [];
 		
-		// TODO
+		var parts = Std.string (output).split (': ');
+
+		if (parts.length == 2) {
+
+			switch (parts[0]) {
+
+				case 'Content-Length': 
+					
+					growBuffer (Std.parseInt (parts[1]));
+			
+			}
+		
+		}
 		
 		return size * nmemb;
 		
@@ -394,7 +407,7 @@ class NativeHTTPRequest {
 			if (uptotal > bytesTotal) bytesTotal = Std.int (uptotal);
 			if (dltotal > bytesTotal) bytesTotal = Std.int (dltotal);
 			
-			promise.progress (bytesLoaded, bytesTotal);
+			threadPool.sendProgress ({ instance: this, promise: promise, bytesLoaded: bytesLoaded, bytesTotal: bytesTotal });
 			
 		}
 		
@@ -434,11 +447,11 @@ class NativeHTTPRequest {
 	
 	private function curl_onWrite (output:Bytes, size:Int, nmemb:Int):Int {
 		
-		var cacheBytes = bytes;
-		bytes = Bytes.alloc (bytes.length + output.length);
-		bytes.blit (0, cacheBytes, 0, cacheBytes.length);
-		bytes.blit (cacheBytes.length, output, 0, output.length);
-		
+		growBuffer (writePosition + output.length);
+		bytes.blit (writePosition, output, 0, output.length);
+
+		writePosition += output.length;
+
 		return size * nmemb;
 		
 	}
@@ -466,6 +479,7 @@ class NativeHTTPRequest {
 	private static function threadPool_onComplete (state:Dynamic):Void {
 		
 		var promise:Promise<Bytes> = state.promise;
+		if (promise.isError) return;
 		promise.complete (state.result);
 		
 		var instance = state.instance;
@@ -499,6 +513,36 @@ class NativeHTTPRequest {
 		
 		instance.bytes = null;
 		instance.promise = null;
+		
+	}
+	
+	
+	private static function threadPool_onProgress (state:Dynamic):Void {
+		
+		var promise:Promise<Bytes> = state.promise;
+		if (promise.isComplete || promise.isError) return;
+		promise.progress (state.bytesLoaded, state.bytesTotal);
+		
+	}
+	
+	
+	private static function threadPool_onRun (state:Dynamic):Void {
+		
+		if (state.timeout > 0) {
+			
+			state.instance.timeout = Timer.delay (function () {
+				
+				if (state.promise != null && state.instance.bytesLoaded == 0 && state.instance.bytesTotal == 0 && !state.promise.isComplete && !state.promise.isError) {
+					
+					//cancel ();
+					
+					state.promise.error (CURL.strerror (CURLCode.OPERATION_TIMEDOUT));
+					
+				}
+				
+			}, state.timeout);
+			
+		}
 		
 	}
 	
