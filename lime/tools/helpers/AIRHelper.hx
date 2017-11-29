@@ -164,17 +164,7 @@ class AIRHelper {
 		
 		args = args.concat (files);
 
-		var extDirs:Array<String> = [];
-
-		for (dependency in project.dependencies) {
-
-			if (StringTools.endsWith (dependency.path, ".ane") && extDirs.indexOf(dependency.path) == -1) {
-
-				extDirs.push(FileSystem.fullPath(Path.directory(dependency.path)));
-
-			}
-
-		}
+		var extDirs:Array<String> = getExtDirs(project);
 
 		if (extDirs.length > 0) {
 
@@ -197,6 +187,27 @@ class AIRHelper {
 		
 		return targetPath + extension;
 		
+	}
+
+
+	public static function getExtDirs(project:HXProject):Array<String> {
+
+		var extDirs:Array<String> = [];
+
+		for (dependency in project.dependencies) {
+
+			var extDir:String = FileSystem.fullPath(Path.directory(dependency.path));
+
+			if (StringTools.endsWith (dependency.path, ".ane") && extDirs.indexOf(extDir) == -1) {
+
+				extDirs.push(extDir);
+
+			}
+
+		}
+
+		return extDirs;
+
 	}
 	
 	
@@ -223,23 +234,52 @@ class AIRHelper {
 				
 			}
 			
-			ProcessHelper.runCommand (workingDirectory, project.defines.get ("AIR_SDK") + "/bin/adt", [ "-uninstallApp" ].concat (args).concat ([ "-appid", project.meta.packageName ]));
+			ProcessHelper.runCommand (workingDirectory, project.defines.get ("AIR_SDK") + "/bin/adt", [ "-uninstallApp" ].concat (args).concat ([ "-appid", project.meta.packageName ]), true, true);
 			ProcessHelper.runCommand (workingDirectory, project.defines.get ("AIR_SDK") + "/bin/adt", [ "-installApp" ].concat (args).concat ([ "-package", FileSystem.fullPath (workingDirectory) + "/" + (rootDirectory != null ? rootDirectory + "/" : "") + project.app.file + ".ipa" ]));
 			
 			if (project.targetFlags.exists ("simulator")) {
-				
-				ProcessHelper.runCommand ("", "open", [ "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications/iPhone Simulator.app/" ]);
+
+				var simulatorAppPath:String = "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications/iPhone Simulator.app/";
+
+				if (!FileSystem.exists(simulatorAppPath)) {
+
+					simulatorAppPath = "/Applications/Xcode.app/Contents/Developer/Applications/Simulator.app/";
+
+				}
+
+				ProcessHelper.runCommand ("", "open", [ simulatorAppPath ]);
 				
 			}
 			
 		} else {
+
+			var extDirs:Array<String> = getExtDirs(project);
+
+			var profile:String = extDirs.length > 0 ? "extendedDesktop" : "desktop";
 			
-			var args = [ "-profile", "desktop" ];
+			var args = [ "-profile", profile ];
 			
 			if (!project.debug) {
 				
 				args.push ("-nodebug");
 				
+			}
+
+			if (extDirs.length > 0) {
+
+				args.push("-extdir");
+
+				for (extDir in extDirs) {
+
+					if (!FileSystem.exists(extDir + "/adl")) {
+
+						LogHelper.error("Create " + extDir + "/adl directory, and extract your ANE files to .ane directories.");
+
+					}
+
+					args.push(extDir + "/adl");
+
+				}
 			}
 			
 			args.push (applicationXML);

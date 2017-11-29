@@ -153,11 +153,11 @@ class AIRPlatform extends FlashPlatform {
 				
 				case IOS:
 					
-					name += " (iOS)";
+					name += " (iOS).ipa";
 				
 				case ANDROID:
 					
-					name += " (Android)";
+					name += " (Android).apk";
 				
 				default:
 				
@@ -292,9 +292,9 @@ class AIRPlatform extends FlashPlatform {
 
 		}
 		
-		FileHelper.recursiveCopyTemplate (project.templatePaths, "haxe", targetDirectory + "/haxe", context);
-		FileHelper.recursiveCopyTemplate (project.templatePaths, "air/hxml", targetDirectory + "/haxe", context);
-		FileHelper.recursiveCopyTemplate (project.templatePaths, "air/template", targetDirectory, context);
+		FileHelper.recursiveSmartCopyTemplate (project, "haxe", targetDirectory + "/haxe", context);
+		FileHelper.recursiveSmartCopyTemplate (project, "air/hxml", targetDirectory + "/haxe", context);
+		FileHelper.recursiveSmartCopyTemplate (project, "air/template", targetDirectory, context);
 		
 		if (embedded) {
 			
