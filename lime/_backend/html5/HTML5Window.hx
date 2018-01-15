@@ -55,6 +55,7 @@ class HTML5Window {
 	private var isFullscreen:Bool;
 	private var parent:Window;
 	private var primaryTouch:Touch;
+	private var renderType:String;
 	private var requestedFullscreen:Bool;
 	private var resizeElement:Bool;
 	private var scale = 1.0;
@@ -73,13 +74,21 @@ class HTML5Window {
 			
 		}
 		
-		#if !dom
-		if (parent.config != null && Reflect.hasField (parent.config, "allowHighDPI") && parent.config.allowHighDPI) {
+		if (parent.config != null && Reflect.hasField (parent.config, "renderer")) {
+			
+			renderType = parent.config.renderer;
+			
+		}
+		
+		#if dom
+		renderType = "dom";
+		#end
+		
+		if (parent.config != null && Reflect.hasField (parent.config, "allowHighDPI") && parent.config.allowHighDPI && renderType != "dom") {
 			
 			scale = Browser.window.devicePixelRatio;
 			
 		}
-		#end
 		
 		parent.__scale = scale;
 		
@@ -120,11 +129,15 @@ class HTML5Window {
 			
 		} else {
 			
-			#if dom
-			div = cast Browser.document.createElement ("div");
-			#else
-			canvas = cast Browser.document.createElement ("canvas");
-			#end
+			if (renderType == "dom") {
+				
+				div = cast Browser.document.createElement ("div");
+				
+			} else {
+				
+				canvas = cast Browser.document.createElement ("canvas");
+				
+			}
 			
 		}
 		

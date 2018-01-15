@@ -72,7 +72,13 @@ class StringHelper {
 		for (filter in exclude) {
 			
 			if (filter != "") {
-				
+
+				if(filter == "*") return false;
+				if(filter.indexOf("*") == filter.length - 1) {
+					if(StringTools.startsWith(text, filter.substr(0, -1))) return false;
+					continue;
+				}
+
 				filter = StringTools.replace (filter, ".", "\\.");
 				filter = StringTools.replace (filter, "*", ".*");
 				
@@ -91,7 +97,13 @@ class StringHelper {
 		for (filter in include) {
 			
 			if (filter != "") {
-				
+
+				if(filter == "*") return true;
+				if(filter.indexOf("*") == filter.length - 1) {
+					if(StringTools.startsWith(text, filter.substr(0, -1))) return true;
+					continue;
+				}
+
 				filter = StringTools.replace (filter, ".", "\\.");
 				filter = StringTools.replace (filter, "*", ".*");
 				

@@ -16,6 +16,7 @@ import lime.tools.helpers.PathHelper;
 import lime.tools.helpers.PlatformHelper;
 import lime.tools.helpers.ProcessHelper;
 import lime.tools.helpers.StringHelper;
+import lime.tools.helpers.WatchHelper;
 import lime.graphics.Image;
 import lime.project.Architecture;
 import lime.project.Asset;
@@ -87,16 +88,7 @@ class IOSPlatform extends PlatformTarget {
 	
 	public override function display ():Void {
 		
-		var hxml = PathHelper.findTemplate (project.templatePaths, "iphone/PROJ/haxe/Build.hxml", false);
-		if (hxml == null) hxml = PathHelper.findTemplate (project.templatePaths, "iphone/template/{{app.file}}/Build.hxml", true);
-		var template = new Template (File.getContent (hxml));
-		
-		project = project.clone ();
-		var context = generateContext ();
-		context.OUTPUT_DIR = targetDirectory;
-		
-		Sys.println (template.execute (context));
-		Sys.println ("-D display");
+		Sys.println (getDisplayHXML ());
 		
 	}
 	
@@ -394,6 +386,21 @@ class IOSPlatform extends PlatformTarget {
 	}
 	
 	
+	private function getDisplayHXML ():String {
+		
+		var hxml = PathHelper.findTemplate (project.templatePaths, "iphone/PROJ/haxe/Build.hxml", false);
+		if (hxml == null) hxml = PathHelper.findTemplate (project.templatePaths, "iphone/template/{{app.file}}/Build.hxml", true);
+		var template = new Template (File.getContent (hxml));
+		
+		project = project.clone ();
+		var context = generateContext ();
+		context.OUTPUT_DIR = targetDirectory;
+		
+		return template.execute (context) + "\n-D display";
+		
+	}
+	
+	
 	public override function rebuild ():Void {
 		
 		var armv6 = (project.architectures.indexOf (Architecture.ARMV6) > -1 && !project.targetFlags.exists ("simulator"));
@@ -536,8 +543,8 @@ class IOSPlatform extends PlatformTarget {
 			{ name: "Default-736h-Landscape@3x.png", w: 2208, h: 1242 }, // iPhone 6 Plus, landscape
 			{ name: "Default-Portrait.png", w: 768, h: 1024 }, // iPad, portrait
 			{ name: "Default-Portrait@2x.png", w: 1536, h: 2048 }, // iPad Retina, portrait
-			{ name: "Default-1100-Portrait-2436h@3x.png", w: 1100, h: 2436 }, // iPhone X, portrait
-			{ name: "Default-1100-Landscape-2436h@3x.png", w: 2435, h: 1100 } // iPhone X, landscape
+			{ name: "Default-1100-Portrait-2436h@3x.png", w: 1125, h: 2436 }, // iPhone X, portrait
+			{ name: "Default-1100-Landscape-2436h@3x.png", w: 2436, h: 1125 } // iPhone X, landscape
 		];
 		
 		var splashScreenPath = PathHelper.combine (projectDirectory, "Images.xcassets/LaunchImage.launchimage");
@@ -731,6 +738,15 @@ class IOSPlatform extends PlatformTarget {
 		context.HAS_LAUNCH_IMAGE = has_launch_image;
 		
 	}*/
+	
+	
+	public override function watch ():Void {
+		
+		var dirs = WatchHelper.processHXML (project, getDisplayHXML ());
+		var command = WatchHelper.getCurrentCommand ();
+		WatchHelper.watch (project, command, dirs);
+		
+	}
 	
 	
 	@ignore public override function install ():Void {}

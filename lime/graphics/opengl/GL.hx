@@ -661,6 +661,18 @@ class GL {
 	private static var __currentProgram:GLProgram;
 	
 	
+	#if commonjs
+	private static function __init__ () {
+		
+		untyped Object.defineProperties (GL, {
+			"type": { get: function () { return GL.get_type (); } },
+			"version": { get: function () { return GL.get_version (); } }
+		});
+		
+	}
+	#end
+	
+	
 	public static inline function activeTexture (texture:Int):Void {
 		
 		context.activeTexture (texture);

@@ -119,10 +119,14 @@ class ModuleHelper {
 				
 				if (excludeTypes.length > 0) {
 					
+					// order by short filters first, so they match earlier
+					haxe.ds.ArraySort.sort(excludeTypes, shortFirst);
 					hxml += "\n--macro lime.tools.helpers.ModuleHelper.exclude(['" + excludeTypes.join ("','") + "'])";
 					
 				}
 				
+				// order by short filters first, so they match earlier
+				haxe.ds.ArraySort.sort(includeTypes, shortFirst);
 				hxml += "\n--macro lime.tools.helpers.ModuleHelper.expose(['" + includeTypes.join ("','") + "'])";
 				//hxml += "\n--macro lime.tools.helpers.ModuleHelper.generate()";
 				
@@ -151,7 +155,7 @@ class ModuleHelper {
 	private static function parseModuleSource (source:String, moduleData:ModuleData, include:Array<String>, exclude:Array<String>, currentPath:String):Void {
 		
 		var files = FileSystem.readDirectory (currentPath);
-		var filePath:String, className:String;
+		var filePath:String, className:String, packageName:String;
 		
 		for (file in files) {
 			
@@ -159,8 +163,19 @@ class ModuleHelper {
 			
 			if (FileSystem.isDirectory (filePath)) {
 				
-				parseModuleSource (source, moduleData, include, exclude, filePath);
+				packageName = StringTools.replace (filePath, source, "");
+				packageName = StringTools.replace (packageName, "\\", "/");
 				
+				while (StringTools.startsWith (packageName, "/")) packageName = packageName.substr (1);
+				
+				packageName = StringTools.replace (packageName, "/", ".");
+				
+				if (StringHelper.filter (packageName, include, exclude)) {
+					
+					parseModuleSource (source, moduleData, include, exclude, filePath);
+					
+				}
+
 			} else {
 				
 				if (Path.extension (file) != "hx") continue;
@@ -227,6 +242,8 @@ class ModuleHelper {
 		
 		if (excludeTypes.length > 0) {
 			
+			// order by short filters first, so they match earlier
+			haxe.ds.ArraySort.sort(excludeTypes, shortFirst);
 			project.haxeflags.push ("--macro lime.tools.helpers.ModuleHelper.exclude(['" + excludeTypes.join ("','") + "'])");
 			
 		}
@@ -237,6 +254,13 @@ class ModuleHelper {
 			//
 		//}
 		
+	}
+
+
+	public static function shortFirst(a, b):Int {
+		if (a.length < b.length) return -1;
+		else if (a.length > b.length) return 1;
+		return 0;
 	}
 	
 	

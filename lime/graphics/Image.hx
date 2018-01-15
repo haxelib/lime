@@ -110,6 +110,24 @@ class Image {
 	public var y:Float;
 	
 	
+	#if commonjs
+	private static function __init__ () {
+		
+		var p = untyped Image.prototype;
+		untyped Object.defineProperties (p, {
+			"data": { get: p.get_data, set: p.set_data },
+			"format": { get: p.get_format, set: p.set_format },
+			"powerOfTwo": { get: p.get_powerOfTwo, set: p.set_powerOfTwo },
+			"premultiplied": { get: p.get_premultiplied, set: p.set_premultiplied },
+			"rect": { get: p.get_rect },
+			"src": { get: p.get_src, set: p.set_src },
+			"transparent": { get: p.get_transparent, set: p.set_transparent }
+		});
+		
+	}
+	#end
+	
+	
 	public function new (buffer:ImageBuffer = null, offsetX:Int = 0, offsetY:Int = 0, width:Int = -1, height:Int = -1, color:Null<Int> = null, type:ImageType = null) {
 		
 		this.offsetX = offsetX;
@@ -347,9 +365,7 @@ class Image {
 			
 			case CANVAS:
 				
-				// The data path appears to be much faster, even with no alpha image
-				
-				//if (alphaImage != null || sourceImage.type != CANVAS) {
+				if (alphaImage != null || sourceImage.type != CANVAS) {
 					
 					ImageCanvasUtil.convertToData (this);
 					ImageCanvasUtil.convertToData (sourceImage);
@@ -357,13 +373,13 @@ class Image {
 					
 					ImageDataUtil.copyPixels (this, sourceImage, sourceRect, destPoint, alphaImage, alphaPoint, mergeAlpha);
 					
-				//} else {
-					//
-					//ImageCanvasUtil.convertToCanvas (this);
-					//ImageCanvasUtil.convertToCanvas (sourceImage);
-					//ImageCanvasUtil.copyPixels (this, sourceImage, sourceRect, destPoint, alphaImage, alphaPoint, mergeAlpha);
-					//
-				//}
+				} else {
+
+					ImageCanvasUtil.convertToCanvas (this);
+					ImageCanvasUtil.convertToCanvas (sourceImage);
+					ImageCanvasUtil.copyPixels (this, sourceImage, sourceRect, destPoint, alphaImage, alphaPoint, mergeAlpha);
+					
+				}
 			
 			case DATA:
 				
