@@ -344,7 +344,7 @@ class IOSPlatform extends PlatformTarget {
 		}
 		
 		context.HXML_PATH = PathHelper.findTemplate (project.templatePaths, "iphone/PROJ/haxe/Build.hxml", false);
-		if (context.HXML_PATH == null) context.HXML_PATH = PathHelper.findTemplate (project.templatePaths, "iphone/template/{{app.file}}/haxe/Build.hxml");
+		if (context.HXML_PATH == null) context.HXML_PATH = PathHelper.findTemplate (project.templatePaths, "ios/template/{{app.file}}/haxe/Build.hxml");
 		context.PRERENDERED_ICON = project.config.getBool ("ios.prerenderedIcon", false);
 		
 		var allowInsecureHTTP = project.config.getString ("ios.allow-insecure-http", "*");
@@ -538,13 +538,11 @@ class IOSPlatform extends PlatformTarget {
 			{ name: "Default-736h@3x.png", w: 1242,	h: 2208 }, // iPhone 6 Plus, portrait
 			{ name: "Default-Landscape.png", w: 1024, h: 768 }, // iPad, landscape
 			{ name: "Default-Landscape@2x.png", w: 2048, h: 1536 },	// iPad Retina, landscape
-			{ name: "Default-Landscape-568h@2x.png", w: 1136, h: 640 }, // iPhone 5, landscape
-			{ name: "Default-Landscape-667h@2x.png", w: 1334, h: 750 }, // iPhone 6, landscape
 			{ name: "Default-736h-Landscape@3x.png", w: 2208, h: 1242 }, // iPhone 6 Plus, landscape
 			{ name: "Default-Portrait.png", w: 768, h: 1024 }, // iPad, portrait
 			{ name: "Default-Portrait@2x.png", w: 1536, h: 2048 }, // iPad Retina, portrait
-			{ name: "Default-1100-Portrait-2436h@3x.png", w: 1125, h: 2436 }, // iPhone X, portrait
-			{ name: "Default-1100-Landscape-2436h@3x.png", w: 2436, h: 1125 } // iPhone X, landscape
+			{ name: "Default-812h@3x.png", w: 1125, h: 2436 }, // iPhone X, portrait
+			{ name: "Default-Landscape-812h@3x.png", w: 2436, h: 1125 } // iPhone X, landscape
 		];
 		
 		var splashScreenPath = PathHelper.combine (projectDirectory, "Images.xcassets/LaunchImage.launchimage");

@@ -25,6 +25,10 @@ import js.html.Element;
 import js.Browser;
 #end
 
+#if sys
+import sys.io.Process;
+#end
+
 #if !lime_debug
 @:fileXml('tags="haxe,release"')
 @:noDebug
@@ -50,19 +54,36 @@ class System {
 	
 	
 	public static var allowScreenTimeout (get, set):Bool;
-	public static var applicationDirectory (get, null):String;
-	public static var applicationStorageDirectory (get, null):String;
-	public static var desktopDirectory (get, null):String;
+	public static var applicationDirectory (get, never):String;
+	public static var applicationStorageDirectory (get, never):String;
+	public static var desktopDirectory (get, never):String;
+	public static var deviceModel (get, never):String;
+	public static var deviceVendor (get, never):String;
 	public static var disableCFFI:Bool;
-	public static var documentsDirectory (get, null):String;
-	public static var endianness (get, null):Endian;
-	public static var fontsDirectory (get, null):String;
-	public static var numDisplays (get, null):Int;
-	public static var userDirectory (get, null):String;
+	public static var documentsDirectory (get, never):String;
+	public static var endianness (get, never):Endian;
+	public static var fontsDirectory (get, never):String;
+	public static var numDisplays (get, never):Int;
+	public static var platformLabel (get, never):String;
+	public static var platformName (get, never):String;
+	public static var platformVersion (get, never):String;
+	public static var userDirectory (get, never):String;
 	
 	@:noCompletion private static var __applicationConfig:Map<String, Config>;
+	@:noCompletion private static var __applicationDirectory:String;
 	@:noCompletion private static var __applicationEntryPoint:Map<String, Function>;
+	@:noCompletion private static var __applicationStorageDirectory:String;
+	@:noCompletion private static var __desktopDirectory:String;
+	@:noCompletion private static var __deviceModel:String;
+	@:noCompletion private static var __deviceVendor:String;
 	@:noCompletion private static var __directories = new Map<SystemDirectory, String> ();
+	@:noCompletion private static var __documentsDirectory:String;
+	@:noCompletion private static var __endianness:Endian;
+	@:noCompletion private static var __fontsDirectory:String;
+	@:noCompletion private static var __platformLabel:String;
+	@:noCompletion private static var __platformName:String;
+	@:noCompletion private static var __platformVersion:String;
+	@:noCompletion private static var __userDirectory:String;
 	
 	
 	#if (js && html5)
@@ -494,7 +515,7 @@ class System {
 	}
 	
 	
-	private static function __registerEntryPoint (projectName:String, entryPoint:Function, config:Config):Void {
+	@:noCompletion private static function __registerEntryPoint (projectName:String, entryPoint:Function, config:Config):Void {
 		
 		if (__applicationConfig == null) {
 			
@@ -510,6 +531,25 @@ class System {
 		
 		__applicationEntryPoint[projectName] = entryPoint;
 		__applicationConfig[projectName] = config;
+		
+	}
+	
+	
+	@:noCompletion private static function __runProcess (command:String, args:Array<String> = null):String {
+		
+		#if sys
+		try {
+			
+			if (args == null) args = [];
+			
+			var process = new Process (command, args);
+			var value = StringTools.trim (process.stdout.readLine ().toString ());
+			process.close ();
+			return value;
+			
+		} catch (e:Dynamic) {}
+		#end
+		return null;
 		
 	}
 	
@@ -545,35 +585,143 @@ class System {
 	
 	private static function get_applicationDirectory ():String {
 		
-		return __getDirectory (APPLICATION);
+		if (__applicationDirectory == null) {
+			
+			__applicationDirectory = __getDirectory (APPLICATION);
+			
+		}
+		
+		return __applicationDirectory;
 		
 	}
 	
 	
 	private static function get_applicationStorageDirectory ():String {
 		
-		return __getDirectory (APPLICATION_STORAGE);
+		if (__applicationStorageDirectory == null) {
+			
+			__applicationStorageDirectory = __getDirectory (APPLICATION_STORAGE);
+			
+		}
+		
+		return __applicationStorageDirectory;
+		
+	}
+	
+	
+	private static function get_deviceModel ():String {
+		
+		if (__deviceModel == null) {
+			
+			#if (windows || ios || tvos)
+			__deviceModel = NativeCFFI.lime_system_get_device_model ();
+			#elseif android
+			var manufacturer:String = JNI.createStaticField ("android/os/Build", "MANUFACTURER", "Ljava/lang/String;").get ();
+			var model:String = JNI.createStaticField ("android/os/Build", "MODEL", "Ljava/lang/String;").get ();
+			if (manufacturer != null && model != null) {
+				if (StringTools.startsWith (model.toLowerCase (), manufacturer.toLowerCase ())) {
+					model = StringTools.trim (model.substr (manufacturer.length));
+					while (StringTools.startsWith (model, "-")) {
+						model = StringTools.trim (model.substr (1));
+					}
+				}
+				__deviceModel = model;
+			}
+			#elseif mac
+			__deviceModel = __runProcess ("sysctl", [ "-n", "hw.model" ]);
+			#elseif linux
+			__deviceModel = __runProcess ("cat", [ "/sys/devices/virtual/dmi/id/sys_vendor" ]);
+			#end
+			
+		}
+		
+		return __deviceModel;
+		
+	}
+	
+	
+	private static function get_deviceVendor ():String {
+		
+		if (__deviceVendor == null) {
+			
+			#if (windows && !html5)
+			__deviceVendor = NativeCFFI.lime_system_get_device_vendor ();
+			#elseif android
+			var vendor:String = JNI.createStaticField ("android/os/Build", "MANUFACTURER", "Ljava/lang/String;").get ();
+			if (vendor != null) {
+				__deviceVendor = vendor.charAt (0).toUpperCase () + vendor.substr (1);
+			}
+			#elseif (ios || mac || tvos)
+			__deviceVendor = "Apple";
+			#elseif linux
+			__deviceVendor = __runProcess ("cat", [ "/sys/devices/virtual/dmi/id/product_name" ]);
+			#end
+			
+		}
+		
+		return __deviceVendor;
 		
 	}
 	
 	
 	private static function get_desktopDirectory ():String {
 		
-		return __getDirectory (DESKTOP);
+		if (__desktopDirectory == null) {
+			
+			__desktopDirectory = __getDirectory (DESKTOP);
+			
+		}
+		
+		return __desktopDirectory;
 		
 	}
 	
 	
 	private static function get_documentsDirectory ():String {
 		
-		return __getDirectory (DOCUMENTS);
+		if (__documentsDirectory == null) {
+			
+			__documentsDirectory = __getDirectory (DOCUMENTS);
+			
+		}
+		
+		return __documentsDirectory;
+		
+	}
+	
+	
+	private static function get_endianness ():Endian {
+		
+		if (__endianness == null) {
+			
+			#if (ps3 || wiiu || flash)
+			__endianness = BIG_ENDIAN;
+			#else
+			var arrayBuffer = new ArrayBuffer (2);
+			var uint8Array = new UInt8Array (arrayBuffer);
+			var uint16array = new UInt16Array (arrayBuffer);
+			uint8Array[0] = 0xAA;
+			uint8Array[1] = 0xBB;
+			if (uint16array[0] == 0xAABB) __endianness = BIG_ENDIAN;
+			else __endianness = LITTLE_ENDIAN;
+			#end
+			
+		}
+		
+		return __endianness;
 		
 	}
 	
 	
 	private static function get_fontsDirectory ():String {
 		
-		return __getDirectory (FONTS);
+		if (__fontsDirectory == null) {
+			
+			__fontsDirectory = __getDirectory (FONTS);
+			
+		}
+		
+		return __fontsDirectory;
 		
 	}
 	
@@ -589,32 +737,106 @@ class System {
 	}
 	
 	
-	private static function get_userDirectory ():String {
+	private static function get_platformLabel ():String {
 		
-		return __getDirectory (USER);
-		
-	}
-	
-	
-	private static function get_endianness ():Endian {
-		
-		if (endianness == null) {
+		if (__platformLabel == null) {
 			
-			#if (ps3 || wiiu || flash)
-			return BIG_ENDIAN;
+			#if (windows && !html5)
+			var label:String = NativeCFFI.lime_system_get_platform_label ();
+			if (label != null) __platformLabel = StringTools.trim (label);
+			#elseif linux
+			__platformLabel = __runProcess ("lsb_release", [ "-ds" ]);
 			#else
-			var arrayBuffer = new ArrayBuffer (2);
-			var uint8Array = new UInt8Array (arrayBuffer);
-			var uint16array = new UInt16Array (arrayBuffer);
-			uint8Array[0] = 0xAA;
-			uint8Array[1] = 0xBB;
-			if (uint16array[0] == 0xAABB) endianness = BIG_ENDIAN;
-			else endianness = LITTLE_ENDIAN;
+			var name = System.platformName;
+			var version = System.platformVersion;
+			if (name != null && version != null) __platformLabel = name + " " + version;
+			else if (name != null) __platformLabel = name;
 			#end
 			
 		}
 		
-		return endianness;
+		return __platformLabel;
+		
+	}
+	
+	
+	private static function get_platformName ():String {
+		
+		if (__platformName == null) {
+			
+			#if windows
+			__platformName = "Windows";
+			#elseif mac
+			__platformName = "macOS";
+			#elseif linux
+			__platformName = __runProcess ("lsb_release", [ "-is" ]);
+			#elseif ios
+			__platformName = "iOS";
+			#elseif android
+			__platformName = "Android";
+			#elseif air
+			__platformName = "AIR";
+			#elseif flash
+			__platformName = "Flash Player";
+			#elseif tvos
+			__platformName = "tvOS";
+			#elseif tizen
+			__platformName = "Tizen";
+			#elseif blackberry
+			__platformName = "BlackBerry";
+			#elseif firefox
+			__platformName = "Firefox";
+			#elseif webos
+			__platformName = "webOS";
+			#elseif nodejs
+			__platformName = "Node.js";
+			#elseif js
+			__platformName = "HTML5";
+			#end
+			
+		}
+		
+		return __platformName;
+		
+	}
+	
+	
+	private static function get_platformVersion ():String {
+		
+		if (__platformVersion == null) {
+			
+			#if (windows && !html5)
+			__platformVersion = NativeCFFI.lime_system_get_platform_version ();
+			#elseif android
+			var release = JNI.createStaticField ("android/os/Build$VERSION", "RELEASE", "Ljava/lang/String;").get ();
+			var api = JNI.createStaticField ("android/os/Build$VERSION", "SDK_INT", "I").get ();
+			if (release != null && api != null) __platformVersion = release + " (API " + api + ")";
+			#elseif (ios || tvos)
+			__platformVersion = NativeCFFI.lime_system_get_platform_version ();
+			#elseif mac
+			__platformVersion = __runProcess ("sw_vers", [ "-productVersion" ]);
+			#elseif linux
+			__platformVersion = __runProcess ("lsb_release", [ "-rs" ]);
+			#elseif flash
+			__platformVersion = Capabilities.version;
+			#end
+			
+		}
+		
+		return __platformVersion;
+		
+	}
+	
+	
+	private static function get_userDirectory ():String {
+		
+		if (__userDirectory == null) {
+			
+			__userDirectory = __getDirectory (USER);
+			
+		}
+		
+		return __userDirectory;
 		
 	}
 	
