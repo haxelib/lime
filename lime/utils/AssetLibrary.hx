@@ -21,6 +21,8 @@ import flash.media.Sound;
 @:noDebug
 #end
 
+@:access(lime.text.Font)
+
 
 class AssetLibrary {
 	
@@ -560,7 +562,7 @@ class AssetLibrary {
 			var font:Font = Type.createInstance (classTypes.get (id), []);
 			
 			#if (js && html5)
-			return Font.loadFromName (font.name);
+			return font.__loadFromName (font.name);
 			#else
 			return Future.withValue (font);
 			#end
