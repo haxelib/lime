@@ -264,7 +264,6 @@ class CommandLineTools {
 				}
 				
 				for (targetName in targets) {
-					
 					var target = null;
 					
 					switch (targetName) {
@@ -298,6 +297,11 @@ class CommandLineTools {
 							target = Platform.IOS;
 							targetFlags.set ("simulator", "");
 						
+						case "electron":
+							
+							target = Platform.HTML5;
+							targetFlags.set ("electron", "");
+						
 						case "firefox", "firefoxos":
 							
 							target = Platform.FIREFOX;
@@ -315,6 +319,11 @@ class CommandLineTools {
 						case "mac", "macos":
 							
 							target = Platform.MAC;
+						
+						case "rpi", "raspberrypi":
+							
+							target = Platform.LINUX;
+							targetFlags.set ("rpi", "");
 						
 						case "webassembly", "wasm":
 							
@@ -1040,6 +1049,8 @@ class CommandLineTools {
 			// LogHelper.println ("  \x1b[1miphonesim\x1b[0m -- Alias for \x1b[1mios -simulator\x1b[0m");
 			// LogHelper.println ("  \x1b[1mappletv\x1b[0;3m/\x1b[0m\x1b[1mappletvos\x1b[0m -- Alias for \x1b[1mtvos\x1b[0m");
 			// LogHelper.println ("  \x1b[1mappletvsim\x1b[0m -- Alias for \x1b[1mtvos -simulator\x1b[0m");
+			LogHelper.println ("  \x1b[1mrpi\x1b[0;3m/\x1b[0m\x1b[1mraspberrypi\x1b[0m -- Alias for \x1b[1mlinux -rpi\x1b[0m");
+			LogHelper.println ("  \x1b[1melectron\x1b[0m -- Alias for \x1b[1mhtml5 -electron\x1b[0m");
 			LogHelper.println ("  \x1b[1mwebassembly\x1b[0;3m/\x1b[0m\x1b[1mwasm\x1b[0m -- Alias for \x1b[1memscripten -webassembly\x1b[0m");
 			
 		}
@@ -1154,6 +1165,7 @@ class CommandLineTools {
 			LogHelper.println ("  \x1b[3m(windows|mac|linux)\x1b[0m \x1b[1m-cs\x1b[0m -- Build for C# instead of C++");
 			LogHelper.println ("  \x1b[3m(windows)\x1b[0m \x1b[1m-winjs\x1b[0m -- Build for WinJS instead of C++ (implies UWP)");
 			LogHelper.println ("  \x1b[3m(windows)\x1b[0m \x1b[1m-uwp\x1b[0m -- Build for Universal Windows Platform");
+			LogHelper.println ("  \x1b[3m(html5)\x1b[0m \x1b[1m-electron\x1b[0m -- Target Electron instead of the browser");
 			
 			
 			if (command != "run" && command != "trace") {
@@ -1688,6 +1700,11 @@ class CommandLineTools {
 				target = Platform.IOS;
 				targetFlags.set ("simulator", "");
 			
+			case "electron":
+				
+				target = Platform.HTML5;
+				targetFlags.set ("electron", "");
+			
 			case "firefox", "firefoxos":
 				
 				target = Platform.FIREFOX;
@@ -1697,6 +1714,11 @@ class CommandLineTools {
 				
 				target = Platform.MAC;
 				overrides.haxedefs.set ("macos", "");
+			
+			case "rpi", "raspberrypi":
+				
+				target = Platform.LINUX;
+				targetFlags.set ("rpi", "");
 			
 			case "webassembly", "wasm":
 				

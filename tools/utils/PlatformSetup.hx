@@ -238,7 +238,7 @@ class PlatformSetup {
 			
 		}
 		
-		var inputValue = unescapePath (CLIHelper.param (LogHelper.accentColor + description + "\x1b[0m \x1b[37;3m[" + value + "]\x1b[0m"));
+		var inputValue = unescapePath (CLIHelper.param (LogHelper.accentColor + description + "\x1b[0m \x1b[37;3m[" + (value != null ? value : "") + "]\x1b[0m"));
 		
 		if (inputValue != "" && inputValue != value) {
 			
@@ -515,6 +515,10 @@ class PlatformSetup {
 					
 					// setupWebOS ();
 				
+				case "electron":
+					
+					setupElectron ();
+				
 				case "windows":
 					
 					if (PlatformHelper.hostPlatform == Platform.WINDOWS) {
@@ -751,6 +755,23 @@ class PlatformSetup {
 			ConfigHelper.writeConfigValue ("ANDROID_SETUP", "true");
 			
 		}
+		
+		LogHelper.println ("");
+		LogHelper.println ("Setup complete.");
+		
+	}
+	
+	
+	public static function setupElectron ():Void {
+		
+		LogHelper.println ("\x1b[1mIn order to run Electron applications, you must download");
+		LogHelper.println ("and extract the Electron runtime on your system.");
+		LogHelper.println ("");
+		
+		getDefineValue ("ELECTRON_PATH", "Path to Electron runtime");
+		
+		LogHelper.println ("");
+		HaxelibHelper.runCommand ("", [ "install", "electron" ], true, true);
 		
 		LogHelper.println ("");
 		LogHelper.println ("Setup complete.");

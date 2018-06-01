@@ -1728,11 +1728,19 @@ class Image {
 				
 			}
 			
+			if (newWidth == buffer.width && newHeight == buffer.height)
+			{
+				return value;
+			}
+			
 			switch (type) {
 				
 				case CANVAS:
 					
-					// TODO
+					#if (js && html5)
+					ImageCanvasUtil.convertToData (this);
+					#end
+					ImageDataUtil.resizeBuffer (this, newWidth, newHeight);
 				
 				case DATA:
 					
