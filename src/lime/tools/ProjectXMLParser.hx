@@ -610,7 +610,7 @@ class ProjectXMLParser extends HXProject {
 
 			} else if (Path.extension (path) == "bundle") {
 
-				parseAssetsElementLibrary (path, targetPath, null, null, type, embed, library, glyphs, true);
+				parseAssetsElementLibrary (path, targetPath, "*", "", type, embed, library, glyphs, true);
 
 			} else {
 
@@ -1174,6 +1174,12 @@ class ProjectXMLParser extends HXProject {
 						defines.set (name, value);
 						haxedefs.set (name, value);
 						environment.set (name, value);
+
+					case "undefine":
+
+						defines.remove (element.att.name);
+						haxedefs.remove (element.att.name);
+						environment.remove (element.att.name);
 
 					case "setenv":
 
@@ -2212,7 +2218,7 @@ class ProjectXMLParser extends HXProject {
 
 					}
 
-				case "parameters":
+				case "parameters", "title":
 
 					if (Reflect.hasField (windows[id], name)) {
 
