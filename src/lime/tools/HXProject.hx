@@ -14,6 +14,12 @@ import sys.FileSystem;
 import sys.io.File;
 import sys.io.Process;
 
+#if (haxe_ver >= 4)
+import haxe.xml.Access in Fast;
+#else
+import haxe.xml.Fast;
+#end
+
 #if (lime && lime_cffi && !macro)
 import lime.text.Font;
 @:access(lime.text.Font)
@@ -35,7 +41,7 @@ class HXProject extends Script {
 	public var haxedefs:Map<String, Dynamic>;
 	public var haxeflags:Array<String>;
 	public var haxelibs:Array<Haxelib>;
-	public var host (get_host, null):Platform;
+	public var host (get, null):Platform;
 	public var icons:Array<Icon>;
 	public var javaPaths:Array<String>;
 	public var keystore:Keystore;
@@ -54,7 +60,7 @@ class HXProject extends Script {
 	public var target:Platform;
 	public var targetFlags:Map<String, String>;
 	public var targetHandlers:Map<String, String>;
-	public var templateContext (get_templateContext, null):Dynamic;
+	public var templateContext (get, null):Dynamic;
 	public var templatePaths:Array<String>;
 	@:isVar public var window (get, set):WindowData;
 	public var windows:Array<WindowData>;
