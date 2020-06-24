@@ -141,7 +141,8 @@ class IOSPlatform extends PlatformTarget
 		{
 			if (!StringTools.endsWith(dependency.name, ".framework")
 				&& !StringTools.endsWith(dependency.name, ".tbd")
-				&& !StringTools.endsWith(dependency.path, ".framework"))
+				&& !StringTools.endsWith(dependency.path, ".framework")
+				&& !StringTools.endsWith(dependency.path, ".xcframework"))
 			{
 				if (dependency.path != "")
 				{
@@ -317,6 +318,12 @@ class IOSPlatform extends PlatformTarget
 				name = Path.withoutDirectory(dependency.path);
 				path = Path.tryFullPath(dependency.path);
 				fileType = "wrapper.framework";
+			}
+			else if (Path.extension(dependency.path) == "xcframework")
+			{
+				name = Path.withoutDirectory(dependency.path);
+				path = Path.tryFullPath(dependency.path);
+				fileType = "wrapper.xcframework";
 			}
 
 			if (name != null)
@@ -674,6 +681,14 @@ class IOSPlatform extends PlatformTarget
 			true, false);
 		ProjectHelper.recursiveSmartCopyTemplate(project, "iphone/PROJ.xcodeproj", targetDirectory + "/" + project.app.file + ".xcodeproj", context, true,
 			false);
+
+		//Merge plist files
+		var plistFiles = System.readDirectory(projectDirectory).filter(function(fileName:String){
+			return fileName.substr(-11) == "-Info.plist" && fileName != projectDirectory + "/" + project.app.file + "-Info.plist";
+		});
+		for(plist in plistFiles){
+			System.runCommand(project.workingDirectory, "/usr/libexec/PlistBuddy", ["-x", "-c", "Merge " + plist, projectDirectory + "/" + project.app.file + "-Info.plist"]);
+		}
 
 		System.mkdir(projectDirectory + "/lib");
 
