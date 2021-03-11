@@ -81,7 +81,7 @@ class HTML5HTTPRequest
 			{
 				if (query.length > 0) query += "&";
 				var value:Dynamic = parent.formData.get(key);
-				if (key.indexOf("[]") > -1 && Std.is(value, Array))
+				if (key.indexOf("[]") > -1 && (value is Array))
 				{
 					var arrayValue:String = Lambda.map(value, function(v:String)
 					{
@@ -453,7 +453,7 @@ class HTML5HTTPRequest
 
 		if (supportsImageProgress == null)
 		{
-			supportsImageProgress = untyped #if haxe4 js.Syntax.code #else __js__ #end("'onprogress' in image");
+			supportsImageProgress = untyped #if haxe4 js.Syntax.code #else __js__ #end ("'onprogress' in image");
 		}
 
 		if (supportsImageProgress || __isInMemoryURI(uri))

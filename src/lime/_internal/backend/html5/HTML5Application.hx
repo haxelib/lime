@@ -23,11 +23,12 @@ import lime.ui.Window;
 @:access(lime.ui.Window)
 class HTML5Application
 {
-	private var gameDeviceCache = new Map<Int, GameDeviceData>();
 	private var accelerometer:Sensor;
 	private var currentUpdate:Float;
 	private var deltaTime:Float;
 	private var framePeriod:Float;
+	private var gameDeviceCache = new Map<Int, GameDeviceData>();
+	private var hidden:Bool;
 	private var lastUpdate:Float;
 	private var nextUpdate:Float;
 	private var parent:Application;
@@ -279,13 +280,13 @@ class HTML5Application
 		Browser.window.addEventListener("devicemotion", handleSensorEvent, false);
 
 		#if stats
-		stats = untyped #if haxe4 js.Syntax.code #else __js__ #end("new Stats ()");
+		stats = untyped #if haxe4 js.Syntax.code #else __js__ #end ("new Stats ()");
 		stats.domElement.style.position = "absolute";
 		stats.domElement.style.top = "0px";
 		Browser.document.body.appendChild(stats.domElement);
 		#end
 
-		untyped #if haxe4 js.Syntax.code #else __js__ #end("
+		untyped #if haxe4 js.Syntax.code #else __js__ #end ("
 			if (!CanvasRenderingContext2D.prototype.isPointInStroke) {
 				CanvasRenderingContext2D.prototype.isPointInStroke = function (path, x, y) {
 					return false;
@@ -441,12 +442,40 @@ class HTML5Application
 			switch (event.type)
 			{
 				case "focus":
-					parent.window.onFocusIn.dispatch();
-					parent.window.onActivate.dispatch();
+					if (hidden)
+					{
+						parent.window.onFocusIn.dispatch();
+						parent.window.onActivate.dispatch();
+						hidden = false;
+					}
 
 				case "blur":
-					parent.window.onFocusOut.dispatch();
-					parent.window.onDeactivate.dispatch();
+					if (!hidden)
+					{
+						parent.window.onFocusOut.dispatch();
+						parent.window.onDeactivate.dispatch();
+						hidden = true;
+					}
+
+				case "visibilitychange":
+					if (Browser.document.hidden)
+					{
+						if (!hidden)
+						{
+							parent.window.onFocusOut.dispatch();
+							parent.window.onDeactivate.dispatch();
+							hidden = true;
+						}
+					}
+					else
+					{
+						if (hidden)
+						{
+							parent.window.onFocusIn.dispatch();
+							parent.window.onActivate.dispatch();
+							hidden = false;
+						}
+					}
 
 				case "resize":
 					parent.window.__backend.handleResizeEvent(event);
